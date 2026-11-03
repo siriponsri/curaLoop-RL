@@ -102,3 +102,8 @@ The final code-content commit and publication receipt are linked from the releas
 report; root SOURCE_COMMIT.txt identifies runtime content, while Git HEAD can
 include later documentation/publication records. No agent continues work after
 the completed session. Use the normal Windows launcher to start the owner's app.
+
+
+Verified runtime content commit: `0b1c53df376c9d44a8abefb4c99a6ff69a9741b9`. Engine/API/frontend digests
+match the actual final browser metadata. Later documentation commits do not
+change the tested runtime files. Publication result is recorded separately.

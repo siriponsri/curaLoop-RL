@@ -139,3 +139,8 @@ No remaining blocker exists for the tested localhost POC scope.
 All release gates passed. The final remote freshness check and normal main push
 are recorded in the publication receipt after the content commit. No force push,
 deployment, access/visibility change, paid service or organizational access.
+
+
+Verified runtime content commit: `0b1c53df376c9d44a8abefb4c99a6ff69a9741b9`. Engine/API/frontend digests
+match the actual final browser metadata. Later documentation commits do not
+change the tested runtime files. Publication result is recorded separately.

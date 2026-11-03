@@ -107,3 +107,8 @@ remote and perform the owner-authorized normal main publication if all gates pas
 - Independent review findings all resolved and re-reviewed.
 - Next: commit verified content and identities; fetch latest remote, fast-forward
   main only if ancestry permits, normal push and record actual publication result.
+
+
+Verified runtime content commit: `0b1c53df376c9d44a8abefb4c99a6ff69a9741b9`. Engine/API/frontend digests
+match the actual final browser metadata. Later documentation commits do not
+change the tested runtime files. Publication result is recorded separately.
