@@ -10,7 +10,8 @@
 - Tested frontend directory SHA256: **`2b8c8ea049a3fb1f61f0e9e9647cda81a28d01af2f3debc09ca33fed26aa3fc6`**. Computed over sorted relative file paths and contents, matching `/api/v1/meta`.
 - Final release HEAD is in ZIP-level `SOURCE_COMMIT.txt`/`RELEASE.json`; the full Git bundle restores its exact history. A committed document cannot contain its own commit hash.
 - Screenshots were taken before the implementation commit, so their Git state correctly shows a checkpoint SHA plus uncommitted changes. They prove the recorded built-content hash, not that all files equalled that checkpoint commit.
-- User later explicitly authorized publishing `main` to `https://github.com/siriponsri/curaLoop-RL`. No visibility/access changes or deployment are authorized. Direct Git CLI has no credential; the connected GitHub API can publish a tree-equivalent snapshot. The in-repo `history/CuraLoopRL-tested-history.bundle` preserves exact original/local implementation commits; the release-level bundle also includes final documentation commits. The actual remote commit/tree are recorded in the publication manifest after publication, not invented here.
+- User later explicitly authorized publishing `main` to `https://github.com/siriponsri/curaLoop-RL`. **BLOCKED: no remote write completed.** GitHub returned HTTP403 `Resource not accessible by integration` on the initial file write; direct Git CLI has no credential. A follow-up query confirms main remains absent. Repo metadata permissions are not integration write permission. No deployment or visibility/access change was performed.
+- `docs/evidence/web-v2/github-publication.json` records the failed attempt. The ZIP-level `Push-Main.cmd` and `PUSH_MAIN_WINDOWS_TH.md` restore the exact full Git history and use normal authenticated `git push origin HEAD:main` without force. A GitHub connection with working repository write permission is required for an assisted retry.
 
 ## Implemented and verified
 
@@ -60,7 +61,7 @@ To restore exact tested history from the in-repo bundle into a new folder:
 git clone -b feat/local-web-ui history\CuraLoopRL-tested-history.bundle C:\Projects\curaloop-tested-history
 ```
 
-The ZIP-level full-history bundle and its instructions restore final documentation as well. The GitHub API snapshot commit can have a different commit SHA while the full source tree matches; do not confuse tree equality with identical commit ancestry.
+The ZIP-level full-history bundle and its instructions restore final documentation as well. No GitHub snapshot commit was created: write access was refused. The owner can push the full original/local ancestry from the restored repository after authenticating.
 
 ## Provenance and scientific limits
 
@@ -81,4 +82,4 @@ Original Q-learning/bandit160 synthetic training episodes/checkpoints unchanged.
 2. Migrate compatible development tooling to remove advisories and lazy-load routes/charts; add durable single-user session storage only with explicit migration/reconciliation tests. Preserve the frozen scientific evidence and API privacy boundary.
 3. With rights-cleared independent assay data, pre-register stronger external validation/calibration and controller-transfer experiments; quantify fallback before claims. Keep measured lab/twin work blocked until authorized real feedback exists.
 
-No public deployment, paid infrastructure, sharing/permission change or organizational access was performed. GitHub main publication alone is authorized by the owner's later message.
+No public deployment, paid infrastructure, sharing/permission change or organizational access was performed. GitHub main publication alone is authorized by the owner's later message, but remains blocked by the integration's403 response.
