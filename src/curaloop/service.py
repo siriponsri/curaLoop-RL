@@ -36,8 +36,14 @@ def code_identity() -> dict:
                                             text=True, timeout=3).strip())
     except (OSError, subprocess.SubprocessError):
         marker = root / "SOURCE_COMMIT.txt"
-        sha = marker.read_text().strip() if marker.exists() else "UNCOMMITTED"
-        dirty = None
+        build_info = Path(__file__).with_name("resources") / "build_info.json"
+        if marker.exists():
+            sha, dirty = marker.read_text().strip(), None
+        elif build_info.exists():
+            info = json.loads(build_info.read_text(encoding="utf-8"))
+            sha, dirty = info["source_commit"], info["source_working_tree_dirty"]
+        else:
+            sha, dirty = "UNCOMMITTED", None
     source_hash = digest({p.name: p.read_text(encoding="utf-8") for p in sorted(Path(__file__).parent.glob("*.py"))})
     return {"repo_git_sha": sha, "working_tree_dirty": dirty, "source_sha256": source_hash}
 
