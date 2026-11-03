@@ -113,7 +113,31 @@ export interface RunView {
   pending: Experiment[];
   eligible_count: number;
   can_select: boolean;
+  persistence?: {
+    created_at: string;
+    updated_at: string;
+    recovered: boolean;
+    creation_identity: Record<string, unknown>;
+    identity_note: string;
+  };
 }
+export interface RecoveryIssue { kind: string; id: string; message: string }
+export interface SavedRun {
+  session_id: string;
+  revision: number;
+  dataset: Dataset;
+  policy: Policy;
+  done: boolean;
+  pending_assays: number;
+  spent_units: number;
+  updated_at: string;
+}
+export interface SavedRuns {
+  items: SavedRun[];
+  recovery_issues: RecoveryIssue[];
+  storage: { schema_version: number; status: string };
+}
+export interface SavedComparisons { items: Job[]; recovery_issues: RecoveryIssue[] }
 export interface Meta {
   working_tree_dirty?: boolean | null;
   frontend_build_sha256?: string | null;
@@ -126,6 +150,7 @@ export interface Meta {
   session_note: string;
   digital_twin_maturity: string;
   test_evidence: { historical_python_tests: number; historical_claim: string };
+  storage?: { schema_version: number; status: string; error: string | null; recovery_help: string };
 }
 export interface DatasetInfo {
   id: Dataset;
@@ -162,7 +187,7 @@ export interface CandidatePage {
 }
 export interface Job {
   job_id: string;
-  status: "queued" | "running" | "completed" | "failed";
+  status: "queued" | "running" | "completed" | "failed" | "interrupted";
   scenario: Scenario;
   policies: Policy[];
   reports: RunReport[];

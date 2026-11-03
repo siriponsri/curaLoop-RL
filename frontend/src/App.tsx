@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Component, lazy, Suspense, useState, type ReactNode } from "react";
 import { NavLink, Route, Routes, useLocation, Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -20,52 +20,48 @@ import { Button } from "./components/ui/button";
 import { Badge } from "./components/ui/badge";
 import { Dialog } from "./components/ui/dialog";
 import { short } from "./lib";
-import Overview from "./pages/Overview";
-import Scenario from "./pages/Scenario";
-import Lab from "./pages/Lab";
-import Compounds from "./pages/Compounds";
-import Benchmarks from "./pages/Benchmarks";
-import Evidence from "./pages/Evidence";
-import GuidedPresentation from "./pages/Presentation";
+import { SavedRuns } from "./components/recovery";
+const Overview = lazy(() => import("./pages/Overview"));
+const Scenario = lazy(() => import("./pages/Scenario"));
+const Lab = lazy(() => import("./pages/Lab"));
+const Compounds = lazy(() => import("./pages/Compounds"));
+const Benchmarks = lazy(() => import("./pages/Benchmarks"));
+const Evidence = lazy(() => import("./pages/Evidence"));
+const GuidedPresentation = lazy(() => import("./pages/Presentation"));
 
 const pages = [
-  { path: "/", en: "Overview", th: "ภาพรวม", icon: LayoutDashboard },
+  { path: "/", en: "Overview", icon: LayoutDashboard },
   {
     path: "/compounds",
     en: "Compound explorer",
-    th: "สำรวจสาร",
     icon: Microscope,
   },
   {
     path: "/scenario",
     en: "Scenario builder",
-    th: "ตั้งเงื่อนไข",
     icon: Settings2,
   },
-  { path: "/lab", en: "Simulation lab", th: "ห้องจำลอง", icon: FlaskConical },
+  { path: "/lab", en: "Simulation lab", icon: FlaskConical },
   {
     path: "/benchmarks",
     en: "Benchmark arena",
-    th: "เปรียบเทียบนโยบาย",
     icon: BarChart3,
   },
   {
     path: "/evidence",
     en: "Research evidence",
-    th: "หลักฐานการวิจัย",
     icon: BookOpen,
   },
   {
     path: "/presentation",
     en: "Guided presentation",
-    th: "โหมดนำเสนอ",
     icon: Presentation,
   },
 ];
 
 export default function App() {
   const store = useApp();
-  const { run, meta, t, lang, setLang, loading, error, notice, busy } = store;
+  const { run, meta, loading, error, notice, busy } = store;
   const { pathname } = useLocation();
   const [mobile, setMobile] = useState(false);
   const active = pages.find((p) => p.path === pathname);
@@ -90,7 +86,7 @@ export default function App() {
                 }
               >
                 <p.icon size={19} />
-                <span>{t(p.en, p.th)}</span>
+                <span>{(p.en)}</span>
                 {p.path === "/lab" && run?.pending.length ? (
                   <Badge>{run.pending.length}</Badge>
                 ) : null}
@@ -103,22 +99,19 @@ export default function App() {
             <FlaskConical size={19} />
           </span>
           <strong>
-            {t("Your local research space", "พื้นที่วิจัยในเครื่องของคุณ")}
+            {"Your local research space"}
           </strong>
           <p>
-            {t(
-              "Real data. Traceable decisions. No cloud dependency.",
-              "ข้อมูลจริง ตรวจสอบการตัดสินใจได้ ไม่พึ่งบริการ cloud",
-            )}
+            {"Real data. Traceable decisions. No cloud dependency."}
           </p>
           <Link to="/evidence" onClick={() => setMobile(false)}>
-            {t("Inspect the evidence", "ดูหลักฐาน")}
+            {"Inspect the evidence"}
             <ArrowRight size={14} />
           </Link>
         </div>
         <div className="sidebar-bottom">
           <span className="status-dot" />
-          Localhost · CPU only <small>v{meta?.web_version ?? "0.2.0"}</small>
+          Localhost · CPU only <small>v{meta?.web_version ?? "0.3.0"}</small>
         </div>
       </>
     );
@@ -132,7 +125,7 @@ export default function App() {
       <Dialog
         open={mobile}
         onOpenChange={setMobile}
-        title={t("Research workspace", "หน้าทำงานวิจัย")}
+        title={"Research workspace"}
         description="CuraLoop-RL navigation"
       >
         <div className="mobile-navigation">{navigation()}</div>
@@ -147,29 +140,15 @@ export default function App() {
             >
               <Menu size={21} />
             </button>
-            <span>{t("Workspace", "หน้าทำงาน")}</span>
+            <span>{"Workspace"}</span>
             <ChevronRight size={13} />
-            <strong>{active ? t(active.en, active.th) : "Not found"}</strong>
+            <strong>{active ? (active.en) : "Not found"}</strong>
           </div>
           <div className="topbar-controls">
             <span className="connection-pill">
               <Wifi size={13} />
-              {loading ? "Connecting" : "Local API"}
+              {loading ? "Connecting" : !run ? "Connection unavailable" : "Local API"}
             </span>
-            <div className="language-switch" aria-label="Interface language">
-              <button
-                aria-pressed={lang === "en"}
-                onClick={() => setLang("en")}
-              >
-                EN
-              </button>
-              <button
-                aria-pressed={lang === "th"}
-                onClick={() => setLang("th")}
-              >
-                TH
-              </button>
-            </div>
             <div
               className="owner-avatar"
               aria-label="Personal research workspace"
@@ -183,10 +162,7 @@ export default function App() {
             <div className="error-banner" role="alert">
               <div>
                 <strong>
-                  {t(
-                    "The action could not be completed",
-                    "ยังดำเนินการไม่สำเร็จ",
-                  )}
+                  {"The action could not be completed"}
                 </strong>
                 <p>{error}</p>
               </div>
@@ -196,7 +172,7 @@ export default function App() {
                   size="sm"
                   onClick={() => void store.retry()}
                 >
-                  {t("Reconnect", "เชื่อมต่อใหม่")}
+                  {"Reconnect"}
                 </Button>
                 <button
                   aria-label="Dismiss error"
@@ -214,29 +190,22 @@ export default function App() {
               {notice}
             </div>
           )}
-          {loading || !run ? (
+          {loading ? (
             <div className="initial-loading">
               <div className="spinner" />
               <h1>
-                {t(
-                  "Connecting your research workspace",
-                  "กำลังเชื่อมต่อหน้าทำงานวิจัย",
-                )}
+                {"Connecting your research workspace"}
               </h1>
               <p>
-                {t(
-                  "Loading public metadata and the current local campaign.",
-                  "กำลังโหลดข้อมูลสาธารณะและ campaign ในเครื่อง",
-                )}
+                {"Loading public metadata and the current local campaign."}
               </p>
-              {!loading && (
-                <Button onClick={() => void store.retry()}>
-                  Retry local connection
-                </Button>
-              )}
             </div>
+          ) : !run ? (
+            <SavedRuns includeImport />
           ) : (
-            <Routes>
+            <RouteBoundary key={pathname + run.session_id}>
+            <Suspense fallback={<div className="loading-panel" role="status">Loading workspace…</div>}>
+            <Routes key={run.session_id}>
               <Route path="/" element={<Overview />} />
               <Route path="/scenario" element={<Scenario />} />
               <Route path="/lab" element={<Lab />} />
@@ -256,15 +225,14 @@ export default function App() {
                 }
               />
             </Routes>
+            </Suspense>
+            </RouteBoundary>
           )}
         </main>
         <footer className="app-footer">
           <span>
             <ShieldCheck size={14} />
-            {t(
-              "Independent personal portfolio · Not an official GPO system",
-              "โครงการส่วนบุคคล · ไม่ใช่ระบบทางการของ GPO",
-            )}
+            {"Independent personal portfolio · Not an official GPO system"}
           </span>
           <div>
             <span className="small-mono">
@@ -283,7 +251,7 @@ export default function App() {
       {busy && (
         <div className="operation-indicator" role="status">
           <span className="spinner small-spinner" />
-          {t("Running the local engine…", "กำลังรัน engine ในเครื่อง…")}
+          {"Running the local engine…"}
         </div>
       )}
     </div>
@@ -291,4 +259,17 @@ export default function App() {
 }
 function CheckMark() {
   return <ShieldCheck size={16} />;
+}
+class RouteBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
+  state = { failed: false };
+  static getDerivedStateFromError() { return { failed: true }; }
+  render() {
+    return this.state.failed ? (
+      <div className="error-message" role="alert">
+        <h1>This workspace could not load</h1>
+        <p>Your saved campaigns remain on the local server. Reload to retry loading this page.</p>
+        <Button onClick={() => window.location.reload()}>Reload workspace</Button>
+      </div>
+    ) : this.props.children;
+  }
 }

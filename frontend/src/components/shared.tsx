@@ -37,7 +37,7 @@ export function PageHeading({
   );
 }
 export function SourceBadge() {
-  const { run, t } = useApp();
+  const { run } = useApp();
   return (
     <Badge
       className={
@@ -48,60 +48,48 @@ export function SourceBadge() {
     >
       <span className="status-dot" />
       {run?.report.manifest.data_origin === "HISTORICAL_PUBLIC_DATA"
-        ? t("Historical assay data", "ข้อมูล assay จริงย้อนหลัง")
-        : t("Synthetic fixture", "ข้อมูลสังเคราะห์")}
+        ? "Historical assay data"
+        : "Synthetic fixture"}
     </Badge>
   );
 }
 export function KpiStrip({ run }: { run: RunView }) {
-  const { t } = useApp();
+
   const m = run.report.metrics;
   return (
     <div className="kpi-strip">
       <div>
-        <span>{t("Confirmed new hits", "ผล active ใหม่ที่ยืนยันแล้ว")}</span>
+        <span>{"Confirmed new hits"}</span>
         <strong>{number(m.confirmed_hits)}</strong>
         <small>
-          {t(
-            "Delivered only · excludes seed labels",
-            "เฉพาะผลส่งคืน · ไม่รวม seed labels",
-          )}
+          {"Delivered only · excludes seed labels"}
         </small>
       </div>
       <div>
-        <span>{t("Assays delivered", "ผลที่ส่งคืนแล้ว")}</span>
+        <span>{"Assays delivered"}</span>
         <strong>
           {number(m.delivered_assays)}
           <small>/ {run.report.requests.length}</small>
         </strong>
         <small>
-          {t(
-            "Missing outcomes counted separately",
-            "แยกผลสูญหายออกจากผล inactive",
-          )}
+          {"Missing outcomes counted separately"}
         </small>
       </div>
       <div>
-        <span>{t("Pending feedback", "กำลังรอผล")}</span>
+        <span>{"Pending feedback"}</span>
         <strong>{number(m.pending_assays)}</strong>
         <small>
-          {t(
-            "No label visible until due",
-            "ยังไม่เปิดเผย label จนกว่าจะครบกำหนด",
-          )}
+          {"No label visible until due"}
         </small>
       </div>
       <div>
-        <span>{t("Budget available", "งบที่ยังใช้ได้")}</span>
+        <span>{"Budget available"}</span>
         <strong>
           {number(m.remaining_units)}
           <small> units</small>
         </strong>
         <small>
-          {t(
-            "Simulated cost · never THB or USD",
-            "ต้นทุนจำลอง · ไม่ใช่บาทหรือดอลลาร์",
-          )}
+          {"Simulated cost · never THB or USD"}
         </small>
       </div>
     </div>
@@ -114,29 +102,29 @@ export function Workflow({
   run: RunView;
   compact?: boolean;
 }) {
-  const { t } = useApp();
+
   const stages = [
     {
       icon: Layers3,
-      label: t("Candidate pool", "กลุ่มสาร"),
+      label: "Candidate pool",
       count: run.eligible_count,
       to: "/compounds",
     },
     {
       icon: ScanSearch,
-      label: t("Policy selection", "เลือกตามนโยบาย"),
+      label: "Policy selection",
       count: run.report.requests.length,
       to: "/lab",
     },
     {
       icon: Hourglass,
-      label: t("Result queue", "คิวรอผล"),
+      label: "Result queue",
       count: run.pending.length,
       to: "/lab",
     },
     {
       icon: FlaskConical,
-      label: t("Delivered results", "ผลที่ส่งคืน"),
+      label: "Delivered results",
       count: run.report.metrics.delivered_assays,
       to: "/lab",
     },

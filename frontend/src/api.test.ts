@@ -29,4 +29,10 @@ describe("typed API errors", () => {
       expect((e as Error).message).toBe("Budget must be nonnegative.");
     }
   });
+  it("accepts a successful empty DELETE response", async () => {
+    const json = vi.fn();
+    vi.stubGlobal("fetch", vi.fn().mockResolvedValue({ ok: true, status: 204, json }));
+    await expect(request("/runs/old", { method: "DELETE" })).resolves.toBeUndefined();
+    expect(json).not.toHaveBeenCalled();
+  });
 });

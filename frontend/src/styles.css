@@ -312,27 +312,17 @@ hr {
   font-size: 11px;
   color: #526653;
 }
-.language-switch {
-  display: flex;
-  padding: 3px;
-  border: 1px solid #dce6e0;
-  border-radius: 7px;
-  background: #f5f8f5;
-}
-.language-switch button {
-  font-size: 11px;
-  font-weight: 650;
-  border: 0;
-  border-radius: 4px;
-  padding: 4px 7px;
-  color: #526653;
-  background: transparent;
-}
-.language-switch button[aria-pressed="true"] {
-  background: white;
-  color: #0e6e5b;
-  box-shadow: 0 1px 3px #183a2414;
-}
+.saved-runs, .comparison-history { margin-top: 24px; }
+.saved-runs .section-heading, .comparison-history .section-heading { flex-wrap: wrap; }
+.saved-runs p, .comparison-history p { overflow-wrap: anywhere; }
+.saved-runs td { max-width: 260px; overflow-wrap: anywhere; }
+.saved-runs .button-row { flex-wrap: wrap; }
+.recovery-revisions, .snapshot-import { display: grid; gap: 12px; margin-top: 16px; }
+.snapshot-import .file-field { margin: 0; }
+.snapshot-import > button, .recovery-revisions > button { justify-self: start; }
+.comparison-history label, .recovery-revisions label { display: block; margin-bottom: 8px; }
+.comparison-history select { max-width: 100%; }
+.chart-loading { min-height: 260px; }
 .owner-avatar {
   width: 32px;
   height: 32px;

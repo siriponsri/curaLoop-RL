@@ -16,23 +16,17 @@ import {
   type Scenario as ScenarioType,
 } from "../types";
 
-export function validateScenario(s: ScenarioType, thai = false): string | null {
+export function validateScenario(s: ScenarioType): string | null {
   if (!Number.isInteger(s.seed) || s.seed < 0 || s.seed > 4294967295)
-    return thai
-      ? "เมล็ดสุ่มต้องเป็นจำนวนเต็มตั้งแต่ 0 ถึง 4294967295"
-      : "Seed must be an integer from 0 to 4294967295.";
+    return "Seed must be an integer from 0 to 4294967295.";
   if (
     !Number.isInteger(s.budget_units) ||
     s.budget_units < 0 ||
     s.budget_units > 10000
   )
-    return thai
-      ? "งบจำลองต้องเป็นจำนวนเต็มตั้งแต่ 0 ถึง 10000"
-      : "Budget must be an integer from 0 to 10000.";
+    return "Budget must be an integer from 0 to 10000.";
   if (s.initial_count > s.candidate_count || s.initial_count < 0)
-    return thai
-      ? "จำนวนข้อมูลตั้งต้นต้องไม่เกินจำนวนสารในชุดข้อมูล และต้องไม่ติดลบ"
-      : "Initial labels cannot exceed the candidate pool.";
+    return "Initial labels cannot exceed the candidate pool.";
   for (const [key, min, max] of [
     ["initial_count", 0, 2000],
     ["batch_size", 1, 100],
@@ -42,14 +36,12 @@ export function validateScenario(s: ScenarioType, thai = false): string | null {
     ["missing_percent", 0, 100],
   ] as const) {
     if (!Number.isInteger(s[key]) || s[key] < min || s[key] > max)
-      return thai
-        ? `${key} ต้องเป็นจำนวนเต็มตั้งแต่ ${min} ถึง ${max}`
-        : `${key} must be an integer in [${min}, ${max}].`;
+      return `${key} must be an integer in [${min}, ${max}].`;
   }
   return null;
 }
 export default function ScenarioPage() {
-  const { run, datasets, policies, create, busy, t } = useApp();
+  const { run, datasets, policies, create, busy } = useApp();
   const nav = useNavigate();
   const [draft, setDraft] = useState<ScenarioType>(
       run?.report.manifest.scenario_config ?? defaultScenario,
@@ -62,32 +54,29 @@ export default function ScenarioPage() {
     setDraft((old) => ({ ...old, [name]: value }));
   async function submit(e: FormEvent) {
     e.preventDefault();
-    const err = validateScenario(draft, t("en", "th") === "th");
+    const err = validateScenario(draft);
     setError(err);
     if (!err && (await create(draft, policy))) nav("/lab");
   }
-  const fields: [keyof ScenarioType, string, string, number, number][] = [
-    ["seed", "Random seed", "เมล็ดสุ่ม", 0, 4294967295],
-    ["budget_units", "Screening budget", "งบทดสอบจำลอง", 0, 10000],
+  const fields: [keyof ScenarioType, string, number, number][] = [
+    ["seed", "Random seed", 0, 4294967295],
+    ["budget_units", "Screening budget", 0, 10000],
     [
       "initial_count",
       "Initial labelled samples",
-      "ข้อมูลตั้งต้นที่รู้ผล",
       0,
       draft.candidate_count,
     ],
     [
       "batch_size",
       "Concurrent assay capacity",
-      "จำนวน assay ที่รอผลได้พร้อมกัน",
       1,
       100,
     ],
-    ["delay_steps", "Feedback delay · steps", "เวลารอผล · ขั้นจำลอง", 0, 100],
+    ["delay_steps", "Feedback delay · steps", 0, 100],
     [
       "assay_cost_units",
       "Cost per assay · units",
-      "ต้นทุนต่อ assay · หน่วยจำลอง",
       1,
       100,
     ],
@@ -95,11 +84,8 @@ export default function ScenarioPage() {
   return (
     <>
       <PageHeading
-        title={t("Scenario builder", "ออกแบบเงื่อนไขการจำลอง")}
-        description={t(
-          "Change the constraints. Keep the comparison fair.",
-          "ปรับเงื่อนไขการทำงาน และรักษาความยุติธรรมในการเปรียบเทียบ",
-        )}
+        title={"Scenario builder"}
+        description={"Change the constraints. Keep the comparison fair."}
       />
       <div className="scenario-layout">
         <form onSubmit={submit} noValidate className="surface scenario-form">
@@ -107,17 +93,14 @@ export default function ScenarioPage() {
             <div className="form-section-heading">
               <DatabaseMark />
               <div>
-                <h2>{t("Research material", "ข้อมูลสำหรับการศึกษา")}</h2>
+                <h2>{"Research material"}</h2>
                 <p>
-                  {t(
-                    "No download or API key required.",
-                    "ใช้ข้อมูลที่รวมไว้ในเครื่อง ไม่ต้องดาวน์โหลดหรือใช้ API key",
-                  )}
+                  {"No download or API key required."}
                 </p>
               </div>
             </div>
             <label className="field-label" htmlFor="dataset">
-              {t("Dataset", "ชุดข้อมูล")}
+              {"Dataset"}
             </label>
             <select
               id="dataset"
@@ -160,19 +143,16 @@ export default function ScenarioPage() {
             <div className="form-section-heading">
               <SlidersHorizontal size={21} />
               <div>
-                <h2>{t("Campaign conditions", "เงื่อนไข campaign")}</h2>
+                <h2>{"Campaign conditions"}</h2>
                 <p>
-                  {t(
-                    "Costs, capacity and time are scenario assumptions.",
-                    "ต้นทุน ความจุ และเวลา เป็นสมมติฐานจำลอง",
-                  )}
+                  {"Costs, capacity and time are scenario assumptions."}
                 </p>
               </div>
             </div>
             <div className="form-grid">
-              {fields.map(([key, en, th, min, max]) => (
+              {fields.map(([key, en, min, max]) => (
                 <div className="field" key={key}>
-                  <label htmlFor={key}>{t(en, th)}</label>
+                  <label htmlFor={key}>{(en)}</label>
                   <input
                     id={key}
                     type="number"
@@ -193,7 +173,7 @@ export default function ScenarioPage() {
           </div>
           <div className="form-section">
             <label className="field-label" htmlFor="policy">
-              {t("Selection policy", "วิธีเลือกสาร")}
+              {"Selection policy"}
             </label>
             <select
               id="policy"
@@ -208,31 +188,22 @@ export default function ScenarioPage() {
             </select>
             {policy === "q_learning" || policy === "contextual_bandit" ? (
               <p className="field-note amber-text">
-                {t(
-                  "Trained on synthetic tasks. Unseen states use a labelled Greedy fallback; no validated pharmaceutical transfer.",
-                  "ฝึกบนโจทย์สังเคราะห์ state ที่ไม่เคยฝึกจะใช้ Greedy fallback ยังไม่ยืนยันการถ่ายโอนไปงานเภสัชกรรม",
-                )}
+                {"Trained on synthetic tasks. Unseen states use a labelled Greedy fallback; no validated pharmaceutical transfer."}
               </p>
             ) : (
               <p className="field-note">
-                {t(
-                  "Predictive policies use only previously revealed labels. One-class data triggers a labelled random fallback.",
-                  "ใช้เฉพาะผลที่เปิดเผยแล้ว หากมีคลาสเดียวจะระบุการใช้ random fallback",
-                )}
+                {"Predictive policies use only previously revealed labels. One-class data triggers a labelled random fallback."}
               </p>
             )}
           </div>
           <details className="advanced-settings">
             <summary>
-              {t("Advanced synthetic assumptions", "สมมติฐานจำลองเพิ่มเติม")}
+              {"Advanced synthetic assumptions"}
             </summary>
             <div className="form-grid">
               <div className="field">
                 <label htmlFor="jitter">
-                  {t(
-                    "Additional delay jitter · steps",
-                    "เวลารอเพิ่มต่อสาร · ขั้นจำลอง",
-                  )}
+                  {"Additional delay jitter · steps"}
                 </label>
                 <input
                   id="jitter"
@@ -247,7 +218,7 @@ export default function ScenarioPage() {
               </div>
               <div className="field">
                 <label htmlFor="missing">
-                  {t("Missing outcomes · %", "ผลสูญหายจำลอง · %")}
+                  {"Missing outcomes · %"}
                 </label>
                 <input
                   id="missing"
@@ -262,10 +233,7 @@ export default function ScenarioPage() {
               </div>
             </div>
             <p className="field-note">
-              {t(
-                "Missing results consume cost. They are neither active hits nor inactive training labels.",
-                "ผลสูญหายใช้ต้นทุน แต่ไม่นับเป็น active hit หรือ inactive label",
-              )}
+              {"Missing results consume cost. They are neither active hits nor inactive training labels."}
             </p>
           </details>
           {error && (
@@ -284,33 +252,30 @@ export default function ScenarioPage() {
               }}
             >
               <RotateCcw size={15} />
-              {t("Restore defaults", "คืนค่าเริ่มต้น")}
+              {"Restore defaults"}
             </Button>
             <Button type="submit" disabled={Boolean(busy)}>
               {busy
-                ? t("Creating…", "กำลังสร้าง…")
-                : t("Create campaign", "สร้าง campaign")}
+                ? "Creating…"
+                : "Create campaign"}
               <ArrowRight size={16} />
             </Button>
           </div>
         </form>
         <aside className="scenario-review">
           <Badge className="badge-teal">
-            {t("Before you begin", "ก่อนเริ่มจำลอง")}
+            {"Before you begin"}
           </Badge>
           <h2>
-            {t(
-              "One scenario.\nA common starting point.",
-              "เงื่อนไขเดียวกัน\nจุดเริ่มต้นที่เท่ากัน",
-            )}
+            {"One scenario.\nA common starting point."}
           </h2>
           <dl className="scenario-numbers">
             <div>
-              <dt>{t("Available library", "ขนาดกลุ่มสาร")}</dt>
+              <dt>{"Available library"}</dt>
               <dd>{draft.candidate_count.toLocaleString()}</dd>
             </div>
             <div>
-              <dt>{t("Maximum new assays", "ทดสอบใหม่ได้สูงสุด")}</dt>
+              <dt>{"Maximum new assays"}</dt>
               <dd>
                 {Number.isFinite(draft.budget_units)
                   ? Math.min(
@@ -321,7 +286,7 @@ export default function ScenarioPage() {
               </dd>
             </div>
             <div>
-              <dt>{t("Results become visible after", "เปิดผลหลังผ่านเวลา")}</dt>
+              <dt>{"Results become visible after"}</dt>
               <dd>
                 {draft.delay_steps}
                 <small>
@@ -333,22 +298,10 @@ export default function ScenarioPage() {
           </dl>
           <ul className="check-list">
             {[
-              t(
-                "The same seed labels for every policy.",
-                "ทุก policy ได้ seed labels ชุดเดียวกัน",
-              ),
-              t(
-                "Existing seed labels are sunk cost and excluded from new hits.",
-                "seed labels เป็นต้นทุนเดิม ไม่นับใน hits ใหม่",
-              ),
-              t(
-                "Pending outcomes never train the predictor.",
-                "ผลที่ยังรอไม่ถูกนำไปฝึกโมเดล",
-              ),
-              t(
-                "A new scenario creates an independent run.",
-                "เงื่อนไขใหม่สร้าง run ที่แยกจากเดิม",
-              ),
+              "The same seed labels for every policy.",
+              "Existing seed labels are sunk cost and excluded from new hits.",
+              "Pending outcomes never train the predictor.",
+              "A new scenario creates an independent run.",
             ].map((x) => (
               <li key={x}>
                 <CheckCircle2 size={17} />
@@ -357,10 +310,7 @@ export default function ScenarioPage() {
             ))}
           </ul>
           <p className="muted small">
-            {t(
-              "The current run is kept in server memory. Export a snapshot before restarting the local service.",
-              "run เก็บในหน่วยความจำ ควร export snapshot ก่อนเริ่ม local service ใหม่",
-            )}
+            The current run is saved locally after each accepted action. Keep a single-run JSON as a portable recovery copy.
           </p>
         </aside>
       </div>

@@ -16,7 +16,7 @@ import { EmptyState, PageHeading, SourceBadge } from "../components/shared";
 import type { Candidate, CandidatePage } from "../types";
 
 export default function Compounds() {
-  const { run, meta, t } = useApp();
+  const { run, meta } = useApp();
   const [search, setSearch] = useState(""),
     [status, setStatus] = useState("all"),
     [sort, setSort] = useState("id"),
@@ -64,20 +64,17 @@ export default function Compounds() {
     `/api/v1/runs/${run.session_id}/molecules/${encodeURIComponent(c.compound_id)}.svg`;
   const outcome = (c: Candidate) =>
     c.status === "eligible" || c.status === "pending"
-      ? t("Unrevealed", "ยังไม่เปิดเผยผล")
+      ? "Unrevealed"
       : c.revealed_active === null
-        ? t("Missing outcome", "ผลสูญหาย")
+        ? "Missing outcome"
         : c.revealed_active
-          ? t("Observed active", "ผลที่เปิดเผย: active")
-          : t("Observed inactive", "ผลที่เปิดเผย: inactive");
+          ? "Observed active"
+          : "Observed inactive";
   return (
     <>
       <PageHeading
-        title={t("Compound explorer", "สำรวจสารในกลุ่มตัวอย่าง")}
-        description={t(
-          "Public structures and descriptors. Assay labels stay private until revealed.",
-          "ดูโครงสร้างและคุณลักษณะสาธารณะ โดยไม่เปิด labels ของสารที่ยังไม่รู้ผล",
-        )}
+        title={"Compound explorer"}
+        description={"Public structures and descriptors. Assay labels stay private until revealed."}
       >
         <SourceBadge />
       </PageHeading>
@@ -91,7 +88,7 @@ export default function Compounds() {
               setSearch(e.target.value);
               setPage(1);
             }}
-            placeholder={t("Search a compound ID…", "ค้นหารหัสสาร…")}
+            placeholder={"Search a compound ID…"}
           />
         </div>
         <div className="filter-controls">
@@ -115,7 +112,7 @@ export default function Compounds() {
           <select
             aria-label="Sort compounds"
             value={sort}
-            onChange={(e) => setSort(e.target.value)}
+            onChange={(e) => { setSort(e.target.value); setPage(1); }}
           >
             <option value="id">Compound ID</option>
             <option value="feature_count">Nonzero features ↓</option>
@@ -141,14 +138,11 @@ export default function Compounds() {
       <div className="results-heading">
         <p>
           <strong>{result?.total ?? "—"}</strong>{" "}
-          {t("matching compounds", "สารที่ตรงเงื่อนไข")}{" "}
+          {"matching compounds"}{" "}
           <span>· {run.report.manifest.dataset.assay_id}</span>
         </p>
         <span>
-          {t(
-            "No hidden label is sent to this browser",
-            "ไม่มีการส่ง hidden label มายัง browser",
-          )}
+          {"No hidden label is sent to this browser"}
         </span>
       </div>
       {error ? (
@@ -161,15 +155,12 @@ export default function Compounds() {
       ) : loading ? (
         <div className="loading-panel" role="status">
           <div className="spinner" />
-          {t("Loading public candidates…", "กำลังโหลดข้อมูลสารสาธารณะ…")}
+          {"Loading public candidates…"}
         </div>
       ) : !result?.items.length ? (
         <EmptyState
-          title={t("No compounds found", "ไม่พบสารที่ตรงเงื่อนไข")}
-          description={t(
-            "Try another compound ID or remove the status filter.",
-            "ลองเปลี่ยนรหัสสารหรือล้างตัวกรองสถานะ",
-          )}
+          title={"No compounds found"}
+          description={"Try another compound ID or remove the status filter."}
           action={
             <Button
               variant="outline"
@@ -216,12 +207,9 @@ export default function Compounds() {
                 <div className="numerical-candidate">
                   <strong>{c.feature_count}</strong>
                   <span>
-                    {t("numerical descriptors", "คุณลักษณะตัวเลข")}
+                    {"numerical descriptors"}
                     <br />
-                    {t(
-                      "No molecular structure in this fixture",
-                      "fixture นี้ไม่มีโครงสร้างโมเลกุล",
-                    )}
+                    {c.canonical_smiles ? "Structure renderer unavailable; public SMILES remains in details" : "No molecular structure in this synthetic fixture"}
                   </span>
                 </div>
               )}
@@ -230,7 +218,7 @@ export default function Compounds() {
                   <span>{outcome(c)}</span>
                   <small>
                     {c.feature_nonzero} / {c.feature_count}{" "}
-                    {t("nonzero features", "features ที่ไม่ใช่ศูนย์")}
+                    {"nonzero features"}
                   </small>
                 </div>
                 <ChevronRight size={17} />
@@ -241,7 +229,7 @@ export default function Compounds() {
       )}
       <div className="pagination">
         <span>
-          {t("Page", "หน้า")} {page} /{" "}
+          {"Page"} {page} /{" "}
           {Math.max(1, Math.ceil((result?.total ?? 0) / 12))}
         </span>
         <div className="button-row">
@@ -253,7 +241,7 @@ export default function Compounds() {
             onClick={() => setPage((p) => p - 1)}
           >
             <ChevronLeft size={16} />
-            {t("Previous", "ก่อนหน้า")}
+            {"Previous"}
           </Button>
           <Button
             aria-label="Next compound page"
@@ -262,7 +250,7 @@ export default function Compounds() {
             disabled={page * 12 >= (result?.total ?? 0) || loading}
             onClick={() => setPage((p) => p + 1)}
           >
-            {t("Next", "ถัดไป")}
+            {"Next"}
             <ChevronRight size={16} />
           </Button>
         </div>
@@ -273,10 +261,7 @@ export default function Compounds() {
           if (!open) setSelected(null);
         }}
         title={selected?.compound_id ?? "Compound details"}
-        description={t(
-          "Public structure and observed assay information only.",
-          "แสดงโครงสร้างสาธารณะและผล assay ที่เปิดเผยแล้วเท่านั้น",
-        )}
+        description={"Public structure and observed assay information only."}
       >
         {selected && (
           <>

@@ -7,6 +7,8 @@ import type {
   Policy,
   PolicyInfo,
   RunView,
+  SavedRuns,
+  SavedComparisons,
   Scenario,
 } from "./types";
 
@@ -46,7 +48,7 @@ export async function request<T>(
       response.status,
     );
   }
-  return response.json() as Promise<T>;
+  return response.status === 204 ? undefined as T : response.json() as Promise<T>;
 }
 const post = <T>(path: string, body: unknown) =>
   request<T>(path, { method: "POST", body: JSON.stringify(body) });
@@ -58,6 +60,10 @@ export const api = {
   create: (scenario: Scenario, policy: Policy) =>
     post<RunView>("/runs", { scenario, policy }),
   run: (id: string) => request<RunView>("/runs/" + id),
+  runs: () => request<SavedRuns>("/runs"),
+  deleteRun: (id: string) => request<void>("/runs/" + id, { method: "DELETE" }),
+  revisions: (id: string) => request<{ session_id: string; items: { revision: number; saved_at: string }[] }>(`/runs/${id}/revisions`),
+  recoverRevision: (session_id: string, revision: number) => post<RunView>("/recovery/runs", { session_id, revision }),
   action: (run: RunView, action: string, steps = 1) =>
     post<RunView>(`/runs/${run.session_id}/${action}`, {
       expected_revision: run.revision,
@@ -76,6 +82,8 @@ export const api = {
       policies,
     }),
   job: (id: string) => request<Job>("/comparisons/" + id),
+  jobs: () => request<SavedComparisons>("/comparisons"),
+  deleteJob: (id: string) => request<void>("/comparisons/" + id, { method: "DELETE" }),
   resume: (payload: unknown) => post<RunView>("/resume", payload),
 };
 export function runExport(id: string, format: "json" | "csv") {

@@ -18,17 +18,20 @@ import { short } from "../lib";
 import type { Candidate } from "../types";
 
 export default function Overview() {
-  const { run, evidence, meta, t } = useApp();
+  const { run, evidence, meta } = useApp();
   const [candidate, setCandidate] = useState<Candidate | null>(null);
+  const [candidateError, setCandidateError] = useState(false);
   useEffect(() => {
     if (!run) return;
     let alive = true;
+    setCandidate(null);
+    setCandidateError(false);
     api
       .candidates(run.session_id, { page_size: 1 })
       .then((r) => {
         if (alive) setCandidate(r.items[0] ?? null);
       })
-      .catch(() => {});
+      .catch(() => { if (alive) setCandidateError(true); });
     return () => {
       alive = false;
     };
@@ -46,26 +49,23 @@ export default function Overview() {
             <Badge>Personal research portfolio</Badge>
           </div>
           <h1>
-            {t("Every assay is a decision.", "ทุกการทดสอบ เริ่มจากการตัดสินใจ")}
+            {"Every assay is a decision."}
             <br />
-            <span>{t("Make yours reproducible.", "ที่ตรวจสอบซ้ำได้")}</span>
+            <span>{"Make yours reproducible."}</span>
           </h1>
           <p>
-            {t(
-              `A library of ${scenario.candidate_count.toLocaleString()} candidates. A budget of ${scenario.budget_units} simulated cost units. Which compounds should we test first—and what changes when results arrive?`,
-              `จากสาร ${scenario.candidate_count.toLocaleString()} ตัว ภายใต้งบจำลอง ${scenario.budget_units} หน่วย เราควรเลือกทดสอบตัวใดก่อน และปรับการเลือกอย่างไรเมื่อได้รับผลใหม่?`,
-            )}
+            {(`A library of ${scenario.candidate_count.toLocaleString()} candidates. A budget of ${scenario.budget_units} simulated cost units. Which compounds should we test first—and what changes when results arrive?`)}
           </p>
           <div className="hero-actions">
             <Button asChild>
               <Link to="/lab">
-                {t("Enter simulation lab", "เปิดห้องจำลอง")}
+                {"Enter simulation lab"}
                 <ArrowRight size={17} />
               </Link>
             </Button>
             <Button asChild variant="ghost">
               <Link to="/scenario">
-                {t("Design a scenario", "ตั้งเงื่อนไขการทดลอง")}
+                {"Design a scenario"}
                 <ArrowUpRight size={16} />
               </Link>
             </Button>
@@ -73,26 +73,17 @@ export default function Overview() {
           <div className="hero-footnote">
             <ShieldCheck size={15} />
             {historical
-              ? t(
-                  "Historical labels. Simulated operations. No claims of drug efficacy.",
-                  "ผล assay จริงย้อนหลัง · เงื่อนไขปฏิบัติงานจำลอง · ไม่ใช่หลักฐานประสิทธิผลของยา",
-                )
-              : t(
-                  "Synthetic labels and operations. No biological efficacy meaning.",
-                  "ทั้งผลและเงื่อนไขเป็นข้อมูลสังเคราะห์ ไม่มีความหมายเชิงประสิทธิผลทางชีวภาพ",
-                )}
+              ? "Historical labels. Simulated operations. No claims of drug efficacy."
+              : "Synthetic labels and operations. No biological efficacy meaning."}
           </div>
         </div>
         <div className="hero-specimen">
           <div className="specimen-header">
             <span>
-              {t(
-                "From the public candidate pool",
-                "ตัวอย่างจากกลุ่มสารสาธารณะ",
-              )}
+              {"From the public candidate pool"}
             </span>
             <span className="small-mono">
-              {candidate?.compound_id ?? "Loading…"}
+              {candidate?.compound_id ?? (candidateError ? "Preview unavailable" : "Loading…")}
             </span>
           </div>
           {candidate?.canonical_smiles && meta?.molecule_rendering ? (
@@ -110,11 +101,9 @@ export default function Overview() {
           )}
           <div className="specimen-footer">
             <div>
-              <span>{t("Representation", "รูปแบบข้อมูล")}</span>
+              <span>{"Representation"}</span>
               <strong>
-                {candidate?.canonical_smiles
-                  ? "Morgan fingerprint"
-                  : "Synthetic descriptors"}
+                {historical ? "Morgan fingerprint" : "Synthetic descriptors"}
               </strong>
             </div>
             <Badge className="badge-neutral">
@@ -122,14 +111,9 @@ export default function Overview() {
             </Badge>
           </div>
           <p className="specimen-note">
-            {t(
-              historical
+            {candidateError ? "Candidate preview could not load. Open Compound explorer to retry the public data request." : (historical
                 ? "Structure is public. Its assay outcome stays hidden until requested and delivered."
-                : "Synthetic numerical descriptors only; no real molecular structure or biological assay.",
-              historical
-                ? "โครงสร้างเป็นข้อมูลสาธารณะ ส่วนผล assay ถูกซ่อนไว้จนกว่าจะร้องขอและส่งคืนผล"
-                : "มีเพียง descriptors สังเคราะห์ ไม่มีโครงสร้างโมเลกุลหรือผล assay ทางชีวภาพจริง",
-            )}
+                : "Synthetic numerical descriptors only; no real molecular structure or biological assay.")}
           </p>
         </div>
       </div>
@@ -138,20 +122,14 @@ export default function Overview() {
         <div className="section-heading">
           <div>
             <h2>
-              {t(
-                "A closed loop, with an open audit trail",
-                "วงจรการเลือกสาร พร้อมบันทึกทุกขั้นตอน",
-              )}
+              {"A closed loop, with an open audit trail"}
             </h2>
             <p>
-              {t(
-                "Live campaign state, not an illustration of laboratory integration.",
-                "สถานะจาก campaign จริงในระบบ ไม่ใช่ภาพแทนการเชื่อมต่อห้องปฏิบัติการ",
-              )}
+              {"Live campaign state, not an illustration of laboratory integration."}
             </p>
           </div>
           <GoLink to="/lab">
-            {t("Follow the campaign", "ติดตาม campaign")}
+            {"Follow the campaign"}
           </GoLink>
         </div>
         <Workflow run={run} />
@@ -161,16 +139,10 @@ export default function Overview() {
           <div className="section-heading">
             <div>
               <h2>
-                {t(
-                  "Evidence before ambition",
-                  "เริ่มจากหลักฐาน ก่อนขยายข้อกล่าวอ้าง",
-                )}
+                {"Evidence before ambition"}
               </h2>
               <p>
-                {t(
-                  "Recorded HIV benchmark · 10 paired seeds · B = 30",
-                  "ผล HIV benchmark ที่บันทึกไว้ · 10 paired seeds · B = 30",
-                )}
+                {"Recorded HIV benchmark · 10 paired seeds · B = 30"}
               </p>
             </div>
             <Badge className="badge-neutral">v0.1 evidence</Badge>
@@ -181,33 +153,22 @@ export default function Overview() {
           <div className="honesty-note">
             <GitBranch size={17} />
             <p>
-              {t(
-                "The learned controllers matched Greedy because all 300/300 historical requests used their Greedy fallback. This is not successful learned transfer.",
-                "controller ที่ฝึกแล้วได้ผลเท่า Greedy เพราะทั้ง 300/300 คำขอใช้ Greedy fallback จึงยังไม่ใช่หลักฐานว่าเกิด learned transfer",
-              )}
+              {"The learned controllers matched Greedy because all 300/300 historical requests used their Greedy fallback. This is not successful learned transfer."}
             </p>
           </div>
           <GoLink to="/evidence">
-            {t("Read methods and limitations", "อ่านวิธีประเมินและข้อจำกัด")}
+            {"Read methods and limitations"}
           </GoLink>
         </section>
         <section className="research-note">
           <BookOpen size={23} />
           <h2>
-            {t(
-              "A research instrument.\nAn honest portfolio.",
-              "เครื่องมือเรียนรู้การวิจัย\nพร้อมข้อจำกัดที่ชัดเจน",
-            )}
+            {"A research instrument.\nAn honest portfolio."}
           </h2>
           <p>
-            {t(
-              historical
+            {(historical
                 ? "Explore policy trade-offs with real historical assay data. Inspect every decision, budget reservation and delivered result."
-                : "Explore policy trade-offs with synthetic fixtures. Inspect every decision, budget reservation and delivered result.",
-              historical
-                ? "ศึกษาทางเลือกของนโยบายบนข้อมูล assay จริงย้อนหลัง พร้อมตรวจเหตุผล งบที่จอง และผลที่ส่งคืนได้ทุกขั้น"
-                : "ศึกษาทางเลือกของนโยบายด้วยข้อมูลสังเคราะห์ พร้อมตรวจเหตุผล งบที่จอง และผลที่ส่งคืนได้ทุกขั้น",
-            )}
+                : "Explore policy trade-offs with synthetic fixtures. Inspect every decision, budget reservation and delivered result.")}
           </p>
           <dl>
             <div>
@@ -230,7 +191,7 @@ export default function Overview() {
             </div>
           </dl>
           <GoLink to="/presentation">
-            {t("Open the guided presentation", "เปิดโหมดนำเสนอ")}
+            {"Open the guided presentation"}
           </GoLink>
         </section>
       </div>
