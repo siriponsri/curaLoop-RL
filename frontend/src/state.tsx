@@ -31,8 +31,8 @@ interface Store {
   create: (scenario: Scenario, policy: Policy) => Promise<boolean>;
   openSaved: (id: string) => Promise<boolean>;
   importSnapshot: (payload: unknown) => Promise<boolean>;
+  recoverSavedRevision: (id: string, revision: number) => Promise<boolean>;
   act: (action: string) => Promise<void>;
-  setRun: (run: RunView) => void;
 }
 const Context = createContext<Store | null>(null);
 const message = (err: unknown) => err instanceof Error ? err.message : String(err);
@@ -120,6 +120,16 @@ export function AppProvider({ children }: { children: ReactNode }) {
     } catch (err) { setError(message(err)); return false; }
     finally { inFlight.current = false; setBusy(null); }
   }, [acceptRun]);
+  const recoverSavedRevision = useCallback(async (id: string, revision: number) => {
+    if (inFlight.current) return false;
+    inFlight.current = true; setBusy("recover"); setError(null);
+    try {
+      acceptRun(await api.recoverRevision(id, revision));
+      setNotice("Recovered campaign opened. Your validated campaign is ready in Simulation lab.");
+      return true;
+    } catch (err) { setError(message(err)); return false; }
+    finally { inFlight.current = false; setBusy(null); }
+  }, [acceptRun]);
   const act = useCallback(async (action: string) => {
     if (!run || inFlight.current) return;
     inFlight.current = true; setBusy(action); setError(null);
@@ -136,8 +146,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   }, [run, acceptRun]);
   return (
     <Context.Provider value={{ run, meta, datasets, policies, evidence, loading, busy, error, notice,
-      retry, clearError: () => setError(null), create, openSaved, importSnapshot, act,
-      setRun: value => { acceptRun(value); setError(null); setNotice("Recovered campaign opened. Your validated campaign is ready in Simulation lab."); } }}>
+      retry, clearError: () => setError(null), create, openSaved, importSnapshot, recoverSavedRevision, act }}>
       {children}
     </Context.Provider>
   );

@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { cleanup, render, screen, waitFor } from "@testing-library/react";
+import { act, cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import App from "./App";
@@ -183,6 +183,30 @@ describe("runnable research UI", () => {
     show();
     expect(await screen.findByText("Every assay is a decision.")).toBeInTheDocument();
     expect(document.documentElement.lang).toBe("en");
+  });
+  it("blocks old-campaign actions while a saved revision is recovering across navigation", async () => {
+    localStorage.setItem("curaloop-session", fixtures.run.session_id);
+    vi.mocked(api.runs).mockResolvedValue({ items: [], recovery_issues: [{ kind: "run", id: "damaged", message: "A saved campaign needs recovery." }], storage: { schema_version: 1, status: "ok" } });
+    vi.spyOn(api, "revisions").mockResolvedValue({ session_id: "damaged", items: [{ revision: 2, saved_at: "2026-11-04T10:00:00Z" }] });
+    let completeRecovery!: (run: RunView) => void;
+    vi.spyOn(api, "recoverRevision").mockImplementation(() => new Promise(resolve => { completeRecovery = resolve; }));
+    vi.spyOn(api, "action").mockResolvedValue(fixtures.run as RunView);
+    show("/evidence");
+    await screen.findByRole("heading", { name: "Research evidence" });
+    await userEvent.click(await screen.findByRole("button", { name: "Inspect saved revisions" }));
+    await userEvent.click(await screen.findByRole("button", { name: "Recover selected revision" }));
+    expect(api.recoverRevision).toHaveBeenCalledWith("damaged", 2);
+    await userEvent.click(screen.getByRole("link", { name: "Simulation lab" }));
+    await screen.findByRole("heading", { name: "Simulation lab" });
+    const select = screen.getByRole("button", { name: "Select batch" });
+    expect(select).toBeDisabled();
+    await userEvent.click(select);
+    expect(api.action).not.toHaveBeenCalled();
+    await act(async () => { completeRecovery({ ...fixtures.pending, session_id: "recovered-session" } as RunView); });
+    expect(await screen.findByText("Awaiting feedback")).toBeInTheDocument();
+    expect(localStorage.getItem("curaloop-session")).toBe("recovered-session");
+    expect(screen.getByRole("button", { name: "Advance time" })).toBeEnabled();
+    expect(api.action).not.toHaveBeenCalled();
   });
   it("reports a stale-action refresh failure without an unhandled rejection", async () => {
     vi.spyOn(api, "action").mockRejectedValue(new ApiError("Stale action rejected.", 409));

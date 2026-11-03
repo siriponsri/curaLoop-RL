@@ -29,7 +29,7 @@ export function SnapshotImport() {
 }
 
 export function SavedRuns({ includeImport = false }: { includeImport?: boolean }) {
-  const { run, openSaved, setRun, busy } = useApp();
+  const { run, openSaved, recoverSavedRevision, busy } = useApp();
   const [saved, setSaved] = useState<SavedRunsResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [working, setWorking] = useState(false);
@@ -60,7 +60,9 @@ export function SavedRuns({ includeImport = false }: { includeImport?: boolean }
   async function recover() {
     if (!revisions) return;
     setWorking(true); setError(null);
-    try { setRun(await api.recoverRevision(revisions.id, revision)); setRevisions(null); await refresh(); }
+    try {
+      if (await recoverSavedRevision(revisions.id, revision)) { setRevisions(null); await refresh(); }
+    }
     catch (err) { setError((err as Error).message); }
     finally { setWorking(false); }
   }
