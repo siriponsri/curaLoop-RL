@@ -109,6 +109,13 @@ remote and perform the owner-authorized normal main publication if all gates pas
   main only if ancestry permits, normal push and record actual publication result.
 
 
-Verified runtime content commit: `0b1c53df376c9d44a8abefb4c99a6ff69a9741b9`. Engine/API/frontend digests
+Verified runtime content commit: `0de416643726c96b7c9648b615359fafb94d32be`. Engine/API/frontend digests
 match the actual final browser metadata. Later documentation commits do not
 change the tested runtime files. Publication result is recorded separately.
+
+
+Fresh-checkout byte preservation: **PASS** on Windows. A new clone of `0de416643726c96b7c9648b615359fafb94d32be`
+retains the exact tested frontend/API hashes and all191 original protected files.
+Repository attributes preserve these records across Git line-ending settings; no
+global Git configuration changed. The previous identity receipt is retained as
+a pre-packaging checkpoint. No runtime/scientific behavior changed.
