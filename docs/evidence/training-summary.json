@@ -1,0 +1,58 @@
+{
+  "q_learning": {
+    "schema_version": "1.1",
+    "policy_id": "q_learning",
+    "status": "RL_TRAINED",
+    "algorithm": "tabular Q-learning",
+    "training_episodes": 160,
+    "training_rng_seed": 20261103,
+    "training_dataset_names": [
+      "synthetic_linear_v1",
+      "synthetic_shift_v1"
+    ],
+    "training_data_origin": "SYNTHETIC_ONLY",
+    "real_assay_labels_used_in_training": false,
+    "state_definition": "remaining budget tertile, observed positive-rate bin, known-count bin, two-class flag, pending flag",
+    "action_definition": [
+      "random",
+      "greedy",
+      "uncertainty"
+    ],
+    "reward": "new delivered active hits - 0.01 * newly settled cost units",
+    "alpha": 0.2,
+    "gamma": 0.95,
+    "epsilon": "max(0.1, 1 - episode/(episodes*0.85))",
+    "unseen_state_fallback": "greedy",
+    "validation_status": "NO_PHARMACEUTICAL_TRANSFER_CLAIM",
+    "checkpoint_sha256": "4d1a216d0d2a85529f7826f40a108362de07db08c0691e97575426a32864aa9b",
+    "mean_training_return": 5.782875
+  },
+  "contextual_bandit": {
+    "schema_version": "1.1",
+    "policy_id": "contextual_bandit",
+    "status": "BANDIT_TRAINED",
+    "algorithm": "contextual epsilon-greedy sample-average bandit",
+    "training_episodes": 160,
+    "training_rng_seed": 20261103,
+    "training_dataset_names": [
+      "synthetic_linear_v1",
+      "synthetic_shift_v1"
+    ],
+    "training_data_origin": "SYNTHETIC_ONLY",
+    "real_assay_labels_used_in_training": false,
+    "state_definition": "remaining budget tertile, observed positive-rate bin, known-count bin, two-class flag, pending flag",
+    "action_definition": [
+      "random",
+      "greedy",
+      "uncertainty"
+    ],
+    "reward": "new delivered active hits - 0.01 * newly settled cost units",
+    "alpha": "1/N(state, action)",
+    "gamma": 0.0,
+    "epsilon": "max(0.1, 1 - episode/(episodes*0.85))",
+    "unseen_state_fallback": "greedy",
+    "validation_status": "NO_PHARMACEUTICAL_TRANSFER_CLAIM",
+    "checkpoint_sha256": "39f3285105e4ef5d9a87ca2ca946c5055c3294c72c95426bdfe0e20fad651b84",
+    "mean_training_return": 6.070375
+  }
+}

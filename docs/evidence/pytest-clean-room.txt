@@ -1,0 +1,36 @@
+........................................................................ [ 91%]
+.......                                                                  [100%]
+=============================== warnings summary ===============================
+tests/test_app.py::test_overview_provenance_logo_and_real_demo_navigation
+  /workspace/scratch/d375f2fe413e/curaloop-rl/app/streamlit_app.py:25: AltairDeprecationWarning: 
+  Deprecated since `altair=5.5.0`. Use altair.theme instead.
+  Most cases require only the following change:
+  
+      # Deprecated
+      alt.themes.enable('quartz')
+  
+      # Updated
+      alt.theme.enable('quartz')
+  
+  If your code registers a theme, make the following change:
+  
+      # Deprecated
+      def custom_theme():
+          return {'height': 400, 'width': 700}
+      alt.themes.register('theme_name', custom_theme)
+      alt.themes.enable('theme_name')
+  
+      # Updated
+      @alt.theme.register('theme_name', enable=True)
+      def custom_theme():
+          return alt.theme.ThemeConfig(
+              {'height': 400, 'width': 700}
+          )
+  
+  See the updated User Guide for further details:
+      https://altair-viz.github.io/user_guide/api.html#theme
+      https://altair-viz.github.io/user_guide/customization.html#chart-themes
+    alt.themes.register("curaloop", lambda: {"config": {"font": "CuraThai", "axis": {"labelFont": "CuraThai", "titleFont": "CuraThai"}, "legend": {"labelFont": "CuraThai", "titleFont": "CuraThai"}}})
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+79 passed, 1 warning in 60.88s (0:01:00)
