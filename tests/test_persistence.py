@@ -307,6 +307,40 @@ def test_delete_is_durable_and_cascades_revision_history(tmp_path):
         assert connection.execute("SELECT COUNT(*) FROM run_revisions").fetchone()[0] == 0
 
 
+@pytest.mark.parametrize("cached", [False, True])
+def test_explicit_delete_removes_damaged_campaign_and_revisions(tmp_path, cached):
+    path = tmp_path / "state.sqlite3"
+    with TestClient(create_app(path)) as client:
+        run = create(client)
+    damaged = run["report"]
+    damaged["metrics"]["confirmed_hits"] += 1
+    payload, checksum = encode(damaged)
+    app = create_app(path)
+    with TestClient(app) as client:
+        if cached:
+            assert client.get(f"/api/v1/runs/{run['session_id']}").status_code == 200
+        with sqlite3.connect(path) as connection:
+            # Cover both scientific corruption with a recomputed checksum after
+            # restart, and byte corruption while the cached session lock exists.
+            connection.execute(
+                "UPDATE runs SET snapshot=?, checksum=?",
+                (payload, "0" * 64 if cached else checksum),
+            )
+        result = client.get("/api/v1/runs").json()
+        assert not result["items"] and result["recovery_issues"][0]["id"] == run["session_id"]
+        with sqlite3.connect(path) as connection:
+            assert connection.execute("SELECT snapshot FROM runs").fetchone()[0] == payload
+            assert connection.execute("SELECT COUNT(*) FROM run_revisions").fetchone()[0] == 1
+        assert client.delete(f"/api/v1/runs/{run['session_id']}").status_code == 204
+        assert client.delete(f"/api/v1/runs/{run['session_id']}").status_code == 404
+        assert client.get(f"/api/v1/runs/{run['session_id']}").status_code == 404
+        assert client.get(f"/api/v1/runs/{run['session_id']}/revisions").status_code == 404
+        assert not client.get("/api/v1/runs").json()["recovery_issues"]
+    with sqlite3.connect(path) as connection:
+        assert connection.execute("SELECT COUNT(*) FROM runs").fetchone()[0] == 0
+        assert connection.execute("SELECT COUNT(*) FROM run_revisions").fetchone()[0] == 0
+
+
 def wait_job(client, job_id):
     for _ in range(200):
         job = client.get("/api/v1/comparisons/" + job_id).json()

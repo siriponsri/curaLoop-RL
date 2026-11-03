@@ -563,8 +563,15 @@ def create_app(storage_path: str | Path | None = None) -> FastAPI:
 
     @app.delete("/api/v1/runs/{session_id}", status_code=204)
     def delete_run(session_id: str):
-        session = get_session(session_id)
-        with session.lock, app.state.registry_lock:
+        # Explicit removal must also work for an unreconcilable saved snapshot.
+        # Look up a cached lock without rebuilding scientific state, then retain
+        # the same session-lock -> registry-lock ordering used by normal removal.
+        with app.state.registry_lock:
+            cached = app.state.sessions.get(session_id)
+        lock = cached.lock if cached is not None else threading.Lock()
+        with lock, app.state.registry_lock:
+            if storage().run_record(session_id) is None:
+                raise HTTPException(404, "Saved campaign was not found.")
             storage().delete_run(session_id)
             app.state.sessions.pop(session_id, None)
         return Response(status_code=204)
