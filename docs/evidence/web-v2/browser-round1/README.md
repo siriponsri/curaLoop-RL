@@ -1,0 +1,1 @@
+Superseded initial captures, not final acceptance evidence. Mobile lab was a loading screen and mobile overview/benchmark were incomplete. Serious contrast and keyboard issues were found and subsequently fixed. See ../browser/ and ../finish-review.md for final evidence.

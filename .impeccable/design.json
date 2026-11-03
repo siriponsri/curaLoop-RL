@@ -1,0 +1,615 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-03T07:38:00Z",
+  "title": "Design System: CuraLoop-RL",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Original Teal",
+        "tonalRamp": [
+          "oklch(15.0% 0.0942 182.4)",
+          "oklch(26.4% 0.0942 182.4)",
+          "oklch(37.9% 0.0942 182.4)",
+          "oklch(49.3% 0.0942 182.4)",
+          "oklch(60.7% 0.0942 182.4)",
+          "oklch(72.1% 0.0942 182.4)",
+          "oklch(83.6% 0.0942 182.4)",
+          "oklch(95.0% 0.0942 182.4)"
+        ]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Deep Action Teal",
+        "tonalRamp": [
+          "oklch(15.0% 0.0842 181.6)",
+          "oklch(26.4% 0.0842 181.6)",
+          "oklch(37.9% 0.0842 181.6)",
+          "oklch(49.3% 0.0842 181.6)",
+          "oklch(60.7% 0.0842 181.6)",
+          "oklch(72.1% 0.0842 181.6)",
+          "oklch(83.6% 0.0842 181.6)",
+          "oklch(95.0% 0.0842 181.6)"
+        ]
+      },
+      "midnight": {
+        "role": "neutral",
+        "displayName": "Midnight Reading Ink",
+        "tonalRamp": [
+          "oklch(15.0% 0.0376 218.1)",
+          "oklch(26.4% 0.0376 218.1)",
+          "oklch(37.9% 0.0376 218.1)",
+          "oklch(49.3% 0.0376 218.1)",
+          "oklch(60.7% 0.0376 218.1)",
+          "oklch(72.1% 0.0376 218.1)",
+          "oklch(83.6% 0.0376 218.1)",
+          "oklch(95.0% 0.0376 218.1)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Sage Reading Ink",
+        "tonalRamp": [
+          "oklch(15.0% 0.0385 146.3)",
+          "oklch(26.4% 0.0385 146.3)",
+          "oklch(37.9% 0.0385 146.3)",
+          "oklch(49.3% 0.0385 146.3)",
+          "oklch(60.7% 0.0385 146.3)",
+          "oklch(72.1% 0.0385 146.3)",
+          "oklch(83.6% 0.0385 146.3)",
+          "oklch(95.0% 0.0385 146.3)"
+        ]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Mint Stone Canvas",
+        "tonalRamp": [
+          "oklch(15.0% 0.0025 165.1)",
+          "oklch(26.4% 0.0025 165.1)",
+          "oklch(37.9% 0.0025 165.1)",
+          "oklch(49.3% 0.0025 165.1)",
+          "oklch(60.7% 0.0025 165.1)",
+          "oklch(72.1% 0.0025 165.1)",
+          "oklch(83.6% 0.0025 165.1)",
+          "oklch(95.0% 0.0025 165.1)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "White Working Paper",
+        "tonalRamp": [
+          "oklch(15.0% 0.0000 0.0)",
+          "oklch(26.4% 0.0000 0.0)",
+          "oklch(37.9% 0.0000 0.0)",
+          "oklch(49.3% 0.0000 0.0)",
+          "oklch(60.7% 0.0000 0.0)",
+          "oklch(72.1% 0.0000 0.0)",
+          "oklch(83.6% 0.0000 0.0)",
+          "oklch(95.0% 0.0000 0.0)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Stone Divider",
+        "tonalRamp": [
+          "oklch(15.0% 0.0110 167.8)",
+          "oklch(26.4% 0.0110 167.8)",
+          "oklch(37.9% 0.0110 167.8)",
+          "oklch(49.3% 0.0110 167.8)",
+          "oklch(60.7% 0.0110 167.8)",
+          "oklch(72.1% 0.0110 167.8)",
+          "oklch(83.6% 0.0110 167.8)",
+          "oklch(95.0% 0.0110 167.8)"
+        ]
+      },
+      "primary-soft": {
+        "role": "primary",
+        "displayName": "Settled Mint",
+        "tonalRamp": [
+          "oklch(15.0% 0.0174 159.1)",
+          "oklch(26.4% 0.0174 159.1)",
+          "oklch(37.9% 0.0174 159.1)",
+          "oklch(49.3% 0.0174 159.1)",
+          "oklch(60.7% 0.0174 159.1)",
+          "oklch(72.1% 0.0174 159.1)",
+          "oklch(83.6% 0.0174 159.1)",
+          "oklch(95.0% 0.0174 159.1)"
+        ]
+      },
+      "primary-soft-ink": {
+        "role": "primary",
+        "displayName": "Settled Teal Ink",
+        "tonalRamp": [
+          "oklch(15.0% 0.0887 170.3)",
+          "oklch(26.4% 0.0887 170.3)",
+          "oklch(37.9% 0.0887 170.3)",
+          "oklch(49.3% 0.0887 170.3)",
+          "oklch(60.7% 0.0887 170.3)",
+          "oklch(72.1% 0.0887 170.3)",
+          "oklch(83.6% 0.0887 170.3)",
+          "oklch(95.0% 0.0887 170.3)"
+        ]
+      },
+      "nav-active": {
+        "role": "primary",
+        "displayName": "Current Destination Mint",
+        "tonalRamp": [
+          "oklch(15.0% 0.0184 166.4)",
+          "oklch(26.4% 0.0184 166.4)",
+          "oklch(37.9% 0.0184 166.4)",
+          "oklch(49.3% 0.0184 166.4)",
+          "oklch(60.7% 0.0184 166.4)",
+          "oklch(72.1% 0.0184 166.4)",
+          "oklch(83.6% 0.0184 166.4)",
+          "oklch(95.0% 0.0184 166.4)"
+        ]
+      },
+      "nav-active-ink": {
+        "role": "primary",
+        "displayName": "Current Destination Teal",
+        "tonalRamp": [
+          "oklch(15.0% 0.0871 177.8)",
+          "oklch(26.4% 0.0871 177.8)",
+          "oklch(37.9% 0.0871 177.8)",
+          "oklch(49.3% 0.0871 177.8)",
+          "oklch(60.7% 0.0871 177.8)",
+          "oklch(72.1% 0.0871 177.8)",
+          "oklch(83.6% 0.0871 177.8)",
+          "oklch(95.0% 0.0871 177.8)"
+        ]
+      },
+      "research-soft": {
+        "role": "neutral",
+        "displayName": "Research Inset Mint",
+        "tonalRamp": [
+          "oklch(15.0% 0.0133 159.9)",
+          "oklch(26.4% 0.0133 159.9)",
+          "oklch(37.9% 0.0133 159.9)",
+          "oklch(49.3% 0.0133 159.9)",
+          "oklch(60.7% 0.0133 159.9)",
+          "oklch(72.1% 0.0133 159.9)",
+          "oklch(83.6% 0.0133 159.9)",
+          "oklch(95.0% 0.0133 159.9)"
+        ]
+      },
+      "workflow-soft": {
+        "role": "neutral",
+        "displayName": "Workflow Stone Mint",
+        "tonalRamp": [
+          "oklch(15.0% 0.0085 145.5)",
+          "oklch(26.4% 0.0085 145.5)",
+          "oklch(37.9% 0.0085 145.5)",
+          "oklch(49.3% 0.0085 145.5)",
+          "oklch(60.7% 0.0085 145.5)",
+          "oklch(72.1% 0.0085 145.5)",
+          "oklch(83.6% 0.0085 145.5)",
+          "oklch(95.0% 0.0085 145.5)"
+        ]
+      },
+      "brand-amber": {
+        "role": "secondary",
+        "displayName": "Original Amber",
+        "tonalRamp": [
+          "oklch(15.0% 0.1320 60.7)",
+          "oklch(26.4% 0.1320 60.7)",
+          "oklch(37.9% 0.1320 60.7)",
+          "oklch(49.3% 0.1320 60.7)",
+          "oklch(60.7% 0.1320 60.7)",
+          "oklch(72.1% 0.1320 60.7)",
+          "oklch(83.6% 0.1320 60.7)",
+          "oklch(95.0% 0.1320 60.7)"
+        ]
+      },
+      "amber-ink": {
+        "role": "secondary",
+        "displayName": "Readable Amber Ink",
+        "tonalRamp": [
+          "oklch(15.0% 0.1156 62.3)",
+          "oklch(26.4% 0.1156 62.3)",
+          "oklch(37.9% 0.1156 62.3)",
+          "oklch(49.3% 0.1156 62.3)",
+          "oklch(60.7% 0.1156 62.3)",
+          "oklch(72.1% 0.1156 62.3)",
+          "oklch(83.6% 0.1156 62.3)",
+          "oklch(95.0% 0.1156 62.3)"
+        ]
+      },
+      "amber-soft": {
+        "role": "secondary",
+        "displayName": "Qualification Paper",
+        "tonalRamp": [
+          "oklch(15.0% 0.0280 86.6)",
+          "oklch(26.4% 0.0280 86.6)",
+          "oklch(37.9% 0.0280 86.6)",
+          "oklch(49.3% 0.0280 86.6)",
+          "oklch(60.7% 0.0280 86.6)",
+          "oklch(72.1% 0.0280 86.6)",
+          "oklch(83.6% 0.0280 86.6)",
+          "oklch(95.0% 0.0280 86.6)"
+        ]
+      },
+      "amber-badge-ink": {
+        "role": "secondary",
+        "displayName": "Qualification Amber Ink",
+        "tonalRamp": [
+          "oklch(15.0% 0.1030 66.6)",
+          "oklch(26.4% 0.1030 66.6)",
+          "oklch(37.9% 0.1030 66.6)",
+          "oklch(49.3% 0.1030 66.6)",
+          "oklch(60.7% 0.1030 66.6)",
+          "oklch(72.1% 0.1030 66.6)",
+          "oklch(83.6% 0.1030 66.6)",
+          "oklch(95.0% 0.1030 66.6)"
+        ]
+      },
+      "reserved": {
+        "role": "secondary",
+        "displayName": "Reserved Budget Gold",
+        "tonalRamp": [
+          "oklch(15.0% 0.1216 84.4)",
+          "oklch(26.4% 0.1216 84.4)",
+          "oklch(37.9% 0.1216 84.4)",
+          "oklch(49.3% 0.1216 84.4)",
+          "oklch(60.7% 0.1216 84.4)",
+          "oklch(72.1% 0.1216 84.4)",
+          "oklch(83.6% 0.1216 84.4)",
+          "oklch(95.0% 0.1216 84.4)"
+        ]
+      },
+      "available": {
+        "role": "neutral",
+        "displayName": "Available Budget Mint",
+        "tonalRamp": [
+          "oklch(15.0% 0.0213 147.6)",
+          "oklch(26.4% 0.0213 147.6)",
+          "oklch(37.9% 0.0213 147.6)",
+          "oklch(49.3% 0.0213 147.6)",
+          "oklch(60.7% 0.0213 147.6)",
+          "oklch(72.1% 0.0213 147.6)",
+          "oklch(83.6% 0.0213 147.6)",
+          "oklch(95.0% 0.0213 147.6)"
+        ]
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "Keyboard Focus Teal",
+        "tonalRamp": [
+          "oklch(15.0% 0.0962 176.6)",
+          "oklch(26.4% 0.0962 176.6)",
+          "oklch(37.9% 0.0962 176.6)",
+          "oklch(49.3% 0.0962 176.6)",
+          "oklch(60.7% 0.0962 176.6)",
+          "oklch(72.1% 0.0962 176.6)",
+          "oklch(83.6% 0.0962 176.6)",
+          "oklch(95.0% 0.0962 176.6)"
+        ]
+      },
+      "danger-ink": {
+        "role": "tertiary",
+        "displayName": "Destructive Red Ink",
+        "tonalRamp": [
+          "oklch(15.0% 0.1435 25.9)",
+          "oklch(26.4% 0.1435 25.9)",
+          "oklch(37.9% 0.1435 25.9)",
+          "oklch(49.3% 0.1435 25.9)",
+          "oklch(60.7% 0.1435 25.9)",
+          "oklch(72.1% 0.1435 25.9)",
+          "oklch(83.6% 0.1435 25.9)",
+          "oklch(95.0% 0.1435 25.9)"
+        ]
+      },
+      "danger-soft": {
+        "role": "tertiary",
+        "displayName": "Destructive Paper",
+        "tonalRamp": [
+          "oklch(15.0% 0.0111 31.1)",
+          "oklch(26.4% 0.0111 31.1)",
+          "oklch(37.9% 0.0111 31.1)",
+          "oklch(49.3% 0.0111 31.1)",
+          "oklch(60.7% 0.0111 31.1)",
+          "oklch(72.1% 0.0111 31.1)",
+          "oklch(83.6% 0.0111 31.1)",
+          "oklch(95.0% 0.0111 31.1)"
+        ]
+      },
+      "chart-random": {
+        "role": "tertiary",
+        "displayName": "Random Slate",
+        "tonalRamp": [
+          "oklch(15.0% 0.0322 242.0)",
+          "oklch(26.4% 0.0322 242.0)",
+          "oklch(37.9% 0.0322 242.0)",
+          "oklch(49.3% 0.0322 242.0)",
+          "oklch(60.7% 0.0322 242.0)",
+          "oklch(72.1% 0.0322 242.0)",
+          "oklch(83.6% 0.0322 242.0)",
+          "oklch(95.0% 0.0322 242.0)"
+        ]
+      },
+      "chart-q-learning": {
+        "role": "tertiary",
+        "displayName": "Q-learning Violet",
+        "tonalRamp": [
+          "oklch(15.0% 0.1214 302.2)",
+          "oklch(26.4% 0.1214 302.2)",
+          "oklch(37.9% 0.1214 302.2)",
+          "oklch(49.3% 0.1214 302.2)",
+          "oklch(60.7% 0.1214 302.2)",
+          "oklch(72.1% 0.1214 302.2)",
+          "oklch(83.6% 0.1214 302.2)",
+          "oklch(95.0% 0.1214 302.2)"
+        ]
+      },
+      "chart-bandit": {
+        "role": "tertiary",
+        "displayName": "Bandit Blue",
+        "tonalRamp": [
+          "oklch(15.0% 0.1176 241.2)",
+          "oklch(26.4% 0.1176 241.2)",
+          "oklch(37.9% 0.1176 241.2)",
+          "oklch(49.3% 0.1176 241.2)",
+          "oklch(60.7% 0.1176 241.2)",
+          "oklch(72.1% 0.1176 241.2)",
+          "oklch(83.6% 0.1176 241.2)",
+          "oklch(95.0% 0.1176 241.2)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Overview headline; preserve the recorded non-monotonic responsive overrides."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "General page h1, with narrower page-heading overrides."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "General section h2; individual compact sections retain source variants."
+      },
+      "subheading": {
+        "displayName": "Subheading",
+        "purpose": "General h3 and compact subheading."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Root 14 px text and inherited line height."
+      },
+      "body-copy": {
+        "displayName": "Body Copy",
+        "purpose": "Paragraph leading; supporting workbench prose may use 12–13 px."
+      },
+      "presentation-copy": {
+        "displayName": "Presentation Copy",
+        "purpose": "Guided narration; 14 px at narrower widths."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Default button label, not every compact label."
+      },
+      "annotation": {
+        "displayName": "Annotation",
+        "purpose": "11 px density exception for captions, source labels and secondary metadata."
+      },
+      "table": {
+        "displayName": "Table",
+        "purpose": "11 px scientific records with tabular numbers; explanations wrap at 1.8 leading."
+      },
+      "technical": {
+        "displayName": "Technical",
+        "purpose": "Technical identifiers with CuraThai fallback; compact contexts use 11 px."
+      },
+      "metric": {
+        "displayName": "Metric",
+        "purpose": "KPI total with tabular numbers; mobile uses 29 px."
+      },
+      "training-axis": {
+        "displayName": "Training Axis",
+        "purpose": "Existing 10 px checkpoint-return tick exception."
+      }
+    },
+    "shadows": [
+      {
+        "name": "primary-action",
+        "value": "0 2px 5px #065c4f12",
+        "purpose": "Default teal button."
+      },
+      {
+        "name": "language-selection",
+        "value": "0 1px 3px #183a2414",
+        "purpose": "Selected EN/TH segment."
+      },
+      {
+        "name": "compound-hover",
+        "value": "0 7px 22px #223d2710",
+        "purpose": "Interactive compound card only."
+      },
+      {
+        "name": "busy-indicator",
+        "value": "0 8px 28px #123b3026",
+        "purpose": "Fixed local-engine status."
+      },
+      {
+        "name": "modal",
+        "value": "0 24px 90px #0b251d38",
+        "purpose": "Dialog above the translucent #132e2580 scrim."
+      }
+    ],
+    "motion": [
+      {
+        "name": "component-transition",
+        "value": "0.16s ease",
+        "purpose": "CSS-default easing for navigation background/color, button background/shadow/transform and compound border/shadow."
+      },
+      {
+        "name": "button-press",
+        "value": "translateY(1px)",
+        "purpose": "Enabled action press; no celebratory movement."
+      },
+      {
+        "name": "loading-spinner",
+        "value": "spin 0.9s linear infinite",
+        "purpose": "Actual loading and local-engine busy states."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none !important; transition: none !important; scroll-behavior: auto !important;",
+        "purpose": "Applied to all elements and pseudo-elements when prefers-reduced-motion is reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-min",
+        "value": "1600px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1250px"
+      },
+      {
+        "name": "stacked-workspace-max",
+        "value": "1020px"
+      },
+      {
+        "name": "mobile-shell-max",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Extracted shared Button variant; the label is a component specimen, not a run action.",
+      "html": "<button type=\"button\" class=\"ds-button-primary\">Select next batch</button>",
+      "css": ".ds-button-primary{display:inline-flex;justify-content:center;align-items:center;gap:8px;white-space:nowrap;font-family:var(--font-sans,CuraThai,sans-serif);font-size:12px;font-weight:600;border:1px solid transparent;border-radius:7px;line-height:1.4;min-height:40px;padding:11px 17px;cursor:pointer;text-decoration:none;transition:background .16s,box-shadow .16s,transform .16s;background:var(--teal,#087f72);color:#fff;box-shadow:0 2px 5px #065c4f12;}.ds-button-primary:hover:not(:disabled){background:#066c60;}.ds-button-primary:focus-visible{outline:3px solid #49a994;outline-offset:3px;}.ds-button-primary:active:not(:disabled){transform:translateY(1px)}.ds-button-primary:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button-primary{transition:none}}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Extracted shared Button variant; the label is a component specimen, not a run action.",
+      "html": "<button type=\"button\" class=\"ds-button-outline\">Export JSON</button>",
+      "css": ".ds-button-outline{display:inline-flex;justify-content:center;align-items:center;gap:8px;white-space:nowrap;font-family:var(--font-sans,CuraThai,sans-serif);font-size:12px;font-weight:600;border:1px solid transparent;border-radius:7px;line-height:1.4;min-height:40px;padding:11px 17px;cursor:pointer;text-decoration:none;transition:background .16s,box-shadow .16s,transform .16s;background:#fff;border-color:#d2dfd6;color:#3b574b;}.ds-button-outline:hover:not(:disabled){background:#f0f7f2;border-color:#9dbbad;}.ds-button-outline:focus-visible{outline:3px solid #49a994;outline-offset:3px;}.ds-button-outline:active:not(:disabled){transform:translateY(1px)}.ds-button-outline:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button-outline{transition:none}}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Extracted shared Button variant; the label is a component specimen, not a run action.",
+      "html": "<button type=\"button\" class=\"ds-button-secondary\">Verify replay</button>",
+      "css": ".ds-button-secondary{display:inline-flex;justify-content:center;align-items:center;gap:8px;white-space:nowrap;font-family:var(--font-sans,CuraThai,sans-serif);font-size:12px;font-weight:600;border:1px solid transparent;border-radius:7px;line-height:1.4;min-height:40px;padding:11px 17px;cursor:pointer;text-decoration:none;transition:background .16s,box-shadow .16s,transform .16s;background:#e3eee7;color:#174b34;}.ds-button-secondary:hover:not(:disabled){background:#e3eee7;}.ds-button-secondary:focus-visible{outline:3px solid #49a994;outline-offset:3px;}.ds-button-secondary:active:not(:disabled){transform:translateY(1px)}.ds-button-secondary:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button-secondary{transition:none}}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Extracted shared Button variant; the label is a component specimen, not a run action.",
+      "html": "<button type=\"button\" class=\"ds-button-ghost\">Inspect full lab</button>",
+      "css": ".ds-button-ghost{display:inline-flex;justify-content:center;align-items:center;gap:8px;white-space:nowrap;font-family:var(--font-sans,CuraThai,sans-serif);font-size:12px;font-weight:600;border:1px solid transparent;border-radius:7px;line-height:1.4;min-height:40px;padding:11px 17px;cursor:pointer;text-decoration:none;transition:background .16s,box-shadow .16s,transform .16s;background:transparent;color:#496556;}.ds-button-ghost:hover:not(:disabled){background:#eaf2ec;}.ds-button-ghost:focus-visible{outline:3px solid #49a994;outline-offset:3px;}.ds-button-ghost:active:not(:disabled){transform:translateY(1px)}.ds-button-ghost:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button-ghost{transition:none}}"
+    },
+    {
+      "name": "Destructive Button",
+      "kind": "button",
+      "refersTo": "button-destructive",
+      "description": "Extracted shared Button variant; the label is a component specimen, not a run action.",
+      "html": "<button type=\"button\" class=\"ds-button-destructive\">Reset</button>",
+      "css": ".ds-button-destructive{display:inline-flex;justify-content:center;align-items:center;gap:8px;white-space:nowrap;font-family:var(--font-sans,CuraThai,sans-serif);font-size:12px;font-weight:600;border:1px solid transparent;border-radius:7px;line-height:1.4;min-height:40px;padding:11px 17px;cursor:pointer;text-decoration:none;transition:background .16s,box-shadow .16s,transform .16s;background:#fff5f3;color:#a43834;border-color:#e6c7c3;}.ds-button-destructive:hover:not(:disabled){background:#fff5f3;}.ds-button-destructive:focus-visible{outline:3px solid #49a994;outline-offset:3px;}.ds-button-destructive:active:not(:disabled){transform:translateY(1px)}.ds-button-destructive:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button-destructive{transition:none}}"
+    },
+    {
+      "name": "Labelled Native Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Native field with implemented stroke, hover and focus treatment.",
+      "html": "<label class=\"ds-field\"><span>Seed / ค่า seed</span><input aria-label=\"Seed\" type=\"number\" value=\"42\" /></label>",
+      "css": ".ds-field{display:block;width:240px;font-family:var(--font-sans,CuraThai,sans-serif)}.ds-field>span{display:block;color:#405d4b;font-size:11px;font-weight:550;margin-bottom:8px}.ds-field input{width:100%;min-height:41px;border:1px solid #d4dfd7;background:#fff;border-radius:6px;padding:9px 11px;color:#34533f;font-size:12px;line-height:1.4;font-family:inherit;caret-color:var(--teal,#087f72)}.ds-field input:hover{border-color:#9ab8a3}.ds-field input:focus{outline:2px solid #b1d5c3;border-color:#4c9173}"
+    },
+    {
+      "name": "Research Navigation",
+      "kind": "nav",
+      "refersTo": "navigation-active",
+      "description": "Current destination and quiet default destination; icons are inline SVG.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Component navigation\"><a class=\"ds-nav-item\" href=\"#overview\" aria-current=\"page\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"/></svg>Overview</a><a class=\"ds-nav-item\" href=\"#evidence\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v15h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3H3z\"/></svg>Research evidence</a></nav>",
+      "css": ".ds-nav{display:grid;gap:5px;width:220px;font-family:var(--font-sans,CuraThai,sans-serif)}.ds-nav-item{display:flex;align-items:center;gap:12px;min-height:45px;padding:12px 13px;border-radius:8px;color:var(--muted,#526653);font-size:13px;font-weight:500;text-decoration:none;transition:background .16s,color .16s}.ds-nav-item:hover{background:#f1f6f3;color:#173d32}.ds-nav-item[aria-current=\"page\"]{background:#e3f2eb;color:#076e5e;font-weight:650}.ds-nav-item:focus-visible{outline:3px solid #49a994;outline-offset:3px}@media(prefers-reduced-motion:reduce){.ds-nav-item{transition:none}}"
+    },
+    {
+      "name": "Source Badges",
+      "kind": "chip",
+      "refersTo": "badge-amber",
+      "description": "Non-interactive source badge specimens; color is accompanied by written origin.",
+      "html": "<div class=\"ds-badges\"><span class=\"ds-badge ds-badge-teal\"><i aria-hidden=\"true\"></i>Historical assay data</span><span class=\"ds-badge ds-badge-amber\"><i aria-hidden=\"true\"></i>Synthetic fixture</span></div>",
+      "css": ".ds-badges{display:flex;gap:8px;flex-wrap:wrap;font-family:var(--font-sans,CuraThai,sans-serif)}.ds-badge{display:inline-flex;gap:6px;align-items:center;border:1px solid #dce5df;border-radius:5px;min-height:23px;padding:3px 7px;font-size:11px;font-weight:550;line-height:1.3;white-space:nowrap}.ds-badge i{width:6px;height:6px;border-radius:50%;background:#218e6b;display:inline-block}.ds-badge-teal{color:#086851;background:#e6f3eb;border-color:#cfe7d8}.ds-badge-amber{color:#87530e;background:#fcf3df;border-color:#eddfb9}"
+    },
+    {
+      "name": "Working Surface",
+      "kind": "card",
+      "refersTo": "surface",
+      "description": "Flat white surface with an existing text-link pattern; no invented card hover elevation.",
+      "html": "<section class=\"ds-surface\"><h2>Research evidence</h2><p>Trace the data, methods and limits behind every number.</p><a href=\"#methods\" class=\"ds-link\">Read methods and limitations <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a></section>",
+      "css": ".ds-surface{background:#fff;border:1px solid var(--line,#dce5e1);border-radius:12px;padding:25px;min-width:0;max-width:440px;color:var(--midnight,#16333b);font-family:var(--font-sans,CuraThai,sans-serif)}.ds-surface h2{margin:0;font-size:19px;font-weight:650;line-height:1.4;letter-spacing:-.022em}.ds-surface p{margin:5px 0 20px;color:var(--muted,#526653);font-size:12px;line-height:1.75}.ds-link{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:650;color:var(--muted,#526653);line-height:1.5;text-decoration:none}.ds-link:hover{text-decoration:underline;text-underline-offset:4px}.ds-link:focus-visible{outline:3px solid #49a994;outline-offset:3px}"
+    },
+    {
+      "name": "Budget Ledger",
+      "kind": "custom",
+      "refersTo": "budget-track",
+      "description": "Unbound empty ledger specimen. Dashes are placeholders, not simulation results; the application supplies real labelled widths and values.",
+      "html": "<div class=\"ds-ledger\"><div class=\"ds-ledger-heading\"><span>Budget ledger</span><strong>— simulated units</strong></div><div class=\"ds-ledger-track\" role=\"img\" aria-label=\"Unbound budget ledger specimen\"><span class=\"ds-ledger-spent\"></span><span class=\"ds-ledger-reserved\"></span><span class=\"ds-ledger-available\"></span></div><div class=\"ds-ledger-labels\"><span><i class=\"ds-dot-spent\"></i>Spent —</span><span><i class=\"ds-dot-reserved\"></i>Reserved —</span><span><i class=\"ds-dot-available\"></i>Available —</span></div></div>",
+      "css": ".ds-ledger{max-width:440px;font-family:var(--font-sans,CuraThai,sans-serif);font-size:11px;color:var(--muted,#526653)}.ds-ledger-heading{display:flex;justify-content:space-between;gap:12px}.ds-ledger-heading strong{color:#355a40;font-size:11px;font-weight:650}.ds-ledger-track{height:8px;background:#ecf2ed;border-radius:5px;overflow:hidden;margin:12px 0;display:flex}.ds-ledger-track span{height:100%}.ds-ledger-spent{background:var(--teal,#087f72);width:0}.ds-ledger-reserved{background:#dfb457;width:0}.ds-ledger-available{background:#d8e5d9;width:100%}.ds-ledger-labels{display:flex;gap:18px;flex-wrap:wrap}.ds-ledger-labels span{display:flex;align-items:center;gap:5px}.ds-ledger-labels i{height:6px;width:6px;display:inline-block;border-radius:2px}.ds-dot-spent{background:var(--teal,#087f72)}.ds-dot-reserved{background:#dfb457}.ds-dot-available{background:#d8e5d9}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Research Operations Journal",
+    "overview": "CuraLoop-RL is a calm, editorial scientific workbench: white working surfaces sit on a pale mint and stone canvas, with midnight reading text, restrained teal actions and amber qualifications. A stable tool rail and generous section spacing make dense research records approachable without hiding their detail. The original CuraLoop-RL logo and owner-pinned teal, midnight and amber identity remain binding; this is an original shell informed by shadcn references, not a replacement brand.\n\nThis document captures the implemented local web system, extracted from frontend/src/styles.css, the shared UI primitives, shell, seven pages and chart components. The confirmed direction lives in docs/WEB_DESIGN_BRIEF.md; final screenshots live in docs/evidence/web-v2/browser. Its visual authority is the working application and actual evidence, not a generated mockup or an invented approval. The final review disposition is SHIP for the reviewed localhost portfolio scope; the review closed four bounded findings and does not establish a fresh audit of every surface.",
+    "keyCharacteristics": [
+      "Publication-like hierarchy within a persistent research tool shell.",
+      "Light mint, stone and white surfaces; teal actions and amber qualifications.",
+      "Offline Thai/English typography using the supplied Noto Sans Thai font.",
+      "Live state, recorded evidence and source provenance remain visibly distinct.",
+      "Compact scientific tables and captions retain explicit small-type exceptions."
+    ],
+    "rules": [
+      {
+        "name": "The Original Identity Rule",
+        "body": "Retain the supplied CuraLoop-RL logo and the pinned teal, midnight and amber identity. Readable amber text may use the darker implemented ink variants.",
+        "section": "colors"
+      },
+      {
+        "name": "The Labelled State Rule",
+        "body": "Pair color with written status, counts, policy labels or line patterns; color alone must not carry a scientific distinction.",
+        "section": "colors"
+      },
+      {
+        "name": "The Thai Glyph Rule",
+        "body": "Keep CuraThai in the body and technical fallback stacks, preserve natural Thai wrapping and verify both languages when labels or layouts change.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "Working surfaces rest on borders and tonal layering. Use the existing small action and hover shadows; reserve the large shadow for a modal.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do reuse the supplied logo, local CuraThai font and the documented token roles.",
+      "Do preserve readable Thai/English wrapping, visible keyboard focus and contained, keyboard-scrollable scientific tables.",
+      "Do show source origin beside the active work and label separately recorded HIV results as recorded evidence.",
+      "Do keep predicted, pending, observed active, observed inactive and missing outcomes explicit in text.",
+      "Do use step-after live discovery and queue traces, labelled policy colors and the benchmark table for exact seed SD.",
+      "Do keep compact captions and scientific tables intentional, with enough line height and space to wrap explanations.",
+      "Do preserve real zero, unfavorable and fallback results, and visible loading, error, empty and disabled states.",
+      "Do disable existing animation and transitions for prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't replace the pinned identity with a new logo, palette, stock biotech fantasy or invented molecular imagery.",
+      "Don't turn a pending request or predicted positive into a confirmed discovery, or collapse missing into inactive.",
+      "Don't present the recorded v0.1 benchmark or synthetic training trace as a new run, useful RL transfer or a clinical result.",
+      "Don't omit the zero-clipped SD display disclosure or relabel seed SD as a confidence interval.",
+      "Don't add chart animation, celebratory success effects or artificial completion percentages.",
+      "Don't hide provenance or limitations to simplify a composition, and don't create page-level horizontal overflow.",
+      "Don't claim complete localization, all controls at 44 px, a universal 16 px minimum or a universal eight-point spacing scale; those are not the implemented system.",
+      "Don't claim Windows, Safari, physical-device, manual screen-reader or measured performance validation from the recorded Chromium/Linux localhost review."
+    ]
+  }
+}

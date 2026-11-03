@@ -1,78 +1,84 @@
-# HANDOFF TO CODEX — CuraLoop-RL Research Edition v0.1
+# HANDOFF TO CODEX — CuraLoop-RL local web v0.2
 
-## Repository identity
+## Exact source identity
 
-- Actual build repository: `/workspace/scratch/d375f2fe413e/curaloop-rl`
-- Branch: `main`
-- Exact tested **implementation commit**: `fbc8973043daeec6ff745ba3d58749050a37b273`
-- A separate source-revision packaging fix and later audit/evidence/handoff commits follow. Benchmark execution uses the implementation commit above; installed-wheel identity is checked separately. The exact final distribution HEAD is recorded in the ZIP's `SOURCE_COMMIT.txt` and `RELEASE.json`, and is restorable from the supplied Git bundle. Those generated files avoid pretending this committed document can contain its own commit hash.
-- No remote configured; no push, public GitHub repository, deployment, paid API, GPU or company-system access performed.
-- Owner's Windows filesystem was not accessible. No claim that a repository was created on that machine. Example Windows locations are instructions only.
+- Build repository: `/workspace/scratch/d375f2fe413e/curaloop-rl` (cloud workspace, not the owner's Windows machine).
+- Working branch: `feat/local-web-ui`.
+- Original delivered HEAD: `dca5c81a6ee620faa99ad8b22d8e0d78e5121f59`.
+- Pre-rebuild checkpoint: `9de9221678c50c7cc9528d1805a9bdaa1f5e7aa2`.
+- Exact tested implementation commit: **`05ff36dbda0fd36250e5b80f9185814d05da6fb3`**. Subsequent commits document/audit/package the same implementation.
+- Tested frontend directory SHA256: **`2b8c8ea049a3fb1f61f0e9e9647cda81a28d01af2f3debc09ca33fed26aa3fc6`**. Computed over sorted relative file paths and contents, matching `/api/v1/meta`.
+- Final release HEAD is in ZIP-level `SOURCE_COMMIT.txt`/`RELEASE.json`; the full Git bundle restores its exact history. A committed document cannot contain its own commit hash.
+- Screenshots were taken before the implementation commit, so their Git state correctly shows a checkpoint SHA plus uncommitted changes. They prove the recorded built-content hash, not that all files equalled that checkpoint commit.
+- User later explicitly authorized publishing `main` to `https://github.com/siriponsri/curaLoop-RL`. No visibility/access changes or deployment are authorized. Direct Git CLI has no credential; the connected GitHub API can publish a tree-equivalent snapshot. The in-repo `history/CuraLoopRL-tested-history.bundle` preserves exact original/local implementation commits; the release-level bundle also includes final documentation commits. The actual remote commit/tree are recorded in the publication manifest after publication, not invented here.
 
-## Implemented and tested
+## Implemented and verified
 
-Installable `src/curaloop` package and built wheel; Streamlit application; three base acquisition policies; actual tabular Q-learning and contextual bandit training with frozen JSON checkpoints; Gymnasium environment; attributed historical HIV replay; deterministic synthetic fixtures; private oracle and public immutable contracts; reserved/spent/remaining budget ledger; simulated delays, jitter, missing outcomes and batch capacity; independent matched comparisons; event-derived metrics/curves; valid JSON/CSV exports; deterministic completed-run replay and reconciliation/resume of pending snapshots; all four UI screens; live local browser downloads; Thai offline font and actual app screenshots; multi-seed benchmark and scaffold-disjoint predictor audit; professional logo in README/UI.
+React19/TypeScript/Vite/Tailwind/shadcn-style Radix components; local FastAPI adapter; seven real pages (Overview,Compounds,Scenario,Lab,Benchmarks,Evidence,Presentation); responsive Thai/English; actual public RDKit molecule drawings; public-candidate search/filter/sort/pagination/grid/list/details; validated scenario form; delayed selection/advance/finish/reset/replay; distinct pending/active/inactive/missing outcomes; real budget/event timeline/curves; fresh independent3–5 policy comparisons in a bounded background executor; explicit learned-controller fallback counts; JSON/CSV downloads and strict single-run resume; local fonts/logo; production SPA at one loopback address; Windows setup/start launchers; preserved Streamlit fallback.
 
-## Executed checks (actual, not generated statuses)
+The adapter calls existing Python RunService/compare/export rather than recreating scientific logic in JavaScript. Session UUIDs are distinct from deterministic scientific run IDs; locks plus expected_revision reject concurrent/stale double mutations. No API exposes unrevealed labels or the truth store. Labels visible to the UI are seed or delivered labels only. Seed hits are excluded from new hits. Resource/model/recorded benchmark bytes and original Streamlit source are unchanged.
 
-Python 3.12.14 on Linux. Main virtual environment: `/workspace/scratch/d375f2fe413e/venv`; isolated clean environment: `/workspace/scratch/d375f2fe413e/clean-room`.
+## Actual executed commands and results
 
-1. `python scripts/validate_handoff_pack.py . --zip <attached zip>` in extracted v3 requirements: 56 source/archive entries, 25 references, 0 article PDFs, zero reported errors.
-2. `python -m pip install -e '.[dev]' --no-deps` after installing resolved dependencies: succeeded.
-3. `python scripts/prepare_hiv.py --source /workspace/scratch/d375f2fe413e/dataset_download/hiv.csv`: actual downloaded 41,127-row source; 7 invalid SMILES excluded; 0 canonical duplicates / conflicts; label-blind 1,200 molecules prepared; source hash recorded.
-4. `python -m curaloop.learning`: **160 actual episodes each** for Q-learning and contextual bandit. Training source synthetic only, seeds 10000–10159. Values, counts, returns and checkpoint checksums are real.
-5. `python -m pytest -q --junitxml=docs/evidence/pytest.xml`: **79 passed, 0 failed, 0 skipped**, 1 Altair theme API deprecation warning. Final source test log copied into evidence.
-6. `python -m build --wheel --no-isolation`: produced `curaloop_rl-0.1.0-py3-none-any.whl`, including historical resource and trained checkpoints.
-7. Fresh virtual environment, `pip install -r requirements-lock.txt`, then install wheel `--no-deps`: succeeded. `pip check`: no broken requirements. Same suite: **79 passed, 0 failed, 0 skipped**, one Altair warning; isolated installation evidence saved.
-8. `python scripts/browser_smoke.py`: actual local Streamlit server and local Chromium, 4 pages, budget 5, 5 policies. Select → pending → advance twice → delivered → compare → JSON/CSV downloads parsed. 5 JSON runs / 335 CSV event rows. Non-local browser HTTP blocked; no external HTTP requests observed. Six genuine app screenshots captured, including mobile viewport. Thai font subsequently embedded locally and screenshots regenerated successfully.
-9. `python -m curaloop.benchmark --output docs/evidence/hiv-benchmark`: real HIV replay, 10 paired seeds × 5 policies = **50 campaigns**, each budget 30, seed labels 48, capacity 5, delay 2. Actual per-event JSON/CSV and paired descriptive/bootstrap summaries. Final committed-code run metadata includes implementation SHA above. The large benchmark CSV is distributed losslessly as `benchmark.csv.gz` with the original CSV hash; normal UI/CLI CSV exports remain uncompressed.
-10. `python -m curaloop.cli compare --config configs/hiv-demo.json --output <final-cli>` and `python -m curaloop.cli replay --input <final-cli>/report.json`: three actual historical baseline campaigns and exact event replay check. Output seed 42: Random 2 hits, Greedy 0, Uncertainty 1 at cost 30. No seed cherry-picking to make the default look successful.
-11. `python -m ruff check src app scripts tests`, `git diff --check`, credential-pattern and remote inspection: clean. These are scoped checks, not an independent security certification or comprehensive vulnerability audit.
+Execution environment Linux,Python 3.12.14,Node 24.22.1,npm 11.9.0. Main venv `/workspace/scratch/d375f2fe413e/venv`; fresh web venv `/workspace/scratch/d375f2fe413e/clean-web`.
 
-## Historical benchmark findings
+1. Inspected full attached Localhost UI Rebuild Master Prompt and existing repo, verified original ZIP/history, reran `python -m pytest -q`: **79 passed,0 failed,0 skipped** before changes. Launched original Streamlit browser workflow independently; fallback source remains unchanged.
+2. Created branch/checkpoint, installed locked API dependencies, added contract tests, then integrated UI.
+3. Fresh `python -m venv .../clean-web`; `pip install -r requirements-web-lock.txt`; `pip install -e '.[web,dev]' --no-deps`; `pip check`: **successful,no broken requirements**.
+4. Fresh-env `python -m pytest -q --junitxml=.../web-clean-tests.xml`: **103 passed,0 failed,0 skipped,2 warnings**. Original79tests retained plus24API/contract cases (including parameterized invalid inputs). Covers deterministic replay, oracle/privacy, budgets, delays, metrics,exports,concurrency,matchedconditions,provenance,legacyresume,productionSPAandgenuineSVG. Exact existing-service/API event equality is tested under the same scenario.
+5. `npm ci`/initial install generated locked dependency tree. `npm run build` executes TypeScript check+Vite: **PASS**; `npm run lint`: **PASS**; `npm test -- --reporter=verbose`: **10 passed,0 failed,0 skipped**. Main bundle warning retained, not suppressed.
+6. `python scripts/web_browser_smoke.py`: **PASS** on real built FastAPI localhost app with Chromium 131 / Playwright 1.49.1. **28 genuine captures**, desktop 1440×1000 / mobile 390×844; **18 axe route/state audits,0 violations**; **0 JS errors,0 page horizontal overflow,0 external requests**. Five real comparator reports and335 CSV event rows downloaded and parsed. Pending privacy, delayed reveal,replay,search,dialogfocus,comparison,exports,resume,language,keyboardscroll,synthetic active/inactive/missing,and source-specific copy checked.
+7. `python scripts/start_web.py --check`: **PASS**. Actual `--no-browser` launcher invoked from another directory served `/lab` at `http://127.0.0.1:8000`: **PASS**.
+8. `python -m ruff check src app api scripts tests`: **PASS**. Protected-file hashes8/8 and unchanged Streamlit: **PASS**. Credential-pattern scan:0 matches within its stated scope.
+9. `npm audit --omit=dev --json`:0 production advisories; fullaudit11 moderate dev-tool advisories. This is point-in-time evidence, not a security certification.
+10. Full visual review followed by a bounded correction batch: final scoped verdict **SHIP**,four findings resolved,0 partial / 0 unresolved. See `docs/evidence/web-v2/finish-review.md` for exact scope; it does not certify Windows/accessibility/performance beyond inspected evidence.
 
-Within this fixed HIV subset and seeds 0–9, mean new hits at B=30: Random 0.7, Greedy 3.8, Uncertainty 0.9, Q-learning 3.8, contextual bandit 3.8. Learned controllers invoke the explicitly labelled unseen-state Greedy fallback on historical states; equal outcomes are **not evidence that learned transfer outperformed or even replaced Greedy**. Confirm usage counts in the final benchmark `metrics.controller_requests` / `controller_fallback_requests`.
-
-Separate custom whole-scaffold predictor audit: 960 train / 240 test, 36 / 6 actives, 0 shared Murcko scaffolds. AUROC ≈0.5563, average precision ≈0.03266, Brier ≈0.04408. This is weak predictive evidence, a useful limitation rather than a result to market. The split is not the official MoleculeNet leaderboard split.
-
-## Dataset provenance / rights
-
-Bundled `hiv_replay_v1.json.gz`: derivative of public NCI DTP / MoleculeNet HIV downloaded from DeepChem. Source SHA256 `9ffa7fe57dc86c342627ee1d5255e937e2ab812393c73c4d16c697022f6e1d22`; resource manifest retains row IDs, source/release/hash, label definitions, transforms, RDKit version, attribution and changes. CC BY 4.0 is the HIV dataset license explicitly stated by TDC. See `THIRD_PARTY_NOTICES.md`. Source paper and dataset license are distinct; no article PDF is bundled.
-
-LIT-PCBA was checked against its official source/paper but not redistributed: unambiguous dataset redistribution terms were not established. Tox21/other assays need file-level rights, missing-label and target-definition checks. The original pack's 25-item literature catalogue is retained, with its original verification limits; this work does not certify all references.
+Detailed logs,downloads,28 PNGs,axeJSON,provenance-preservation report,licenses and launcher result are under `docs/evidence/web-v2/`. Initial invalid captures/contrast findings remain under `browser-round1/`, explicitly superseded. Intermediate harness failures were corrected and rerun. A formatter briefly changed resource JSON whitespace; semantic equality was checked and all original bytes restored before final103 tests/hash checks. No failure was hidden by skipping a test.
 
 ## Windows reproduction
 
-Extract the delivered source folder wherever the owner chooses. On a machine with Python 3.11/3.12:
+Extract ZIP, open its `curaloop-rl` folder, install Python 3.11/3.12(64bit), then double-click **`Start-CuraLoop-Web.cmd`**. First run installs local `.venv` dependencies; the shipped built frontend means Node is unnecessary for the demonstration. Browser opens **http://127.0.0.1:8000**. Subsequent demonstrations use bundled data/models/fonts offline. No administrator rights, global installation or PowerShell execution-policy change is requested.
+
+Manual PowerShell (example path, not a claim that we wrote there):
 
 ```powershell
-cd C:\Projects\curaloop-rl  # example location only
-py -3.11 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
-.\.venv\Scripts\python.exe -m pip install -e . --no-deps
+cd C:\Projects\curaloop-rl
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-web-lock.txt
+.\.venv\Scripts\python.exe -m pip install -e ".[web,dev]" --no-deps
+.\.venv\Scripts\python.exe scripts\start_web.py
 .\.venv\Scripts\python.exe -m pytest -q
-.\.venv\Scripts\python.exe -m streamlit run app\streamlit_app.py
 ```
 
-No virtualenv activation or PowerShell execution-policy change is necessary. `Start-CuraLoop.cmd` automates setup/start but was **not run on Windows here**. Dependency installation needs internet once; built-in data, models and fonts require no internet afterward. Optional raw-data rebuild needs RDKit and a download; it is not required for the bundled real-data demo.
+Fallback: `python -m streamlit run app\streamlit_app.py`. UI development: Node>=22.12,`cd frontend`,`npm ci`,`npm run build`; Vite5173/API8000 loopback only. See `START_WINDOWS_TH.md` and README. **Windows CMD execution and Python 3.11 runtime NOT_RUN here.**
 
-For actual Git history, use the ZIP-level instructions to clone `CuraLoopRL-history.bundle` into a fresh folder. The unpacked plain source is runnable without cloning; `SOURCE_COMMIT.txt` records the packaged revision.
+Sessions are memory-only and single-worker. Export a single-run JSON before shutdown; Evidence→validate/resume restores it by reconciliation after restart. A multi-run comparison JSON or CSV cannot resume one campaign. Close only your own running terminal to stop; launcher never kills another app occupying port8000.
 
-## Planned / blocked / not run, with honest scope
+To restore exact tested history from the in-repo bundle into a new folder:
 
-- **NOT_RUN:** clean Windows installation/CMD launcher, prospective scientist usability study, Python 3.11 runtime execution, production load/concurrency, comprehensive malicious-upload fuzzing/penetration testing, dependency vulnerability certification.
-- **BLOCKED by absent external evidence:** calibrated real lab cost/delay distributions, operational laboratory Digital Twin, physical feedback loop, clinical/pharmaceutical efficacy, GMP suitability, actual organizational savings/ROI.
-- **RIGHTS NOT ESTABLISHED:** redistribution of LIT-PCBA/Tox21 raw datasets in this release. No fake loader/data status is presented.
-- **Research limitations:** one historical assay/subset; custom scaffold split; no cross-target biological replication; uncalibrated probabilities/margin uncertainty; salt/tautomer standardization not performed; possible analog leakage inside a within-pool replay; controller unseen-state fallback; synthetic training distribution mismatch; fixed crude reward; no SOTA claim.
-- **Security limits:** process separation and private-import guard protect trusted fixed built-ins from accidental leaks. They are not an OS sandbox against a malicious developer who can inspect/reconstruct this public benchmark. Snapshot resume checks and public schemas are not cryptographic authenticity/signatures.
-- **Persistence limits:** JSON snapshot/replay/resume provided; no multiuser transactional event database, real LIMS integration or arbitrary replay of rejected malformed-action histories.
+```powershell
+git clone -b feat/local-web-ui history\CuraLoopRL-tested-history.bundle C:\Projects\curaloop-tested-history
+```
 
-## Five prioritized next tasks for Codex
+The ZIP-level full-history bundle and its instructions restore final documentation as well. The GitHub API snapshot commit can have a different commit SHA while the full source tree matches; do not confuse tree equality with identical commit ancestry.
 
-1. Run the exact delivered repo on the owner's Windows machine; verify install, all tests, `.cmd` startup, browser workflow and font rendering, recording actual Windows evidence. Do not rewrite the working app.
-2. Extend independent biological validation using rights-cleared multi-target data (especially LIT-PCBA); preserve assay-specific semantics, deduplication and target-family/scaffold exclusions. Keep raw unreviewed data out of Git.
-3. Investigate sparse-positive initialization, probability calibration and stronger diversity/cost-aware baselines on development data; lock an external validation protocol before changing the current reported test results.
-4. Address learned-controller distribution mismatch on a separate development corpus; quantify fallback and train/validate genuine strategy choices before claiming transfer. Compare against the strongest frozen baseline and preserve negative results.
-5. Have a domain reviewer assess terminology and demo usability; only pursue calibrated lab/twin maturity with authorized measured feedback and prospective evidence. Keep personal-project/non-GPO boundaries.
+## Provenance and scientific limits
 
-Continue autonomously within local/CPU scope. No external push, deployment, sharing change, paid compute, proprietary data or organizational integration without the owner's explicit instructions.
+HIV derivative1200 molecules, original source41127 rows / 7 invalid structures excluded, original sourceSHA/assaysemantics/transforms/CCBY4attribution preserved. Sources in `src/curaloop/resources/hiv_manifest.json` and `THIRD_PARTY_NOTICES.md`. No company/private assay data, GPO identity, clinical efficacy, GMP,real-costsavings or endorsement. LIT-PCBA/Tox21raw redistribution remains unestablished and was not added.
+
+Original Q-learning/bandit160 synthetic training episodes/checkpoints unchanged. Historical50 campaign / 10 paired-seed results unchanged. Each learned controller used300/300 Greedyfallbackrequests, so matching Greedy is not learned pharmaceutical transfer. Custom960/240whole-scaffold predictor audit has only6 test actives,AUROC≈.5563,AP≈.03266; not an official MoleculeNet leaderboard. Probabilities uncalibrated; uncertainty is a margin heuristic. Retrospective results are not drug efficacy evidence. Current maturity **RETROSPECTIVE_SIMULATOR**, not validated/operationalDigitalTwin.
+
+## Planned,blocked,not run and debt
+
+- **NOT_RUN:** native Windows install/CMD,fontverification,Python3.11,Safari/Firefox,manualscreenreader,prospectiveuserstudy,load/stress,penetration/fuzz/securitycertification. Automatedaxe does not establish universal accessibility.
+- **Debt:** large JS chunk,lazyroute/chartloading,11 moderate dev-tool advisories,ESLint9migration,someEnglishrawdiagnostics/scientificidentifiers,retainedunusedhashedbuildassets,memory-onlysessions,noauthentication,oneworker. Loopback browser checks are not protection against hostile local programs.
+- **Blocked by absent evidence:** measured lab cost/delay calibration,physical feedback,LIMS,in-vivo/clinicalutility,cross-targettransfer,operationalDigitalTwin,GMP/organizationalclaims. Do not invent them through UI or simulation.
+- **Planned research:** rights-cleared multitargetexternalvalidation and controller-distribution/fallback improvement using a separate development protocol. No new model was trained in this UI rebuild.
+
+## Three prioritized next tasks
+
+1. Verify the exact release on the owner's Windows machine: install,start,alltests,fullbrowserworkflow,Thai font and offline rerun; record genuine Windows evidence.
+2. Migrate compatible development tooling to remove advisories and lazy-load routes/charts; add durable single-user session storage only with explicit migration/reconciliation tests. Preserve the frozen scientific evidence and API privacy boundary.
+3. With rights-cleared independent assay data, pre-register stronger external validation/calibration and controller-transfer experiments; quantify fallback before claims. Keep measured lab/twin work blocked until authorized real feedback exists.
+
+No public deployment, paid infrastructure, sharing/permission change or organizational access was performed. GitHub main publication alone is authorized by the owner's later message.

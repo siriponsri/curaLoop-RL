@@ -1,0 +1,24 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> curaloop-research-web@0.2.0 test
+> vitest run --reporter=verbose
+
+
+ RUN  v4.1.12 /workspace/scratch/d375f2fe413e/curaloop-rl/frontend
+
+ ✓ src/api.test.ts > typed API errors > reports a readable local-server connection error 4ms
+ ✓ src/api.test.ts > typed API errors > retains the actual validation error and HTTP status 1ms
+ ✓ src/app.test.tsx > runnable research UI > loads the real-response fixture and navigates through the actual route shell 429ms
+ ✓ src/app.test.tsx > runnable research UI > switches Thai language and keeps an explicit scientific limitation 145ms
+ ✓ src/app.test.tsx > runnable research UI > validates the form before making an engine request 154ms
+ ✓ src/app.test.tsx > runnable research UI > applies a valid changed dataset with the correct candidate count 176ms
+ ✓ src/app.test.tsx > runnable research UI > turns a real action response into a pending state, with no fake hits 127ms
+ ✓ src/app.test.tsx > runnable research UI > shows API errors and a working reconnect action 56ms
+ ✓ src/app.test.tsx > runnable research UI > preserves provenance, weak evaluation and controller fallback disclosures 110ms
+ ✓ src/app.test.tsx > runnable research UI > has a functional guided-presentation chapter control 92ms
+
+ Test Files  2 passed (2)
+      Tests  10 passed (10)
+   Start at  14:23:14
+   Duration  2.58s (transform 219ms, setup 115ms, import 654ms, tests 1.30s, environment 838ms)
+

@@ -8,7 +8,8 @@
 
 ## สิ่งที่รันได้จริง
 
-- Dashboard Streamlit 4 หน้า: Overview, Scenario Setup, Screening Run, Compare & Export
+- เว็บหลัก React + TypeScript + FastAPI 7 หน้า พร้อม Thai/English, explorer โครงสร้าง RDKit, simulation lab, comparison และ guided presentation
+- Streamlit 4 หน้าเดิมเก็บไว้เป็น fallback ที่ `app/streamlit_app.py`
 - Historical HIV replay 1,200 real molecules พร้อม Morgan fingerprints, scaffold IDs, provenance และ source hash
 - Random, Greedy และ Uncertainty + **Q-learning / contextual bandit ที่ฝึกจริงบนโจทย์สังเคราะห์** พร้อม checkpoint และผลประเมินแยกต่างหาก
 - Private label oracle, delayed feedback, pending queue, capacity, reserved/spent/remaining budget และ immutable public events
@@ -18,36 +19,64 @@
 
 ไม่ใช่ระบบค้นพบยาที่มีประสิทธิผล ไม่ใช่เครื่องมือ GMP/clinical และไม่มีการเชื่อมแล็บหรือ operational Digital Twin
 
-## เริ่มบน Windows PowerShell
+## เริ่มบน Windows
 
-ติดตั้ง Python 3.11 ขึ้นไป (แนะนำ 3.11 หรือ 3.12, 64 bit) แล้วแตก ZIP ไปยังโฟลเดอร์ที่เลือก เช่น `C:\Projects\curaloop-rl` ตำแหน่งนี้เป็นตัวอย่าง ไม่ใช่ตำแหน่งที่ระบบได้เขียนลงเครื่องคุณแล้ว
+ติดตั้ง Python 3.11/3.12 แบบ 64 bit แล้วแตก ZIP ดับเบิลคลิก **`Start-CuraLoop-Web.cmd`** ครั้งแรกจะติดตั้ง dependencies ใน `.venv` ครั้งถัดไปเปิดเว็บจากข้อมูล/โมเดล/font ที่รวมไว้ได้โดยไม่ใช้อินเทอร์เน็ต เว็บเปิดที่ **http://127.0.0.1:8000** เท่านั้น ไม่ต้องมี Node สำหรับ release ที่รวม `frontend/dist` แล้ว ไม่ต้องใช้สิทธิ์ admin หรือเปลี่ยน execution policy
+
+อ่าน [คู่มือ Windows ภาษาไทย](START_WINDOWS_TH.md) สำหรับ prerequisites, troubleshooting และโหมดนักพัฒนา การทดสอบจริงครั้งนี้ใช้ Linux/Python 3.12; Windows launcher ยังเป็น **NOT_RUN**
+
+ทางเลือก PowerShell (พาธด้านล่างเป็นตัวอย่าง):
 
 ```powershell
 cd C:\Projects\curaloop-rl
-py -3.11 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
-.\.venv\Scripts\python.exe -m pip install -e . --no-deps
-.\.venv\Scripts\python.exe -m streamlit run app\streamlit_app.py
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-web-lock.txt
+.\.venv\Scripts\python.exe -m pip install -e ".[web,dev]" --no-deps
+.\.venv\Scripts\python.exe scripts\start_web.py
 ```
 
-ถ้ามีเฉพาะ Python 3.12 ใช้ `py -3.12` ในคำสั่งแรก เปิด `http://127.0.0.1:8501` ใน browser หลังติดตั้งครั้งแรกแล้ว demo ใช้ข้อมูลที่รวมอยู่ใน package และไม่ต้องต่อ internet ไม่ต้องเปลี่ยน PowerShell execution policy เพราะเรียก python.exe ตรง
+Streamlit fallback: `.\.venv\Scripts\python.exe -m streamlit run app\streamlit_app.py` (port 8501)
 
-```powershell
-.\.venv\Scripts\python.exe -m pytest -q
-.\.venv\Scripts\python.exe -m curaloop.cli compare --config configs\hiv-demo.json --output outputs\comparison
-.\.venv\Scripts\python.exe -m curaloop.cli replay --input outputs\comparison\report.json
-.\.venv\Scripts\python.exe -m curaloop.benchmark --output outputs\benchmark
+Linux/macOS:
+
+```bash
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r requirements-web-lock.txt
+.venv/bin/python -m pip install -e '.[web,dev]' --no-deps
+.venv/bin/python scripts/start_web.py --no-browser
 ```
-
-คำสั่งสำหรับ Linux/macOS ใช้ `.venv/bin/python` แทน `.\.venv\Scripts\python.exe` หลัง `python3 -m venv .venv` การทดสอบ Windows จริงระบุแยกใน handoff และ audit
 
 ## สาธิต 5–7 นาที
 
-1. Overview: อธิบาย historical assay labels กับ synthetic cost/time และข้อจำกัด
-2. Scenario: ใช้ HIV / seed 42 / budget 30 / capacity 5 / delay 2 หรือเปลี่ยนเงื่อนไข
-3. Screening: Select → เห็น pending → Advance สองครั้ง → เห็น delivered; อ่านเหตุผลและงบที่จอง/ชำระ
-4. Complete run → Compare policies → ดู actual event-derived curves → ดาวน์โหลด JSON/CSV
-5. Learning Lab: ดู checkpoint, training returns และข้อจำกัดการฝึกบน synthetic tasks
+1. Overview: ผล assay จริงย้อนหลัง กับ cost/time ที่จำลอง และคำถามการเลือกทดสอบ
+2. Scenario: HIV / seed 42 / budget 30 / capacity 5 / delay 2 หรือปรับเงื่อนไขเอง
+3. Lab: Select → pending (ยังไม่เห็นผล) → Advance สองครั้ง → delivered; ตรวจงบและเหตุผล
+4. Explorer: ค้นหา/กรอง/เรียงสาร ดูโครงสร้างจริงและเฉพาะผลที่เปิดเผยแล้ว
+5. Benchmark: เลือก 3–5 policies → Run comparison → ดูผลจริง/fallback → ดาวน์โหลด JSON/CSV
+6. Evidence: ตรวจ source/hash, ข้อจำกัด, checkpoint, ส่งออก run JSON และ validate/resume
+7. Guided presentation: ลำดับอธิบาย 5 ขั้นที่ใช้แคมเปญจริง ไม่มีผลสำเร็จที่เขียนเตรียมไว้
+
+ไม่มีการเลือก seed เพื่อทำคะแนนให้ดูดี Default อาจได้ศูนย์ hits กราฟ recorded v0.1 แยกจากการรันใหม่ชัดเจน
+
+## ตรวจและพัฒนา
+
+```bash
+.venv/bin/python -m pytest -q
+.venv/bin/python scripts/start_web.py --check
+cd frontend
+npm ci
+npm run typecheck
+npm run lint
+npm test
+npm run build
+npm run dev
+```
+
+Development: API `python -m uvicorn api.main:app --host 127.0.0.1 --port 8000`; Vite 5173 proxy ไป API. Release: FastAPI ให้บริการ built frontend ที่ address เดียว ต้องใช้ Node >=22.12 เฉพาะตอนแก้/rebuild UI
+
+Browser QA: ติดตั้ง `playwright==1.49.1`, `python -m playwright install chromium`, ทำ `npm ci` สำหรับ axe แล้ว `python scripts/web_browser_smoke.py` โดยต้องว่าง port 8000. หลักฐานที่รันจริงอยู่ `docs/evidence/web-v2/` ไม่ใช้ screenshot จำลอง
+
+API เก็บ sessions ใน memory ของ process เดียว รีสตาร์ตแล้วต้องนำ single-run JSON กลับมา validate/resume ไม่มีฐานข้อมูล/บัญชีผู้ใช้ และไม่รองรับ Uvicorn หลาย workers
 
 ## โครงสร้างข้อมูล
 
@@ -69,7 +98,7 @@ Seed labels ของ HIV สุ่มแบบไม่ดูคำตอบ �
 
 - [Benchmark evidence และขอบเขตคะแนน](docs/RESEARCH_BENCHMARKS_TH.md)
 - [สถาปัตยกรรมและการตัดสินใจ](docs/ARCHITECTURE.md)
-- [ผลตรวจและข้อจำกัด](docs/AUDIT_REPORT.md)
+- [ผลตรวจ rebuild](docs/WEB_REBUILD_AUDIT.md) และ [ผลตรวจ v0.1 เดิม](docs/AUDIT_REPORT.md)
 - [Codex handoff](HANDOFF_TO_CODEX.md)
 - [สิทธิ์ข้อมูลและ attribution](THIRD_PARTY_NOTICES.md)
 - `docs/evidence/`: ผลทดสอบ, training evidence, historical benchmark และ screenshot ที่จับจริงเมื่อทำได้
@@ -80,7 +109,7 @@ MoleculeNet: Wu et al., Chemical Science (2018), DOI [10.1039/C7SC02664A](https:
 ## พัฒนาและฝึกซ้ำ
 
 ```powershell
-# ติดตั้งเครื่องมือสำหรับ rebuild fingerprints เท่านั้น (demo ไม่ต้องใช้ RDKit)
+# ติดตั้งเครื่องมือสำหรับ rebuild fingerprints เท่านั้น (Streamlit demo ไม่ต้องใช้ RDKit; เว็บติดตั้งไว้สำหรับภาพโมเลกุล)
 .\.venv\Scripts\python.exe -m pip install -e ".[chemistry]"
 .\.venv\Scripts\python.exe scripts\prepare_hiv.py --download
 # ฝึก checkpoint ใหม่จริงบน synthetic tasks และประเมินซ้ำหลังเปลี่ยน model
