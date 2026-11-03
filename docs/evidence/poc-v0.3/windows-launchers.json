@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "native_cmd_starts": [
+    {
+      "start": 1,
+      "health": {
+        "status": "ok",
+        "service": "curaloop-local",
+        "version": "0.3.0",
+        "sessions_persistent": true,
+        "storage_status": "ok",
+        "storage_error": null
+      },
+      "session_id": "3624f4c13c8f4df680d6e55dd506508f",
+      "pending_assays": 3,
+      "served_spa": true
+    },
+    {
+      "start": 2,
+      "health": {
+        "status": "ok",
+        "service": "curaloop-local",
+        "version": "0.3.0",
+        "sessions_persistent": true,
+        "storage_status": "ok",
+        "storage_error": null
+      },
+      "session_id": "3624f4c13c8f4df680d6e55dd506508f",
+      "pending_assays": 3,
+      "served_spa": true
+    }
+  ],
+  "recovery": "Pending ledger/revision retained exactly after abrupt process shutdown; unfinished comparison marked interrupted without replay.",
+  "first_run_setup": "Executed separately before baseline tests; see release report."
+}

@@ -1,0 +1,33 @@
+{
+  "repo_git_sha": "69cb3a247e7585329c297bcf6c2681c0fd10f53b",
+  "working_tree_dirty": true,
+  "source_sha256": "b08ea28f444b96e9c272d7f914cd03e546fa69d8d31ff7398bf4d37d7bc513e1",
+  "frontend_build_sha256": "15b476a8eb208390a50e298da4a21623667afbf0da87e006124a4c38a514eb43",
+  "api_source_sha256": "62f50b0753aa955eedbfc40e3eac5a0c6a94b57338daf9d58a2a5aa25cf59d24",
+  "web_version": "0.3.0",
+  "engine_version": "0.1.0",
+  "limitations": [
+    "Personal independent prototype; not an official GPO project or endorsed system.",
+    "Data origin and assay semantics are dataset-specific; retrospective labels are not drug efficacy evidence.",
+    "Cost, capacity, delay and missingness are SYNTHETIC_ASSUMPTION; no currency or actual savings.",
+    "Seed labels are common preexisting sunk cost and excluded from new hits. Only synthetic seeds are stratified.",
+    "Logistic probabilities are uncalibrated; closeness to 0.5 is a heuristic, not validated uncertainty.",
+    "Single-seed comparisons illustrate behavior. Multi-seed variability on one assay is not cross-target validation.",
+    "Learned controllers train on synthetic tasks only; no validated pharmaceutical transfer, lab integration, Digital Twin or GMP/clinical use.",
+    "Built-in policy process separation is not an OS sandbox for hostile code or reconstructed synthetic truth."
+  ],
+  "digital_twin_maturity": "RETROSPECTIVE_SIMULATOR",
+  "molecule_rendering": true,
+  "session_note": "Campaigns and comparisons are saved locally in SQLite. Single-run JSON remains portable recovery; comparison JSON and CSV cannot resume one campaign.",
+  "storage": {
+    "schema_version": 1,
+    "status": "ok",
+    "error": null,
+    "recovery_help": "Saved state was retained. Stop the server, copy the database and journal files for investigation, then set CURALOOP_STORAGE_PATH to a new file and import a validated single-run JSON. Do not delete or overwrite the original database."
+  },
+  "test_evidence": {
+    "historical_python_tests": 79,
+    "historical_claim": "Previous v0.1 evidence; new rebuild verification is recorded separately in docs/evidence/web-v2."
+  },
+  "captured_at_utc": "2026-11-03T23:12:52.129860+00:00"
+}

@@ -1,0 +1,11 @@
+Starting the local web application. Press Ctrl+C in this window to stop.
+INFO:     Started server process [82728]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+CuraLoop-RL: http://127.0.0.1:8000 · loopback only · Ctrl+C to stop
+INFO:     127.0.0.1:59506 - "GET /api/v1/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59508 - "GET /lab HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59509 - "POST /api/v1/runs HTTP/1.1" 201 Created
+INFO:     127.0.0.1:59511 - "POST /api/v1/runs/34216e72870540d5a64bd13bcb71eb66/select HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59513 - "POST /api/v1/comparisons HTTP/1.1" 202 Accepted

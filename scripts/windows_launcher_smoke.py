@@ -35,6 +35,7 @@ def main():
     with tempfile.TemporaryDirectory(prefix="curaloop-launcher-") as folder:
         env = dict(os.environ, CURALOOP_STORAGE_PATH=str(Path(folder) / "state.sqlite3"))
         snapshot = None
+        job_id = None
         records = []
         for index in range(2):
             with (out / f"windows-start-{index + 1}.txt").open("w", encoding="utf-8") as log:
@@ -64,11 +65,18 @@ def main():
                         snapshot = request(f"/api/v1/runs/{snapshot['session_id']}/select",
                                            {"expected_revision": snapshot["revision"]})
                         assert snapshot["report"]["metrics"]["pending_assays"] == 3
+                        job_id = request("/api/v1/comparisons", {"scenario": {
+                            "dataset": "synthetic_linear_v1", "candidate_count": 24,
+                            "initial_count": 6, "budget_units": 6, "batch_size": 3,
+                            "delay_steps": 2}, "policies": ["random", "greedy", "uncertainty"]})["job_id"]
                     else:
                         recovered = request(f"/api/v1/runs/{snapshot['session_id']}")
                         assert recovered["revision"] == snapshot["revision"]
                         for key in ("events", "requests", "delivered_results", "metrics"):
                             assert recovered["report"][key] == snapshot["report"][key]
+                        interrupted = request(f"/api/v1/comparisons/{job_id}")
+                        assert interrupted["status"] == "interrupted", interrupted
+                        assert not interrupted["reports"]
                     records.append({"start": index + 1, "health": health,
                                     "session_id": snapshot["session_id"],
                                     "pending_assays": 3, "served_spa": True})
@@ -80,7 +88,7 @@ def main():
             time.sleep(0.5)
     (out / "windows-launchers.json").write_text(json.dumps({
         "status": "PASS", "native_cmd_starts": records,
-        "recovery": "Pending ledger/revision retained exactly after abrupt process shutdown.",
+        "recovery": "Pending ledger/revision retained exactly after abrupt process shutdown; unfinished comparison marked interrupted without replay.",
         "first_run_setup": "Executed separately before baseline tests; see release report.",
     }, indent=2) + "\n", encoding="utf-8")
     print("PASS: native Windows CMD start, SPA serving and subsequent-start pending recovery.")

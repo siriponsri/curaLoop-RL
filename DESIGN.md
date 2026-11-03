@@ -245,9 +245,9 @@ The sidecar's eight-step tonal ramps are synthesized OKLCH preview aids. They ar
 
 **Display and Body Font:** CuraThai, the supplied offline variable Noto Sans Thai font, followed by sans-serif. The font file is loaded locally from `/fonts/NotoSansThai.ttf`, covers weights 100–900 and uses swap display.
 
-**Label/Mono Font:** Technical identifiers use the documented technical stack, which includes CuraThai after the Latin monospace faces so Thai dirty-state text retains glyph coverage.
+**Label/Mono Font:** Technical identifiers use the documented technical stack, retaining the bundled font after Latin monospace faces for complete offline glyph coverage.
 
-**Character:** One bilingual family carries editorial headlines and dense operational detail. Dark text, restrained negative tracking in large Latin headings and generous paragraph leading supply the hierarchy; there is no separate decorative display face.
+**Character:** One bundled family carries English editorial headlines and dense operational detail. Dark text, restrained negative tracking in large Latin headings and generous paragraph leading supply the hierarchy; there is no separate decorative display face.
 
 ### Hierarchy
 
@@ -267,13 +267,13 @@ The sidecar's eight-step tonal ramps are synthesized OKLCH preview aids. They ar
 
 Small text is an honest density exception: this implementation uses 11 px footnotes, scientific tables and many secondary labels, plus 10 px training-axis ticks. It does not promise a universal 16 px floor. Preserve the existing contrast, explanatory line height, zoom behavior and contained table scrolling; do not spread these exceptions to major narrative copy. Font sizes follow the CSS's explicit pixel values and a 14 px root rather than an invented geometric type scale.
 
-**The Thai Glyph Rule.** Keep CuraThai in the body and technical fallback stacks, preserve natural Thai wrapping and verify both languages when labels or layouts change.
+**The Offline Type Rule.** Keep the licensed bundled font in body and technical fallback stacks. Verify English wrapping, dense identifiers and accessible labels on desktop and mobile after layout changes.
 
 ## Layout
 
 The desktop shell has a fixed white tool rail (244 px) and a corresponding main offset, a quiet top bar (76 px), a flexible main column and a naturally scrolling document. The main content is centered within a maximum width of 1500 px; its default padding is 34 px vertically at the top, 36 px horizontally and 44 px at the bottom. This is a tool-and-document system, not a universal grid of equal cards.
 
-The spacing tokens catalogue recurring values, not a strict eight-point scale. Panels normally use the surface inset; related controls use compact gaps; section boundaries and editorial blocks use larger breathing room. Retain the observed irregular values where the bilingual content or scientific density calls for them.
+The spacing tokens catalogue recurring values, not a strict eight-point scale. Panels normally use the surface inset; related controls use compact gaps; section boundaries and editorial blocks use larger breathing room. Retain observed spacing where scientific density requires it.
 
 | CSS condition | Actual behavior |
 | --- | --- |
@@ -284,7 +284,7 @@ The spacing tokens catalogue recurring values, not a strict eight-point scale. P
 
 Body minimum width is 320 px. Desktop compound cards use three columns; forms use two columns where implemented. Wide scientific tables and the capped event timeline scroll inside named, focusable regions; they must not widen the page. Hashes wrap anywhere, explanation cells wrap naturally and table values retain their alignment. The content footer wraps when required.
 
-Captured QA covers 1440 px desktop and 390 px mobile in Chromium/Linux localhost. Other browser, physical-device and platform results must be recorded independently; the documented SHIP scope is not evidence of those checks. Some diagnostic notices, data codes, policy names and auxiliary labels remain English in the Thai interface. Resume-result feedback is translated at render time, while the separate global replay notice currently remains English.
+Historical v0.2 captures cover Chromium/Linux at 1440 px and 390 px. Current English-only Windows evidence is recorded separately in docs/RELEASE_VERIFICATION.md. Legacy Thai browser storage does not change the document language or interface. Resume, replay, loading and recovery feedback use English. Physical-device and other-browser checks require their own evidence.
 
 ## Elevation & Depth
 

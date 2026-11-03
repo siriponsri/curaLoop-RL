@@ -60,7 +60,50 @@ scientific protocols and Git ancestry. No retraining or cloud deployment.
 
 None. Scientific protocol changes are outside this implementation.
 
+## Integrated checkpoint
+
+- Local commits: `cf9227c` operator/verification preparation; `b9c82d8` Streamlit;
+  `4d55842` durable API; `6f24c5c` English frontend; `336112b` guarded revision recovery.
+- Fresh locked environment `outputs/verify-env`: candidate **134 PASS**, one
+  inherited Starlette/httpx deprecation warning, 388.36s. XML:
+  `evidence/poc-v0.3/candidate-python.xml`.
+- Final frontend source tests: **18 PASS**; TypeScript/lint/build PASS. Entry
+  340.06 kB and lazy chart chunk 409.99 kB, no bundle-size warning. Full npm audit: 0.
+- Real Windows Chromium first integrated packet: **PASS**, 29 loaded captures,
+  18 axe checks / zero violations, zero JS errors/external requests/page overflow.
+  Packet: `evidence/poc-v0.3/browser-round1`; superseded for release by the final
+  guarded-recovery/build verification still to run.
+- Native CMD start/restart checks: PASS, including exact pending accounting and
+  explicitly interrupted comparison after killing only the owned process tree.
+- Independent review fixed malformed nested snapshot records and the recovery
+  operation race. Remaining bounded fix: explicit deletion of a damaged campaign
+  must bypass reconstruction; worker-storage is testing its follow-up commit.
+- Parent exposed existing revision inspection for healthy campaigns so reset
+  history can be recovered. Final browser script now exercises invalid import,
+  saved-open/revision recovery, all presentation chapters and real reset.
+- Current uncommitted files include final docs/notices, browser evidence/scripts,
+  a small healthy-revision UI access control and generated frontend assets. The
+  original untracked source marker has been copied to docs/archive and is retained.
+- No push/merge has occurred in this release.
+
 ## Next exact action
 
-Finish the setup launcher, execute the baseline Python suite and record its XML.
-Then start the first bounded implementation batch.
+Fetch/cherry-pick the worker-storage damaged-delete follow-up, independently review
+it, then run final full Python tests and final browser packet against the rebuilt
+frontend. Record identities/receipts, commit all deliverables, verify the latest
+remote and perform the owner-authorized normal main publication if all gates pass.
+
+
+## Final verification milestone
+
+- Final full locked Python: 136 PASS / 0 FAIL / 0 SKIP, one inherited
+  warning, 280.60s (`final-python.xml`).
+- Final frontend: 18 PASS; typecheck/lint/build PASS.
+- Final real browser: 31 captures, 18 axe audits, 0 violations,
+ 0 JS/external/overflow issues. Saved/revision recovery, invalid import, reset and
+ all presentation chapters passed.
+- Native CMD final build start/restart and interrupted comparison: PASS.
+- Protected files: 191/191, Python/npm advisory audits: 0; no scientific protocol question.
+- Independent review findings all resolved and re-reviewed.
+- Next: commit verified content and identities; fetch latest remote, fast-forward
+  main only if ancestry permits, normal push and record actual publication result.

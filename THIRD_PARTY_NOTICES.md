@@ -22,7 +22,7 @@ NumPy, pandas, scikit-learn, Streamlit, Altair, Gymnasium, pytest and optional R
 
 ## Thai font
 
-Noto Sans Thai, Google/Noto contributors, is redistributed under the SIL Open Font License 1.1. Original font and copyright/license notice are in `assets/fonts/NotoSansThai.ttf` and `assets/fonts/OFL.txt`. Source: https://github.com/google/fonts/tree/main/ofl/notosansthai . The font is embedded locally so Thai labels render without an external font server.
+Noto Sans Thai, Google/Noto contributors, is redistributed under the SIL Open Font License 1.1. Original font and copyright/license notice are in `assets/fonts/NotoSansThai.ttf` and `assets/fonts/OFL.txt`. Source: https://github.com/google/fonts/tree/main/ofl/notosansthai . The font is embedded locally for offline typography. The current interface is English; historical captures and the original licensed asset remain unchanged.
 
 
 ## Local web UI v0.2 references and attribution
@@ -42,3 +42,20 @@ The exact installed dependency versions are locked in `frontend/package-lock.jso
 Copies: `frontend/SHADCN-LICENSE.txt`, `DASHBOARD-LICENSE.txt`, `RECHARTS-LICENSE.txt`, `public/fonts/OFL.txt`. The existing PNG logo and font are reused unchanged, with no new company marks or generated scientific structures.
 
 Dependency check: `npm audit --omit=dev --json` reported zero production advisories at audit time. Full audit reported 11 moderate development-tool advisories involving minimatch/ESLint; no incompatible automatic downgrade/override was applied. This is a point-in-time dependency scan, not a security certification. ESLint 9 support migration and the build-size warning are recorded technical debt.
+
+
+## Local POC v0.3 dependency verification
+
+The original v0.2 dependency scan above is historical. Current release audit
+results are in `docs/RELEASE_VERIFICATION.md` and `docs/evidence/poc-v0.3/`.
+Pillow was updated from 12.3.0 to 13.0.0, which satisfies Streamlit/RDKit requirements
+and resolves the entries reported by the locked Python audit. See the upstream
+[Pillow advisory](https://github.com/advisories/GHSA-78g4-xqwv-q3g8).
+
+Frontend development tooling uses compatible ESLint 10/TypeScript ESLint packages
+with a narrowly pinned patched minimatch 11.0.1 override. Upstream ESLint's current
+dependency range still selected the affected major; the override is an actual
+dependency replacement, not an audit suppression. Real lint/typecheck/unit/build
+checks verify this project's usage. See the [minimatch advisory](https://github.com/advisories/GHSA-g3hv-75wg-m249)
+and [ESLint migration notes](https://eslint.org/docs/latest/use/migrate-to-10.0.0).
+Original license/copyright texts and runtime assets are preserved.

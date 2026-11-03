@@ -110,9 +110,10 @@ def main():
                     expect(page.locator(".specimen-image")).to_be_visible(timeout=30000)
                 if urlparse(page.url).path == "/compounds":
                     expect(page.locator(".compound-item").first).to_be_visible(timeout=30000)
+                expect(page.locator(".chart-loading")).to_have_count(0, timeout=30000)
                 page.evaluate("document.fonts.ready")
                 page.evaluate(
-                    "async()=>{await Promise.all([...document.images].map(i=>i.decode().catch(()=>{})));await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));}"
+                    "async()=>{document.querySelectorAll('img').forEach(i=>i.loading='eager');await Promise.all([...document.images].map(i=>i.decode()));await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));}"
                 )
                 page.evaluate("window.scrollTo(0,0)")
                 overflow = page.evaluate("document.documentElement.scrollWidth > innerWidth")
@@ -266,6 +267,14 @@ def main():
             with page.expect_download() as download:
                 page.get_by_role("link", name="JSON", exact=True).first.click()
             download.value.save_as(str(out / "run-download.json"))
+            # Invalid import must leave the selected saved campaign intact.
+            page.get_by_label("Resume JSON file").set_input_files({
+                "name": "invalid-run.json", "mimeType": "application/json",
+                "buffer": b'{"runs":[null]}',
+            })
+            page.get_by_role("button", name="Validate & resume").click()
+            expect(page.get_by_role("alert").first).to_be_visible()
+            assert page.evaluate("localStorage.getItem('curaloop-session')") == session_id
             page.get_by_label("Resume JSON file").set_input_files(str(out / "run-download.json"))
             page.get_by_role("button", name="Validate & resume").click()
             expect(
@@ -275,12 +284,30 @@ def main():
             expect(page.locator("html")).to_have_attribute("lang", "en")
             capture("09-english-evidence-legacy-preference")
             audit("english-evidence")
+            saved_row = page.get_by_role("row").filter(has_text=session_id[:12])
+            saved_row.get_by_role("button", name="Open campaign", exact=True).click()
+            page.wait_for_function("id=>localStorage.getItem('curaloop-session')===id", arg=session_id)
+            capture("09b-saved-campaign-reopened")
+            saved_row.get_by_role("button", name="Inspect saved revisions", exact=True).click()
+            expect(page.get_by_role("heading", name="Recover a validated revision")).to_be_visible()
+            page.get_by_role("button", name="Recover selected revision", exact=True).click()
+            page.wait_for_function("id=>localStorage.getItem('curaloop-session')!==id", arg=session_id)
+            restored_id = page.evaluate("localStorage.getItem('curaloop-session')")
+            revision_run = context.request.get("/api/v1/runs/" + restored_id).json()
+            assert revision_run["report"]["events"] == current["report"]["events"]
+            capture("09c-validated-revision-recovered")
             page.get_by_role("link", name="Guided presentation", exact=True).click()
             expect(page.get_by_role("heading", name="Guided presentation")).to_be_visible()
             page.get_by_role("button", name="Next chapter").click()
             expect(page.get_by_role("heading", name="What is real?")).to_be_visible()
             capture("10-presentation")
             audit("presentation")
+            for chapter in ("Select, then wait", "Adapt with evidence", "Compare honestly"):
+                page.get_by_role("button", name="Next chapter").click()
+                expect(page.get_by_role("heading", name=chapter, exact=True)).to_be_visible()
+            expect(page.get_by_role("button", name="Next chapter")).to_be_disabled()
+            page.get_by_role("button", name="Back", exact=True).click()
+            expect(page.get_by_role("heading", name="Adapt with evidence", exact=True)).to_be_visible()
             page.set_viewport_size({"width": 390, "height": 844})
             for path, name in [
                 ("/", "11-mobile-overview"),
@@ -381,6 +408,12 @@ def main():
                     expect(page.get_by_text("Synthetic fixture", exact=True)).to_be_visible()
                     capture("24-mobile-synthetic-benchmarks")
 
+            # Reset invokes the actual engine and keeps prior revision history.
+            page.get_by_role("button", name="Reset campaign", exact=True).click()
+            expect(page.get_by_role("button", name="Select batch", exact=True)).to_be_enabled(timeout=30000)
+            reset = context.request.get("/api/v1/runs/" + sid).json()
+            assert reset["report"]["metrics"]["spent_units"] == 0
+            assert not reset["report"]["requests"] and not reset["pending"]
             mobile_overflow = page.evaluate("document.documentElement.scrollWidth > innerWidth")
             assert not mobile_overflow
             result = {
