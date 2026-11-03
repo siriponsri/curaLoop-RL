@@ -1,0 +1,262 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "scenario_id",
+    "repo_git_sha",
+    "working_tree_dirty",
+    "source_sha256",
+    "package_version",
+    "algorithm_version",
+    "simulator_version",
+    "python_version",
+    "platform",
+    "dependency_versions",
+    "dataset",
+    "data_origin",
+    "scenario_origin",
+    "policy_id",
+    "seed",
+    "budget_units",
+    "batch_size",
+    "initial_label_ids",
+    "initial_labels_budget_rule",
+    "initial_label_selection",
+    "algorithm_status",
+    "controller",
+    "digital_twin_maturity",
+    "scenario_config",
+    "finished",
+    "scheduler",
+    "cost_note",
+    "delay_note",
+    "dataset_provenance",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "scenario_id": {
+      "type": "string"
+    },
+    "repo_git_sha": {
+      "type": "string"
+    },
+    "working_tree_dirty": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "source_sha256": {
+      "type": "string"
+    },
+    "package_version": {
+      "type": "string"
+    },
+    "algorithm_version": {
+      "type": "string"
+    },
+    "simulator_version": {
+      "type": "string"
+    },
+    "python_version": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "string"
+    },
+    "dependency_versions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "numpy",
+        "pandas",
+        "scikit-learn",
+        "streamlit",
+        "altair"
+      ],
+      "properties": {
+        "numpy": {
+          "type": "string"
+        },
+        "pandas": {
+          "type": "string"
+        },
+        "scikit-learn": {
+          "type": "string"
+        },
+        "streamlit": {
+          "type": "string"
+        },
+        "altair": {
+          "type": "string"
+        }
+      }
+    },
+    "dataset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "release",
+        "sha256",
+        "feature_sha256",
+        "assay_id",
+        "label_semantics",
+        "terms_status",
+        "source",
+        "preprocessing"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "release": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string"
+        },
+        "feature_sha256": {
+          "type": "string"
+        },
+        "assay_id": {
+          "type": "string"
+        },
+        "label_semantics": {
+          "type": "string"
+        },
+        "terms_status": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "preprocessing": {
+          "type": "string"
+        }
+      }
+    },
+    "data_origin": {
+      "type": "string"
+    },
+    "scenario_origin": {
+      "type": "string"
+    },
+    "policy_id": {
+      "type": "string"
+    },
+    "seed": {
+      "type": "integer"
+    },
+    "budget_units": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "batch_size": {
+      "type": "integer"
+    },
+    "initial_label_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "initial_labels_budget_rule": {
+      "type": "string"
+    },
+    "initial_label_selection": {
+      "type": "string"
+    },
+    "algorithm_status": {
+      "type": "string"
+    },
+    "controller": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "digital_twin_maturity": {
+      "type": "string"
+    },
+    "scenario_config": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dataset",
+        "seed",
+        "candidate_count",
+        "initial_count",
+        "budget_units",
+        "batch_size",
+        "delay_steps",
+        "assay_cost_units",
+        "delay_jitter",
+        "missing_percent"
+      ],
+      "properties": {
+        "dataset": {
+          "type": "string"
+        },
+        "seed": {
+          "type": "integer"
+        },
+        "candidate_count": {
+          "type": "integer"
+        },
+        "initial_count": {
+          "type": "integer"
+        },
+        "budget_units": {
+          "type": "integer"
+        },
+        "batch_size": {
+          "type": "integer"
+        },
+        "delay_steps": {
+          "type": "integer"
+        },
+        "assay_cost_units": {
+          "type": "integer"
+        },
+        "delay_jitter": {
+          "type": "integer"
+        },
+        "missing_percent": {
+          "type": "integer"
+        }
+      }
+    },
+    "finished": {
+      "type": "boolean"
+    },
+    "scheduler": {
+      "type": "string"
+    },
+    "cost_note": {
+      "type": "string"
+    },
+    "delay_note": {
+      "type": "string"
+    },
+    "dataset_provenance": {
+      "type": "object"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "run_manifest v1.1"
+}

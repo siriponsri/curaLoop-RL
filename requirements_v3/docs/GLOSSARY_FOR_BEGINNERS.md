@@ -1,0 +1,26 @@
+# Beginner glossary (practical, not encyclopedic)
+
+- **Compound / molecule:** a chemical structure to evaluate; a screening hit is not automatically a medicine.
+- **SMILES:** text encoding of a molecular graph. RDKit parses it into a molecule.
+- **Morgan fingerprint / ECFP:** compact structural feature bits; similar structures often have related fingerprints.
+- **Scaffold:** simplified core chemical framework. Scaffold splits test extrapolation to new chemical frameworks.
+- **Assay:** a measurement protocol for biological or biochemical behavior. Different assays do not necessarily measure the same outcome.
+- **Active / inactive:** labels defined by a particular assay and threshold, not a universal drug safety/efficacy label.
+- **High-throughput screening:** testing large sets of candidate compounds, traditionally through experiments.
+- **Virtual screening:** computational prioritization of candidates. It can use docking, ML or similarity but is not an experimental assay.
+- **Oracle (in replay):** hidden repository of previously measured labels; reveals only requested labels to mimic screening.
+- **Surrogate / predictor:** model trained on observed data to estimate outcomes of unseen candidates.
+- **Active learning:** the algorithm picks which examples should be labeled next.
+- **Bayesian optimization:** adaptive method that uses uncertainty/acquisition to find promising points with limited measurements.
+- **Contextual bandit:** choosing an action based on current context and reward, generally with a simpler horizon than full RL.
+- **Reinforcement learning (RL):** learning sequential actions using outcomes/rewards. More complexity does not guarantee better decisions.
+- **Digital model:** computer model of a process; not live-synchronized.
+- **Digital shadow:** model informed by updates from a real process, without closing the two-way physical decision loop.
+- **Digital twin:** a predictive, dynamically updated virtual counterpart participating in an operational feedback loop, validated against a defined physical process.
+- **DMTA:** Design-Make-Test-Analyze cycle in preclinical research; here only the *selection and simulated test* part is modeled initially.
+- **Multi-fidelity:** multiple measurement types with differing cost/accuracy; only claim real multi-fidelity evaluation when candidate-level paired data actually exist.
+- **Calibration:** agreement between predicted probabilities and observed frequencies; important when prioritizing costly tests.
+- **Data leakage:** using labels or information unavailable when making a real decision; can invalidate apparent performance.
+- **Out-of-distribution (OOD):** test chemicals or biological tasks materially different from training cases.
+- **Prospective validation:** recommendations affect future real experiments whose outcomes were not already known to the model.
+- **Reproducibility:** independent recreation using the stated code, data/version, seeds and settings.

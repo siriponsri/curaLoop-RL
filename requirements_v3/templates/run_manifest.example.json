@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "run_id": "SAMPLE_ONLY_not_a_run",
+  "repo_git_sha": "NO_REAL_GIT_SHA_YET",
+  "dataset": {
+    "name": "synthetic_example",
+    "release": "fixture-v3",
+    "sha256": "REPLACE_WITH_REAL_DATA_HASH",
+    "assay_id": "synthetic_binary_activity",
+    "label_semantics": "fictional binary label",
+    "terms_status": "ORIGINAL_SYNTHETIC"
+  },
+  "data_origin": "SYNTHETIC_ONLY",
+  "scenario_origin": "SYNTHETIC_ASSUMPTION",
+  "policy_id": "random",
+  "seed": 42,
+  "budget_units": 30,
+  "batch_size": 5,
+  "initial_label_ids": ["EXAMPLE_01", "EXAMPLE_02"],
+  "initial_labels_budget_rule": "PREEXISTING_SUNK_COST",
+  "algorithm_status": "NOT_RUN",
+  "digital_twin_maturity": "RETROSPECTIVE_SIMULATOR",
+  "cost_note": "Dimensionless illustrative cost units, not money.",
+  "delay_note": "Simulated steps, not measured lab turnaround.",
+  "limitations": ["This file is a schema-valid illustrative template, not experimental evidence."]
+}

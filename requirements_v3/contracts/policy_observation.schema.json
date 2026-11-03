@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PolicyObservation — explicitly excludes hidden oracle labels",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "run_id", "scenario_id", "step", "eligible_candidate_ids", "available_features", "revealed_assay_results", "pending_candidate_ids", "budget_remaining_units", "current_policy_id", "seed"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "run_id": {"type": "string", "minLength": 1},
+    "scenario_id": {"type": "string", "minLength": 1},
+    "step": {"type": "integer", "minimum": 0},
+    "eligible_candidate_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "available_features": {"type": "object", "additionalProperties": {"type": "array", "items": {"type": "number"}}},
+    "revealed_assay_results": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["compound_id", "assay_id", "active", "delivered_at_step"], "properties": {"compound_id": {"type": "string"}, "assay_id": {"type": "string"}, "active": {"type": "boolean"}, "delivered_at_step": {"type": "integer", "minimum": 0}}}},
+    "pending_candidate_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "budget_remaining_units": {"type": "number", "minimum": 0},
+    "current_policy_id": {"type": "string"},
+    "seed": {"type": "integer", "minimum": 0},
+    "scenario_public_parameters": {"type": "object"}
+  },
+  "description": "Do not add private truth, y_true, target label arrays, oracle credentials, hidden positive counts or future event contents to observations. AdditionalProperties=false is necessary but not sufficient for runtime isolation."
+}

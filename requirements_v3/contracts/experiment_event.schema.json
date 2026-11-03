@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExperimentEvent — append-only public ledger view",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "event_id", "run_id", "scenario_id", "policy_id", "compound_id", "event_type", "step", "cost_units", "data_origin", "scenario_origin"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "event_id": {"type": "string", "minLength": 1},
+    "run_id": {"type": "string", "minLength": 1},
+    "scenario_id": {"type": "string", "minLength": 1},
+    "policy_id": {"type": "string", "minLength": 1},
+    "compound_id": {"type": "string", "minLength": 1},
+    "assay_id": {"type": "string", "minLength": 1},
+    "request_id": {"type": ["string", "null"]},
+    "event_type": {"enum": ["REQUEST_ACCEPTED", "REQUEST_REJECTED", "RESULT_PENDING", "RESULT_DELIVERED", "RESULT_MISSING", "RUN_STOPPED"]},
+    "step": {"type": "integer", "minimum": 0},
+    "due_at_step": {"type": ["integer", "null"], "minimum": 0},
+    "cost_units": {"type": "number", "minimum": 0},
+    "delivered_active": {"type": ["boolean", "null"]},
+    "data_origin": {"enum": ["SYNTHETIC_ONLY", "HISTORICAL_PUBLIC_DATA", "AUTHORIZED_PRIVATE_DATA"]},
+    "scenario_origin": {"enum": ["SYNTHETIC_ASSUMPTION", "MEASURED_PARAMETERS", "NONE"]},
+    "assay_label_note": {"type": ["string", "null"]}
+  },
+  "description": "RESULT_DELIVERED may include the assay label; pre-delivery events must have delivered_active=null. Runtime invariant must be tested separately."
+}

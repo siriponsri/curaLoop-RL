@@ -1,0 +1,22 @@
+# Future synthetic stress scenario: example only, not official lab data.
+schema_version: '1.0'
+scenario_id: 'synthetic_stress_example_v3'
+source_type: 'SYNTHETIC_ONLY'
+seed: 20261103
+candidate_count: 240
+feature_type: 'synthetic_numeric_12d'
+initial_visible_labels:
+  count: 12
+  budget_rule: 'PREEXISTING_SUNK_COST'
+budget:
+  unit: 'synthetic_cost_units'
+  max_units: 60
+  assay_cost_units: 1
+  batch_size: 10
+feedback:
+  delay_steps: 5
+  is_measured: false
+policies: ['random', 'greedy', 'uncertainty']
+provenance:
+  scenario_origin: 'SYNTHETIC_ASSUMPTION'
+  digital_twin_maturity: 'RETROSPECTIVE_SIMULATOR'

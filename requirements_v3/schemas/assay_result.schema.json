@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DeliveredAssayObservationRecord (not a prediction)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["record_id", "compound_id", "assay_id", "data_origin", "result_type", "delivered_at_step", "source_uri"],
+  "properties": {
+    "record_id": {"type": "string", "minLength": 1},
+    "compound_id": {"type": "string", "minLength": 1},
+    "assay_id": {"type": "string", "minLength": 1},
+    "data_origin": {"enum": ["SYNTHETIC_ONLY", "HISTORICAL_PUBLIC_DATA", "AUTHORIZED_PRIVATE_DATA"]},
+    "result_type": {"enum": ["binary", "continuous", "missing"]},
+    "binary_active": {"type": ["boolean", "null"]},
+    "continuous_value": {"type": ["number", "null"]},
+    "unit": {"type": ["string", "null"]},
+    "delivered_at_step": {"type": "integer", "minimum": 0},
+    "source_uri": {"type": "string", "minLength": 1},
+    "assay_definition": {"type": ["string", "null"]},
+    "quality_flags": {"type": "array", "items": {"type": "string"}},
+    "run_id": {"type": ["string", "null"]}
+  }
+}

@@ -1,0 +1,7 @@
+# CuraLoop-RL logo
+
+Asset: `assets/curaloop-logo.png`, transparent raster PNG, generated 2026-11-03 with the built-in image-generation tool. An open C-shaped feedback loop and a highlighted candidate node represent the selection–feedback–learning cycle. Teal `#087F72`, midnight `#16333B`, amber `#B66914`; no organizational emblem or branding. README and Streamlit sidebar consume this exact asset. Not a registered or legally cleared trademark.
+
+Generation prompt:
+
+> Create a refined original logo for the personal open-source research project CuraLoop-RL, Pharmaceutical Screening Decision Lab. One single horizontal logo lockup on a genuinely transparent background, clean flat vector-like graphics, precise readable wordmark exactly 'CuraLoop-RL'. Symbol to the left: an elegant open circular feedback loop that subtly forms a letter C, with three small connected candidate nodes and one distinct amber selected node, suggesting learning through sequential experimental decisions. Deep teal #087F72 and midnight blue #16333B with a restrained amber #B66914 accent. Contemporary scientific software identity, professional and calm, suitable for a pharmaceutical research portfolio, excellent small-size legibility, generous negative space. No additional text; no pills, medical cross, DNA helix, government emblems, organizational logos, 3D, gradients, shadows, mockup, decorative backdrop or watermark.

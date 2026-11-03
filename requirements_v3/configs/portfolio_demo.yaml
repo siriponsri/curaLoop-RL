@@ -1,0 +1,27 @@
+# Only a synthetic demo. Never claim real GPO conditions or results.
+schema_version: '1.0'
+scenario_id: 'portfolio_offline_synthetic_v3'
+source_type: 'SYNTHETIC_ONLY'
+seed: 42
+candidate_count: 240
+feature_type: 'synthetic_numeric_12d'
+assay:
+  name: 'synthetic_binary_activity'
+  label_semantics: 'fictional active/inactive label; software demo only'
+initial_visible_labels:
+  count: 12
+  selection: 'deterministic stratified for synthetic demo only'
+  budget_rule: 'PREEXISTING_SUNK_COST'
+budget:
+  unit: 'synthetic_cost_units'
+  max_units: 30
+  assay_cost_units: 1
+  batch_size: 5
+feedback:
+  delay_steps: 2
+  is_measured: false
+policies: ['random', 'greedy', 'uncertainty']
+provenance:
+  scenario_origin: 'SYNTHETIC_ASSUMPTION'
+  digital_twin_maturity: 'RETROSPECTIVE_SIMULATOR'
+  gpo_affiliation: false

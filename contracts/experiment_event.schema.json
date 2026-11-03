@@ -1,0 +1,118 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "event_id",
+    "run_id",
+    "scenario_id",
+    "policy_id",
+    "event_type",
+    "step",
+    "compound_id",
+    "request_id",
+    "due_at_step",
+    "cost_units",
+    "delivered_active",
+    "explanation",
+    "data_origin",
+    "scenario_origin"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "scenario_id": {
+      "type": "string"
+    },
+    "policy_id": {
+      "type": "string"
+    },
+    "event_type": {
+      "enum": [
+        "RUN_STARTED",
+        "INITIAL_LABEL",
+        "REQUEST_ACCEPTED",
+        "REQUEST_REJECTED",
+        "RESULT_PENDING",
+        "RESULT_DELIVERED",
+        "RESULT_MISSING",
+        "CLOCK_ADVANCED",
+        "RUN_STOPPED"
+      ]
+    },
+    "step": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "compound_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "request_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "due_at_step": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "cost_units": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "delivered_active": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "explanation": {
+      "type": "string"
+    },
+    "data_origin": {
+      "type": "string"
+    },
+    "scenario_origin": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "not": {
+              "enum": [
+                "INITIAL_LABEL",
+                "RESULT_DELIVERED"
+              ]
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "delivered_active": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "experiment_event v1.1"
+}

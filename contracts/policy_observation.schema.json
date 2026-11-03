@@ -1,0 +1,119 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "scenario_id",
+    "step",
+    "eligible_candidate_ids",
+    "available_features",
+    "revealed_assay_results",
+    "pending_candidate_ids",
+    "budget_remaining_units",
+    "current_policy_id",
+    "seed",
+    "slots_available",
+    "assay_cost_units",
+    "budget_total_units",
+    "controller_json"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "scenario_id": {
+      "type": "string"
+    },
+    "step": {
+      "type": "integer"
+    },
+    "eligible_candidate_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "available_features": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        }
+      }
+    },
+    "revealed_assay_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "request_id",
+          "compound_id",
+          "assay_id",
+          "delivered_at_step",
+          "active",
+          "source_type",
+          "quality_flag"
+        ],
+        "properties": {
+          "request_id": {
+            "type": "string"
+          },
+          "compound_id": {
+            "type": "string"
+          },
+          "assay_id": {
+            "type": "string"
+          },
+          "delivered_at_step": {
+            "type": "integer"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "source_type": {
+            "type": "string"
+          },
+          "quality_flag": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "pending_candidate_ids": {
+      "type": "array",
+      "items": {}
+    },
+    "budget_remaining_units": {
+      "type": "integer"
+    },
+    "current_policy_id": {
+      "type": "string"
+    },
+    "seed": {
+      "type": "integer"
+    },
+    "slots_available": {
+      "type": "integer"
+    },
+    "assay_cost_units": {
+      "type": "integer"
+    },
+    "budget_total_units": {
+      "type": "integer"
+    },
+    "controller_json": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "policy_observation v1.1"
+}
