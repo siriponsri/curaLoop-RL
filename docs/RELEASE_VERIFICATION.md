@@ -151,3 +151,16 @@ retains the exact tested frontend/API hashes and all191 original protected files
 Repository attributes preserve these records across Git line-ending settings; no
 global Git configuration changed. The previous identity receipt is retained as
 a pre-packaging checkpoint. No runtime/scientific behavior changed.
+
+
+## Verified publication receipt
+
+**PASS:** normal fast-forward push to original `origin/main`, from `b16d2fb` to
+`5e2c9af0b97dd74e9fc9ae7b334ee23a07918bb2`. Fresh `git ls-remote` readback matched exactly. The working tree was
+clean before this receipt. This documentation-only receipt follows that push and
+is also published with a normal fast-forward; Git HEAD identifies the final
+receipt commit. Runtime content remains `0de416643726c96b7c9648b615359fafb94d32be`.
+
+No force push, deployment, paid service, permission/visibility change or company
+system access occurred. No pending owner question or localhost release blocker.
+See [publication.json](evidence/poc-v0.3/publication.json).

@@ -4,7 +4,7 @@
 
 Requested checkout: `C:\Users\User\Desktop\myProject\curaloop-rl`.
 Remote: `https://github.com/siriponsri/curaLoop-RL.git`.
-Working branch: `feat/english-durable-poc`.
+Implementation branch: `feat/english-durable-poc`. Final delivery branch: `main`.
 Original fetched base: `b16d2fb9ee56d03fdc6cf0628fc444670a433c43`.
 The supplied source directory had no `.git`; init/fetch plus index-only read-tree
 restored original history without overwriting source. Tracked source matched the
@@ -114,3 +114,9 @@ retains the exact tested frontend/API hashes and all191 original protected files
 Repository attributes preserve these records across Git line-ending settings; no
 global Git configuration changed. The previous identity receipt is retained as
 a pre-packaging checkpoint. No runtime/scientific behavior changed.
+
+
+Publication: **PASS**, normal fast-forward main push confirmed by remote readback
+at `5e2c9af0b97dd74e9fc9ae7b334ee23a07918bb2`. A later documentation-only receipt commit records this result and
+is pushed normally. Runtime content and all test/build digests remain unchanged.
+Current work is complete; next owner action is `Start-CuraLoop-Web.cmd`.
