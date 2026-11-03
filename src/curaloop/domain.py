@@ -33,7 +33,7 @@ class Scenario:
 
     def __post_init__(self) -> None:
         if self.dataset not in DATASETS:
-            raise ValueError("Unsupported dataset; only the two original synthetic fixtures are enabled.")
+            raise ValueError("Unsupported dataset; choose the historical HIV replay or a supported synthetic fixture.")
         limits = {
             "seed": (0, 2**32 - 1), "candidate_count": (0, 2000),
             "initial_count": (0, self.candidate_count), "budget_units": (0, 10000),

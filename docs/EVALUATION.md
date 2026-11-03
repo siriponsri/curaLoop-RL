@@ -26,3 +26,18 @@ Q-learning and contextual bandit train on synthetic_linear/shift only, 160 episo
 ## What is not measured
 
 Real laboratory costs or timing, model calibration suitable for drug discovery, molecular novelty/potency/ADMET, prospective biological utility, actual synthesis, economic savings, physical process fidelity, live Digital Twin behavior or GMP suitability.
+
+
+## English/persistence release boundary (v0.3)
+
+No datasets, assay labels, seed-selection rules, rewards, controller training or
+evaluation protocols were changed. New Windows/API/browser tests verify software
+behavior and recovery, not biological performance. Public snapshot restoration
+uses the existing reconstruction path. Pending experiments remain unrevealed and
+unsettled until their simulated due event; restart itself does not advance time.
+
+Recorded v0.1 benchmark files retain their original bytes. Newly executed UI
+comparisons have separate saved reports and source identities. Each controller's
+actual learned/fallback request counts must be read from that run, including the
+possibility of zero learned actions. POC completion does not resolve the recorded
+300/300 historical fallback limitation or demonstrate useful RL transfer.

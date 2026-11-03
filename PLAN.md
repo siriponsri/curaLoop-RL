@@ -1,16 +1,22 @@
-# Implementation / evidence map
+# Implementation and acceptance plan
 
-แผนแบบตรวจหลักฐานเป็นเป้าหมาย ไม่ใช้ deadline หรือ future extension มาทดแทน component ที่ต้องส่งมอบ
+Base: `b16d2fb9ee56d03fdc6cf0628fc444670a433c43`, fetched from the original remote.
+Working branch: `feat/english-durable-poc`. Exact progress is in
+[CONTINUATION](docs/CONTINUATION.md); executed results are in
+[release verification](docs/RELEASE_VERIFICATION.md).
 
-| Goal | Implementation | Evidence |
-|---|---|---|
-| Local installable application | src package + Streamlit + pinned dependencies + Windows launcher | wheel build / isolated environment / AppTest |
-| Correct retrospective engine | private TruthStore, immutable events, reservation/settlement, capacity/delay/missingness | simulator + stress + leakage tests |
-| Real assay dataset | 1200 real HIV molecules from 41127-row source, RDKit validation, hashes, attribution | hiv_manifest + preparation script + source/rights evidence |
-| Reproducible comparison | fresh independent runs, common seed labels/budget/features | baseline + controller comparisons / JSON and CSV |
-| Actual adaptive training | tabular Q-learning and contextual bandit, 160 episodes each; Gymnasium API | checkpoint values/counts/returns/hash + environment/training tests |
-| Honest external evaluation | 10 paired HIV seeds / 5 policies; separate scaffold predictor audit | benchmark files + summary + limitations |
-| Complete user workflow | four views, run controls, compare, export, resume, Learning/Benchmark Lab | AppTest / actual Chromium screenshots + downloads |
-| Reviewable transfer | Git commits, source ZIP, bundle, HANDOFF_TO_CODEX | exact commit identity + clean status + archive CRC |
+| Work | Acceptance evidence |
+| --- | --- |
+| Restore source Git metadata without overwriting files | Root/remote/branch/status and original ancestry |
+| Establish baseline on native Windows | Original Python/frontend suites and first-run setup |
+| Convert current content to English | Seven routes, Streamlit, docs, legacy-locale regression |
+| Durable local state | Pending/completed restart, revision CAS, interruption and corruption tests |
+| Repair workflows and recovery UX | Real controls, saved runs/jobs, exports/resume and source-specific results |
+| Compatible release tooling | Dependency audits, lint/typecheck, clean production build |
+| Browser acceptance | Real localhost at 1440 and 390 px, keyboard/dialog/focus, no overflow |
+| Preserve scientific evidence | Byte comparisons of protected resources and historical evidence |
+| Deliver | English operator guide, source/build identity, reviewed coherent commits, normal push |
 
-Measured limitations are research outcomes: uncalibrated logistic probabilities, sparse positives, controller unseen-state fallback and weak held-out performance cannot be repaired by changing labels, cherry-picking seeds or relabeling a simulator as a validated twin. LIT-PCBA/Tox21 rights and cross-target prospective validation remain external research needs, explicitly outside achieved evidence.
+No scientific protocol, reward, seed selection, dataset or trained model changes
+are planned. Historical evidence is retained in place. Installation is local to
+the project; no machine-level execution-policy or administrator changes.

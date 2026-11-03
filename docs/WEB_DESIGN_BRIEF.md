@@ -8,7 +8,7 @@ The owner sees a clear screening decision, public historical-data badge, the liv
 
 ## Direction and system
 
-Teal #087F72 is the action/confirmed-feedback color, midnight #16333B the reading color, amber #B66914 the delayed-feedback/limitations color. Restrained mint, off-white and stone support white work surfaces. Existing licensed Noto Sans Thai serves English and Thai offline. Icons come from Lucide, not emoji. Charts use labels and line patterns alongside distinct colors.
+Teal #087F72 is the action/confirmed-feedback color, midnight #16333B the reading color, amber #B66914 the delayed-feedback/limitations color. Restrained mint, off-white and stone support white work surfaces. The existing licensed bundled Noto font serves the English interface offline. Icons come from Lucide, not emoji. Charts use labels and line patterns alongside distinct colors.
 
 ## Signature interaction
 

@@ -12,7 +12,7 @@ if not exist ".venv\Scripts\python.exe" (
 ".venv\Scripts\python.exe" -c "import sys; assert sys.version_info >= (3,11), 'Python 3.11+ required'"
 if errorlevel 1 goto :failed
 echo Open http://127.0.0.1:8501 in your browser. Press Ctrl+C to stop.
-".venv\Scripts\python.exe" -m streamlit run app\streamlit_app.py
+".venv\Scripts\python.exe" -m streamlit run app\streamlit_app.py --server.address 127.0.0.1 %*
 exit /b %errorlevel%
 :failed
 echo Setup failed. See README.md for the explicit PowerShell commands.

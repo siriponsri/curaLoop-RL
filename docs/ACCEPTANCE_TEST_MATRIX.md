@@ -1,3 +1,8 @@
+> Historical release record (2026-11-03). Statements below describe that
+> execution, including its publication failure and unrun Windows checks.
+> The original remote now has `main` (verified 2026-11-04). See
+> [current release verification](RELEASE_VERIFICATION.md) for present state.
+
 # Acceptance evidence — implementation v0.1
 
 This is an implementation self-audit, not external certification. Exact test counts and commands: `AUDIT_REPORT.md` and the pytest XML/log artifacts. Source requirements remain archived under `requirements_v3/`.

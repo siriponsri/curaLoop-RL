@@ -211,7 +211,7 @@ This document captures the implemented local web system, extracted from frontend
 **Key Characteristics:**
 - Publication-like hierarchy within a persistent research tool shell.
 - Light mint, stone and white surfaces; teal actions and amber qualifications.
-- Offline Thai/English typography using the supplied Noto Sans Thai font.
+- Offline English typography using the supplied Noto Sans Thai font.
 - Live state, recorded evidence and source provenance remain visibly distinct.
 - Compact scientific tables and captions retain explicit small-type exceptions.
 
@@ -361,7 +361,7 @@ The accompanying finish review and browser record identify frontend build `2b8c8
 ### Do:
 
 - Do reuse the supplied logo, local CuraThai font and the documented token roles.
-- Do preserve readable Thai/English wrapping, visible keyboard focus and contained, keyboard-scrollable scientific tables.
+- Do preserve readable English wrapping, visible keyboard focus and contained, keyboard-scrollable scientific tables.
 - Do show source origin beside the active work and label separately recorded HIV results as recorded evidence.
 - Do keep predicted, pending, observed active, observed inactive and missing outcomes explicit in text.
 - Do use step-after live discovery and queue traces, labelled policy colors and the benchmark table for exact seed SD.

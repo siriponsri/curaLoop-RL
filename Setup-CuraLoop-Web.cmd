@@ -54,10 +54,10 @@ if not exist "frontend\dist\index.html" (
 )
 ".venv\Scripts\python.exe" scripts\start_web.py --check
 if errorlevel 1 goto :failed
-echo 0.2.0>".venv\curaloop-web-ready.txt"
+echo 0.3.0>".venv\curaloop-web-ready.txt"
 echo Setup complete. Start-CuraLoop-Web.cmd runs offline at http://127.0.0.1:8000
 exit /b 0
 :failed
-echo Setup could not complete. See START_WINDOWS_TH.md for manual recovery commands.
+echo Setup could not complete. See START_WINDOWS.md for manual recovery commands.
 if /I not "%~1"=="--no-pause" pause
 exit /b 1

@@ -1,3 +1,8 @@
+> Historical release record (2026-11-03). Statements below describe that
+> execution, including its publication failure and unrun Windows checks.
+> The original remote now has `main` (verified 2026-11-04). See
+> [current release verification](RELEASE_VERIFICATION.md) for present state.
+
 # Local web rebuild audit — 2026-11-03
 
 ## Outcome and scope

@@ -1,3 +1,8 @@
+> Historical release record (2026-11-03). Statements below describe that
+> execution, including its publication failure and unrun Windows checks.
+> The original remote now has `main` (verified 2026-11-04). See
+> [current release verification](RELEASE_VERIFICATION.md) for present state.
+
 # Implementation and QA audit — 2026-11-03
 
 **Decision:** local research demonstration is implemented and reproducible on the tested Linux/Python 3.12 environment. It is not a validated pharmaceutical decision tool, a Windows-tested release, an official GPO product or an operational Digital Twin. This is a tool-executed implementation self-audit, not third-party certification.

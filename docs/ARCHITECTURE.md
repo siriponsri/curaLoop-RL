@@ -30,13 +30,26 @@ Greedy maximizes uncalibrated logistic probability. Uncertainty maximizes `1−2
 Current: **RETROSPECTIVE_SIMULATOR**. Synthetic capacity/delay/missingness are scenario stress tests, not process calibration. No physical counterpart, measured turnaround time, LIMS connection, prospective validation or bidirectional live laboratory loop exists. The ladder is a project convention: static benchmark → retrospective simulator → calibrated simulator → digital shadow → operational decision-support twin. Stages beyond retrospective replay require external evidence and cannot be manufactured by additional UI/code.
 
 
-## Local web v0.2 adapter
+## Local web adapter and durable recovery (v0.3)
 
 `frontend/` is React/TypeScript/Vite/Tailwind with shadcn-style Radix components and Recharts. It presents public API reports; no acquisition model, label oracle or budget arithmetic was ported to JavaScript. `api/main.py` validates input with strict Pydantic integers and calls existing `RunService`, `compare`, and JSON/CSV exporters. Random UUID HTTP sessions are distinct from deterministic scientific run IDs. Each session has a lock and monotonic revision; stale/concurrent mutations return HTTP 409 rather than charging twice. Policies remain fixed/allowlisted. A two-worker executor handles comparison jobs without blocking the main request, each comparison creating fresh campaigns. No model was retrained by the UI rebuild.
 
 Production serves the committed `frontend/dist` through FastAPI on loopback port 8000. Development Vite binds to 127.0.0.1:5173 and proxies API. CORS, Host and Origin checks permit loopback origins only. These are browser isolation measures, not user authentication or a sandbox against local software. Do not bind externally or add arbitrary-code upload. `/api/docs` provides the actual generated contract.
 
-In-memory sessions (limit 40), job history (limit 20), process-local locks and executor are for a solo local demo, not multiuser durable storage. Use one Uvicorn worker. Public JSON can reconstruct pending campaigns after restart through strict event/metric reconciliation; CSV is a ledger export and cannot resume a run. Comparison JSON is not a single-run resume file. No external database, browser CDN, remote fonts or runtime API key is required. Real historical structures are rendered from public canonical SMILES by optional RDKit; synthetic descriptors have no invented molecular drawings.
+Versioned local SQLite stores public snapshots, immutable revisions and comparison
+records in `.local/curaloop.sqlite3` (40 campaigns / 20 comparisons). Existing
+`RunService.restore` reconstructs pending/completed campaigns; the persistence
+layer does not duplicate scientific transitions. Actions operate on a reconstructed
+candidate, commit with a durable expected-revision check and only then replace
+cached state. Failed writes retain the prior committed ledger. Restart marks
+unfinished CPU comparison jobs interrupted and never automatically repeats them.
+Corrupt rows are retained with recovery issues; incompatible whole databases fail
+closed. See [persistence](PERSISTENCE.md) for schema, source identity and recovery.
+One active server/worker remains required. Streamlit is session-memory-local.
+Single-run JSON remains portable validated recovery; comparison JSON and CSV have
+different purposes. No external database, CDN, remote font or runtime API key is
+required. RDKit renders public canonical SMILES; synthetic descriptors have no
+invented molecular drawings.
 
 `/api/v1/meta` separates engine source digest, current Git/dirty state, and a content digest of the built frontend (sorted relative paths plus bytes, cached per server start). Restart after rebuilding assets. A commit alone does not identify uncommitted files. Historical run manifests retain the source identity at creation; newly resumed runs report the current implementation, not a claim of the same executable environment.
 
@@ -47,3 +60,16 @@ In-memory sessions (limit 40), job history (limit 20), process-local locks and e
 3. Engine/service formatting was normalized alongside the bounded metadata fixes; no general scientific-engine rewrite was performed. Existing 79 tests were retained, and API regressions cover both corrected provenance and legacy snapshot reconciliation.
 
 Frontend unit fixtures are captured synthetic API responses in `src/__fixtures__`; production imports none of them. Every displayed chart uses actual live public curves or explicitly labelled recorded evidence. Seed-only and pending outcomes are excluded from confirmed new hits. SD whiskers in recorded count charts display a zero-clipped lower bound with an explicit note; exact sample SD is retained in the table.
+
+
+## Current English interface
+
+All active web/fallback/operator content is English. Locale state and the language
+switch are removed; legacy Thai browser preferences do not change rendering.
+Existing archived requirements, original source records, licenses, benchmark
+files and historical screenshots/logs retain their original bytes and language.
+Routes and chart code load on demand. The original scientific workbench, local
+logo, genuine structures and reduced-motion/focus contracts remain in place.
+`/api/v1/meta` identifies API source separately from scientific source and the
+content digest of the built frontend. Current verification is in
+[release verification](RELEASE_VERIFICATION.md).

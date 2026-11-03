@@ -1,16 +1,18 @@
 """Actual React/FastAPI production-mode localhost E2E, screenshots and accessibility evidence.
 
 Uses Python Playwright (local anonymous browser), not a generated UI or external site.
-python scripts/web_browser_smoke.py --output docs/evidence/web-v2/browser
+python scripts/web_browser_smoke.py --output docs/evidence/poc-v0.3/browser
 """
 
 import argparse
 import csv
 import io
 import json
+import os
 import re
 import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 from urllib.parse import urlparse
@@ -23,27 +25,46 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--output", type=Path, default=ROOT / "docs/evidence/web-v2/browser")
+    parser.add_argument("--output", type=Path, default=ROOT / "docs/evidence/poc-v0.3/browser")
     args = parser.parse_args()
     out = args.output.resolve()
     out.mkdir(parents=True, exist_ok=True)
     log = (out / "server.txt").open("w")
-    server = subprocess.Popen(
-        [sys.executable, "-m", "uvicorn", "api.main:app", "--host", "127.0.0.1", "--port", "8000"],
-        cwd=ROOT,
-        stdout=log,
-        stderr=subprocess.STDOUT,
-    )
-    try:
-        for _ in range(150):
+    state = tempfile.TemporaryDirectory(prefix="curaloop-browser-")
+    env = dict(os.environ, CURALOOP_STORAGE_PATH=str(Path(state.name) / "state.sqlite3"))
+
+    def start_server():
+        process = subprocess.Popen(
+            [sys.executable, "scripts/start_web.py", "--no-browser"],
+            cwd=ROOT, env=env, stdout=log, stderr=subprocess.STDOUT,
+        )
+        for _ in range(200):
+            if process.poll() is not None:
+                raise RuntimeError("Owned API process exited before becoming ready")
             try:
-                with urlopen("http://127.0.0.1:8000/api/v1/health", timeout=1) as r:
-                    if r.status == 200:
-                        break
+                with urlopen("http://127.0.0.1:8000/api/v1/health", timeout=1) as response:
+                    if response.status == 200:
+                        return process
             except OSError:
                 time.sleep(0.1)
+        raise RuntimeError("API failed to start")
+
+    try:
+        with urlopen("http://127.0.0.1:8000/api/v1/health", timeout=1):
+            raise RuntimeError("Port 8000 is already occupied; stop that service yourself.")
+    except OSError:
+        pass
+    server = start_server()
+
+    def stop_server():
+        if sys.platform == "win32":
+            subprocess.run(["taskkill", "/PID", str(server.pid), "/T", "/F"],
+                           capture_output=True, check=False)
         else:
-            raise RuntimeError("API failed to start")
+            server.terminate()
+        server.wait(timeout=15)
+
+    try:
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True, args=["--no-sandbox"])
             context = browser.new_context(
@@ -79,7 +100,7 @@ def main():
                     "/evidence": "Research evidence",
                     "/presentation": "Guided presentation",
                 }
-                if not name.startswith("09-") and not name.endswith("thai"):
+                if name != "18-mobile-navigation":
                     expect(
                         page.locator(".main-content h1").filter(
                             has_text=headings[urlparse(page.url).path]
@@ -121,7 +142,10 @@ def main():
                         for v in result["violations"]
                     ]
 
+            context.add_init_script("localStorage.setItem('curaloop-language','th')")
             page.goto("/")
+            expect(page.locator("html")).to_have_attribute("lang", "en")
+            expect(page.get_by_role("button", name="TH", exact=True)).to_have_count(0)
             expect(
                 page.get_by_role(
                     "heading", name="Every assay is a decision. Make yours reproducible."
@@ -152,6 +176,21 @@ def main():
             )
             capture("04-simulation-pending")
             audit("lab")
+            # A real process restart must retain revision, pending privacy and budget.
+            before_restart = current
+            stop_server()
+            time.sleep(0.4)
+            server = start_server()
+            page.reload()
+            expect(page.get_by_role("heading", name="Simulation lab")).to_be_visible(timeout=40000)
+            recovered = context.request.get("/api/v1/runs/" + session_id).json()
+            assert recovered["revision"] == before_restart["revision"]
+            for key in ("events", "requests", "delivered_results", "metrics"):
+                assert recovered["report"][key] == before_restart["report"][key]
+            stale = context.request.post("/api/v1/runs/" + session_id + "/select",
+                                         data={"expected_revision": 0})
+            assert stale.status == 409
+            capture("04b-recovered-pending")
             page.get_by_role("button", name="Advance time", exact=True).click()
             expect(page.locator(".lab-context .small-mono")).to_contain_text("step 1")
             page.get_by_role("button", name="Advance time", exact=True).click()
@@ -197,6 +236,9 @@ def main():
             expect(page.get_by_role("heading", name="Comparison complete")).to_be_visible(
                 timeout=120000
             )
+            # Completed comparison remains available after route reload and server restart.
+            page.reload()
+            expect(page.get_by_role("heading", name="Comparison complete")).to_be_visible(timeout=40000)
             capture("07-benchmark")
             audit("benchmarks")
             with page.expect_download() as download:
@@ -229,13 +271,10 @@ def main():
             expect(
                 page.get_by_text("Snapshot reconciled. Your campaign is ready in Simulation lab.")
             ).to_be_visible(timeout=30000)
-            page.get_by_role("button", name="TH", exact=True).click()
-            expect(page.get_by_role("heading", name="หลักฐานและข้อจำกัด")).to_be_visible()
-            expect(page.get_by_text("ตรวจประวัติสำเร็จ เปิดห้องจำลองเพื่อทำแคมเปญต่อได้")).to_be_visible()
-            capture("09-thai-evidence")
-            audit("thai-evidence")
-            assert "โครงการส่วนบุคคล" in page.locator(".limitations-list").inner_text()
-            page.get_by_role("button", name="EN", exact=True).click()
+            assert not re.search(r"[\u0E00-\u0E7F]", page.locator("body").inner_text())
+            expect(page.locator("html")).to_have_attribute("lang", "en")
+            capture("09-english-evidence-legacy-preference")
+            audit("english-evidence")
             page.get_by_role("link", name="Guided presentation", exact=True).click()
             expect(page.get_by_role("heading", name="Guided presentation")).to_be_visible()
             page.get_by_role("button", name="Next chapter").click()
@@ -279,11 +318,9 @@ def main():
                 "link", name="Research evidence", exact=True
             ).click()
             expect(page.get_by_role("heading", name="Research evidence")).to_be_visible()
-            page.get_by_role("button", name="TH", exact=True).click()
-            expect(page.get_by_role("heading", name="หลักฐานและข้อจำกัด")).to_be_visible()
-            capture("19-mobile-evidence-thai")
-            audit("mobile-evidence-thai")
-            page.get_by_role("button", name="EN", exact=True).click()
+            assert not re.search(r"[\u0E00-\u0E7F]", page.locator("body").inner_text())
+            capture("19-mobile-english-evidence")
+            audit("mobile-english-evidence")
             # Verify exact observed active/inactive/missing rendering from real API runs.
             statuses = {}
             for label, missing in [("observed", 0), ("missing", 100)]:
@@ -349,6 +386,10 @@ def main():
             result = {
                 "status": "PASS",
                 "source": "Actual built Vite assets served by FastAPI at http://127.0.0.1:8000",
+                "platform": sys.platform,
+                "browser_version": browser.version,
+                "pending_restart_recovery": True,
+                "legacy_thai_preference_english": True,
                 "desktop": [1440, 1000],
                 "mobile": [390, 844],
                 "screenshots": captures,
@@ -363,7 +404,7 @@ def main():
                 ],
                 "axe_route_count": len(a11y),
                 "axe_violation_count": sum(len(v) for v in a11y.values()),
-                "workflow": "create -> select -> delayed reveal -> replay -> explore -> compare 5 policies -> download JSON/CSV -> resume -> Thai -> presentation -> mobile",
+                "workflow": "create -> select -> delayed reveal -> replay -> explore -> compare 5 policies -> download JSON/CSV -> resume -> English legacy locale -> presentation -> mobile",
             }
             (out / "accessibility.json").write_text(json.dumps(a11y, indent=2), encoding="utf-8")
             (out / "browser-result.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
@@ -374,9 +415,9 @@ def main():
             assert all(not v for v in a11y.values()), a11y
             browser.close()
     finally:
-        server.terminate()
-        server.wait(timeout=15)
+        stop_server()
         log.close()
+        state.cleanup()
 
 
 if __name__ == "__main__":

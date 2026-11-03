@@ -22,7 +22,7 @@ Independent personal pharmaceutical screening decision-support portfolio. It is 
 - Primary UI: frontend/ React/TypeScript; API: api/main.py; preserve app/streamlit_app.py fallback.
 - Reuse RunService/compare/export; do not duplicate scientific inference/accounting in JavaScript.
 - Keep source-origin wording conditional for every live historical/synthetic result surface; recorded HIV evidence has its own label.
-- Serve loopback only and one Uvicorn worker. Document memory-only sessions and validated single-run resume.
+- Serve loopback only and one Uvicorn worker. Document durable public SQLite snapshots, revisions, interrupted comparisons and validated single-run resume. Streamlit remains session-memory-local.
 - When rebuilding frontend, update and commit frontend/dist; record actual build hash and fresh browser evidence for material UI changes.
 - Run locked clean-env Python tests, frontend build/lint/tests, and actual browser checks. Preserve resource/benchmark bytes unless a separately documented scientific version change is intended.
-- GitHub main publication to siriponsri/curaLoop-RL was explicitly authorized on2026-11-03. No deployment, paid infrastructure, visibility/access change or organizational integration is implied.
+- GitHub main publication to siriponsri/curaLoop-RL was explicitly authorized on 2026-11-03. No deployment, paid infrastructure, visibility/access change or organizational integration is implied.
