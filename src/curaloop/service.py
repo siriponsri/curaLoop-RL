@@ -30,10 +30,14 @@ LIMITATIONS = [
 def code_identity() -> dict:
     root = Path(__file__).resolve().parents[2]
     try:
-        sha = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True,
-                                      stderr=subprocess.DEVNULL, timeout=3).strip()
-        dirty = bool(subprocess.check_output(["git", "status", "--porcelain"], cwd=root,
-                                            text=True, timeout=3).strip())
+        sha = subprocess.check_output(
+            ["git", "rev-parse", "HEAD"], cwd=root, text=True, stderr=subprocess.DEVNULL, timeout=3
+        ).strip()
+        dirty = bool(
+            subprocess.check_output(
+                ["git", "status", "--porcelain"], cwd=root, text=True, timeout=3
+            ).strip()
+        )
     except (OSError, subprocess.SubprocessError):
         marker = root / "SOURCE_COMMIT.txt"
         build_info = Path(__file__).with_name("resources") / "build_info.json"
@@ -44,7 +48,9 @@ def code_identity() -> dict:
             sha, dirty = info["source_commit"], info["source_working_tree_dirty"]
         else:
             sha, dirty = "UNCOMMITTED", None
-    source_hash = digest({p.name: p.read_text(encoding="utf-8") for p in sorted(Path(__file__).parent.glob("*.py"))})
+    source_hash = digest(
+        {p.name: p.read_text(encoding="utf-8") for p in sorted(Path(__file__).parent.glob("*.py"))}
+    )
     return {"repo_git_sha": sha, "working_tree_dirty": dirty, "source_sha256": source_hash}
 
 
@@ -98,7 +104,9 @@ class RunService:
 
     @property
     def metrics(self) -> dict:
-        return metrics_from_events(self.events, self.scenario.budget_units, self.scenario.assay_cost_units)
+        return metrics_from_events(
+            self.events, self.scenario.budget_units, self.scenario.assay_cost_units
+        )
 
     @property
     def curve(self) -> list[dict]:
@@ -128,14 +136,35 @@ class RunService:
         for request in report["requests"]:
             groups.setdefault(request["batch_id"], []).append(request)
         campaign = restored.__campaign
+        # A v0.1 lifecycle-description typo called even historical data synthetic.
+        # Preserve that exact legacy event when reconciling old snapshots. It is
+        # descriptive metadata only; labels, schedules and budget are untouched.
+        if (
+            report.get("events")
+            and report["events"][0].get("event_type") == "RUN_STARTED"
+            and report["events"][0].get("explanation")
+            == "Original synthetic fixture; no live laboratory."
+        ):
+            campaign._events = (
+                replace(campaign.events[0], explanation=report["events"][0]["explanation"]),
+            ) + campaign.events[1:]
         for requests in groups.values():
             step = requests[0]["scheduled_at_step"]
             if step < campaign.step:
                 raise ValueError("Non-monotonic request history.")
             if step > campaign.step:
                 campaign.advance(step - campaign.step)
-            campaign.submit(tuple(Selection(r["compound_id"], r["explanation"], r["predicted_probability"],
-                                             model_status=r["model_status"]) for r in requests))
+            campaign.submit(
+                tuple(
+                    Selection(
+                        r["compound_id"],
+                        r["explanation"],
+                        r["predicted_probability"],
+                        model_status=r["model_status"],
+                    )
+                    for r in requests
+                )
+            )
         final_step = report["metrics"]["step"]
         if final_step > campaign.step:
             campaign.advance(final_step - campaign.step)
@@ -153,44 +182,79 @@ class RunService:
         controller = None
         if self.policy in ("q_learning", "contextual_bandit"):
             from .learning import load_checkpoint
-            controller = {k: v for k, v in load_checkpoint(self.policy).items()
-                          if k not in ("values", "counts", "episode_returns")}
+
+            controller = {
+                k: v
+                for k, v in load_checkpoint(self.policy).items()
+                if k not in ("values", "counts", "episode_returns")
+            }
         return {
             "manifest": {
-                "schema_version": "1.1", "run_id": self.observation.run_id,
-                "scenario_id": self.scenario.scenario_id, **code_identity(),
-                "package_version": __version__, "algorithm_version": ALGORITHM_VERSION,
+                "schema_version": "1.1",
+                "run_id": self.observation.run_id,
+                "scenario_id": self.scenario.scenario_id,
+                **code_identity(),
+                "package_version": __version__,
+                "algorithm_version": ALGORITHM_VERSION,
                 "simulator_version": SIMULATOR_VERSION,
-                "python_version": sys.version.split()[0], "platform": platform.system(),
+                "python_version": sys.version.split()[0],
+                "platform": platform.system(),
                 "dependency_versions": dependency_versions(),
-                "dataset": {"name": self.dataset.name, "release": self.dataset.release,
-                            "sha256": self.dataset.sha256, "feature_sha256": self.dataset.feature_sha256,
-                            "assay_id": self.dataset.assay_id,
-                            "label_semantics": self.dataset.label_semantics,
-                            "terms_status": self.dataset.terms_status,
-                            "source": "Original in-process synthetic generator; no external data.",
-                            "preprocessing": "StandardScaler fitted only to revealed training rows."},
-                "data_origin": self.dataset.data_origin, "scenario_origin": "SYNTHETIC_ASSUMPTION",
-                "policy_id": self.policy, "seed": self.scenario.seed,
-                "budget_units": self.scenario.budget_units, "batch_size": self.scenario.batch_size,
+                "dataset": {
+                    "name": self.dataset.name,
+                    "release": self.dataset.release,
+                    "sha256": self.dataset.sha256,
+                    "feature_sha256": self.dataset.feature_sha256,
+                    "assay_id": self.dataset.assay_id,
+                    "label_semantics": self.dataset.label_semantics,
+                    "terms_status": self.dataset.terms_status,
+                    "source": (
+                        json.loads(self.dataset.metadata_json).get(
+                            "source_url", "Historical public assay; see dataset_provenance."
+                        )
+                        if self.dataset.data_origin == "HISTORICAL_PUBLIC_DATA"
+                        else "Original in-process synthetic generator; no external data."
+                    ),
+                    "preprocessing": "StandardScaler fitted only to revealed training rows.",
+                },
+                "data_origin": self.dataset.data_origin,
+                "scenario_origin": "SYNTHETIC_ASSUMPTION",
+                "policy_id": self.policy,
+                "seed": self.scenario.seed,
+                "budget_units": self.scenario.budget_units,
+                "batch_size": self.scenario.batch_size,
                 "initial_label_ids": [r.compound_id for r in self.initial_results],
                 "initial_labels_budget_rule": "PREEXISTING_SUNK_COST",
-                "initial_label_selection": ("Uniform random without using labels" if self.dataset.data_origin == "HISTORICAL_PUBLIC_DATA"
-                                            else "Deterministic synthetic-only stratification; disclosed oracle intervention."),
+                "initial_label_selection": (
+                    "Uniform random without using labels"
+                    if self.dataset.data_origin == "HISTORICAL_PUBLIC_DATA"
+                    else "Deterministic synthetic-only stratification; disclosed oracle intervention."
+                ),
                 "algorithm_status": controller["status"] if controller else "BASELINE_IMPLEMENTED",
                 "controller": controller,
                 "digital_twin_maturity": "RETROSPECTIVE_SIMULATOR",
-                "scenario_config": asdict(self.scenario), "finished": self.done,
+                "scenario_config": asdict(self.scenario),
+                "finished": self.done,
                 "scheduler": "At most batch_size concurrent pending assays; settle each result at its due step.",
                 "cost_note": "Reserve on request; settle on delivery or missing outcome; no refunds.",
                 "delay_note": "Integer simulated steps; deterministic nonnegative per-candidate jitter.",
                 "dataset_provenance": json.loads(self.dataset.metadata_json),
-                "limitations": LIMITATIONS,
+                "limitations": LIMITATIONS
+                + (
+                    [
+                        "Legacy RUN_STARTED description retained for exact replay; dataset origin and hashes identify the real source."
+                    ]
+                    if self.events[0].explanation
+                    == "Original synthetic fixture; no live laboratory."
+                    else []
+                ),
             },
             "initial_results": [asdict(r) for r in self.initial_results],
             "requests": [asdict(r) for r in self.requests],
             "delivered_results": [asdict(r) for r in self.results],
-            "events": event_rows(self.events), "metrics": self.metrics, "curve": self.curve,
+            "events": event_rows(self.events),
+            "metrics": self.metrics,
+            "curve": self.curve,
         }
 
 
@@ -211,5 +275,10 @@ def evaluate_seeds(scenario: Scenario, seeds: list[int]) -> dict:
     if len(seeds) != len(set(seeds)) or not seeds:
         raise ValueError("Provide one or more distinct paired seeds.")
     runs = [r for seed in seeds for r in compare(replace(scenario, seed=seed))]
-    return {"schema_version": "1.1", "evaluation": "PAIRED_SYNTHETIC_SEEDS",
-            "seeds": seeds, "runs": runs, "limitations": LIMITATIONS}
+    return {
+        "schema_version": "1.1",
+        "evaluation": "PAIRED_SYNTHETIC_SEEDS",
+        "seeds": seeds,
+        "runs": runs,
+        "limitations": LIMITATIONS,
+    }

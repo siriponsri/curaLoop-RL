@@ -1,0 +1,236 @@
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Check,
+  Download,
+  FlaskConical,
+  Hourglass,
+  Layers3,
+  MoveRight,
+  ScanSearch,
+} from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
+import { number } from "../lib";
+import { useApp } from "../state";
+import { runExport } from "../api";
+import type { RunView } from "../types";
+
+export function PageHeading({
+  title,
+  description,
+  children,
+}: {
+  title: string;
+  description: string;
+  children?: React.ReactNode;
+}) {
+  return (
+    <div className="page-heading">
+      <div>
+        <h1>{title}</h1>
+        <p>{description}</p>
+      </div>
+      {children && <div className="heading-actions">{children}</div>}
+    </div>
+  );
+}
+export function SourceBadge() {
+  const { run, t } = useApp();
+  return (
+    <Badge
+      className={
+        run?.report.manifest.data_origin === "HISTORICAL_PUBLIC_DATA"
+          ? "badge-teal"
+          : "badge-amber"
+      }
+    >
+      <span className="status-dot" />
+      {run?.report.manifest.data_origin === "HISTORICAL_PUBLIC_DATA"
+        ? t("Historical assay data", "ข้อมูล assay จริงย้อนหลัง")
+        : t("Synthetic fixture", "ข้อมูลสังเคราะห์")}
+    </Badge>
+  );
+}
+export function KpiStrip({ run }: { run: RunView }) {
+  const { t } = useApp();
+  const m = run.report.metrics;
+  return (
+    <div className="kpi-strip">
+      <div>
+        <span>{t("Confirmed new hits", "ผล active ใหม่ที่ยืนยันแล้ว")}</span>
+        <strong>{number(m.confirmed_hits)}</strong>
+        <small>
+          {t(
+            "Delivered only · excludes seed labels",
+            "เฉพาะผลส่งคืน · ไม่รวม seed labels",
+          )}
+        </small>
+      </div>
+      <div>
+        <span>{t("Assays delivered", "ผลที่ส่งคืนแล้ว")}</span>
+        <strong>
+          {number(m.delivered_assays)}
+          <small>/ {run.report.requests.length}</small>
+        </strong>
+        <small>
+          {t(
+            "Missing outcomes counted separately",
+            "แยกผลสูญหายออกจากผล inactive",
+          )}
+        </small>
+      </div>
+      <div>
+        <span>{t("Pending feedback", "กำลังรอผล")}</span>
+        <strong>{number(m.pending_assays)}</strong>
+        <small>
+          {t(
+            "No label visible until due",
+            "ยังไม่เปิดเผย label จนกว่าจะครบกำหนด",
+          )}
+        </small>
+      </div>
+      <div>
+        <span>{t("Budget available", "งบที่ยังใช้ได้")}</span>
+        <strong>
+          {number(m.remaining_units)}
+          <small> units</small>
+        </strong>
+        <small>
+          {t(
+            "Simulated cost · never THB or USD",
+            "ต้นทุนจำลอง · ไม่ใช่บาทหรือดอลลาร์",
+          )}
+        </small>
+      </div>
+    </div>
+  );
+}
+export function Workflow({
+  run,
+  compact = false,
+}: {
+  run: RunView;
+  compact?: boolean;
+}) {
+  const { t } = useApp();
+  const stages = [
+    {
+      icon: Layers3,
+      label: t("Candidate pool", "กลุ่มสาร"),
+      count: run.eligible_count,
+      to: "/compounds",
+    },
+    {
+      icon: ScanSearch,
+      label: t("Policy selection", "เลือกตามนโยบาย"),
+      count: run.report.requests.length,
+      to: "/lab",
+    },
+    {
+      icon: Hourglass,
+      label: t("Result queue", "คิวรอผล"),
+      count: run.pending.length,
+      to: "/lab",
+    },
+    {
+      icon: FlaskConical,
+      label: t("Delivered results", "ผลที่ส่งคืน"),
+      count: run.report.metrics.delivered_assays,
+      to: "/lab",
+    },
+  ];
+  return (
+    <div
+      className={"workflow " + (compact ? "workflow-compact" : "")}
+      aria-label="Live screening workflow"
+    >
+      {stages.map((stage, i) => (
+        <div className="workflow-segment" key={stage.label}>
+          <Link
+            to={stage.to}
+            className={
+              "flow-step " +
+              (i === 2 && run.pending.length ? "flow-step-active" : "")
+            }
+          >
+            <stage.icon size={compact ? 19 : 23} />
+            <strong>{number(stage.count)}</strong>
+            <span>{stage.label}</span>
+            {i === 3 && run.done && <Check size={15} className="flow-check" />}
+          </Link>
+          {i < stages.length - 1 && (
+            <MoveRight className="flow-arrow" size={20} />
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+export function ExportButtons({ id }: { id: string }) {
+  return (
+    <div className="button-row">
+      <Button asChild variant="outline" size="sm">
+        <a href={runExport(id, "json")} download>
+          <Download size={15} />
+          JSON
+        </a>
+      </Button>
+      <Button asChild variant="outline" size="sm">
+        <a href={runExport(id, "csv")} download>
+          <Download size={15} />
+          CSV
+        </a>
+      </Button>
+    </div>
+  );
+}
+export function EmptyState({
+  title,
+  description,
+  action,
+}: {
+  title: string;
+  description: string;
+  action?: React.ReactNode;
+}) {
+  return (
+    <div className="empty-state">
+      <FlaskConical size={26} />
+      <h3>{title}</h3>
+      <p>{description}</p>
+      {action}
+    </div>
+  );
+}
+export function GoLink({
+  to,
+  children,
+}: {
+  to: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Link className="text-link" to={to}>
+      {children}
+      <ArrowUpRight size={16} />
+    </Link>
+  );
+}
+export function NextLink({
+  to,
+  children,
+}: {
+  to: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Button asChild>
+      <Link to={to}>
+        {children}
+        <ArrowRight size={16} />
+      </Link>
+    </Button>
+  );
+}
