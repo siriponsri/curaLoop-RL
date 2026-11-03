@@ -13,8 +13,8 @@ from curaloop.service import RunService
 
 
 @pytest.fixture
-def client():
-    app = create_app()
+def client(tmp_path):
+    app = create_app(storage_path=tmp_path / "web-api.sqlite3")
     with TestClient(app) as client:
         yield client
     app.state.executor.shutdown(wait=True)

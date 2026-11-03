@@ -1,9 +1,12 @@
-"""Local FastAPI application; in-memory, isolated sessions over the existing engine."""
+"""Loopback FastAPI adapter with durable public snapshots over the existing engine."""
 
 import hashlib
 import json
+import logging
+import os
 import threading
 from concurrent.futures import ThreadPoolExecutor
+from contextlib import asynccontextmanager
 from dataclasses import asdict, dataclass, field
 from functools import lru_cache
 from importlib.util import find_spec
@@ -22,6 +25,16 @@ from curaloop.domain import BASELINES, DATASETS, POLICIES, Scenario
 from curaloop.export import csv_report, json_report
 from curaloop.learning import load_checkpoint
 from curaloop.service import LIMITATIONS, RunService, code_identity, compare
+
+from .storage import (
+    RECOVERY_HELP,
+    SCHEMA_VERSION,
+    CapacityError,
+    SnapshotStore,
+    StaleRevision,
+    StorageError,
+    decode,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 HISTORICAL = "hiv_moleculenet_replay_v1"
@@ -85,6 +98,13 @@ class RunView(BaseModel):
     pending: list[dict]
     eligible_count: int
     can_select: bool
+    persistence: dict = Field(default_factory=dict)
+
+
+class RecoverRun(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    session_id: str
+    revision: StrictInt = Field(ge=0)
 
 
 @dataclass
@@ -92,6 +112,8 @@ class Session:
     run: RunService
     revision: int = 0
     lock: threading.Lock = field(default_factory=threading.Lock)
+    snapshot: dict = field(default_factory=dict)
+    persistence: dict = field(default_factory=dict)
 
 
 def public_view(session_id: str, session: Session) -> dict:
@@ -100,7 +122,7 @@ def public_view(session_id: str, session: Session) -> dict:
         "session_id": session_id,
         "revision": session.revision,
         "done": session.run.done,
-        "report": session.run.report(),
+        "report": session.snapshot or session.run.report(),
         "pending": [asdict(r) for r in session.run.pending],
         "eligible_count": len(obs.eligible_candidate_ids),
         "can_select": bool(
@@ -109,6 +131,7 @@ def public_view(session_id: str, session: Session) -> dict:
             and obs.slots_available
             and obs.budget_remaining_units >= obs.assay_cost_units
         ),
+        "persistence": session.persistence,
     }
 
 
@@ -140,12 +163,123 @@ def frontend_identity():
     return digest.hexdigest()
 
 
-def create_app() -> FastAPI:
+@lru_cache(maxsize=1)
+def api_identity() -> str:
+    """Adapter/storage source identity, kept separate from scientific-engine source."""
+    digest = hashlib.sha256()
+    for path in sorted(Path(__file__).parent.glob("*.py")):
+        digest.update(path.name.encode("utf-8"))
+        digest.update(path.read_bytes())
+    return digest.hexdigest()
+
+
+IDENTITY_FIELDS = (
+    "repo_git_sha",
+    "working_tree_dirty",
+    "source_sha256",
+    "package_version",
+    "algorithm_version",
+    "simulator_version",
+    "python_version",
+    "platform",
+    "dependency_versions",
+)
+
+SCIENTIFIC_MANIFEST_FIELDS = (
+    "schema_version",
+    "run_id",
+    "scenario_id",
+    "algorithm_version",
+    "simulator_version",
+    "dataset",
+    "data_origin",
+    "scenario_origin",
+    "policy_id",
+    "seed",
+    "budget_units",
+    "batch_size",
+    "initial_label_ids",
+    "initial_labels_budget_rule",
+    "initial_label_selection",
+    "algorithm_status",
+    "controller",
+    "digital_twin_maturity",
+    "scenario_config",
+    "finished",
+    "dataset_provenance",
+    "scheduler",
+    "cost_note",
+    "delay_note",
+)
+
+
+def creation_identity(report: dict) -> dict:
+    return {key: report["manifest"][key] for key in IDENTITY_FIELDS if key in report["manifest"]}
+
+
+def reconcile(report: dict) -> RunService:
+    if not isinstance(report, dict) or not isinstance(report.get("manifest"), dict):
+        raise ValueError("Public snapshot must contain a manifest object.")
+    for key, kind in (
+        ("requests", list),
+        ("events", list),
+        ("metrics", dict),
+        ("curve", list),
+        ("initial_results", list),
+        ("delivered_results", list),
+    ):
+        if not isinstance(report.get(key), kind):
+            raise ValueError(f"Public snapshot has an invalid {key} section.")
+        if kind is list and any(not isinstance(row, dict) for row in report[key]):
+            raise ValueError(f"Public snapshot {key} records must be objects.")
+    if report["manifest"].get("schema_version") != "1.1":
+        raise ValueError("Unsupported public snapshot schema; expected 1.1.")
+    restored = RunService.restore(report)
+    actual = restored.report()
+    if report["initial_results"] != actual["initial_results"]:
+        raise ValueError("Public snapshot cannot be reconciled: initial_results.")
+    # RunService owns reconstruction; this boundary additionally checks metadata
+    # that its event reconciliation does not compare. Only execution identity and
+    # explanatory limitations may differ between the stored and current report.
+    for key in SCIENTIFIC_MANIFEST_FIELDS:
+        if report["manifest"].get(key) != actual["manifest"][key]:
+            raise ValueError(f"Public snapshot has inconsistent scientific metadata: {key}.")
+    return restored
+
+
+def reconcile_job(job: dict) -> dict:
+    try:
+        if job.get("status") not in ("queued", "running", "completed", "failed", "interrupted"):
+            raise ValueError("Invalid saved comparison status.")
+        body = CompareInput(scenario=job["scenario"], policies=job["policies"])
+        if not isinstance(job.get("job_id"), str) or not isinstance(job.get("reports"), list):
+            raise ValueError("Invalid saved comparison structure.")
+        if job["status"] == "completed":
+            if len(job["reports"]) != len(body.policies):
+                raise ValueError("Completed comparison has an incomplete policy set.")
+            for policy, report in zip(body.policies, job["reports"], strict=True):
+                restored = reconcile(report)
+                if restored.policy != policy or restored.scenario != body.scenario.domain():
+                    raise ValueError("Saved comparison conditions differ between policies.")
+        elif job["reports"]:
+            raise ValueError("An unfinished comparison cannot claim completed reports.")
+    except (ValueError, TypeError, KeyError, IndexError, RuntimeError) as exc:
+        raise StorageError("Saved comparison cannot be reconciled. " + RECOVERY_HELP) from exc
+    return job
+
+
+def create_app(storage_path: str | Path | None = None) -> FastAPI:
+    @asynccontextmanager
+    async def lifespan(app: FastAPI):
+        yield
+        app.state.executor.shutdown(wait=True)
+
     app = FastAPI(
         title="CuraLoop-RL Local API",
-        version="0.2.0",
+        version="0.3.0",
         docs_url="/api/docs",
         openapi_url="/api/openapi.json",
+        lifespan=lifespan,
     )
     app.add_middleware(
         CORSMiddleware,
@@ -158,6 +292,108 @@ def create_app() -> FastAPI:
     app.state.jobs = {}
     app.state.registry_lock = threading.Lock()
     app.state.executor = ThreadPoolExecutor(max_workers=2, thread_name_prefix="curaloop-local")
+    app.state.storage_error = None
+    app.state.recovery_issues = []
+    try:
+        app.state.storage = SnapshotStore(
+            storage_path
+            or os.environ.get("CURALOOP_STORAGE_PATH")
+            or ROOT / ".local/curaloop.sqlite3"
+        )
+        # A process restart cannot prove whether an unfinished CPU job completed.
+        # Preserve its record and require an explicit new comparison; never resubmit it.
+        for row in app.state.storage.job_records():
+            try:
+                job = reconcile_job(decode(row["snapshot"], row["checksum"]))
+                if job["job_id"] != row["job_id"]:
+                    raise StorageError("Saved comparison identifier differs. " + RECOVERY_HELP)
+                if job["status"] in ("queued", "running"):
+                    previous = job["status"]
+                    job.update(
+                        status="interrupted",
+                        reports=[],
+                        error=(
+                            "The server stopped before this comparison committed. No completed result "
+                            "was saved. Run a new comparison explicitly; this job was not replayed."
+                        ),
+                    )
+                    app.state.storage.update_job(job, previous)
+            except (StorageError, ValueError, TypeError, KeyError) as exc:
+                app.state.recovery_issues.append(
+                    {"kind": "comparison", "id": row["job_id"], "message": str(exc)}
+                )
+    except StorageError as exc:
+        app.state.storage = None
+        app.state.storage_error = str(exc)
+
+    def storage() -> SnapshotStore:
+        if app.state.storage is None:
+            raise HTTPException(503, app.state.storage_error)
+        return app.state.storage
+
+    @app.exception_handler(StorageError)
+    async def storage_failure(_request: Request, exc: StorageError):
+        status = (
+            409
+            if isinstance(exc, StaleRevision)
+            else 429
+            if isinstance(exc, CapacityError)
+            else 503
+        )
+        return JSONResponse({"detail": str(exc)}, status_code=status)
+
+    def saved_session(row: dict) -> Session:
+        report = decode(row["snapshot"], row["checksum"])
+        try:
+            run = reconcile(report)
+            original = json.loads(row["creation_identity"])
+            if not isinstance(original, dict):
+                raise ValueError("Creation identity must be an object.")
+        except (ValueError, TypeError, KeyError, IndexError, RuntimeError) as exc:
+            raise StorageError("Saved campaign cannot be reconciled. " + RECOVERY_HELP) from exc
+        return Session(
+            run,
+            revision=row["revision"],
+            snapshot=report,
+            persistence={
+                "created_at": row["created_at"],
+                "updated_at": row["updated_at"],
+                "creation_identity": original,
+                "recovered": True,
+                "identity_note": "Creation identity is retained; actions after recovery use the current implementation.",
+            },
+        )
+
+    def add_session(run: RunService, identity: dict | None = None) -> dict:
+        report = run.report()
+        session_id = uuid4().hex
+        storage().create_run(session_id, report, identity or creation_identity(report))
+        row = storage().run_record(session_id)
+        session = Session(
+            run,
+            snapshot=report,
+            persistence={
+                "created_at": row["created_at"],
+                "updated_at": row["updated_at"],
+                "creation_identity": json.loads(row["creation_identity"]),
+                "recovered": False,
+                "identity_note": "Creation identity is retained; actions after recovery use the current implementation.",
+            },
+        )
+        with app.state.registry_lock:
+            app.state.sessions[session_id] = session
+        return public_view(session_id, session)
+
+    def get_job(job_id: str) -> dict | None:
+        job = storage().job(job_id)
+        if job is None:
+            return None
+        if job.get("job_id") != job_id:
+            raise StorageError("Saved comparison identifier differs. " + RECOVERY_HELP)
+        if app.state.jobs.get(job_id) != job:
+            reconcile_job(job)
+            app.state.jobs[job_id] = job
+        return job
 
     @app.middleware("http")
     async def local_boundary(request: Request, call_next):
@@ -181,21 +417,30 @@ def create_app() -> FastAPI:
         return response
 
     def get_session(session_id: str) -> Session:
-        session = app.state.sessions.get(session_id)
-        if session is None:
+        row = storage().run_record(session_id)
+        if row is None:
             raise HTTPException(
                 404,
-                "Session unavailable. Sessions live in memory; create or resume a run after restart.",
+                "Saved campaign was not found. Open another saved campaign or import a single-run JSON.",
             )
-        return session
+        with app.state.registry_lock:
+            session = app.state.sessions.get(session_id)
+            # Check the bytes even when a decoded engine is cached, so corruption is visible.
+            decode(row["snapshot"], row["checksum"])
+            if session is None or session.revision != row["revision"]:
+                session = saved_session(row)
+                app.state.sessions[session_id] = session
+            return session
 
     @app.get("/api/v1/health")
     def health():
         return {
-            "status": "ok",
+            "status": "degraded" if app.state.storage_error else "ok",
             "service": "curaloop-local",
-            "version": "0.2.0",
-            "sessions_persistent": False,
+            "version": "0.3.0",
+            "sessions_persistent": app.state.storage is not None,
+            "storage_status": "unavailable" if app.state.storage_error else "ok",
+            "storage_error": app.state.storage_error,
         }
 
     @app.get("/api/v1/meta")
@@ -203,12 +448,19 @@ def create_app() -> FastAPI:
         return {
             **code_identity(),
             "frontend_build_sha256": frontend_identity(),
-            "web_version": "0.2.0",
+            "api_source_sha256": api_identity(),
+            "web_version": "0.3.0",
             "engine_version": __version__,
             "limitations": LIMITATIONS,
             "digital_twin_maturity": "RETROSPECTIVE_SIMULATOR",
             "molecule_rendering": find_spec("rdkit") is not None,
-            "session_note": "In-memory local sessions. Export JSON to resume after server restart.",
+            "session_note": "Campaigns and comparisons are saved locally in SQLite. Single-run JSON remains portable recovery; comparison JSON and CSV cannot resume one campaign.",
+            "storage": {
+                "schema_version": SCHEMA_VERSION,
+                "status": "unavailable" if app.state.storage_error else "ok",
+                "error": app.state.storage_error,
+                "recovery_help": RECOVERY_HELP,
+            },
             "test_evidence": {
                 "historical_python_tests": 79,
                 "historical_claim": "Previous v0.1 evidence; new rebuild verification is recorded separately in docs/evidence/web-v2.",
@@ -253,15 +505,55 @@ def create_app() -> FastAPI:
 
     @app.post("/api/v1/runs", response_model=RunView, status_code=201)
     def create_run(body: CreateRun):
-        session = Session(RunService(body.scenario.domain(), body.policy))
-        with app.state.registry_lock:
-            if len(app.state.sessions) >= 40:
-                raise HTTPException(
-                    429, "40 local sessions reached. Close an old run or restart after exporting."
+        return add_session(RunService(body.scenario.domain(), body.policy))
+
+    @app.get("/api/v1/runs")
+    def saved_runs():
+        items, issues = [], []
+        for row in storage().run_records():
+            try:
+                session = get_session(row["session_id"])
+                report = session.snapshot
+                items.append(
+                    {
+                        "session_id": row["session_id"],
+                        "revision": row["revision"],
+                        "dataset": report["manifest"]["scenario_config"]["dataset"],
+                        "policy": report["manifest"]["policy_id"],
+                        "done": session.run.done,
+                        "pending_assays": report["metrics"]["pending_assays"],
+                        "spent_units": report["metrics"]["spent_units"],
+                        "updated_at": row["updated_at"],
+                    }
                 )
-            session_id = uuid4().hex
-            app.state.sessions[session_id] = session
-        return public_view(session_id, session)
+            except StorageError as exc:
+                issues.append({"kind": "run", "id": row["session_id"], "message": str(exc)})
+        return {
+            "items": items,
+            "recovery_issues": issues,
+            "storage": {"schema_version": SCHEMA_VERSION, "status": "ok"},
+        }
+
+    @app.get("/api/v1/runs/{session_id}/revisions")
+    def saved_revisions(session_id: str):
+        if storage().run_record(session_id) is None:
+            raise HTTPException(404, "Saved campaign was not found.")
+        return {"session_id": session_id, "items": storage().revisions(session_id)}
+
+    @app.post("/api/v1/recovery/runs", response_model=RunView, status_code=201)
+    def recover_revision(body: RecoverRun):
+        report = storage().revision_report(body.session_id, body.revision)
+        if report is None:
+            raise HTTPException(404, "Saved revision was not found.")
+        try:
+            run = reconcile(report)
+        except (ValueError, TypeError, KeyError, IndexError, RuntimeError) as exc:
+            raise HTTPException(
+                422, "Saved revision cannot be reconciled. " + RECOVERY_HELP
+            ) from exc
+        # Recovery always creates an independent campaign. It never rolls back or
+        # rewrites a newer committed campaign, including a corrupt current row.
+        return add_session(run, creation_identity(report))
 
     @app.get("/api/v1/runs/{session_id}", response_model=RunView)
     def read_run(session_id: str):
@@ -273,6 +565,7 @@ def create_app() -> FastAPI:
     def delete_run(session_id: str):
         session = get_session(session_id)
         with session.lock, app.state.registry_lock:
+            storage().delete_run(session_id)
             app.state.sessions.pop(session_id, None)
         return Response(status_code=204)
 
@@ -290,7 +583,9 @@ def create_app() -> FastAPI:
                 raise HTTPException(
                     409, "Stale action rejected. Refresh the run; it was not charged twice."
                 )
-            run = session.run
+            # Only a public snapshot is cloned. Mutating a candidate before the
+            # transaction commits keeps both cache and disk unchanged on failure.
+            run = reconcile(session.snapshot)
             if action == "select":
                 obs = run.observation
                 if (
@@ -311,11 +606,18 @@ def create_app() -> FastAPI:
             elif action == "finish":
                 run.finish()
             elif action == "reset":
-                session.run = RunService(run.scenario, run.policy)
+                run = RunService(run.scenario, run.policy)
             else:
-                session.run = RunService.restore(run.report())
+                run = reconcile(session.snapshot)
+            report = run.report()
+            storage().update_run(session_id, body.expected_revision, report)
+            session.run = run
+            session.snapshot = report
             session.revision += 1
+            session.persistence["updated_at"] = storage().run_record(session_id)["updated_at"]
             return public_view(session_id, session)
+        except StorageError:
+            raise
         except (ValueError, RuntimeError) as exc:
             raise HTTPException(422, str(exc)) from exc
         finally:
@@ -402,7 +704,7 @@ def create_app() -> FastAPI:
     def export_run(session_id: str, format: Literal["json", "csv"] = "json"):
         session = get_session(session_id)
         with session.lock:
-            report = session.run.report()
+            report = session.snapshot
             payload = json_report([report]) if format == "json" else csv_report([report])
         return Response(
             payload.encode("utf-8-sig" if format == "csv" else "utf-8"),
@@ -415,38 +717,36 @@ def create_app() -> FastAPI:
         try:
             if len(body.get("runs", [])) != 1:
                 raise ValueError("Resume requires a single-run public JSON export.")
-            restored = RunService.restore(body["runs"][0])
-        except (ValueError, TypeError, KeyError, IndexError) as exc:
+            restored = reconcile(body["runs"][0])
+        except (ValueError, TypeError, KeyError, IndexError, RuntimeError) as exc:
             raise HTTPException(422, str(exc)) from exc
-        with app.state.registry_lock:
-            if len(app.state.sessions) >= 40:
-                raise HTTPException(429, "Local session limit reached.")
-            session_id = uuid4().hex
-            session = Session(restored)
-            app.state.sessions[session_id] = session
-        return public_view(session_id, session)
+        return add_session(restored, creation_identity(body["runs"][0]))
 
     def execute_comparison(job_id: str, body: CompareInput):
-        job = app.state.jobs[job_id]
-        job["status"] = "running"
         try:
+            job = storage().job(job_id)
+            job["status"] = "running"
+            storage().update_job(job, "queued")
             job["reports"] = compare(body.scenario.domain(), tuple(body.policies))
             job["status"] = "completed"
+            storage().update_job(job, "running")
         except Exception as exc:
-            job["status"] = "failed"
-            job["error"] = str(exc)
+            try:
+                current = storage().job(job_id)
+                if current and current["status"] in ("queued", "running"):
+                    previous = current["status"]
+                    current.update(status="failed", reports=[], error=str(exc))
+                    storage().update_job(current, previous)
+            except (StorageError, HTTPException):
+                logging.getLogger(__name__).exception(
+                    "Comparison could not commit its failure state"
+                )
 
     @app.post("/api/v1/comparisons", status_code=202)
     def comparisons(body: CompareInput):
-        with app.state.registry_lock:
-            if sum(j["status"] in ("queued", "running") for j in app.state.jobs.values()) >= 2:
-                raise HTTPException(429, "Two CPU comparison jobs are already running.")
-            if len(app.state.jobs) >= 20:
-                raise HTTPException(
-                    429, "Comparison history limit reached; export then restart to clear."
-                )
-            job_id = uuid4().hex
-            app.state.jobs[job_id] = {
+        job_id = uuid4().hex
+        storage().create_job(
+            {
                 "job_id": job_id,
                 "status": "queued",
                 "scenario": body.scenario.model_dump(),
@@ -454,19 +754,45 @@ def create_app() -> FastAPI:
                 "reports": [],
                 "error": None,
             }
-        app.state.executor.submit(execute_comparison, job_id, body)
+        )
+        try:
+            app.state.executor.submit(execute_comparison, job_id, body)
+        except RuntimeError as exc:
+            job = storage().job(job_id)
+            job.update(status="failed", error="The local comparison executor is unavailable.")
+            storage().update_job(job, "queued")
+            raise HTTPException(503, job["error"]) from exc
         return {"job_id": job_id, "status": "queued"}
+
+    @app.get("/api/v1/comparisons")
+    def saved_comparisons():
+        items, issues = [], []
+        for row in storage().job_records():
+            try:
+                items.append(get_job(row["job_id"]))
+            except StorageError as exc:
+                issues.append({"kind": "comparison", "id": row["job_id"], "message": str(exc)})
+        return {"items": items, "recovery_issues": issues}
 
     @app.get("/api/v1/comparisons/{job_id}")
     def comparison(job_id: str):
-        job = app.state.jobs.get(job_id)
+        job = get_job(job_id)
         if job is None:
-            raise HTTPException(404, "Comparison unavailable after restart.")
+            raise HTTPException(404, "Saved comparison was not found.")
         return job
+
+    @app.delete("/api/v1/comparisons/{job_id}", status_code=204)
+    def delete_comparison(job_id: str):
+        job = storage().job(job_id)
+        if job is None:
+            raise HTTPException(404, "Saved comparison was not found.")
+        if not storage().delete_job(job_id):
+            raise HTTPException(409, "A queued or running comparison cannot be removed.")
+        return Response(status_code=204)
 
     @app.get("/api/v1/comparisons/{job_id}/export")
     def export_comparison(job_id: str, format: Literal["json", "csv"] = "json"):
-        job = app.state.jobs.get(job_id)
+        job = get_job(job_id)
         if job is None:
             raise HTTPException(404, "Unknown comparison.")
         if job["status"] != "completed":
