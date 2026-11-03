@@ -22,8 +22,12 @@ if font_path.exists():
                 "html,body,.stApp {font-family:'CuraThai',sans-serif;} "
                 "h1,h2,h3,h4,p,label,input,button,textarea,small,[data-testid='stMarkdownContainer'],[data-testid='stWidgetLabel'],[data-testid='stCaptionContainer'] {font-family:'CuraThai',sans-serif !important;} </style>",
                 unsafe_allow_html=True)
-alt.themes.register("curaloop", lambda: {"config": {"font": "CuraThai", "axis": {"labelFont": "CuraThai", "titleFont": "CuraThai"}, "legend": {"labelFont": "CuraThai", "titleFont": "CuraThai"}}})
-alt.themes.enable("curaloop")
+@alt.theme.register("curaloop", enable=True)
+def curaloop_theme() -> alt.theme.ThemeConfig:
+    return {"config": {"font": "CuraThai", "axis": {"labelFont": "CuraThai", "titleFont": "CuraThai"},
+                       "legend": {"labelFont": "CuraThai", "titleFont": "CuraThai"}}}
+
+
 st.markdown("""
 <style>
 .stApp {background:#f6f8fa; color:#16333b;}
@@ -37,8 +41,7 @@ h1,h2,h3 {letter-spacing:-.025em;}
 </style>
 """, unsafe_allow_html=True)
 
-SCREENS = ["Overview · ภาพรวม", "Scenario Setup · ตั้งเงื่อนไข", "Screening Run · จำลองการคัดเลือก",
-           "Compare & Export · เปรียบเทียบและส่งออก"]
+SCREENS = ["Overview", "Scenario Setup", "Screening Run", "Compare & Export"]
 DATASET_LABELS = {"hiv_moleculenet_replay_v1": "Historical · MoleculeNet HIV (1200 real molecules)",
                   "synthetic_linear_v1": "Synthetic · Linear signal (240 candidates)",
                   "synthetic_shift_v1": "Synthetic · Nonlinear shift (240 candidates)"}
@@ -66,7 +69,7 @@ run: RunService = st.session_state.run
 with st.sidebar:
     st.image(str(Path(__file__).resolve().parents[1] / "assets/curaloop-logo.png"), width=230)
     st.caption("PHARMACEUTICAL SCREENING\nDECISION LAB")
-    screen = st.radio("Workspace / หน้าทำงาน", SCREENS, key="screen")
+    screen = st.radio("Workspace", SCREENS, key="screen")
     st.divider()
     st.markdown("**" + run.dataset.data_origin + "**")
     st.caption(f"v{__version__} · CPU / Offline\n3 baselines + trained Q-learning / bandit\nTraining source: synthetic tasks")
@@ -74,38 +77,41 @@ with st.sidebar:
 
 st.markdown('<div class="eyebrow">CURALOOP-RL / RESEARCH WORKBENCH</div>', unsafe_allow_html=True)
 st.title(screen.split(" · ")[0])
-st.markdown('<div class="provenance">' + ("ข้อมูล assay จริงย้อนหลัง · Historical public assay" if run.dataset.data_origin == "HISTORICAL_PUBLIC_DATA"
-            else "ข้อมูลจำลอง · Synthetic demo") + ' | ต้นทุนและเวลาจำลอง | '
-            'Retrospective simulator — ยังไม่ใช่ Digital Twin</div>', unsafe_allow_html=True)
+st.markdown('<div class="provenance">' + ("Historical public assay" if run.dataset.data_origin == "HISTORICAL_PUBLIC_DATA"
+            else "Synthetic descriptors and fictional assay outcomes") + ' | Simulated costs and delays | '
+            'Retrospective simulator — not a validated Digital Twin</div>', unsafe_allow_html=True)
+if notice := st.session_state.pop("run_notice", None):
+    st.success(notice)
 st.write("")
 
 
 def metric_strip(service: RunService) -> None:
     m = service.metrics
     cols = st.columns(4)
-    cols[0].metric("พบผล active แล้ว / Confirmed hits", m["confirmed_hits"], help="นับเฉพาะผลใหม่ที่ส่งคืนแล้ว ไม่รวม seed labels")
-    cols[1].metric("ผลส่งคืน / Delivered assays", m["delivered_assays"], help="ไม่รวมผลสูญหายและข้อมูลตั้งต้น")
-    cols[2].metric("รอผล / Pending", m["pending_assays"])
-    cols[3].metric("งบคงเหลือ / Available units", m["remaining_units"], help="งบทั้งหมด − งบจ่ายแล้ว − งบจอง")
+    cols[0].metric("Confirmed hits", m["confirmed_hits"], help="New delivered active outcomes only; excludes seed labels.")
+    cols[1].metric("Delivered assays", m["delivered_assays"], help="Observed Boolean outcomes; excludes missing outcomes and seed labels.")
+    cols[2].metric("Pending", m["pending_assays"])
+    cols[3].metric("Available units", m["remaining_units"], help="Total budget minus spent and reserved units.")
 
 
 def export_controls(reports: list[dict], prefix: str) -> None:
     c1, c2 = st.columns(2)
-    c1.download_button("ดาวน์โหลด JSON / Full report", json_report(reports).encode("utf-8"),
+    c1.download_button("Download JSON / Full report", json_report(reports).encode("utf-8"),
                        file_name=f"curaloop-{prefix}.json", mime="application/json", key=prefix + "_json")
-    c2.download_button("ดาวน์โหลด CSV / Event report", csv_report(reports).encode("utf-8-sig"),
+    c2.download_button("Download CSV / Event ledger", csv_report(reports).encode("utf-8-sig"),
                        file_name=f"curaloop-{prefix}.csv", mime="text/csv", key=prefix + "_csv")
-    st.caption("มี scenario, provenance, algorithm version, event log และ metrics; ไม่มีตารางคำตอบที่ยังไม่เปิดเผย")
+    st.caption("Includes scenario, provenance, algorithm version, public events and metrics; excludes unrevealed outcomes. "
+               "Only a single-run JSON can resume a campaign. Comparison JSON contains independent runs; CSV is an audit ledger.")
 
 
 def discovery_chart(reports: list[dict]) -> None:
     points = [{**p, "policy": r["manifest"]["policy_id"]} for r in reports for p in r["curve"]]
     if not points:
-        st.info("ยังไม่มี event สำหรับแสดงกราฟ")
+        st.info("No public events are available to plot yet.")
         return
     chart = alt.Chart(pd.DataFrame(points)).mark_line(interpolate="step-after", point=True).encode(
-        x=alt.X("spent_units:Q", title="ต้นทุนที่ชำระแล้ว (simulated cost units)", scale=alt.Scale(zero=True)),
-        y=alt.Y("confirmed_hits:Q", title="Confirmed active hits · ผลใหม่ที่ส่งคืนแล้ว", axis=alt.Axis(tickMinStep=1)),
+        x=alt.X("spent_units:Q", title="Settled simulated cost units", scale=alt.Scale(zero=True)),
+        y=alt.Y("confirmed_hits:Q", title="New delivered active hits", axis=alt.Axis(tickMinStep=1)),
         color=alt.Color("policy:N", title="Policy", scale=alt.Scale(domain=list(POLICIES), range=["#64748b", "#087f72", "#b66914", "#6d4da3", "#1976a3"])),
         strokeDash=alt.StrokeDash("policy:N", legend=None), order="event_index:Q",
         tooltip=["policy:N", "spent_units:Q", "confirmed_hits:Q", "step:Q", "pending_assays:Q"],
@@ -114,31 +120,38 @@ def discovery_chart(reports: list[dict]) -> None:
 
 
 if screen == SCREENS[0]:
-    st.header(f"ถ้าทดสอบได้เพียง {run.scenario.budget_units // run.scenario.assay_cost_units} จาก {run.scenario.candidate_count} ตัว เราจะเริ่มจากตัวไหน?")
-    st.markdown("สารแต่ละตัวมีคุณลักษณะที่รู้ล่วงหน้า แต่ผลการทดสอบ (assay) ยังถูกซ่อนไว้ "
-                "เราจึงต้องเลือกว่าจะใช้ทรัพยากรทดสอบตัวใดก่อน และปรับการเลือกเมื่อได้รับผลใหม่")
+    st.header(f"With capacity to test {run.scenario.budget_units // run.scenario.assay_cost_units} of {run.scenario.candidate_count} candidates, where should we start?")
+    st.markdown("Public descriptors are available before selection, while unrevealed assay outcomes remain private. "
+                "Choose how to allocate the screening budget and update decisions as delayed results arrive.")
     columns = st.columns(4)
     for col, (title, text) in zip(columns, [
-        ("01 · เลือกสาร", "Random สุ่ม / Greedy เลือกคะแนนสูง / Uncertainty เลือกตัวที่โมเดลยังไม่แน่ใจ"),
-        ("02 · ส่งทดสอบจำลอง", "จองงบและความจุคิวทันที ระบบไม่ยอมรับการทดสอบซ้ำ"),
-        ("03 · รอผลครบกำหนด", "ผล pending ยังไม่เป็น active hit และยังไม่ใช้ฝึกโมเดล"),
-        ("04 · เรียนรู้รอบใหม่", "ใช้เฉพาะ seed labels และผลที่ส่งคืนแล้ว เพื่อเลือก batch ถัดไป"),
+        ("01 · Select candidates", "Random samples uniformly; Greedy favors predicted activity; Uncertainty favors predictions near 0.5."),
+        ("02 · Submit simulated assays", "Reserve budget and queue capacity immediately. Duplicate requests are rejected."),
+        ("03 · Wait for feedback", "Pending outcomes are neither confirmed hits nor model-training labels."),
+        ("04 · Update decisions", "Only seed labels and delivered outcomes inform the next batch."),
     ]):
         with col, st.container(border=True):
             st.subheader(title)
             st.write(text)
     metric_strip(run)
-    st.button("ลองข้อมูลจริง / Start example demo", type="primary", key="try_demo", on_click=start_example)
-    with st.expander("ที่มาของข้อมูลและขอบเขต / Provenance & limits", expanded=True):
-        st.write("ข้อมูลหลัก: MoleculeNet HIV จาก NCI DTP / DeepChem เป็นผล assay จริงย้อนหลัง "
-                 "ชุดย่อย 1,200 โมเลกุลสุ่มโดยไม่ใช้ label พร้อม Morgan fingerprints 1,024 bits "
-                 "และ source hash; TDC ระบุ CC BY 4.0 ส่วนต้นทุนและเวลารอเป็นสมมติฐาน")
-        st.write("Seed labels ของข้อมูลจริงสุ่มโดยไม่ดูคำตอบ ทุกนโยบายได้ชุดเดียวกัน "
-                 "ถือเป็นข้อมูลเดิมที่จ่ายต้นทุนไปแล้วและไม่นับเป็น hits ใหม่ "
-                 "ยังมีข้อมูลสังเคราะห์สองชุดสำหรับตรวจระบบและฝึก controller")
+    st.button("Start historical example", type="primary", key="try_demo", on_click=start_example)
+    with st.expander("Provenance & limits", expanded=True):
+        if run.dataset.data_origin == "HISTORICAL_PUBLIC_DATA":
+            st.write("The current campaign replays historical MoleculeNet HIV assays from NCI DTP / DeepChem. "
+                     "The label-blind 1,200-molecule derivative includes 1,024-bit Morgan fingerprints and source hashes. "
+                     "TDC declares CC BY 4.0. Costs and delays are simulated assumptions.")
+            st.write("Historical seed labels are sampled uniformly without consulting their outcomes. Every policy receives "
+                     "the same seed labels as preexisting sunk cost; seed hits are excluded from new hits.")
+        else:
+            st.write("The current campaign uses generated numerical descriptors and fictional outcomes. "
+                     "It is a synthetic engineering fixture, not historical biological evidence. Costs and delays are simulated.")
+            st.write("Synthetic seed labels use disclosed oracle-assisted stratification. Every policy receives "
+                     "the same seed labels as preexisting sunk cost; seed hits are excluded from new hits.")
+        st.write("The separate historical HIV resource and two synthetic fixtures support reproducible simulator checks. "
+                 "The learned controllers were trained only on synthetic tasks.")
         st.markdown("[MoleculeNet paper](https://doi.org/10.1039/C7SC02664A) · [Dataset & license](https://tdcommons.ai/single_pred_tasks/hts/#hiv)")
-        st.write("โครงการส่วนบุคคล ไม่ใช่โครงการทางการขององค์การเภสัชกรรม และไม่ได้รับการรับรองจากหน่วยงาน")
-    st.subheader("สถานะการพัฒนา / Evidence status")
+        st.write("Independent personal project; not an official GPO project and not institutionally endorsed.")
+    st.subheader("Evidence status")
     st.dataframe(pd.DataFrame([
         {"Capability": "Offline screening + 3 baseline policies", "Status": "IMPLEMENTED"},
         {"Capability": "Historical HIV replay + scaffold predictor benchmark", "Status": "IMPLEMENTED · custom subset / split"},
@@ -147,9 +160,9 @@ if screen == SCREENS[0]:
     ]), hide_index=True, width="stretch")
 
 elif screen == SCREENS[1]:
-    st.header("กำหนดเงื่อนไขการคัดเลือกสาร")
-    st.caption("การกด Apply จะสร้าง run ใหม่และล้างผลเปรียบเทียบเดิม การแก้ในฟอร์มยังไม่เปลี่ยน run ที่กำลังดู")
-    if st.button("คืนค่าเริ่มต้น / Restore defaults", key="restore"):
+    st.header("Configure a screening campaign")
+    st.caption("Apply creates an independent run and clears previous comparisons. Editing this form does not change the active run.")
+    if st.button("Restore defaults", key="restore"):
         replace_run(example_scenario(), "greedy")
         for key in list(st.session_state):
             if key.startswith("cfg_"):
@@ -157,22 +170,22 @@ elif screen == SCREENS[1]:
         st.rerun()
     s = run.scenario
     with st.form("scenario_form"):
-        dataset = st.selectbox("Dataset / ชุดข้อมูล", DATASETS, index=DATASETS.index(s.dataset),
+        dataset = st.selectbox("Dataset", DATASETS, index=DATASETS.index(s.dataset),
                                format_func=lambda x: DATASET_LABELS[x], key="cfg_dataset")
-        st.caption("LIT-PCBA ยังไม่เปิดให้ใช้ในเวอร์ชันนี้: ต้องตรวจสิทธิ์ ข้อมูล assay และ preprocessing ก่อน")
+        st.caption("LIT-PCBA is unavailable in this release: redistribution rights, assay semantics and preprocessing require separate review.")
         left, right = st.columns(2)
         seed = left.number_input("Random seed", 0, 2**32 - 1, s.seed, key="cfg_seed")
-        budget = right.number_input("งบทดสอบจำลอง / Budget units", 0, 240, s.budget_units, key="cfg_budget")
-        initial = left.slider("ข้อมูลตั้งต้น / Initial labels", 0, 120, s.initial_count, key="cfg_initial")
-        batch = right.slider("ความจุคิว / Batch capacity", 1, 20, s.batch_size, key="cfg_batch")
-        delay = left.slider("เวลารอผล / Delay steps", 0, 10, s.delay_steps, key="cfg_delay")
-        policy = right.selectbox("Selection policy / วิธีเลือก", POLICIES, index=POLICIES.index(run.policy), key="cfg_policy")
-        with st.expander("เงื่อนไขจำลองเพิ่มเติม / Synthetic stress assumptions"):
-            cost = st.slider("ต้นทุนต่อ assay / Cost units", 1, 5, s.assay_cost_units, key="cfg_cost")
-            jitter = st.slider("เวลารอเพิ่มต่อสาร / Delay jitter steps", 0, 5, s.delay_jitter, key="cfg_jitter")
-            missing = st.slider("โอกาสผลสูญหายจำลอง / Missing outcomes (%)", 0, 50, s.missing_percent, key="cfg_missing")
-            st.caption("การสูญหายเป็นสมมติฐานเท่านั้น ผลที่สูญหายใช้ต้นทุนและไม่ถูกนับเป็น active หรือ inactive")
-        applied = st.form_submit_button("เริ่มการจำลอง / Apply scenario", type="primary", key="apply")
+        budget = right.number_input("Budget units", 0, 10000, s.budget_units, key="cfg_budget")
+        initial = left.number_input("Initial labels", 0, 2000, s.initial_count, key="cfg_initial")
+        batch = right.slider("Batch capacity", 1, 100, s.batch_size, key="cfg_batch")
+        delay = left.slider("Delay steps", 0, 100, s.delay_steps, key="cfg_delay")
+        policy = right.selectbox("Selection policy", POLICIES, index=POLICIES.index(run.policy), key="cfg_policy")
+        with st.expander("Synthetic stress assumptions"):
+            cost = st.slider("Cost units per assay", 1, 100, s.assay_cost_units, key="cfg_cost")
+            jitter = st.slider("Delay jitter steps", 0, 20, s.delay_jitter, key="cfg_jitter")
+            missing = st.slider("Missing outcomes (%)", 0, 100, s.missing_percent, key="cfg_missing")
+            st.caption("Missingness is a simulated assumption. Missing outcomes consume budget and are neither active nor inactive.")
+        applied = st.form_submit_button("Apply scenario", type="primary", key="apply")
     if applied:
         try:
             scenario = Scenario(dataset=dataset, seed=int(seed), candidate_count=1200 if dataset == "hiv_moleculenet_replay_v1" else 240,
@@ -180,44 +193,53 @@ elif screen == SCREENS[1]:
                                 batch_size=batch, delay_steps=delay, assay_cost_units=cost,
                                 delay_jitter=jitter, missing_percent=missing)
             replace_run(scenario, policy)
-            run = st.session_state.run
-            st.success("สร้าง run ใหม่แล้ว ไปที่ Screening Run เพื่อส่ง batch แรก")
+            st.session_state.run_notice = "New run created. Open Screening Run to select the first batch."
+            st.rerun()
         except ValueError as exc:
             st.error(str(exc))
     st.json({"active_scenario": asdict(run.scenario), "policy": run.policy}, expanded=False)
 
 elif screen == SCREENS[2]:
-    st.header("ดูการตัดสินใจและผลที่เปิดเผยทีละรอบ")
+    st.header("Inspect each decision and delivered outcome")
     st.caption(f"{run.policy.upper()} · seed {run.scenario.seed} · simulated step {run.observation.step} · {run.dataset.name}")
     c1, c2, c3, c4 = st.columns(4)
     obs = run.observation
     can_select = bool(obs.slots_available and obs.eligible_candidate_ids and
                       obs.budget_remaining_units >= obs.assay_cost_units and not run.done)
-    if c1.button("เลือก batch ถัดไป / Select", type="primary", disabled=not can_select, key="select"):
+    if c1.button("Select batch", type="primary", disabled=not can_select, key="select"):
         try:
-            with st.spinner("กำลังคำนวณจากข้อมูลที่เปิดเผยแล้ว…"):
+            with st.spinner("Selecting from revealed public observations…"):
                 run.next_batch()
+            st.rerun()
         except (ValueError, RuntimeError) as exc:
             st.error(str(exc))
-    if c2.button("เลื่อนเวลา +1 / Advance", disabled=not run.pending, key="advance"):
-        run.advance()
-    if c3.button("รันจนจบ / Complete run", disabled=run.done, key="finish"):
-        with st.spinner("กำลังรัน campaign จริงบน CPU…"):
-            run.finish()
-    if c4.button("เริ่มใหม่ / Reset run", key="reset_run"):
+    if c2.button("Advance +1", disabled=not run.pending, key="advance"):
+        try:
+            run.advance()
+            st.rerun()
+        except (ValueError, RuntimeError) as exc:
+            st.error(str(exc))
+    if c3.button("Complete run", disabled=run.done, key="finish"):
+        try:
+            with st.spinner("Executing the campaign locally on CPU…"):
+                run.finish()
+            st.rerun()
+        except (ValueError, RuntimeError) as exc:
+            st.error(str(exc))
+    if c4.button("Reset run", key="reset_run"):
         replace_run(run.scenario, run.policy)
         st.rerun()
     metric_strip(run)
     m = run.metrics
-    st.caption(f"งบทั้งหมด {run.scenario.budget_units} = ชำระแล้ว {m['spent_units']} + จองรอผล {m['reserved_units']} "
-               f"+ คงเหลือ {m['remaining_units']} units · ผลสูญหาย {m['missing_assays']} · seed hits {m['seed_hits']} (ไม่นับใน hits ใหม่)")
+    st.caption(f"Budget {run.scenario.budget_units} = spent {m['spent_units']} + reserved {m['reserved_units']} "
+               f"+ available {m['remaining_units']} units · missing outcomes {m['missing_assays']} · seed hits {m['seed_hits']} (excluded from new hits)")
     if run.done:
-        st.success("การจำลองครบแล้ว: ไม่มีผลค้าง และงบหรือ candidate ที่เลือกได้หมดแล้ว")
+        st.success("Campaign complete: no pending feedback; budget or eligible candidates are exhausted.")
     elif run.pending and not can_select:
-        st.info("กำลังรอผล: เลื่อนเวลาจำลองเพื่อเปิดเผยผลที่ครบกำหนด")
+        st.info("Awaiting feedback: advance simulated time to reveal outcomes when due.")
     elif not run.requests:
-        st.info("ยังไม่ได้ทดสอบสารใหม่ กด Select เพื่อเริ่ม batch แรก")
-    st.subheader("เหตุผลการเลือก / Actual selection decisions")
+        st.info("No new assays requested. Select a batch to begin.")
+    st.subheader("Actual selection decisions")
     if run.requests:
         rows = [asdict(r) for r in run.requests]
         statuses = {r.request_id: "MISSING" if r.active is None else "DELIVERED" for r in run.results}
@@ -227,40 +249,43 @@ elif screen == SCREENS[2]:
                                           "cost_units", "predicted_probability", "model_status", "explanation"]],
                      hide_index=True, width="stretch")
     else:
-        st.caption("ยังไม่มีการเลือก คะแนนคาดการณ์จะแสดงเฉพาะเมื่อฝึกโมเดลได้")
+        st.caption("No selections yet. Predicted probabilities appear only when a model can be fitted.")
     lcol, rcol = st.columns(2)
     with lcol:
-        st.subheader("คิวรอผล / Pending queue")
+        st.subheader("Pending queue")
         if run.pending:
             st.dataframe(pd.DataFrame([{"compound_id": r.compound_id, "due_at_step": r.due_at_step,
                                          "steps_remaining": r.due_at_step - run.observation.step} for r in run.pending]),
                          hide_index=True, width="stretch")
         else:
-            st.caption("ไม่มีผลค้าง")
+            st.caption("No pending feedback.")
     with rcol:
-        st.subheader("ผลที่เปิดเผยแล้ว / Delivered outcomes")
+        st.subheader("Delivered outcomes")
         if run.results:
             st.dataframe(pd.DataFrame([asdict(r) for r in run.results])[["compound_id", "active", "delivered_at_step", "quality_flag"]],
                          hide_index=True, width="stretch")
         else:
-            st.caption("ยังไม่มีผลใหม่ส่งคืน ไม่มี pending ใดนับเป็น hit")
+            st.caption("No new delivered outcomes. Pending requests never count as hits.")
     discovery_chart([run.report()])
-    with st.expander("Event timeline / บันทึกเหตุการณ์", expanded=False):
+    with st.expander("Event timeline", expanded=False):
         st.dataframe(pd.DataFrame([asdict(e) for e in run.events])[["event_type", "step", "compound_id", "cost_units", "delivered_active", "explanation"]],
                      hide_index=True, width="stretch")
-    with st.expander("ข้อมูลตั้งต้นและ metadata / Seed & evidence"):
+    with st.expander("Seed labels & evidence"):
         st.dataframe(pd.DataFrame([asdict(r) for r in run.initial_results]), hide_index=True, width="stretch")
         st.json(run.report()["manifest"], expanded=False)
 
 else:
-    st.header("เปรียบเทียบวิธีเลือกสารภายใต้เงื่อนไขเดียวกัน")
-    st.write("แต่ละนโยบายเริ่มใหม่ด้วย candidate pool, seed labels, features, งบและเงื่อนไขเดียวกัน "
-             "ผลจาก run หนึ่งไม่ถูกนำไปใช้โดยอีกนโยบาย")
+    st.header("Compare selection policies under matched conditions")
+    st.write("Each policy starts an independent campaign with the same candidate pool, seed labels, features, budget and assumptions. "
+             "One policy's outcomes are never shared with another policy.")
     st.caption(f"Active scenario: {run.scenario.scenario_id} · seed {run.scenario.seed} · budget {run.scenario.budget_units} · batch {run.scenario.batch_size} · delay {run.scenario.delay_steps}")
-    include_learned = st.checkbox("รวม Q-learning และ contextual bandit ที่ฝึกแล้ว", value=True, key="include_learned")
-    if st.button("เปรียบเทียบนโยบาย / Compare policies", type="primary", key="compare"):
-        with st.spinner("กำลังจำลองทั้งสามนโยบายอย่างอิสระ…"):
-            st.session_state.comparison = compare(run.scenario, POLICIES if include_learned else BASELINES)
+    include_learned = st.checkbox("Include trained Q-learning and contextual bandit", value=True, key="include_learned")
+    if st.button("Compare policies", type="primary", key="compare"):
+        try:
+            with st.spinner("Executing independent matched-policy campaigns…"):
+                st.session_state.comparison = compare(run.scenario, POLICIES if include_learned else BASELINES)
+        except (ValueError, RuntimeError) as exc:
+            st.error(str(exc))
     reports = st.session_state.comparison
     if reports:
         st.success("Comparison complete · matched initial conditions")
@@ -277,25 +302,27 @@ else:
                  for r in reports if r["manifest"]["controller"]]
         if usage:
             st.dataframe(pd.DataFrame(usage), hide_index=True, width="stretch")
-            st.caption("Unseen-state fallback ใช้ Greedy เมื่อ controller ไม่เคยเรียน state นั้น; อย่านับผล fallback เป็นความสำเร็จของ learned strategy")
+            st.caption("Unseen-state fallback uses Greedy when a state is absent from the learned controller. "
+                       "Fallback outcomes do not demonstrate successful learned transfer.")
         queue = [{"policy": r["manifest"]["policy_id"], **p} for r in reports for p in r["curve"]]
         st.altair_chart(alt.Chart(pd.DataFrame(queue)).mark_line(interpolate="step-after").encode(
-            x=alt.X("step:Q", title="เวลาจำลอง / Simulated steps"),
-            y=alt.Y("pending_assays:Q", title="จำนวน assay ที่รอผล", axis=alt.Axis(tickMinStep=1)),
+            x=alt.X("step:Q", title="Simulated steps"),
+            y=alt.Y("pending_assays:Q", title="Pending assays", axis=alt.Axis(tickMinStep=1)),
             color="policy:N", order="event_index:Q", tooltip=["policy:N", "step:Q", "pending_assays:Q"],
         ).properties(height=180), width="stretch")
-        st.warning("นี่เป็นการจำลองจาก seed เดียว จึงยังสรุปไม่ได้ว่าวิธีใดเหนือกว่าโดยทั่วไป "
-                   "และไม่ใช่หลักฐานฤทธิ์ของยาหรือการประหยัดต้นทุนจริง")
-        st.caption("AUC-DB = พื้นที่ใต้กราฟแบบ left-step ถึงงบที่กำหนด หารด้วย budget × floor(budget/cost); "
-                   "ไม่นับ seed hits และไม่ใช่ AUROC ของโมเดล")
+        st.warning("This single-seed simulation does not establish general policy superiority, drug efficacy or actual cost savings.")
+        st.caption("AUC-DB is the left-step area under the discovery curve up to the configured budget, divided by "
+                   "budget × floor(budget/cost). It excludes seed hits and is not model AUROC.")
         export_controls(reports, "comparison")
     else:
-        st.info("กดเปรียบเทียบเพื่อสร้างผลจริงและกราฟจาก event log")
-    with st.expander("ส่งออก run ที่กำลังดู / Current run (including partial)", expanded=not bool(reports)):
+        st.info("Compare policies to execute real simulator runs and plot their public event ledgers.")
+    with st.expander("Current run (including partial)", expanded=not bool(reports)):
         export_controls([run.report()], "current-run")
-    with st.expander("กลับมาทำต่อจาก JSON / Resume a public snapshot"):
-        upload = st.file_uploader("ไฟล์ CuraLoop JSON เท่านั้น / Max 10 MB", type=["json"], key="resume_upload")
-        if st.button("ตรวจและกลับมาทำต่อ / Validate & resume", disabled=upload is None, key="resume"):
+    with st.expander("Resume a public snapshot"):
+        st.caption("This Streamlit fallback keeps its active run in browser-session memory. "
+                   "Export single-run JSON before closing it; the primary web application provides durable local storage.")
+        upload = st.file_uploader("CuraLoop single-run JSON only / Max 10 MB", type=["json"], key="resume_upload")
+        if st.button("Validate & resume", disabled=upload is None, key="resume"):
             try:
                 if upload.size > 10_000_000:
                     raise ValueError("File exceeds 10 MB.")
@@ -305,34 +332,41 @@ else:
                 restored = RunService.restore(payload["runs"][0])
                 st.session_state.run = restored
                 st.session_state.comparison = None
-                st.success("ตรวจ event log สำเร็จ กลับไป Screening Run เพื่อทำต่อได้")
+                st.session_state.pop("paired_benchmark", None)
+                for key in list(st.session_state):
+                    if key.startswith("cfg_"):
+                        del st.session_state[key]
+                st.session_state.run_notice = "Public event ledger validated. Open Screening Run to continue."
+                st.rerun()
             except (ValueError, KeyError, TypeError) as exc:
-                st.error(f"ไม่สามารถกลับมาทำต่อได้: {exc}")
-    with st.expander("ข้อจำกัด / Scientific limitations"):
+                st.error(f"Snapshot could not be resumed: {exc}")
+    with st.expander("Scientific limitations"):
         for limitation in LIMITATIONS:
             st.write("• " + limitation)
-    with st.expander("Learning Lab / ตรวจ controller ที่ฝึกแล้ว"):
+    with st.expander("Learning Lab / Trained controllers"):
         from curaloop.learning import load_checkpoint
         for name in ("q_learning", "contextual_bandit"):
             cp = load_checkpoint(name)
             st.write(f"**{name}** · {cp['status']} · {cp['training_episodes']} episodes · synthetic training only")
             st.caption(f"Checkpoint SHA256 {cp['checkpoint_sha256']}")
             st.line_chart(pd.DataFrame({"training_return": cp["episode_returns"]}), height=160)
-        st.caption("Training curves มาจาก reward ที่บันทึกจริง ไม่ใช่ผล validation หรือหลักฐานว่ายาได้ผล")
-    with st.expander("Benchmark Lab / Paired seeds และ scaffold audit"):
+        st.caption("Training curves show recorded training rewards, not validation performance or drug efficacy evidence.")
+    with st.expander("Benchmark Lab / Paired seeds and scaffold audit"):
         evidence_path = Path(__file__).resolve().parents[1] / "docs/evidence/hiv-benchmark/summary.json"
         if evidence_path.exists():
             evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
-            st.write("**ผล benchmark ที่บันทึกไว้ / Recorded evidence**")
-            st.caption("HIV subset 1200 molecules · 10 seeds · budget 30 · initial labels 48 · custom replay ไม่ใช่ leaderboard")
+            st.write("**Recorded historical HIV benchmark / Separate from the current campaign**")
+            st.caption("HIV subset: 1,200 molecules · 10 seeds · budget 30 · 48 initial labels · custom replay, not a leaderboard")
             st.dataframe(pd.DataFrame(evidence["statistics"]["summary"]), hide_index=True, width="stretch")
             predictor = evidence["predictor_benchmark"]
             st.write(f"Scaffold audit: train {predictor['train_count']} / test {predictor['test_count']} · overlap {predictor['scaffold_overlap']}")
             st.write({k: predictor[k] for k in ("auroc", "average_precision", "brier_score", "test_prevalence")})
-            st.caption("ผล predictor audit ไม่ได้ถูกใช้ฝึก policy และใช้ split ของโครงการนี้ ผลนี้ไม่ใช่การยืนยันประสิทธิผลของยา")
-        seed_count = st.number_input("จำนวน paired seeds สำหรับรันใหม่ / Seed count", 2, 20, 5, key="benchmark_seed_count")
-        st.caption("ใช้ active scenario ปัจจุบันและ seeds 0..N−1 ทั้ง 5 policies; อาจใช้เวลาหลายนาทีบน CPU")
-        if st.button("รัน benchmark ใหม่จริง / Run paired benchmark", key="run_benchmark"):
+            st.caption("The separate predictor audit uses a custom project split and never trains the selection policies. "
+                       "It is not drug efficacy validation. Each learned controller used Greedy fallback on all 300 recorded historical requests.")
+        seed_count = st.number_input("Paired seeds for a new benchmark", 2, 20, 5, key="benchmark_seed_count")
+        st.caption("Uses the current scenario with seeds 0..N−1 and all five policies. CPU execution can take several minutes. "
+                   "New outputs do not overwrite the recorded historical benchmark.")
+        if st.button("Run paired benchmark", key="run_benchmark"):
             from dataclasses import replace
 
             from curaloop.benchmark import summarize
@@ -346,9 +380,9 @@ else:
             b = st.session_state.paired_benchmark
             st.dataframe(pd.DataFrame(b["statistics"]["summary"]), hide_index=True, width="stretch")
             st.caption(b["statistics"]["interpretation"])
-            st.download_button("ดาวน์โหลด paired benchmark JSON", json.dumps(b, ensure_ascii=False, indent=2).encode(),
+            st.download_button("Download paired benchmark JSON", json.dumps(b, ensure_ascii=False, indent=2).encode(),
                                file_name="curaloop-paired-benchmark.json", mime="application/json", key="paired_benchmark_json")
 
 st.divider()
 st.caption("Personal research demo · Not an official GPO project · Not validated for wet-lab, GMP or clinical use. "
-           f"Code {code_identity()['repo_git_sha'][:12]} · ไม่มี API key หรือบริการเสียเงิน")
+           f"Code {code_identity()['repo_git_sha'][:12]} · No API keys or paid services required")

@@ -1,10 +1,10 @@
+import re
 from pathlib import Path
 
 from streamlit.testing.v1 import AppTest
 
 APP = Path(__file__).parents[1] / "app/streamlit_app.py"
-PAGES = ["Overview · ภาพรวม", "Scenario Setup · ตั้งเงื่อนไข", "Screening Run · จำลองการคัดเลือก",
-         "Compare & Export · เปรียบเทียบและส่งออก"]
+PAGES = ["Overview", "Scenario Setup", "Screening Run", "Compare & Export"]
 
 
 def app():
@@ -45,12 +45,14 @@ def test_run_buttons_pending_delivery_complete_and_reset():
     at.button(key="select").click().run()
     assert not at.exception and at.session_state.run.metrics["pending_assays"] == 5
     assert at.session_state.run.metrics["confirmed_hits"] == 0
+    assert at.button(key="select").disabled and not at.button(key="advance").disabled
     at.button(key="advance").click().run()
     assert at.session_state.run.metrics["delivered_assays"] == 0
     at.button(key="advance").click().run()
     assert at.session_state.run.metrics["delivered_assays"] == 5
     at.button(key="finish").click().run(timeout=60)
     assert not at.exception and at.session_state.run.metrics["spent_units"] == 30
+    assert at.button(key="select").disabled and at.button(key="advance").disabled
     at.button(key="reset_run").click().run()
     assert at.session_state.run.metrics["spent_units"] == 0 and not at.session_state.run.requests
 
@@ -87,3 +89,44 @@ def test_paired_benchmark_control_runs_real_zero_budget_replays():
     assert not at.exception
     assert len(at.session_state.paired_benchmark["runs"]) == 10
     assert all(r["metrics"]["spent_units"] == 0 for r in at.session_state.paired_benchmark["runs"])
+
+
+def test_all_fallback_pages_render_english_and_synthetic_origin_is_explicit():
+    from curaloop.domain import Scenario
+    from curaloop.service import RunService
+
+    at = app()
+    at.session_state.run = RunService(Scenario(budget_units=0))
+    for page in PAGES:
+        at.radio(key="screen").set_value(page).run()
+        assert not at.exception
+        texts = []
+        for kind in (
+            "markdown", "caption", "title", "header", "subheader", "button", "radio",
+            "selectbox", "number_input", "slider", "checkbox", "expander", "file_uploader",
+        ):
+            for element in at.get(kind):
+                for attribute in ("value", "label", "options"):
+                    value = getattr(element, attribute, "")
+                    texts.append(str(value))
+        rendered = "\n".join(texts)
+        assert not re.search(r"[\u0e00-\u0e7f]", rendered)
+        assert "Synthetic descriptors and fictional assay outcomes" in rendered
+    at.radio(key="screen").set_value(PAGES[0]).run()
+    assert any("not historical biological evidence" in element.value for element in at.markdown)
+
+
+def test_valid_large_scenario_snapshot_can_open_setup_without_widget_range_failure():
+    from curaloop.domain import Scenario
+    from curaloop.service import RunService
+
+    at = app()
+    at.session_state.run = RunService(Scenario(
+        candidate_count=500, initial_count=300, budget_units=500, batch_size=40,
+        delay_steps=40, assay_cost_units=10, delay_jitter=10, missing_percent=100,
+    ))
+    at.radio(key="screen").set_value(PAGES[1]).run()
+    assert not at.exception
+    assert at.number_input(key="cfg_budget").value == 500
+    assert at.number_input(key="cfg_initial").value == 300
+    assert at.slider(key="cfg_missing").value == 100

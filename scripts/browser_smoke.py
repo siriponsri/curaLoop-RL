@@ -5,9 +5,12 @@ Run: python scripts/browser_smoke.py
 External browser HTTP requests are blocked during this test.
 """
 
+import argparse
 import csv
 import io
 import json
+import os
+import re
 import subprocess
 import sys
 import time
@@ -18,12 +21,16 @@ from urllib.request import urlopen
 from playwright.sync_api import expect, sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "docs/evidence/ui"
+DEFAULT_OUT = ROOT / "docs/evidence/poc-v0.3/streamlit-browser"
 
 
 def main():
-    OUT.mkdir(parents=True, exist_ok=True)
-    log = (OUT / "server.txt").open("w", encoding="utf-8")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path, default=DEFAULT_OUT)
+    args = parser.parse_args()
+    out = args.output.resolve()
+    out.mkdir(parents=True, exist_ok=True)
+    log = (out / "server.txt").open("w", encoding="utf-8")
     server = subprocess.Popen([sys.executable, "-m", "streamlit", "run", "app/streamlit_app.py",
                                "--server.port", "8502", "--server.address", "127.0.0.1"],
                               cwd=ROOT, stdout=log, stderr=subprocess.STDOUT)
@@ -50,56 +57,77 @@ def main():
                     request_route.continue_()
             context.route("**/*", route)
             page = context.new_page()
+
+            def capture(name):
+                expect(page.get_by_test_id("stStatusWidget")).to_have_count(0, timeout=30000)
+                expect(page.get_by_text("No API keys or paid services required", exact=False)).to_be_visible()
+                if name.startswith(("01-", "03-", "04-")):
+                    expect(page.get_by_test_id("stMetricValue")).to_have_count(4)
+                    expect(page.get_by_test_id("stMetricValue").first).to_be_visible()
+                page.evaluate("document.fonts.ready")
+                page.evaluate("async()=>{await Promise.all([...document.images].map(i=>i.decode().catch(()=>{})));"
+                              "await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));}")
+                assert not re.search(r"[\u0e00-\u0e7f]", page.locator("body").inner_text())
+                page.evaluate("()=>{window.scrollTo(0,0);document.querySelector('[data-testid=stMain]')?.scrollTo(0,0);}")
+                page.screenshot(path=str(out / name), full_page=True)
+
             page.goto("http://127.0.0.1:8502")
             expect(page.get_by_role("heading", name="Overview", exact=True)).to_be_visible(timeout=30000)
             page.evaluate("document.fonts.ready")
             expect(page.get_by_text("HISTORICAL_PUBLIC_DATA", exact=True)).to_be_visible()
-            page.screenshot(path=str(OUT / "01-overview.png"), full_page=True)
-            page.get_by_text("Scenario Setup · ตั้งเงื่อนไข", exact=True).click()
-            expect(page.get_by_role("button", name="เริ่มการจำลอง / Apply scenario")).to_be_visible()
-            page.screenshot(path=str(OUT / "02-scenario.png"), full_page=True)
+            capture("01-overview.png")
+            page.get_by_text("Scenario Setup", exact=True).click()
+            expect(page.get_by_role("button", name="Apply scenario")).to_be_visible()
+            capture("02-scenario.png")
             # Use B=5 to keep this live-browser smoke test short; no prefilled result data.
-            page.get_by_role("spinbutton", name="งบทดสอบจำลอง / Budget units").fill("5")
-            page.get_by_role("button", name="เริ่มการจำลอง / Apply scenario").click()
-            expect(page.get_by_text("สร้าง run ใหม่แล้ว ไปที่ Screening Run เพื่อส่ง batch แรก")).to_be_visible()
-            page.get_by_text("Screening Run · จำลองการคัดเลือก", exact=True).click()
-            page.get_by_role("button", name="เลือก batch ถัดไป / Select", exact=True).click()
-            expect(page.get_by_role("button", name="เลื่อนเวลา +1 / Advance", exact=True)).to_be_enabled(timeout=45000)
-            page.screenshot(path=str(OUT / "03-pending.png"), full_page=True)
+            page.get_by_role("spinbutton", name="Budget units").fill("5")
+            page.get_by_role("button", name="Apply scenario").click()
+            expect(page.get_by_text("New run created. Open Screening Run to select the first batch.")).to_be_visible()
+            page.get_by_text("Screening Run", exact=True).click()
+            page.get_by_role("button", name="Select batch", exact=True).click()
+            expect(page.get_by_role("button", name="Advance +1", exact=True)).to_be_enabled(timeout=45000)
+            capture("03-pending.png")
             for _ in range(2):
-                page.get_by_role("button", name="เลื่อนเวลา +1 / Advance", exact=True).click()
+                page.get_by_role("button", name="Advance +1", exact=True).click()
                 # Await the completed Streamlit rerun before another action.
                 expect(page.get_by_test_id("stStatusWidget")).to_have_count(0, timeout=30000)
-            expect(page.get_by_text("การจำลองครบแล้ว: ไม่มีผลค้าง และงบหรือ candidate ที่เลือกได้หมดแล้ว")).to_be_visible()
-            page.screenshot(path=str(OUT / "04-delivered.png"), full_page=True)
-            page.get_by_text("Compare & Export · เปรียบเทียบและส่งออก", exact=True).click()
-            page.get_by_role("button", name="เปรียบเทียบนโยบาย / Compare policies", exact=True).click()
+            expect(page.get_by_text("Campaign complete: no pending feedback; budget or eligible candidates are exhausted.")).to_be_visible()
+            capture("04-delivered.png")
+            page.get_by_text("Compare & Export", exact=True).click()
+            page.get_by_role("button", name="Compare policies", exact=True).click()
             expect(page.get_by_text("Comparison complete · matched initial conditions")).to_be_visible(timeout=90000)
-            page.screenshot(path=str(OUT / "05-comparison.png"), full_page=True)
+            capture("05-comparison.png")
             with page.expect_download() as download:
-                page.get_by_role("button", name="ดาวน์โหลด JSON / Full report", exact=True).first.click()
-            download.value.save_as(str(OUT / "downloaded-report.json"))
-            payload = json.loads((OUT / "downloaded-report.json").read_text())
+                page.get_by_role("button", name="Download JSON / Full report", exact=True).first.click()
+            download.value.save_as(str(out / "downloaded-report.json"))
+            payload = json.loads((out / "downloaded-report.json").read_text(encoding="utf-8"))
             assert len(payload["runs"]) == 5
             assert all(r["metrics"]["spent_units"] == 5 for r in payload["runs"])
             with page.expect_download() as download:
-                page.get_by_role("button", name="ดาวน์โหลด CSV / Event report", exact=True).first.click()
-            download.value.save_as(str(OUT / "downloaded-report.csv"))
-            rows = list(csv.DictReader(io.StringIO((OUT / "downloaded-report.csv").read_text(encoding="utf-8-sig"))))
+                page.get_by_role("button", name="Download CSV / Event ledger", exact=True).first.click()
+            download.value.save_as(str(out / "downloaded-report.csv"))
+            rows = list(csv.DictReader(io.StringIO((out / "downloaded-report.csv").read_text(encoding="utf-8-sig"))))
             assert len(rows) == sum(len(r["events"]) for r in payload["runs"])
             page.set_viewport_size({"width": 390, "height": 844})
-            page.screenshot(path=str(OUT / "06-mobile.png"), full_page=True)
+            capture("06-mobile.png")
             evidence = {"status": "PASS", "source": "Real local Streamlit + local test Chromium",
                         "pages": 4, "policies_compared": 5, "budget_units": 5,
                         "json_runs": len(payload["runs"]), "csv_events": len(rows),
                         "external_http_requests_blocked": external_requests,
                         "note": "External requests were blocked; localhost HTTP/WebSocket only. Screenshots were not generated by imagegen."}
-            (OUT / "browser-smoke.json").write_text(json.dumps(evidence, indent=2), encoding="utf-8")
+            (out / "browser-smoke.json").write_text(json.dumps(evidence, indent=2), encoding="utf-8")
             print(json.dumps(evidence, indent=2))
             browser.close()
     finally:
-        server.terminate()
-        server.wait(timeout=15)
+        if server.poll() is None:
+            if os.name == "nt":
+                # A Windows venv redirector can own a second Python process.
+                # Stop only the exact process tree created by this harness.
+                subprocess.run(["taskkill", "/PID", str(server.pid), "/T", "/F"],
+                               check=True, capture_output=True)
+            else:
+                server.terminate()
+            server.wait(timeout=15)
         log.close()
 
 
