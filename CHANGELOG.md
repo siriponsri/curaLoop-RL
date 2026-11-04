@@ -1,5 +1,18 @@
 # Change log
 
+## Documentation and brand refresh - 2026-11-04
+
+- Professional English README with genuine workbench preview, two editable
+  architecture/workflow diagrams and a prominent PDF manual link.
+- New versioned AI-assisted logo and theme-independent README header; original
+  artwork and historical evidence preserved. Web and Streamlit use the new mark.
+- Illustrated English operator manual: 20 pages, linked contents/bookmarks, actual
+  program screenshots, campaign/comparison/export/resume/revision instructions.
+- Fresh Windows verification: 136 Python / 18 frontend tests; actual Chromium
+  desktop/mobile workflow and 18 automated accessibility checks passed. Detailed
+  scope and evidence: `docs/README_MANUAL_VERIFICATION.md`.
+- No dataset, model, scientific protocol or API transition change.
+
 ## 0.3.0 — 2026-11-04
 
 - English-only seven-page web UI, Streamlit fallback and current operator docs;

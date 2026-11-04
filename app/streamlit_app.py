@@ -67,7 +67,7 @@ if "run" not in st.session_state:
 run: RunService = st.session_state.run
 
 with st.sidebar:
-    st.image(str(Path(__file__).resolve().parents[1] / "assets/curaloop-logo.png"), width=230)
+    st.image(str(Path(__file__).resolve().parents[1] / "assets/branding/curaloop-logo-v2.png"), width=230)
     st.caption("PHARMACEUTICAL SCREENING\nDECISION LAB")
     screen = st.radio("Workspace", SCREENS, key="screen")
     st.divider()

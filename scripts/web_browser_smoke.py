@@ -24,25 +24,35 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
+    expect.set_options(timeout=30000)
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, default=ROOT / "docs/evidence/poc-v0.3/browser")
+    parser.add_argument("--manual", action="store_true", help="Capture additional loaded views for the English operator manual.")
+    parser.add_argument("--port", type=int, choices=(8000, 5173), default=8000,
+                        help="Use an approved loopback origin; 5173 avoids an owner's running production service.")
     args = parser.parse_args()
+    base_url = f"http://127.0.0.1:{args.port}"
     out = args.output.resolve()
     out.mkdir(parents=True, exist_ok=True)
+    manual = out / "manual"
+    if args.manual:
+        manual.mkdir(exist_ok=True)
     log = (out / "server.txt").open("w")
     state = tempfile.TemporaryDirectory(prefix="curaloop-browser-")
     env = dict(os.environ, CURALOOP_STORAGE_PATH=str(Path(state.name) / "state.sqlite3"))
 
     def start_server():
+        command = ([sys.executable, "scripts/start_web.py", "--no-browser"] if args.port == 8000 else
+                   [sys.executable, "-m", "uvicorn", "api.main:app", "--host", "127.0.0.1", "--port", str(args.port)])
         process = subprocess.Popen(
-            [sys.executable, "scripts/start_web.py", "--no-browser"],
+            command,
             cwd=ROOT, env=env, stdout=log, stderr=subprocess.STDOUT,
         )
         for _ in range(200):
             if process.poll() is not None:
                 raise RuntimeError("Owned API process exited before becoming ready")
             try:
-                with urlopen("http://127.0.0.1:8000/api/v1/health", timeout=1) as response:
+                with urlopen(base_url + "/api/v1/health", timeout=1) as response:
                     if response.status == 200:
                         return process
             except OSError:
@@ -50,8 +60,8 @@ def main():
         raise RuntimeError("API failed to start")
 
     try:
-        with urlopen("http://127.0.0.1:8000/api/v1/health", timeout=1):
-            raise RuntimeError("Port 8000 is already occupied; stop that service yourself.")
+        with urlopen(base_url + "/api/v1/health", timeout=1):
+            raise RuntimeError(f"Port {args.port} is already occupied; use another approved test port.")
     except OSError:
         pass
     server = start_server()
@@ -70,7 +80,7 @@ def main():
             context = browser.new_context(
                 viewport={"width": 1440, "height": 1000},
                 accept_downloads=True,
-                base_url="http://127.0.0.1:8000",
+                base_url=base_url,
                 reduced_motion="reduce",
             )
             external = []
@@ -88,6 +98,10 @@ def main():
             )
             page = context.new_page()
             page.on("pageerror", lambda error: errors.append(str(error)))
+
+            def manual_detail(name, selector):
+                if args.manual:
+                    page.locator(selector).screenshot(path=str(manual / (name + ".png")))
 
             def capture(name):
                 expect(page.locator(".initial-loading")).to_have_count(0)
@@ -121,6 +135,10 @@ def main():
                     overflows.append(name)
                 page.screenshot(path=str(out / (name + ".png")), full_page=True)
                 captures.append(name)
+                if args.manual:
+                    height = min(page.viewport_size["height"], 820)
+                    page.screenshot(path=str(manual / (name + ".png")),
+                                    clip={"x": 0, "y": 0, "width": page.viewport_size["width"], "height": height})
 
             def audit(name):
                 script = ROOT / "frontend/node_modules/axe-core/axe.min.js"
@@ -176,6 +194,7 @@ def main():
                 and not current["report"]["delivered_results"]
             )
             capture("04-simulation-pending")
+            manual_detail("04-pending-ledger", ".lab-board")
             audit("lab")
             # A real process restart must retain revision, pending privacy and budget.
             before_restart = current
@@ -197,6 +216,8 @@ def main():
             page.get_by_role("button", name="Advance time", exact=True).click()
             expect(page.get_by_text("Completed", exact=True)).to_be_visible()
             capture("05-simulation-delivered")
+            manual_detail("05-delivered-ledger", ".lab-board")
+            manual_detail("05-decisions", ".decisions-section")
             current = context.request.get("/api/v1/runs/" + session_id).json()
             assert (
                 current["report"]["metrics"]["delivered_assays"] == 5
@@ -241,6 +262,7 @@ def main():
             page.reload()
             expect(page.get_by_role("heading", name="Comparison complete")).to_be_visible(timeout=40000)
             capture("07-benchmark")
+            manual_detail("07-comparison-results", ".benchmark-result")
             audit("benchmarks")
             with page.expect_download() as download:
                 page.get_by_role("link", name="JSON", exact=True).first.click()
@@ -267,6 +289,7 @@ def main():
             with page.expect_download() as download:
                 page.get_by_role("link", name="JSON", exact=True).first.click()
             download.value.save_as(str(out / "run-download.json"))
+            manual_detail("08-export-resume", ".resume-section")
             # Invalid import must leave the selected saved campaign intact.
             page.get_by_label("Resume JSON file").set_input_files({
                 "name": "invalid-run.json", "mimeType": "application/json",
@@ -288,8 +311,10 @@ def main():
             saved_row.get_by_role("button", name="Open campaign", exact=True).click()
             page.wait_for_function("id=>localStorage.getItem('curaloop-session')===id", arg=session_id)
             capture("09b-saved-campaign-reopened")
+            manual_detail("09-saved-campaigns", ".saved-runs")
             saved_row.get_by_role("button", name="Inspect saved revisions", exact=True).click()
             expect(page.get_by_role("heading", name="Recover a validated revision")).to_be_visible()
+            manual_detail("09-revision-recovery", ".saved-runs")
             page.get_by_role("button", name="Recover selected revision", exact=True).click()
             page.wait_for_function("id=>localStorage.getItem('curaloop-session')!==id", arg=session_id)
             restored_id = page.evaluate("localStorage.getItem('curaloop-session')")
@@ -418,7 +443,7 @@ def main():
             assert not mobile_overflow
             result = {
                 "status": "PASS",
-                "source": "Actual built Vite assets served by FastAPI at http://127.0.0.1:8000",
+                "source": "Actual built Vite assets served by FastAPI at " + base_url,
                 "platform": sys.platform,
                 "browser_version": browser.version,
                 "pending_restart_recovery": True,

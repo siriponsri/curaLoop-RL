@@ -69,7 +69,7 @@ export default function App() {
     return (
       <>
         <Link to="/" className="brand-link" onClick={() => setMobile(false)}>
-          <img src="/brand/logo.png" alt="CuraLoop-RL" />
+          <img src="/brand/logo-v2.png" alt="CuraLoop-RL" />
           <span>Pharmaceutical decision lab</span>
         </Link>
         <nav className="main-nav" aria-label="Main navigation">

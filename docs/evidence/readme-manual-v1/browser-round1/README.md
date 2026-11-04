@@ -1,0 +1,1 @@
+Superseded capture attempt: the default 5-second replay UI assertion timed out while the real engine was busy during concurrent CPU tests. No application-state error was reported. The harness now waits up to 30 seconds, consistent with real engine operations; the entire workflow is rerun in ../browser. No historical evidence was overwritten.

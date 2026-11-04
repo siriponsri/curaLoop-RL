@@ -1,5 +1,21 @@
 # Third-party notices
 
+## Brand/documentation refresh - 2026-11-04
+
+The current versioned PNG wordmark and opaque README header are AI-assisted
+original project assets generated with the built-in image tool. The original
+logo remains preserved. Released prompts and file roles are recorded in
+`assets/branding/PROVENANCE.md`; no institutional identity or trademark-clearance
+claim is made. The new HTML/SVG diagrams are original code-authored illustrations
+grounded in the repository, using the Diagram Design skill's design guidance and
+export helper. No third-party template code was copied into the application.
+
+The English manual embeds genuine local program captures and these diagrams.
+Optional ReportLab/pypdf documentation tools are dependencies, not vendored
+application code. The PDF uses standard Latin font resources; no proprietary
+font file was added to the repository. Existing dataset/software/font licenses
+and copyright notices below remain applicable and unchanged.
+
 ## Historical HIV benchmark data (separate from MIT code)
 
 Attribution: NCI Developmental Therapeutics Program (DTP) AIDS Antiviral Screen; Zhenqin Wu et al., *MoleculeNet: a benchmark for molecular machine learning*, Chemical Science 9 (2018), 513–530, DOI https://doi.org/10.1039/C7SC02664A; DeepChem contributors; Therapeutics Data Commons (TDC), Kexin Huang et al., NeurIPS Datasets & Benchmarks 2021.

@@ -1,78 +1,140 @@
-<img src="assets/curaloop-logo.png" alt="CuraLoop-RL logo" width="520">
+<p align="center">
+  <img src="assets/branding/curaloop-readme-header.png" alt="CuraLoop-RL" width="720">
+</p>
 
-# Pharmaceutical Screening Decision Lab
+<h1 align="center">Screening decisions you can audit.</h1>
 
-CuraLoop-RL is an independent personal research portfolio for retrospective
-screening decisions. Select compounds under a simulated budget, wait for delayed
-feedback, inspect the public event ledger and compare independent policies.
-It runs locally on CPU without API keys, authentication or cloud services.
+<p align="center">
+  A local research workbench for sequential pharmaceutical screening.<br>
+  Choose candidates. Wait for feedback. Compare policies. Preserve the evidence.
+</p>
 
-Historical MoleculeNet HIV assay labels and genuine molecular structures are
-available alongside clearly labelled synthetic fixtures. Costs, delays, capacity
-and missingness are simulated assumptions. This is a retrospective research
-simulator, not clinical validation, drug efficacy evidence, an official GPO
-system or an operational Digital Twin.
+<p align="center">
+  <a href="docs/manual/CuraLoop-RL-User-Manual-EN.pdf"><strong>English user manual (PDF)</strong></a> &nbsp;·&nbsp;
+  <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
+  <a href="#architecture">Architecture</a> &nbsp;·&nbsp;
+  <a href="docs/EVALUATION.md">Scientific evaluation</a>
+</p>
 
-## Start on Windows
+<p align="center"><strong>Research POC</strong> &nbsp; / &nbsp; Local CPU &nbsp; / &nbsp; Windows first &nbsp; / &nbsp; Offline after installation &nbsp; / &nbsp; MIT code</p>
 
-Install 64-bit Python 3.11 or 3.12, then double-click **Start-CuraLoop-Web.cmd**.
-First use installs project-local dependencies in `.venv`; later use works offline.
-The bundled production frontend requires no Node installation. Open
-**http://127.0.0.1:8000**. Stop with Ctrl+C in its terminal.
+---
 
-See [Windows operator guide](START_WINDOWS.md) for installation, troubleshooting,
-backup/recovery, fallback and developer commands. No administrator access or
-execution-policy change is required.
+CuraLoop-RL explores a practical research question: **with a budget for 30 assays
+in a library of 1,200 historical compounds, which candidates should be tested
+first?** The workbench connects selection policies to delayed feedback, explicit
+resource accounting and an inspectable public event ledger.
+
+It includes a frozen MoleculeNet HIV replay dataset, clearly labelled synthetic
+fixtures, five selection policies and independent matched comparisons. The
+scientific engine runs in Python; the interface presents its actual state.
+
+![Actual CuraLoop-RL workbench with historical assay data](docs/evidence/readme-manual-v1/browser/manual/01-overview.png)
+
+*Captured from the running English application. This is a retrospective research
+simulator; historical assay labels are distinct from simulated cost and timing.*
+
+## The screening loop
+
+![The auditable screening loop](docs/diagrams/screening-loop.png)
+
+Accepted requests reserve budget once. Outcomes become visible only when their
+configured simulated delay has elapsed. Only newly delivered active outcomes
+count as hits; seed labels, pending predictions and missing outcomes are excluded.
+
+The ledger makes decisions inspectable. SQLite preserves public snapshots and
+revisions, while portable single-run JSON supports validated recovery elsewhere.
+
+[Editable diagram](docs/diagrams/screening-loop.html) · [SVG](docs/diagrams/screening-loop.svg) · [Persistence and recovery](docs/PERSISTENCE.md)
+
+## Inside the workbench
+
+| Workspace | What you can do |
+| --- | --- |
+| **Overview** | Understand the active scenario, data origin and live campaign counts. |
+| **Compound explorer** | Search, filter, sort and inspect public descriptors and genuine historical molecular structures. |
+| **Scenario builder** | Configure dataset, seed, policy, budget, capacity, delay, jitter and missingness. |
+| **Simulation lab** | Select batches, advance time, finish, replay or reset; inspect outcomes, explanations and the budget ledger. |
+| **Benchmark arena** | Execute matched independent policies, inspect actual fallback usage and reopen saved comparisons. |
+| **Research evidence** | Inspect provenance and limitations; export, resume and recover saved campaigns or revisions. |
+| **Guided presentation** | Tell the project's story in 5-7 minutes using the same live campaign. |
+
+## Quick start
+
+**Windows:** install 64-bit Python 3.12, open the project folder and double-click
+**`Start-CuraLoop-Web.cmd`**. First use creates `.venv` and installs the locked
+dependencies; subsequent use runs from local assets. The bundled frontend needs
+no Node.js installation.
+
+Open **http://127.0.0.1:8000** and keep the launcher terminal open. Stop with Ctrl+C.
+No administrator access, execution-policy change, API key or cloud account is
+required. Python 3.11 is also supported by configuration; the executed Windows
+verification used Python 3.12.10.
 
 ```powershell
-cd C:\Projects\curaloop-rl
+# From the source folder:
 .\Setup-CuraLoop-Web.cmd
 .\Start-CuraLoop-Web.cmd
 ```
 
-Linux/macOS:
+**Start with the illustrated guide:** [Download the English user manual](docs/manual/CuraLoop-RL-User-Manual-EN.pdf).
+Its 20 pages include real program screenshots, linked contents, a worked campaign,
+policy comparison, export/import, saved revisions and recovery instructions.
 
-```bash
-python3.12 -m venv .venv
-.venv/bin/python -m pip install -r requirements-web-lock.txt
-.venv/bin/python -m pip install -e '.[web,dev]' --no-deps
-.venv/bin/python scripts/start_web.py --no-browser
-```
+For platform commands and troubleshooting, see the [Windows operator guide](START_WINDOWS.md).
+Linux/macOS can use the same locked Python dependencies and
+`python scripts/start_web.py --no-browser` inside a virtual environment.
+The English Streamlit fallback is available through `Start-CuraLoop.cmd` on port 8501.
 
-## Complete a campaign
+## Architecture
 
-1. **Overview:** inspect data origin, the current scenario and research boundary.
-2. **Scenario builder:** choose HIV or a synthetic fixture, policy, seed, budget,
-   capacity, delay, jitter and missingness. Create a fresh independent campaign.
-3. **Simulation lab:** Select batch → pending → Advance time → delivered results.
-   Inspect selection explanations, reserved/spent/remaining units and events.
-4. **Compound explorer:** search, filter, sort, paginate and inspect public
-   descriptors/structures. Unrevealed assay labels remain hidden.
-5. **Benchmark arena:** execute matched independent policies and inspect actual
-   controller fallback usage. Download comparison JSON or the CSV event ledger.
-6. **Research evidence:** inspect sources, limitations, recovery and portable
-   single-run JSON. Validate and resume an exported campaign.
-7. **Guided presentation:** use the same campaign for a 5–7 minute walkthrough.
+![CuraLoop-RL architecture and public/private boundaries](docs/diagrams/architecture.png)
 
-The default seed may yield zero new hits. Keep that result. Recorded v0.1
-benchmark charts are explicitly separate from newly executed comparisons.
-Frozen learned controllers used Greedy fallback for **300/300 historical
-requests each**; this is not evidence of successful learned RL transfer.
+The React/TypeScript frontend calls a loopback FastAPI adapter. `RunService` and
+the existing Python engine own selection, simulated time, accounting and export.
+Built-in policies receive public observations in a separate process. Unrevealed
+assay labels stay in the private backend.
 
-## Local persistence and portable evidence
+SQLite stores public snapshots, revisions and comparison records. Restart
+reconstructs accepted state through the existing reconciliation logic; unfinished
+comparison jobs are marked interrupted and never silently repeated. Run one
+active server with one Uvicorn worker.
 
-The API stores versioned public run snapshots, revisions and comparison records
-in `.local/curaloop.sqlite3`. Pending and completed runs recover through the same
-validated Python reconstruction used for JSON resume. Pending labels are never
-serialized. Interrupted comparison jobs are reported honestly and are not
-automatically repeated. Use one server process and one Uvicorn worker.
+[Architecture reference](docs/ARCHITECTURE.md) · [Editable diagram](docs/diagrams/architecture.html) · [SVG](docs/diagrams/architecture.svg)
 
-Single-run JSON is a portable recovery snapshot. Comparison JSON contains several
-independent campaigns and cannot resume one campaign directly. CSV is an event
-ledger for analysis, not a recovery file. See [persistence](docs/PERSISTENCE.md)
-for schema, corruption handling, backups and source identity.
+## Scientific scope
 
-## Verify and develop
+| Evidence | Interpretation |
+| --- | --- |
+| Historical HIV replay | Genuine retrospective assay labels and structures; a custom 1,200-molecule derivative, not an official leaderboard reproduction. |
+| Budget, delay, capacity and missingness | Explicit simulated operational assumptions, not measured laboratory costs or turnaround times. |
+| Random, Greedy and Uncertainty | Implemented selection baselines; model probabilities are uncalibrated and uncertainty is a margin heuristic. |
+| Q-learning and contextual bandit | Frozen controllers trained on synthetic tasks. Actual learned-request and fallback counts are exposed. |
+| Recorded historical benchmark | Both learned controllers used **Greedy fallback for 300/300 requests each**. Matching Greedy does not establish learned RL transfer. |
+
+The default seed may produce zero new hits. That result is retained. Recorded
+benchmarks are labelled separately from newly executed comparisons. No dataset,
+label semantics, trained checkpoint, reward or evaluation protocol was changed
+for the interface, persistence or documentation work.
+
+This independent personal project does not establish clinical efficacy, GMP
+suitability, real laboratory savings or an operational Digital Twin. It is not
+an official GPO system. See [evaluation and limitations](docs/EVALUATION.md) and
+[dataset provenance](docs/RESEARCH_BENCHMARKS.md) for the full research boundary.
+
+## Verification
+
+Executed Windows verification includes **136 Python tests and 18 frontend
+tests**, a production build, real desktop/mobile browser workflows, delayed
+visibility, budget accounting, restart recovery, exports and validated resume.
+The detailed reports distinguish current execution from preserved historical
+evidence and list all unrun checks.
+
+- [POC release verification](docs/RELEASE_VERIFICATION.md)
+- [README, branding and manual verification](docs/README_MANUAL_VERIFICATION.md)
+- [Current screenshots and capture records](docs/evidence/readme-manual-v1/)
+
+## Development
 
 ```powershell
 .\.venv\Scripts\python.exe -m pytest -q
@@ -86,32 +148,24 @@ npm test
 npm run build
 ```
 
-Frontend development requires a compatible Node version listed in
-`frontend/package.json`. Vite uses loopback port 5173 and proxies the local API.
-Production uses one address, port 8000. Rebuild committed `frontend/dist` after
-changing frontend source and restart the server to refresh build identity.
+Use a Node version compatible with `frontend/package.json` for frontend work.
+Vite development uses port 5173; production serves the committed build at port
+8000. Rebuild `frontend/dist` after UI changes and restart to refresh build
+identity. Documentation tooling is optional and separate from application runtime.
 
-Optional browser/security tools: `python -m pip install -r requirements-qa.txt`,
-then `python -m playwright install chromium` and
-`python scripts/web_browser_smoke.py --output docs/evidence/poc-v0.3/browser`.
-Browser QA uses temporary local state and never replaces the owner's campaigns.
-Streamlit fallback: `Start-CuraLoop.cmd` or
-`python -m streamlit run app/streamlit_app.py --server.address 127.0.0.1`.
+## Documentation and attribution
 
-## Scientific evidence and delivery status
+| Resource | Purpose |
+| --- | --- |
+| [English user manual (PDF)](docs/manual/CuraLoop-RL-User-Manual-EN.pdf) | Illustrated operation, evidence and recovery. |
+| [Windows operator guide](START_WINDOWS.md) | Installation, launchers, backup and troubleshooting. |
+| [Persistence reference](docs/PERSISTENCE.md) | Storage schema, atomic actions, interruption and corruption recovery. |
+| [Research benchmarks](docs/RESEARCH_BENCHMARKS.md) | Data preparation, source records and evaluation context. |
+| [Change log](CHANGELOG.md) | Release changes. |
+| [Engineering handoff](HANDOFF_TO_CODEX.md) | Verified checkpoints and continuation boundaries. |
 
-- [Release verification](docs/RELEASE_VERIFICATION.md): current executed checks
-  and explicit NOT_RUN items; older counts are historical until rerun.
-- [Evaluation protocol and limitations](docs/EVALUATION.md).
-- [Research benchmarks and provenance](docs/RESEARCH_BENCHMARKS.md).
-- [Architecture](docs/ARCHITECTURE.md), [continuation](docs/CONTINUATION.md),
-  [handoff](HANDOFF_TO_CODEX.md), [change log](CHANGELOG.md).
-- [Third-party notices](THIRD_PARTY_NOTICES.md): MIT code, separately attributed
-  CC BY 4.0 HIV derivative, local font and dependency licenses.
-
-Original data, models, benchmarks, screenshots and logs remain preserved.
-`requirements_v3/`, `docs/requirements/` and dated evidence are archived source
-requirements or historical records, not current implementation status.
-GitHub `main` exists at the verified starting revision `b16d2fb`; the earlier
-403 publication failure is preserved as historical evidence. Current commit and
-push status belong in the release verification report, not inferred from old logs.
+Code is [MIT licensed](LICENSE). The HIV derivative has separate CC BY 4.0
+attribution to NCI DTP, MoleculeNet, DeepChem and TDC. Fonts and software retain
+their upstream notices. New brand artwork is AI-assisted; the original logo and
+historical screenshots remain preserved. See [third-party notices](THIRD_PARTY_NOTICES.md)
+and [brand provenance](docs/BRAND.md).
