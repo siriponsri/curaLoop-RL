@@ -164,6 +164,7 @@ this pilot did not reserve the whole host.
 | --- | --- |
 | Implementation commit before freeze | `a79707754d34e2d43fed4f9e1bac908f91dc0def` |
 | Config freeze commit before first real method run | `4091e209fed78d04d48b13ef8ad719257302f684` |
+| Material results commit | `efc8bcce623029cc49919c98c997eb025b459dcd` |
 | Frozen at UTC | `2026-11-04T08:32:45.114256+00:00` |
 | Config SHA256 (canonical JSON) | `8d1d7b0450074a78d54fedbe9ec96579845de08589103324a729947a6b567be2` |
 | Execution source SHA256 (named LF-normalized source mapping) | `41dce53850a58caee1c0dda2e32cf7f1f47ab948b4ea632d219eb01f9fc31437` |
@@ -175,6 +176,10 @@ run JSONs plus ledger are in [the evidence packet](../evidence/ncats-development
 Exact run bytes are protected against Git newline conversion by packet-local
 attributes; [execution-audit.json](../evidence/ncats-development-20261104-v1/execution-audit.json)
 contains their SHA256 values.
+The [committed-byte receipt](../evidence/ncats-development-20261104-v1/commit-identity.json)
+also verifies all 110 raw run/ledger/canary artifacts directly from that results
+commit. A packet-local CR-at-EOL check rule preserves captured Windows bytes
+while keeping trailing-space checks enabled.
 
 [36-cell summary CSV](../evidence/ncats-development-20261104-v1/results/summary.csv),
 [108-run CSV](../evidence/ncats-development-20261104-v1/results/runs.csv),

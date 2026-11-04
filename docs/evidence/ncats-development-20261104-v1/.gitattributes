@@ -1,2 +1,6 @@
 # Run-ledger digests refer to exact saved bytes on every checkout platform.
 runs/*.json -text
+# Preserve/check captured Windows line endings without accepting trailing spaces.
+*.json whitespace=trailing-space,space-before-tab,cr-at-eol
+*.csv whitespace=trailing-space,space-before-tab,cr-at-eol
+*.xml whitespace=trailing-space,space-before-tab,cr-at-eol

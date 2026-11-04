@@ -5,7 +5,9 @@
 Checkout `C:\Users\User\Desktop\myProject\curaloop-rl`, branch
 `feat/real-assay-development-20261104`. Implementation `a797077`; frozen config
 `4091e209fed78d04d48b13ef8ad719257302f684` predates every real-assay method run.
-The local result commit is identified by Git HEAD; main remains at `2d287a1`.
+Material results commit: `efc8bcce623029cc49919c98c997eb025b459dcd`.
+The following receipt changes only evidence attributes/identity and handoff;
+main remains at `2d287a1`.
 
 Actual outcome: **108 complete / 0 failed / 0 warnings**, six fixed controls on
 three NCATS training endpoints and three repeated seeds. Heterogeneous pending

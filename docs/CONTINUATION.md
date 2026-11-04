@@ -4,7 +4,9 @@ Date: 4 November 2026, Asia/Bangkok. Checkout
 `C:\Users\User\Desktop\myProject\curaloop-rl`, branch
 `feat/real-assay-development-20261104`. The frozen allocation commit
 `4091e209fed78d04d48b13ef8ad719257302f684` precedes all real method runs. Git HEAD
-identifies the results/receipt commit. Main remains at `2d287a1`; no push occurred.
+identifies the subsequent identity receipt. Material results commit is
+`efc8bcce623029cc49919c98c997eb025b459dcd`.
+Main remains at `2d287a1`; no push occurred.
 
 **108/108 complete, 0 failed, 0 warnings.** Read
 [measured results](03_research/NCATS_DEVELOPMENT_RESULTS_V1.md),
