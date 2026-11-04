@@ -1,0 +1,79 @@
+{
+  "schema_version": "curaloop.gaussian-development.v1",
+  "protocol_id": "ncats-gaussian-development-20261104-v1",
+  "status": "FROZEN_DEVELOPMENT_ONLY",
+  "frozen_at_utc": "2026-11-04T09:10:32.289764+00:00",
+  "implementation_commit": "ce156ab1171f06031d858c249fc7677db269bd32",
+  "execution_source_sha256": "2aa92f296d5417ba56572030caa06e1194e34fda9a7804bd23891608b66dc80b",
+  "final_evaluation": false,
+  "assays": [
+    "ahr",
+    "pparg",
+    "p53"
+  ],
+  "cohort_sha256": {
+    "ahr": "3fe744e077982beff3e620f1eda8f2f824b5d967b54a06a4cb9c528573bad344",
+    "pparg": "e119c91ba6561e8411e5642660bf3226bc36914f99b2a94cabebccdcbf7e599e",
+    "p53": "893d8d503e61dc93e24a5f42a071995c6ddd75f20342bcf18641d887cbea1f08"
+  },
+  "raw_source_sha256": {
+    "ahr": "8b57bcfec402bbe76ac008a5e243341de5b4c92f891324b34351c5534827aebb",
+    "pparg": "d9962585e65b170f2423dd13c3384ae8fcb33434b5bbf2a3800357441c5ea28f",
+    "p53": "1fa72a15760a228c9b649b9b90675556f205b101445936181980a9ad87792052"
+  },
+  "sample_size_per_assay": 600,
+  "initial_count": 24,
+  "initialization": "random.Random(seed).sample(sorted IDs,24); no label inspection; retain zero-active starts",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "budget": 24,
+  "capacity": 3,
+  "deadline": 12,
+  "unit_cost": 1,
+  "decision_opportunities": "Integer grid 0..11 for every method; process all due events before refill; no new requests at T=12",
+  "conditions": {
+    "common": [
+      2
+    ],
+    "heterogeneous": [
+      1,
+      2,
+      4
+    ]
+  },
+  "duration_generator": "foundation keyed_duration(task_id,seed,candidate_id,assay_type); no activity input",
+  "methods": [
+    "gp_mean",
+    "gp_ucb_blind",
+    "gp_ucb_pending"
+  ],
+  "predictor": {
+    "family": "sklearn GaussianProcessRegressor",
+    "kernel": "binary Tanimoto, unit amplitude",
+    "alpha": 0.1,
+    "kappa": 1.0,
+    "optimizer": null,
+    "normalize_y": false,
+    "batch": "one joint top-k ranking; no within-batch conditioning"
+  },
+  "transductive_features": "All pool fingerprints public; scaler/classifier fit only revealed labels; no audit labels supplied",
+  "primary_development_diagnostic": "gp_ucb_pending minus gp_ucb_blind H(T), descriptive only; Gaussian mean arm isolates exploration",
+  "common_negative_control": "GP UCB blind/pending exact event histories match",
+  "threads": 1,
+  "max_cumulative_run_wall_seconds": 300,
+  "concurrency": 1,
+  "expected_runs": 54,
+  "canary": "9 included seed0 heterogeneous runs; projection <=300s required before remaining45",
+  "compute_costs": "No paid APIs/GPU; unit assay costs are synthetic; actual wall/CPU/peak working set measured",
+  "unimplemented_controls": [
+    "calibrated Bernoulli GP",
+    "BayBE/BoTorch integration",
+    "learned controller"
+  ],
+  "inference": "One correlated NCATS panel, development endpoints only. No clinical, commercial, cross-target-transfer or prospective inference.",
+  "base_config_sha256": "8d1d7b0450074a78d54fedbe9ec96579845de08589103324a729947a6b567be2",
+  "new_method_outcomes_inspected_before_freeze": false
+}
