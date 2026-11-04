@@ -20,6 +20,8 @@ Use this ledger to reconcile the manuscript, README, presentation, pilot report 
 | C14 | Known HIV registry identity and declared gate checks execute | REGRESSION_RESOURCE_ONLY | `research/manifests/task_registry.json`; no additional assay or independent new rights/phenotype audit |
 | C15 | Three public NCATS development endpoints have source/cohort identities and overlap/attrition audits | DEVELOPMENT_RESOURCES_ONLY | `research/manifests/ncats_development_tasks_v1.json`; [source/protocol](../03_research/NCATS_DEVELOPMENT_PROTOCOL_V1.md) |
 | C16 | Six fixed controls executed on the frozen 108-run NCATS development allocation | MEASURED_DEVELOPMENT_ONLY | [Results](../03_research/NCATS_DEVELOPMENT_RESULTS_V1.md); 108 complete, 0 failed; pending penalty 0 wins / 8 ties / 1 loss under heterogeneous delay; C06 remains HYPOTHESIS |
+| C17 | Frozen pilot reproduces in a clean venv and separate local checkout | SAME_IMPLEMENTER_SAME_HOST_REPRODUCTION | [108 exact scientific comparisons](../03_research/NCATS_REPRODUCTION_V1.md); not independent scientific review or new biological repetitions |
+| C18 | Gaussian covariance-based development comparator executed | MEASURED_DEVELOPMENT_ONLY | [54 completed runs](../03_research/NCATS_GAUSSIAN_RESULTS_V1.md); pending versus blind tied H(12) in all nine heterogeneous pairs; C06 stays HYPOTHESIS |
 
 ## Language rules
 

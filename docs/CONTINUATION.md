@@ -1,4 +1,35 @@
-# Current local checkpoint: executed NCATS development pilot
+# Current local checkpoint: reproduction and Gaussian comparator
+
+4 November 2026, Asia/Bangkok. Same checkout/branch
+`feat/real-assay-development-20261104`; source checkpoint `d57838d`. Git HEAD
+identifies the later local result. Main stays `2d287a1`; no push/deployment.
+
+Completed [fresh-environment reproduction](03_research/NCATS_REPRODUCTION_V1.md):
+108/108 exact scientific comparisons in a separate detached clone/new venv,
+with regenerated cohort hashes. Same implementer/host, not independent review.
+Completed [Gaussian development amendment](03_research/NCATS_GAUSSIAN_RESULTS_V1.md):
+54/54 runs, 0 failures/warnings, pending versus blind ties H(12) in every
+heterogeneous pair despite 5/9 changed histories. Common-delay check 9/9 exact.
+Frozen implementation/config commits `ce156ab` / `a9d9c8f`; exact identities and
+source/data/command logs are in the linked reports and their evidence packets.
+
+70 targeted tests passed. Old 108-run data/config/output bytes and engine/UI
+assets remain preserved. Reproduction and comparator have separate bounded
+300-second run-wall allocations; actual totals 213.93 and 101.90s respectively.
+No GPU, paid API, external contact, publication or deployment occurred. Full
+input pools, wheels and isolated clone/env stay ignored. All new public runs,
+failure denominators and byte hashes are retained; never reset their ledgers.
+
+Next scientific decision is the scope of a final independent task/family
+allocation and material-effect threshold, after assessing the null development
+evidence. Stronger calibration/Bernoulli modeling, within-batch adaptation and
+known-hit sensitivities need new development identities if pursued. Do not tune
+an exposed cohort and call it an untouched final test. No background study or
+agent continues after this checkpoint.
+
+---
+
+# Historical local checkpoint: executed NCATS development pilot
 
 Date: 4 November 2026, Asia/Bangkok. Checkout
 `C:\Users\User\Desktop\myProject\curaloop-rl`, branch

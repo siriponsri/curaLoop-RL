@@ -41,6 +41,10 @@ pairwise scientific/raw-file comparisons in
 [attempt.json](../evidence/ncats-reproduction-20261104-v1/attempt.json).
 The [driver](../../tools/reproduce_ncats_v1.py) refuses to overwrite existing
 attempts. Setup, run or comparison failures are retained; this attempt had none.
+The scientific code is pinned by the detached clone/frozen execution identity.
+The orchestration driver's own start-time source hash was not captured; it was
+subsequently formatted and its generated attribute-file newline corrected.
+Those authoring changes did not change the cloned scientific execution code.
 The ignored `.local/repro-ncats-20261104-v1/` retains wheels, the fresh venv,
 isolated checkout and raw/prepared data outside Git.
 

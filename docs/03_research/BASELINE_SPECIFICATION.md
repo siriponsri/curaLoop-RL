@@ -5,8 +5,11 @@ The [NCATS v1 pilot](NCATS_DEVELOPMENT_RESULTS_V1.md) executed Random,
 frozen/retrained Greedy, nearest-hit, diversity and the matched pending-penalty
 pair under [its frozen settings](NCATS_DEVELOPMENT_PROTOCOL_V1.md). These are
 separate research modules, not new current-CLI policies. Explicit ensemble
-uncertainty, a fixed mixture, a genuine asynchronous probabilistic comparator
-and a generalizing controller remain unimplemented in this new runner.
+uncertainty via a calibrated ensemble, a fixed mixture and a generalizing
+controller remain unimplemented. A separate
+[54-run Gaussian-surrogate adaptation](NCATS_GAUSSIAN_RESULTS_V1.md) now executes
+explicit GP uncertainty and pending-location covariance conditioning; it is not
+a calibrated Bernoulli model or a full BayBE integration.
 
 ## Required arms
 
@@ -17,10 +20,10 @@ and a generalizing controller remain unimplemented in this new runner.
 | Retrained Greedy | Same predictor family; refit on revealed labels at each declared decision event | Strong exploitation control | IMPLEMENTED; NCATS v1 executed |
 | Nearest-hit similarity | Maximize Morgan/Tanimoto similarity to any delivered active, including known initial actives | Strong inexpensive low-data control from R05 | IMPLEMENTED; NCATS v1 executed |
 | Structural diversity | Maximize distance from the declared observed/reference set; fix ties deterministically | Control for chemical-space coverage | IMPLEMENTED; NCATS v1 executed; no within-batch adjustment |
-| Explicit uncertainty | Freeze ensemble/score definition and direction; distinguish entropy, variance and disagreement | Avoid calling uncalibrated margin a posterior | PLANNED; legacy margin remains separate |
+| Explicit uncertainty | Freeze ensemble/score definition and direction; distinguish entropy, variance and disagreement | Avoid calling uncalibrated margin a posterior | Gaussian-surrogate std IMPLEMENTED/EXECUTED; ensemble and calibrated Bernoulli uncertainty NOT_RUN |
 | Fixed mixture | Development-selected probability or schedule mixing explicit selectors | Test whether simple mixing explains adaptation | PLANNED |
 | Matched pending-blind / pending-aware pair | Same predictor and feasible set; only the declared pending-conditioning term differs | Primary H1 contrast | IMPLEMENTED; NCATS v1 heuristic executed; final H1 remains untested |
-| Asynchronous probabilistic comparator | Explicit finite-pool model with pending variance conditioning or fantasization and a matched multi-hit objective | Compare operational adaptation with established ideas | PLANNED; version-specific acceptance required |
+| Asynchronous probabilistic comparator | Explicit finite-pool model with pending variance conditioning or fantasization and a matched multi-hit objective | Compare operational adaptation with established ideas | Gaussian binary-regression adaptation IMPLEMENTED/EXECUTED in separate v1; no within-batch conditioning or inherited regret claim |
 | Generalizing controller | Freeze development-trained model and action mapping; log learned and fallback use | Conditional transfer question | PLANNED; legacy tables preserved separately |
 
 When no active is observed, nearest-hit similarity has no reference. Use a prespecified Random fallback with a recorded reason rather than deleting the run. A frozen predictor that cannot fit a one-class start retains its declared fallback for that arm; it does not secretly retrain when the first new active arrives. A dynamic variant is a separately named arm.

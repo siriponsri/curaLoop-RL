@@ -81,6 +81,11 @@ controls and three seeds. Pending-penalty selection added no deadline hits in
 this bounded pilot and lost two hits in one paired run. These are correlated
 development endpoints, not untouched final tests or therapeutic-efficacy evidence.
 
+A [fresh-environment reproduction](docs/03_research/NCATS_REPRODUCTION_V1.md)
+matched all 108 scientific traces. A separate frozen
+[54-run Gaussian comparator](docs/03_research/NCATS_GAUSSIAN_RESULTS_V1.md)
+also found no extra deadline hits from pending conditioning in this allocation.
+
 ## Quick start
 
 **Windows:** install 64-bit Python 3.12, open the project folder and double-click

@@ -1,6 +1,36 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
-## Current checkpoint: executed NCATS development pilot
+## Current checkpoint: clean reproduction and Gaussian comparator executed
+
+Branch `feat/real-assay-development-20261104`; source baseline
+`d57838d41b30d956c7fd72ac502c1765653fd087`. Git HEAD identifies this later local
+results checkpoint. Main remains `2d287a1`; no push/publication/deployment.
+
+- [Fresh-environment reproduction](docs/03_research/NCATS_REPRODUCTION_V1.md):
+  separate detached clone, clean offline-installed venv, regenerated cohorts,
+  108/108 scientific traces exact. Same host/implementer, not independent review.
+- [Gaussian comparator](docs/03_research/NCATS_GAUSSIAN_RESULTS_V1.md): frozen
+  before new method outcomes, 54/54 complete, 0 failed/warnings. GP pending versus
+  blind H(12) ties all nine heterogeneous pairs, with 5/9 different event traces;
+  common-delay negative control 9/9 exact. Do not promote pending superiority.
+- Implementation `ce156ab`; Gaussian freeze commit
+  `a9d9c8f0747be3e2c7d8c41b42dc53efd049a40a`. Final targeted tests 70 PASS,
+  including nontrivial covariance equivalence, privacy, one-class starts,
+  independent fitted states, retained failures and immutable resume behavior.
+- Reproduction/new-comparator run-wall 213.93/101.90s under separate 300s caps,
+  CPU 195.02/95.16s, peak runner memory 172.51/172.62 MiB. No GPU or paid APIs.
+  Wheels, raw/full derived data, isolated env and clone remain ignored under
+  `.local/repro-ncats-20261104-v1/`; public run logs/hash comparisons are versioned.
+
+All original 108-run artifacts/config, old engine/UI/checkpoints and protected
+assets remain unchanged. No final holdout or learned controller was evaluated.
+The new Gaussian method is a binary-regression approximation with no within-
+batch conditioning or inherited GP-BUCB regret guarantee. Future material changes
+need a separate version/freeze. Final task/family allocation, effect threshold,
+calibration and transfer remain unresolved; customer evidence is absent. No
+background study remains running after this checkpoint.
+
+## Historical checkpoint: executed NCATS development pilot
 
 Checkout `C:\Users\User\Desktop\myProject\curaloop-rl`, branch
 `feat/real-assay-development-20261104`. Implementation `a797077`; frozen config

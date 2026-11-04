@@ -1,5 +1,11 @@
 # Current-state audit
 
+> Latest local research: [108-run fresh-environment reproduction](../03_research/NCATS_REPRODUCTION_V1.md)
+> passed exact scientific comparisons; a separately frozen
+> [54-run Gaussian comparator](../03_research/NCATS_GAUSSIAN_RESULTS_V1.md)
+> completed with no added pending-aware deadline hits. Neither is an independent
+> review or untouched final evaluation. The original pilot packet is unchanged.
+
 > Development update, 4 November 2026: [NCATS pilot results](../03_research/NCATS_DEVELOPMENT_RESULTS_V1.md)
 > record 108/108 completed runs on three correlated development endpoints, with
 > frozen controls, exact identities and retained null/unfavorable results. This

@@ -1,5 +1,11 @@
 # Research specifications
 
+Latest executable evidence: [fresh-venv reproduction](../docs/03_research/NCATS_REPRODUCTION_V1.md)
+matches all 108 original scientific traces, and the separately frozen
+[Gaussian amendment](../docs/03_research/NCATS_GAUSSIAN_RESULTS_V1.md) executed 54
+new development runs using the existing sklearn backend. Original source/data/
+run artifacts stay unchanged. The final study and learned transfer remain open.
+
 ## Current executable foundation
 
 The local Reviewed v2 continuation adds an **integer-time reference**, a small

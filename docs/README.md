@@ -2,7 +2,10 @@
 
 Start with [the master plan](../ACADEMIC_BUSINESS_MASTERPLAN.md). Active documentation is organized below. The manuscript contains a historical pilot and an explicitly unexecuted new study. Historical evidence and requirements_v3 remain reference snapshots.
 
-Current local work: [108-run NCATS development results](03_research/NCATS_DEVELOPMENT_RESULTS_V1.md),
+Current local work: [fresh-environment reproduction](03_research/NCATS_REPRODUCTION_V1.md),
+[Gaussian comparator results](03_research/NCATS_GAUSSIAN_RESULTS_V1.md),
+[Gaussian frozen protocol](03_research/NCATS_GAUSSIAN_PROTOCOL_V1.md),
+[108-run NCATS development results](03_research/NCATS_DEVELOPMENT_RESULTS_V1.md),
 [frozen development protocol](03_research/NCATS_DEVELOPMENT_PROTOCOL_V1.md),
 [foundation checkpoint](06_execution/FOUNDATION_CHECKPOINT.md),
 [integer reference contract](03_research/INTEGER_REFERENCE.md),

@@ -1,5 +1,11 @@
 # Implementation backlog
 
+Latest: [fresh-environment reproduction](../03_research/NCATS_REPRODUCTION_V1.md)
+PASS, all 108 scientific traces exact; [Gaussian comparator](../03_research/NCATS_GAUSSIAN_RESULTS_V1.md)
+54/54 complete, no pending-aware hit gain. ENG-06/06A now have a bounded sklearn
+GP adapter with explicit binary approximation and covariance tests. Full BayBE
+integration, calibrated uncertainty, final-study design and transfer remain open.
+
 Current development checkpoint: [NCATS results](../03_research/NCATS_DEVELOPMENT_RESULTS_V1.md).
 ENG-02/03 passed for the three declared development resources; ENG-06 is partial
 (six inexpensive controls executed, stronger comparator/uncertainty absent).

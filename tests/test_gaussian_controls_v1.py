@@ -1,3 +1,5 @@
+import json
+import warnings
 from dataclasses import replace
 
 import numpy as np
@@ -52,11 +54,12 @@ def test_binary_tanimoto_kernel_matches_set_similarity_and_is_psd():
 
 
 def test_pending_variance_equals_direct_augmented_gp_but_not_pending_labels():
-    gram = tanimoto_gram(np.array([[1, 0, 0], [0, 1, 0], [1, 1, 0], [0, 0, 1]]))
+    gram = tanimoto_gram(np.array([[1, 0, 0], [0, 1, 0], [1, 1, 0], [1, 0, 1]]))
     g = GaussianProcessRegressor(kernel=IndexedTanimoto(gram), optimizer=None, alpha=0.1)
     g.fit([[0], [1]], [0, 1])
     means, cov = g.predict([[2], [3]], return_cov=True)
     reduced = pending_variance(cov, 1)
+    assert reduced[0] < cov[0, 0]
     for invented_pending_label in (0.0, 1.0):
         augmented = GaussianProcessRegressor(
             kernel=IndexedTanimoto(gram), optimizer=None, alpha=0.1
@@ -154,3 +157,35 @@ def test_common_delay_pair_and_hidden_future_labels_boundary():
     altered = run_one(changed, cfg, 2, "common", "gp_ucb_blind")
     assert a["decisions"][0] == altered["decisions"][0]
     assert a["schedule_sha256"] == altered["schedule_sha256"]
+
+
+def test_amendment_ledger_retains_failures_and_prevents_repeat_or_tampering(tmp_path, monkeypatch):
+    from research.development import gaussian_runner_v1 as runner
+
+    cfg = json.loads(runner.CONFIG.read_text())
+    path = tmp_path / "config.json"
+    path.write_text(json.dumps(cfg))
+    monkeypatch.setattr(runner, "CONFIG", path)
+    monkeypatch.setattr(runner, "load_cohort", lambda *args: {})
+    calls = []
+
+    def fake(*args):
+        calls.append(args)
+        if len(calls) == 1:
+            warnings.warn("preserve amendment failure warning", UserWarning)
+            raise RuntimeError("constructed amendment failure")
+        return {"status": "COMPLETE", "metrics": {"new_hits": 0}}
+
+    monkeypatch.setattr(runner, "run_one", fake)
+    folder = tmp_path / "runs"
+    first = runner.execute(folder, "all")
+    assert len(calls) == len(first["attempts"]) == 54
+    failed_id = next(k for k, v in first["attempts"].items() if v["status"] == "FAILED")
+    data = json.loads((folder / (failed_id + ".json")).read_text())
+    assert data["warnings"] == ["preserve amendment failure warning"]
+    assert "constructed amendment failure" in data["traceback"] and data["attempt_wall_seconds"] > 0
+    assert runner.execute(folder, "all") == first and len(calls) == 54
+    (folder / (failed_id + ".json")).write_text("modified")
+    with pytest.raises(ValueError, match="artifact changed"):
+        runner.execute(folder, "all")
+    assert len(calls) == 54

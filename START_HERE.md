@@ -2,6 +2,12 @@
 
 ## Current local continuation
 
+Latest: the [fresh-environment reproduction](docs/03_research/NCATS_REPRODUCTION_V1.md)
+matched all 108 original scientific artifacts. The separate
+[54-run Gaussian-surrogate amendment](docs/03_research/NCATS_GAUSSIAN_RESULTS_V1.md)
+completed with no pending-aware hit gain. Both are same-implementer development
+evidence; the final study is still unfrozen.
+
 The local continuation has executed a frozen **108-run NCATS development pilot**
 on AhR, PPAR-gamma and p53. Read [actual results and limitations](docs/03_research/NCATS_DEVELOPMENT_RESULTS_V1.md)
 and [the foundation checkpoint](docs/06_execution/FOUNDATION_CHECKPOINT.md).
