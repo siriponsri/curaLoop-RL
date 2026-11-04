@@ -14,6 +14,12 @@ Repository artifacts remain English. Goal2 base is main commit `729e13b`.
 | 5 | Frozen held-out study, uncertainty/ablation analysis and independent reproduction | PROPOSED; NOT_STARTED |
 | 6 | Final manuscript/figures, author declarations, venue fit and approved submission within USD 300 | PROPOSED; NOT_STARTED; review drafts already exist |
 
+Detailed [Goal 3 proposal](GOAL_03_PROPOSAL_20261105.md), 5 November: source/family/
+split readiness plus a stronger method decision after Goal 2's failed usefulness
+test. It targets real held-out families and explicitly separates potency labels
+from sparse HTS. The proposed resource/access ceilings await owner approval;
+drafting this contract does not start extraction, label inspection or compute.
+
 The proposed ordering places a cheap mechanism/algorithm challenge before
 large-scale curation/training. It does not authorize those later goals. Goal 1
 completion means a reviewed research decision and testable plan, not proven
