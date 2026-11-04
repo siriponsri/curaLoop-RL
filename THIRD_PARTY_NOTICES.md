@@ -1,3 +1,5 @@
+> Academic/business documentation update: [current reference](docs/02_literature/REVIEW_METHOD.md) and [start here](START_HERE.md). Existing application instructions and attribution below are preserved. New study features are not installed by these documents.
+
 # Third-party notices
 
 ## Brand/documentation refresh - 2026-11-04
@@ -26,7 +28,7 @@ Source downloaded from https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/
 
 Changes: invalid structures excluded (7); canonical duplicate and conflicting-label checks; label-blind deterministic 1,200-record subset; canonical isomeric SMILES, Morgan 1024-bit radius-2 fingerprints and Murcko scaffolds calculated with RDKit. CA and CM remain positive and CI negative as defined by MoleculeNet. Original full raw CSV is not included. Source identifiers in this derivative are original zero-based CSV row indices, **not invented NSC numbers**.
 
-Source benchmark paper license and dataset license are distinct. No paper PDF is distributed here. The reference pack's unverified literature entries are preserved as references and are not newly certified by this implementation.
+Source benchmark paper license and dataset license are distinct. No paper PDF is distributed here. The original literature catalogue is preserved in the document archive. The active 28-source register now records inspected PDF versions and read levels; this is bibliographic verification, not certification of every source result or its underlying data rights.
 
 ## Software
 
@@ -75,3 +77,7 @@ dependency replacement, not an audit suppression. Real lint/typecheck/unit/build
 checks verify this project's usage. See the [minimatch advisory](https://github.com/advisories/GHSA-g3hv-75wg-m249)
 and [ESLint migration notes](https://eslint.org/docs/latest/use/migrate-to-10.0.0).
 Original license/copyright texts and runtime assets are preserved.
+
+## Version-2 supplied literature
+
+The public payload contains original review text, citations and PDF metadata, without the reading copies. The separate owner package includes the supplied HAL LIT-PCBA manuscript, ChemRxiv v3 and matching-title supplement, and BayBE publisher PDF unchanged. The HAL cover's authorization is not presented as a universal Creative Commons grant. The ChemRxiv cover and BayBE article state CC BY 4.0; retain attribution and check the specific onward-use context. No new upstream dataset license or commercial legal certification is inferred from a paper license.

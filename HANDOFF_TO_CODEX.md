@@ -1,6 +1,26 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
-## Current continuation: Reviewed v2 intake
+## Current checkpoint: local Reviewed v2 foundation
+
+Branch `feat/reviewed-v2-foundation-20261104`, based on `a866b13`. The owner-supplied
+Drive overlay resolved the missing-input gate: 132 included payload hashes and
+ZIP checks passed. The full/private PDF package was not downloaded. Current
+provenance and merge exceptions: [local integration](docs/07_audit/LOCAL_INTEGRATION.md).
+
+The next coherent engineering slice is complete: a separate versioned integer
+reference with deadline/accounting/privacy/recovery tests, 648 constructed
+fixtures / 3,888 ordering checks, and a one-resource registry guard. Final new
+tests: 42 PASS. Original 191 strict byte checks pass. All 50 recorded campaigns
+reconcile; three fresh two-assay historical regressions retain zero hits and
+2/2 Greedy fallback for each learned controller. No original scientific/UI code
+or evidence changed, no final study was frozen and no customer was contacted.
+
+[Current continuation](docs/CONTINUATION.md) and
+[foundation checkpoint](docs/06_execution/FOUNDATION_CHECKPOINT.md) identify exact
+evidence and next work. Keep continuation local. No push, GPU launch, paid service
+or external publication was performed. Earlier checkpoints below are historical.
+
+## Historical continuation: Reviewed v2 intake
 
 2026-11-04: local intake branch `docs/reviewed-v2-intake-20261104` starts from
 `2d287a170b39b0c07d02631ca027c2ba535c0df9`. Repository identity is verified.

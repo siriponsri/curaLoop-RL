@@ -1,3 +1,5 @@
+> Documentation update, 4 November 2026: [current programme](05_product/PRODUCT_REQUIREMENTS.md) and [documentation map](README.md). The detailed record below is retained from the inspected POC checkpoint. New research and commercial capabilities are specifications until implemented; prior test counts are historical execution, not new checks.
+
 # Web v0.2 design and functional contract
 
 Mode: **Operate**. Owner delegates implementation, with a precise supplied master prompt; no aesthetic approval round is inferred. Build is code-led and reuses the existing logo/data/font. The chosen form is a research operations journal: a stable tool rail, a quiet publication-like workspace, explicit campaign state and inspectable evidence. Brand constraints outrank alternative styling.

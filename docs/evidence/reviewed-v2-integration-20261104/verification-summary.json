@@ -1,0 +1,65 @@
+{
+  "status": "PASS_FOR_LOCAL_FOUNDATION_SCOPE",
+  "recorded_at_utc": "2026-11-04T07:40:21.172530+00:00",
+  "local_date": "2026-11-04",
+  "timezone": "Asia/Bangkok",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10",
+  "branch": "feat/reviewed-v2-foundation-20261104",
+  "input_base_commit": "a866b138b317772509b61b0235a502503ba13f78",
+  "published_main_unchanged": "2d287a170b39b0c07d02631ca027c2ba535c0df9",
+  "research_reference_source_sha256": "99e1cd2a76d2842edc8533a910fdc6ce13881e21203c83b4689336440067b4e3",
+  "research_source_hash_definition": "SHA256 of default json.dumps(sort_keys=True) over relative research/*.py paths and universal-newline UTF-8 source text",
+  "new_tests_passed": 42,
+  "new_tests_failed": 0,
+  "new_tests_skipped": 0,
+  "new_test_evidence": "foundation-tests-console.xml",
+  "test_collection_count": 178,
+  "all_178_executed": false,
+  "enumerated_fixtures": 648,
+  "ordering_checks": 3888,
+  "strict_protected_byte_matches": 191,
+  "package_manifest_raw_matches": 481,
+  "package_manifest_git_verified_crlf_only": 30,
+  "incoming_payload_hashes_verified": 132,
+  "independent_external_archive_hash_supplied": false,
+  "active_local_markdown_links_checked": 258,
+  "historical_ledgers_reconciled": 50,
+  "fresh_two_assay_regressions": [
+    {
+      "policy": "greedy",
+      "new_hits": 0,
+      "controller_requests": 0,
+      "controller_fallback_requests": 0
+    },
+    {
+      "policy": "q_learning",
+      "new_hits": 0,
+      "controller_requests": 2,
+      "controller_fallback_requests": 2
+    },
+    {
+      "policy": "contextual_bandit",
+      "new_hits": 0,
+      "controller_requests": 2,
+      "controller_fallback_requests": 2
+    }
+  ],
+  "registry_tasks": 1,
+  "registry_new_assay_tasks": 0,
+  "registry_role": "regression_only",
+  "ruff": "PASS: src app api scripts tests research tools",
+  "readme_preview": "PASS: local relative targets and light/dark/mobile; no new app capture",
+  "preserved_failed_checks": "research-tests.xml and test-portability.json document the corrected ordering/import-entry issues",
+  "not_run": [
+    "new assay ingestion/analog audit",
+    "empirical H1/H3 or multi-target study",
+    "final protocol freeze",
+    "new training",
+    "private PDF/full package download/reverification",
+    "customer validation/outreach",
+    "GPU allocation/access/lock or launch",
+    "full application suites/browser recapture",
+    "push/deployment/publication"
+  ]
+}

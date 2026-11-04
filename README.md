@@ -13,6 +13,7 @@
   <a href="docs/manual/CuraLoop-RL-User-Manual-EN.pdf"><strong>English user manual (PDF)</strong></a> &nbsp;·&nbsp;
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
   <a href="#architecture">Architecture</a> &nbsp;·&nbsp;
+  <a href="START_HERE.md">Research programme</a> &nbsp;·&nbsp;
   <a href="docs/EVALUATION.md">Scientific evaluation</a>
 </p>
 
@@ -58,6 +59,21 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 | **Benchmark arena** | Execute matched independent policies, inspect actual fallback usage and reopen saved comparisons. |
 | **Research evidence** | Inspect provenance and limitations; export, resume and recover saved campaigns or revisions. |
 | **Guided presentation** | Tell the project's story in 5-7 minutes using the same live campaign. |
+
+## Research and R&D pilot programme
+
+Reviewed v2 adds a [master plan](ACADEMIC_BUSINESS_MASTERPLAN.md),
+[literature review](docs/02_literature/CRITICAL_REVIEW.md),
+[proposed study protocol](docs/03_research/PROTOCOL.md) and
+[R&D pilot offer](docs/04_business/PILOT_OFFER.md).
+The research asks when pending work, capacity and a simulated deadline change
+delivered-hit discovery. Multi-target performance, controller transfer and
+customer value require new evidence; the current HIV pilot remains historical.
+
+Read [START_HERE](START_HERE.md) for the document order and
+[the documentation map](docs/README.md) for the complete programme.
+The versioned research reference remains separate from the application engine;
+new research configuration files are not inputs to the existing UI or CLI.
 
 ## Quick start
 

@@ -1,3 +1,5 @@
+> Documentation update, 4 November 2026: [current programme](05_product/PRODUCT_REQUIREMENTS.md) and [documentation map](README.md). The detailed record below is retained from the inspected POC checkpoint. New research and commercial capabilities are specifications until implemented; prior test counts are historical execution, not new checks.
+
 # CuraLoop-RL brand assets
 
 ## Current v2 artwork - 2026-11-04

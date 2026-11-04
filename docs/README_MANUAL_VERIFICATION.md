@@ -1,3 +1,5 @@
+> Documentation update, 4 November 2026: [current programme](07_audit/PACKAGE_AUDIT.md) and [documentation map](README.md). The detailed record below is retained from the inspected POC checkpoint. New research and commercial capabilities are specifications until implemented; prior test counts are historical execution, not new checks.
+
 # README, branding and English manual verification
 
 Date: 2026-11-04 (Asia/Bangkok). Base: `19134d597c4e1f232864d21a920a06c0693cf737`.

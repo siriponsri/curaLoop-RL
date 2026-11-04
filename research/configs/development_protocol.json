@@ -1,0 +1,95 @@
+{
+  "schema_version": "curaloop.research-protocol.draft-1.1",
+  "status": "SPECIFICATION_NOT_EXECUTABLE_BY_CURRENT_CLI",
+  "protocol_id": "pending-aware-screening-development-v1.1",
+  "primary_hypothesis": "H1",
+  "primary_endpoint": "new_active_labels_delivered_by_deadline",
+  "final_freeze": {
+    "status": "NOT_FROZEN",
+    "task_manifest_sha256": null,
+    "material_effect_hits": null,
+    "final_seed_list": null
+  },
+  "development_pilot": {
+    "tasks_target_count": [
+      3,
+      5
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "capacity_values": [
+      1,
+      5
+    ],
+    "cost": "unit",
+    "duration_values_steps": [
+      1,
+      2,
+      4
+    ]
+  },
+  "methods": {
+    "implemented_legacy": [
+      "random",
+      "greedy",
+      "uncertainty",
+      "q_learning",
+      "contextual_bandit"
+    ],
+    "planned": [
+      "frozen_model_greedy",
+      "nearest_delivered_hit_similarity",
+      "diversity",
+      "explicit_ensemble_uncertainty",
+      "fixed_explore_exploit_mixture",
+      "matched_pending_blind_greedy",
+      "matched_pending_similarity_penalty",
+      "objective_matched_async_probabilistic_comparator",
+      "generalizing_controller"
+    ]
+  },
+  "matching": [
+    "task_pool",
+    "initial_label_ids",
+    "predictor",
+    "candidate_schedule_key",
+    "budget",
+    "capacity",
+    "deadline"
+  ],
+  "uncertainty": {
+    "unit": "task_or_family_then_seed",
+    "bootstrap_draws_proposed": 10000,
+    "rng_seed": 20261104
+  },
+  "paid_compute_authorized": false,
+  "prospective_lab_work": false,
+  "documentation_revision": "2.0-full-text-review",
+  "initialization_regimes": {
+    "primary": "uniform_without_label_inspection_including_zero_active_starts",
+    "sensitivity": "conditional_one_known_active_then_uniform_remaining",
+    "initial_labels_count_as_new_hits": false,
+    "initial_labels_count_against_new_assay_budget": false
+  },
+  "metrics": {
+    "primary": "new_active_labels_delivered_at_or_before_deadline",
+    "enrichment_definitions_document": "docs/02_literature/METRIC_AND_INITIALIZATION_CONCORDANCE.md",
+    "undefined_values": "null_with_reason",
+    "hidden_pool_prevalence_policy_visible": false
+  },
+  "compute": {
+    "policy_compute_logged_separately": true,
+    "policy_compute_in_primary_simulated_clock": false,
+    "resource_cap_final": null
+  },
+  "source_resolution_gates": [
+    "assay_release_and_phenotype_mapping",
+    "R05_exact_MI_code_direction_if_reproduced",
+    "associated_journal_version_if_attributed"
+  ]
+}

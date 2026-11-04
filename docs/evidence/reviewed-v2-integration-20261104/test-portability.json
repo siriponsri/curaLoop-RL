@@ -1,0 +1,28 @@
+{
+  "scope": "New repository-only test/tool entry points",
+  "initial_boundary_suite": {
+    "passed": 28,
+    "failed": 1,
+    "evidence": "research-tests.xml",
+    "cause": "The test assumed case-sensitive filename order; Windows ordering differs",
+    "repair": "Check the intended set of active files; ignored/private/dependency exclusion remains required"
+  },
+  "direct_pytest_collection": {
+    "initial_status": "FAIL",
+    "initial_exit_code": 1,
+    "initial_import_errors": 3,
+    "cause": "Repository-only research/tools were not on sys.path when using pytest.exe directly",
+    "repair": "tests/conftest.py adds the repository root, matching python -m pytest",
+    "final_status": "PASS",
+    "final_evidence": "foundation-tests-console.xml",
+    "passed": 42,
+    "failed": 0
+  },
+  "all_test_collection": {
+    "status": "PASS",
+    "exit_code": 0,
+    "collected": 178,
+    "all_178_executed_here": false,
+    "note": "One inherited Starlette/httpx deprecation warning was reported during collection"
+  }
+}

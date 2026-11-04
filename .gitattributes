@@ -20,3 +20,7 @@ docs/diagrams/** -text whitespace=cr-at-eol
 docs/manual/*.pdf -text -diff
 docs/evidence/readme-manual-v1/** whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
 docs/evidence/reviewed-v2-intake-20261104/** whitespace=cr-at-eol
+docs/evidence/reviewed-v2-integration-20261104/** whitespace=cr-at-eol
+# Preserve the actual pytest failure rendering, including its indented blank line.
+docs/evidence/reviewed-v2-integration-20261104/research-tests.xml whitespace=-blank-at-eol,cr-at-eol
+docs/archive/pre_academic_20261104/** -text whitespace=cr-at-eol

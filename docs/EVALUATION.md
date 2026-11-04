@@ -1,3 +1,5 @@
+> Documentation update, 4 November 2026: [current programme](03_research/PROTOCOL.md) and [documentation map](README.md). The detailed record below is retained from the inspected POC checkpoint. New research and commercial capabilities are specifications until implemented; prior test counts are historical execution, not new checks.
+
 # Evaluation protocol actually used
 
 Historical dataset: label-blind 1200-molecule MoleculeNet HIV subset from a frozen source CSV hash. Common initial 48 labeled molecules selected uniformly without consulting labels; preexisting sunk cost. Seeds 0–9 are paired across Random, Greedy, Uncertainty, frozen Q-learning and frozen contextual bandit. Cost=1, B=30, concurrent capacity=5, delay=2, no jitter/missing in the primary benchmark. No tuning on these results is claimed; results are exploratory engineering evidence on one assay.

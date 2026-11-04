@@ -1,3 +1,5 @@
+> Academic/business documentation update: [current reference](docs/05_product/PRODUCT_REQUIREMENTS.md) and [start here](START_HERE.md). Existing application instructions and attribution below are preserved. New study features are not installed by these documents.
+
 ---
 name: CuraLoop-RL
 description: A local scientific workbench with the restraint and traceability of a research operations journal.
@@ -379,3 +381,7 @@ The accompanying finish review and browser record identify frontend build `2b8c8
 - Don't hide provenance or limitations to simplify a composition, and don't create page-level horizontal overflow.
 - Don't claim complete localization, all controls at 44 px, a universal 16 px minimum or a universal eight-point spacing scale; those are not the implemented system.
 - Don't claim Windows, Safari, physical-device, manual screen-reader or measured performance validation from the recorded Chromium/Linux localhost review.
+
+## Reviewed research extension contracts
+
+New task records must retain release, assay ID and phenotype evidence. New run records identify initialization regime, acquisition direction, update schedule, metric version and compute-clock convention. Existing binary-hit replay and the proposed deadline study must not inherit a best-value reaction-yield objective without adaptation. These are planned contracts and do not change current API behavior.

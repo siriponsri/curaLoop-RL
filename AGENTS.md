@@ -1,28 +1,38 @@
-# AGENTS.md — rules for future work on the generated source repository
+# Agent instructions: CuraLoop-RL
 
-## Project identity
-Independent personal pharmaceutical screening decision-support portfolio. It is not an official GPO product, regulated lab tool or validated Digital Twin.
+## Project and current authorization
 
-## Core invariants
-- Never pass private historical labels to policy observations or UI before a delivered assay event.
-- Do not equate predicted candidates with confirmed active hits.
-- Do not overspend, double-charge, count pending results or share results between independent comparator runs.
-- Retain deterministic seeds, data-source provenance and run manifest in every experiment.
-- No model, RL, claims, paper files or UI screenshots presented as verified without actual evidence.
-- Never include confidential company/internal information or unreviewed third-party binary/data.
+Independent molecular-screening research and an R&D pilot programme. The owner selected public-data-first, solo computational research and an R&D-team pilot on 4 November 2026. Keep active repository content English. Read `START_HERE.md`, `GOAL.md`, `PLAN.md`, the claim ledger and protocol before material work. This package prepares files for the owner's main update; it does not itself publish, deploy or spend.
 
-## Engineering practice
-- CPU/Windows first; keep an offline synthetic demo usable after each commit.
-- Run tests and demo before calling a milestone complete; report actual pass/fail counts and NOT_RUN.
-- Small changes with type hints and precise error messages, no broad rewrites of stable code.
-- Do not push/publish/deploy/change access or pay for services without explicit owner authorization.
-- Follow attached `docs/ACCEPTANCE_TEST_MATRIX.md` and audit docs for next gates.
+Current continuation remains local. The owner separately authorized dr-train use
+if necessary on 4 November 2026; check permitted host access, live allocation,
+active jobs and the shared OS GPU lock at launch. Do not copy credentials or
+import another project's paid allowance. No GPU is required for toy validation.
 
-## Local web application
-- Primary UI: frontend/ React/TypeScript; API: api/main.py; preserve app/streamlit_app.py fallback.
-- Reuse RunService/compare/export; do not duplicate scientific inference/accounting in JavaScript.
-- Keep source-origin wording conditional for every live historical/synthetic result surface; recorded HIV evidence has its own label.
-- Serve loopback only and one Uvicorn worker. Document durable public SQLite snapshots, revisions, interrupted comparisons and validated single-run resume. Streamlit remains session-memory-local.
-- When rebuilding frontend, update and commit frontend/dist; record actual build hash and fresh browser evidence for material UI changes.
-- Run locked clean-env Python tests, frontend build/lint/tests, and actual browser checks. Preserve resource/benchmark bytes unless a separately documented scientific version change is intended.
-- GitHub main publication to siriponsri/curaLoop-RL was explicitly authorized on 2026-11-03. No deployment, paid infrastructure, visibility/access change or organizational integration is implied.
+## Work autonomously within scope
+
+Proceed with public-source research, documentation and reversible local implementation without routine approval gates. Preserve a usable POC. Ask only for unavailable data/rights, concrete spending, real participant/lab involvement, external communications/publication or a material scope decision. Continue independent work when one input is missing. Never send customer or editorial messages without explicit authorization. Do not import spending approvals from another project.
+
+## Scientific invariants
+
+- Never expose hidden outcomes to policy/UI before delivery, including via schedules, preprocessing or caches.
+- Count only delivered new active assay labels. Keep seeds, predictions, pending work and missingness distinct.
+- Reserve/settle cost once; keep independent policy states and matched operational realizations.
+- Preserve existing resource, checkpoint, benchmark and evidence bytes. A scientific change needs a new version and output location.
+- Report learned-action and fallback shares. A checkpoint or equal baseline result is not transfer evidence.
+- Keep development/validation/final task roles separate. Seeds are repetitions within tasks, not new targets.
+- Describe planned and implemented capabilities separately; retain unfavorable results and failures.
+
+## Engineering
+
+Use the Python engine/service for scientific transitions; do not duplicate accounting in frontend code. Preserve the React/FastAPI primary UI, committed build and Streamlit fallback. Keep loopback and one server/worker until a tested multi-user design exists. No arbitrary-code upload. Validate restoration, pending privacy and recovery for state/schema changes. Rebuild frontend/dist and obtain browser evidence when UI changes materially.
+
+Run checks appropriate to the change. Documentation-only updates require link/reference/provenance checks, not a claim that the entire runtime suite was rerun. Scientific changes need meaningful scheduler/leakage tests, matched comparisons and actual study artifacts. Report PASS/FAIL/NOT_RUN with exact environment and evidence.
+
+## Research and commercial honesty
+
+The historical HIV benchmark used complete Greedy fallback for both controllers. New multi-target, deadline and commercial benefits remain unvalidated. Do not manufacture results, customers, endorsements, affiliations, DOI/ORCID values or revenue. Preserve MIT and third-party notices. Keep customer-private data and reading-room PDFs outside public Git. Choose the paper route from evidence rather than forcing RL superiority.
+
+## Version-2 full-text review requirements
+
+Before new task or comparator implementation, read `docs/02_literature/FULL_TEXT_REVIEW_ADDENDUM.md`, `VERSION_DISCREPANCIES.md`, `METRIC_AND_INITIALIZATION_CONCORDANCE.md` and `docs/03_research/BASELINE_SPECIFICATION.md`. Preserve uniform zero-hit starts; keep conditional-known-hit sensitivity separate. Do not silently change source phenotype labels or MI optimization direction. Exact data/code evidence must resolve the applicable gate. Frozen-model and nearest-hit controls are required; pending duplicate exclusion is shared by every arm. Keep policy compute distinct from simulated assay time and preserve NOT_RUN states until execution evidence exists.

@@ -1,5 +1,10 @@
 # Reviewed v2 intake and research readiness
 
+> Historical intake checkpoint. The missing-input gate was subsequently resolved
+> through the owner's new Drive source. See [local integration](07_audit/LOCAL_INTEGRATION.md)
+> and [foundation progress](06_execution/FOUNDATION_CHECKPOINT.md). The earlier
+> search, access denial and unverified state below are preserved as dated history.
+
 Date: 2026-11-04 (Asia/Bangkok).
 Status: **BLOCKED: required Reviewed v2 files are unavailable locally.**
 

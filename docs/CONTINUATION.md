@@ -1,4 +1,52 @@
-# Reviewed v2 continuation intake
+# Reviewed v2 local foundation checkpoint
+
+Date: 2026-11-04 (Asia/Bangkok).
+Checkout: `C:\Users\User\Desktop\myProject\curaloop-rl`.
+Branch: `feat/reviewed-v2-foundation-20261104`; base intake `a866b13`, published
+base `2d287a1`. Git HEAD identifies the later local foundation commit/receipt.
+Main was not advanced or pushed by this continuation.
+
+The owner's new Drive source resolved the missing-input gate. The docs overlay
+size is 385,445 bytes, SHA256
+`6d6f0eddc6fe0b6a70c268cc30ccec555b225cce2d9a65e9e83bbf68c1f9ee6f`.
+All 132 payload files matched its included manifest; no independent external
+archive digest was supplied. The full 148 MB/private PDF package was not downloaded.
+The original Library denial and earlier blocked intake remain preserved history.
+
+Completed: reviewed document integration with explicit merge exceptions; separate
+integer-time research reference; known-HIV regression registry and identity/gate
+validator; public demo/evidence sheet and blank discovery worksheet. README logo,
+diagrams, screenshots and illustrated English PDF remain available.
+
+Actual checks: 42 new tests PASS; 648 constructed fixtures / 3,888 serial ordering
+checks PASS; 50 preserved historical ledgers reconcile; three fresh independent
+two-assay HIV regressions PASS (zero hits, 2/2 fallback for each learned controller).
+Strict original byte preservation remains 191/191. The separate package manifest
+has 481 raw-byte matches plus 30 existing CRLF-only matches proven against the
+original Git blobs. No protected bytes were rewritten. Ruff passed. Detailed
+link/reference/provenance/assembly/economic checks are in the evidence packet.
+
+No old engine/API/UI/build, model, dataset, reward or result changed. The root
+SOURCE_COMMIT still identifies the unchanged application content; the research
+reference has its own version/source digest. New empirical H1/H3, multi-target
+ingestion/study, controller training and customer validation remain NOT_RUN.
+
+Next exact action: RES-01 comparator/source refresh, then exact permitted assay
+releases and identity/family audits for ENG-02/03, followed by matched baselines
+and backend feasibility before the development pilot. Do not mark the final
+protocol frozen, infer transfer, or convert toy timing into real savings.
+Read [foundation checkpoint](06_execution/FOUNDATION_CHECKPOINT.md),
+[reference contract](03_research/INTEGER_REFERENCE.md) and
+[integration record](07_audit/LOCAL_INTEGRATION.md) before extending the code.
+
+Work remains local. No GPU, paid API, outreach, push, deployment or submission
+occurred. Remote access/allocation/conflict/OS-lock checks remain NOT_RUN and are
+required at any future dr-train launch. No owner process was stopped. No agent
+work continues in the background after the turn ends.
+
+---
+
+# Historical Reviewed v2 continuation intake
 
 Date: 2026-11-04 (Asia/Bangkok). Status: **BLOCKED: required v2 package input**.
 Checkout: `C:\Users\User\Desktop\myProject\curaloop-rl`.

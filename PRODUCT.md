@@ -45,3 +45,15 @@ Responsive English labels, keyboard focus, semantic native controls and accessib
 ## Delegated decisions
 
 The explicit owner request delegates implementation and QA autonomously and supplies a precise visual/functional master prompt. No additional style approval interview is needed. Session execution is code-led because the requested deliverable is a working localhost application with real evidence; no permanent workflow preference is inferred.
+
+## Reviewed v2 research and pilot direction
+
+CuraLoop-RL is a local workbench for auditable molecular-screening replay. The implemented product supports public historical/synthetic tasks, batch selection, delayed delivery, budget accounting, independent comparisons and export/recovery. It uses classical predictors and frozen synthetic-trained controllers. It does not currently ingest live laboratory results or run a multi-user commercial service.
+
+The next research product is a reproducible study of pending-aware selection under deadlines and capacity limits. The first commercial hypothesis is an R&D pilot that combines local installation, permitted-data mapping, matched historical replay and an evidence report. New data adapters, scheduling extensions and customer workflows are planned work until tested.
+
+Use [product requirements](docs/05_product/PRODUCT_REQUIREMENTS.md) for implementation state, [business strategy](docs/04_business/STRATEGY.md) for buyer hypotheses and [pilot offer](docs/04_business/PILOT_OFFER.md) for deliverables. Scientific and commercial outcomes have separate evidence requirements. The master plan and claim ledger govern all public descriptions.
+
+## Updated pilot positioning
+
+The initial commercial hypothesis is scoped data-readiness, historical replay and report/handover work. Existing backtesting and asynchronous frameworks are acknowledged alternatives. Evaluate a pinned local adapter before building more acquisition infrastructure, and measure buyer workflow benefit separately from simulated assay metrics. No current customer or ROI evidence is added by the full-text review.

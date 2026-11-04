@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "environment": "Linux Python standard library; native Windows/PowerShell NOT_RUN",
+  "base_commit": "2d287a170b39b0c07d02631ca027c2ba535c0df9",
+  "tested_manifest_sha256": "728ce7387c44eb5da4fb37b75a1360b6bbd1f13f27cd5827166d23fdd566787c",
+  "tests": [
+    {
+      "test": "reject_wrong_origin",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "stdout": "",
+      "stderr": "Apply stopped: Origin does not match siriponsri/curaLoop-RL. No files changed.",
+      "pass": true
+    },
+    {
+      "test": "dry_run_exact_clean_base",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout": "{\n  \"status\": \"DRY_RUN_PASS\",\n  \"files\": 122,\n  \"changed\": false\n}",
+      "stderr": "",
+      "pass": true
+    },
+    {
+      "test": "apply_with_backup_and_checksums",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout": "{\n  \"status\": \"APPLIED\",\n  \"files\": 122,\n  \"backup\": \"/workspace/scratch/6b95115884a9/work/curaloop-docs-backup-20261104-103335-7663e270\",\n  \"deleted_files\": 0,\n  \"commit_or_push_performed\": false\n}",
+      "stderr": "",
+      "pass": true
+    },
+    {
+      "test": "validate_applied_checkout",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"source_commit\": \"2d287a170b39b0c07d02631ca027c2ba535c0df9\",\n  \"checks\": {\n    \"protected_files\": 511,\n    \"archived_originals\": 27,\n    \"active_markdown_files\": 83,\n    \"active_local_links\": 163,\n    \"active_words\": 48102,\n    \"references\": 28,\n    \"verified_private_pdf_records\": 25,\n    \"link_only_records\": 3,\n    \"economic_scenarios\": 3,\n    \"declarative_configs\": 2,\n    \"historical_policy_means\": 5\n  },\n  \"failures\": [],\n  \"not_run\": [\n    \"new scientific study\",\n    \"new controller training\",\n    \"application Python/frontend/browser suites\",\n    \"customer validation\",\n    \"journal submission\",\n    \"remote Git push\",\n    \"native Windows application of overlay\"\n  ]\n}",
+      "stderr": "",
+      "pass": true
+    },
+    {
+      "test": "git_diff_whitespace",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "pass": true
+    },
+    {
+      "test": "reject_existing_changes",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "stdout": "",
+      "stderr": "Apply stopped: Existing owner changes detected. Preserve/review them before applying.",
+      "pass": true
+    }
+  ],
+  "resolved_issue": "CSV newline normalization corrected before this final application check; archived originals unchanged."
+}

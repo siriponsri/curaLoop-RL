@@ -1,3 +1,5 @@
+> Documentation update, 4 November 2026: [current programme](05_product/VERIFICATION.md) and [documentation map](README.md). The detailed record below is retained from the inspected POC checkpoint. New research and commercial capabilities are specifications until implemented; prior test counts are historical execution, not new checks.
+
 > Historical release record (2026-11-03). Statements below describe that
 > execution, including its publication failure and unrun Windows checks.
 > The original remote now has `main` (verified 2026-11-04). See

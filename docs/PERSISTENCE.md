@@ -1,3 +1,5 @@
+> Documentation update, 4 November 2026: [current programme](05_product/OPERATOR_GUIDE.md) and [documentation map](README.md). The detailed record below is retained from the inspected POC checkpoint. New research and commercial capabilities are specifications until implemented; prior test counts are historical execution, not new checks.
+
 # Local persistence and recovery
 
 The primary web app uses standard-library SQLite for one local owner, one active

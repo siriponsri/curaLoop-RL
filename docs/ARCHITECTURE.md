@@ -1,3 +1,5 @@
+> Documentation update, 4 November 2026: [current programme](05_product/ARCHITECTURE.md) and [documentation map](README.md). The detailed record below is retained from the inspected POC checkpoint. New research and commercial capabilities are specifications until implemented; prior test counts are historical execution, not new checks.
+
 # Implementation architecture / design decisions
 
 `domain.py` defines frozen dataclasses for public candidates, Scenario, PolicyObservation, ExperimentRequest, ExperimentResult, Selection and Event. `_oracle.py` holds private labels and refuses unregistered, early or repeated deliveries. `_datasets.py` loads the attributed historical replay resource in the simulator process only.

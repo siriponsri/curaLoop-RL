@@ -1,0 +1,34 @@
+{
+  "schema_version": "curaloop.research.task-registry.v1",
+  "status": "REGRESSION_ONLY_NO_NEW_ASSAY_TASKS",
+  "records": [
+    {
+      "task_id": "hiv_moleculenet_replay_v1",
+      "source_url": "https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/HIV.csv",
+      "dataset_sha256": "7ed3d7b1b6c49a41e4e1558683bd0ddcaffe9c4a55b84f0c7162351ae94de107",
+      "assay_endpoint": "NCI_DTP_HIV_active_CA_or_CM_vs_CI",
+      "assay_id": "NCI_DTP_HIV_active_CA_or_CM_vs_CI",
+      "data_rights_status": "LOCAL_USE_REVIEWED",
+      "controller_role": "regression_only",
+      "source_release": "curaloop-hiv-1.0.0",
+      "functional_phenotype": "Historical NCI DTP HIV antiviral-screen activity; not clinical efficacy",
+      "target_family": "historical_HIV_regression",
+      "label_mapping": {"CA": true, "CM": true, "CI": false},
+      "label_mapping_status": "RESOLVED_WITH_SOURCE_EVIDENCE",
+      "label_mapping_evidence": "src/curaloop/resources/hiv_manifest.json:label_semantics",
+      "preprocessing_version": "curaloop-hiv-1.0.0; original RDKit preparation unchanged",
+      "source_ascertainment": "Label-blind sample of 1,200 valid source rows; no activity stratification",
+      "source_discrepancy_ids": [],
+      "initialization_regimes": ["uniform"],
+      "exclusions": [{"reason": "Invalid source SMILES", "count": 7, "scope": "Original full source preparation"}]
+    }
+  ],
+  "local_resource_files": {
+    "hiv_moleculenet_replay_v1": "src/curaloop/resources/hiv_replay_v1.json.gz"
+  },
+  "rights_provenance": "Existing frozen manifest and third-party notices only; no new file-level license or legal clearance was performed here",
+  "candidate_sources": [
+    {"name": "LIT-PCBA", "state": "NOT_INGESTED", "gates": ["Exact release and file-level use terms", "Assay/phenotype mapping", "Canonical/analog overlap and family roles"]},
+    {"name": "TDC HTS additional tasks", "state": "NOT_INGESTED", "gates": ["Task-specific source/version and use terms", "Endpoint eligibility and independent task/family roles"]}
+  ]
+}

@@ -1,0 +1,484 @@
+{
+  "status": "PASS",
+  "schema_version": "curaloop.research.integer-events.v1",
+  "reference_source_sha256": "99e1cd2a76d2842edc8533a910fdc6ce13881e21203c83b4689336440067b4e3",
+  "source_commit": "a866b138b317772509b61b0235a502503ba13f78",
+  "working_tree_dirty": true,
+  "python": "3.12.10",
+  "scope": "Constructed synthetic scheduler diagnostics only; no biological or policy-superiority inference",
+  "diagnostic_wall_seconds": 0.2766384999267757,
+  "common_delay_without_deadline": [
+    {
+      "common_duration": 0,
+      "selected_ids": [
+        "a",
+        "b"
+      ],
+      "metrics": {
+        "time": 0,
+        "new_hits": 2,
+        "seed_hits": 0,
+        "delivered": 2,
+        "missing": 0,
+        "pending": 0,
+        "spent": 2,
+        "reserved": 0,
+        "uncommitted": 0,
+        "accepted_exposure": 2,
+        "time_discovery_area": 0
+      },
+      "events": [
+        {
+          "sequence": 0,
+          "time": 0,
+          "kind": "REQUEST_ACCEPTED",
+          "candidate_id": "a",
+          "request_id": "r000000",
+          "cost": 1,
+          "active": null
+        },
+        {
+          "sequence": 1,
+          "time": 0,
+          "kind": "RESULT_DELIVERED",
+          "candidate_id": "a",
+          "request_id": "r000000",
+          "cost": 1,
+          "active": true
+        },
+        {
+          "sequence": 2,
+          "time": 0,
+          "kind": "REQUEST_ACCEPTED",
+          "candidate_id": "b",
+          "request_id": "r000001",
+          "cost": 1,
+          "active": null
+        },
+        {
+          "sequence": 3,
+          "time": 0,
+          "kind": "RESULT_DELIVERED",
+          "candidate_id": "b",
+          "request_id": "r000001",
+          "cost": 1,
+          "active": true
+        }
+      ]
+    },
+    {
+      "common_duration": 1,
+      "selected_ids": [
+        "a",
+        "b"
+      ],
+      "metrics": {
+        "time": 2,
+        "new_hits": 2,
+        "seed_hits": 0,
+        "delivered": 2,
+        "missing": 0,
+        "pending": 0,
+        "spent": 2,
+        "reserved": 0,
+        "uncommitted": 0,
+        "accepted_exposure": 2,
+        "time_discovery_area": 1
+      },
+      "events": [
+        {
+          "sequence": 0,
+          "time": 0,
+          "kind": "REQUEST_ACCEPTED",
+          "candidate_id": "a",
+          "request_id": "r000000",
+          "cost": 1,
+          "active": null
+        },
+        {
+          "sequence": 1,
+          "time": 1,
+          "kind": "TIME_ADVANCED",
+          "candidate_id": null,
+          "request_id": null,
+          "cost": 0,
+          "active": null
+        },
+        {
+          "sequence": 2,
+          "time": 1,
+          "kind": "RESULT_DELIVERED",
+          "candidate_id": "a",
+          "request_id": "r000000",
+          "cost": 1,
+          "active": true
+        },
+        {
+          "sequence": 3,
+          "time": 1,
+          "kind": "REQUEST_ACCEPTED",
+          "candidate_id": "b",
+          "request_id": "r000001",
+          "cost": 1,
+          "active": null
+        },
+        {
+          "sequence": 4,
+          "time": 2,
+          "kind": "TIME_ADVANCED",
+          "candidate_id": null,
+          "request_id": null,
+          "cost": 0,
+          "active": null
+        },
+        {
+          "sequence": 5,
+          "time": 2,
+          "kind": "RESULT_DELIVERED",
+          "candidate_id": "b",
+          "request_id": "r000001",
+          "cost": 1,
+          "active": true
+        }
+      ]
+    },
+    {
+      "common_duration": 4,
+      "selected_ids": [
+        "a",
+        "b"
+      ],
+      "metrics": {
+        "time": 8,
+        "new_hits": 2,
+        "seed_hits": 0,
+        "delivered": 2,
+        "missing": 0,
+        "pending": 0,
+        "spent": 2,
+        "reserved": 0,
+        "uncommitted": 0,
+        "accepted_exposure": 2,
+        "time_discovery_area": 4
+      },
+      "events": [
+        {
+          "sequence": 0,
+          "time": 0,
+          "kind": "REQUEST_ACCEPTED",
+          "candidate_id": "a",
+          "request_id": "r000000",
+          "cost": 1,
+          "active": null
+        },
+        {
+          "sequence": 1,
+          "time": 4,
+          "kind": "TIME_ADVANCED",
+          "candidate_id": null,
+          "request_id": null,
+          "cost": 0,
+          "active": null
+        },
+        {
+          "sequence": 2,
+          "time": 4,
+          "kind": "RESULT_DELIVERED",
+          "candidate_id": "a",
+          "request_id": "r000000",
+          "cost": 1,
+          "active": true
+        },
+        {
+          "sequence": 3,
+          "time": 4,
+          "kind": "REQUEST_ACCEPTED",
+          "candidate_id": "b",
+          "request_id": "r000001",
+          "cost": 1,
+          "active": null
+        },
+        {
+          "sequence": 4,
+          "time": 8,
+          "kind": "TIME_ADVANCED",
+          "candidate_id": null,
+          "request_id": null,
+          "cost": 0,
+          "active": null
+        },
+        {
+          "sequence": 5,
+          "time": 8,
+          "kind": "RESULT_DELIVERED",
+          "candidate_id": "b",
+          "request_id": "r000001",
+          "cost": 1,
+          "active": true
+        }
+      ]
+    }
+  ],
+  "heterogeneous_deadline": {
+    "slow_first": {
+      "events": [
+        {
+          "active": null,
+          "candidate_id": "a",
+          "cost": 1,
+          "kind": "REQUEST_ACCEPTED",
+          "request_id": "r000000",
+          "sequence": 0,
+          "time": 0
+        },
+        {
+          "active": null,
+          "candidate_id": null,
+          "cost": 0,
+          "kind": "TIME_ADVANCED",
+          "request_id": null,
+          "sequence": 1,
+          "time": 2
+        }
+      ],
+      "journal": [
+        {
+          "action": "submit",
+          "ids": [
+            "a"
+          ]
+        },
+        {
+          "action": "advance_to",
+          "time": 2
+        }
+      ],
+      "metrics": {
+        "accepted_exposure": 1,
+        "delivered": 0,
+        "missing": 0,
+        "new_hits": 0,
+        "pending": 1,
+        "reserved": 1,
+        "seed_hits": 0,
+        "spent": 0,
+        "time": 2,
+        "time_discovery_area": 0,
+        "uncommitted": 1
+      },
+      "resource_sha256": "860f6559a2df52362ff8b3b31b68290fe61cb9b117003c065e61a5810a93dd8a",
+      "scenario": {
+        "budget": 2,
+        "capacity": 1,
+        "deadline": 2,
+        "initial_ids": []
+      },
+      "schema_version": "curaloop.research.integer-events.v1"
+    },
+    "fast_first": {
+      "events": [
+        {
+          "active": null,
+          "candidate_id": "b",
+          "cost": 1,
+          "kind": "REQUEST_ACCEPTED",
+          "request_id": "r000000",
+          "sequence": 0,
+          "time": 0
+        },
+        {
+          "active": null,
+          "candidate_id": null,
+          "cost": 0,
+          "kind": "TIME_ADVANCED",
+          "request_id": null,
+          "sequence": 1,
+          "time": 1
+        },
+        {
+          "active": true,
+          "candidate_id": "b",
+          "cost": 1,
+          "kind": "RESULT_DELIVERED",
+          "request_id": "r000000",
+          "sequence": 2,
+          "time": 1
+        },
+        {
+          "active": null,
+          "candidate_id": "c",
+          "cost": 1,
+          "kind": "REQUEST_ACCEPTED",
+          "request_id": "r000001",
+          "sequence": 3,
+          "time": 1
+        },
+        {
+          "active": null,
+          "candidate_id": null,
+          "cost": 0,
+          "kind": "TIME_ADVANCED",
+          "request_id": null,
+          "sequence": 4,
+          "time": 2
+        },
+        {
+          "active": true,
+          "candidate_id": "c",
+          "cost": 1,
+          "kind": "RESULT_DELIVERED",
+          "request_id": "r000001",
+          "sequence": 5,
+          "time": 2
+        }
+      ],
+      "journal": [
+        {
+          "action": "submit",
+          "ids": [
+            "b"
+          ]
+        },
+        {
+          "action": "advance_to",
+          "time": 1
+        },
+        {
+          "action": "submit",
+          "ids": [
+            "c"
+          ]
+        },
+        {
+          "action": "advance_to",
+          "time": 2
+        }
+      ],
+      "metrics": {
+        "accepted_exposure": 2,
+        "delivered": 2,
+        "missing": 0,
+        "new_hits": 2,
+        "pending": 0,
+        "reserved": 0,
+        "seed_hits": 0,
+        "spent": 2,
+        "time": 2,
+        "time_discovery_area": 1,
+        "uncommitted": 0
+      },
+      "resource_sha256": "860f6559a2df52362ff8b3b31b68290fe61cb9b117003c065e61a5810a93dd8a",
+      "scenario": {
+        "budget": 2,
+        "capacity": 1,
+        "deadline": 2,
+        "initial_ids": []
+      },
+      "schema_version": "curaloop.research.integer-events.v1"
+    },
+    "enumerated_evaluator_upper_bound_hits": 2,
+    "interpretation": "An intentionally constructed duration tradeoff; the two static orders are not an H1 pending-aware comparison."
+  },
+  "exact_deadline_missing_and_restart": {
+    "events": [
+      {
+        "active": null,
+        "candidate_id": "a",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000000",
+        "sequence": 0,
+        "time": 0
+      },
+      {
+        "active": null,
+        "candidate_id": "b",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000001",
+        "sequence": 1,
+        "time": 0
+      },
+      {
+        "active": null,
+        "candidate_id": "c",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000002",
+        "sequence": 2,
+        "time": 0
+      },
+      {
+        "active": null,
+        "candidate_id": null,
+        "cost": 0,
+        "kind": "TIME_ADVANCED",
+        "request_id": null,
+        "sequence": 3,
+        "time": 2
+      },
+      {
+        "active": true,
+        "candidate_id": "a",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000000",
+        "sequence": 4,
+        "time": 2
+      },
+      {
+        "active": null,
+        "candidate_id": "b",
+        "cost": 1,
+        "kind": "RESULT_MISSING",
+        "request_id": "r000001",
+        "sequence": 5,
+        "time": 2
+      }
+    ],
+    "journal": [
+      {
+        "action": "submit",
+        "ids": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      {
+        "action": "advance_to",
+        "time": 2
+      }
+    ],
+    "metrics": {
+      "accepted_exposure": 3,
+      "delivered": 1,
+      "missing": 1,
+      "new_hits": 1,
+      "pending": 1,
+      "reserved": 1,
+      "seed_hits": 0,
+      "spent": 2,
+      "time": 2,
+      "time_discovery_area": 0,
+      "uncommitted": 0
+    },
+    "resource_sha256": "5b0cb3ceecae74a1e0f5ae7773629059128b8ba591433d848bc495381e8e03d1",
+    "scenario": {
+      "budget": 3,
+      "capacity": 3,
+      "deadline": 2,
+      "initial_ids": []
+    },
+    "schema_version": "curaloop.research.integer-events.v1"
+  },
+  "enumerated_serial_fixtures": 648,
+  "ordering_checks": 3888,
+  "not_run": [
+    "empirical H1 contrast",
+    "multi-target study",
+    "new controller training",
+    "backend adapter",
+    "customer validation"
+  ]
+}

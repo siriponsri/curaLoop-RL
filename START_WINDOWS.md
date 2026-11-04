@@ -1,3 +1,5 @@
+> Academic/business documentation update: [current reference](docs/05_product/OPERATOR_GUIDE.md) and [start here](START_HERE.md). Existing application instructions and attribution below are preserved. New study features are not installed by these documents.
+
 # Windows operator guide
 
 ## Install and open

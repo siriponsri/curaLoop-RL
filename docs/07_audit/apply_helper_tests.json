@@ -1,0 +1,100 @@
+{
+  "version": "2.0-full-text-review",
+  "status": "PASS",
+  "test_count": 6,
+  "platform": "Linux; Python standard-library apply helper",
+  "source_commit": "2d287a170b39b0c07d02631ca027c2ba535c0df9",
+  "tested_manifest_sha256": "2ebb2b66a5571c7c9a6a3662919434cf60e5fcb039ab67105bcabfdb3710e8af",
+  "tested_file_count": 132,
+  "isolated_clone": "/workspace/scratch/6b95115884a9/work/review_v2/apply-check-v2-ty865smj/curaLoop-RL",
+  "tests": [
+    {
+      "name": "wrong_origin_rejected_without_writes",
+      "status": "PASS",
+      "result": {
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Apply stopped: Origin does not match siriponsri/curaLoop-RL. No files changed."
+      }
+    },
+    {
+      "name": "dry_run_verified_without_file_writes",
+      "status": "PASS",
+      "result": {
+        "returncode": 0,
+        "stdout": "{\n  \"status\": \"DRY_RUN_PASS\",\n  \"files\": 132,\n  \"changed\": false\n}",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "apply_copy_hashes_and_existing_file_backups",
+      "status": "PASS",
+      "result": {
+        "returncode": 0,
+        "stdout": "{\n  \"status\": \"APPLIED\",\n  \"files\": 132,\n  \"backup\": \"/workspace/scratch/6b95115884a9/work/review_v2/apply-check-v2-ty865smj/curaloop-docs-backup-20261104-112016-6236591e\",\n  \"deleted_files\": 0,\n  \"commit_or_push_performed\": false\n}",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "applied_checkout_validation",
+      "status": "PASS",
+      "report": {
+        "status": "PASS",
+        "source_commit": "2d287a170b39b0c07d02631ca027c2ba535c0df9",
+        "checks": {
+          "protected_files": 511,
+          "archived_originals": 27,
+          "active_markdown_files": 88,
+          "active_local_links": 208,
+          "markdown_heading_anchors": 0,
+          "active_words": 58693,
+          "references": 28,
+          "verified_private_pdf_records": 28,
+          "link_only_records": 0,
+          "supplementary_pdf_records": 1,
+          "total_reading_pdfs": 29,
+          "reading_pdf_pages": 731,
+          "consistent_literature_catalogues": 3,
+          "economic_scenarios": 3,
+          "declarative_configs": 2,
+          "historical_policy_means": 5,
+          "assembled_manuscript_chapters": 10,
+          "private_pdf_hashes_verified_here": "NOT_PRESENT_IN_PUBLIC_PAYLOAD; see PDF receipt"
+        },
+        "failures": [],
+        "not_run": [
+          "new scientific study",
+          "new controller training",
+          "application Python/frontend/browser suites",
+          "customer validation",
+          "journal submission",
+          "remote Git push",
+          "native Windows application of overlay"
+        ]
+      }
+    },
+    {
+      "name": "git_diff_whitespace_check_all_new_and_modified_files_crlf_aware",
+      "status": "PASS",
+      "result": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "scope": "All new files included using intent-to-add. Per-command cr-at-eol accepts byte-preserved CRLF in the original archived catalogue; other whitespace checks remain enabled."
+    },
+    {
+      "name": "dirty_tree_rejected_without_writes",
+      "status": "PASS",
+      "result": {
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Apply stopped: Existing owner changes detected. Preserve/review them before applying."
+      }
+    }
+  ],
+  "commit_or_push_performed": false,
+  "native_windows_execution": "NOT_RUN",
+  "powershell_helper": "STATIC_REVIEW_ONLY",
+  "receipt_scope": "The manifest identity above is the applied payload. A final manifest may include updated receipt-only JSON. Protected application bytes and Markdown content are unchanged by that update."
+}

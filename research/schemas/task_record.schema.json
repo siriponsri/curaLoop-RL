@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Proposed research task record — source/phenotype amendment 1.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id",
+    "source_url",
+    "dataset_sha256",
+    "assay_endpoint",
+    "data_rights_status",
+    "controller_role",
+    "source_release",
+    "assay_id",
+    "functional_phenotype",
+    "label_mapping_status"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "dataset_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "assay_endpoint": {
+      "type": "string",
+      "minLength": 1
+    },
+    "data_rights_status": {
+      "enum": [
+        "SOURCE_LINK_ONLY",
+        "LOCAL_USE_REVIEWED",
+        "REDISTRIBUTION_REVIEWED"
+      ]
+    },
+    "controller_role": {
+      "enum": [
+        "development",
+        "validation",
+        "final_test",
+        "regression_only"
+      ]
+    },
+    "target_family": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "label_mapping": {
+      "type": "object"
+    },
+    "exclusions": {
+      "type": "array"
+    },
+    "preprocessing_version": {
+      "type": "string"
+    },
+    "source_release": {
+      "type": "string",
+      "minLength": 1
+    },
+    "assay_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "functional_phenotype": {
+      "type": "string",
+      "minLength": 1
+    },
+    "label_mapping_status": {
+      "enum": [
+        "UNRESOLVED",
+        "RESOLVED_WITH_SOURCE_EVIDENCE"
+      ]
+    },
+    "label_mapping_evidence": {
+      "type": "string"
+    },
+    "source_ascertainment": {
+      "type": "string"
+    },
+    "source_discrepancy_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "initialization_regimes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "uniform",
+          "conditional_known_hit"
+        ]
+      }
+    }
+  },
+  "description": "Draft ingestion contract. A final frozen registry must reject UNRESOLVED mappings and retain their exact resolution evidence; this schema is not an installed application importer."
+}

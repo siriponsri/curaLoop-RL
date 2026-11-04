@@ -1,3 +1,5 @@
+> Documentation update, 4 November 2026: [current programme](03_research/DATA_AND_SPLITS.md) and [documentation map](README.md). The detailed record below is retained from the inspected POC checkpoint. New research and commercial capabilities are specifications until implemented; prior test counts are historical execution, not new checks.
+
 # Research benchmarks and provenance
 
 This English operator reference restates the preserved source records. It does
