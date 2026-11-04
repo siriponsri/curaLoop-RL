@@ -1,0 +1,105 @@
+{
+  "status": "PASS_EXACT_ILLUSTRATIVE_EXPECTATIONS",
+  "assumptions": "Two workers; one existing pending P completes at1; one worker free at0; remaining uncommitted budget2; A1,A2 active iff Z=1, B1,B2 active iff Z=0. Unit costs/durations, deterministic public turnaround, Z Bernoulli(1/2). Informative P=Z; uninformative P independent Bernoulli(1/2). Delivery at deadline counts; no new dispatch at deadline.",
+  "equal_observable_scalar_summaries": "Same queue length/age, capacity, budget, deadline and all marginal activity probabilities. Joint dependence between pending P and candidates differs.",
+  "cases": [
+    {
+      "pending_label_informative": true,
+      "deadline": 1,
+      "equally_likely_worlds": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "expected_new_candidate_hits_immediate": "1/2",
+      "expected_new_candidate_hits_wait": "0",
+      "expected_common_pending_hits": "1/2",
+      "expected_H_T_immediate": "1",
+      "expected_H_T_wait": "1/2",
+      "wait_minus_immediate": "-1/2"
+    },
+    {
+      "pending_label_informative": true,
+      "deadline": 2,
+      "equally_likely_worlds": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "expected_new_candidate_hits_immediate": "3/2",
+      "expected_new_candidate_hits_wait": "2",
+      "expected_common_pending_hits": "1/2",
+      "expected_H_T_immediate": "2",
+      "expected_H_T_wait": "5/2",
+      "wait_minus_immediate": "1/2"
+    },
+    {
+      "pending_label_informative": false,
+      "deadline": 1,
+      "equally_likely_worlds": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "expected_new_candidate_hits_immediate": "1/2",
+      "expected_new_candidate_hits_wait": "0",
+      "expected_common_pending_hits": "1/2",
+      "expected_H_T_immediate": "1",
+      "expected_H_T_wait": "1/2",
+      "wait_minus_immediate": "-1/2"
+    },
+    {
+      "pending_label_informative": false,
+      "deadline": 2,
+      "equally_likely_worlds": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "expected_new_candidate_hits_immediate": "3/2",
+      "expected_new_candidate_hits_wait": "1",
+      "expected_common_pending_hits": "1/2",
+      "expected_H_T_immediate": "2",
+      "expected_H_T_wait": "3/2",
+      "wait_minus_immediate": "-1/2"
+    }
+  ],
+  "interpretation": "AtT2, posterior content can reverse dispatch/WAIT preference despite equal scalar summaries. T1 favors immediate dispatch. Direct pending reward is counted equally. This is a constructed motivation, not a new-priority theorem, assay result, trained algorithm, universal-optimality claim or selected material-effect threshold.",
+  "new_campaigns_models_or_final_outcomes": 0
+}

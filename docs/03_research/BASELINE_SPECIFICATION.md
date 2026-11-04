@@ -1,5 +1,14 @@
 # Baseline specification and objective matching
 
+Goal 1 proposes a new planning-method research programme; see
+[the thesis/validation decision](CONTRIBUTION_AND_VALIDATION_V1.md) and its
+[closest-work review](../02_literature/GOAL_01_CLOSEST_WORK_20261104.md). Future
+dispatch/wait work must assess adapted 2011 scheduling, ENS/batch ENS, adaptive
+parallelism, simple content-aware waiting and matched-compute fantasy rollout
+or MCTS. These comparators and a new planner remain NOT_RUN. The fixed-control
+catalogue below describes preserved development evidence; it is not silently
+expanded into a frozen final method allocation.
+
 **State: partial development implementation; final catalogue incomplete.**
 The [NCATS v1 pilot](NCATS_DEVELOPMENT_RESULTS_V1.md) executed Random,
 frozen/retrained Greedy, nearest-hit, diversity and the matched pending-penalty

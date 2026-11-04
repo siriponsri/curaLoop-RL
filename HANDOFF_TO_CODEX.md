@@ -1,5 +1,23 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
+## Current sequential work Goal 1 complete
+
+Owner direction is one goal at a time, with a clear completion report, and a
+high-impact research ambition. [Goal 1 thesis](docs/03_research/CONTRIBUTION_AND_VALIDATION_V1.md)
+selects a content-aware dispatch/wait planning-method research target. Useful
+action-value bounds, actual new-method novelty and joint family/operations
+transfer are unproved/unimplemented. [Tracker](docs/06_execution/GOAL_TRACKER.md)
+records the next proposed synthetic prototype goal; Goal 2 has NOT_STARTED.
+
+The new packet `docs/evidence/goal-01-contribution-20261104/` preserves source
+review, 162 existing run-file hash checks, 72 matched-arm/36 pair diagnostics,
+four exact illustrative expectations and verification. Independent planning
+review passed. No new campaign, training, final outcome access, dependency
+installation, SSH, paid action or submission. Existing runtime, frozen study
+records, source catalogue and final-freeze manifest remain unchanged.
+Main base before this goal is `e181c1b`; Git HEAD identifies its artifact commit.
+Report to the owner before starting Goal 2.
+
 ## Current delivery English manuscript and journal preparation
 
 **Normal main publication verified** at material commit

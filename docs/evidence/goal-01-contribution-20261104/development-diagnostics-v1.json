@@ -1,0 +1,420 @@
+{
+  "status": "PASS_POST_HOC_DEVELOPMENT_DIAGNOSTIC",
+  "created_at_utc": "2026-11-04T13:11:35.842632+00:00",
+  "source_commit_before_analysis": "e181c1b4a7b2ee0c770209e0d6c0287bb893005f",
+  "analysis_source_sha256": "c3f975a5a3827a3029811db2be459f49560d230604588f9adc0d970b175211e0",
+  "verified_run_bytes": 162,
+  "analyzed_matched_arm_runs": 72,
+  "verified_pairs": 36,
+  "input_receipts": [
+    {
+      "study": "ncats-development-20261104-v1",
+      "verified_run_bytes": 108,
+      "ledger_sha256": "0ea41944fa6904635b68086de23e26f1dd8f65ca361004128b8378e668a7e1d6"
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "verified_run_bytes": 54,
+      "ledger_sha256": "6a26cbbf78fa834a9d1c53d9191b59e9fe3f708b0bae7f60fa1cb825128cff8a"
+    }
+  ],
+  "aggregates": [
+    {
+      "study": "ncats-development-20261104-v1",
+      "condition": "common",
+      "method": "greedy",
+      "runs": 9,
+      "decision_calls": 54,
+      "calls_with_pending": 0,
+      "fitted_calls_with_pending": 0,
+      "fallback_calls_with_pending": 0,
+      "selected_requests": 162,
+      "selected_requests_with_reduced_GP_std": null,
+      "selected_requests_with_probability_minus_score_positive": 0
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "condition": "common",
+      "method": "pending_penalty",
+      "runs": 9,
+      "decision_calls": 54,
+      "calls_with_pending": 0,
+      "fitted_calls_with_pending": 0,
+      "fallback_calls_with_pending": 0,
+      "selected_requests": 162,
+      "selected_requests_with_reduced_GP_std": null,
+      "selected_requests_with_probability_minus_score_positive": 0
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "condition": "heterogeneous",
+      "method": "greedy",
+      "runs": 9,
+      "decision_calls": 89,
+      "calls_with_pending": 65,
+      "fitted_calls_with_pending": 61,
+      "fallback_calls_with_pending": 4,
+      "selected_requests": 169,
+      "selected_requests_with_reduced_GP_std": null,
+      "selected_requests_with_probability_minus_score_positive": 0
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "condition": "heterogeneous",
+      "method": "pending_penalty",
+      "runs": 9,
+      "decision_calls": 86,
+      "calls_with_pending": 62,
+      "fitted_calls_with_pending": 58,
+      "fallback_calls_with_pending": 4,
+      "selected_requests": 166,
+      "selected_requests_with_reduced_GP_std": null,
+      "selected_requests_with_probability_minus_score_positive": 88
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "condition": "common",
+      "method": "gp_ucb_blind",
+      "runs": 9,
+      "decision_calls": 54,
+      "calls_with_pending": 0,
+      "fitted_calls_with_pending": 0,
+      "fallback_calls_with_pending": 0,
+      "selected_requests": 162,
+      "selected_requests_with_reduced_GP_std": 0,
+      "selected_requests_with_probability_minus_score_positive": null
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "condition": "common",
+      "method": "gp_ucb_pending",
+      "runs": 9,
+      "decision_calls": 54,
+      "calls_with_pending": 0,
+      "fitted_calls_with_pending": 0,
+      "fallback_calls_with_pending": 0,
+      "selected_requests": 162,
+      "selected_requests_with_reduced_GP_std": 0,
+      "selected_requests_with_probability_minus_score_positive": null
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "condition": "heterogeneous",
+      "method": "gp_ucb_blind",
+      "runs": 9,
+      "decision_calls": 87,
+      "calls_with_pending": 63,
+      "fitted_calls_with_pending": 59,
+      "fallback_calls_with_pending": 4,
+      "selected_requests": 161,
+      "selected_requests_with_reduced_GP_std": 0,
+      "selected_requests_with_probability_minus_score_positive": null
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "condition": "heterogeneous",
+      "method": "gp_ucb_pending",
+      "runs": 9,
+      "decision_calls": 89,
+      "calls_with_pending": 67,
+      "fitted_calls_with_pending": 63,
+      "fallback_calls_with_pending": 4,
+      "selected_requests": 161,
+      "selected_requests_with_reduced_GP_std": 89,
+      "selected_requests_with_probability_minus_score_positive": null
+    }
+  ],
+  "pairs": [
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "ahr",
+      "seed": 0,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "ahr",
+      "seed": 0,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "ahr",
+      "seed": 1,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "ahr",
+      "seed": 1,
+      "condition": "heterogeneous",
+      "delta_hits": -2,
+      "same_event_trace": false
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "ahr",
+      "seed": 2,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "ahr",
+      "seed": 2,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": false
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "p53",
+      "seed": 0,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "p53",
+      "seed": 0,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": false
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "p53",
+      "seed": 1,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "p53",
+      "seed": 1,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": false
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "p53",
+      "seed": 2,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "p53",
+      "seed": 2,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": false
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "pparg",
+      "seed": 0,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "pparg",
+      "seed": 0,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": false
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "pparg",
+      "seed": 1,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "pparg",
+      "seed": 1,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": false
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "pparg",
+      "seed": 2,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-development-20261104-v1",
+      "assay": "pparg",
+      "seed": 2,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "ahr",
+      "seed": 0,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "ahr",
+      "seed": 0,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": false
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "ahr",
+      "seed": 1,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "ahr",
+      "seed": 1,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "ahr",
+      "seed": 2,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "ahr",
+      "seed": 2,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": false
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "p53",
+      "seed": 0,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "p53",
+      "seed": 0,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": false
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "p53",
+      "seed": 1,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "p53",
+      "seed": 1,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "p53",
+      "seed": 2,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "p53",
+      "seed": 2,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": false
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "pparg",
+      "seed": 0,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "pparg",
+      "seed": 0,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": false
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "pparg",
+      "seed": 1,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "pparg",
+      "seed": 1,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "pparg",
+      "seed": 2,
+      "condition": "common",
+      "delta_hits": 0,
+      "same_event_trace": true
+    },
+    {
+      "study": "ncats-gaussian-development-20261104-v1",
+      "assay": "pparg",
+      "seed": 2,
+      "condition": "heterogeneous",
+      "delta_hits": 0,
+      "same_event_trace": true
+    }
+  ],
+  "new_campaigns_or_model_fits": 0,
+  "final_assay_outcomes_read": false,
+  "limits": "Exposed three-endpoint development logs only. Counts are within-run diagnostics, not independent biological replications. Opportunity counts can differ after trajectories diverge. A fitted call with pending is an opportunity, not proof of nonzero score effect or improved utility. Selected-score changes do not identify the full candidate ranking. No population CI, equivalence or new benefit claim."
+}

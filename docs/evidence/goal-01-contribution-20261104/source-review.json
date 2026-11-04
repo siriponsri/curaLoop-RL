@@ -1,0 +1,49 @@
+{
+  "review_date": "2026-11-04",
+  "timezone": "Asia/Bangkok",
+  "reviewers": ["parent", "journal_fit", "journal_submission"],
+  "scope": "Targeted primary-source review of joint experiment scheduling, finite-budget active search, amortization, risk-controlled selection and reusable planning software",
+  "comprehensive_novelty_certification": false,
+  "sources": [
+    {"id":"G01","url":"https://proceedings.neurips.cc/paper_files/paper/2011/file/3a066bda8c96b9478bb0512f0a43028c-Paper.pdf","access":"PRIMARY_PDF_TARGETED_SECTIONS_BOTH_AGENTS","fact":"Deadline, count budget, running experiments and elapsed times, available labs, possibly empty launch action. Best-value objective; completed-experiment-count scheduling proxy.","consequence":"Joint selection/wait/timing is already occupied; adapt as a direct non-RL comparator."},
+    {"id":"G02","url":"https://arxiv.org/abs/1202.5597v3","access":"PRIMARY_ABSTRACT","fact":"Hybrid sequential/variable-batch Bayesian optimization.","consequence":"WAIT and variable batches alone do not establish novelty."},
+    {"id":"G03","url":"https://www.jmlr.org/papers/volume15/desautels14a/desautels14a.pdf","access":"PRIMARY_PAPER_TARGETED_SECTIONS","fact":"Pending uncertainty and adaptive parallelism.","consequence":"Do not inherit its regret guarantee for a binary Gaussian adaptation."},
+    {"id":"G04","url":"https://proceedings.neurips.cc/paper_files/paper/2018/hash/a7aeed74714116f3b292a982238f83d2-Abstract.html","access":"PRIMARY_ABSTRACT_AND_TARGETED_LINKED_PDF","fact":"Nonmyopic batch finite-pool positive discovery with pruning; targeted source sections identify synchronous feedback, known-positive starts and sampled negatives in drug tasks.","consequence":"Direct objective baseline; data/initialization deviations must be explicit."},
+    {"id":"G05","url":"https://proceedings.mlr.press/v139/nguyen21f/nguyen21f.pdf","access":"PRIMARY_ABSTRACT_AND_TARGETED_PDF","fact":"Nonmyopic budget-aware multi-fidelity positive discovery.","consequence":"Actual linked low/high-fidelity data are needed for a biological multi-fidelity claim."},
+    {"id":"G06","url":"https://arxiv.org/abs/2210.02259","access":"PRIMARY_ABSTRACT","fact":"Cost-aware asynchronous active search with Thompson sampling, MCTS and confidence bounds for robotic sensing.","consequence":"Lookahead/cost/asynchrony is an established combination; preserve observation/objective differences."},
+    {"id":"G07","url":"https://arxiv.org/html/2405.15031v1","access":"PRIMARY_ABSTRACT_AND_TARGETED_FULLTEXT_SECTIONS","fact":"Synthetic imitation of nonmyopic search and transfer to real discovery; reported approximately15000CPUhours for whole development/training/evaluation programme.","consequence":"Amortization and synthetic transfer are not new; programme runtime is not a CuraLoop estimate."},
+    {"id":"G08","url":"https://proceedings.mlr.press/v238/adachi24b.html","access":"PRIMARY_ABSTRACT_AND_TARGETED_LINKED_PDF","fact":"Probabilistic-numerics adaptive batch sizes.","consequence":"An adaptive parallelism comparator is needed."},
+    {"id":"G09","url":"https://www.auai.org/uai2021/pdf/uai2021.222.pdf","access":"PRIMARY_PDF_TARGETED_OPENING_SECTIONS","fact":"Cost-constrained BO as CMDP with feasible rollout planning.","consequence":"A CMDP/lookahead formulation alone is not a new contribution."},
+    {"id":"G10","url":"https://arxiv.org/abs/2307.09291v2","access":"PRIMARY_RECORD_AND_TARGETED_PDF","fact":"Weighted conformalized selection under specified calibration/test and shift assumptions.","consequence":"No automatic adaptive-delayed or arbitrary cross-assay guarantee."},
+    {"id":"G11","url":"https://www.jmlr.org/papers/v26/24-0452.html","access":"PRIMARY_ABSTRACT_ONLY","fact":"Online selective conformal prediction/FCR control.","consequence":"Full74pagepaper not inspected; FCR differs from FDR and H(T)."},
+    {"id":"G12","url":"https://proceedings.mlr.press/v267/eckmann25a.html","access":"PRIMARY_ABSTRACT_ONLY","fact":"MF-LAL combines molecular generation and different computational oracle fidelities.","consequence":"Not proof of experimental-assay efficacy; multi-fidelity alone is occupied."}
+  ],
+  "software_sources": {
+    "BayBE": {
+      "version":"0.15.0",
+      "provenance_commit":"3d22aeda83cf746ef6e657ece8bda93b248b7f7d",
+      "release_url":"https://pypi.org/project/baybe/",
+      "docs_base":"https://emdgroup.github.io/baybe/0.15.0/",
+      "pinned_source_base":"https://raw.githubusercontent.com/emdgroup/baybe/3d22aeda83cf746ef6e657ece8bda93b248b7f7d/",
+      "checked_features":["finite search space","pending recommendations and feasible masking","simulation core batch lookup semantics","binary target and restricted native bandit","constraints","JSON serialization limits","transfer models"],
+      "paper_snapshot":"0.12.2; not the current API",
+      "local_installed":false,
+      "runtime_compatibility":"NOT_RUN"
+    },
+    "BoTorch": {
+      "version":"0.18.1",
+      "provenance_commit":"cd0249c60b2a81af0d91b5e7d462ef6f574fceec",
+      "release_url":"https://pypi.org/project/botorch/",
+      "source_url":"https://raw.githubusercontent.com/meta-pytorch/botorch/cd0249c60b2a81af0d91b5e7d462ef6f574fceec/botorch/acquisition/multi_step_lookahead.py",
+      "checked_features":["stage utilities","fantasies","pending points","predeclared batch sizes"],
+      "runtime_compatibility":"NOT_RUN"
+    }
+  },
+  "interpretation_limits": [
+    "Observed source/API scope is not a proof a library cannot express a new adapter.",
+    "Primary abstract access is not full-text reproduction.",
+    "The new planning approximation and useful guarantee remain unproved and novelty unresolved.",
+    "No journal acceptance, biological transfer, laboratory savings or new experiment was established."
+  ],
+  "new_dependency_installations_jobs_outcomes_or_external_messages": 0
+}

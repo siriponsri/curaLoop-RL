@@ -1,5 +1,13 @@
 # Current-state audit
 
+> Latest sequential milestone: [Goal 1](../03_research/CONTRIBUTION_AND_VALIDATION_V1.md)
+> completes the reviewed high-impact research-direction decision. The selected
+> planner would value specific pending information for joint dispatch/wait;
+> obtaining useful action-value bounds and cross-family/operation transfer
+> remains research work. A new analysis checked 162 existing run hashes and 36
+> pairs; four exact constructed expectations were reproduced. No new controller,
+> final study, trained policy or laboratory benefit is claimed. Goal 2 is unstarted.
+
 > Latest main-delivery candidate: separate agents reconciled the English
 > manuscript and researched journals under the owner's USD 300 fee ceiling.
 > [Journal/readiness artifacts](../01_paper/JOURNAL_TARGETS_20261104.md) are review

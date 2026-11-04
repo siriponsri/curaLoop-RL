@@ -1,5 +1,11 @@
 # Research protocol v1.1: constrained molecular screening
 
+Goal 1 subsequently selects [a higher-upside planning-method target](CONTRIBUTION_AND_VALIDATION_V1.md),
+with joint assay selection/dispatch/wait and explicit action-value computation.
+Its new mechanism, theory and transfer tests need a separate implementation and
+protocol amendment in later goals. This document and every frozen development
+protocol retain their actual scope; final primary contrast/roles remain unfrozen.
+
 **State: PROPOSED_NOT_EXECUTED.** Freeze an implementation-specific amendment before final experiments. The historical v0.1 HIV benchmark is a separate completed study with its own definitions. This protocol does not retroactively preregister those results.
 
 The separate [NCATS development amendment](NCATS_DEVELOPMENT_PROTOCOL_V1.md)

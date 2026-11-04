@@ -2,6 +2,12 @@
 
 ## Current local continuation
 
+Current sequential work: [Goal tracker](docs/06_execution/GOAL_TRACKER.md) and
+[Goal 1 research thesis](docs/03_research/CONTRIBUTION_AND_VALIDATION_V1.md).
+The owner requests high-impact research. A new planning principle for deciding
+what to test and when to wait is selected for challenge; no new controller or
+benefit is claimed. Later goals await the Goal 1 report and owner direction.
+
 Latest delivery: the [English manuscript](docs/01_paper/MANUSCRIPT.md) has been
 reconciled with actual development/reproduction evidence. Separate subagents
 prepared the [journal shortlist](docs/01_paper/JOURNAL_TARGETS_20261104.md) and

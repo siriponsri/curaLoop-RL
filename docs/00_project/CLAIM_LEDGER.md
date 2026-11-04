@@ -27,6 +27,8 @@ Use this ledger to reconcile the manuscript, README, presentation, pilot report 
 | C21 | Existing owner-supplied SSH IP profile authenticates | READ_ONLY_CONNECTION_ONLY | `docs/evidence/design-preparation-20261104-v1/dr-train-ip-profile-test.json`; hostname dr-train returned, no resource reservation or remote study |
 | C22 | Active English documentation and manuscript reflect executed development evidence | DOCUMENTATION_RECONCILED | [Language/manuscript audit](../07_audit/LANGUAGE_AND_MANUSCRIPT_AUDIT.md); independent agent cross-review, not human author approval or new biological replication |
 | C23 | Current journal routes and a USD 300 budget were assessed | PUBLICATION_PREPARATION_ONLY | [Shortlist](../01_paper/JOURNAL_TARGETS_20261104.md); conditional no-APC subscription route, unresolved scientific/venue/author gates; no submission, payment or acceptance |
+| C24 | A higher-upside content-aware dispatch/wait planner and its validation programme are selected | PROPOSED_NOT_IMPLEMENTED | [Goal 1 thesis](../03_research/CONTRIBUTION_AND_VALIDATION_V1.md); prior art occupies joint scheduling, positive search and amortization; new useful bounds/transfer remain unproved |
+| C25 | Four constructed dispatch/wait expectations and development-log diagnostics were checked | ANALYTICAL_AND_POST_HOC_ONLY | [Goal 1 packet](../evidence/goal-01-contribution-20261104/); 162 existing run hashes, 72 matched-arm runs/36 pairs; no new assay campaign or final outcome |
 
 ## Language rules
 

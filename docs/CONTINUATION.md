@@ -1,4 +1,44 @@
-# Current delivery checkpoint: English manuscript and journal preparation
+# Current sequential checkpoint Goal 1 research direction
+
+4 November 2026, Asia/Bangkok. Main base before this goal:
+`e181c1b4a7b2ee0c770209e0d6c0287bb893005f`. Git HEAD identifies the following
+Goal 1 artifact commit. The owner approved one goal at a time and then asked
+for high-impact research rather than a narrow benchmark as the final ambition.
+
+**Goal 1 COMPLETE as a planning/research decision.** Selected
+[Learning When to Wait in Molecular Discovery](03_research/CONTRIBUTION_AND_VALIDATION_V1.md):
+a compute-bounded planner that values particular pending information and makes
+joint assay/dispatch/wait decisions, with useful planning bounds and a future
+joint biological/operational transfer test. This is an unimplemented research
+target; novelty, valid useful bounds and benefit remain unproved.
+
+Completed: compared three directions, checked direct primary prior art/software
+versions, mapped current implementation gaps, verified 162 existing run hashes,
+recomputed 36 matched pairs from 72 selected runs, and enumerated/reproduced four
+constructed policy expectations. No source/raw assay retrieval, new campaigns,
+model fitting/training, dependencies, remote jobs, spending or submission.
+Read [closest work](02_literature/GOAL_01_CLOSEST_WORK_20261104.md),
+[validation requirements](../research/configs/goal_01_validation_requirements_v1.csv)
+and [goal evidence](evidence/goal-01-contribution-20261104/).
+
+Two read-only agents researched direct counterarguments; a third independently
+reviewed the final plan/algorithm sketch, toy calculation and diagnostics, with
+no blocking findings. Fixed-continuation bounds are not global-optimum bounds
+by default; model-relative planning error is not a biological guarantee. Prior
+2011 scheduling, ENS, ANS and adaptive parallelism must remain in comparisons.
+
+Next proposed Goal 2: a separate synthetic prototype and exact tiny-state
+challenge, not a real-data study. The proposed budget is one CPU process,
+600 cumulative run-wall seconds and 512 MiB target; no GPU/SSH/paid compute.
+That goal has NOT_STARTED. Report this Goal 1 result before further goal work.
+Full goal status/acceptance and later approval boundaries:
+[tracker](06_execution/GOAL_TRACKER.md). All final-data/roles/analysis gates remain
+open; no material-effect threshold is selected. Runtime and frozen scientific
+artifacts remain preserved. No background process continues at completion.
+
+---
+
+# Historical delivery checkpoint English manuscript and journal preparation
 
 **Main publication: PASS.** Normal fast-forward/push and live remote readback
 verified reviewed material commit `e8b8939968a9861e6378b00895104b659a441f72`.

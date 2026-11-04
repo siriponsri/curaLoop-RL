@@ -1,5 +1,13 @@
 # Novelty and comparator decision
 
+Latest owner steering and decision: [Goal 1 research thesis](../03_research/CONTRIBUTION_AND_VALIDATION_V1.md)
+targets a substantive planning-method contribution with joint dispatch/wait
+decision values, useful computational bounds and a held-out transfer challenge.
+The [new closest-work check](GOAL_01_CLOSEST_WORK_20261104.md) adds direct 2011
+scheduling, batch active search and amortized search counterarguments. The
+benchmark becomes a validation layer. Earlier candidate framing below is the
+historical starting point, not the final ambition or a priority claim.
+
 ## Claims already occupied by prior art
 
 Iterative model-guided molecular screening, reinforcement-trained acquisition, batch/parallel selection, asynchronous optimization, multi-fidelity resource allocation and modular scientific acquisition frameworks all have prior art in the register. A local web interface is an implementation choice, not an algorithmic contribution. A provenance ledger is useful engineering but needs a comparative research case to support a paper centered on it.
