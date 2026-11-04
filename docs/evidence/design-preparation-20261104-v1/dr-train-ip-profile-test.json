@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-11-04T11:58:17.545826+00:00",
+  "command": [
+    "ssh",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "IdentitiesOnly=yes",
+    "-o",
+    "ConnectTimeout=10",
+    "-o",
+    "ConnectionAttempts=1",
+    "100.77.149.83",
+    "hostname"
+  ],
+  "returncode": 0,
+  "stdout": "dr-train",
+  "stderr": "",
+  "profile_confirmed_user": "chaw",
+  "profile_confirmed_identity": "~/.ssh/id_ed25519_dr_train",
+  "known_host_match": true,
+  "private_key_contents_read": false,
+  "configuration_changed": false,
+  "remote_jobs_launched": false,
+  "authorization": "Owner supplied existing IP profile after alias mismatch; one noninteractive test."
+}
