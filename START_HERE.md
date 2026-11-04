@@ -7,8 +7,9 @@ and [goal tracker](docs/06_execution/GOAL_TRACKER.md). The real-data prototype
 completed 180 Tox21 development runs on dr-train. Its bound preserved rollout
 decisions but increased policy time by 24.3%; nearest-hit found more actives.
 The high-impact method remains a research target. The paper-backed external
-[FS-Mol download request](docs/03_research/GOAL_02_DATASET_ACQUISITION_V1.md)
-is pending; later goals remain unstarted.
+[FS-Mol archive](docs/03_research/GOAL_02_DATASET_ACQUISITION_V1.md)
+was supplied by the owner and passed size/hash verification on 5 November;
+archive members remain unopened and later goals remain unstarted.
 
 Latest delivery: the [English manuscript](docs/01_paper/MANUSCRIPT.md) has been
 reconciled with actual development/reproduction evidence. Separate subagents

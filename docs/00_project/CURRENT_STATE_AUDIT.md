@@ -7,7 +7,8 @@
 > found more assay actives. Correctness passed; a useful novel contribution is
 > not established. No final evaluation, transfer, GPU or paid compute occurred.
 > [External dataset acquisition](../03_research/GOAL_02_DATASET_ACQUISITION_V1.md)
-> records FS-Mol's official 403 and the owner download destination. Goals 3–6
+> records the historical official 403 and the owner archive's successful
+> size/hash verification on 5 November. Archive members remain unopened. Goals 3–6
 > remain unstarted. Older checkpoints below retain their historical scope.
 
 > Latest sequential milestone: [Goal 1](../03_research/CONTRIBUTION_AND_VALIDATION_V1.md)

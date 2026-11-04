@@ -32,7 +32,7 @@ Use this ledger to reconcile the manuscript, README, presentation, pilot report 
 | C26 | A finite-world dispatch/wait planner and scenario relaxation execute | DEVELOPMENT_PROTOTYPE_ONLY | [Goal 2 protocol/results](../03_research/GOAL_02_RESULTS_V1.md); exact tiny-model checks, finite-model/shortlist guarantee only; no new theorem or biological certificate |
 | C27 | A new paper-backed Tox21 development benchmark ran on dr-train | EXECUTED_DEVELOPMENT_EVIDENCE | 180 completed/0 failed runs, 18 matched groups, 36 exact pruning pairs; real historical labels, simulated operations; one CPU, no final roles |
 | C28 | The Goal 2 content relaxation improves computation or discovery | NOT_SUPPORTED_BY_EXECUTED_CHALLENGE | 13/458 actions pruned; policy time +24.3%, whole-run time +2.26%; no planner WAIT; rollout mean hit difference vs nearest-hit -1.722, observed range [-6,+1] |
-| C29 | FS-Mol is acquired and ready for a family-transfer study | BLOCKED_NOT_INGESTED | [Acquisition record](../03_research/GOAL_02_DATASET_ACQUISITION_V1.md); paper/release identified, official archive 403, owner download requested; rights/splits/endpoint/overlap gates open |
+| C29 | FS-Mol is acquired and ready for a family-transfer study | ARCHIVE_VERIFIED_NOT_READY | [5 November receipt](../evidence/fs-mol-receipt-20261105-v1/README.md); owner archive matches size/MD5, SHA256 recorded; no members/labels opened; rights/splits/endpoint/overlap gates remain open |
 
 ## Language rules
 

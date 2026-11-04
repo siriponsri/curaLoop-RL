@@ -8,7 +8,7 @@ Repository artifacts remain English. Goal2 base is main commit `729e13b`.
 | Goal | Deliverable | Authorization and status |
 | --- | --- | --- |
 | 1 | Select an ambitious, defensible research thesis; closest-work challenge, mechanism example, validation and stop criteria | COMPLETE: reviewed planning decision; novelty/benefit not yet established |
-| 2 | Real paper-backed assay prototype, exact tiny-state oracles, matched cheap controls and external benchmark acquisition | COMPLETE as a bounded challenge; computational/discovery advantage not demonstrated; FS-Mol download pending |
+| 2 | Real paper-backed assay prototype, exact tiny-state oracles, matched cheap controls and external benchmark acquisition | COMPLETE as a bounded challenge; computational/discovery advantage not demonstrated; owner FS-Mol archive byte-verified 5 November, not ingested |
 | 3 | Close data rights/endpoints, feature overlap, family/source and operational splits for the broader study | PROPOSED; NOT_STARTED; existing preparation retained |
 | 4 | Development training/adapter/baseline feasibility, resource measurement and final design freeze | PROPOSED; NOT_STARTED; earlier development studies are historical inputs |
 | 5 | Frozen held-out study, uncertainty/ablation analysis and independent reproduction | PROPOSED; NOT_STARTED |
@@ -35,8 +35,9 @@ Goal 2 outputs: [results](../03_research/GOAL_02_RESULTS_V1.md),
 real exposed Tox21 derivatives with simulated operations. The bound preserved
 all rollout decisions but increased policy time by 24.3%. Exact-model tests
 and implementation acceptance passed; the candidate contribution failed its
-usefulness test. The external FS-Mol archive remains blocked/requested, with no
-labels opened. This does not prevent completion of the real-data prototype;
+usefulness test. On 5 November the owner supplied the external FS-Mol archive;
+[size/hash verification passed](../evidence/fs-mol-receipt-20261105-v1/README.md),
+with no members or labels opened. This does not change the real-data prototype;
 the wider rights/family/split study remains Goal 3 and has not started.
 
 ## Goal 1 acceptance

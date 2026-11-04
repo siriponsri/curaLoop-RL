@@ -1,8 +1,10 @@
 # Paper-backed external benchmark acquisition
 
-Read-only dataset research, 4 November 2026. Dataset selection is based on
-source, endpoint and transfer design, not unseen acquisition scores. No
-external assay rows were downloaded or assigned CuraLoop evaluation roles.
+Read-only dataset research, 4 November 2026, with an acquisition update on
+5 November. Dataset selection is based on source, endpoint and transfer design,
+not unseen acquisition scores. The owner has now supplied the FS-Mol archive;
+no archive member or external assay label has been opened or assigned a
+CuraLoop evaluation role.
 
 ## Ready development source: Tox21
 
@@ -13,7 +15,12 @@ support the three exposed development derivatives used in the
 row-count discrepancies and limitations are explicit there. These are real
 historical experimental labels with simulated operations, not new experiments.
 
-## FS-Mol: owner download requested
+## FS-Mol: owner archive received and byte-verified
+
+5 November update: **PASS**, the owner-supplied archive matches the expected
+size and MD5. The [receipt](../evidence/fs-mol-receipt-20261105-v1/README.md)
+records the full-file SHA256 and verification output. Goal 3 has not started;
+archive extraction, label inspection and task-role assignment remain unperformed.
 
 Use the [official version 1 record](https://figshare.com/articles/dataset/FSMol_Dataset/16941100),
 DOI 10.6084/m9.figshare.16941100.v1, accompanying
@@ -26,7 +33,7 @@ The [official metadata](https://api.figshare.com/v2/articles/16941100) identifie
 | Filename |fsmol.tar, not tar.gz |
 | Size |4,871,086,080 bytes |
 | Published MD5 |0ad8f73db6bb8415b023538d514138dc |
-| Local SHA256 |UNKNOWN; calculate from received bytes |
+| Local SHA256 |`528a9c4e8d74c4287acda79536eecbf91418d6d0ac2c55918b270d78c2333ebc` |
 | Direct official URL |https://figshare.com/ndownloader/files/31345321 |
 | Automated file acquisition |BLOCKED: HTTP403; no bypass or alternate mirror attempted |
 
@@ -34,11 +41,11 @@ Place the archive at:
 
 `C:\Users\User\Desktop\myProject\curaloop-rl\research\raw_data\external-benchmarks\fs-mol-0.1\fsmol.tar`
 
-This ignored destination is prepared. An async owner request supplies the
-source, size and path. Do not extract or inspect labels merely because a file
-arrives: first verify size/MD5, compute SHA256 and retain the raw archive.
-`tools/verify_fsmol_archive_v1.py` performs only byte-level verification, without
-opening archive members. Unknown tar root/layout remains UNKNOWN until inspected.
+The owner placed the archive at this ignored destination. The existing
+`tools/verify_fsmol_archive_v1.py` completed size/MD5/SHA256 verification without
+opening archive members. The raw archive is retained. Unknown tar root/layout
+remains UNKNOWN until an authorized inspection; byte verification does not
+close the data-rights, phenotype, overlap or split gates below.
 
 Official repository pin: `92aa95daba3f43863227e65be85a07b4a2ee754f`.
 [README](https://raw.githubusercontent.com/microsoft/FS-Mol/92aa95daba3f43863227e65be85a07b4a2ee754f/README.md),

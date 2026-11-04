@@ -12,8 +12,9 @@ It is not the established high-impact contribution. No final roles were opened.
 Implementation `12574b9`; freeze `2e45155`; the following report commit is Git HEAD.
 Raw outputs remain local and on dr-train as linked in the report. One CPU,
 151.20 run-wall seconds, no GPU, dependencies, paid action or journal submission.
-FS-Mol download is blocked by official HTTP 403; exact source/path and a
-byte-verification tool are ready. Owner response is pending. Do not extract
+The owner supplied FS-Mol on 5 November; its archive passed size/MD5 verification
+and SHA256 was recorded in [the receipt](docs/evidence/fs-mol-receipt-20261105-v1/README.md).
+The earlier automated HTTP 403 remains historical. Do not extract
 external labels or begin Goals 3–6 automatically. Main push authority persists.
 
 ## Historical sequential checkpoint: Goal 1 complete

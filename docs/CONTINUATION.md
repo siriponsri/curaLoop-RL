@@ -1,5 +1,12 @@
 # Current sequential checkpoint: Goal 2 real-data prototype
 
+5 November acquisition follow-up: the owner supplied `fsmol.tar`; size and MD5
+match the official version 1 values. SHA256 and the byte-only verification
+receipt are recorded in [the archive receipt](evidence/fs-mol-receipt-20261105-v1/README.md).
+No archive member was opened or extracted, no external labels inspected, and
+Goal 3 remains NOT_STARTED. This resolves the missing-local-file blocker;
+the earlier automated HTTP 403 remains historical. Main push authority persists.
+
 4 November 2026. Goal 2 implementation and its bounded real-data challenge are
 complete; its proposed computational advantage failed. See
 [results](03_research/GOAL_02_RESULTS_V1.md),
@@ -19,10 +26,12 @@ Raw runs: `.local/goal2-real-data-20261104-v1/final/output`; remote retained at
 `docs/evidence/goal-02-real-data-20261104-v1/`. A pre-freeze local smoke with a
 partial trace record is explicitly disclosed. No scientific retuning followed.
 
-FS-Mol official archive acquisition returned 403. Owner request: download the
+Historical 4 November state: FS-Mol official archive acquisition returned 403.
+The owner was asked to download the
 official `fsmol.tar` to
 `research/raw_data/external-benchmarks/fs-mol-0.1/fsmol.tar` inside this checkout.
-Only size/hash verification is prepared; no external assay labels opened.
+The 5 November follow-up above records receipt and completed byte verification;
+no external assay labels have been opened.
 Goal 3 must close release rights, endpoint meaning, overlap/family/source and
 operational splits before broader evaluation. Goals 3–6 remain NOT_STARTED.
 The high-impact thesis, final study and journal readiness remain unachieved.
