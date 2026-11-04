@@ -38,9 +38,12 @@ the reviewed manuscript.
 
 Sincerely,
 
-Siripon Srihangpiboon  
-King Mongkut's Institute of Technology Ladkrabang  
-srihangpiboon.siri@gmail.com  
+Siripon Srihangpiboon
+
+King Mongkut's Institute of Technology Ladkrabang
+
+srihangpiboon.siri@gmail.com
+
 ORCID: https://orcid.org/0009-0001-0611-5568
 
 Before sending, complete the [declarations checklist](DECLARATIONS_CHECKLIST.md),

@@ -1,3 +1,5 @@
 *.json whitespace=cr-at-eol
 *.xml whitespace=cr-at-eol
 *.txt whitespace=cr-at-eol
+# Preserve original pytest failure excerpts, including indented blank lines.
+full-python-tests.xml whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
