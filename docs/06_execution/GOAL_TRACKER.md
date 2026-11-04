@@ -3,12 +3,12 @@
 Owner direction, 4 November 2026: work one goal at a time and report completed
 work clearly before moving on. Subsequent steering asks for a high-impact
 research contribution rather than a narrow benchmark as the final ambition.
-Repository artifacts remain English. Current base is main commit `e181c1b`.
+Repository artifacts remain English. Goal2 base is main commit `729e13b`.
 
 | Goal | Deliverable | Authorization and status |
 | --- | --- | --- |
 | 1 | Select an ambitious, defensible research thesis; closest-work challenge, mechanism example, validation and stop criteria | COMPLETE: reviewed planning decision; novelty/benefit not yet established |
-| 2 | Prototype and challenge the proposed planning principle against exact tiny-state oracles and strong cheap alternatives | PROPOSED; NOT_STARTED |
+| 2 | Real paper-backed assay prototype, exact tiny-state oracles, matched cheap controls and external benchmark acquisition | APPROVED; IN_PROGRESS; real data and SSH amend the old proposal |
 | 3 | Close data rights/endpoints, feature overlap, family/source and operational splits for the broader study | PROPOSED; NOT_STARTED; existing preparation retained |
 | 4 | Development training/adapter/baseline feasibility, resource measurement and final design freeze | PROPOSED; NOT_STARTED; earlier development studies are historical inputs |
 | 5 | Frozen held-out study, uncertainty/ablation analysis and independent reproduction | PROPOSED; NOT_STARTED |
@@ -25,7 +25,7 @@ Goal 1 outputs: [thesis](../03_research/CONTRIBUTION_AND_VALIDATION_V1.md),
 and [evidence](../evidence/goal-01-contribution-20261104/). Independent review by
 the documentation agent found no blocking issue; primary-source research was
 split across two other read-only agents. The parent is the sole repository
-writer. Goal 2 remains proposed and unstarted.
+writer. The owner subsequently approved Goal2 with real datasets and SSH.
 
 ## Goal 1 acceptance
 
@@ -46,7 +46,13 @@ No editorial message, journal submission, payment, deployment or final outcome
 access is authorized by this planning goal. No new confirmation margin is chosen;
 the owner retains effect-estimation/uncertainty reporting.
 
-## Proposed Goal 2 contract for later approval
+## Superseded Goal 2 proposal
+
+The following synthetic-only proposal is historical. The owner approved real
+paper-backed datasets/benchmarks and dr-train SSH. The active bounded contract
+is [Goal2 real-data protocol](../03_research/GOAL_02_REAL_DATA_PROTOCOL_V1.md);
+[dataset acquisition](../03_research/GOAL_02_DATASET_ACQUISITION_V1.md) records
+the FS-Mol403/manual-download request. Goals3–6 do not start automatically.
 
 Build a separate synthetic-only planning prototype and exact small-state
 reference, preserving existing application and frozen development modules.

@@ -1,0 +1,19 @@
+{
+  "status": "PARTIAL_RECORD",
+  "scope": "Unfrozen local integration smoke before the remote study freeze; already exposed development data only",
+  "assay": "ncats2014-ahr-development-v1",
+  "seed": 0,
+  "condition": "heterogeneous",
+  "method": "content_pruned",
+  "wall_seconds": 1.7927804000210017,
+  "decisions": 7,
+  "metrics": {
+    "time": 8, "new_hits": 1, "seed_hits": 1, "delivered": 6,
+    "missing": 0, "pending": 2, "spent": 6, "reserved": 2,
+    "uncommitted": 4, "accepted_exposure": 8, "time_discovery_area": 4
+  },
+  "raw_trace_retained": false,
+  "limitation": "Only stdout metrics and elapsed time survived this smoke command. It was not frozen or included in the formal 180-run ledger. This is an execution-record gap, not a prospective or untouched-data result.",
+  "subsequent_change": "Corrected runner stdout field from hits to new_hits and import ordering; no scientific configuration selected from the smoke outcome",
+  "reuse": "The frozen remote canary separately repeats this exposed development combination as an explicitly disclosed integration check; not independent evidence"
+}

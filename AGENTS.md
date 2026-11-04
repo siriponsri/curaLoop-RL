@@ -1,5 +1,16 @@
 # Agent instructions: CuraLoop-RL
 
+## Active Goal 2 owner amendment, 4 November 2026
+
+Goal 2 is approved for real paper-backed development datasets/benchmarks and
+existing dr-train SSH access. Follow the versioned Goal2 protocol. Use only
+the three already exposed Tox21 derivatives for the bounded prototype;
+external FS-Mol acquisition is requested, with labels sealed pending later
+role/overlap review. One CPU process, nice19,1GiB virtual memory,1800 cumulative
+run-wall seconds; no GPU or paid resources. Live remote allocation/conflict
+checks precede launch. This supersedes the older synthetic-only/no-SSH proposal.
+Final roles,12-family study and journal submission remain later goals.
+
 ## Project and current authorization
 
 Latest owner instruction on 4 November authorizes completing the current

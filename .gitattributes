@@ -33,3 +33,11 @@ research/configs/hts_feature_selection_v1.json -text
 tools/check_design_preparation_v1.py -text whitespace=cr-at-eol
 tools/audit_goal1_development_v1.py -text whitespace=cr-at-eol
 tools/goal1_waiting_example_v1.py -text whitespace=cr-at-eol
+
+# Goal2 source/config byte identities and standalone reproduction helpers.
+research/planning_v2/*.py -text
+research/configs/goal_02_real_data_v1.json -text
+tools/freeze_goal2_v1.py -text
+tools/analyze_goal2_v1.py -text
+tools/verify_fsmol_archive_v1.py -text
+docs/evidence/goal-02-real-data-20261104-v1/** whitespace=cr-at-eol
