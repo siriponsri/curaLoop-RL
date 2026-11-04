@@ -1,0 +1,78 @@
+{
+  "recorded_at_utc": "2026-11-04T06:20:32Z",
+  "local_date": "2026-11-04",
+  "timezone": "Asia/Bangkok",
+  "scope": "Local documentation intake and existing-boundary checks; no Reviewed v2 package application",
+  "base_commit": "2d287a170b39b0c07d02631ca027c2ba535c0df9",
+  "branch": "docs/reviewed-v2-intake-20261104",
+  "checkout": "C:/Users/User/Desktop/myProject/curaloop-rl",
+  "origin": "https://github.com/siriponsri/curaLoop-RL.git",
+  "initial_working_tree_clean": true,
+  "live_remote_main_at_intake": "2d287a170b39b0c07d02631ca027c2ba535c0df9",
+  "source_conversation": "https://chatgpt.com/c/6aea91cd-7364-83ec-9ee5-78617b192b54?messageId=13424946-b55f-547f-81c8-5651a8417c16",
+  "source_conversation_read": true,
+  "library_content_access": "BLOCKED: sending task reported HTTP 403 scope_violation; no bypass or repeat content request attempted",
+  "v2_package_content_read": false,
+  "v2_checksums_verified": false,
+  "v2_overlay_applied": false,
+  "local_file_search": {
+    "status": "NO_MATCH_IN_INSPECTED_SCOPE",
+    "roots": [
+      "C:/Users/User/Downloads",
+      "C:/Users/User/Desktop",
+      "C:/Users/User/Documents/ChatGPT/Drug Discovery",
+      "C:/Users/User/.codex/attachments"
+    ],
+    "scope_note": "Filename-only bounded search excluded dependency, Git and generated clone trees; not a whole-machine absence claim"
+  },
+  "checks": [
+    {
+      "command": "rtk proxy .venv\\Scripts\\python.exe -m pytest -q tests/test_simulator.py tests/test_contracts.py --junitxml=docs/evidence/reviewed-v2-intake-20261104/boundary-tests.xml",
+      "status": "PASS",
+      "exit_code": 0,
+      "passed": 51,
+      "failed": 0,
+      "skipped": 0,
+      "duration_seconds": 78.10,
+      "python": "3.12.10"
+    },
+    {
+      "command": "rtk proxy .venv\\Scripts\\python.exe scripts/verify_preservation.py --output docs/evidence/reviewed-v2-intake-20261104/preservation.json",
+      "status": "PASS",
+      "exit_code": 0,
+      "protected_files": 191,
+      "fixed_base": "b16d2fb9ee56d03fdc6cf0628fc444670a433c43"
+    },
+    {
+      "command": "rtk proxy git check-ignore --no-index reading_room_private/example.pdf",
+      "status": "PASS",
+      "exit_code": 0,
+      "note": "Ignore rule checked without creating or copying a private paper"
+    },
+    {
+      "command": "rtk proxy git diff --exit-code 2d287a170b39b0c07d02631ca027c2ba535c0df9 -- src api app frontend scripts contracts requirements-runtime.lock.txt docs/evidence/poc-v0.3 docs/evidence/readme-manual-v1 assets",
+      "status": "PASS",
+      "exit_code": 0,
+      "note": "No changes in inspected runtime/scientific and historical evidence paths"
+    }
+  ],
+  "resource_observation": {
+    "local_process_scope": "Windows Python/Node/SSH/uvicorn process name and sanitized command-line tags",
+    "identified_curaloop_or_dr_train_processes": 0,
+    "application_listeners_on_8000_5173_8501": 0,
+    "remote_host_access_checked": false,
+    "remote_allocation_or_shared_os_lock_checked": false,
+    "gpu_launched": false,
+    "owner_processes_stopped": false,
+    "interpretation": "Local metadata does not prove remote idleness or GPU availability"
+  },
+  "not_run": [
+    "Full Python/frontend release suites and browser recapture",
+    "Reviewed v2 archive inventory, checksum verification and application",
+    "New dataset ingestion, deadline evaluator, multi-target benchmark or training",
+    "Business/customer validation or outreach",
+    "dr-train access/allocation/conflict/lock verification and GPU computation",
+    "Push, deployment or external publication"
+  ],
+  "next_required_input": "Owner-supplied local folder or newly attached Reviewed v2 overlay/checksums and any documents not included in the overlay"
+}

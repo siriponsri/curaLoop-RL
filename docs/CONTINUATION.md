@@ -1,4 +1,40 @@
-# CuraLoop-RL documentation refresh checkpoint
+# Reviewed v2 continuation intake
+
+Date: 2026-11-04 (Asia/Bangkok). Status: **BLOCKED: required v2 package input**.
+Checkout: `C:\Users\User\Desktop\myProject\curaloop-rl`.
+Local branch: `docs/reviewed-v2-intake-20261104`.
+Base: `2d287a170b39b0c07d02631ca027c2ba535c0df9`; local main and live remote main
+matched at intake. Git HEAD identifies the later local intake-only commit.
+
+Completed: verified owner-specified GitHub destination, read the source
+conversation, searched the stated local folders, mapped current research gaps,
+added a private-reading ignore guard and recorded intake evidence.
+Fresh checks: 51 boundary/contract tests PASS in 78.10s, preservation 191/191 PASS,
+private-reading ignore PASS, unchanged runtime/scientific/old evidence diff PASS.
+The previous full release results below were not rerun in full for this intake.
+
+The sending task reported Library content denial `HTTP 403 scope_violation`.
+Required overlay, START_HERE, review, masterplan and checksums were not found in
+the inspected local folders. Their bytes and checksum values remain unread and
+unverified. No alternate materialization path was attempted. An owner folder
+location or newly attached files are needed before dependent integration.
+
+Next exact action: read the supplied `CuraLoopRL_START_HERE_TH_v2.md` first,
+then inspect and checksum the actual overlay/review/masterplan before applying
+any document changes. See [intake and safe sequence](REVIEWED_V2_INTAKE.md).
+Do not replace this checkout with source extracted from a package.
+
+No scientific code, dataset, trained checkpoint, reward, benchmark protocol,
+existing evidence or runtime marker changed. No v2 overlay applied, multi-target
+study, new training, customer validation, GPU job or push was performed.
+Only local process/port metadata was inspected; remote allocation, conflicts and
+the shared GPU lock remain NOT_RUN. dr-train permission does not reserve a slot.
+No owner process was stopped. Keep continuation local. No agent work continues
+in the background after this turn ends.
+
+---
+
+# Historical documentation refresh checkpoint
 
 Date: 2026-11-04 (Asia/Bangkok).
 Checkout: `C:\Users\User\Desktop\myProject\curaloop-rl`. Current branch: `main`.

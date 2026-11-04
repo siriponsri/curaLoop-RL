@@ -1,5 +1,21 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
+## Current continuation: Reviewed v2 intake
+
+2026-11-04: local intake branch `docs/reviewed-v2-intake-20261104` starts from
+`2d287a170b39b0c07d02631ca027c2ba535c0df9`. Repository identity is verified.
+Reviewed v2 integration is BLOCKED on actual package files: the sending task's
+Library read was denied `403 scope_violation`, and no copy was found in the
+inspected local folders. Do not bypass that denial or infer file/checksum review
+from the source conversation. Ask for a local folder or fresh attachments.
+
+[Current continuation](docs/CONTINUATION.md) and
+[intake/readiness report](docs/REVIEWED_V2_INTAKE.md) record exact next actions.
+Fresh boundary/contract tests: 51 PASS; original preservation: 191/191 PASS.
+Runtime/scientific files and old evidence remain unchanged. No new experiments,
+GPU job or push were performed. `reading_room_private/` must remain outside Git;
+an ignore guard was added. Earlier completed release checkpoints follow.
+
 ## Latest documentation and branding checkpoint
 
 2026-11-04: the README, versioned logo, two editable architecture/workflow
