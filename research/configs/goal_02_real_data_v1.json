@@ -1,0 +1,72 @@
+{
+  "schema_version": "curaloop.goal2.real-development.v1",
+  "protocol_id": "goal-02-real-data-20261104-v1",
+  "status": "FROZEN_DEVELOPMENT_ONLY",
+  "frozen_utc": "2026-11-04T14:15:54.642080+00:00",
+  "parent_commit": "12574b9fe49a8ff3bc2681e588b7e3b8e1e4af6f",
+  "source_sha256": {
+    "research/event_time.py": "e400522ee5f733f4e914329d3166f0397af3ad5b6ce36439e4ce057eec26f6e2",
+    "research/planning_v2/finite.py": "ffb849839ddbd0bb29385e5b6e1c480cacd9e2590764f2192d8350ee1a9cd972",
+    "research/planning_v2/model.py": "3d0ecd7e97cf01b90b60e052c5d30af6af984e1dc6df028969286f8cfb6d1b05",
+    "research/planning_v2/runner.py": "3f7ca72deb717703bdcdf18382d357f839a57347e034cc28c38a576ee5bc39b6"
+  },
+  "final_evaluation": false,
+  "assays": [
+    "ahr",
+    "pparg",
+    "p53"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "input_folder": "research/raw_data/ncats-development-20261104/prepared-v1",
+  "cohort_sha256": {
+    "ahr": "3fe744e077982beff3e620f1eda8f2f824b5d967b54a06a4cb9c528573bad344",
+    "pparg": "e119c91ba6561e8411e5642660bf3226bc36914f99b2a94cabebccdcbf7e599e",
+    "p53": "893d8d503e61dc93e24a5f42a071995c6ddd75f20342bcf18641d887cbea1f08"
+  },
+  "raw_source_sha256": {
+    "ahr": "8b57bcfec402bbe76ac008a5e243341de5b4c92f891324b34351c5534827aebb",
+    "pparg": "d9962585e65b170f2423dd13c3384ae8fcb33434b5bbf2a3800357441c5ea28f",
+    "p53": "1fa72a15760a228c9b649b9b90675556f205b101445936181980a9ad87792052"
+  },
+  "methods": [
+    "random",
+    "frozen_greedy",
+    "greedy",
+    "posterior_mean",
+    "nearest_hit",
+    "pending_cluster_wait",
+    "cpe_rollout",
+    "rollout",
+    "cardinality_pruned",
+    "content_pruned"
+  ],
+  "initial_count": 24,
+  "budget": 12,
+  "capacity": 2,
+  "deadline": 8,
+  "conditions": {
+    "common": [
+      2
+    ],
+    "heterogeneous": [
+      1,
+      2,
+      4
+    ]
+  },
+  "worlds": 16,
+  "clusters": 12,
+  "shortlist": 3,
+  "max_run_wall_seconds": 1800,
+  "max_virtual_memory_bytes": 1073741824,
+  "threads": 1,
+  "concurrency": 1,
+  "expected_runs": 180,
+  "hypothesis": "content relaxation reduces total policy compute without changing finite-model rollout choices",
+  "scope": "DEVELOPMENT_ONLY; previously exposed real labels; no final or family transfer claim",
+  "prefreeze_smoke": "docs/evidence/goal-02-real-data-20261104-v1/local-smoke-disclosure.json"
+}
