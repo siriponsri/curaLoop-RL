@@ -12,7 +12,15 @@ Repository artifacts remain English. Goal2 base is main commit `729e13b`.
 | 3 | Close data rights/endpoints, feature overlap, family/source and operational splits for the broader study | PROPOSED; NOT_STARTED; existing preparation retained |
 | 4 | Development training/adapter/baseline feasibility, resource measurement and final design freeze | PROPOSED; NOT_STARTED; earlier development studies are historical inputs |
 | 5 | Frozen held-out study, uncertainty/ablation analysis and independent reproduction | PROPOSED; NOT_STARTED |
-| 6 | Final manuscript/figures, author declarations, venue fit and approved submission within USD 300 | PROPOSED; NOT_STARTED; review drafts already exist |
+| 6A | English manuscript/figures/supplement/reproduction package and venue fit, ready for human author review | PROPOSED; NOT_STARTED; older review drafts already exist |
+| 6B | Actual submission of the exact human-reviewed package within the confirmed publication budget | PROPOSED; NOT_AUTHORIZED; declarations and final approval required |
+| 7 | Revisions and response to actual editorial review | FUTURE; depends on external feedback and a bounded revision contract |
+
+[Roadmap and long-run options](RESEARCH_ROADMAP_AND_LONG_RUN_20261105.md),
+5 November: recommended first block through Goal 4; maximum proposed internal
+endpoint Goal 6A if evidence gates pass. These are proposals, not execution
+authority. The owner requires alternatives and consultation before unresolved
+material decisions. No long run or Goal 3 task has started.
 
 Detailed [Goal 3 proposal](GOAL_03_PROPOSAL_20261105.md), 5 November: source/family/
 split readiness plus a stronger method decision after Goal 2's failed usefulness

@@ -1,5 +1,15 @@
 # Agent instructions: CuraLoop-RL
 
+## Owner consultation instruction, 5 November 2026
+
+The owner asks for proposals and consultation when the agent is not confident.
+If evidence is insufficient for a material research, data-rights, scope,
+resource or publication decision, explain the options, consequences and
+recommendation, and ask before doing dependent work. Preserve checkpoints and
+continue independent authorized work. Routine actions inside a clear approved
+contract remain authorized. Long-run options through Goals 4 or 6A are proposed
+only; no Goal 3 execution or cross-goal long run is currently approved.
+
 ## Active Goal 2 owner amendment, 4 November 2026
 
 Goal 2 is approved for real paper-backed development datasets/benchmarks and
