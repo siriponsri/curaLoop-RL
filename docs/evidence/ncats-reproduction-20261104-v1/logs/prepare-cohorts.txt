@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "schema_version": "curaloop.ncats-development-cohort.v1",
+  "rdkit_version": "2026.09.1",
+  "preparation_wall_seconds": 17.539955899934284,
+  "assays": {
+    "ahr": {
+      "source_rows": 8169,
+      "canonical_conflict_groups": 44,
+      "consistent_duplicate_rows": 1405,
+      "eligible_unique_rows": 6670,
+      "eligible_actives": 742,
+      "subset_n": 600,
+      "subset_actives": 59,
+      "cohort_sha256": "3fe744e077982beff3e620f1eda8f2f824b5d967b54a06a4cb9c528573bad344",
+      "unique_nonempty_scaffolds": 253,
+      "empty_scaffold_rows": 164,
+      "exclusion_counts": {
+        "INVALID_SMILES": 2,
+        "CONSISTENT_CANONICAL_DUPLICATE": 1405,
+        "CONFLICTING_CANONICAL_LABEL": 92
+      }
+    },
+    "pparg": {
+      "source_rows": 8184,
+      "canonical_conflict_groups": 14,
+      "consistent_duplicate_rows": 1561,
+      "eligible_unique_rows": 6591,
+      "eligible_actives": 175,
+      "subset_n": 600,
+      "subset_actives": 18,
+      "cohort_sha256": "e119c91ba6561e8411e5642660bf3226bc36914f99b2a94cabebccdcbf7e599e",
+      "unique_nonempty_scaffolds": 243,
+      "empty_scaffold_rows": 147,
+      "exclusion_counts": {
+        "INVALID_SMILES": 2,
+        "CONSISTENT_CANONICAL_DUPLICATE": 1561,
+        "CONFLICTING_CANONICAL_LABEL": 30
+      }
+    },
+    "p53": {
+      "source_rows": 8634,
+      "canonical_conflict_groups": 20,
+      "consistent_duplicate_rows": 1681,
+      "eligible_unique_rows": 6909,
+      "eligible_actives": 411,
+      "subset_n": 600,
+      "subset_actives": 31,
+      "cohort_sha256": "893d8d503e61dc93e24a5f42a071995c6ddd75f20342bcf18641d887cbea1f08",
+      "unique_nonempty_scaffolds": 272,
+      "empty_scaffold_rows": 157,
+      "exclusion_counts": {
+        "INVALID_SMILES": 2,
+        "CONSISTENT_CANONICAL_DUPLICATE": 1681,
+        "CONFLICTING_CANONICAL_LABEL": 42
+      }
+    }
+  },
+  "overlaps": {
+    "ahr_vs_HIV_regression": {
+      "exact_canonical_overlap": 0,
+      "queries_with_max_tanimoto_ge_0_8": 1,
+      "max_tanimoto": 0.8,
+      "mean_nearest_tanimoto": 0.31847880827138364
+    },
+    "pparg_vs_HIV_regression": {
+      "exact_canonical_overlap": 0,
+      "queries_with_max_tanimoto_ge_0_8": 0,
+      "max_tanimoto": 0.6923076923076923,
+      "mean_nearest_tanimoto": 0.3096137625687537
+    },
+    "p53_vs_HIV_regression": {
+      "exact_canonical_overlap": 0,
+      "queries_with_max_tanimoto_ge_0_8": 0,
+      "max_tanimoto": 0.7692307692307693,
+      "mean_nearest_tanimoto": 0.3059049222330164
+    },
+    "ahr_vs_pparg": {
+      "exact_canonical_overlap": 52,
+      "shared_nonempty_scaffolds": 65,
+      "a_queries_with_max_tanimoto_ge_0_8": 73
+    },
+    "ahr_vs_p53": {
+      "exact_canonical_overlap": 52,
+      "shared_nonempty_scaffolds": 68,
+      "a_queries_with_max_tanimoto_ge_0_8": 77
+    },
+    "pparg_vs_p53": {
+      "exact_canonical_overlap": 36,
+      "shared_nonempty_scaffolds": 61,
+      "a_queries_with_max_tanimoto_ge_0_8": 55
+    }
+  },
+  "role": "DEVELOPMENT_ONLY; all three endpoints and chemical pools are now exposed; never untouched final tests",
+  "labels": "NCATS 1=assay active, 0=inactive; not therapeutic efficacy; no relabelling/inversion",
+  "unknown_labels": "Excluded or rejected, never converted to inactive",
+  "rights": "Public NCATS challenge source; source-provider public-domain statement separately documented; raw/derived pools remain ignored",
+  "final_protocol_frozen": false
+}
