@@ -1,6 +1,22 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
-## Current sequential work Goal 1 complete
+## Current sequential work: Goal 2 complete, candidate advantage failed
+
+Read [Goal 2 results](docs/03_research/GOAL_02_RESULTS_V1.md) and
+[continuation](docs/CONTINUATION.md) first. Owner approved real paper-backed
+benchmarks and existing dr-train SSH. New versioned planner and exact oracle
+passed their correctness challenge; 180 real Tox21 development runs completed.
+Content pruning preserved all decisions but increased policy time by 24.3%.
+It is not the established high-impact contribution. No final roles were opened.
+
+Implementation `12574b9`; freeze `2e45155`; the following report commit is Git HEAD.
+Raw outputs remain local and on dr-train as linked in the report. One CPU,
+151.20 run-wall seconds, no GPU, dependencies, paid action or journal submission.
+FS-Mol download is blocked by official HTTP 403; exact source/path and a
+byte-verification tool are ready. Owner response is pending. Do not extract
+external labels or begin Goals 3–6 automatically. Main push authority persists.
+
+## Historical sequential checkpoint: Goal 1 complete
 
 Owner direction is one goal at a time, with a clear completion report, and a
 high-impact research ambition. [Goal 1 thesis](docs/03_research/CONTRIBUTION_AND_VALIDATION_V1.md)

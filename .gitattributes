@@ -36,8 +36,9 @@ tools/goal1_waiting_example_v1.py -text whitespace=cr-at-eol
 
 # Goal2 source/config byte identities and standalone reproduction helpers.
 research/planning_v2/*.py -text
-research/configs/goal_02_real_data_v1.json -text
+research/configs/goal_02_real_data_v1.json -text whitespace=cr-at-eol
 tools/freeze_goal2_v1.py -text
 tools/analyze_goal2_v1.py -text
 tools/verify_fsmol_archive_v1.py -text
+tools/audit_goal2_mechanism_v1.py -text
 docs/evidence/goal-02-real-data-20261104-v1/** whitespace=cr-at-eol

@@ -2,11 +2,13 @@
 
 ## Current local continuation
 
-Current sequential work: [Goal tracker](docs/06_execution/GOAL_TRACKER.md) and
-[Goal 1 research thesis](docs/03_research/CONTRIBUTION_AND_VALIDATION_V1.md).
-The owner requests high-impact research. A new planning principle for deciding
-what to test and when to wait is selected for challenge; no new controller or
-benefit is claimed. Later goals await the Goal 1 report and owner direction.
+Current sequential checkpoint: [Goal 2 results](docs/03_research/GOAL_02_RESULTS_V1.md)
+and [goal tracker](docs/06_execution/GOAL_TRACKER.md). The real-data prototype
+completed 180 Tox21 development runs on dr-train. Its bound preserved rollout
+decisions but increased policy time by 24.3%; nearest-hit found more actives.
+The high-impact method remains a research target. The paper-backed external
+[FS-Mol download request](docs/03_research/GOAL_02_DATASET_ACQUISITION_V1.md)
+is pending; later goals remain unstarted.
 
 Latest delivery: the [English manuscript](docs/01_paper/MANUSCRIPT.md) has been
 reconciled with actual development/reproduction evidence. Separate subagents
@@ -21,7 +23,8 @@ and [estimation/resource sensitivity](docs/03_research/DESIGN_SENSITIVITY_V1.md)
 The owner selected 12+ families and effect estimates with uncertainty, with no
 confirmatory material-effect threshold. Twenty panel feature audits completed
 or reused; three stopped at the payload cap. No final task is cleared. Existing
-SSH IP profile access succeeded; no remote job or final evaluation launched.
+SSH IP profile access succeeded; Goal 2 subsequently ran bounded remote
+development compute. No final evaluation launched.
 
 Latest: the [fresh-environment reproduction](docs/03_research/NCATS_REPRODUCTION_V1.md)
 matched all 108 original scientific artifacts. The separate

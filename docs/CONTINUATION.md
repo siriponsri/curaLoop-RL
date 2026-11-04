@@ -1,4 +1,34 @@
-# Current sequential checkpoint Goal 1 research direction
+# Current sequential checkpoint: Goal 2 real-data prototype
+
+4 November 2026. Goal 2 implementation and its bounded real-data challenge are
+complete; its proposed computational advantage failed. See
+[results](03_research/GOAL_02_RESULTS_V1.md),
+[frozen protocol](03_research/GOAL_02_REAL_DATA_PROTOCOL_V1.md) and
+[external acquisition](03_research/GOAL_02_DATASET_ACQUISITION_V1.md).
+
+Main implementation `12574b9`, source/config freeze `2e45155`. Git HEAD identifies
+the following evidence/report commit. The owner authorized normal main push.
+180 Tox21 development runs completed on dr-train, zero failures, 151.20 measured
+run-wall seconds, 55.89 MiB peak RSS, one CPU, no GPU or paid resources.
+All 36 pruning comparisons retained identical decisions/snapshots; content
+pruning removed 13/458 actions but increased policy time by 24.3%. The planner
+never selected WAIT on these data and did not outperform nearest-hit.
+
+Raw runs: `.local/goal2-real-data-20261104-v1/final/output`; remote retained at
+`/home/chaw/curaloop-rl/goal2-20261104-v1/output`. Public hashes/metrics/receipts:
+`docs/evidence/goal-02-real-data-20261104-v1/`. A pre-freeze local smoke with a
+partial trace record is explicitly disclosed. No scientific retuning followed.
+
+FS-Mol official archive acquisition returned 403. Owner request: download the
+official `fsmol.tar` to
+`research/raw_data/external-benchmarks/fs-mol-0.1/fsmol.tar` inside this checkout.
+Only size/hash verification is prepared; no external assay labels opened.
+Goal 3 must close release rights, endpoint meaning, overlap/family/source and
+operational splits before broader evaluation. Goals 3–6 remain NOT_STARTED.
+The high-impact thesis, final study and journal readiness remain unachieved.
+Report Goal 2 to the owner before starting subsequent work.
+
+## Historical Goal 1 research-direction checkpoint
 
 4 November 2026, Asia/Bangkok. Main base before this goal:
 `e181c1b4a7b2ee0c770209e0d6c0287bb893005f`. Git HEAD identifies the following

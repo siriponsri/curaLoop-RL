@@ -1,12 +1,22 @@
 # Current-state audit
 
+> Latest sequential milestone: [Goal 2](../03_research/GOAL_02_RESULTS_V1.md)
+> completed a separate planning prototype and 180 real Tox21 development runs
+> on dr-train. No run failed. The content bound preserved rollout decisions but
+> pruned only 13/458 actions and increased policy time by 24.3%; nearest-hit
+> found more assay actives. Correctness passed; a useful novel contribution is
+> not established. No final evaluation, transfer, GPU or paid compute occurred.
+> [External dataset acquisition](../03_research/GOAL_02_DATASET_ACQUISITION_V1.md)
+> records FS-Mol's official 403 and the owner download destination. Goals 3–6
+> remain unstarted. Older checkpoints below retain their historical scope.
+
 > Latest sequential milestone: [Goal 1](../03_research/CONTRIBUTION_AND_VALIDATION_V1.md)
 > completes the reviewed high-impact research-direction decision. The selected
 > planner would value specific pending information for joint dispatch/wait;
 > obtaining useful action-value bounds and cross-family/operation transfer
 > remains research work. A new analysis checked 162 existing run hashes and 36
 > pairs; four exact constructed expectations were reproduced. No new controller,
-> final study, trained policy or laboratory benefit is claimed. Goal 2 is unstarted.
+> final study, trained policy or laboratory benefit was claimed at that checkpoint.
 
 > Latest main-delivery candidate: separate agents reconciled the English
 > manuscript and researched journals under the owner's USD 300 fee ceiling.

@@ -62,6 +62,13 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 ## Research and R&D pilot programme
 
+Latest: [Goal 2 real-data planning challenge](docs/03_research/GOAL_02_RESULTS_V1.md)
+completed **180 Tox21 development runs on dr-train**. The new bound preserved
+rollout decisions but increased policy computation; nearest-hit found more
+assay actives on this panel. This is an implemented prototype with a retained
+negative result, not an established new method. See the
+[paper-backed dataset and FS-Mol download record](docs/03_research/GOAL_02_DATASET_ACQUISITION_V1.md).
+
 Reviewed v2 adds a [master plan](ACADEMIC_BUSINESS_MASTERPLAN.md),
 [literature review](docs/02_literature/CRITICAL_REVIEW.md),
 [proposed study protocol](docs/03_research/PROTOCOL.md) and

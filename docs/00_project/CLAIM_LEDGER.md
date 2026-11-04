@@ -29,6 +29,10 @@ Use this ledger to reconcile the manuscript, README, presentation, pilot report 
 | C23 | Current journal routes and a USD 300 budget were assessed | PUBLICATION_PREPARATION_ONLY | [Shortlist](../01_paper/JOURNAL_TARGETS_20261104.md); conditional no-APC subscription route, unresolved scientific/venue/author gates; no submission, payment or acceptance |
 | C24 | A higher-upside content-aware dispatch/wait planner and its validation programme are selected | PROPOSED_NOT_IMPLEMENTED | [Goal 1 thesis](../03_research/CONTRIBUTION_AND_VALIDATION_V1.md); prior art occupies joint scheduling, positive search and amortization; new useful bounds/transfer remain unproved |
 | C25 | Four constructed dispatch/wait expectations and development-log diagnostics were checked | ANALYTICAL_AND_POST_HOC_ONLY | [Goal 1 packet](../evidence/goal-01-contribution-20261104/); 162 existing run hashes, 72 matched-arm runs/36 pairs; no new assay campaign or final outcome |
+| C26 | A finite-world dispatch/wait planner and scenario relaxation execute | DEVELOPMENT_PROTOTYPE_ONLY | [Goal 2 protocol/results](../03_research/GOAL_02_RESULTS_V1.md); exact tiny-model checks, finite-model/shortlist guarantee only; no new theorem or biological certificate |
+| C27 | A new paper-backed Tox21 development benchmark ran on dr-train | EXECUTED_DEVELOPMENT_EVIDENCE | 180 completed/0 failed runs, 18 matched groups, 36 exact pruning pairs; real historical labels, simulated operations; one CPU, no final roles |
+| C28 | The Goal 2 content relaxation improves computation or discovery | NOT_SUPPORTED_BY_EXECUTED_CHALLENGE | 13/458 actions pruned; policy time +24.3%, whole-run time +2.26%; no planner WAIT; rollout mean hit difference vs nearest-hit -1.722, observed range [-6,+1] |
+| C29 | FS-Mol is acquired and ready for a family-transfer study | BLOCKED_NOT_INGESTED | [Acquisition record](../03_research/GOAL_02_DATASET_ACQUISITION_V1.md); paper/release identified, official archive 403, owner download requested; rights/splits/endpoint/overlap gates open |
 
 ## Language rules
 

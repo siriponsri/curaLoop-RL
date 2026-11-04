@@ -1,0 +1,62 @@
+{
+  "status": "PASS_AUDIT_NEGATIVE_CONTRIBUTION_RESULT",
+  "post_hoc": true,
+  "offline_action_bound_checks": 458,
+  "actions_tighter_than_cardinality": 458,
+  "max_tightening": 7.8125,
+  "finite_model_gap_mean": 2.961647727272727,
+  "finite_model_gap_range": [
+    0.5,
+    6.25
+  ],
+  "partial_dispatch_decisions": {
+    "rollout": 2,
+    "content_pruned": 2
+  },
+  "totals": {
+    "rollout": {
+      "wall_seconds": 16.40976612898521,
+      "policy_seconds": 2.6687440159730613,
+      "bound_seconds": 8.12876969575882e-05,
+      "rollout_seconds": 1.9815213286783546,
+      "nodes": 14196,
+      "root_actions": 458,
+      "pruned_actions": 0,
+      "waits": 0
+    },
+    "cardinality_pruned": {
+      "wall_seconds": 16.43651516083628,
+      "policy_seconds": 2.724326311144978,
+      "bound_seconds": 0.0036371522583067417,
+      "rollout_seconds": 2.020229532616213,
+      "nodes": 14196,
+      "root_actions": 458,
+      "pruned_actions": 0,
+      "waits": 0
+    },
+    "content_pruned": {
+      "wall_seconds": 16.78020872315392,
+      "policy_seconds": 3.3168440381996334,
+      "bound_seconds": 0.5387711473740637,
+      "rollout_seconds": 2.069948172662407,
+      "nodes": 14144,
+      "root_actions": 458,
+      "pruned_actions": 13,
+      "waits": 0
+    }
+  },
+  "content_over_unpruned_policy_time_ratio": 1.2428483280327902,
+  "content_over_unpruned_total_time_ratio": 1.022574520030141,
+  "rollout_minus_nearest_hit": {
+    "mean": -1.7222222222222223,
+    "range": [
+      -6,
+      1
+    ],
+    "wins": 1,
+    "ties": 8,
+    "losses": 9
+  },
+  "decision": "Do not promote this finite-world relaxation as a useful new method; no real-data planner WAIT decision or computational advantage demonstrated",
+  "limitations": "One fixed order and timing measurement per run; exposed correlated panel; model/shortlist approximation; no full-pool Bayes oracle or calibrated biological guarantee"
+}

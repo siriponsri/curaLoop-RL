@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "reviewer": "/root/journal_submission",
+  "scope": "Independent read-only audit of frozen source and retained execution evidence; not independent experiment reproduction",
+  "checked": {
+    "expected_run_ids": 180,
+    "attempt_ids": 180,
+    "raw_hashes_verified": 360,
+    "run_sizes_match_ledger": true,
+    "frozen_scientific_sources_unchanged": 4,
+    "event_metric_fields_reconstructed": 1800,
+    "csv_metric_fields_compared": 1980,
+    "exact_snapshot_decision_pair_checks": 36,
+    "recorded_bound_checks": 458,
+    "zero_active_initial_groups_retained": 2,
+    "targeted_tests_in_read_receipts": 107,
+    "receipt_failures_errors_skips": 0
+  },
+  "findings": {
+    "blocking": [],
+    "policy_time_increase_percent": 24.28483280327902,
+    "complete_run_time_increase_percent": 2.257452003014104,
+    "planner_wait_actions": 0,
+    "partial_dispatches_per_planning_arm": 2,
+    "report_concordance": "Negative contribution, no discovery advantage, no biological generalization accurately stated"
+  },
+  "not_performed": ["new campaign", "test rerun", "remote OS verification", "full-pool Bayes oracle", "independent reproduction"],
+  "english_evidence_review": {
+    "reviewer": "/root/english_documentation",
+    "status": "PASS",
+    "blocking": [],
+    "local_links_checked": 159,
+    "delta_links_checked": 31,
+    "scope": "Numerical/report/source concordance, English clarity, current prefixes and local links; no new experiments or SSH",
+    "reviewed_sha256": {
+      "GOAL_02_RESULTS_V1.md": "00ce3d99512ba80ffbaa19209959a4ab6f3e8995082297c857893d90d382b7ce",
+      "GOAL_02_REAL_DATA_PROTOCOL_V1.md": "ecc956495035c5900c4f4121feab446f112868153f75daea2216df79d7c739c2",
+      "GOAL_02_DATASET_ACQUISITION_V1.md": "3efa9c8c1cff00be6efa6ba08ed822f20b4df8388d3f950166aa78d970c0c5e2",
+      "analysis.json": "ca29660ecc68789167406a992f11fc5e4601e1a383468a5c119f9a1f88f84ea4",
+      "mechanism-audit.json": "ff5610d52bdf81bfb23aae41fa628b7523d654d25d1e8f6ad0a83ede610e2d5a"
+    }
+  },
+  "dataset_journal_source_review": {
+    "reviewer": "/root/journal_fit",
+    "status": "PASS",
+    "blocking": [],
+    "scope": "FS-Mol source metadata/rights/endpoint and current JCAMD scope; numerical runs outside scope",
+    "checked": ["official filename/size/MD5/destination", "license conflict", "5135 manifest versus5120 paper", "median-potency semantics", "compound/family overlap limits", "archive403/no labels inspected", "retrospective-validation wording", "seven local links"]
+  }
+}

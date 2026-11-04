@@ -1,6 +1,9 @@
 # Documentation map
 
 Sequential research: [Goal tracker](06_execution/GOAL_TRACKER.md),
+[Goal 2 real-data results](03_research/GOAL_02_RESULTS_V1.md),
+[Goal 2 protocol](03_research/GOAL_02_REAL_DATA_PROTOCOL_V1.md),
+[paper-backed dataset acquisition](03_research/GOAL_02_DATASET_ACQUISITION_V1.md),
 [Goal 1 thesis and validation](03_research/CONTRIBUTION_AND_VALIDATION_V1.md),
 [closest-work challenge](02_literature/GOAL_01_CLOSEST_WORK_20261104.md) and
 [post-hoc/analytical evidence](evidence/goal-01-contribution-20261104/).

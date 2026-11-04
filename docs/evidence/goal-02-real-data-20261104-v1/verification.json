@@ -1,0 +1,38 @@
+{
+  "status": "PASS_BOUNDED_GOAL2_DELIVERY_WITH_NEGATIVE_SCIENTIFIC_RESULT",
+  "base_commit": "729e13b09e94db987be3d143511184e6e7629f7b",
+  "implementation_commit": "12574b9fe49a8ff3bc2681e588b7e3b8e1e4af6f",
+  "freeze_commit": "2e4515573a95da45db28d293cfa01507935c8152",
+  "config_sha256": "f5c8adf4a3cfe784e4e3dd16b99858ae61c3652aa2d47693f25049697500e5e2",
+  "checks": {
+    "formal_runs": {"status": "PASS", "complete": 180, "failed": 0, "attempts": 180},
+    "exact_pruning_pairs": {"status": "PASS", "pairs": 36},
+    "offline_bounds": {"status": "PASS", "actions": 458},
+    "targeted_pytest": {"status": "PASS", "passed": 107, "invocations": [88,19], "new_tests": 9},
+    "ruff": {"status": "PASS", "scope": "new planning modules, four new helper tools and new tests"},
+    "strict_application_preservation": {"status": "PASS", "files": 191},
+    "original_development_run_hashes": {"status": "PASS", "files": 162},
+    "package_validation_final": {"status": "PASS", "protected_source_files": 511, "raw_matches": 481, "git_proven_crlf_only": 30, "archive_originals": 27, "active_local_links": 496},
+    "independent_review": {"status": "PASS", "receipt": "final-independent-review.json"},
+    "remote_completion": {"status": "PASS", "goal_runner_processes_found": 0, "goal_lock_released": true}
+  },
+  "scientific_acceptance": {
+    "correct_finite_model_bound_and_pruning": "PASS",
+    "useful_computational_advantage": "FAIL",
+    "discovery_advantage_on_development_panel": "NOT_SUPPORTED",
+    "novel_high_impact_method": "NOT_ESTABLISHED",
+    "final_study_or_independent_family_transfer": "NOT_RUN"
+  },
+  "compute": {"host": "dr-train", "processes": 1, "cpu_affinity": [71], "nice": 19, "virtual_memory_limit_bytes": 1073741824, "cap_run_wall_seconds": 1800, "actual_run_wall_seconds": 151.20147959282622, "actual_cpu_seconds": 151.101068449, "phase_wall_seconds": 152.81396849313751, "peak_rss_bytes": 58601472, "gpu_used": false, "paid_resources": false, "dependency_installation": false},
+  "exceptions_and_limits": [
+    "One unfrozen local integration smoke has a partial stdout-only record and is explicitly disclosed; not included in formal180",
+    "Already exposed correlated Tox21 endpoints; real assay labels, simulated operations",
+    "Finite-world/shortlisted-root bounds have no biological or Monte Carlo coverage guarantee",
+    "One fixed-order timing pass, not repeated hardware performance inference",
+    "FS-Mol official archive403/manual owner download pending; no external labels opened",
+    "New full application/frontend/browser suite not rerun; previous timing failures remain retained",
+    "No independent experiment reproduction, trained controller, final study, journal submission or payment"
+  ],
+  "publication": "Normal main push authorized by owner; final actual result is recorded separately in publication.json",
+  "checker_scope_note": "package-validation*.json not_run entries describe that checker alone; remote execution and Git publication are established by separate goal receipts"
+}

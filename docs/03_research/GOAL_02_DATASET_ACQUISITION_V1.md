@@ -9,15 +9,15 @@ external assay rows were downloaded or assigned CuraLoop evaluation roles.
 The [challenge paper](https://doi.org/10.3389/fenvs.2015.00085) and
 [official training files](https://tripod.nih.gov/tox21/challenge/data.jsp)
 support the three exposed development derivatives used in the
-[Goal2 protocol](GOAL_02_REAL_DATA_PROTOCOL_V1.md). Hashes, preprocessing,
+[Goal 2 protocol](GOAL_02_REAL_DATA_PROTOCOL_V1.md). Hashes, preprocessing,
 row-count discrepancies and limitations are explicit there. These are real
 historical experimental labels with simulated operations, not new experiments.
 
 ## FS-Mol: owner download requested
 
-Use the [official version1 record](https://figshare.com/articles/dataset/FSMol_Dataset/16941100),
-DOI10.6084/m9.figshare.16941100.v1, accompanying
-[Stanley etal., NeurIPS Datasets and Benchmarks2021](https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/hash/8d3bba7425e7c98c50f52ca1b52d3735-Abstract-round2.html).
+Use the [official version 1 record](https://figshare.com/articles/dataset/FSMol_Dataset/16941100),
+DOI 10.6084/m9.figshare.16941100.v1, accompanying
+[Stanley et al., NeurIPS Datasets and Benchmarks 2021](https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/hash/8d3bba7425e7c98c50f52ca1b52d3735-Abstract-round2.html).
 The [official metadata](https://api.figshare.com/v2/articles/16941100) identifies:
 
 | Field | Verified source value |
@@ -40,26 +40,26 @@ arrives: first verify size/MD5, compute SHA256 and retain the raw archive.
 `tools/verify_fsmol_archive_v1.py` performs only byte-level verification, without
 opening archive members. Unknown tar root/layout remains UNKNOWN until inspected.
 
-Official repository pin92aa95daba3f43863227e65be85a07b4a2ee754f:
+Official repository pin: `92aa95daba3f43863227e65be85a07b4a2ee754f`.
 [README](https://raw.githubusercontent.com/microsoft/FS-Mol/92aa95daba3f43863227e65be85a07b4a2ee754f/README.md),
 [task manifest](https://raw.githubusercontent.com/microsoft/FS-Mol/92aa95daba3f43863227e65be85a07b4a2ee754f/datasets/fsmol-0.1.json),
 [license](https://raw.githubusercontent.com/microsoft/FS-Mol/92aa95daba3f43863227e65be85a07b4a2ee754f/LICENSE).
-Read-only manifest review found4938train/40valid/157test,5135 distinct assay IDs
-and no cross-role ID overlap. The paper states5120 total: this discrepancy is
+Read-only manifest review found 4,938 train, 40 validation and 157 test tasks:
+5,135 distinct assay IDs and no cross-role ID overlap. The paper states 5,120 total: this discrepancy is
 unresolved, not silently corrected. Source roles do not automatically become
 CuraLoop roles; overlap with development structures/families must be audited.
 
-Figshare labels the archive CC BY4.0; the repository assigns datasets/ CC BY-SA3.0
-with upstream ChEMBL27 provenance. MIT applies to the remaining source code.
+Figshare labels the archive CC BY 4.0; the repository assigns datasets/ CC BY-SA 3.0
+with upstream ChEMBL 27 provenance. MIT applies to the remaining source code.
 Both data notices must be preserved; a uniform redistribution grant is not
 resolved by choosing the more permissive badge. Keep raw/derived assays outside
 public Git while the release-specific attribution/redistribution review closes.
 
 FS-Mol uses IC50/EC50 measurements with constrained assay-median binary labels,
-retaining30–70% positive ratios; large HTS assays are excluded. A positive means
+retaining 30–70% positive ratios; large HTS assays are excluded. A positive means
 above the dataset's assay-relative activity criterion, not a sparse confirmed
 screening hit or therapeutic efficacy. Its protein-target-separated test split
-allows compound overlap: paper totals27520test compounds,15732unseen in train/
+allows compound overlap: the paper reports 27,520 test compounds, 15,732 unseen in train/
 validation. Assay IDs and tasks are not counts of independent biological families.
 Use as a transfer/potency-threshold complement, not a replacement label for HTS.
 

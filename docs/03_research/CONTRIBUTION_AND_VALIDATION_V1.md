@@ -1,5 +1,11 @@
 # Goal 1 research thesis and validation decision
 
+Goal 2 amendment: the owner approved real datasets and SSH. The subsequent
+[180-run real-data prototype](GOAL_02_RESULTS_V1.md) passed correctness checks
+but failed to show useful computation/discovery gains. Its standard relaxation
+is not a new theorem. The ambitious thesis below remains a research target;
+this dated Goal 1 decision is preserved, not retroactively rewritten.
+
 4 November 2026. Base: main `e181c1b4a7b2ee0c770209e0d6c0287bb893005f`.
 **Decision: pursue a high-upside planning-method research target.** The owner
 explicitly rejected a narrow benchmark as the final ambition. Existing replay
