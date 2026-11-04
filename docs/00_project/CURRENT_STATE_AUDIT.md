@@ -1,5 +1,11 @@
 # Current-state audit
 
+> Development update, 4 November 2026: [NCATS pilot results](../03_research/NCATS_DEVELOPMENT_RESULTS_V1.md)
+> record 108/108 completed runs on three correlated development endpoints, with
+> frozen controls, exact identities and retained null/unfavorable results. This
+> is separate from the preserved application baseline below. Final evaluation,
+> controller transfer, customer validation and new UI integration remain NOT_RUN.
+
 > Local continuation amendment: see [the foundation checkpoint](../06_execution/FOUNDATION_CHECKPOINT.md)
 > for the new reference/registry and actual checks. The source-cutoff audit below
 > remains the historical application baseline. New toy engineering does not

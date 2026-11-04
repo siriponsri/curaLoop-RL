@@ -2,6 +2,11 @@
 
 **State: PROPOSED_NOT_EXECUTED.** Freeze an implementation-specific amendment before final experiments. The historical v0.1 HIV benchmark is a separate completed study with its own definitions. This protocol does not retroactively preregister those results.
 
+The separate [NCATS development amendment](NCATS_DEVELOPMENT_PROTOCOL_V1.md)
+was frozen before its [108 executed development runs](NCATS_DEVELOPMENT_RESULTS_V1.md).
+It does not freeze or execute this full confirmatory protocol. The exposed
+development endpoints cannot become untouched final tasks.
+
 ## Research question and contribution
 
 Determine when selection that accounts for pending experiments improves the discovery of historical active compounds under limited budget, assay capacity and a simulated deadline. A second contribution is a reusable benchmark that exposes every accepted action, pending commitment and delivered outcome. A third, conditional contribution is an adaptive controller that transfers across held-out biological tasks. The controller contribution is dropped or narrowed if the results do not support it.

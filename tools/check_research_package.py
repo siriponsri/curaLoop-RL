@@ -285,7 +285,7 @@ def validate(root: Path) -> dict:
         "checks": checks,
         "failures": failures,
         "not_run": [
-            "multi-target scientific study",
+            "final multi-target confirmatory study (NCATS development pilot recorded separately)",
             "new controller training",
             "full application Python/frontend/browser suites",
             "customer validation",

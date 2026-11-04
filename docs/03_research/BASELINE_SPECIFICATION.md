@@ -1,19 +1,25 @@
 # Baseline specification and objective matching
 
-**State: PROPOSED_NOT_IMPLEMENTED, except the explicitly named legacy policies.** This document defines acceptance for the next engineering work; it does not add algorithms to the current CLI. The development pilot chooses numerical settings and then freezes them before final testing.
+**State: partial development implementation; final catalogue incomplete.**
+The [NCATS v1 pilot](NCATS_DEVELOPMENT_RESULTS_V1.md) executed Random,
+frozen/retrained Greedy, nearest-hit, diversity and the matched pending-penalty
+pair under [its frozen settings](NCATS_DEVELOPMENT_PROTOCOL_V1.md). These are
+separate research modules, not new current-CLI policies. Explicit ensemble
+uncertainty, a fixed mixture, a genuine asynchronous probabilistic comparator
+and a generalizing controller remain unimplemented in this new runner.
 
 ## Required arms
 
 | Arm | Selector and update contract | Why it is needed | Delivery state |
 | --- | --- | --- | --- |
-| Random | Uniform draw from feasible unlabelled, nonpending candidates; no predictor | Chance reference and one-class fallback | Legacy implemented; new runner adaptation planned |
-| Frozen-model Greedy | Fit the matched predictor only on initial labels; rank by active score thereafter | Isolate retraining value from initial ranking | PLANNED |
-| Retrained Greedy | Same predictor family; refit on revealed labels at each declared decision event | Strong exploitation control | Legacy implemented; new event contract planned |
-| Nearest-hit similarity | Maximize Morgan/Tanimoto similarity to any delivered active, including known initial actives | Strong inexpensive low-data control from R05 | PLANNED |
-| Structural diversity | Maximize distance from the declared observed/reference set; fix ties deterministically | Control for chemical-space coverage | PLANNED |
+| Random | Uniform draw from feasible unlabelled, nonpending candidates; no predictor | Chance reference and one-class fallback | IMPLEMENTED; NCATS v1 executed |
+| Frozen-model Greedy | Fit the matched predictor only on initial labels; rank by active score thereafter | Isolate retraining value from initial ranking | IMPLEMENTED; NCATS v1 executed |
+| Retrained Greedy | Same predictor family; refit on revealed labels at each declared decision event | Strong exploitation control | IMPLEMENTED; NCATS v1 executed |
+| Nearest-hit similarity | Maximize Morgan/Tanimoto similarity to any delivered active, including known initial actives | Strong inexpensive low-data control from R05 | IMPLEMENTED; NCATS v1 executed |
+| Structural diversity | Maximize distance from the declared observed/reference set; fix ties deterministically | Control for chemical-space coverage | IMPLEMENTED; NCATS v1 executed; no within-batch adjustment |
 | Explicit uncertainty | Freeze ensemble/score definition and direction; distinguish entropy, variance and disagreement | Avoid calling uncalibrated margin a posterior | PLANNED; legacy margin remains separate |
 | Fixed mixture | Development-selected probability or schedule mixing explicit selectors | Test whether simple mixing explains adaptation | PLANNED |
-| Matched pending-blind / pending-aware pair | Same predictor and feasible set; only the declared pending-conditioning term differs | Primary H1 contrast | PLANNED |
+| Matched pending-blind / pending-aware pair | Same predictor and feasible set; only the declared pending-conditioning term differs | Primary H1 contrast | IMPLEMENTED; NCATS v1 heuristic executed; final H1 remains untested |
 | Asynchronous probabilistic comparator | Explicit finite-pool model with pending variance conditioning or fantasization and a matched multi-hit objective | Compare operational adaptation with established ideas | PLANNED; version-specific acceptance required |
 | Generalizing controller | Freeze development-trained model and action mapping; log learned and fallback use | Conditional transfer question | PLANNED; legacy tables preserved separately |
 

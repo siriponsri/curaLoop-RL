@@ -1,4 +1,36 @@
-# Reviewed v2 local foundation checkpoint
+# Current local checkpoint: executed NCATS development pilot
+
+Date: 4 November 2026, Asia/Bangkok. Checkout
+`C:\Users\User\Desktop\myProject\curaloop-rl`, branch
+`feat/real-assay-development-20261104`. The frozen allocation commit
+`4091e209fed78d04d48b13ef8ad719257302f684` precedes all real method runs. Git HEAD
+identifies the results/receipt commit. Main remains at `2d287a1`; no push occurred.
+
+**108/108 complete, 0 failed, 0 warnings.** Read
+[measured results](03_research/NCATS_DEVELOPMENT_RESULTS_V1.md),
+[the frozen development protocol](03_research/NCATS_DEVELOPMENT_PROTOCOL_V1.md) and
+[the complete public run packet](evidence/ncats-development-20261104-v1/).
+Pending penalty had no positive heterogeneous pair: eight ties and one loss of
+two AhR hits. All nine common-delay pairs match exactly. No seed was dropped.
+61 targeted tests, Ruff, 191 strict byte checks and 511 source-manifest checks
+passed. The original application, checkpoints, HIV results, visual/manual assets
+and runtime marker remain preserved.
+
+Raw and full derived public inputs remain ignored in `research/raw_data/`; input
+hashes and preprocessing are recorded. Completed/failed run artifacts are
+immutable and hash-checked; do not delete/reset a ledger or repeat a study under
+the same identity. A substantive change needs a new development version.
+
+Next: objective-matched probabilistic asynchronous comparator feasibility,
+stronger controls and independent future task roles before final-study freeze.
+No final evaluation, learned transfer, customer validation or therapeutic claim
+is supported by this three-endpoint development grid. Work remains local. CPU
+only; no GPU, paid API, external contact, deployment or publication occurred.
+No background agent or study process continues after this checkpoint.
+
+---
+
+# Historical Reviewed v2 local foundation checkpoint
 
 Date: 2026-11-04 (Asia/Bangkok).
 Checkout: `C:\Users\User\Desktop\myProject\curaloop-rl`.

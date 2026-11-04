@@ -1,0 +1,1149 @@
+{
+  "status": "COMPLETE",
+  "assay": "ncats2014-p53-development-v1",
+  "seed": 1,
+  "condition": "common",
+  "method": "pending_penalty",
+  "initial_ids": [
+    "ncats-01227623634752c3fbc4fd88",
+    "ncats-08d75ff3f1f8929fd4247169",
+    "ncats-0acd52a5d73ba6c089793c92",
+    "ncats-0bf5216dcf3aef896d426be5",
+    "ncats-0d7cd9c3c2d909d204343be0",
+    "ncats-19cbaa5f5509cb2299b9fff7",
+    "ncats-23680c07d402491b4f98b2da",
+    "ncats-27c3ee53cf00b105a5397dfd",
+    "ncats-2c4eb2c00cfe6a57cf0fcb10",
+    "ncats-32495104da87d11970989e22",
+    "ncats-4ffae2d9701edf20cbc0dc19",
+    "ncats-598175c21ab079f2898f22d9",
+    "ncats-64a99a041a71f868b223d728",
+    "ncats-6b879826adbb3b26832aa269",
+    "ncats-85776994fbfa35626e9c6b66",
+    "ncats-a0acd8db25d8dc74f3cc1dd8",
+    "ncats-a31839a5777291a1c46c3928",
+    "ncats-b72cccfd9cc11d3718f34333",
+    "ncats-bbd6f0dd128da5365d8f9d51",
+    "ncats-bde84d64cec49b97a01fccb9",
+    "ncats-c801f2c5e8739271b663985c",
+    "ncats-cd89f9e43020b808ff4ea119",
+    "ncats-d2983c164bb8d457b2c59eee",
+    "ncats-f60909cda1c79fd4c2763d97"
+  ],
+  "initial_active_count": 4,
+  "schedule_sha256": "6856b980d2e49e3056714e3a473685303131849e31bd184761cbf47f2dd49607",
+  "metrics": {
+    "time": 12,
+    "new_hits": 6,
+    "seed_hits": 4,
+    "delivered": 18,
+    "missing": 0,
+    "pending": 0,
+    "spent": 18,
+    "reserved": 0,
+    "uncommitted": 6,
+    "accepted_exposure": 18,
+    "time_discovery_area": 42,
+    "new_active_nonempty_scaffolds": 6,
+    "new_active_empty_scaffold_count": 0
+  },
+  "selector": {
+    "fit_attempts": 6,
+    "fit_successes": 6,
+    "prediction_calls": 6,
+    "decisions": 6,
+    "fit_wall_seconds": 0.050867200014181435,
+    "predict_wall_seconds": 0.07890269986819476,
+    "selection_wall_seconds": 0.33031820005271584,
+    "fallback_requests": 0,
+    "fallback_reasons": {},
+    "selected_requests": 18,
+    "learned_controller_requests": 0,
+    "controller_fallback_requests": 0,
+    "controller_status": "NOT_APPLICABLE_FIXED_ACQUISITION"
+  },
+  "decisions": [
+    {
+      "time": 0,
+      "pending_ids": [],
+      "known_labels": 24,
+      "known_actives": 4,
+      "fallback_reason": null,
+      "chosen": [
+        {
+          "candidate_id": "ncats-dfa122ea253d3e105dd282d1",
+          "score": 0.9975824745833448,
+          "predicted_probability": 0.9975824745833448
+        },
+        {
+          "candidate_id": "ncats-f27a1dd640a02344c8d79980",
+          "score": 0.9965689364083634,
+          "predicted_probability": 0.9965689364083634
+        },
+        {
+          "candidate_id": "ncats-e3b70b4c3e756fa4e7b996a9",
+          "score": 0.9908958078127369,
+          "predicted_probability": 0.9908958078127369
+        }
+      ],
+      "fit_successes_so_far": 1
+    },
+    {
+      "time": 2,
+      "pending_ids": [],
+      "known_labels": 27,
+      "known_actives": 7,
+      "fallback_reason": null,
+      "chosen": [
+        {
+          "candidate_id": "ncats-2de4636c38150acac2087d0d",
+          "score": 0.951376324340683,
+          "predicted_probability": 0.951376324340683
+        },
+        {
+          "candidate_id": "ncats-29f651c79180ff2e691da5cf",
+          "score": 0.9237513324104877,
+          "predicted_probability": 0.9237513324104877
+        },
+        {
+          "candidate_id": "ncats-47ebaaf284e97ed98e9a4d14",
+          "score": 0.8654575169333044,
+          "predicted_probability": 0.8654575169333044
+        }
+      ],
+      "fit_successes_so_far": 2
+    },
+    {
+      "time": 4,
+      "pending_ids": [],
+      "known_labels": 30,
+      "known_actives": 8,
+      "fallback_reason": null,
+      "chosen": [
+        {
+          "candidate_id": "ncats-a7301a22f6e9a23b9c934707",
+          "score": 0.7776077185396177,
+          "predicted_probability": 0.7776077185396177
+        },
+        {
+          "candidate_id": "ncats-b70eb2d722dcb004f62c0bef",
+          "score": 0.7728407451352143,
+          "predicted_probability": 0.7728407451352143
+        },
+        {
+          "candidate_id": "ncats-753c79178bfaca78c5132df0",
+          "score": 0.7135058143167265,
+          "predicted_probability": 0.7135058143167265
+        }
+      ],
+      "fit_successes_so_far": 3
+    },
+    {
+      "time": 6,
+      "pending_ids": [],
+      "known_labels": 33,
+      "known_actives": 8,
+      "fallback_reason": null,
+      "chosen": [
+        {
+          "candidate_id": "ncats-33a65c55faf2c21679215677",
+          "score": 0.6676397786557481,
+          "predicted_probability": 0.6676397786557481
+        },
+        {
+          "candidate_id": "ncats-6c6343ba4f5db2aa21be5721",
+          "score": 0.6459016108134678,
+          "predicted_probability": 0.6459016108134678
+        },
+        {
+          "candidate_id": "ncats-194493f96f9481dcb19d66c8",
+          "score": 0.6424334557214403,
+          "predicted_probability": 0.6424334557214403
+        }
+      ],
+      "fit_successes_so_far": 4
+    },
+    {
+      "time": 8,
+      "pending_ids": [],
+      "known_labels": 36,
+      "known_actives": 9,
+      "fallback_reason": null,
+      "chosen": [
+        {
+          "candidate_id": "ncats-c811e5399e6653abcfa6c28f",
+          "score": 0.8741336008910251,
+          "predicted_probability": 0.8741336008910251
+        },
+        {
+          "candidate_id": "ncats-20bed7818e9141ace40bf973",
+          "score": 0.8678447978822206,
+          "predicted_probability": 0.8678447978822206
+        },
+        {
+          "candidate_id": "ncats-97f2cd9967ffff488906f84f",
+          "score": 0.866224985875067,
+          "predicted_probability": 0.866224985875067
+        }
+      ],
+      "fit_successes_so_far": 5
+    },
+    {
+      "time": 10,
+      "pending_ids": [],
+      "known_labels": 39,
+      "known_actives": 9,
+      "fallback_reason": null,
+      "chosen": [
+        {
+          "candidate_id": "ncats-8c2a416a5cd374b4cd474eff",
+          "score": 0.6348420572433843,
+          "predicted_probability": 0.6348420572433843
+        },
+        {
+          "candidate_id": "ncats-8a8281992f4aa6f7d644a26d",
+          "score": 0.5756676631485002,
+          "predicted_probability": 0.5756676631485002
+        },
+        {
+          "candidate_id": "ncats-b49523e35126db96781306fd",
+          "score": 0.47246992258832643,
+          "predicted_probability": 0.47246992258832643
+        }
+      ],
+      "fit_successes_so_far": 6
+    }
+  ],
+  "decision_grid": [
+    {
+      "time": 0,
+      "pending": 0,
+      "eligible": 576,
+      "slots": 3
+    },
+    {
+      "time": 1,
+      "pending": 3,
+      "eligible": 0,
+      "slots": 0
+    },
+    {
+      "time": 2,
+      "pending": 0,
+      "eligible": 573,
+      "slots": 3
+    },
+    {
+      "time": 3,
+      "pending": 3,
+      "eligible": 0,
+      "slots": 0
+    },
+    {
+      "time": 4,
+      "pending": 0,
+      "eligible": 570,
+      "slots": 3
+    },
+    {
+      "time": 5,
+      "pending": 3,
+      "eligible": 0,
+      "slots": 0
+    },
+    {
+      "time": 6,
+      "pending": 0,
+      "eligible": 567,
+      "slots": 3
+    },
+    {
+      "time": 7,
+      "pending": 3,
+      "eligible": 0,
+      "slots": 0
+    },
+    {
+      "time": 8,
+      "pending": 0,
+      "eligible": 564,
+      "slots": 3
+    },
+    {
+      "time": 9,
+      "pending": 3,
+      "eligible": 0,
+      "slots": 0
+    },
+    {
+      "time": 10,
+      "pending": 0,
+      "eligible": 561,
+      "slots": 3
+    },
+    {
+      "time": 11,
+      "pending": 3,
+      "eligible": 0,
+      "slots": 0
+    }
+  ],
+  "snapshot": {
+    "events": [
+      {
+        "active": false,
+        "candidate_id": "ncats-01227623634752c3fbc4fd88",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 0,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-08d75ff3f1f8929fd4247169",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 1,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-0acd52a5d73ba6c089793c92",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 2,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-0bf5216dcf3aef896d426be5",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 3,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-0d7cd9c3c2d909d204343be0",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 4,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-19cbaa5f5509cb2299b9fff7",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 5,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-23680c07d402491b4f98b2da",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 6,
+        "time": 0
+      },
+      {
+        "active": true,
+        "candidate_id": "ncats-27c3ee53cf00b105a5397dfd",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 7,
+        "time": 0
+      },
+      {
+        "active": true,
+        "candidate_id": "ncats-2c4eb2c00cfe6a57cf0fcb10",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 8,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-32495104da87d11970989e22",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 9,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-4ffae2d9701edf20cbc0dc19",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 10,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-598175c21ab079f2898f22d9",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 11,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-64a99a041a71f868b223d728",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 12,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-6b879826adbb3b26832aa269",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 13,
+        "time": 0
+      },
+      {
+        "active": true,
+        "candidate_id": "ncats-85776994fbfa35626e9c6b66",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 14,
+        "time": 0
+      },
+      {
+        "active": true,
+        "candidate_id": "ncats-a0acd8db25d8dc74f3cc1dd8",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 15,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-a31839a5777291a1c46c3928",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 16,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-b72cccfd9cc11d3718f34333",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 17,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-bbd6f0dd128da5365d8f9d51",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 18,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-bde84d64cec49b97a01fccb9",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 19,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-c801f2c5e8739271b663985c",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 20,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-cd89f9e43020b808ff4ea119",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 21,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-d2983c164bb8d457b2c59eee",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 22,
+        "time": 0
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-f60909cda1c79fd4c2763d97",
+        "cost": 0,
+        "kind": "INITIAL_LABEL",
+        "request_id": null,
+        "sequence": 23,
+        "time": 0
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-dfa122ea253d3e105dd282d1",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000000",
+        "sequence": 24,
+        "time": 0
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-f27a1dd640a02344c8d79980",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000001",
+        "sequence": 25,
+        "time": 0
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-e3b70b4c3e756fa4e7b996a9",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000002",
+        "sequence": 26,
+        "time": 0
+      },
+      {
+        "active": null,
+        "candidate_id": null,
+        "cost": 0,
+        "kind": "TIME_ADVANCED",
+        "request_id": null,
+        "sequence": 27,
+        "time": 1
+      },
+      {
+        "active": null,
+        "candidate_id": null,
+        "cost": 0,
+        "kind": "TIME_ADVANCED",
+        "request_id": null,
+        "sequence": 28,
+        "time": 2
+      },
+      {
+        "active": true,
+        "candidate_id": "ncats-dfa122ea253d3e105dd282d1",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000000",
+        "sequence": 29,
+        "time": 2
+      },
+      {
+        "active": true,
+        "candidate_id": "ncats-f27a1dd640a02344c8d79980",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000001",
+        "sequence": 30,
+        "time": 2
+      },
+      {
+        "active": true,
+        "candidate_id": "ncats-e3b70b4c3e756fa4e7b996a9",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000002",
+        "sequence": 31,
+        "time": 2
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-2de4636c38150acac2087d0d",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000003",
+        "sequence": 32,
+        "time": 2
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-29f651c79180ff2e691da5cf",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000004",
+        "sequence": 33,
+        "time": 2
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-47ebaaf284e97ed98e9a4d14",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000005",
+        "sequence": 34,
+        "time": 2
+      },
+      {
+        "active": null,
+        "candidate_id": null,
+        "cost": 0,
+        "kind": "TIME_ADVANCED",
+        "request_id": null,
+        "sequence": 35,
+        "time": 3
+      },
+      {
+        "active": null,
+        "candidate_id": null,
+        "cost": 0,
+        "kind": "TIME_ADVANCED",
+        "request_id": null,
+        "sequence": 36,
+        "time": 4
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-2de4636c38150acac2087d0d",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000003",
+        "sequence": 37,
+        "time": 4
+      },
+      {
+        "active": true,
+        "candidate_id": "ncats-29f651c79180ff2e691da5cf",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000004",
+        "sequence": 38,
+        "time": 4
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-47ebaaf284e97ed98e9a4d14",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000005",
+        "sequence": 39,
+        "time": 4
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-a7301a22f6e9a23b9c934707",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000006",
+        "sequence": 40,
+        "time": 4
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-b70eb2d722dcb004f62c0bef",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000007",
+        "sequence": 41,
+        "time": 4
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-753c79178bfaca78c5132df0",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000008",
+        "sequence": 42,
+        "time": 4
+      },
+      {
+        "active": null,
+        "candidate_id": null,
+        "cost": 0,
+        "kind": "TIME_ADVANCED",
+        "request_id": null,
+        "sequence": 43,
+        "time": 5
+      },
+      {
+        "active": null,
+        "candidate_id": null,
+        "cost": 0,
+        "kind": "TIME_ADVANCED",
+        "request_id": null,
+        "sequence": 44,
+        "time": 6
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-a7301a22f6e9a23b9c934707",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000006",
+        "sequence": 45,
+        "time": 6
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-b70eb2d722dcb004f62c0bef",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000007",
+        "sequence": 46,
+        "time": 6
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-753c79178bfaca78c5132df0",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000008",
+        "sequence": 47,
+        "time": 6
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-33a65c55faf2c21679215677",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000009",
+        "sequence": 48,
+        "time": 6
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-6c6343ba4f5db2aa21be5721",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000010",
+        "sequence": 49,
+        "time": 6
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-194493f96f9481dcb19d66c8",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000011",
+        "sequence": 50,
+        "time": 6
+      },
+      {
+        "active": null,
+        "candidate_id": null,
+        "cost": 0,
+        "kind": "TIME_ADVANCED",
+        "request_id": null,
+        "sequence": 51,
+        "time": 7
+      },
+      {
+        "active": null,
+        "candidate_id": null,
+        "cost": 0,
+        "kind": "TIME_ADVANCED",
+        "request_id": null,
+        "sequence": 52,
+        "time": 8
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-33a65c55faf2c21679215677",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000009",
+        "sequence": 53,
+        "time": 8
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-6c6343ba4f5db2aa21be5721",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000010",
+        "sequence": 54,
+        "time": 8
+      },
+      {
+        "active": true,
+        "candidate_id": "ncats-194493f96f9481dcb19d66c8",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000011",
+        "sequence": 55,
+        "time": 8
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-c811e5399e6653abcfa6c28f",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000012",
+        "sequence": 56,
+        "time": 8
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-20bed7818e9141ace40bf973",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000013",
+        "sequence": 57,
+        "time": 8
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-97f2cd9967ffff488906f84f",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000014",
+        "sequence": 58,
+        "time": 8
+      },
+      {
+        "active": null,
+        "candidate_id": null,
+        "cost": 0,
+        "kind": "TIME_ADVANCED",
+        "request_id": null,
+        "sequence": 59,
+        "time": 9
+      },
+      {
+        "active": null,
+        "candidate_id": null,
+        "cost": 0,
+        "kind": "TIME_ADVANCED",
+        "request_id": null,
+        "sequence": 60,
+        "time": 10
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-c811e5399e6653abcfa6c28f",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000012",
+        "sequence": 61,
+        "time": 10
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-20bed7818e9141ace40bf973",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000013",
+        "sequence": 62,
+        "time": 10
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-97f2cd9967ffff488906f84f",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000014",
+        "sequence": 63,
+        "time": 10
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-8c2a416a5cd374b4cd474eff",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000015",
+        "sequence": 64,
+        "time": 10
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-8a8281992f4aa6f7d644a26d",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000016",
+        "sequence": 65,
+        "time": 10
+      },
+      {
+        "active": null,
+        "candidate_id": "ncats-b49523e35126db96781306fd",
+        "cost": 1,
+        "kind": "REQUEST_ACCEPTED",
+        "request_id": "r000017",
+        "sequence": 66,
+        "time": 10
+      },
+      {
+        "active": null,
+        "candidate_id": null,
+        "cost": 0,
+        "kind": "TIME_ADVANCED",
+        "request_id": null,
+        "sequence": 67,
+        "time": 11
+      },
+      {
+        "active": null,
+        "candidate_id": null,
+        "cost": 0,
+        "kind": "TIME_ADVANCED",
+        "request_id": null,
+        "sequence": 68,
+        "time": 12
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-8c2a416a5cd374b4cd474eff",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000015",
+        "sequence": 69,
+        "time": 12
+      },
+      {
+        "active": false,
+        "candidate_id": "ncats-8a8281992f4aa6f7d644a26d",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000016",
+        "sequence": 70,
+        "time": 12
+      },
+      {
+        "active": true,
+        "candidate_id": "ncats-b49523e35126db96781306fd",
+        "cost": 1,
+        "kind": "RESULT_DELIVERED",
+        "request_id": "r000017",
+        "sequence": 71,
+        "time": 12
+      }
+    ],
+    "journal": [
+      {
+        "action": "submit",
+        "ids": [
+          "ncats-dfa122ea253d3e105dd282d1",
+          "ncats-f27a1dd640a02344c8d79980",
+          "ncats-e3b70b4c3e756fa4e7b996a9"
+        ]
+      },
+      {
+        "action": "advance_to",
+        "time": 1
+      },
+      {
+        "action": "advance_to",
+        "time": 2
+      },
+      {
+        "action": "submit",
+        "ids": [
+          "ncats-2de4636c38150acac2087d0d",
+          "ncats-29f651c79180ff2e691da5cf",
+          "ncats-47ebaaf284e97ed98e9a4d14"
+        ]
+      },
+      {
+        "action": "advance_to",
+        "time": 3
+      },
+      {
+        "action": "advance_to",
+        "time": 4
+      },
+      {
+        "action": "submit",
+        "ids": [
+          "ncats-a7301a22f6e9a23b9c934707",
+          "ncats-b70eb2d722dcb004f62c0bef",
+          "ncats-753c79178bfaca78c5132df0"
+        ]
+      },
+      {
+        "action": "advance_to",
+        "time": 5
+      },
+      {
+        "action": "advance_to",
+        "time": 6
+      },
+      {
+        "action": "submit",
+        "ids": [
+          "ncats-33a65c55faf2c21679215677",
+          "ncats-6c6343ba4f5db2aa21be5721",
+          "ncats-194493f96f9481dcb19d66c8"
+        ]
+      },
+      {
+        "action": "advance_to",
+        "time": 7
+      },
+      {
+        "action": "advance_to",
+        "time": 8
+      },
+      {
+        "action": "submit",
+        "ids": [
+          "ncats-c811e5399e6653abcfa6c28f",
+          "ncats-20bed7818e9141ace40bf973",
+          "ncats-97f2cd9967ffff488906f84f"
+        ]
+      },
+      {
+        "action": "advance_to",
+        "time": 9
+      },
+      {
+        "action": "advance_to",
+        "time": 10
+      },
+      {
+        "action": "submit",
+        "ids": [
+          "ncats-8c2a416a5cd374b4cd474eff",
+          "ncats-8a8281992f4aa6f7d644a26d",
+          "ncats-b49523e35126db96781306fd"
+        ]
+      },
+      {
+        "action": "advance_to",
+        "time": 11
+      },
+      {
+        "action": "advance_to",
+        "time": 12
+      }
+    ],
+    "metrics": {
+      "accepted_exposure": 18,
+      "delivered": 18,
+      "missing": 0,
+      "new_hits": 6,
+      "pending": 0,
+      "reserved": 0,
+      "seed_hits": 4,
+      "spent": 18,
+      "time": 12,
+      "time_discovery_area": 42,
+      "uncommitted": 6
+    },
+    "resource_sha256": "2cc1f97501158caf8996162c4363f73c68ea3dd764288519f452f4d3e2341a48",
+    "scenario": {
+      "budget": 24,
+      "capacity": 3,
+      "deadline": 12,
+      "initial_ids": [
+        "ncats-01227623634752c3fbc4fd88",
+        "ncats-08d75ff3f1f8929fd4247169",
+        "ncats-0acd52a5d73ba6c089793c92",
+        "ncats-0bf5216dcf3aef896d426be5",
+        "ncats-0d7cd9c3c2d909d204343be0",
+        "ncats-19cbaa5f5509cb2299b9fff7",
+        "ncats-23680c07d402491b4f98b2da",
+        "ncats-27c3ee53cf00b105a5397dfd",
+        "ncats-2c4eb2c00cfe6a57cf0fcb10",
+        "ncats-32495104da87d11970989e22",
+        "ncats-4ffae2d9701edf20cbc0dc19",
+        "ncats-598175c21ab079f2898f22d9",
+        "ncats-64a99a041a71f868b223d728",
+        "ncats-6b879826adbb3b26832aa269",
+        "ncats-85776994fbfa35626e9c6b66",
+        "ncats-a0acd8db25d8dc74f3cc1dd8",
+        "ncats-a31839a5777291a1c46c3928",
+        "ncats-b72cccfd9cc11d3718f34333",
+        "ncats-bbd6f0dd128da5365d8f9d51",
+        "ncats-bde84d64cec49b97a01fccb9",
+        "ncats-c801f2c5e8739271b663985c",
+        "ncats-cd89f9e43020b808ff4ea119",
+        "ncats-d2983c164bb8d457b2c59eee",
+        "ncats-f60909cda1c79fd4c2763d97"
+      ]
+    },
+    "schema_version": "curaloop.research.integer-events.v1"
+  },
+  "restoration_verified": true,
+  "wall_seconds": 1.7236623999197036,
+  "cpu_seconds": 1.609375,
+  "scope": "DEVELOPMENT_HISTORICAL_ASSAY_REPLAY; simulated unit costs/durations; not therapeutic efficacy",
+  "warnings": [],
+  "attempt_wall_seconds": 2.067338600056246,
+  "attempt_cpu_seconds": 1.9375,
+  "run_id": "43158c14fac799f5f638fe8d",
+  "identity": {
+    "config_sha256": "8d1d7b0450074a78d54fedbe9ec96579845de08589103324a729947a6b567be2",
+    "assay": "p53",
+    "seed": 1,
+    "condition": "common",
+    "method": "pending_penalty"
+  },
+  "execution": {
+    "config_sha256": "8d1d7b0450074a78d54fedbe9ec96579845de08589103324a729947a6b567be2",
+    "execution_source_sha256": "41dce53850a58caee1c0dda2e32cf7f1f47ab948b4ea632d219eb01f9fc31437",
+    "git_commit": "4091e209fed78d04d48b13ef8ad719257302f684",
+    "working_tree_dirty": false,
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus_available": 12,
+    "packages": {
+      "numpy": "2.3.5",
+      "scikit-learn": "1.8.0",
+      "rdkit": "2026.9.1",
+      "threadpoolctl": "3.6.0"
+    },
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-9e3e5a4229c1ca39f10dc82bba9e2b2b.dll",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "vcomp",
+        "filepath": "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.venv\\Lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.venv\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-64eda39e79589aedb16f58e5547eb599.dll",
+        "version": "0.3.30",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      }
+    ],
+    "phase": "all",
+    "started_utc": "2026-11-04T08:34:12.078166+00:00"
+  }
+}

@@ -1,6 +1,36 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
-## Current checkpoint: local Reviewed v2 foundation
+## Current checkpoint: executed NCATS development pilot
+
+Checkout `C:\Users\User\Desktop\myProject\curaloop-rl`, branch
+`feat/real-assay-development-20261104`. Implementation `a797077`; frozen config
+`4091e209fed78d04d48b13ef8ad719257302f684` predates every real-assay method run.
+The local result commit is identified by Git HEAD; main remains at `2d287a1`.
+
+Actual outcome: **108 complete / 0 failed / 0 warnings**, six fixed controls on
+three NCATS training endpoints and three repeated seeds. Heterogeneous pending
+penalty versus Greedy: 0 wins, 8 ties, 1 loss (-2 hits). Common-delay negative
+control: 9/9 exact event traces. Preserve all zero-hit and one-class starts.
+Full [results and identities](docs/03_research/NCATS_DEVELOPMENT_RESULTS_V1.md),
+[frozen protocol](docs/03_research/NCATS_DEVELOPMENT_PROTOCOL_V1.md) and
+[public evidence packet](docs/evidence/ncats-development-20261104-v1/).
+
+61 targeted research tests, Ruff, 191 strict historical-byte checks and the
+511-file package guard passed. Actual cumulative run-wall 219.47s, CPU 196.86s,
+peak runner memory 213.63 MiB. CPU only, one numerical thread, no paid compute.
+Raw/full derived inputs stay ignored; all 108 public run artifacts and their
+ledger are committed with byte-preserving attributes. Do not reset their ledger
+or rerun completed/failed identities. The original app/runtime marker is intact.
+
+Next meaningful slice: assess an objective-matched probabilistic asynchronous
+comparator and independent future task/family allocation before final freezing.
+The current penalty has no demonstrated benefit. No untouched final test,
+controller transfer, clinical efficacy or commercial outcome is established.
+Keep work local; no push/publication/deployment was performed. GPU access,
+allocation, conflict and shared-lock checks were not needed or run because no
+GPU job launched. No background study remains running at this checkpoint.
+
+## Historical checkpoint: local Reviewed v2 foundation
 
 Branch `feat/reviewed-v2-foundation-20261104`, based on `a866b13`. The owner-supplied
 Drive overlay resolved the missing-input gate: 132 included payload hashes and

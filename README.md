@@ -75,6 +75,12 @@ Read [START_HERE](START_HERE.md) for the document order and
 The versioned research reference remains separate from the application engine;
 new research configuration files are not inputs to the existing UI or CLI.
 
+The local [NCATS development pilot](docs/03_research/NCATS_DEVELOPMENT_RESULTS_V1.md)
+now records **108 completed runs** across AhR, PPAR-gamma and p53, with six fixed
+controls and three seeds. Pending-penalty selection added no deadline hits in
+this bounded pilot and lost two hits in one paired run. These are correlated
+development endpoints, not untouched final tests or therapeutic-efficacy evidence.
+
 ## Quick start
 
 **Windows:** install 64-bit Python 3.12, open the project folder and double-click

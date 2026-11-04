@@ -2,13 +2,16 @@
 
 ## Current local continuation
 
-The Drive overlay has been integrated against the newer intake commit. A separate
-integer-time research reference and local registry validator are implemented and
-toy-tested. Read [the foundation checkpoint](docs/06_execution/FOUNDATION_CHECKPOINT.md)
-for actual evidence and remaining work. These are not production UI features or
-new multi-target results. The full study remains unfrozen and continuation local.
+The local continuation has executed a frozen **108-run NCATS development pilot**
+on AhR, PPAR-gamma and p53. Read [actual results and limitations](docs/03_research/NCATS_DEVELOPMENT_RESULTS_V1.md)
+and [the foundation checkpoint](docs/06_execution/FOUNDATION_CHECKPOINT.md).
+The research reference and runner remain separate from the production UI.
+The final study remains unfrozen and continuation local; no new transfer,
+therapeutic-efficacy or commercial benefit has been established.
 
-This release prepares CuraLoop-RL for academic research and a commercial R&D pilot. It updates the documentation, review, protocol, manuscript and handoff. It preserves the existing application and historical evidence. New multi-target experiments and customer validation have not been executed.
+The incoming release prepared the research/business programme and preserved the
+application and historical evidence. Its local continuation now adds development
+experiments. Customer validation and the final confirmatory study remain NOT_RUN.
 
 ## Read in this order
 

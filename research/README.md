@@ -21,15 +21,27 @@ preserved separately in `docs/evidence/reviewed-v2-integration-20261104/`.
 
 Read [the reference contract](../docs/03_research/INTEGER_REFERENCE.md) and
 [foundation checkpoint](../docs/06_execution/FOUNDATION_CHECKPOINT.md).
-The registry currently contains only the known HIV regression resource. New
-assay ingestion, analog audits, acquisition baselines and the multi-target runner
-remain unimplemented. The declarative study config below is still not executable
-by the existing application CLI.
+The original registry contains the known HIV regression resource. The separate
+`manifests/ncats_development_tasks_v1.json` now identifies three public NCATS
+development endpoints, with exact raw/cohort hashes and overlap/attrition audits.
+Six fixed controls and the bounded runner completed 108 runs; see
+[the development result](../docs/03_research/NCATS_DEVELOPMENT_RESULTS_V1.md) and
+[its frozen protocol](../docs/03_research/NCATS_DEVELOPMENT_PROTOCOL_V1.md).
+Raw/full derived pools remain ignored, while public run evidence is versioned.
+The original declarative study config remains unsupported by the application CLI.
 
 `configs/development_protocol.json` is a declarative development design, not an input supported by the current CLI. `manifests/protocol_freeze.json` intentionally records that final tasks, primary contrast and material effect have not been frozen. Null fields are unresolved scientific decisions, not missing experiment results.
 
-Implement a versioned runner and validate these contracts before executing them. Existing CLI/configs remain unchanged. Use the detailed protocol under `docs/03_research/`. Put future run outputs under an excluded run directory and publish selected rights-compatible artifacts with immutable identities.
+The versioned development runner is implemented; it does not complete the final
+study or install new application inputs. Use the detailed protocol under
+`docs/03_research/`. Future substantive changes need new experiment identities.
 
 ## Draft 1.1 additions
 
-The full-text review adds source release/AID/phenotype mapping, explicit initialization regimes, frozen/retrained and nearest-hit controls, metric-definition identities and separate compute reporting. Read `docs/03_research/BASELINE_SPECIFICATION.md` before implementation. The configurations and schema remain declarative; they do not install an importer, new scheduler or backend integration.
+The full-text review adds source release/AID/phenotype mapping, explicit
+initialization regimes, frozen/retrained and nearest-hit controls, metric
+identities and separate compute reporting. Read
+`docs/03_research/BASELINE_SPECIFICATION.md` before implementation. The original
+configs remain declarative. The separate NCATS runner has its own executable
+frozen config; no asynchronous backend integration or learned transfer is
+implemented by this pilot.

@@ -1,5 +1,12 @@
 # Implementation backlog
 
+Current development checkpoint: [NCATS results](../03_research/NCATS_DEVELOPMENT_RESULTS_V1.md).
+ENG-02/03 passed for the three declared development resources; ENG-06 is partial
+(six inexpensive controls executed, stronger comparator/uncertainty absent).
+ENG-07 passed this bounded runner's resume/hash/failure/lock checks; RES-02 passed
+the 108-run allocation with retained null/unfavorable results. RES-03/04, learned
+transfer and customer validation remain open. The final study is not frozen.
+
 The incoming package opened the new research/business tasks below. Current local
 progress is recorded in [FOUNDATION_CHECKPOINT.md](FOUNDATION_CHECKPOINT.md):
 ENG-01 passed, ENG-02 is partial, ENG-04/05 passed only for the constructed

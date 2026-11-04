@@ -18,6 +18,8 @@ Use this ledger to reconcile the manuscript, README, presentation, pilot report 
 | C12 | New documentation/review package was checked | PACKAGE_AUDIT | `docs/07_audit/PACKAGE_AUDIT.md` |
 | C13 | Integer-time deadline/accounting reference passes constructed diagnostics | ENGINEERING_TOY_EVIDENCE_ONLY | `docs/03_research/INTEGER_REFERENCE.md`; 648 fixtures / 3,888 ordering checks; does not promote C06 |
 | C14 | Known HIV registry identity and declared gate checks execute | REGRESSION_RESOURCE_ONLY | `research/manifests/task_registry.json`; no additional assay or independent new rights/phenotype audit |
+| C15 | Three public NCATS development endpoints have source/cohort identities and overlap/attrition audits | DEVELOPMENT_RESOURCES_ONLY | `research/manifests/ncats_development_tasks_v1.json`; [source/protocol](../03_research/NCATS_DEVELOPMENT_PROTOCOL_V1.md) |
+| C16 | Six fixed controls executed on the frozen 108-run NCATS development allocation | MEASURED_DEVELOPMENT_ONLY | [Results](../03_research/NCATS_DEVELOPMENT_RESULTS_V1.md); 108 complete, 0 failed; pending penalty 0 wins / 8 ties / 1 loss under heterogeneous delay; C06 remains HYPOTHESIS |
 
 ## Language rules
 

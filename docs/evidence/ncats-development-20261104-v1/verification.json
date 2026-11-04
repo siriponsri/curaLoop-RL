@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-11-04T08:46:44.658533+00:00",
+  "scope": "Executed frozen development grid and targeted software checks; no final inference or independent review",
+  "real_runs": {
+    "expected": 108,
+    "complete": 108,
+    "failed": 0,
+    "warnings": 0
+  },
+  "targeted_tests": {
+    "passed": 61,
+    "failed": 0,
+    "exit_code": 0,
+    "junit": "final-research-tests.xml"
+  },
+  "runner_commands": [
+    {
+      "module": "research.development.runner",
+      "phase": "canary",
+      "exit_code": 0
+    },
+    {
+      "module": "research.development.runner",
+      "phase": "all",
+      "exit_code": 0
+    },
+    {
+      "module": "research.development.runner",
+      "phase": "all_verified_skip",
+      "exit_code": 0
+    }
+  ],
+  "resume": {
+    "status": "PASS",
+    "attempts_after_verified_skip": 108,
+    "cumulative_run_wall_seconds_unchanged": 219.46766159997787
+  },
+  "checks": {
+    "execution_audit": "PASS",
+    "ruff": "PASS: src app api scripts tests research tools",
+    "strict_191_bytes": "PASS",
+    "package_511_files_and_active_links": "PASS",
+    "frozen_execution_code_matches_git": "PASS",
+    "common_delay_exact_event_pairs": 9
+  },
+  "not_run": [
+    "full application/frontend/browser suites",
+    "untouched final study",
+    "probabilistic asynchronous comparator",
+    "controller training/transfer",
+    "customer validation",
+    "GPU host access/allocation/job/lock checks: no GPU launch",
+    "Git push or publication"
+  ]
+}
