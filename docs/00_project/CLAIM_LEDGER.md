@@ -22,6 +22,9 @@ Use this ledger to reconcile the manuscript, README, presentation, pilot report 
 | C16 | Six fixed controls executed on the frozen 108-run NCATS development allocation | MEASURED_DEVELOPMENT_ONLY | [Results](../03_research/NCATS_DEVELOPMENT_RESULTS_V1.md); 108 complete, 0 failed; pending penalty 0 wins / 8 ties / 1 loss under heterogeneous delay; C06 remains HYPOTHESIS |
 | C17 | Frozen pilot reproduces in a clean venv and separate local checkout | SAME_IMPLEMENTER_SAME_HOST_REPRODUCTION | [108 exact scientific comparisons](../03_research/NCATS_REPRODUCTION_V1.md); not independent scientific review or new biological repetitions |
 | C18 | Gaussian covariance-based development comparator executed | MEASURED_DEVELOPMENT_ONLY | [54 completed runs](../03_research/NCATS_GAUSSIAN_RESULTS_V1.md); pending versus blind tied H(12) in all nine heterogeneous pairs; C06 stays HYPOTHESIS |
+| C19 | Broader candidate source/structure audit executed without new compound outcomes | PREPARATORY_OPEN_GATES | [Audit](../03_research/CANDIDATE_ASSAY_AUDIT_V1.md); 24 original source audits, 1 bounded gene-search candidate, 17 new/3 reused panel audits and 3 cap exclusions; zero final-ready tasks, no certified family independence |
+| C20 | Hierarchical precision/resource sensitivity executed | HYPOTHETICAL_MODEL_ONLY | [1,080 sensitivity rows](../03_research/DESIGN_SENSITIVITY_V1.md); assumed variances/effects, not measured final power, assay savings or equivalence |
+| C21 | Existing owner-supplied SSH IP profile authenticates | READ_ONLY_CONNECTION_ONLY | `docs/evidence/design-preparation-20261104-v1/dr-train-ip-profile-test.json`; hostname dr-train returned, no resource reservation or remote study |
 
 ## Language rules
 

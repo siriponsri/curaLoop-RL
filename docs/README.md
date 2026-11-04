@@ -1,5 +1,10 @@
 # Documentation map
 
+Latest preparation: [candidate assay audit](03_research/CANDIDATE_ASSAY_AUDIT_V1.md),
+[design/CPU sensitivity](03_research/DESIGN_SENSITIVITY_V1.md) and
+[exposure/rights protocol](03_research/FINAL_DESIGN_PREPARATION_PROTOCOL_V1.md).
+These are source/feature and hypothetical design evidence, not final outcomes.
+
 Start with [the master plan](../ACADEMIC_BUSINESS_MASTERPLAN.md). Active documentation is organized below. The manuscript contains a historical pilot and an explicitly unexecuted new study. Historical evidence and requirements_v3 remain reference snapshots.
 
 Current local work: [fresh-environment reproduction](03_research/NCATS_REPRODUCTION_V1.md),

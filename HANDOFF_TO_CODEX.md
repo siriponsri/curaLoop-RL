@@ -1,6 +1,48 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
-## Current checkpoint: clean reproduction and Gaussian comparator executed
+## Current checkpoint: candidate audit and estimation design preparation
+
+Checkout `C:\Users\User\Desktop\myProject\curaloop-rl`, branch
+`feat/real-assay-development-20261104`, main unchanged at `2d287a1`. Git HEAD
+identifies the latest local report commit; no push/publication/deployment.
+Read [current continuation](docs/CONTINUATION.md),
+[candidate audit](docs/03_research/CANDIDATE_ASSAY_AUDIT_V1.md) and
+[design sensitivity](docs/03_research/DESIGN_SENSITIVITY_V1.md) first.
+
+Owner choices: expand to 12+ families; report effects and uncertainty without a
+confirmatory material-effect threshold; more CPU allowed in principle, numeric
+final cap unresolved. This preparation does not authorize final outcome runs.
+The existing IP SSH profile `100.77.149.83` configures chaw and the existing
+identity. One strict noninteractive test returned dr-train. Use that profile;
+do not create keys, edit config, read key contents or assume hostname alias
+resolution sets the correct user. No remote job/resource reservation occurred.
+Inspect live allocation/conflicts at launch; respect the shared GPU OS lock.
+
+Retained outputs: 24 initial feature audits; 16-gene search with one HSP90
+candidate and 23 HTTP 404 request attempts; all 128 PCBA identifier descriptions;
+23 precommitted panel selections with 17 new/3 reused audits and 3 payload-cap
+exclusions. Twenty feature-audited panel assays span 17 planning groups, 14
+human-annotated, 13 after CYP mixed-endpoint quarantine. None are certified
+independent or final-ready. Outcome-value requests zero. The source families,
+phenotype discrepancies, species context, overlap and rights gaps are explicit.
+No prepared LIT-PCBA/DeepChem dataset was downloaded or reproduced.
+
+The simulation retained 1,080 hypothetical effect rows, 216 cells x 10,000
+replicates, family/task/paired-repeat hierarchy and 288 resource rows. No
+variance/margin is fitted/chosen from the null pilot. Seeds are not new targets.
+No nonsignificance/equivalence claim. Scientific/application bytes through
+`0f8e789` remain unchanged, including all 270 recorded campaign artifacts.
+Targeted tests 98 PASS; final provenance/preservation/link checks are retained
+in `docs/evidence/design-preparation-20261104-v1/verification.json`.
+
+Exact next action: close file-level grants and endpoint mappings, full-pool and
+cross-group feature overlap, conservative family/source-dependence review and
+validation/final allocation with attrition before any final outcome access.
+Then freeze the estimation procedure/contrast and a numeric resource cap. Keep
+the old unfavorable pilot and all search/cap failures. Do not rerun completed
+immutable packets in place. No background task continues at this checkpoint.
+
+## Historical checkpoint: clean reproduction and Gaussian comparator executed
 
 Branch `feat/real-assay-development-20261104`; source baseline
 `d57838d41b30d956c7fd72ac502c1765653fd087`. Git HEAD identifies this later local

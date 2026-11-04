@@ -1,4 +1,58 @@
-# Current local checkpoint: reproduction and Gaussian comparator
+# Current local checkpoint: bounded candidate/design preparation
+
+4 November 2026, Asia/Bangkok. Checkout
+`C:\Users\User\Desktop\myProject\curaloop-rl`; branch
+`feat/real-assay-development-20261104`. Main remains `2d287a1`.
+Preparatory source/discovery commits `d9ea399`, `f22f9b8`, `5d83603`; metadata
+and 23-AID pre-feature selection committed at `612309a`. Git HEAD identifies
+the subsequent local report/verification commit. No push or publication.
+
+Completed [candidate audit](03_research/CANDIDATE_ASSAY_AUDIT_V1.md) and
+[hierarchical estimation/resource sensitivity](03_research/DESIGN_SENSITIVITY_V1.md).
+The first 24 source AIDs all have feature audits. The separate 16-gene bounded
+search found one HSP90 candidate and retained 23 HTTP 404 membership attempts.
+All 128 PCBA identifier descriptions were inspected. Of 23 preselected panel
+feature attempts, 17 completed new, 3 reused prior audits, 3 stopped at the
+payload cap. The 20 completed/reused panel assays span 17 provisional groups,
+14 human-annotated; CYP mixed-endpoint quarantine leaves 13. Whole-pool,
+cross-group, source and biological dependence remain unresolved. Zero tasks are
+final-ready; no candidate compound outcomes were requested or evaluated.
+
+The fixed sensitivity grid completed 216 cells x 10,000 replicates and reports
+1,080 hypothetical rows. Effects/variance profiles are assumptions, not fitted
+final power or a meaningful-effect threshold. Owner direction is 12+ families,
+effect/uncertainty reporting without a confirmatory material-effect threshold,
+and additional CPU in principle. A numeric final CPU cap remains unspecified.
+Do not repeat the threshold question as a mandatory gate or infer equivalence.
+
+Read-only inspection found the dr-train hostname alias did not configure chaw.
+After the owner supplied the existing IP stanza, one strict noninteractive
+test using `100.77.149.83` and its configured identity returned dr-train. No key
+contents read, key/config changes or remote jobs. Future compute requires live
+allocation/conflict checks and the shared OS GPU lock if relevant. Permission
+and authentication do not reserve resources. Earlier failed attempts remain
+recorded; use the new SSH amendment receipt for current profile status.
+
+Verification: 98 targeted research tests passed; offline schema/hash checks
+verified 183 received responses across 206 request attempts, with all 23 HTTP
+404 attempts retained separately. Prior application/research/evidence paths
+remain unchanged from `0f8e789`; original 191 strict protected files pass.
+Exact final lint/package/link/identity checks are in
+`evidence/design-preparation-20261104-v1/verification.json`.
+
+Next exact dependency: adjudicate candidate file-level rights and endpoint
+definitions without reading final compound outcomes; assess whole feature pools
+and cross-family dependence; propose validation/final roles with attrition.
+Then freeze the estimation population, contrast, interval/failure procedure,
+repeat allocation and concrete CPU cap before authorized outcome execution.
+Keep HIV/AhR/PPARG/p53 development/regression only. New V09-V15 discrepancies
+qualify earlier inhibitor shorthand without rewriting frozen evidence. No
+remote job, final study, GPU, paid service, outreach, push or deployment occurred.
+No study process or agent remains running after this checkpoint.
+
+---
+
+# Historical local checkpoint: reproduction and Gaussian comparator
 
 4 November 2026, Asia/Bangkok. Same checkout/branch
 `feat/real-assay-development-20261104`; source checkpoint `d57838d`. Git HEAD

@@ -1,10 +1,11 @@
 # Outcome-sealed candidate and design preparation v1
 
 Prepared 4 November 2026 after the exposed development studies. This is not a
-final protocol freeze or authorization to execute a final study. The owner must
-settle population/scope, a substantively justified material effect, primary
-contrast and final resource allocation. No threshold will be chosen from the
-null development outcomes.
+final protocol freeze or authorization to execute a final study. Subsequent
+owner direction selects 12+ families and effect estimation with uncertainty,
+without a confirmatory material-effect threshold. Population/roles, primary
+contrast, interval procedure and numeric final resource allocation still need
+freezing. No threshold will be chosen from the null development outcomes.
 
 ## Source census and exposure boundary
 
@@ -94,3 +95,22 @@ Simulation run-wall cap is 120 seconds, one numerical thread. Final outcome
 execution, controller transfer, publication, push and deployment remain outside
 this preparatory package. All review is by the same implementer unless an
 external reviewer is actually recorded.
+
+## Subsequent bounded expansion and owner direction
+
+The fixed 16-gene expansion and separately pinned 128-AID HTS census are retained
+as new discovery histories. The gene search found one feature candidate and
+retained 23 HTTP 404 membership attempts. The HTS selection was committed at
+`612309a` before new features: 23 selections, 17 new/3 reused feature audits,
+3 exclusions after the pre-query 96 MB payload cap (soft by one response).
+There was no outcome-based selection, cap increase or retry of that panel.
+Source/code/config pins, exact request histories and semantic/rights gates are
+in the [candidate report](CANDIDATE_ASSAY_AUDIT_V1.md).
+
+The owner authorized additional CPU in principle and existing dr-train SSH
+access, not a paid allocation or final outcome execution. After an alias/user
+mismatch, the owner supplied the existing IP profile `100.77.149.83`. Read-only
+effective config/known-host review confirmed User chaw and its existing identity;
+one strict noninteractive test returned dr-train. No configuration/key changes,
+private-key contents or remote compute jobs were involved. Resource availability
+and conflicts remain to be checked at launch. See [design options](DESIGN_SENSITIVITY_V1.md).

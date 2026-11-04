@@ -86,6 +86,12 @@ matched all 108 scientific traces. A separate frozen
 [54-run Gaussian comparator](docs/03_research/NCATS_GAUSSIAN_RESULTS_V1.md)
 also found no extra deadline hits from pending conditioning in this allocation.
 
+The latest [candidate audit](docs/03_research/CANDIDATE_ASSAY_AUDIT_V1.md) and
+[design sensitivity report](docs/03_research/DESIGN_SENSITIVITY_V1.md) prepare a
+broader 12+ family estimation study. They retain metadata/feature audits,
+failures and hypothetical uncertainty/resource scenarios. Final task rights,
+endpoint mappings and roles remain open; no final compound outcomes were read.
+
 ## Quick start
 
 **Windows:** install 64-bit Python 3.12, open the project folder and double-click

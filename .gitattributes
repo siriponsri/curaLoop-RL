@@ -24,3 +24,10 @@ docs/evidence/reviewed-v2-integration-20261104/** whitespace=cr-at-eol
 # Preserve the actual pytest failure rendering, including its indented blank line.
 docs/evidence/reviewed-v2-integration-20261104/research-tests.xml whitespace=-blank-at-eol,cr-at-eol
 docs/archive/pre_academic_20261104/** -text whitespace=cr-at-eol
+
+# Retain the exact preparatory execution/config hashes on Windows checkouts.
+research/preparation_v1/*.py -text whitespace=cr-at-eol
+research/configs/design_sensitivity_v1.json -text
+research/configs/expanded_gene_audit_v1.json -text
+research/configs/hts_feature_selection_v1.json -text
+tools/check_design_preparation_v1.py -text whitespace=cr-at-eol

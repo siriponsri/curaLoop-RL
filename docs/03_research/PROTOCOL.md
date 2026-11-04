@@ -7,6 +7,12 @@ was frozen before its [108 executed development runs](NCATS_DEVELOPMENT_RESULTS_
 It does not freeze or execute this full confirmatory protocol. The exposed
 development endpoints cannot become untouched final tasks.
 
+The owner's subsequent [preparatory design direction](DESIGN_SENSITIVITY_V1.md)
+is 12+ families and estimation with uncertainty, without a confirmatory
+material-effect threshold. This supersedes the earlier requirement to select
+such a threshold. The final population, contrast, interval procedure and CPU
+allocation remain unfrozen; no final compound outcomes have been inspected.
+
 ## Research question and contribution
 
 Determine when selection that accounts for pending experiments improves the discovery of historical active compounds under limited budget, assay capacity and a simulated deadline. A second contribution is a reusable benchmark that exposes every accepted action, pending commitment and delivered outcome. A third, conditional contribution is an adaptive controller that transfers across held-out biological tasks. The controller contribution is dropped or narrowed if the results do not support it.
@@ -27,7 +33,7 @@ H1 uses the same predictor, candidate pool, initial labels and per-candidate ope
 
 ## Population and experimental units
 
-The initial engineering pilot uses 3-5 development tasks. The final target registry should contain enough distinct biological tasks and families to support the intended breadth; aim for approximately 10-15 eligible tasks if source rights, labels and compute permit. This is a design target, not a power guarantee or a dataset already downloaded. If fewer eligible tasks exist, report the smaller population and narrow the claim.
+The initial engineering pilot uses 3-5 development tasks. Current owner direction seeks 12+ biological families, with separate validation groups if source rights, endpoints, independence and compute permit. This is a design target, not a power guarantee or a cleared dataset. If fewer eligible families exist, report the attrition and narrow the claim; do not count additional seeds or related endpoints as independent families.
 
 A biological task is an assay/target endpoint with a fixed candidate pool and label semantics. Random seeds repeat initialization within that task. They do not create new biological replications. Assays sharing the same target or endpoint family are grouped for splitting and uncertainty analysis. HIV remains a regression task unless it was excluded from all controller development; previous inspection prevents calling it an untouched final test.
 
@@ -35,7 +41,7 @@ A biological task is an assay/target endpoint with a fixed candidate pool and la
 
 Assign task families to controller development, validation and final test before optimizing the controller. Record target identifiers, assay IDs, sample hashes, duplicate exclusions and split reasons. Random-split and scaffold-split predictor questions are distinct from task-level controller transfer. A second dataset is an external check only if it was untouched by development and its endpoint is suitable.
 
-Freeze the exact primary setting, contrast, eligibility rules, material-effect threshold, seed list and compute cap after the engineering pilot and before inspecting final test labels or aggregate results. Retain a timestamped protocol hash in every run. Final-test results may motivate a new study but not undisclosed tuning of the same study.
+Freeze the exact primary setting, contrast, eligibility rules, estimand/interval procedure, seed list and compute cap after the engineering pilot and before inspecting final test labels or aggregate results. Record that no confirmatory material-effect threshold is selected. Retain a timestamped protocol hash in every run. Final-test results may motivate a new study but not undisclosed tuning of the same study.
 
 ## Operational conditions
 
@@ -49,13 +55,13 @@ Mandatory controls are Random, retrained Greedy, frozen-model Greedy, nearest-de
 
 ## Endpoints and decisions
 
-Primary endpoint: newly delivered active labels at the fixed deadline. Primary estimate: equal-task-weighted paired difference for H1, with uncertainty that resamples tasks/families and repeated runs appropriately. Secondary endpoints are time-integrated discovery, budget-integrated discovery, early enrichment, active scaffold coverage, failure frequency and compute overhead. Never identify the legacy budget integral with AUROC.
+Primary endpoint: newly delivered active labels at the fixed deadline. Current estimation proposal: average paired repeats within tasks and tasks within families, then weight families equally, with uncertainty respecting that hierarchy. Freeze the exact population and interval procedure before final access. Secondary endpoints are time-integrated discovery, budget-integrated discovery, early enrichment, active scaffold coverage, failure frequency and compute overhead. Never identify the legacy budget integral with AUROC.
 
 Publish all valid seeds and task-specific results. Report infeasible actions, fallback shares, one-class predictor states, timeouts and missing outcomes. Stop a run only for prespecified completion or a logged execution failure. A method failure stays visible and contributes to reliability analysis. Do not silently omit difficult targets or replace a zero-hit seed.
 
 ## Interpretation and manuscript decision
 
-Support H1 only if the estimated effect, uncertainty, task consistency and prespecified practical threshold jointly justify the wording. A wide interval is inconclusive, not evidence of equivalence. If H3 fails, report the transfer limitation and retain the benchmark contribution. Simulator findings support decisions under declared assumptions; they do not establish real laboratory savings. Register all deviations, their timing and whether final outcomes had been inspected.
+Report the H1 effect estimate, uncertainty, family-specific behavior and failure denominator. With no confirmatory material-effect threshold, do not declare practically meaningful superiority, equivalence or noninferiority. Any zero-test result is exploratory unless separately prespecified. A wide interval is inconclusive, not evidence of equivalence. If H3 fails, report the transfer limitation and retain the benchmark contribution. Simulator findings support decisions under declared assumptions; they do not establish real laboratory savings. Register all deviations, their timing and whether final outcomes had been inspected.
 
 ## Full-text review amendment, 4 November 2026
 

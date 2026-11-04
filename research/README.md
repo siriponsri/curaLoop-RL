@@ -1,5 +1,14 @@
 # Research specifications
 
+Latest preparatory work: [candidate metadata/feature audit](../docs/03_research/CANDIDATE_ASSAY_AUDIT_V1.md)
+and [hierarchical estimation/resource sensitivity](../docs/03_research/DESIGN_SENSITIVITY_V1.md).
+Code is isolated under `research/preparation_v1/`. It does not ingest final
+compound outcomes or assign final roles. Run the offline integrity check with
+`python -m tools.check_design_preparation_v1`; preserve immutable network/simulation
+packets rather than rerunning them in place. The owner selected 12+ families and
+estimation without a confirmatory material-effect threshold; numeric CPU cap,
+source/phenotype closure, independence and final task allocation remain open.
+
 Latest executable evidence: [fresh-venv reproduction](../docs/03_research/NCATS_REPRODUCTION_V1.md)
 matches all 108 original scientific traces, and the separately frozen
 [Gaussian amendment](../docs/03_research/NCATS_GAUSSIAN_RESULTS_V1.md) executed 54

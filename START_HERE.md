@@ -2,6 +2,13 @@
 
 ## Current local continuation
 
+Latest preparation: [candidate/source audit](docs/03_research/CANDIDATE_ASSAY_AUDIT_V1.md)
+and [estimation/resource sensitivity](docs/03_research/DESIGN_SENSITIVITY_V1.md).
+The owner selected 12+ families and effect estimates with uncertainty, with no
+confirmatory material-effect threshold. Twenty panel feature audits completed
+or reused; three stopped at the payload cap. No final task is cleared. Existing
+SSH IP profile access succeeded; no remote job or final evaluation launched.
+
 Latest: the [fresh-environment reproduction](docs/03_research/NCATS_REPRODUCTION_V1.md)
 matched all 108 original scientific artifacts. The separate
 [54-run Gaussian-surrogate amendment](docs/03_research/NCATS_GAUSSIAN_RESULTS_V1.md)

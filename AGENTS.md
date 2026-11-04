@@ -11,6 +11,17 @@ import another project's paid allowance. No GPU is required for toy validation.
 
 ## Work autonomously within scope
 
+Latest owner direction (4 November 2026): seek 12+ biological families and report
+effect estimates/uncertainty without a confirmatory material-effect threshold.
+Additional CPU is permitted in principle; no numeric final cap or final-study
+execution was approved by the preparatory exchange. Preserve outcome-sealed
+metadata/feature work and final-ready=0 until rights/phenotype/split gates close.
+The alias dr-train does not configure User chaw locally. The owner supplied the
+existing IP profile 100.77.149.83, User chaw, IdentityFile
+~/.ssh/id_ed25519_dr_train. A strict noninteractive test succeeded. Use that
+existing profile, never create keys/change SSH config/read private-key contents.
+No remote jobs were launched; inspect live allocation/conflicts before launch.
+
 Proceed with public-source research, documentation and reversible local implementation without routine approval gates. Preserve a usable POC. Ask only for unavailable data/rights, concrete spending, real participant/lab involvement, external communications/publication or a material scope decision. Continue independent work when one input is missing. Never send customer or editorial messages without explicit authorization. Do not import spending approvals from another project.
 
 ## Scientific invariants

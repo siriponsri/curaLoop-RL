@@ -1,5 +1,16 @@
 # Implementation backlog
 
+Latest preparation: [source/feature audit](../03_research/CANDIDATE_ASSAY_AUDIT_V1.md)
+and [design sensitivity](../03_research/DESIGN_SENSITIVITY_V1.md) are complete in
+their bounded scope. ENG-02/03 remain open for final file rights, endpoint
+adjudication, whole-pool and cross-group overlap, independent family assessment
+and validation/final allocation. The owner chose 12+ families and estimation
+without a confirmatory effect threshold. Do not reopen that threshold question
+as a mandatory gate. A numeric final CPU cap, exact primary contrast and final
+analysis freeze still need definition. Existing SSH IP-profile test passed;
+live allocation/conflict checks are required before any remote job. RES-03/04
+final execution and transfer remain NOT_RUN.
+
 Latest: [fresh-environment reproduction](../03_research/NCATS_REPRODUCTION_V1.md)
 PASS, all 108 scientific traces exact; [Gaussian comparator](../03_research/NCATS_GAUSSIAN_RESULTS_V1.md)
 54/54 complete, no pending-aware hit gain. ENG-06/06A now have a bounded sklearn

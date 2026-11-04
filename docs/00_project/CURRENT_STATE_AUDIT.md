@@ -1,5 +1,15 @@
 # Current-state audit
 
+> Latest preparation, 4 November: [candidate audit](../03_research/CANDIDATE_ASSAY_AUDIT_V1.md)
+> retains the 24-source census, bounded 16-gene search (including 23 HTTP 404
+> attempts), all 128 PCBA identifier descriptions and 23 preselected feature
+> attempts (17 new, 3 reused, 3 payload-cap exclusions). Twenty feature-audited
+> panel assays span 17 provisional groups; independence is unverified and zero
+> tasks are final-ready. [Sensitivity simulations](../03_research/DESIGN_SENSITIVITY_V1.md)
+> retain 1,080 hypothetical rows. Owner direction is 12+ families, estimation
+> with uncertainty and no confirmatory effect threshold. SSH with the existing
+> owner-supplied IP profile succeeded; remote allocation/jobs remain NOT_RUN.
+
 > Latest local research: [108-run fresh-environment reproduction](../03_research/NCATS_REPRODUCTION_V1.md)
 > passed exact scientific comparisons; a separately frozen
 > [54-run Gaussian comparator](../03_research/NCATS_GAUSSIAN_RESULTS_V1.md)

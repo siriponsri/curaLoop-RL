@@ -15,7 +15,20 @@ The owner requested a ZIP package and detailed Markdown documentation to extend 
 
 ## Decisions still required when evidence becomes available
 
-The target journal, final task registry, material effect size, spending cap and customer-specific intended use remain open. Default local development may continue without these decisions. Select the journal after contribution and experiment scope are clear. Select a price only after buyer discovery. No customer contact, payment, journal submission or public deployment was performed here.
+The target journal, final task registry/contrast/analysis, numeric compute cap and customer-specific intended use remain open. The owner chose estimation with uncertainty and no confirmatory material-effect threshold; selecting a material margin is not a current mandatory gate. Default local development may continue. Select the journal after contribution and experiment scope are clear. Select a price only after buyer discovery. No customer contact, payment, journal submission or public deployment was performed here.
+
+## Subsequent owner design and SSH decisions, 4 November 2026
+
+| ID | Question | Chosen direction and consequence |
+| --- | --- | --- |
+| D12 | Broader biological scope | Seek 12+ families and additional CPU in principle; numeric final cap is not specified and no final roles are frozen |
+| D13 | Meaningful-effect criterion | Report effects and uncertainty; no confirmatory material-effect threshold selected from pilot results |
+| D14 | Existing remote profile | Owner supplied Host/HostName 100.77.149.83, User chaw and existing identity; read-only checks matched and one strict noninteractive test returned dr-train. No key/config change or remote compute job |
+
+Evidence and consequences: [candidate audit](../03_research/CANDIDATE_ASSAY_AUDIT_V1.md),
+[design report](../03_research/DESIGN_SENSITIVITY_V1.md) and owner/SSH receipts in
+`docs/evidence/design-preparation-20261104-v1/`. These decisions do not authorize
+paid services, final outcome exposure, publication or resource reservation.
 
 ## Decision log format
 

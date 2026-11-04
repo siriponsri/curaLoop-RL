@@ -1,0 +1,72 @@
+{
+  "status": "PASS_BOUNDED_PREPARATION_WITH_OPEN_FINAL_GATES",
+  "recorded_utc": "2026-11-04T12:10:43.222929+00:00",
+  "source_checkpoint": "612309a9f4c24228b6be62f598d9205314a83267",
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "targeted_tests": {
+    "passed": 98,
+    "failed": 0,
+    "wall_seconds": 46.25,
+    "xml": "final-tests.xml"
+  },
+  "ruff": "PASS",
+  "strict191": "PASS",
+  "package511_and_links": {
+    "status": "PASS",
+    "source_files": 511,
+    "raw_byte_matches": 481,
+    "Git_verified_CRLF_only": 30,
+    "archive_files": 27,
+    "active_local_links": 365
+  },
+  "offline_integrity": "offline-integrity.json",
+  "execution_source_note": "Network/simulation sources were committed before respective execution; reports and offline checker follow results. Panel selection committed at 612309a before new features.",
+  "sha256_raw": {
+    "research/preparation_v1/candidates.py": "878db85981ee961056d5eeb2466c0bfd137ad0c4b76948c3e39bb4dd1a20496c",
+    "research/preparation_v1/candidate_audit.py": "644f43b48c6051a387e73a95585df2b54dad63170d7650711648b9003b6fe832",
+    "research/preparation_v1/design_sensitivity.py": "7ea4bac663628da965c189af175347193c926be57a6a82f2d24602bd3dfd879f",
+    "research/preparation_v1/expanded_gene_audit.py": "7726f2d4b20960855fbba8bcd318e0664ee6d3da23794415ddcd41136d280d2c",
+    "research/preparation_v1/panel_audit.py": "de1a06fd2a094643c6acead3ef42fbaf09f2745c8abba6978c91f5848b4e1f50",
+    "research/preparation_v1/review_cache.py": "e2c8aa3c06e8f27efc64308381914411b18cebc151241edf4550fbe912894874",
+    "research/preparation_v1/__init__.py": "6e2a99e92341012290eb3d3af2af1632e0eaa832ee389d1290758127a641e65b",
+    "research/configs/design_sensitivity_v1.json": "3b32e4fe860a36fe318a9b756fc3eee38ed1850f14832c1f8bc1ffc3fd6dc322",
+    "research/configs/expanded_gene_audit_v1.json": "0406195ecf7bbb6b2debe7232f80b56dcbe7df6aa395872752a72fa3ccd004e3",
+    "research/configs/hts_feature_selection_v1.json": "57a8d70f6802fe5793af9e05f93d186004b9751381cf51347090fe46bf266a49",
+    "tools/check_design_preparation_v1.py": "1d38c8b02946cd3144899fad302cbe192d0ac20f276929c8a61b6d0eb63bce0f"
+  },
+  "ssh_IP_profile": "PASS; no remote compute jobs",
+  "final_ready_tasks": 0,
+  "final_outcomes_requested": 0,
+  "final_material_effect_threshold": null,
+  "final_numeric_CPU_hours": null,
+  "retained_limits": [
+    "23 gene-search HTTP404 attempts over 10 distinct membership URLs",
+    "3 panel structure audits excluded at payload cap",
+    "standalone-hydrogen RDKit warnings",
+    "initial alias SSH authentication failure; successful owner-supplied IP profile supersedes availability status"
+  ],
+  "reviewer": "Same implementer; no independent scientific or rights review",
+  "not_run": [
+    "final evaluation",
+    "whole-pool and cross-group structure clearance",
+    "independent family certification",
+    "file-level rights closure",
+    "remote allocation/conflict/OS-lock checks",
+    "remote compute jobs",
+    "learned transfer",
+    "customer validation",
+    "full app/frontend/browser suites",
+    "push/publication/deployment"
+  ],
+  "completed_utc": "2026-11-04T12:13:49.667891+00:00",
+  "offline_integrity_status": "PASS_OFFLINE_PREPARATION_INTEGRITY",
+  "verified_received_responses": 183,
+  "retained_request_attempts": 206,
+  "previous_application_research_evidence_paths_unchanged": 801,
+  "git_diff_check": "PASS",
+  "preparation_hash_checkout_preservation": "Scoped -text attributes added; source/config bytes equal pre-execution committed bytes.",
+  "verification_correction": "Initial offline checker incorrectly assumed all receipt statuses PASS; it stopped on retained HTTP404, was corrected to account for the 23 errors separately, then passed. No network repeat or failed-record deletion.",
+  "prior_run_directory_json_bytes_verified": 275,
+  "format_check": "PASS after formatting checker output"
+}
