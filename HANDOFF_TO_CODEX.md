@@ -2,6 +2,12 @@
 
 ## Current delivery English manuscript and journal preparation
 
+**Normal main publication verified** at material commit
+`e8b8939968a9861e6378b00895104b659a441f72`, with live remote readback and 191
+post-merge strict preservation checks. Checkout is main. Git HEAD may identify
+the following receipt-only commit. Exact evidence:
+[publication receipt](docs/evidence/main-delivery-20261104/publication.json).
+
 The owner authorizes completing this delivery on main and a normal main push.
 Exact candidate/published identity is in Git HEAD and
 `docs/evidence/main-delivery-20261104/`; earlier local-only statements are

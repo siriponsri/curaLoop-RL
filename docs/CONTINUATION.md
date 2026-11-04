@@ -1,5 +1,12 @@
 # Current delivery checkpoint: English manuscript and journal preparation
 
+**Main publication: PASS.** Normal fast-forward/push and live remote readback
+verified reviewed material commit `e8b8939968a9861e6378b00895104b659a441f72`.
+The current checkout is main. This following receipt-only commit records the
+result; Git HEAD may therefore follow the material commit. See the
+[publication receipt](evidence/main-delivery-20261104/publication.json).
+No journal submission, acceptance or completed final study follows from this.
+
 4 November 2026, Asia/Bangkok. Checkout
 `C:\Users\User\Desktop\myProject\curaloop-rl`. Material source baseline
 `52c349ab24c653b043fa5401c923d330d7ec3d9e`. The owner now authorizes main
