@@ -1,31 +1,42 @@
 # Publication strategy and readiness
 
-## Route selection
+The owner supplied publication identity and a USD 300 fee ceiling on 4 November
+2026. Separate journal agents checked current primary guidance and a third
+agent reviewed the integrated recommendation. The
+[journal shortlist](JOURNAL_TARGETS_20261104.md) and
+[submission readiness](SUBMISSION_READINESS_20261104.md) are authoritative for
+this delivery; earlier generic venue observations are superseded.
 
-Prioritize a benchmark/software contribution whose claims fit public retrospective evidence. A methods route becomes reasonable if a controlled new method demonstrably adds value. A prospective drug-discovery paper requires actual prospective evidence and is outside the first study. The owner can remain a solo author if they perform and take responsibility for the actual work; no fictitious collaborators are needed.
+Prioritize a defensible retrospective methods/software contribution. JCAMD's
+subscription route explicitly has no APC, but the contribution and validation
+must satisfy its scope. JOSS is free with development/use gates; JCIM has a
+relevant software category with unresolved history and policy questions.
+Journal of Cheminformatics and Digital Discovery quoted APCs are not cleared
+by the owner's budget. SoftwareX fees were not verified after access failures.
+No waiver, institutional coverage, indexing or acceptance is guaranteed.
 
-## Venues to assess after results
+The [working manuscript](MANUSCRIPT.md) now reports historical HIV evidence,
+108 NCATS development campaigns, 108 same-host/same-implementer reproductions
+and 54 Gaussian development runs. It retains null/unfavorable findings and
+separates hypothetical design sensitivity from measured results. It does not
+report an executed final 12-family study, learned transfer or laboratory savings.
 
-SoftwareX describes research software and applications. Journal of Cheminformatics requires reproducibility and a meaningful advance over related software for its software article route. JOSS is a possible longer-term route for research software with demonstrated use, sustained public development and other open-source practices. These are scope observations, not acceptance predictions, rankings or guarantees.
+Before submission, establish the software/scientific advance over closest
+tools, reviewer-accessible minimal reproduction inputs and applicable rights,
+author declarations and venue eligibility. Confirm any immediate-OA mandate and
+the complete mandatory cost before accepting publication terms. Assemble the
+journal's editable manuscript/figures after scope/venue selection and human
+review. Never add a DOI or archive deposit that does not exist.
 
-JOSS guidance checked on 4 November 2026 specifies more than six months of public development before submission and research-use evidence; a concentrated burst of commits is insufficient. It also permits AI-assisted development with disclosure while restricting author-editor/reviewer conversation use beyond translation. Recheck all requirements immediately before submission.
+The [review package](submission/README.md) contains supplied author metadata,
+an unsent cover letter, availability draft and declarations checklist. AI help
+with code, tests, execution, analysis and drafting must be disclosed accurately.
+Do not send AI-written correspondence where the venue restricts it. No article,
+editorial message, preprint, archive deposit or payment was sent. A main push
+delivers the repository; it does not complete journal submission or peer review.
 
-## Readiness record
-
-Literature synthesis and study specification are drafted. The existing pilot is retained. New multi-target evaluation, controller-transfer evidence, final figures, author review, final venue fit, current fees/waivers and independent reproduction are unresolved. Publication fees and paid services are not authorized by package creation. Do not describe the manuscript as submission-ready while the main experiment is NOT_RUN.
-
-## Submission assembly
-
-Freeze the final study and source release; regenerate all result artifacts; reconcile claims and tables; confirm author details, funding and conflicts; verify data/code availability and third-party terms; update the nearest-work search; check the target venue's format and current AI/data policies; and obtain the owner's final submission decision. Preprint and archival posting are external publication actions that need an explicit instruction.
-
-## Primary guidance
-
-- Journal of Cheminformatics software criteria: https://link.springer.com/journal/13321/submission-guidelines/software
-- JOSS submission requirements: https://joss.readthedocs.io/en/latest/submitting.html
-- SoftwareX publisher description: https://www.elsevier.com/researcher/author/tools-and-resources/research-elements-journals
-
-The present review checks scope and selected requirements. It does not establish current APC amounts, indexing claims or publication times.
-
-## Source-version closure before submission
-
-Resolve exact data/label mapping for the VDR description discrepancy and exact-code interpretation of R05's MI direction if the study uses those data or reproduces that arm. Obtain and compare the associated journal version before attributing preprint-specific equations or results to the final publication. These are bounded verification tasks, not claims that an author made an error. The working draft remains a historical-pilot/protocol manuscript until the proposed study is executed.
+If a future paper claims held-out-family effects, first close exact source,
+phenotype, whole-pool and split gates and freeze analysis/compute before
+outcomes. Keep exposed HIV/AhR/PPARG/p53 resources development/regression only.
+Use effect estimates and uncertainty without inventing a confirmatory material
+threshold or interpreting nonsignificance as equivalence.

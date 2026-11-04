@@ -27,6 +27,12 @@ The first product outcome is an installed local workbench that an R&D scientist 
 
 ## Autonomy and constraints
 
+The latest owner instruction authorizes the current English-documentation,
+research-continuation and journal-preparation delivery on main, followed by a
+normal push. Earlier local-only milestones below are historical limits. This
+does not mean a journal submission, final independent-family study or customer
+validation is complete. Publication-fee ceiling: USD 300; no payment authorized.
+
 Agents may inspect public research, improve documentation and implement reversible local work without asking about routine choices. Preserve the functional POC throughout. Ask the owner only for a decision that blocks dependent work: unavailable customer/data rights, a spending commitment, actual laboratory participation, external publication or material scope change. Independent work should continue while an answer is pending.
 
 No paid service or GPU expenditure is authorized by this documentation request. Initial implementation uses public sources and existing local compute. Paid spending, customer outreach, journal submission, repository access changes and deployment are separate actions. The owner intends to apply and push this package; package creation does not mean remote main was changed.

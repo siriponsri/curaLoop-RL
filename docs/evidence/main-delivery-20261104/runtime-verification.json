@@ -1,0 +1,40 @@
+{
+  "source_checkpoint": "52c349ab24c653b043fa5401c923d330d7ec3d9e",
+  "initial_python": {
+    "passed": 231,
+    "failed": 3,
+    "warning_count": 1,
+    "seconds": 711.86,
+    "result": "FAIL: timeout/terminal-state waits"
+  },
+  "initial_frontend": {
+    "passed": 15,
+    "failed": 3,
+    "seconds": 125.71,
+    "result": "FAIL: lazy-route wait timeouts"
+  },
+  "serial_python_failed_cases_recheck": {
+    "passed": 3,
+    "failed": 0,
+    "warning_count": 1,
+    "seconds": 108.08,
+    "result": "PASS; same source and test thresholds"
+  },
+  "serial_frontend": {
+    "passed": 18,
+    "failed": 0,
+    "result": "PASS; same source and test thresholds"
+  },
+  "typecheck": "PASS",
+  "eslint": "PASS",
+  "pip_check": "PASS",
+  "diagnosis": "Timing-sensitive failures occurred during concurrent checks; serial reruns passed unchanged. Observed host load76percent/freeRAM1220MiB supports resource-pressure hypothesis but is not a controlled root-cause proof.",
+  "scope": "234 unique Python tests exercised; the original full invocation was not all-pass and is retained. No runtime/test code or timeout was changed.",
+  "not_run": [
+    "A second all-Python full invocation",
+    "new browser capture",
+    "independent scientific reproduction",
+    "12-family final study",
+    "actual journal submission"
+  ]
+}

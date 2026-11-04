@@ -1,5 +1,18 @@
 # Decisions and owner inputs
 
+## Latest repository delivery and publication preparation
+
+On 4 November the owner requested completion of the current continuation on
+main and a normal main push, using separate English-documentation and journal
+research subagents. This supersedes local-only/no-push limits of earlier
+milestones. The owner supplied Siripon Srihangpiboon, King Mongkut's Institute
+of Technology Ladkrabang, srihangpiboon.siri@gmail.com and ORCID
+0009-0001-0611-5568, with a publication-fee ceiling of USD 300. These are
+owner-provided details, not institutional endorsement or author declarations.
+No payment or editorial submission has been made. See the
+[journal shortlist](../01_paper/JOURNAL_TARGETS_20261104.md) and
+[submission conditions](../01_paper/SUBMISSION_READINESS_20261104.md).
+
 ## Confirmed on 4 November 2026
 
 The owner requested a ZIP package and detailed Markdown documentation to extend CuraLoop-RL toward academic publication and a commercial offering. The owner intends to apply the package to the existing main branch. The owner selected public-data-first research and an R&D-team pilot as the initial business focus. Existing conversation preferences establish English repository content and a solo-project starting point.

@@ -2,6 +2,14 @@
 
 ## Current local continuation
 
+Latest delivery: the [English manuscript](docs/01_paper/MANUSCRIPT.md) has been
+reconciled with actual development/reproduction evidence. Separate subagents
+prepared the [journal shortlist](docs/01_paper/JOURNAL_TARGETS_20261104.md) and
+[submission review package](docs/01_paper/submission/README.md), within the
+owner's USD 300 fee ceiling. The owner authorizes main integration/push; exact
+publication status is recorded in [continuation](docs/CONTINUATION.md).
+Journal submission and the wider final study remain incomplete.
+
 Latest preparation: [candidate/source audit](docs/03_research/CANDIDATE_ASSAY_AUDIT_V1.md)
 and [estimation/resource sensitivity](docs/03_research/DESIGN_SENSITIVITY_V1.md).
 The owner selected 12+ families and effect estimates with uncertainty, with no

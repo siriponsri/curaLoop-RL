@@ -1,6 +1,6 @@
 # Manuscript map
 
-Read [the assembled draft](MANUSCRIPT.md). The numbered files follow paper structure. Historical results are populated from preserved artifacts. The proposed study is explicitly NOT_RUN. Figure/supplement planning and publication strategy are separate supporting files.
+Read [the assembled draft](MANUSCRIPT.md). The numbered chapters distinguish the preserved HIV pilot, executed 108-run NCATS development study, 108-run fresh-environment reproduction and 54-run Gaussian amendment from the still-unfrozen independent-family final study. Results retain null/unfavorable comparisons, one-class starts and complete fallback disclosures. Candidate metadata/features and hypothetical design sensitivity are preparation, not final outcomes. Author details were supplied by the owner; final declarations and venue-specific submission remain subject to human review. Figure/supplement planning and publication strategy are separate supporting files.
 
 - [00_title_abstract_keywords](00_title_abstract_keywords.md)
 - [01_introduction](01_introduction.md)

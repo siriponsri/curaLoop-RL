@@ -2,6 +2,13 @@
 
 ## Project and current authorization
 
+Latest owner instruction on 4 November authorizes completing the current
+repository delivery, integrating on main and a normal main push, with separate
+English-documentation and journal-research subagents. This supersedes earlier
+local-only/no-push statements for that delivery. Fee ceiling USD 300 is a budget,
+not payment authorization. Journal drafts remain unsent until author/venue/rights
+and final review are complete. See `docs/06_execution/MAIN_DELIVERY_CONTRACT_20261104.md`.
+
 Independent molecular-screening research and an R&D pilot programme. The owner selected public-data-first, solo computational research and an R&D-team pilot on 4 November 2026. Keep active repository content English. Read `START_HERE.md`, `GOAL.md`, `PLAN.md`, the claim ledger and protocol before material work. This package prepares files for the owner's main update; it does not itself publish, deploy or spend.
 
 Current continuation remains local. The owner separately authorized dr-train use

@@ -1,0 +1,37 @@
+{
+  "status": "PASS_STAGED_DOCUMENT_CHECKS",
+  "checked_utc": "2026-11-04T12:31:52.362636+00:00",
+  "checks": {
+    "source_and_staged_hashes_match_manifest": 14,
+    "assembled_chapters": 10,
+    "historical_HIV_tables_unchanged": 2,
+    "new_development_table_numeric_cells_match_source_CSV": 54,
+    "paired_results": {
+      "logistic_penalty": {
+        "heterogeneous_delta_counts": {
+          "0": 8,
+          "-2": 1
+        },
+        "heterogeneous_changed_traces": 7,
+        "exact_common_pairs": 9
+      },
+      "gaussian_pair": {
+        "heterogeneous_delta_counts": {
+          "0": 9
+        },
+        "heterogeneous_changed_traces": 5,
+        "exact_common_pairs": 9
+      }
+    },
+    "reproduction_receipt_status": "PASS",
+    "hypothetical_rows_and_precision_values_match_source": true,
+    "staged_document_local_links_exist": 60,
+    "staged_non_latin_script_screen": "PASS"
+  },
+  "limitations": [
+    "No campaigns or application/browser tests were run by the documentation agent",
+    "Source numeric tables and retained receipts verified; source scientific implementation not independently reproduced",
+    "Language screen is supplemented by editorial review but is not automated language identification for all Latin-script languages",
+    "No independent journal/editorial approval or human author attestation"
+  ]
+}

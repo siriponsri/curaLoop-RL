@@ -92,6 +92,13 @@ broader 12+ family estimation study. They retain metadata/feature audits,
 failures and hypothetical uncertainty/resource scenarios. Final task rights,
 endpoint mappings and roles remain open; no final compound outcomes were read.
 
+The English [working manuscript](docs/01_paper/MANUSCRIPT.md) now includes the
+measured development evidence. A source-checked
+[journal shortlist](docs/01_paper/JOURNAL_TARGETS_20261104.md) and
+[submission review package](docs/01_paper/submission/README.md) respect the
+owner's US$300 publication-fee limit. The manuscript is awaiting author,
+scientific and venue review; no journal submission or acceptance is claimed.
+
 ## Quick start
 
 **Windows:** install 64-bit Python 3.12, open the project folder and double-click

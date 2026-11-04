@@ -25,6 +25,8 @@ Use this ledger to reconcile the manuscript, README, presentation, pilot report 
 | C19 | Broader candidate source/structure audit executed without new compound outcomes | PREPARATORY_OPEN_GATES | [Audit](../03_research/CANDIDATE_ASSAY_AUDIT_V1.md); 24 original source audits, 1 bounded gene-search candidate, 17 new/3 reused panel audits and 3 cap exclusions; zero final-ready tasks, no certified family independence |
 | C20 | Hierarchical precision/resource sensitivity executed | HYPOTHETICAL_MODEL_ONLY | [1,080 sensitivity rows](../03_research/DESIGN_SENSITIVITY_V1.md); assumed variances/effects, not measured final power, assay savings or equivalence |
 | C21 | Existing owner-supplied SSH IP profile authenticates | READ_ONLY_CONNECTION_ONLY | `docs/evidence/design-preparation-20261104-v1/dr-train-ip-profile-test.json`; hostname dr-train returned, no resource reservation or remote study |
+| C22 | Active English documentation and manuscript reflect executed development evidence | DOCUMENTATION_RECONCILED | [Language/manuscript audit](../07_audit/LANGUAGE_AND_MANUSCRIPT_AUDIT.md); independent agent cross-review, not human author approval or new biological replication |
+| C23 | Current journal routes and a USD 300 budget were assessed | PUBLICATION_PREPARATION_ONLY | [Shortlist](../01_paper/JOURNAL_TARGETS_20261104.md); conditional no-APC subscription route, unresolved scientific/venue/author gates; no submission, payment or acceptance |
 
 ## Language rules
 

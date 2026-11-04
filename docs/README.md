@@ -1,5 +1,12 @@
 # Documentation map
 
+Publication preparation: [reconciled manuscript](01_paper/MANUSCRIPT.md),
+[journal shortlist](01_paper/JOURNAL_TARGETS_20261104.md),
+[readiness](01_paper/SUBMISSION_READINESS_20261104.md),
+[submission review package](01_paper/submission/README.md) and
+[English/manuscript audit](07_audit/LANGUAGE_AND_MANUSCRIPT_AUDIT.md).
+These are review drafts, not a submitted or accepted article.
+
 Latest preparation: [candidate assay audit](03_research/CANDIDATE_ASSAY_AUDIT_V1.md),
 [design/CPU sensitivity](03_research/DESIGN_SENSITIVITY_V1.md) and
 [exposure/rights protocol](03_research/FINAL_DESIGN_PREPARATION_PROTOCOL_V1.md).

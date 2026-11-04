@@ -25,7 +25,7 @@ has been introduced.
 - No `curaloop-rl-git` directory was found at the inspected Desktop project or
   Drug Discovery locations. Do not replace this checkout with a ZIP source tree.
 
-The source conversation [“อธิบายการใช้ AI”](https://chatgpt.com/c/6aea91cd-7364-83ec-9ee5-78617b192b54?messageId=13424946-b55f-547f-81c8-5651a8417c16)
+The source conversation [the source conversation about AI use](https://chatgpt.com/c/6aea91cd-7364-83ec-9ee5-78617b192b54?messageId=13424946-b55f-547f-81c8-5651a8417c16)
 was read through the supported conversation tool. It describes a proposed
 pending-aware, deadline-constrained, multi-assay study with a later RL extension
 and a research-service business path. Its statements about a reviewed package,

@@ -1,5 +1,18 @@
 # Documentation release: academic and business programme (2026-11-04)
 
+## English manuscript and journal preparation 2026-11-04
+
+- Reconciled the manuscript with executed NCATS development, fresh-environment
+  reproduction and Gaussian development evidence, retaining null findings.
+- Added primary-source journal/budget assessment and an unsent author review
+  package under the owner's USD 300 ceiling.
+- Corrected the remaining active Thai label; immutable historical records,
+  application, diagrams, logo and screenshot manual remain preserved.
+- Retained initial runtime timing failures and unchanged successful serial
+  reruns. Final-study and actual submission gates remain open.
+- Normal main integration/push is owner-authorized; exact publication identity
+  belongs to the delivery receipt, not an inferred completion claim.
+
 ## Documentation package 2.0 — full-text review, 2026-11-04
 
 - Incorporated three owner-supplied papers and one supplement with exact version/hash records.

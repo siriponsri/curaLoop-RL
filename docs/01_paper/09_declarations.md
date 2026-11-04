@@ -4,11 +4,11 @@
 
 ## Authorship and affiliation
 
-The project owner is Siripon Srihangpiboon according to the account context. Publication spelling, author order, affiliation, corresponding email and ORCID must be confirmed by the owner. No employer, hospital, university or GPO endorsement is inferred. Add coauthors only for qualifying actual contributions and with their agreement. AI systems are not listed as authors.
+The owner supplied the following publication details on 4 November 2026: **Siripon Srihangpiboon**; **King Mongkut's Institute of Technology Ladkrabang**; corresponding email **srihangpiboon.siri@gmail.com**; ORCID **0009-0001-0611-5568**. These are owner-provided declarations, not an independent verification of affiliation, institutional permission or endorsement. The author must confirm the exact affiliation presentation and all submission declarations. Add coauthors only for qualifying actual contributions and with their agreement. AI systems are not authors.
 
 ## Data and code availability
 
-The public source repository is `https://github.com/siriponsri/curaLoop-RL`. The historical derivative and evidence artifacts are described by versioned manifests. New multi-target results are not yet available. No archival DOI has been assigned by this package. Downloaded reading-room PDFs retain third-party rights and are not part of the public code payload.
+The source repository is [CuraLoop-RL](https://github.com/siriponsri/curaLoop-RL). Versioned manifests and public packets identify the historical derivative, 108 NCATS development campaigns, their 108 fresh-environment reproductions and the 54-run Gaussian amendment. The independent-family final study remains unexecuted. Full raw/derived candidate sources, cached wheels and reading-room PDFs are outside the public Git payload; exact identities, rights limits and retrieval/preparation instructions are documented. Do not imply that software MIT terms license all third-party assay files. No archival DOI is assigned by this manuscript, and no outcome file is redistributed without its applicable grant.
 
 ## Funding and competing interests
 
@@ -20,6 +20,6 @@ The current scope uses public historical molecular assay data and no new partici
 
 ## AI assistance
 
-ChatGPT/Codex assistance was used to inspect source, discover and extract literature, organize documentation and draft the protocol/business/manuscript materials. The exact deployment/model-version log was not independently verified in this package. Before submission the human author must record the tools/versions available to them and review every claim, reference, calculation and generated change. Do not state that this review is complete until it is done.
+ChatGPT/Codex assistance was used for source inspection, code generation/refactoring, test development, experiment execution and analysis tooling, literature discovery/extraction, documentation and protocol/business/manuscript drafting. The exact deployment/model-version log was not independently verified in this package. Before submission the human author must record the tools/versions available to them and review every claim, reference, calculation and generated change. Do not state that this review is complete until it is done.
 
-The submission venue's current AI policy must be checked. JOSS currently requires disclosure and restricts AI use in author-editor/reviewer conversational interactions beyond translation. This package contains no sent submission correspondence. Any later editorial response must follow the applicable policy.
+The selected venue's current AI policy must govern the manuscript, disclosure and any editorial communication. This draft contains no sent submission correspondence and does not assert completed human validation. The owner supplied a publication-fee ceiling of USD 300; this is a budget constraint, not a paid invoice, waiver approval or permission to submit inconsistent declarations.

@@ -1,5 +1,15 @@
 # Current-state audit
 
+> Latest main-delivery candidate: separate agents reconciled the English
+> manuscript and researched journals under the owner's USD 300 fee ceiling.
+> [Journal/readiness artifacts](../01_paper/JOURNAL_TARGETS_20261104.md) are review
+> drafts; no submission or acceptance. Main integration/push is now explicitly
+> authorized, superseding earlier local-only milestones. Runtime check disposition
+> is recorded in `docs/evidence/main-delivery-20261104/runtime-verification.json`:
+> full Python 231 pass/3 timing failures, then those 3 pass serially unchanged;
+> frontend 15 pass/3 timing failures, then all 18 pass serially unchanged.
+> Initial failures are retained, not relabeled as an all-pass full invocation.
+
 > Latest preparation, 4 November: [candidate audit](../03_research/CANDIDATE_ASSAY_AUDIT_V1.md)
 > retains the 24-source census, bounded 16-gene search (including 23 HTTP 404
 > attempts), all 128 PCBA identifier descriptions and 23 preselected feature

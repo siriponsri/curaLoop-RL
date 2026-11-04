@@ -1,5 +1,36 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
+## Current delivery English manuscript and journal preparation
+
+The owner authorizes completing this delivery on main and a normal main push.
+Exact candidate/published identity is in Git HEAD and
+`docs/evidence/main-delivery-20261104/`; earlier local-only statements are
+historical. Read [current continuation](docs/CONTINUATION.md),
+[manuscript](docs/01_paper/MANUSCRIPT.md),
+[journal shortlist](docs/01_paper/JOURNAL_TARGETS_20261104.md) and
+[submission package](docs/01_paper/submission/README.md).
+
+Active documentation is English. Immutable legacy/source exceptions and the
+manuscript's corrected actual development counts are audited. Three subagents
+and independent cross-review contributed; human author review is not complete.
+Owner identity and ORCID are supplied metadata; funding/conflicts/contributions
+are unconfirmed. Fee limit USD 300; JCAMD subscription/no-APC is a conditional
+route, not acceptance. No journal submission, editorial message or payment.
+
+Preserve the original application/manual/diagrams/data/models and all scientific
+packets. Full Python first yielded 231 pass/3 timing failures; those 3 passed
+serially unchanged. Frontend first 15 pass/3 wait failures, then all 18 pass
+serially unchanged. Retain both outcomes and the one inherited deprecation
+warning; do not claim an all-pass second full Python invocation. Typecheck,
+ESLint, scoped Ruff and pip check passed. Final preservation/links and remote
+readback belong to the current evidence packet.
+
+The wider final 12+ family study remains NOT_FROZEN/NOT_RUN, zero final-ready
+tasks. Close source grants/endpoint/whole-pool/family-role/analysis/resource
+gates before outcomes. No learned-transfer, equivalence, clinical or commercial
+benefit claim is promoted. Do not submit the draft before human/venue/rights
+review and final approval of the exact package. No remote/background job runs.
+
 ## Current checkpoint: candidate audit and estimation design preparation
 
 Checkout `C:\Users\User\Desktop\myProject\curaloop-rl`, branch

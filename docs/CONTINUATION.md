@@ -1,4 +1,54 @@
-# Current local checkpoint: bounded candidate/design preparation
+# Current delivery checkpoint: English manuscript and journal preparation
+
+4 November 2026, Asia/Bangkok. Checkout
+`C:\Users\User\Desktop\myProject\curaloop-rl`. Material source baseline
+`52c349ab24c653b043fa5401c923d330d7ec3d9e`. The owner now authorizes main
+integration and a normal push. Git HEAD and the subsequent publication receipt
+identify the actual reviewed/published commit; do not infer push from this file.
+
+Three requested subagents worked separately: English documentation/manuscript,
+journal fit/fees, and submission requirements/package. App-managed worktrees
+were unavailable for this registered chat scope, so agents inspected the repo
+read-only, and the parent applied drafts sequentially. Independent cross-review
+found one incomplete AI disclosure, corrected to include code/tests/execution/
+analysis; an immediate-OA mandate check was also added. No agent claims human
+author approval or independent scientific reproduction.
+
+The [manuscript](01_paper/MANUSCRIPT.md) now includes actual 108-run development,
+108-run same-host reproduction and 54-run Gaussian results, retaining null and
+unfavorable findings. The [language audit](07_audit/LANGUAGE_AND_MANUSCRIPT_AUDIT.md)
+corrects the sole active Thai link label; six frozen legacy files remain
+unchanged archival exceptions. Logo, diagrams, screenshots, English PDF,
+application, original models/data and scientific artifacts are preserved.
+
+The [journal shortlist](01_paper/JOURNAL_TARGETS_20261104.md) and
+[submission review package](01_paper/submission/README.md) use owner-supplied
+identity/ORCID and USD 300 cap. JCAMD subscription has no APC, conditional on
+scientific fit and mandate/cost review. JOSS/JCIM history/use gates are not
+cleared. No manuscript, editorial message, payment or archive deposit was sent.
+Actual submission remains NOT_READY_TO_SUBMIT; declarations and a meaningful
+validated contribution require author/scientific review.
+
+Runtime verification retains an initial full Python run of 231 pass/3 timing
+failures and its exact XML. Those three passed serially in 108.08s on unchanged
+source/test thresholds. Frontend first had 15 pass/3 wait failures; the serial
+run passed all 18. Typecheck, ESLint, research/tools Ruff and pip check passed.
+The evidence does not claim an all-pass second full Python run or controlled
+proof of the resource-pressure diagnosis. Final preservation/link/source and
+publication receipts are in `evidence/main-delivery-20261104/`.
+
+Remaining scientific dependencies: exact final data grants/endpoints,
+whole-pool/cross-group dependence, validation/final roles and frozen estimation
+analysis/CPU allocation before final outcomes. Rights followup is in
+[the source note](03_research/DATA_RIGHTS_FOLLOWUP_20261104.md). Zero tasks are
+final-ready; no final 12+ family study, learned transfer, prospective utility or
+customer validation is asserted. Owner preference remains effect/uncertainty
+reporting without a confirmatory material-effect threshold. No background study
+or remote job continues at the completed delivery checkpoint.
+
+---
+
+# Historical local checkpoint: bounded candidate/design preparation
 
 4 November 2026, Asia/Bangkok. Checkout
 `C:\Users\User\Desktop\myProject\curaloop-rl`; branch
