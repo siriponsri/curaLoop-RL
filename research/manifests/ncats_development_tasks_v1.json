@@ -1,0 +1,83 @@
+{
+  "schema_version": "curaloop.research.task-registry.v1",
+  "status": "DEVELOPMENT_ONLY_FINAL_TEST_NOT_FROZEN",
+  "records": [
+    {
+      "task_id": "ncats2014-ahr-development-v1",
+      "source_url": "https://tripod.nih.gov/tox21/challenge/download?id=nr-ahrsmiles&sec=",
+      "dataset_sha256": "3fe744e077982beff3e620f1eda8f2f824b5d967b54a06a4cb9c528573bad344",
+      "assay_endpoint": "AhR pathway activity",
+      "assay_id": "PubChem_AID_743122__NCATS_2014_CHALLENGE_TRAINING",
+      "data_rights_status": "LOCAL_USE_REVIEWED",
+      "controller_role": "development",
+      "target_family": "AHR",
+      "source_release": "NCATS Tox21 Challenge 2014 training endpoint; unversioned export pinned by retrieved SHA256",
+      "functional_phenotype": "AhR pathway activity; source binary activity, not therapeutic efficacy",
+      "label_mapping": {
+        "1": true,
+        "0": false
+      },
+      "label_mapping_status": "RESOLVED_WITH_SOURCE_EVIDENCE",
+      "label_mapping_evidence": "https://tripod.nih.gov/tox21/challenge/data.jsp (training table and 1/0 definition)",
+      "preprocessing_version": "curaloop.ncats-development-cohort.v1",
+      "source_ascertainment": "Public challenge training panel; label-blind 600-row derivative after structure/conflict audit",
+      "initialization_regimes": [
+        "uniform"
+      ],
+      "source_discrepancy_ids": []
+    },
+    {
+      "task_id": "ncats2014-pparg-development-v1",
+      "source_url": "https://tripod.nih.gov/tox21/challenge/download?id=nr-ppar-gammasmiles&sec=",
+      "dataset_sha256": "e119c91ba6561e8411e5642660bf3226bc36914f99b2a94cabebccdcbf7e599e",
+      "assay_endpoint": "PPAR-gamma signaling agonism",
+      "assay_id": "PubChem_AID_743140__NCATS_2014_CHALLENGE_TRAINING",
+      "data_rights_status": "LOCAL_USE_REVIEWED",
+      "controller_role": "development",
+      "target_family": "PPARG",
+      "source_release": "NCATS Tox21 Challenge 2014 training endpoint; unversioned export pinned by retrieved SHA256",
+      "functional_phenotype": "PPAR-gamma signaling agonism; source binary activity, not therapeutic efficacy",
+      "label_mapping": {
+        "1": true,
+        "0": false
+      },
+      "label_mapping_status": "RESOLVED_WITH_SOURCE_EVIDENCE",
+      "label_mapping_evidence": "https://tripod.nih.gov/tox21/challenge/data.jsp (training table and 1/0 definition)",
+      "preprocessing_version": "curaloop.ncats-development-cohort.v1",
+      "source_ascertainment": "Public challenge training panel; label-blind 600-row derivative after structure/conflict audit",
+      "initialization_regimes": [
+        "uniform"
+      ],
+      "source_discrepancy_ids": []
+    },
+    {
+      "task_id": "ncats2014-p53-development-v1",
+      "source_url": "https://tripod.nih.gov/tox21/challenge/download?id=sr-p53smiles&sec=",
+      "dataset_sha256": "893d8d503e61dc93e24a5f42a071995c6ddd75f20342bcf18641d887cbea1f08",
+      "assay_endpoint": "p53 pathway activity",
+      "assay_id": "PubChem_AID_720552__NCATS_2014_CHALLENGE_TRAINING",
+      "data_rights_status": "LOCAL_USE_REVIEWED",
+      "controller_role": "development",
+      "target_family": "TP53",
+      "source_release": "NCATS Tox21 Challenge 2014 training endpoint; unversioned export pinned by retrieved SHA256",
+      "functional_phenotype": "p53 pathway activity; source binary activity, not therapeutic efficacy",
+      "label_mapping": {
+        "1": true,
+        "0": false
+      },
+      "label_mapping_status": "RESOLVED_WITH_SOURCE_EVIDENCE",
+      "label_mapping_evidence": "https://tripod.nih.gov/tox21/challenge/data.jsp (training table and 1/0 definition)",
+      "preprocessing_version": "curaloop.ncats-development-cohort.v1",
+      "source_ascertainment": "Public challenge training panel; label-blind 600-row derivative after structure/conflict audit",
+      "initialization_regimes": [
+        "uniform"
+      ],
+      "source_discrepancy_ids": []
+    }
+  ],
+  "local_resource_files": {
+    "ncats2014-ahr-development-v1": "research/raw_data/ncats-development-20261104/prepared-v1/ahr.json",
+    "ncats2014-pparg-development-v1": "research/raw_data/ncats-development-20261104/prepared-v1/pparg.json",
+    "ncats2014-p53-development-v1": "research/raw_data/ncats-development-20261104/prepared-v1/p53.json"
+  }
+}

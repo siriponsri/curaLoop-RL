@@ -1,0 +1,78 @@
+{
+  "schema_version": "curaloop.ncats-development-run.v1",
+  "protocol_id": "ncats-three-assay-development-20261104-v1",
+  "status": "FROZEN_DEVELOPMENT_ONLY",
+  "frozen_at_utc": "2026-11-04T08:32:45.114256+00:00",
+  "implementation_commit": "a79707754d34e2d43fed4f9e1bac908f91dc0def",
+  "execution_source_sha256": "41dce53850a58caee1c0dda2e32cf7f1f47ab948b4ea632d219eb01f9fc31437",
+  "final_evaluation": false,
+  "assays": [
+    "ahr",
+    "pparg",
+    "p53"
+  ],
+  "cohort_sha256": {
+    "ahr": "3fe744e077982beff3e620f1eda8f2f824b5d967b54a06a4cb9c528573bad344",
+    "pparg": "e119c91ba6561e8411e5642660bf3226bc36914f99b2a94cabebccdcbf7e599e",
+    "p53": "893d8d503e61dc93e24a5f42a071995c6ddd75f20342bcf18641d887cbea1f08"
+  },
+  "raw_source_sha256": {
+    "ahr": "8b57bcfec402bbe76ac008a5e243341de5b4c92f891324b34351c5534827aebb",
+    "pparg": "d9962585e65b170f2423dd13c3384ae8fcb33434b5bbf2a3800357441c5ea28f",
+    "p53": "1fa72a15760a228c9b649b9b90675556f205b101445936181980a9ad87792052"
+  },
+  "sample_size_per_assay": 600,
+  "initial_count": 24,
+  "initialization": "random.Random(seed).sample(sorted IDs,24); no label inspection; retain zero-active starts",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "budget": 24,
+  "capacity": 3,
+  "deadline": 12,
+  "unit_cost": 1,
+  "decision_opportunities": "Integer grid 0..11 for every method; process all due events before refill; no new requests at T=12",
+  "conditions": {
+    "common": [
+      2
+    ],
+    "heterogeneous": [
+      1,
+      2,
+      4
+    ]
+  },
+  "duration_generator": "foundation keyed_duration(task_id,seed,candidate_id,assay_type); no activity input",
+  "methods": [
+    "random",
+    "frozen_greedy",
+    "greedy",
+    "nearest_hit",
+    "diversity",
+    "pending_penalty"
+  ],
+  "pending_lambda": 0.2,
+  "predictor": {
+    "family": "StandardScaler->LogisticRegression",
+    "solver": "liblinear",
+    "C": 1.0,
+    "max_iter": 500
+  },
+  "transductive_features": "All pool fingerprints public; scaler/classifier fit only revealed labels; no audit labels supplied",
+  "primary_development_diagnostic": "pending_penalty minus greedy H(T), descriptive paired by assay/seed; not final H1 test",
+  "common_negative_control": "Greedy/pending exact public event traces must match",
+  "threads": 1,
+  "max_cumulative_run_wall_seconds": 300,
+  "concurrency": 1,
+  "expected_runs": 108,
+  "canary": "18 included runs: each assay/method, seed0, heterogeneous; retain failures; no repeats",
+  "compute_costs": "No paid APIs/GPU; unit assay costs are synthetic; actual wall/CPU/peak working set measured",
+  "unimplemented_controls": [
+    "objective-matched asynchronous probabilistic comparator",
+    "ensemble uncertainty",
+    "learned controller"
+  ],
+  "inference": "One correlated NCATS panel, development endpoints only. No clinical, commercial, cross-target-transfer or prospective inference."
+}
