@@ -2,6 +2,11 @@
 
 Date: 2026-11-04 (Asia/Bangkok). Base: `19134d597c4e1f232864d21a920a06c0693cf737`.
 
+Material content: `344d0e37ad78677202bc7afc9f809d3558aecbdd`. Normal main push
+and live remote readback confirmed this checkpoint. The following receipt commit
+adds source/build/asset digests in `evidence/readme-manual-v1/refresh-identity.json`
+and updates the root runtime marker; original release records remain historical.
+
 ## Delivered
 
 - A professional English README with an overview, genuine application preview,
@@ -35,6 +40,7 @@ Date: 2026-11-04 (Asia/Bangkok). Base: `19134d597c4e1f232864d21a920a06c0693cf737
 | PDF visual inspection | All 20 pages rendered; contact sheet and full-size representative pages inspected; no clipping/overlap/missing glyphs found |
 | README | Relative targets and light/dark/mobile local Markdown rendering checked separately in readme-validation.json |
 | Original research assets | 191-file fixed-base byte preservation checked separately in preservation.json; engine/API and old v0.3 evidence remain unchanged |
+| Fresh Windows checkout | PASS; all 191 protected files, nine released visual/PDF assets, frontend build and API byte digests match; not a second runtime execution |
 
 Raw records and captures are under `docs/evidence/readme-manual-v1/`.
 `manual-manifest.json` identifies the actual screenshot build:

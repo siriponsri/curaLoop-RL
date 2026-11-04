@@ -1,5 +1,32 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
+## Latest documentation and branding checkpoint
+
+2026-11-04: the README, versioned logo, two editable architecture/workflow
+diagrams and 20-page English screenshot manual are complete. The PDF is linked
+from the README. Material refresh commit:
+`344d0e37ad78677202bc7afc9f809d3558aecbdd`, published by normal main push and
+confirmed by live remote readback. A following receipt commit records this result.
+The working branch `docs/visual-readme-manual` retains the material checkpoint.
+
+Current runtime marker: `SOURCE_COMMIT.txt`. Current identity/evidence:
+`docs/evidence/readme-manual-v1/refresh-identity.json` and
+`docs/README_MANUAL_VERIFICATION.md`. Earlier release identities below describe
+the previous POC checkpoint; their original records remain intact.
+
+Fresh checks: 136 Python tests, 18 frontend tests, production build/type/lint,
+31 real full-page captures, 37 manual views and 18 accessibility audits passed.
+PDF: 20 rendered pages, 19 bookmarks, 25 links, no text clipping. README targets
+and light/dark/mobile local previews passed. All 191 original protected files,
+scientific engine/API and earlier benchmark/release evidence are unchanged.
+
+The owner's existing port 8000 service was left running. Browser verification
+used an isolated owned process and temporary database on approved loopback port
+5173. Restart the owner's app normally to refresh cached identity if needed.
+Native CMD restart and a new Streamlit browser capture were not repeated in this
+documentation round; the current suite includes fallback AppTests. No question
+or blocker remains for the requested documentation scope.
+
 ## Checkout and authority
 
 Requested checkout: `C:\Users\User\Desktop\myProject\curaloop-rl`.

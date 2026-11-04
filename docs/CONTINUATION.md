@@ -1,4 +1,55 @@
-# CuraLoop-RL completed delivery checkpoint
+# CuraLoop-RL documentation refresh checkpoint
+
+Date: 2026-11-04 (Asia/Bangkok).
+Checkout: `C:\Users\User\Desktop\myProject\curaloop-rl`. Current branch: `main`.
+Material content commit: `344d0e37ad78677202bc7afc9f809d3558aecbdd`.
+Normal main publication and live remote readback: PASS at that checkpoint.
+This following receipt records identity and handoff only. The material working
+branch `docs/visual-readme-manual` is retained.
+
+## Completed request
+
+- Professional English README, genuine program preview and linked PDF guide.
+- Versioned new logo in web/Streamlit and an opaque README header for both themes.
+- Two source-grounded diagrams with editable HTML, SVG and high-resolution PNG.
+- English manual: 20 landscape pages, real screenshots, linked contents,
+  installation, campaign operation, comparisons, export/resume and revision recovery.
+- Optional documentation builders and provenance records; original artwork and
+  historical research evidence preserved.
+
+## Executed verification
+
+Windows / Python 3.12.10: 136 tests passed, 0 failed/skipped, one inherited warning.
+Frontend: 18 tests, TypeScript, ESLint and production build passed. Ruff passed.
+Actual isolated Chromium workflow: 31 full-page captures plus 37 manual-oriented
+views, 18 accessibility audits, zero violations/errors/external requests/overflow.
+The PDF's 20 pages were rendered and inspected; 19 bookmarks and 25 links checked.
+README local links and light/dark/mobile previews passed. Fixed-base preservation
+passed all 191 files. Scientific engine/API and previous release evidence unchanged.
+A fresh local Windows clone also retained all 191 protected files, nine released
+visual/PDF assets and exact tested build/API bytes; see `fresh-checkout.json`.
+
+Current source/build/asset digests: `evidence/readme-manual-v1/refresh-identity.json`.
+Commands and scope: [README/manual verification](README_MANUAL_VERIFICATION.md).
+The root runtime marker points to the material commit; later Git HEAD may contain
+documentation/publication receipts. Earlier release identity below is historical.
+
+## Remaining limits and exact next action
+
+No pending owner question or documentation blocker. Native CMD restart and a new
+Streamlit browser capture were not repeated this round; fallback AppTests passed.
+Other browser engines, physical devices, manual screenreader and prospective/
+clinical validation remain NOT_RUN. No scientific protocol changed.
+
+The owner's existing production service on port 8000 was not stopped or mutated.
+Capture used an isolated temporary database and owned API process on port 5173;
+that verification process was stopped. Open the manual from README. To load the
+new build with a refreshed identity, restart through `Start-CuraLoop-Web.cmd`
+normally. No agent work continues in the background after completion.
+
+---
+
+# Historical completed POC checkpoint
 
 Date: 2026-11-04 (Asia/Bangkok).
 Checkout: `C:\Users\User\Desktop\myProject\curaloop-rl`.
