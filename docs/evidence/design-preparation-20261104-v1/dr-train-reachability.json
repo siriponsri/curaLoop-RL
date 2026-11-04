@@ -1,0 +1,22 @@
+{
+  "checked_at_utc": "2026-11-04T11:38:47.519525+00:00",
+  "purpose": "Owner-authorized read-only SSH reachability; no job or allocation",
+  "argv": [
+    "ssh",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=10",
+    "-o",
+    "ConnectionAttempts=1",
+    "dr-train",
+    "hostname"
+  ],
+  "exit_code": 255,
+  "stdout": "",
+  "stderr": "user@dr-train: Permission denied (publickey,password).",
+  "host_keys_or_credentials_modified": false,
+  "remote_jobs_started": 0
+}
