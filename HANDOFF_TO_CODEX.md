@@ -7,6 +7,11 @@ Drive overlay resolved the missing-input gate: 132 included payload hashes and
 ZIP checks passed. The full/private PDF package was not downloaded. Current
 provenance and merge exceptions: [local integration](docs/07_audit/LOCAL_INTEGRATION.md).
 
+Verified material commit: `6eceaa7b14ab3473f13a9bf1d97d17303bc9d46b`.
+The following receipt is documentation/identity only. Committed research-source
+identity matches execution, and all 511 original source / 27 archive Git blobs
+match supplied manifests exactly. See the current packet's `commit-identity.json`.
+
 The next coherent engineering slice is complete: a separate versioned integer
 reference with deadline/accounting/privacy/recovery tests, 648 constructed
 fixtures / 3,888 ordering checks, and a one-resource registry guard. Final new

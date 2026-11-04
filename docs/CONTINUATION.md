@@ -6,6 +6,12 @@ Branch: `feat/reviewed-v2-foundation-20261104`; base intake `a866b13`, published
 base `2d287a1`. Git HEAD identifies the later local foundation commit/receipt.
 Main was not advanced or pushed by this continuation.
 
+Material implementation commit: `6eceaa7b14ab3473f13a9bf1d97d17303bc9d46b`.
+The following receipt changes identity/handoff only. Its committed research
+source digest matches the actual toy execution. All 511 original package source
+Git blobs and all 27 archived document blobs match their manifests exactly;
+see `evidence/reviewed-v2-integration-20261104/commit-identity.json`.
+
 The owner's new Drive source resolved the missing-input gate. The docs overlay
 size is 385,445 bytes, SHA256
 `6d6f0eddc6fe0b6a70c268cc30ccec555b225cce2d9a65e9e83bbf68c1f9ee6f`.

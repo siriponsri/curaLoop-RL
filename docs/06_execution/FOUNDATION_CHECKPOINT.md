@@ -4,6 +4,11 @@ Date: 2026-11-04, Asia/Bangkok. Branch:
 `feat/reviewed-v2-foundation-20261104`, from intake `a866b13` / published base
 `2d287a1`. This is a local milestone; no push or deployment was performed.
 
+Material implementation commit: `6eceaa7b14ab3473f13a9bf1d97d17303bc9d46b`.
+The identity receipt verifies the tested research source digest against that
+commit, with 511 original source and 27 archive Git blobs matching exactly.
+Later receipts contain documentation/identity only.
+
 ## Completed and bounded work
 
 | Item | State | Evidence / practical limit |

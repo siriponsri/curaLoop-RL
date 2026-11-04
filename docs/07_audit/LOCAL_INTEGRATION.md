@@ -57,6 +57,11 @@ runtime edits. They were not rewritten to make an audit pass. The validator
 reports raw and normalized counts separately and requires source-blob evidence
 for any newline-only acceptance. Other byte differences fail validation.
 
+Post-commit readback at `6eceaa7b14ab3473f13a9bf1d97d17303bc9d46b` also verified
+all 511 original source Git blobs and all 27 archived document blobs against their
+manifest SHA256 values exactly. This is a committed-blob check, distinct from the
+working-checkout CRLF observation above; see the current packet's `commit-identity.json`.
+
 The original fixed-base 191-file preservation check remains a separate strict
 byte comparison. Old preparation receipts retain their original claims and
 scope. Current tests and evidence belong in
