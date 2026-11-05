@@ -1,0 +1,99 @@
+{
+  "schema_version": "curaloop.plan-a.budget-snapshot.v1",
+  "created_utc": "2026-11-05T00:10:41.456146+00:00",
+  "status": "PASS_CONSERVATIVE_CHARGE",
+  "cpu_ceiling_seconds": 172800,
+  "goal3_cpu_ceiling_seconds": 28800,
+  "goal4_cpu_ceiling_seconds": 144000,
+  "recorded_goal3_cpu_seconds": 5.546875,
+  "unmetered_pre_guard_preflight_utility_test_overhead_charge_seconds": 7200,
+  "goal3_charged_cpu_seconds": 7205.546875,
+  "cpu_accounting_scope": "Process CPU from available source/job receipts plus conservative charge; exhaustive historical process accounting is not certified",
+  "metadata_recorded_body_bytes": 28463825,
+  "metadata_unknown_usage_reservations": {
+    "delegated_metadata_unknown_actual_reservation": 80000000,
+    "partial_buffered_FTP_timeout_read_reservation": 10000001,
+    "unrecorded_initial_API_disconnect_reservation": 200001,
+    "primary_web_document_reading_reservation": 5000000
+  },
+  "metadata_conservative_charged_bytes": 123663827,
+  "metadata_ceiling_bytes": 200000000,
+  "delegated_request_count_compliance": "NOT_CERTIFIED; see delegated-metadata-accounting.json",
+  "reservations_are_not_measured_usage": true,
+  "sources": [
+    {
+      "path": "research\\raw_data\\external-benchmarks\\fs-mol-0.1\\source-metadata-v1\\requests.json",
+      "measured_cpu_seconds": 0.203125,
+      "received_body_bytes": 849329
+    },
+    {
+      "path": "research\\raw_data\\external-benchmarks\\fs-mol-0.1\\uniprot-family-canary-v1\\requests.json",
+      "measured_cpu_seconds": 0.015625,
+      "received_body_bytes": 1889
+    },
+    {
+      "path": "research\\raw_data\\external-benchmarks\\fs-mol-0.1\\uniprot-family-bulk-v1\\requests.json",
+      "measured_cpu_seconds": 0.453125,
+      "received_body_bytes": 434547
+    },
+    {
+      "path": "research\\raw_data\\external-benchmarks\\fs-mol-0.1\\uniprot-family-exposure-v1\\requests.json",
+      "measured_cpu_seconds": 0.03125,
+      "received_body_bytes": 343
+    },
+    {
+      "path": "research\\raw_data\\external-benchmarks\\fs-mol-0.1\\interpro-types-canary-v1\\requests.json",
+      "measured_cpu_seconds": 0.0625,
+      "received_body_bytes": 19339
+    },
+    {
+      "path": "research\\raw_data\\external-benchmarks\\fs-mol-0.1\\interpro-types-bulk-v1\\requests.json",
+      "measured_cpu_seconds": 1.0,
+      "received_body_bytes": 808086
+    },
+    {
+      "path": "research\\raw_data\\external-benchmarks\\fs-mol-0.1\\interpro-types-resume-v1\\requests.json",
+      "measured_cpu_seconds": 0.578125,
+      "received_body_bytes": 536957
+    },
+    {
+      "path": "research\\raw_data\\external-benchmarks\\fs-mol-0.1\\interpro-types-finish-v1\\requests.json",
+      "measured_cpu_seconds": 0.21875,
+      "received_body_bytes": 186846
+    },
+    {
+      "path": "research\\raw_data\\external-benchmarks\\fs-mol-0.1\\chembl37-mapping-v1\\summary.json",
+      "measured_cpu_seconds": 2.75,
+      "received_body_bytes": 22609396
+    },
+    {
+      "path": "research\\raw_data\\external-benchmarks\\fs-mol-0.1\\interpro-ftp-entries110-curl-v2\\receipt.json",
+      "measured_cpu_seconds": 0.015625,
+      "received_body_bytes": 2989742
+    },
+    {
+      "path": "research\\raw_data\\external-benchmarks\\fs-mol-0.1\\interpro-ftp-entries110-v1\\receipt.json",
+      "measured_cpu_seconds": 0.046875,
+      "received_body_bytes": 0
+    },
+    {
+      "path": "research\\raw_data\\external-benchmarks\\fs-mol-0.1\\interpro-ftp-release110-v1\\receipt.json",
+      "measured_cpu_seconds": 0.03125,
+      "received_body_bytes": 0
+    },
+    {
+      "path": "research\\raw_data\\external-benchmarks\\fs-mol-0.1\\interpro-ftp-releases-v1\\receipt.json",
+      "measured_cpu_seconds": 0.0625,
+      "received_body_bytes": 25617
+    },
+    {
+      "path": "research\\raw_data\\external-benchmarks\\fs-mol-0.1\\interpro-ftp-root-v1\\receipt.json",
+      "measured_cpu_seconds": 0.078125,
+      "received_body_bytes": 1734
+    }
+  ],
+  "bounded_jobs": [],
+  "next_preparation_max_cpu_seconds": 1800,
+  "new_heavy_jobs_use_affinity_memory_wall_CPU_guards": true,
+  "final_evaluation": false
+}

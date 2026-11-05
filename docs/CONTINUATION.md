@@ -1,4 +1,30 @@
-# Current sequential checkpoint: Goal 2 real-data prototype
+# Current checkpoint: Goal 3 cohort gate revision
+
+## Active Plan A checkpoint, 5 November
+
+The owner authorized Goals3–4,48 cumulative CPU-hours/24 hours/maximum4CPUs,
+including dr-train if local resources are insufficient and verified local
+retrieval before task-owned remote code/data deletion. See
+[execution contract](06_execution/PLAN_A_EXECUTION_CONTRACT_20261105.md).
+Block start2026-11-04 22:37:04UTC; deadline2026-11-05 22:37:04UTC.
+Goal3 is in progress; Goal4 is conditional on source/data/method readiness.
+The owner selected rebuilding roles by verified biological families, retaining
+source roles as provenance and exact chemical purge without a chemical OOD
+claim. Typed annotation-connected blocks passed independent metadata checks;
+the first frozen structure-only cohort FAILED quotas at2/2/7groups instead of
+4/2/12. See [revision options](06_execution/GOAL3_COHORT_REVISION_OPTIONS_20261105.md).
+No semantic final-label use or Goal4 campaign occurred. Trusted parsing of136
+reserved members/17,601rows suppressed outcome values and retained all attempts.
+One source-train task aggregate was seen by the metadata reviewer; the access
+ledger marks CHEMBL1614128 development-only. Do not use target_info.csv.
+Raw archive header audit found27065 files; all5135 default-manifest tasks
+are present, with21930 additional physical training files. Source metadata
+and member names were audited before subsequent trusted feature preparation.
+Old Goal2 remote files were completely returned/hash-verified and its root
+deleted. PlanA's helper root remains for final retrieval/cleanup. Current
+resource charges and source/access limitations are in the
+[PlanA evidence packet](evidence/plan-a-20261105-v1/README.md).
+Earlier checkpoints below are historical.
 
 5 November acquisition follow-up: the owner supplied `fsmol.tar`; size and MD5
 match the official version 1 values. SHA256 and the byte-only verification

@@ -9,8 +9,8 @@ Repository artifacts remain English. Goal2 base is main commit `729e13b`.
 | --- | --- | --- |
 | 1 | Select an ambitious, defensible research thesis; closest-work challenge, mechanism example, validation and stop criteria | COMPLETE: reviewed planning decision; novelty/benefit not yet established |
 | 2 | Real paper-backed assay prototype, exact tiny-state oracles, matched cheap controls and external benchmark acquisition | COMPLETE as a bounded challenge; computational/discovery advantage not demonstrated; owner FS-Mol archive byte-verified 5 November, not ingested |
-| 3 | Close data rights/endpoints, feature overlap, family/source and operational splits for the broader study | PROPOSED; NOT_STARTED; existing preparation retained |
-| 4 | Development training/adapter/baseline feasibility, resource measurement and final design freeze | PROPOSED; NOT_STARTED; earlier development studies are historical inputs |
+| 3 | Close data rights/endpoints, feature overlap, family/source and operational splits for the broader study | AUTHORIZED; IN_PROGRESS; metadata review passed; first feature cohort FAIL at2/2/7groups; revision choice pending |
+| 4 | Development training/adapter/baseline feasibility, resource measurement and final design freeze | CONDITIONALLY_AUTHORIZED in Plan A; NOT_STARTED until Goal3 readiness gate |
 | 5 | Frozen held-out study, uncertainty/ablation analysis and independent reproduction | PROPOSED; NOT_STARTED |
 | 6A | English manuscript/figures/supplement/reproduction package and venue fit, ready for human author review | PROPOSED; NOT_STARTED; older review drafts already exist |
 | 6B | Actual submission of the exact human-reviewed package within the confirmed publication budget | PROPOSED; NOT_AUTHORIZED; declarations and final approval required |
@@ -20,7 +20,16 @@ Repository artifacts remain English. Goal2 base is main commit `729e13b`.
 5 November: recommended first block through Goal 4; maximum proposed internal
 endpoint Goal 6A if evidence gates pass. These are proposals, not execution
 authority. The owner requires alternatives and consultation before unresolved
-material decisions. No long run or Goal 3 task has started.
+material decisions. The owner subsequently authorized Option A. Goal 3 is in
+progress under the [execution contract](PLAN_A_EXECUTION_CONTRACT_20261105.md);
+Goal 4 remains gated.
+
+Current [cohort revision options](GOAL3_COHORT_REVISION_OPTIONS_20261105.md):
+first frozen structure-only pass processed136assays/17,601rows with outcome
+values suppressed. Its4/2/12group quotas failed. Owner chose exact chemical
+purge and no chemical OOD claim. Do not expand the frozen reserves or start
+Goal4 campaigns before resolving the data gate. Evidence and every failed
+attempt remain retained in the PlanA packet.
 
 Detailed [Goal 3 proposal](GOAL_03_PROPOSAL_20261105.md), 5 November: source/family/
 split readiness plus a stronger method decision after Goal 2's failed usefulness

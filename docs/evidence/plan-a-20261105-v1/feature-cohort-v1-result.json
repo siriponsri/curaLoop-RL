@@ -1,0 +1,196 @@
+{
+  "status": "FAIL_FAMILY_QUOTAS",
+  "manifest_sha256": "e2b7309d197ff4ea3b6de66224fa783d80cd17bc67694e2e068caab915ff32c3",
+  "source_identities": {
+    "config_sha256": "e36cedf449cc9e4a2c3aa9612af08f7041e3fbc43f355955a0c321f7d3661035",
+    "preparer_sha256": "844b92327398431fc169693ffe8a86c91df2f2841e18230193b701ab260dec11",
+    "family_registry_sha256": "e81838e46c0b77c1d2bbd462fe988d04a86812a766a0c6f832466196a4da8a05",
+    "header_index_sha256": "4f4c83b8ce310f80681684a435a92a0c592461c897672d52b63cec1134391746",
+    "access_policy_sha256": "e76bef5dd0253fbde3f117a4f5d12e447f0c5e27be26cd619df6da594c09399e",
+    "archive_sha256": "528a9c4e8d74c4287acda79536eecbf91418d6d0ac2c55918b270d78c2333ebc",
+    "rdkit": "2026.09.1"
+  },
+  "selected_family_counts": {
+    "development": 2,
+    "validation": 2,
+    "final": 7
+  },
+  "selected_assay_counts": {
+    "development": 3,
+    "validation": 2,
+    "final": 8
+  },
+  "attempted_assays": 136,
+  "attempted_families": {
+    "development": 8,
+    "validation": 6,
+    "final": 32
+  },
+  "processing_totals": {
+    "compressed_bytes": 15903792,
+    "expanded_bytes": 225951775,
+    "source_rows_trusted_parsed": 17601,
+    "canonical_rows": 17454,
+    "canonical_characters": 782459
+  },
+  "selected_task_manifest": [
+    {
+      "assay_id": "CHEMBL1614225",
+      "role": "development",
+      "source_role": "train",
+      "family_id": "typed-ancestry-3d78be158d61c2c9cfd8",
+      "family": "globin family",
+      "feature_sha256": "5c1ce36bd5e2706d13b89ada2e14fee6d6fca2842b72798a7bfe236cac7bd93c",
+      "retained_structures": 179,
+      "member_sha256": "2a6bd5a9115fe154e640ae157a1708c5e28022dc63c453b603d025429e70ba6f"
+    },
+    {
+      "assay_id": "CHEMBL1738549",
+      "role": "development",
+      "source_role": "train",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "family": "mit/tfe family",
+      "feature_sha256": "2bf07142b2f95d375ca8bf82c29be3950e287bb0ee1d73592234e6e02849a812",
+      "retained_structures": 323,
+      "member_sha256": "8ea761cb779af2b01992eac495cd116e6e3401dc88e605373b2fa4d66915dcd6"
+    },
+    {
+      "assay_id": "CHEMBL1738553",
+      "role": "development",
+      "source_role": "train",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "family": "mit/tfe family",
+      "feature_sha256": "5eeb250cdcb8572935001eebd7f51c23b1266fe9071cb34e783a477bb514bc80",
+      "retained_structures": 263,
+      "member_sha256": "2c5859a364443072d5774a63f128ed1abcc02977183039866b810478a59855e3"
+    },
+    {
+      "assay_id": "CHEMBL830838",
+      "role": "validation",
+      "source_role": "train",
+      "family_id": "typed-ancestry-e95346fc689f9e34aeec",
+      "family": "dihydrofolate reductase family",
+      "feature_sha256": "5d3e921f7541354133a73e64ecb7f63359e23db522b3725f02403fb515c0efe1",
+      "retained_structures": 168,
+      "member_sha256": "e245c577aeeab54aa2ebad99d4d3feb3e4b87c7196be94bd8305f57841a920ec"
+    },
+    {
+      "assay_id": "CHEMBL4257016",
+      "role": "validation",
+      "source_role": "train",
+      "family_id": "typed-ancestry-94155e8b526e07fc302e",
+      "family": "isocitrate and isopropylmalate dehydrogenases family",
+      "feature_sha256": "2512b49d47410a40c48b6099ee7e0cf3b7dddc24ddbceedbbee145698c2563bd",
+      "retained_structures": 162,
+      "member_sha256": "44abe97bd757b41665529228e9b4d29c4feaf6fe2688246368c69b00572dbfa5"
+    },
+    {
+      "assay_id": "CHEMBL1738508",
+      "role": "final",
+      "source_role": "train",
+      "family_id": "typed-ancestry-6acacea708ddf9cda45d",
+      "family": "tim17/tim22/tim23 family",
+      "feature_sha256": "823bcc99d024cc2b70137cc9e22c8b8f334e484aef6e9d719558dd9ebeb1e4a2",
+      "retained_structures": 214,
+      "member_sha256": "80468d8678815ac01d5aba2e9381e9cd0bc434f550d2f85477d1eb19da618a79"
+    },
+    {
+      "assay_id": "CHEMBL1613907",
+      "role": "final",
+      "source_role": "test",
+      "family_id": "typed-ancestry-12ffe73d1d54d6ad232c",
+      "family": "pyruvate kinase family",
+      "feature_sha256": "8541b001dc80ef11828b324894260dd9e5e4b0257291e3f43e6971b3df8e11d3",
+      "retained_structures": 134,
+      "member_sha256": "e3684dbbe4ba60f86c765da487b82f2e624112dac4ac8ced4d2979df557ac480"
+    },
+    {
+      "assay_id": "CHEMBL4055896",
+      "role": "final",
+      "source_role": "train",
+      "family_id": "typed-ancestry-b2736caed8839c9b48fb",
+      "family": "transthyretin family",
+      "feature_sha256": "e18eb25fcabed1d8ae28dd7c0e7f24ba17d366f47d971fbf471908fb6dbef06e",
+      "retained_structures": 282,
+      "member_sha256": "4307703c157a500301dad0bcec99c0f61e16070ddf5f6b020a35d128096eb5e7"
+    },
+    {
+      "assay_id": "CHEMBL1613941",
+      "role": "final",
+      "source_role": "train",
+      "family_id": "typed-ancestry-94c81f320ab47a99c150",
+      "family": "geminin family",
+      "feature_sha256": "46880878f56b3a6e396607b1dbc6f0d3ef22bfad5c207e2d75179f1c391536a3",
+      "retained_structures": 223,
+      "member_sha256": "c98526a133a6e0f24be3bb3cef7e2122e484ef0388f1923bcfe2bc0423de83ca"
+    },
+    {
+      "assay_id": "CHEMBL1614310",
+      "role": "final",
+      "source_role": "train",
+      "family_id": "typed-ancestry-db74763e1e3f11d06e71",
+      "family": "intermediate filament family",
+      "feature_sha256": "4f5692512f8a9a42f7d12a41c2d3e00b58cdbc100138193b1b88934e0852e578",
+      "retained_structures": 205,
+      "member_sha256": "986ccabca0c46836096041505a752f75e39e766af26f2a4ea76d679278e9659b"
+    },
+    {
+      "assay_id": "CHEMBL1614213",
+      "role": "final",
+      "source_role": "valid",
+      "family_id": "typed-ancestry-0cbb7451dd8c710aa36d",
+      "family": "inositol monophosphatase superfamily",
+      "feature_sha256": "1ea44e8587d106747941370e23350c7c6442579e6f2c2cea9d8efadaea78947f",
+      "retained_structures": 600,
+      "member_sha256": "42ebd3da59fc12046a8a386dfb7580b2de58fb6379a639ea64acc18c82eb54a2"
+    },
+    {
+      "assay_id": "CHEMBL3883076",
+      "role": "final",
+      "source_role": "train",
+      "family_id": "typed-ancestry-a81af4a86491ac3603ec",
+      "family": "ferroportin (fp) (tc 2.a.100) family; major facilitator (tc 2.a.1) superfamily; major facilitator superfamily; organo anion transporter (tc 2.a.60) family; slc29a/ent transporter (tc 2.a.57) family",
+      "feature_sha256": "07086ae815b45073e1bae9c02b39b910685331a3c2f8d531bb19cdbe89e34082",
+      "retained_structures": 248,
+      "member_sha256": "8592650492569358f298d752b91750c23019076283c422b9044df9d74bab6d5b"
+    },
+    {
+      "assay_id": "CHEMBL4257289",
+      "role": "final",
+      "source_role": "train",
+      "family_id": "typed-ancestry-a81af4a86491ac3603ec",
+      "family": "ferroportin (fp) (tc 2.a.100) family; major facilitator (tc 2.a.1) superfamily; major facilitator superfamily; organo anion transporter (tc 2.a.60) family; slc29a/ent transporter (tc 2.a.57) family",
+      "feature_sha256": "6cab3b1b4cbed7fe866acf5566ba5eef677aa195f3cc30c1692751e95d4a736e",
+      "retained_structures": 356,
+      "member_sha256": "70a790a2f9b77ac351afc9148166623b812e25cb026f2f7b754ca21654ed9efd"
+    }
+  ],
+  "resource_receipt": {
+    "schema_version": "curaloop.resource-receipt.v1",
+    "pid": 85320,
+    "start_utc": "2026-11-05T00:13:47.551425+00:00",
+    "cpu_affinity": [
+      11
+    ],
+    "wall_limit_seconds": 1800,
+    "cpu_limit_seconds": 1800,
+    "memory_limit_bytes": 1073741824,
+    "descendant_processes_allowed": false,
+    "threads_per_blas": 1,
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "command": [
+      "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\research\\benchmark_v3\\prepare_features.py"
+    ],
+    "guard_source_sha256": "6190b66653cf849a80024b2b9edf86ff045f8f98394a2a155e89cad03f4aff6a",
+    "status": "FAIL",
+    "wall_seconds": 73.53200000000652,
+    "cpu_seconds": 44.4375,
+    "output_bytes": 3277015
+  },
+  "outcome_values_emitted": false,
+  "semantic_outcome_use": false,
+  "goal4_data_gate": "FAIL_REQUIRED_4_DEVELOPMENT_2_VALIDATION_12_FINAL_GROUPS",
+  "new_campaigns_run": 0,
+  "final_evaluation": false,
+  "terms_notice": "See docs/03_research/PLAN_A_DATA_SOURCE_NOTICES_V1.md; software MIT does not replace data terms"
+}

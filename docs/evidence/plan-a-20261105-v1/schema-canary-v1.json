@@ -1,0 +1,35 @@
+{
+  "status": "PASS_SCHEMA_ONLY_DEVELOPMENT_CANARY",
+  "source_task": "CHEMBL1614128",
+  "required_role": "DEVELOPMENT_ONLY_NOT_FINAL",
+  "member": "fs-mol/train/CHEMBL1614128.jsonl.gz",
+  "compressed_bytes": 377208,
+  "member_sha256": "ec97184d76cbb52a1e867246c04392370740a782e802a5ef90f1142ab6edd8db",
+  "top_level_schema": {
+    "SMILES": "str",
+    "Property": "str",
+    "Assay_ID": "str",
+    "RegressionProperty": "str",
+    "LogRegressionProperty": "str",
+    "Relation": "str",
+    "AssayType": "str",
+    "fingerprints": "list",
+    "descriptors": "list",
+    "motifs": "list",
+    "graph": "dict"
+  },
+  "nested_keys_only": {
+    "graph": [
+      "adjacency_lists",
+      "node_contexts",
+      "node_features",
+      "node_types"
+    ]
+  },
+  "rows_trusted_parsed": 1,
+  "outcome_values_emitted": false,
+  "final_task_access": false,
+  "agent_visible_compound_outcomes": false,
+  "wall_seconds": 0.002054199925623834,
+  "cpu_seconds": 0.0
+}

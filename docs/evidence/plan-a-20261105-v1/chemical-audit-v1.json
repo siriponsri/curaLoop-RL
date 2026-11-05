@@ -1,0 +1,121 @@
+{
+  "status": "PASS_EXACT_PURGE_ONLY",
+  "threshold": 0.8,
+  "roles": {
+    "development": {
+      "unique_structures": 577,
+      "structures_in_multiple_assays": 188,
+      "unique_nonempty_scaffolds": 467,
+      "acyclic_unique_structures": 0
+    },
+    "final": {
+      "unique_structures": 2130,
+      "structures_in_multiple_assays": 131,
+      "unique_nonempty_scaffolds": 1169,
+      "acyclic_unique_structures": 18
+    },
+    "validation": {
+      "unique_structures": 330,
+      "structures_in_multiple_assays": 0,
+      "unique_nonempty_scaffolds": 129,
+      "acyclic_unique_structures": 0
+    }
+  },
+  "cross_role_pairs": [
+    {
+      "roles": [
+        "development",
+        "final"
+      ],
+      "exact_canonical_overlap": 0,
+      "shared_nonempty_scaffolds": 26,
+      "nearest": {
+        "development_to_final": {
+          "query_n": 577,
+          "count_at_least_threshold": 1,
+          "mean_nearest_tanimoto": 0.34158192984108426,
+          "max_nearest_tanimoto": 1.0
+        },
+        "final_to_development": {
+          "query_n": 2130,
+          "count_at_least_threshold": 1,
+          "mean_nearest_tanimoto": 0.29808689566746,
+          "max_nearest_tanimoto": 1.0
+        }
+      }
+    },
+    {
+      "roles": [
+        "development",
+        "validation"
+      ],
+      "exact_canonical_overlap": 0,
+      "shared_nonempty_scaffolds": 0,
+      "nearest": {
+        "development_to_validation": {
+          "query_n": 577,
+          "count_at_least_threshold": 0,
+          "mean_nearest_tanimoto": 0.1937870837523953,
+          "max_nearest_tanimoto": 0.36065573770491804
+        },
+        "validation_to_development": {
+          "query_n": 330,
+          "count_at_least_threshold": 0,
+          "mean_nearest_tanimoto": 0.23302988925015383,
+          "max_nearest_tanimoto": 0.36065573770491804
+        }
+      }
+    },
+    {
+      "roles": [
+        "final",
+        "validation"
+      ],
+      "exact_canonical_overlap": 0,
+      "shared_nonempty_scaffolds": 0,
+      "nearest": {
+        "final_to_validation": {
+          "query_n": 2130,
+          "count_at_least_threshold": 0,
+          "mean_nearest_tanimoto": 0.2004925501587885,
+          "max_nearest_tanimoto": 0.4318181818181818
+        },
+        "validation_to_final": {
+          "query_n": 330,
+          "count_at_least_threshold": 0,
+          "mean_nearest_tanimoto": 0.2620399704315392,
+          "max_nearest_tanimoto": 0.4318181818181818
+        }
+      }
+    }
+  ],
+  "prior_reference_n": 8678,
+  "prior_reference_overlap": {
+    "development": {
+      "exact_canonical_overlap": 0,
+      "shared_nonempty_scaffolds": 41,
+      "query_n": 577,
+      "count_at_least_threshold": 4,
+      "mean_nearest_tanimoto": 0.3702705783034454,
+      "max_nearest_tanimoto": 1.0
+    },
+    "final": {
+      "exact_canonical_overlap": 0,
+      "shared_nonempty_scaffolds": 161,
+      "query_n": 2130,
+      "count_at_least_threshold": 67,
+      "mean_nearest_tanimoto": 0.4109933908485049,
+      "max_nearest_tanimoto": 1.0
+    },
+    "validation": {
+      "exact_canonical_overlap": 0,
+      "shared_nonempty_scaffolds": 0,
+      "query_n": 330,
+      "count_at_least_threshold": 0,
+      "mean_nearest_tanimoto": 0.308472264265357,
+      "max_nearest_tanimoto": 0.5319148936170213
+    }
+  },
+  "chemical_ood_claim": false,
+  "scaffold_and_analogue_purge": false
+}

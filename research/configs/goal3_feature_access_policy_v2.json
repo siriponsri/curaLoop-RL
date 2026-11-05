@@ -1,0 +1,21 @@
+{
+  "schema_version": "curaloop.goal3.access.v2",
+  "status": "PREPARATION_CONTRACT_BEFORE_NEW_ASSAY_PARSE",
+  "supersedes_for_feature_preparation": "goal3_access_policy_v1.json",
+  "archive_sha256": "528a9c4e8d74c4287acda79536eecbf91418d6d0ac2c55918b270d78c2333ebc",
+  "first_operation_header_only": "COMPLETED_BEFORE_SCHEMA_CANARY",
+  "owner_chemical_direction": "A: biological family separation plus exact chemical purge; report analogues/scaffolds; no chemical OOD claim",
+  "trusted_row_projection_allowlist": ["SMILES", "Assay_ID"],
+  "never_forward_arbitrary_row_fields": true,
+  "outcome_fields_never_used_in_feature_admission": ["Property", "RegressionProperty", "LogRegressionProperty"],
+  "physical_outcome_byte_access": "Trusted parser necessarily decodes row-oriented bytes; outcome field values are unused and never emitted",
+  "exception_handling": "Fixed sanitized reason codes only; no row text or JSON exception contents",
+  "feature_admission": "Frozen metadata/hash ranks and structure-only eligibility; complete fixed reserve collision support before duplicate/eligibility removal",
+  "incomplete_collision_support": "ABORT; never treat truncated/capped reserve as empty",
+  "semantic_outcome_use_goal3": false,
+  "semantic_outcome_use_goal4": "Only frozen selected development and validation evaluator after Goal3 readiness gate and Goal4 protocol freeze; validation cannot tune candidate settings",
+  "known_exposed_task_permanently_not_final": "CHEMBL1614128",
+  "exposure_protein_anchors": ["P04637", "P37231", "P35869", "Q00975", "Q02410"],
+  "final_label_preparation_or_evaluation": false,
+  "raw_or_row_derivative_public_git": false
+}

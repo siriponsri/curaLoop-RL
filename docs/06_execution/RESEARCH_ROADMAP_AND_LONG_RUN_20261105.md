@@ -1,5 +1,11 @@
 # Proposed research roadmap and bounded long-run options
 
+Current amendment, 5 November: the owner explicitly authorized **Option A**,
+Goals 3–4,48 CPU-hours/24 hours/maximum4CPUs, with dr-train processing and
+verified local retrieval before task-owned remote deletion. Follow the
+[execution contract](PLAN_A_EXECUTION_CONTRACT_20261105.md). Option B remains
+proposed. Historical plan-only text below is superseded for approved Option A.
+
 5 November 2026, Asia/Bangkok. **PROPOSED; NO LONG RUN AUTHORIZED OR STARTED.**
 The owner requested the later goals, the achievable autonomous endpoint and
 consultation before decisions for which the evidence is insufficient.

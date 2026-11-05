@@ -2,6 +2,18 @@
 
 ## Current local continuation
 
+Active work: owner-authorized [Plan A, Goals3–4](docs/06_execution/PLAN_A_EXECUTION_CONTRACT_20261105.md),
+48 CPU-hours/24 hours, maximum4CPU workers. Goal3 metadata/header/source audits
+and a frozen feature-only preparation ran; Goal4 fitting/campaigns wait for the readiness gate. The owner
+selected a new verified biological-family split, retaining source roles as
+provenance and exact chemical purge, without a chemical OOD claim. The first
+cohort failed its4/2/12family quotas, producing2/2/7. See
+[revision options](docs/06_execution/GOAL3_COHORT_REVISION_OPTIONS_20261105.md).
+Trusted preparation parsed structure rows with outcome values suppressed; no
+semantic final-label use or real Goal4 campaign occurred. Goal2 remote files
+were fully retrieved/hash-verified and the old task root deleted. PlanA's own
+remote helper root remains for final retrieval/cleanup.
+
 Current sequential checkpoint: [Goal 2 results](docs/03_research/GOAL_02_RESULTS_V1.md)
 and [goal tracker](docs/06_execution/GOAL_TRACKER.md). The real-data prototype
 completed 180 Tox21 development runs on dr-train. Its bound preserved rollout
@@ -9,7 +21,7 @@ decisions but increased policy time by 24.3%; nearest-hit found more actives.
 The high-impact method remains a research target. The paper-backed external
 [FS-Mol archive](docs/03_research/GOAL_02_DATASET_ACQUISITION_V1.md)
 was supplied by the owner and passed size/hash verification on 5 November;
-archive members remain unopened and later goals remain unstarted.
+the subsequent Goal3 structure-only audit is reported above. Goal4 remains gated.
 
 Latest delivery: the [English manuscript](docs/01_paper/MANUSCRIPT.md) has been
 reconciled with actual development/reproduction evidence. Separate subagents

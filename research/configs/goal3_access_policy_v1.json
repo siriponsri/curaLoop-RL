@@ -1,0 +1,18 @@
+{
+  "schema_version": "curaloop.goal3.access.v1",
+  "status": "FROZEN_BEFORE_ASSAY_MEMBER_PARSE",
+  "stage": "metadata_and_feature_audit_only",
+  "archive": "research/raw_data/external-benchmarks/fs-mol-0.1/fsmol.tar",
+  "archive_sha256": "528a9c4e8d74c4287acda79536eecbf91418d6d0ac2c55918b270d78c2333ebc",
+  "first_operation": "tar_headers_only_no_member_content",
+  "allowed_metadata_files": ["train_proteins.csv", "valid_proteins.csv", "test_proteins.csv", "fsmol-0.1.json", "LICENSE", "README.md"],
+  "forbidden_agent_visible_fields": ["num_pos", "percentage_pos", "label", "labels", "boolean_label", "numeric_label", "activity", "active", "regression_label", "classification_label", "value"],
+  "default_task_role": "UNASSIGNED_SEALED",
+  "source_role_is_not_curaloop_final_role": true,
+  "semantic_label_access": "Declared development only after source/role gates; no final outcomes in this plan",
+  "trusted_feature_preparation": "May parse row-oriented source bytes only after schema review; suppress outcome fields, record access, never send labels/prevalence to agents or policies",
+  "known_exposure": [{"task_id": "CHEMBL1614128", "source_role": "train", "exposure": "One agent saw aggregate prevalence columns in a source metadata row before detecting them", "compound_labels_seen": false, "required_role": "DEVELOPMENT_ONLY_NOT_FINAL"}],
+  "target_info_csv": "EXCLUDED_FROM_AGENT_REVIEW; contains aggregate outcome columns",
+  "final_outcomes_agent_inspected": false,
+  "final_evaluation": false
+}

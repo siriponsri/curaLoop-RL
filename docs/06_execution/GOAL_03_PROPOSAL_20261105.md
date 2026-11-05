@@ -1,5 +1,12 @@
 # Proposed Goal 3: real benchmark readiness and a stronger method decision
 
+5 November execution amendment: **Plan A is authorized and Goal 3 is in
+progress**, under [the execution contract](PLAN_A_EXECUTION_CONTRACT_20261105.md).
+The owner subsequently selected new verified biological-family roles rather
+than relying on the source split; source roles remain provenance. Goal 4 is
+conditionally authorized after its readiness gate. Earlier proposal/approval
+wording below is historical, not a current instruction to await routine approval.
+
 5 November 2026, Asia/Bangkok. **PROPOSED / READY_FOR_OWNER_REVIEW.**
 This document is a proposal, not authorization to extract data, inspect new
 labels, launch compute, train a model or run the final study. Goal 3 has not

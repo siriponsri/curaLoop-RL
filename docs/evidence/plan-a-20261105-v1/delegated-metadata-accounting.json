@@ -1,0 +1,27 @@
+{
+  "status": "LIMITATION_RETAINED_CONSERVATIVE_BUDGET_RESERVATION",
+  "actor": "/root/journal_fit",
+  "initial_review_reported_requests": 20,
+  "followup_completed_requests_before_incident": 12,
+  "interrupted_helper": {
+    "actual_request_count": null,
+    "actual_received_bytes": null,
+    "reason": "Accidental repeated target_component metadata GET inside a comprehension; process interrupted; buffered output retained no count",
+    "execution_yield_wall_seconds": 10.0055,
+    "interrupt_return_seconds": 0.0236,
+    "hard_read_caps": [100001,2000001,10001],
+    "conditional_max_requests": 1002,
+    "conditional_max_read_bytes": 12101002,
+    "bound_condition": "Classification page contains at most1000rows as requested; this is a bound, not measured usage",
+    "additional_issue": "Comprehension used undefinedc while iteratingt; nonempty component response would normally raiseNameError, but actual path/count not certified",
+    "delegated_20_request_ceiling_certified": false,
+    "activity_endpoints_or_outcomes": false,
+    "state": "TERMINATED_NO_RETRY_NO_FILES"
+  },
+  "conservative_bytes_reserved_for_all_delegated_metadata_work": 80000000,
+  "reservation_is_actual_measured_usage": false,
+  "project_metadata_cap_bytes": 200000000,
+  "root_downloads_measured_separately": "research/raw_data/external-benchmarks/fs-mol-0.1/source-metadata-v1/requests.json",
+  "control": "No further agent network calls; parent bounded fetcher owns subsequent metadata acquisition and confirms page limits",
+  "not_claimed": ["exact compliant delegated request total", "exact delegated byte usage", "activities downloaded", "scope/cap increase"]
+}

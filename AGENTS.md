@@ -1,5 +1,26 @@
 # Agent instructions: CuraLoop-RL
 
+## Active Plan A authorization, 5 November 2026
+
+The owner explicitly authorized execution through Goals 3–4, 48 cumulative
+CPU-hours and a 24-hour window, maximum4CPU workers, with existing dr-train
+processing permitted if local compute is slow/insufficient. Follow
+`docs/06_execution/PLAN_A_EXECUTION_CONTRACT_20261105.md`. This supersedes the
+older proposed-only/per-goal approval wording below within Goals3–4. Consult
+before unresolved material choices; no Goal5/final study or journal action.
+Retrieve and hash-verify task code/data/artifacts/evidence locally before
+deleting verified task-owned remote code/data. Never delete other projects.
+
+Current checkpoint: metadata/rights/preparation reviews passed in their scoped
+senses; first frozen feature-only cohort FAILED4/2/12quotas at2/2/7groups.
+Do not edit frozen feature-v1 sources/outputs or start real Goal4 campaigns.
+Owner revision choice is pending; follow the newest accepted revision if one
+arrives. Exact chemical purge/no chemical OOD claim is owner-selected. Trusted
+row parsing suppressed outcome values; no semantic final evaluation occurred.
+Old Goal2 remote root was fully returned/hash-verified and deleted. Current
+PlanA helper root still needs final preservation/cleanup. Older no-remote-job/
+unopened-archive/preparatory-only statements below describe earlier checkpoints.
+
 ## Owner consultation instruction, 5 November 2026
 
 The owner asks for proposals and consultation when the agent is not confident.
@@ -7,8 +28,8 @@ If evidence is insufficient for a material research, data-rights, scope,
 resource or publication decision, explain the options, consequences and
 recommendation, and ask before doing dependent work. Preserve checkpoints and
 continue independent authorized work. Routine actions inside a clear approved
-contract remain authorized. Long-run options through Goals 4 or 6A are proposed
-only; no Goal 3 execution or cross-goal long run is currently approved.
+contract remain authorized. Plan A through Goal4 is now approved under the
+active amendment above; the extended option through Goal6A remains proposed.
 
 ## Active Goal 2 owner amendment, 4 November 2026
 

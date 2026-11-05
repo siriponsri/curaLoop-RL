@@ -1,5 +1,22 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
+## Active Plan A, 5 November
+
+Owner-approved Goals3–4:48CPU-hours/24hours/maximum4CPUs. Parent is sole writer;
+three specialists review data/source, methods and English/evidence read-only.
+Follow [execution contract](docs/06_execution/PLAN_A_EXECUTION_CONTRACT_20261105.md)
+and [continuation](docs/CONTINUATION.md). Goal3 metadata/header audits and a
+frozen structure-only cohort ran. Quotas FAILED at2development/2validation/7final
+groups; [revision options](docs/06_execution/GOAL3_COHORT_REVISION_OPTIONS_20261105.md)
+await owner choice. Goal4 awaits readiness. Owner chose biological-family roles
+and exact chemical purge with no chemical OOD claim. Trusted row parsing
+suppressed outcomes; no semantic final labels opened. Record the training-aggregate
+metadata exposure from the access ledger. Retrieve/hash-verify all task-owned
+remote code/data/artifacts/evidence locally before deleting only verified roots.
+Old Goal2 root was retrieved, hash-verified and deleted; current PlanA helper
+root still needs final retrieval/cleanup. Frozen first-preparation sources must
+not be edited or its outputs overwritten when implementing a later revision.
+
 ## Current sequential work: Goal 2 complete, candidate advantage failed
 
 Read [Goal 2 results](docs/03_research/GOAL_02_RESULTS_V1.md) and

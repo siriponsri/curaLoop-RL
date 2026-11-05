@@ -1,0 +1,12 @@
+{
+  "schema_version": "curaloop.plan-a.access-ledger.v1",
+  "events": [
+    {"stage": "source-metadata research", "actor": "/root/journal_fit", "file": "pinned FS-Mol datasets/targets/target_info.csv", "task_id": "CHEMBL1614128", "source_role": "train", "exposure": "Aggregate num_pos/percentage_pos fields in first metadata row; no compound labels or archive members", "action": "Stopped that source; no prevalence values forwarded or retained; task must remain development-only", "scope": "Procedural metadata-exposure incident, not final-task exposure"},
+    {"stage": "pre-ingestion access policy", "actor": "parent", "file": "research/configs/goal3_access_policy_v1.json", "action": "Freeze header-only first operation and outcome-field suppression; no source task automatically becomes a final task"},
+    {"stage": "development-only schema canary", "actor": "trusted parser", "file": "fs-mol/train/CHEMBL1614128.jsonl.gz", "task_id": "CHEMBL1614128", "source_role": "train", "exposure": "One row parsed by trusted code; keys and types only emitted; no values emitted", "action": "Keep task development-only; schema receipt schema-canary-v1.json; no final-task access"},
+    {"stage": "frozen feature preparation v1", "actor": "trusted parser", "file": "ignored feature-cohort-v1/manifest.json", "member_count": 136, "rows_trusted_parsed": 17601, "exposure": "Physical row-oriented outcome bytes decoded but values unused/suppressed; positive SMILES/Assay_ID projection only", "action": "Retain every attempt; FAIL_FAMILY_QUOTAS at2development/2validation/7final; no semantic compound outcome use, prevalence export or final evaluation"}
+  ],
+  "archive_member_contents_read": true,
+  "compound_outcome_values_agent_seen": false,
+  "final_outcome_values_agent_seen": false
+}

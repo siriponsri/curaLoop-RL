@@ -43,3 +43,19 @@ tools/verify_fsmol_archive_v1.py -text
 tools/audit_goal2_mechanism_v1.py -text
 docs/evidence/goal-02-real-data-20261104-v1/** whitespace=cr-at-eol
 docs/evidence/fs-mol-receipt-20261105-v1/** whitespace=cr-at-eol
+
+# Plan A frozen scientific sources/configurations and immutable evidence.
+research/benchmark_v3/*.py -text whitespace=cr-at-eol
+research/planning_v3/*.py -text whitespace=cr-at-eol
+research/configs/goal3_*.json -text whitespace=cr-at-eol
+research/configs/plan_a_*.json -text whitespace=cr-at-eol
+tools/*fsmol*_v1.py -text whitespace=cr-at-eol
+tools/*interpro*_v1.py -text whitespace=cr-at-eol
+tools/fetch_chembl_family_metadata_v1.py -text whitespace=cr-at-eol
+tools/fetch_uniprot_families_v1.py -text whitespace=cr-at-eol
+tools/remote_*_v1.py -text whitespace=cr-at-eol
+tools/verify_remote_return_v1.py -text whitespace=cr-at-eol
+tools/resource_guard_v1.py -text whitespace=cr-at-eol
+tools/freeze_goal3_features_v1.py -text whitespace=cr-at-eol
+tools/snapshot_plan_a_budget_v1.py -text whitespace=cr-at-eol
+docs/evidence/plan-a-20261105-v1/** whitespace=cr-at-eol
