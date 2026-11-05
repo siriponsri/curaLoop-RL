@@ -10,6 +10,9 @@ Reviewed proposal basis: [deep related-work review](02_literature/REDESIGN_DEEP_
 and [agentic R&D plugin proposal](04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md).
 The subsequent 4R1 diagnosis is linked above; live plugin integration remains NOT_RUN.
 
+Next decision: [post-4R1 directions and bounded 4R2-A proposal](06_execution/POST_4R1_DIRECTION_PROPOSAL_20261106.md).
+This is a proposal only; no new goal or remote execution has started.
+
 Sequential research: [Goal tracker](06_execution/GOAL_TRACKER.md),
 [Goal 2 real-data results](03_research/GOAL_02_RESULTS_V1.md),
 [Goal 2 protocol](03_research/GOAL_02_REAL_DATA_PROTOCOL_V1.md),
