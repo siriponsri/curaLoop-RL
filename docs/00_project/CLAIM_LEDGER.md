@@ -35,6 +35,8 @@ Use this ledger to reconcile the manuscript, README, presentation, pilot report 
 | C29 | FS-Mol is acquired and ready for a family-transfer study | SCOPED_COHORT_PREPARED_AND_DEV_VALIDATION_EVALUATED | [Dataset card](../03_research/FSMOL_DATASET_CARD_V2.md); owner-approved A reached 4/2/12 annotation components, 6/2/16 assays; source/chemical limits explicit; final outcomes reserved |
 | C30 | Goal 4 real-data development/validation challenge executed | EXECUTED_BOUNDED_CHALLENGE | [Closeout](../06_execution/PLAN_A_CLOSEOUT_20261105.md); 6,488 campaigns + 64 calibration diagnostics; 43 evaluator checks locally/Linux; 112/112 reexecution and 448 main dense/screened signature matches |
 | C31 | New screening improves computation and broad deadline discovery | NOT_SUPPORTED_AS_A_BROAD_ADVANCE | [Results](../03_research/GOAL4_RESULTS_V1.md); matched median policy time +32.2% on one development assay; mixed effects/two validation groups; no optional WAIT in the selected-M128 planner panel; C06 remains a broader hypothesis |
+| C32 | Related work supports a predictor/decision-value redesign direction | PROPOSAL_WITH_UNRESOLVED_NOVELTY | [Primary-source review](../02_literature/REDESIGN_DEEP_REVIEW_20261105.md); focused coverage/access limits; [4R1](../03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md) requires a new bounded approval; no new experiments |
+| C33 | CuraLoop provides an automatic agentic R&D plugin and team-tool delivery | PROPOSED_NOT_IMPLEMENTED | [Plugin proposal](../04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md); first workflow selected, current integration seams statically mapped; no connector implementation, live provider or business-pilot evidence |
 
 ## Language rules
 

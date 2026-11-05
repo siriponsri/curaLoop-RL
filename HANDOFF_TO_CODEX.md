@@ -1,5 +1,21 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
+## Latest owner review packet, 5 November
+
+The owner requested a method/predictor redesign proposal and deep related-paper
+research, then added an automatic agentic R&D plugin/business direction. Selected
+first workflow: search papers/molecular databases and return plans/reports to
+team tools. Read the [review](docs/02_literature/REDESIGN_DEEP_REVIEW_20261105.md),
+[scientific proposal](docs/03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md)
+and [plugin proposal](docs/04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md).
+No new experiments, final labels, remote jobs or external writes were performed.
+Goal4R1 is proposed at8CPU-hours/12elapsedhours/max4workers in a NEW window;
+P1 engineering needs a separate contract. Do not infer execution approval from
+the owner's choice of product workflow. Existing Goal4 scientific exit remains
+NOT_PASSED. Two former validation groups are exposed; final12 remain reserved.
+The review's starting main checkpoint was `6db00a9c28e32f05d13bec0c50fd90a77b73b004`;
+the documentation delivery commit identifies this proposal packet.
+
 ## Current Plan A closeout, 5 November
 
 Read the self-contained [closeout](docs/06_execution/PLAN_A_CLOSEOUT_20261105.md)

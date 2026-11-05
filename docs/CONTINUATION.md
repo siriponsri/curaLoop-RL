@@ -1,5 +1,13 @@
 # Current checkpoint: Plan A Goals 3–4 closeout
 
+Latest review packet: [related-work investigation](02_literature/REDESIGN_DEEP_REVIEW_20261105.md),
+[Goal4R proposal](03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md) and
+[agentic plugin proposal](04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md).
+The owner chose literature/molecular-source search followed by plan/report
+delivery to team tools as the first product workflow. This delivery is
+proposal-only. New trials/window, plugin implementation and live writes remain
+unstarted and require their respective bounded decisions.
+
 The owner-approved A cohort passed 4/2/12 annotation-connected groups. The
 prescribed trial allocation completed 6,488 campaigns plus 64 calibration
 diagnostics; M128 was selected before validation. The method-advance gate is

@@ -62,6 +62,13 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 ## Research and R&D pilot programme
 
+Proposed next direction: [predictor and decision-value redesign](docs/03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md)
+and an [agentic R&D plugin](docs/04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md)
+for paper/database search and evidence-linked plans/reports. The
+[related-work review](docs/02_literature/REDESIGN_DEEP_REVIEW_20261105.md)
+records prior art and open questions. These proposals are not implemented or
+validated capabilities.
+
 Latest: [Plan A, Goals 3–4](docs/06_execution/PLAN_A_CLOSEOUT_20261105.md)
 completed a paper-backed FS-Mol cohort and a frozen development/validation challenge.
 The candidate screening method was slower in matched timing checks; broader

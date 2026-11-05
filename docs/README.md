@@ -1,5 +1,10 @@
 # Documentation map
 
+Current proposal packet: [deep related-work review](02_literature/REDESIGN_DEEP_REVIEW_20261105.md),
+[Goal4R method/predictor proposal](03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md)
+and [agentic R&D plugin proposal](04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md).
+These are reviewable directions; experiments and live integrations are NOT_RUN.
+
 Sequential research: [Goal tracker](06_execution/GOAL_TRACKER.md),
 [Goal 2 real-data results](03_research/GOAL_02_RESULTS_V1.md),
 [Goal 2 protocol](03_research/GOAL_02_REAL_DATA_PROTOCOL_V1.md),

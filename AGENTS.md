@@ -1,5 +1,18 @@
 # Agent instructions: CuraLoop-RL
 
+## Current proposal-only direction, 5 November 2026
+
+The owner requested method/predictor proposals, deep related-paper research and
+an agentic plugin for future R&D/business use. The selected first plugin workflow
+is paper/molecular-database search followed by plan/report delivery to team tools.
+Read `docs/02_literature/REDESIGN_DEEP_REVIEW_20261105.md`,
+`docs/03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md` and
+`docs/04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md`.
+These are proposals, not a new experiment/window or live connector authorization.
+Goal4R1's 8CPU-hour/12-hour cap and P1 implementation need separate bounded
+approval. Preserve the old final panel and exposed-validation distinction.
+No new trials, final outcomes, remote processing or team-tool writes occurred.
+
 ## Active Plan A authorization, 5 November 2026
 
 The owner explicitly authorized execution through Goals 3–4, 48 cumulative

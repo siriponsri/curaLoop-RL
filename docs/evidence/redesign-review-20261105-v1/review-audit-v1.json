@@ -1,0 +1,115 @@
+{
+  "schema": "curaloop.redesign-review-audit.v1",
+  "date_utc": "2026-11-05",
+  "base_main_commit": "6db00a9c28e32f05d13bec0c50fd90a77b73b004",
+  "scope": "English proposals, primary-source related-work review and documentation navigation",
+  "owner_direction": {
+    "method_and_predictor_proposal_requested": true,
+    "deep_related_paper_research_requested": true,
+    "agentic_plugin_and_business_direction_requested": true,
+    "first_workflow": "Search papers and molecular databases, then return plans and reports to team tools",
+    "new_experiment_or_window_authorized": false,
+    "live_team_tool_write_authorized": false
+  },
+  "documents": [
+    {
+      "path": "docs/02_literature/REDESIGN_DEEP_REVIEW_20261105.md",
+      "sha256": "0c3c13add311a42e43f9b14a0e2effe5446b73f6ecde531e06b51f9155b4ef73"
+    },
+    {
+      "path": "docs/03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md",
+      "sha256": "e27622c01072edcfe4ab5128544bb4622d2d335ffc5b8352a6587e284e93c93f"
+    },
+    {
+      "path": "docs/04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md",
+      "sha256": "95eefb8760cbe5ed3e86c1a625894a552a2746e0932bb3fee9a25dda1dc8c6b0"
+    }
+  ],
+  "research_access": {
+    "paper_matrix_entries": 23,
+    "coverage": "Focused related-work investigation, not a systematic review or exhaustive novelty certificate",
+    "source_access_levels": "TEXT, PARTIAL and RECORD are individually declared in the review",
+    "consensus_deep": "BLOCKED_BY_FREE_USAGE_QUOTA; one attempted call; no research thread started; no retry or purchase",
+    "fallback": "Primary web publications and official code, alphaXiv discovery/raw PDF pages, prior source reviews and read-only subagent checks",
+    "copyrighted_full_texts_added_to_public_git": false
+  },
+  "independent_agent_reviews": [
+    {
+      "agent": "cohort_a_review",
+      "scope": "Predictor choices, joint uncertainty, CPU limits and pretrained-checkpoint exposure",
+      "status": "COMPLETED_RECOMMENDATIONS",
+      "files_written_by_reviewer": false
+    },
+    {
+      "agent": "goal4_protocol_review",
+      "scope": "Closest-work boundaries, proposal math, scientific interpretation, probability scores, exposure and selection",
+      "status": "PASS_AS_PROPOSAL",
+      "scientific_proposal_sha256": "e27622c01072edcfe4ab5128544bb4622d2d335ffc5b8352a6587e284e93c93f",
+      "files_written_by_reviewer": false
+    },
+    {
+      "agent": "english_goal3_review",
+      "scope": "English claims, recent paper versions, proposed/current distinction and 14 local proposal links",
+      "status": "SCOPED_PASS_AFTER_CORRECTIONS",
+      "files_written_by_reviewer": false
+    },
+    {
+      "agent": "plugin_architecture_map",
+      "scope": "Static application/research integration seams and proposed architecture edges",
+      "status": "SCOPED_PASS",
+      "external_literature_or_live_runtime_certified": false,
+      "files_written_by_reviewer": false
+    }
+  ],
+  "checks": {
+    "environment": "Windows, existing .venv Python 3.12.10",
+    "package_check": "PASS; tools/check_research_package.py exit 0",
+    "protected_files": 511,
+    "raw_protected_matches": 481,
+    "git_verified_crlf_only_matches": 30,
+    "archived_originals": 27,
+    "active_markdown_files": 135,
+    "active_local_links": 613,
+    "frozen_historical_reference_catalogues": "PRESERVED",
+    "git_diff_check": "PASS; exit 0",
+    "initial_staged_whitespace_check": "FAIL on CRLF in the newly generated package report; corrected to LF with parsed JSON equality checked; no historical evidence changed",
+    "tracked_scientific_code_and_goal4_evidence_changes": [],
+    "prior_results_hash": "322f48f3ce7923b3d222323b218c2353ac4da9ee31b44bf0d8bac2a38f198e38",
+    "prior_closeout_hash": "88a0e2e1ec656c2e2b0a19d92b99229a9e15734027c11858d66c96e2ff3eb61b"
+  },
+  "proposed_not_executed": {
+    "goal4r1": {
+      "cpu_hours_cap": 8,
+      "elapsed_hours_cap": 12,
+      "max_workers": 4,
+      "new_window_required": true,
+      "repair_variants": 2,
+      "joint_predictors_including_old_control": 3,
+      "main_campaigns": 2496,
+      "selected_repair_ablation_campaigns": 576,
+      "scientific_campaigns_before_extra_executions": 3072,
+      "status": "NOT_RUN"
+    },
+    "plugin_p1": {
+      "cpu_hours_cap": 4,
+      "elapsed_hours_cap": 12,
+      "max_workers": 2,
+      "scope": "Local typed tools, source metadata, fixtures, report bundles and preview-only destination adapter",
+      "live_external_write_included": false,
+      "status": "NOT_RUN"
+    }
+  },
+  "not_run": [
+    "new predictor fitting, campaigns or final-outcome access",
+    "new dataset preparation or validation cohort selection",
+    "SSH or remote processing",
+    "plugin implementation or live connector evaluation",
+    "team-tool write or business pilot",
+    "full application, frontend, browser or scientific regression suites",
+    "rendered architecture export verification",
+    "journal submission or paid action"
+  ],
+  "scientific_goal4_exit": "NOT_PASSED",
+  "final_study_design": "NOT_FROZEN",
+  "next_action": "Owner selects and approves one bounded next goal; implementation remains unstarted"
+}
