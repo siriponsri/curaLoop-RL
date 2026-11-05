@@ -1,0 +1,19 @@
+{
+  "overall_research_goal": "NOT_COMPLETE_REQUIRES_OWNER_METHOD_DIRECTION",
+  "prescribed_experimental_allocation": "EXECUTED_COMPLETE",
+  "requirements": [
+    {"requirement": "Paper-backed source, release and scoped processing rights", "status": "PASS_SCOPED", "evidence": "FSMOL_DATASET_CARD_V2.md; source-rights-local-use-v1.json"},
+    {"requirement": "Owner-approved reserve A and required 4/2/12 groups", "status": "PASS_SCOPED_ANNOTATION_COMPONENTS", "evidence": "feature-cohort-v2-result.json; revision-a-feature-readback-v2.json"},
+    {"requirement": "Exact role/prior chemical purge and dependence reporting", "status": "PASS_SCOPED", "evidence": "chemical-audit-v2.json; no chemical OOD claim"},
+    {"requirement": "Versioned model, strong controls, privacy/accounting and bounded candidate trials", "status": "EXECUTED_PASS", "evidence": "protocol-freeze-v1.json;43evaluator tests;4032development+2240crossed campaigns"},
+    {"requirement": "Identifiable real-data mechanism and defensible discovery/computation advance", "status": "NOT_PASSED", "evidence": "results-v1.json;32.2%slower matched screening;0optional WAIT in256selected-M128crossed campaigns;2validationgroups"},
+    {"requirement": "Final-study design freeze after successful method gate", "status": "NOT_DONE_BLOCKED_BY_METHOD_GATE", "evidence": "GOAL4_RESULTS_V1.md; PLAN_A_CLOSEOUT_20261105.md"},
+    {"requirement": "Effects, uncertainty, ablations, calibration and computational reexecution", "status": "EXECUTED_PASS_WITH_LIMITS", "evidence": "results-v1.json;112reexecution matches;448main signature matches; descriptive rather than certified population intervals"},
+    {"requirement": "48CPU-hour/24-hour/max4CPU limits", "status": "PASS_CONSERVATIVE_ACCOUNTING_WITH_DISCLOSED_LIMITS", "evidence": "budget-closeout-v1.json; exhaustive historical accounting not certified"},
+    {"requirement": "Full local return then exact remote task deletion", "status": "PASS", "evidence": "full-return-local-proof-v1.json;remote-cleanup-v1.txt;remote-absence-v1.json"},
+    {"requirement": "English evidence and clear owner checkpoint", "status": "PASS_SCOPED_REVIEW", "evidence": "final-english-review-v1.json;final-scientific-review-v1.json"}
+  ],
+  "final_labels_or_Goal5_executed": false,
+  "main_commit_push": "Authorized; verify exact final main ref separately after this precommit audit",
+  "next_action": "Present concrete pushed evidence and consult owner before a new method direction or additional configurations; do not shrink the scientific exit to passing software tests"
+}

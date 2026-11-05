@@ -1,4 +1,14 @@
-# Current checkpoint: Goal 3 cohort gate revision
+# Current checkpoint: Plan A Goals 3–4 closeout
+
+The owner-approved A cohort passed 4/2/12 annotation-connected groups. The
+prescribed trial allocation completed 6,488 campaigns plus 64 calibration
+diagnostics; M128 was selected before validation. The method-advance gate is
+NOT_PASSED: screening was slower and the selected-M128 planner made no optional WAIT. Goal4's
+scientific exit and final-study design freeze remain unresolved. Read
+[closeout](06_execution/PLAN_A_CLOSEOUT_20261105.md) and
+[results](03_research/GOAL4_RESULTS_V1.md). Complete task/environment bytes are
+retained locally; verified remote task/export deletion is complete. Stop for
+joint owner review before Goal5 or a new direction. Older states below are history.
 
 ## Active Plan A checkpoint, 5 November
 

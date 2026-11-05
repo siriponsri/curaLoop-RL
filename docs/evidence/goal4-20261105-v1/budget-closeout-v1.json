@@ -1,0 +1,223 @@
+{
+  "status": "PASS_CONSERVATIVE_ACCOUNTING",
+  "created_utc": "2026-11-05T13:29:22.963475+00:00",
+  "deadline_utc": "2026-11-05T22:37:04+00:00",
+  "goal3_charged_cpu_seconds": 7694.03125,
+  "goal4_recorded_cpu_seconds": 1968.03261012,
+  "goal4_unmetered_utility_overhead_charge_seconds": 1800,
+  "goal4_charged_cpu_seconds": 3768.03261012,
+  "global_charged_cpu_seconds": 11462.06386012,
+  "goal4_cpu_ceiling_seconds": 144000,
+  "global_cpu_ceiling_seconds": 172800,
+  "new_metadata_primary_code_bytes": 6815,
+  "goal3_metadata_charge_bytes": 123663827,
+  "unique_guarded_processes": [
+    {
+      "path": "docs/evidence/goal4-20261105-v1/actual-log-readback-resources-v1.json",
+      "pid": 16084,
+      "start_utc": "2026-11-05T13:24:37.450377+00:00",
+      "status": "PASS",
+      "cpu_seconds": 76.625,
+      "wall_seconds": 130.21799999999348
+    },
+    {
+      "path": "docs/evidence/goal4-20261105-v1/analysis-checks-resources-v1.json",
+      "pid": 22484,
+      "start_utc": "2026-11-05T12:51:20.807879+00:00",
+      "status": "PASS",
+      "cpu_seconds": 1.90625,
+      "wall_seconds": 12.766000000061467
+    },
+    {
+      "path": "docs/evidence/goal4-20261105-v1/analysis-checks-resources-v2.json",
+      "pid": 88500,
+      "start_utc": "2026-11-05T12:57:31.045712+00:00",
+      "status": "PASS",
+      "cpu_seconds": 1.21875,
+      "wall_seconds": 3.23499999998603
+    },
+    {
+      "path": "docs/evidence/goal4-20261105-v1/analysis-resources-v1.json",
+      "pid": 54952,
+      "start_utc": "2026-11-05T13:00:51.872078+00:00",
+      "status": "PASS",
+      "cpu_seconds": 6.517130332000001,
+      "wall_seconds": 6.554503271821886
+    },
+    {
+      "path": "docs/evidence/goal4-20261105-v1/evaluator-checks-v1.resources.json",
+      "pid": 45340,
+      "start_utc": "2026-11-05T12:13:26.262915+00:00",
+      "status": "PASS",
+      "cpu_seconds": 12.421875,
+      "wall_seconds": 70.71900000004098
+    },
+    {
+      "path": "docs/evidence/goal4-20261105-v1/evaluator-checks-v2.resources.json",
+      "pid": 17548,
+      "start_utc": "2026-11-05T12:16:30.351776+00:00",
+      "status": "PASS",
+      "cpu_seconds": 13.265625,
+      "wall_seconds": 29.56200000003446
+    },
+    {
+      "path": "docs/evidence/goal4-20261105-v1/evaluator-checks-v3.resources.json",
+      "pid": 6700,
+      "start_utc": "2026-11-05T12:20:10.350684+00:00",
+      "status": "PASS",
+      "cpu_seconds": 15.328125,
+      "wall_seconds": 37.09299999999348
+    },
+    {
+      "path": "docs/evidence/goal4-20261105-v1/label-access-development-resources-v1.json",
+      "pid": 87184,
+      "start_utc": "2026-11-05T12:22:46.587470+00:00",
+      "status": "PASS",
+      "cpu_seconds": 10.453125,
+      "wall_seconds": 20.375
+    },
+    {
+      "path": "docs/evidence/goal4-20261105-v1/label-access-validation-resources-v1.json",
+      "pid": 32992,
+      "start_utc": "2026-11-05T12:52:31.299054+00:00",
+      "status": "PASS",
+      "cpu_seconds": 39.484375,
+      "wall_seconds": 97.81299999996554
+    },
+    {
+      "path": "docs/evidence/goal4-20261105-v1/remote-constructed-resources-v1.json",
+      "pid": 4093987,
+      "start_utc": "2026-11-05T12:36:16.184578+00:00",
+      "status": "PASS",
+      "cpu_seconds": 5.629978099000001,
+      "wall_seconds": 5.690463789040223
+    },
+    {
+      "path": "docs/evidence/goal4-20261105-v1/return-checks-resources-v1.json",
+      "pid": 30732,
+      "start_utc": "2026-11-05T12:43:58.718070+00:00",
+      "status": "PASS",
+      "cpu_seconds": 1.46875,
+      "wall_seconds": 5.547000000020489
+    },
+    {
+      "path": ".local/plan-a-20261105-v1/remote-return/goal4-full-v1/files/.local/plan-a-20261105-v2/selection-admin-resources-v1.json",
+      "pid": 4147405,
+      "start_utc": "2026-11-05T12:44:43.565042+00:00",
+      "status": "PASS",
+      "cpu_seconds": 3.476756589,
+      "wall_seconds": 3.4775679209269583
+    },
+    {
+      "path": ".local/plan-a-20261105-v1/remote-return/goal4-full-v1/files/.local/plan-a-20261105-v2/runs/benchmark/shard-0/resources.json",
+      "pid": 40251,
+      "start_utc": "2026-11-05T12:58:33.309532+00:00",
+      "status": "PASS",
+      "cpu_seconds": 5.329131576,
+      "wall_seconds": 5.336074671940878
+    },
+    {
+      "path": ".local/plan-a-20261105-v1/remote-return/goal4-full-v1/files/.local/plan-a-20261105-v2/runs/calibration/shard-0/resources.json",
+      "pid": 45853,
+      "start_utc": "2026-11-05T12:59:24.471593+00:00",
+      "status": "PASS",
+      "cpu_seconds": 2.349858981,
+      "wall_seconds": 2.3505631191655993
+    },
+    {
+      "path": ".local/plan-a-20261105-v1/remote-return/goal4-full-v1/files/.local/plan-a-20261105-v2/runs/crossed/shard-0/resources.json",
+      "pid": 17969,
+      "start_utc": "2026-11-05T12:54:57.761666+00:00",
+      "status": "PASS",
+      "cpu_seconds": 78.894841656,
+      "wall_seconds": 78.92102024704218
+    },
+    {
+      "path": ".local/plan-a-20261105-v1/remote-return/goal4-full-v1/files/.local/plan-a-20261105-v2/runs/crossed/shard-1/resources.json",
+      "pid": 17983,
+      "start_utc": "2026-11-05T12:54:57.874470+00:00",
+      "status": "PASS",
+      "cpu_seconds": 145.03544608099998,
+      "wall_seconds": 145.07377481204458
+    },
+    {
+      "path": ".local/plan-a-20261105-v1/remote-return/goal4-full-v1/files/.local/plan-a-20261105-v2/runs/crossed/shard-2/resources.json",
+      "pid": 17980,
+      "start_utc": "2026-11-05T12:54:57.846383+00:00",
+      "status": "PASS",
+      "cpu_seconds": 75.43013099199999,
+      "wall_seconds": 75.46116645284928
+    },
+    {
+      "path": ".local/plan-a-20261105-v1/remote-return/goal4-full-v1/files/.local/plan-a-20261105-v2/runs/crossed/shard-3/resources.json",
+      "pid": 17968,
+      "start_utc": "2026-11-05T12:54:57.759987+00:00",
+      "status": "PASS",
+      "cpu_seconds": 112.90946715300001,
+      "wall_seconds": 112.9409343788866
+    },
+    {
+      "path": ".local/plan-a-20261105-v1/remote-return/goal4-full-v1/files/.local/plan-a-20261105-v2/runs/development/shard-0/resources.json",
+      "pid": 4101990,
+      "start_utc": "2026-11-05T12:37:31.454784+00:00",
+      "status": "PASS",
+      "cpu_seconds": 192.898229393,
+      "wall_seconds": 192.97335278708488
+    },
+    {
+      "path": ".local/plan-a-20261105-v1/remote-return/goal4-full-v1/files/.local/plan-a-20261105-v2/runs/development/shard-1/resources.json",
+      "pid": 4102026,
+      "start_utc": "2026-11-05T12:37:31.481254+00:00",
+      "status": "PASS",
+      "cpu_seconds": 398.582319066,
+      "wall_seconds": 398.8066804148257
+    },
+    {
+      "path": ".local/plan-a-20261105-v1/remote-return/goal4-full-v1/files/.local/plan-a-20261105-v2/runs/development/shard-2/resources.json",
+      "pid": 4102051,
+      "start_utc": "2026-11-05T12:37:31.575082+00:00",
+      "status": "PASS",
+      "cpu_seconds": 181.385313026,
+      "wall_seconds": 181.42454754305072
+    },
+    {
+      "path": ".local/plan-a-20261105-v1/remote-return/goal4-full-v1/files/.local/plan-a-20261105-v2/runs/development/shard-3/resources.json",
+      "pid": 4102049,
+      "start_utc": "2026-11-05T12:37:31.547024+00:00",
+      "status": "PASS",
+      "cpu_seconds": 345.880601316,
+      "wall_seconds": 345.9528600699268
+    },
+    {
+      "path": ".local/plan-a-20261105-v1/remote-return/goal4-full-v1/files/.local/plan-a-20261105-v2/runs/reexecution/shard-0/resources.json",
+      "pid": 45852,
+      "start_utc": "2026-11-05T12:59:24.470681+00:00",
+      "status": "PASS",
+      "cpu_seconds": 21.671171534,
+      "wall_seconds": 21.696176416939124
+    }
+  ],
+  "duplicate_receipts_not_double_counted": [
+    ".local/plan-a-20261105-v1/remote-return/goal4-full-v1/files/docs/evidence/goal4-20261105-v1/analysis-resources-v1.json",
+    ".local/plan-a-20261105-v1/remote-return/goal4-full-v1/files/remote-constructed-resources-v1.json"
+  ],
+  "remote_environment_cpu_including_children_seconds": 17.878046386,
+  "remote_full_snapshot_cpu_seconds": 30.55481294,
+  "local_verification_cpu_receipts": [
+    {
+      "path": ".local/plan-a-20261105-v1/remote-return/goal4-development-v1/local-verification-with-manifest.json",
+      "cpu_seconds": 29.515625
+    },
+    {
+      "path": ".local/plan-a-20261105-v1/remote-return/goal4-full-v1/local-verification-with-manifest.json",
+      "cpu_seconds": 141.921875
+    }
+  ],
+  "full_return_regular_files": 15614,
+  "full_return_bytes": 753915234,
+  "maximum_scientific_workers": 4,
+  "GPU_or_paid_compute": false,
+  "exhaustive_historical_process_accounting_certified": false,
+  "reserves_are_not_measured_usage": true,
+  "accounting_scope": "Available unique process/setup/verification/snapshot receipts plus explicit conservative reserves. Unmetered utility, transfer, mirroring, cleanup and final package operations charged to reserve; early historical metadata limitations remain disclosed."
+}

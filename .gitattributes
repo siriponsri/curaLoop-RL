@@ -68,3 +68,17 @@ docs/evidence/plan-a-20261105-v1/plan-a-return-tests-v1.xml whitespace=-blank-at
 tools/*goal3*_v2.py -text whitespace=cr-at-eol
 tools/run_goal3_revision_a_checks_v2.py -text whitespace=cr-at-eol
 docs/evidence/plan-a-20261105-v1/revision-a-checks-v2.* whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+research/study_v1/*.py -text whitespace=cr-at-eol
+research/configs/goal4_*.json -text whitespace=cr-at-eol
+docs/03_research/GOAL4_PROTOCOL_V1.md -text whitespace=cr-at-eol
+tools/*goal4*_v1.py -text whitespace=cr-at-eol
+tests/research/test_goal4_boundary_v1.py -text whitespace=cr-at-eol
+tests/research/test_goal4_*_v1.py -text whitespace=cr-at-eol
+docs/evidence/goal4-20261105-v1/** whitespace=cr-at-eol
+# The frozen privacy proof pins the original Windows worktree bytes too.
+.gitignore -text whitespace=cr-at-eol
+research/event_time.py -text whitespace=cr-at-eol
+docs/03_research/GOAL4_RESULTS_V1.md -text whitespace=cr-at-eol
+docs/06_execution/PLAN_A_CLOSEOUT_20261105.md -text whitespace=cr-at-eol
+docs/03_research/FSMOL_DATASET_CARD_V2.md -text whitespace=cr-at-eol
+docs/06_execution/GOAL3_READINESS_REVISION_A_20261105.md -text whitespace=cr-at-eol

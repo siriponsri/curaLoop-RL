@@ -1,0 +1,110 @@
+{
+  "schema_version": "curaloop.goal4.protocol.v1",
+  "status": "FROZEN_BEFORE_GOAL4_OUTCOMES",
+  "cohort_manifest": "research/raw_data/external-benchmarks/fs-mol-0.1/feature-cohort-v2/manifest.json",
+  "cohort_manifest_sha256": "66ddda3ae98fe317f8c26e0fe6443ac40f0522a84b7e8d683eeec9012a726006",
+  "cohort_config_sha256": "e07917dd3af9e76ca9f4f8d2b784deaf2af61f4eabfc9156deff7d8f42446fe4",
+  "permitted_outcome_roles": [
+    "development",
+    "validation"
+  ],
+  "initial_labels": 16,
+  "initialization": "Uniform deterministic hash rank independent of labels; same task/seed across arms/M/operations",
+  "budget": 12,
+  "hypotheses": [
+    32,
+    64,
+    128
+  ],
+  "seeds": [
+    101,
+    211,
+    307,
+    401,
+    503,
+    601,
+    701,
+    809
+  ],
+  "minimum_seed_count": 4,
+  "operations": [
+    {
+      "id": "sequential",
+      "role": "familiar",
+      "capacity": 1,
+      "law": {
+        "1": 1.0
+      },
+      "deadline": 12
+    },
+    {
+      "id": "async_mixed",
+      "role": "familiar",
+      "capacity": 2,
+      "law": {
+        "1": 0.5,
+        "4": 0.5
+      },
+      "deadline": 8
+    },
+    {
+      "id": "async_longtail",
+      "role": "held_out",
+      "capacity": 2,
+      "law": {
+        "1": 0.5,
+        "3": 0.25,
+        "9": 0.25
+      },
+      "deadline": 7
+    },
+    {
+      "id": "single_shift",
+      "role": "held_out",
+      "capacity": 1,
+      "law": {
+        "2": 0.5,
+        "5": 0.5
+      },
+      "deadline": 9
+    }
+  ],
+  "methods": [
+    "random",
+    "nearest_hit",
+    "frozen_greedy",
+    "greedy",
+    "parameter_ts",
+    "fingerprint_rf",
+    "count_ens",
+    "cpe_scheduler",
+    "greedy_rollout",
+    "event_dense",
+    "event_screened",
+    "no_wait",
+    "no_pending_information",
+    "timing_blind_tail"
+  ],
+  "selection": "Maximum development/familiar family-macro mean H(T) for event_screened; exact ties smaller M",
+  "canary": "Largest development pool then task-ID, seed101, all3M/all14methods/both familiar operations",
+  "allocation": "Choose largest feasible 8-or-4 seed prefix by timing only with factor3 forecasting, then freeze",
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 20261105,
+  "goal4_cpu_limit_seconds": 144000,
+  "global_cpu_limit_seconds": 172800,
+  "deadline_utc": "2026-11-05T22:37:04+00:00",
+  "max_host_workers": 4,
+  "worker_ram_bytes": 1073741824,
+  "final_outcome_use": false,
+  "learned_rl_controller": false,
+  "frozen_utc": "2026-11-05T12:22:44.749707+00:00",
+  "parent_commit": "27aa3593d69d17122a40304ac82698ad6a7e6b95",
+  "tested_runtime_packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "rdkit": "2026.9.1",
+    "pytest": "9.2.0",
+    "threadpoolctl": "3.6.0"
+  }
+}

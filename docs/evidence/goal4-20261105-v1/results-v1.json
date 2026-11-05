@@ -1,0 +1,6075 @@
+{
+  "status": "PASS_COMPLETE_GOAL4_ANALYSIS",
+  "scientific_integrity_gate": "PASS",
+  "selected_hypotheses": 128,
+  "seeds": [
+    101,
+    211,
+    307,
+    401,
+    503,
+    601,
+    701,
+    809
+  ],
+  "campaign_counts": {
+    "development_selection": 4032,
+    "crossed_additional": 2240,
+    "selected_M_crossed_unique": 3584,
+    "benchmark": 20,
+    "reexecution": 112,
+    "calibration": 64
+  },
+  "cells": [
+    {
+      "role": "development",
+      "operations": "familiar",
+      "method": "random",
+      "H_macro": 4.2734375,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 3.9375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 4.5,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.25,
+        "typed-ancestry-52211aa39e1b3526ca3b": 4.40625
+      },
+      "policy_wall_seconds_macro": 0.001841229350247886,
+      "policy_cpu_seconds_macro": 0.002247797257813062,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "method": "nearest_hit",
+      "H_macro": 6.671875,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 7.09375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 6,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 8.125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 5.46875
+      },
+      "policy_wall_seconds_macro": 0.03192688381386688,
+      "policy_cpu_seconds_macro": 0.032118154906250085,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "method": "frozen_greedy",
+      "H_macro": 5.8046875,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 6.09375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.8125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 6.4375
+      },
+      "policy_wall_seconds_macro": 0.033970900145504856,
+      "policy_cpu_seconds_macro": 0.03461062677343754,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "method": "greedy",
+      "H_macro": 6.0078125,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 6.84375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.0625,
+        "typed-ancestry-52211aa39e1b3526ca3b": 7.25
+      },
+      "policy_wall_seconds_macro": 0.05370009118632879,
+      "policy_cpu_seconds_macro": 0.053818822648439416,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "method": "parameter_ts",
+      "H_macro": 4.90625,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 4.25,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.8125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.75,
+        "typed-ancestry-52211aa39e1b3526ca3b": 4.8125
+      },
+      "policy_wall_seconds_macro": 0.05499253379457514,
+      "policy_cpu_seconds_macro": 0.05533450300000124,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "method": "fingerprint_rf",
+      "H_macro": 6.703125,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 6.9375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.6875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 6.9375,
+        "typed-ancestry-52211aa39e1b3526ca3b": 7.25
+      },
+      "policy_wall_seconds_macro": 1.6909438385901012,
+      "policy_cpu_seconds_macro": 1.6913634722421853,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "method": "count_ens",
+      "H_macro": 5.765625,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 6.6875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.5625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.25,
+        "typed-ancestry-52211aa39e1b3526ca3b": 6.5625
+      },
+      "policy_wall_seconds_macro": 0.08835252792050596,
+      "policy_cpu_seconds_macro": 0.08853297846093557,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "method": "cpe_scheduler",
+      "H_macro": 6.0078125,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 6.84375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.0625,
+        "typed-ancestry-52211aa39e1b3526ca3b": 7.25
+      },
+      "policy_wall_seconds_macro": 0.056559600541731925,
+      "policy_cpu_seconds_macro": 0.056974153773436315,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "method": "greedy_rollout",
+      "H_macro": 5.4375,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 5.09375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.75,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 5,
+        "typed-ancestry-52211aa39e1b3526ca3b": 5.90625
+      },
+      "policy_wall_seconds_macro": 0.4040445481914503,
+      "policy_cpu_seconds_macro": 0.40424401887499894,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "method": "event_dense",
+      "H_macro": 6.15625,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 7.1875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.8125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.5,
+        "typed-ancestry-52211aa39e1b3526ca3b": 7.125
+      },
+      "policy_wall_seconds_macro": 0.08058823292776651,
+      "policy_cpu_seconds_macro": 0.08108570828125136,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "method": "event_screened",
+      "H_macro": 6.15625,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 7.1875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.8125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.5,
+        "typed-ancestry-52211aa39e1b3526ca3b": 7.125
+      },
+      "policy_wall_seconds_macro": 0.10504044588742545,
+      "policy_cpu_seconds_macro": 0.10527848848437561,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "method": "no_wait",
+      "H_macro": 6.15625,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 7.1875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.8125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.5,
+        "typed-ancestry-52211aa39e1b3526ca3b": 7.125
+      },
+      "policy_wall_seconds_macro": 0.07974517388538516,
+      "policy_cpu_seconds_macro": 0.08006644967968755,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "method": "no_pending_information",
+      "H_macro": 6.125,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 7.1875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.75,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.5,
+        "typed-ancestry-52211aa39e1b3526ca3b": 7.0625
+      },
+      "policy_wall_seconds_macro": 0.08187427274606307,
+      "policy_cpu_seconds_macro": 0.08216075176562354,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "method": "timing_blind_tail",
+      "H_macro": 5.9453125,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 6.875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.4375,
+        "typed-ancestry-52211aa39e1b3526ca3b": 6.84375
+      },
+      "policy_wall_seconds_macro": 0.08164103237504605,
+      "policy_cpu_seconds_macro": 0.08212982807030836,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "method": "random",
+      "H_macro": 1.640625,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 1.46875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 1.75,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.8125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 1.53125
+      },
+      "policy_wall_seconds_macro": 0.001045144072122639,
+      "policy_cpu_seconds_macro": 0.001195660273437333,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "method": "nearest_hit",
+      "H_macro": 2.3828125,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.59375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.5,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 2.3125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.125
+      },
+      "policy_wall_seconds_macro": 0.024038007504714187,
+      "policy_cpu_seconds_macro": 0.024405205265624726,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "method": "frozen_greedy",
+      "H_macro": 2.125,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.4375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.375,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.3125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.375
+      },
+      "policy_wall_seconds_macro": 0.0328354210651014,
+      "policy_cpu_seconds_macro": 0.033275575296874735,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "method": "greedy",
+      "H_macro": 2.2109375,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.6875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.5625,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.46875
+      },
+      "policy_wall_seconds_macro": 0.039314976798777934,
+      "policy_cpu_seconds_macro": 0.03947849021874949,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "method": "parameter_ts",
+      "H_macro": 1.734375,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 1.34375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.3125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.5625,
+        "typed-ancestry-52211aa39e1b3526ca3b": 1.71875
+      },
+      "policy_wall_seconds_macro": 0.039603993187483866,
+      "policy_cpu_seconds_macro": 0.03979642290625076,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "method": "fingerprint_rf",
+      "H_macro": 2.1875,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.40625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 1.9375,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.875,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.53125
+      },
+      "policy_wall_seconds_macro": 0.6901013350452558,
+      "policy_cpu_seconds_macro": 0.6904857538984379,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "method": "count_ens",
+      "H_macro": 1.671875,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 1.75,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 1.875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.6875,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.375
+      },
+      "policy_wall_seconds_macro": 0.07547286167027778,
+      "policy_cpu_seconds_macro": 0.07546041724999981,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "method": "cpe_scheduler",
+      "H_macro": 2.2109375,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.6875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.5625,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.46875
+      },
+      "policy_wall_seconds_macro": 0.043402386028901674,
+      "policy_cpu_seconds_macro": 0.04377674075781227,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "method": "greedy_rollout",
+      "H_macro": 2.046875,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 1.9375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.375,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.5625,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.3125
+      },
+      "policy_wall_seconds_macro": 0.12351516531452944,
+      "policy_cpu_seconds_macro": 0.1238641875078121,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "method": "event_dense",
+      "H_macro": 2.15625,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.5625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.375,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.5625
+      },
+      "policy_wall_seconds_macro": 0.05854988447390497,
+      "policy_cpu_seconds_macro": 0.05867453766406147,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "method": "event_screened",
+      "H_macro": 2.15625,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.5625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.375,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.5625
+      },
+      "policy_wall_seconds_macro": 0.08319698479317594,
+      "policy_cpu_seconds_macro": 0.0836626892109376,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "method": "no_wait",
+      "H_macro": 2.15625,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.5625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.375,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.5625
+      },
+      "policy_wall_seconds_macro": 0.05898628394243133,
+      "policy_cpu_seconds_macro": 0.05918995209375002,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "method": "no_pending_information",
+      "H_macro": 2.1640625,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.59375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.375,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.5625
+      },
+      "policy_wall_seconds_macro": 0.05928362111808383,
+      "policy_cpu_seconds_macro": 0.05944026327343734,
+      "campaigns": 96
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "method": "timing_blind_tail",
+      "H_macro": 2.0234375,
+      "H_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.4375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.65625
+      },
+      "policy_wall_seconds_macro": 0.05758400363265537,
+      "policy_cpu_seconds_macro": 0.05809080738281316,
+      "campaigns": 96
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "method": "random",
+      "H_macro": 4.75,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 4.875,
+        "typed-ancestry-e95346fc689f9e34aeec": 4.625
+      },
+      "policy_wall_seconds_macro": 0.001290302854613401,
+      "policy_cpu_seconds_macro": 0.0013130003125005896,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "method": "nearest_hit",
+      "H_macro": 7.09375,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 6.625,
+        "typed-ancestry-e95346fc689f9e34aeec": 7.5625
+      },
+      "policy_wall_seconds_macro": 0.021586347298580222,
+      "policy_cpu_seconds_macro": 0.0216212110937537,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "method": "frozen_greedy",
+      "H_macro": 6.84375,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 5.9375,
+        "typed-ancestry-e95346fc689f9e34aeec": 7.75
+      },
+      "policy_wall_seconds_macro": 0.026969177946739364,
+      "policy_cpu_seconds_macro": 0.027108248437501148,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "method": "greedy",
+      "H_macro": 7.03125,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 6.6875,
+        "typed-ancestry-e95346fc689f9e34aeec": 7.375
+      },
+      "policy_wall_seconds_macro": 0.04583769929740811,
+      "policy_cpu_seconds_macro": 0.04602881550000104,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "method": "parameter_ts",
+      "H_macro": 5.1875,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 5.875,
+        "typed-ancestry-e95346fc689f9e34aeec": 4.5
+      },
+      "policy_wall_seconds_macro": 0.051242701745650265,
+      "policy_cpu_seconds_macro": 0.05134473459374922,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "method": "fingerprint_rf",
+      "H_macro": 7.15625,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 6.8125,
+        "typed-ancestry-e95346fc689f9e34aeec": 7.5
+      },
+      "policy_wall_seconds_macro": 1.5527671753952745,
+      "policy_cpu_seconds_macro": 1.5536434298437483,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "method": "count_ens",
+      "H_macro": 7.25,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 7.1875,
+        "typed-ancestry-e95346fc689f9e34aeec": 7.3125
+      },
+      "policy_wall_seconds_macro": 0.08327859065320808,
+      "policy_cpu_seconds_macro": 0.08371700999999643,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "method": "cpe_scheduler",
+      "H_macro": 7.03125,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 6.6875,
+        "typed-ancestry-e95346fc689f9e34aeec": 7.375
+      },
+      "policy_wall_seconds_macro": 0.04848355426656781,
+      "policy_cpu_seconds_macro": 0.049003032531252266,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "method": "greedy_rollout",
+      "H_macro": 6.8125,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 7.1875,
+        "typed-ancestry-e95346fc689f9e34aeec": 6.4375
+      },
+      "policy_wall_seconds_macro": 0.3904579283989733,
+      "policy_cpu_seconds_macro": 0.3910218573437505,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "method": "event_dense",
+      "H_macro": 7.3125,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 6.9375,
+        "typed-ancestry-e95346fc689f9e34aeec": 7.6875
+      },
+      "policy_wall_seconds_macro": 0.06921756956580793,
+      "policy_cpu_seconds_macro": 0.06914132309375232,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "method": "event_screened",
+      "H_macro": 7.3125,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 6.9375,
+        "typed-ancestry-e95346fc689f9e34aeec": 7.6875
+      },
+      "policy_wall_seconds_macro": 0.10200931658619083,
+      "policy_cpu_seconds_macro": 0.10215054990624872,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "method": "no_wait",
+      "H_macro": 7.3125,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 6.9375,
+        "typed-ancestry-e95346fc689f9e34aeec": 7.6875
+      },
+      "policy_wall_seconds_macro": 0.06897925257362658,
+      "policy_cpu_seconds_macro": 0.06921158753125223,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "method": "no_pending_information",
+      "H_macro": 7.3125,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 6.875,
+        "typed-ancestry-e95346fc689f9e34aeec": 7.75
+      },
+      "policy_wall_seconds_macro": 0.07599044201197103,
+      "policy_cpu_seconds_macro": 0.0763266159374969,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "method": "timing_blind_tail",
+      "H_macro": 7.1875,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 7.0625,
+        "typed-ancestry-e95346fc689f9e34aeec": 7.3125
+      },
+      "policy_wall_seconds_macro": 0.07155244730529375,
+      "policy_cpu_seconds_macro": 0.07201099484375151,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "method": "random",
+      "H_macro": 1.5625,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 1.5625,
+        "typed-ancestry-e95346fc689f9e34aeec": 1.5625
+      },
+      "policy_wall_seconds_macro": 0.0007915983223938383,
+      "policy_cpu_seconds_macro": 0.0010315399062510444,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "method": "nearest_hit",
+      "H_macro": 2.46875,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 2.5625,
+        "typed-ancestry-e95346fc689f9e34aeec": 2.375
+      },
+      "policy_wall_seconds_macro": 0.01573474399629049,
+      "policy_cpu_seconds_macro": 0.01605799759374804,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "method": "frozen_greedy",
+      "H_macro": 2.71875,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 2.5625,
+        "typed-ancestry-e95346fc689f9e34aeec": 2.875
+      },
+      "policy_wall_seconds_macro": 0.026186828297795728,
+      "policy_cpu_seconds_macro": 0.02656351062499973,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "method": "greedy",
+      "H_macro": 2.65625,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 2.625,
+        "typed-ancestry-e95346fc689f9e34aeec": 2.6875
+      },
+      "policy_wall_seconds_macro": 0.031056026302394457,
+      "policy_cpu_seconds_macro": 0.03126888765624658,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "method": "parameter_ts",
+      "H_macro": 1.625,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 1.8125,
+        "typed-ancestry-e95346fc689f9e34aeec": 1.4375
+      },
+      "policy_wall_seconds_macro": 0.03255328804516466,
+      "policy_cpu_seconds_macro": 0.03297779659375233,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "method": "fingerprint_rf",
+      "H_macro": 2.46875,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 2.75,
+        "typed-ancestry-e95346fc689f9e34aeec": 2.1875
+      },
+      "policy_wall_seconds_macro": 0.6309722133082687,
+      "policy_cpu_seconds_macro": 0.6316621521875039,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "method": "count_ens",
+      "H_macro": 2.46875,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 2.5,
+        "typed-ancestry-e95346fc689f9e34aeec": 2.4375
+      },
+      "policy_wall_seconds_macro": 0.06637183982820716,
+      "policy_cpu_seconds_macro": 0.06643637606249886,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "method": "cpe_scheduler",
+      "H_macro": 2.65625,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 2.625,
+        "typed-ancestry-e95346fc689f9e34aeec": 2.6875
+      },
+      "policy_wall_seconds_macro": 0.03517692762397928,
+      "policy_cpu_seconds_macro": 0.03524790484374618,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "method": "greedy_rollout",
+      "H_macro": 2.375,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 2.9375,
+        "typed-ancestry-e95346fc689f9e34aeec": 1.8125
+      },
+      "policy_wall_seconds_macro": 0.11076739208510844,
+      "policy_cpu_seconds_macro": 0.11121078162500009,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "method": "event_dense",
+      "H_macro": 2.71875,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 2.625,
+        "typed-ancestry-e95346fc689f9e34aeec": 2.8125
+      },
+      "policy_wall_seconds_macro": 0.04813738459779415,
+      "policy_cpu_seconds_macro": 0.048306423531249365,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "method": "event_screened",
+      "H_macro": 2.71875,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 2.625,
+        "typed-ancestry-e95346fc689f9e34aeec": 2.8125
+      },
+      "policy_wall_seconds_macro": 0.07811625320755411,
+      "policy_cpu_seconds_macro": 0.07837214128125058,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "method": "no_wait",
+      "H_macro": 2.71875,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 2.625,
+        "typed-ancestry-e95346fc689f9e34aeec": 2.8125
+      },
+      "policy_wall_seconds_macro": 0.04833440535730915,
+      "policy_cpu_seconds_macro": 0.04864926881250087,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "method": "no_pending_information",
+      "H_macro": 2.65625,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 2.625,
+        "typed-ancestry-e95346fc689f9e34aeec": 2.6875
+      },
+      "policy_wall_seconds_macro": 0.05059473973233253,
+      "policy_cpu_seconds_macro": 0.05090617690624755,
+      "campaigns": 32
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "method": "timing_blind_tail",
+      "H_macro": 2.90625,
+      "H_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 2.9375,
+        "typed-ancestry-e95346fc689f9e34aeec": 2.875
+      },
+      "policy_wall_seconds_macro": 0.04783659233362414,
+      "policy_cpu_seconds_macro": 0.04827249390625177,
+      "campaigns": 32
+    }
+  ],
+  "paired_effects": [
+    {
+      "role": "development",
+      "operations": "familiar",
+      "contrast": "event_screened minus random",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 3.25,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 1.3125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.25,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.71875
+      },
+      "mean": 1.8828125,
+      "group_range": [
+        0.25,
+        3.25
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.78125,
+        2.984375
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "contrast": "event_screened minus nearest_hit",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.09375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.1875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -3.625,
+        "typed-ancestry-52211aa39e1b3526ca3b": 1.65625
+      },
+      "mean": -0.515625,
+      "group_range": [
+        -3.625,
+        1.65625
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -2.6953125,
+        1.1953125
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "contrast": "event_screened minus frozen_greedy",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 1.09375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.0625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.3125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.6875
+      },
+      "mean": 0.3515625,
+      "group_range": [
+        -0.3125,
+        1.09375
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.1875,
+        0.890625
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "contrast": "event_screened minus greedy",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.34375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.0625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.4375,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.125
+      },
+      "mean": 0.1484375,
+      "group_range": [
+        -0.125,
+        0.4375
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.09375,
+        0.390625
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "contrast": "event_screened minus parameter_ts",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.9375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.25,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.3125
+      },
+      "mean": 1.25,
+      "group_range": [
+        -0.25,
+        2.9375
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.125,
+        2.625
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "contrast": "event_screened minus fingerprint_rf",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.25,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -2.4375,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.125
+      },
+      "mean": -0.546875,
+      "group_range": [
+        -2.4375,
+        0.25
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -1.796875,
+        0.1875
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "contrast": "event_screened minus count_ens",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.5,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.25,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.25,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.5625
+      },
+      "mean": 0.390625,
+      "group_range": [
+        0.25,
+        0.5625
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.25,
+        0.53125
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "contrast": "event_screened minus cpe_scheduler",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.34375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.0625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.4375,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.125
+      },
+      "mean": 0.1484375,
+      "group_range": [
+        -0.125,
+        0.4375
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.09375,
+        0.390625
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "contrast": "event_screened minus greedy_rollout",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.09375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.0625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.5,
+        "typed-ancestry-52211aa39e1b3526ca3b": 1.21875
+      },
+      "mean": 0.71875,
+      "group_range": [
+        -0.5,
+        2.09375
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.21875,
+        1.65625
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "contrast": "event_screened minus event_dense",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0
+      },
+      "mean": 0.0,
+      "group_range": [
+        0.0,
+        0.0
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "contrast": "event_screened minus no_wait",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0
+      },
+      "mean": 0.0,
+      "group_range": [
+        0.0,
+        0.0
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "contrast": "event_screened minus no_pending_information",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.0625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.0625
+      },
+      "mean": 0.03125,
+      "group_range": [
+        0.0,
+        0.0625
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.0,
+        0.0625
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "familiar",
+      "contrast": "event_screened minus timing_blind_tail",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.3125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.1875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.0625,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.28125
+      },
+      "mean": 0.2109375,
+      "group_range": [
+        0.0625,
+        0.3125
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.1171875,
+        0.296875
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "contrast": "event_screened minus random",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 1.09375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.375,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.4375,
+        "typed-ancestry-52211aa39e1b3526ca3b": 1.03125
+      },
+      "mean": 0.515625,
+      "group_range": [
+        -0.4375,
+        1.09375
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.0703125,
+        1.0625
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "contrast": "event_screened minus nearest_hit",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.03125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.375,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.9375,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.4375
+      },
+      "mean": -0.2265625,
+      "group_range": [
+        -0.9375,
+        0.4375
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.7109375,
+        0.234375
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "contrast": "event_screened minus frozen_greedy",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.25,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.0625,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.1875
+      },
+      "mean": 0.03125,
+      "group_range": [
+        -0.25,
+        0.1875
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.15625,
+        0.15625
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "contrast": "event_screened minus greedy",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.1875,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.09375
+      },
+      "mean": -0.0546875,
+      "group_range": [
+        -0.1875,
+        0.09375
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.15625,
+        0.046875
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "contrast": "event_screened minus parameter_ts",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 1.21875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.1875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.1875,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.84375
+      },
+      "mean": 0.421875,
+      "group_range": [
+        -0.1875,
+        1.21875
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.1875,
+        1.03125
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "contrast": "event_screened minus fingerprint_rf",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.15625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.1875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.5,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.03125
+      },
+      "mean": -0.03125,
+      "group_range": [
+        -0.5,
+        0.1875
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.3359375,
+        0.171875
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "contrast": "event_screened minus count_ens",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.8125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.25,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.6875,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.1875
+      },
+      "mean": 0.484375,
+      "group_range": [
+        0.1875,
+        0.8125
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.21875,
+        0.75
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "contrast": "event_screened minus cpe_scheduler",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.1875,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.09375
+      },
+      "mean": -0.0546875,
+      "group_range": [
+        -0.1875,
+        0.09375
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.15625,
+        0.046875
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "contrast": "event_screened minus greedy_rollout",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.25,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.1875,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+      },
+      "mean": 0.109375,
+      "group_range": [
+        -0.25,
+        0.625
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.21875,
+        0.4375
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "contrast": "event_screened minus event_dense",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0
+      },
+      "mean": 0.0,
+      "group_range": [
+        0.0,
+        0.0
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "contrast": "event_screened minus no_wait",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0
+      },
+      "mean": 0.0,
+      "group_range": [
+        0.0,
+        0.0
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "contrast": "event_screened minus no_pending_information",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.03125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0
+      },
+      "mean": -0.0078125,
+      "group_range": [
+        -0.03125,
+        0.0
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.0234375,
+        0.0
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "development",
+      "operations": "held_out",
+      "contrast": "event_screened minus timing_blind_tail",
+      "group_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.375,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.09375
+      },
+      "mean": 0.1328125,
+      "group_range": [
+        -0.09375,
+        0.375
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.0390625,
+        0.3125
+      ],
+      "groups": 4,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "contrast": "event_screened minus random",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 2.0625,
+        "typed-ancestry-e95346fc689f9e34aeec": 3.0625
+      },
+      "mean": 2.5625,
+      "group_range": [
+        2.0625,
+        3.0625
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        2.0625,
+        3.0625
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "contrast": "event_screened minus nearest_hit",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 0.3125,
+        "typed-ancestry-e95346fc689f9e34aeec": 0.125
+      },
+      "mean": 0.21875,
+      "group_range": [
+        0.125,
+        0.3125
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.125,
+        0.3125
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "contrast": "event_screened minus frozen_greedy",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 1,
+        "typed-ancestry-e95346fc689f9e34aeec": -0.0625
+      },
+      "mean": 0.46875,
+      "group_range": [
+        -0.0625,
+        1.0
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.0625,
+        1.0
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "contrast": "event_screened minus greedy",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 0.25,
+        "typed-ancestry-e95346fc689f9e34aeec": 0.3125
+      },
+      "mean": 0.28125,
+      "group_range": [
+        0.25,
+        0.3125
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.25,
+        0.3125
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "contrast": "event_screened minus parameter_ts",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 1.0625,
+        "typed-ancestry-e95346fc689f9e34aeec": 3.1875
+      },
+      "mean": 2.125,
+      "group_range": [
+        1.0625,
+        3.1875
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        1.0625,
+        3.1875
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "contrast": "event_screened minus fingerprint_rf",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 0.125,
+        "typed-ancestry-e95346fc689f9e34aeec": 0.1875
+      },
+      "mean": 0.15625,
+      "group_range": [
+        0.125,
+        0.1875
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.125,
+        0.1875
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "contrast": "event_screened minus count_ens",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": -0.25,
+        "typed-ancestry-e95346fc689f9e34aeec": 0.375
+      },
+      "mean": 0.0625,
+      "group_range": [
+        -0.25,
+        0.375
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.25,
+        0.375
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "contrast": "event_screened minus cpe_scheduler",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 0.25,
+        "typed-ancestry-e95346fc689f9e34aeec": 0.3125
+      },
+      "mean": 0.28125,
+      "group_range": [
+        0.25,
+        0.3125
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.25,
+        0.3125
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "contrast": "event_screened minus greedy_rollout",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": -0.25,
+        "typed-ancestry-e95346fc689f9e34aeec": 1.25
+      },
+      "mean": 0.5,
+      "group_range": [
+        -0.25,
+        1.25
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.25,
+        1.25
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "contrast": "event_screened minus event_dense",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 0,
+        "typed-ancestry-e95346fc689f9e34aeec": 0
+      },
+      "mean": 0.0,
+      "group_range": [
+        0.0,
+        0.0
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "contrast": "event_screened minus no_wait",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 0,
+        "typed-ancestry-e95346fc689f9e34aeec": 0
+      },
+      "mean": 0.0,
+      "group_range": [
+        0.0,
+        0.0
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "contrast": "event_screened minus no_pending_information",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 0.0625,
+        "typed-ancestry-e95346fc689f9e34aeec": -0.0625
+      },
+      "mean": 0.0,
+      "group_range": [
+        -0.0625,
+        0.0625
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.0625,
+        0.0625
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "familiar",
+      "contrast": "event_screened minus timing_blind_tail",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": -0.125,
+        "typed-ancestry-e95346fc689f9e34aeec": 0.375
+      },
+      "mean": 0.125,
+      "group_range": [
+        -0.125,
+        0.375
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.125,
+        0.375
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "contrast": "event_screened minus random",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 1.0625,
+        "typed-ancestry-e95346fc689f9e34aeec": 1.25
+      },
+      "mean": 1.15625,
+      "group_range": [
+        1.0625,
+        1.25
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        1.0625,
+        1.25
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "contrast": "event_screened minus nearest_hit",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 0.0625,
+        "typed-ancestry-e95346fc689f9e34aeec": 0.4375
+      },
+      "mean": 0.25,
+      "group_range": [
+        0.0625,
+        0.4375
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.0625,
+        0.4375
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "contrast": "event_screened minus frozen_greedy",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 0.0625,
+        "typed-ancestry-e95346fc689f9e34aeec": -0.0625
+      },
+      "mean": 0.0,
+      "group_range": [
+        -0.0625,
+        0.0625
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.0625,
+        0.0625
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "contrast": "event_screened minus greedy",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 0,
+        "typed-ancestry-e95346fc689f9e34aeec": 0.125
+      },
+      "mean": 0.0625,
+      "group_range": [
+        0.0,
+        0.125
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.0,
+        0.125
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "contrast": "event_screened minus parameter_ts",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 0.8125,
+        "typed-ancestry-e95346fc689f9e34aeec": 1.375
+      },
+      "mean": 1.09375,
+      "group_range": [
+        0.8125,
+        1.375
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.8125,
+        1.375
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "contrast": "event_screened minus fingerprint_rf",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": -0.125,
+        "typed-ancestry-e95346fc689f9e34aeec": 0.625
+      },
+      "mean": 0.25,
+      "group_range": [
+        -0.125,
+        0.625
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.125,
+        0.625
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "contrast": "event_screened minus count_ens",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 0.125,
+        "typed-ancestry-e95346fc689f9e34aeec": 0.375
+      },
+      "mean": 0.25,
+      "group_range": [
+        0.125,
+        0.375
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.125,
+        0.375
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "contrast": "event_screened minus cpe_scheduler",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 0,
+        "typed-ancestry-e95346fc689f9e34aeec": 0.125
+      },
+      "mean": 0.0625,
+      "group_range": [
+        0.0,
+        0.125
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.0,
+        0.125
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "contrast": "event_screened minus greedy_rollout",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": -0.3125,
+        "typed-ancestry-e95346fc689f9e34aeec": 1
+      },
+      "mean": 0.34375,
+      "group_range": [
+        -0.3125,
+        1.0
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.3125,
+        1.0
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "contrast": "event_screened minus event_dense",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 0,
+        "typed-ancestry-e95346fc689f9e34aeec": 0
+      },
+      "mean": 0.0,
+      "group_range": [
+        0.0,
+        0.0
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "contrast": "event_screened minus no_wait",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 0,
+        "typed-ancestry-e95346fc689f9e34aeec": 0
+      },
+      "mean": 0.0,
+      "group_range": [
+        0.0,
+        0.0
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "contrast": "event_screened minus no_pending_information",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": 0,
+        "typed-ancestry-e95346fc689f9e34aeec": 0.125
+      },
+      "mean": 0.0625,
+      "group_range": [
+        0.0,
+        0.125
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        0.0,
+        0.125
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    },
+    {
+      "role": "validation",
+      "operations": "held_out",
+      "contrast": "event_screened minus timing_blind_tail",
+      "group_effects": {
+        "typed-ancestry-94155e8b526e07fc302e": -0.3125,
+        "typed-ancestry-e95346fc689f9e34aeec": -0.0625
+      },
+      "mean": -0.1875,
+      "group_range": [
+        -0.3125,
+        -0.0625
+      ],
+      "descriptive_group_bootstrap_95_interval": [
+        -0.3125,
+        -0.0625
+      ],
+      "groups": 2,
+      "draws": 10000,
+      "seed": 20261105,
+      "independent_population_coverage_certified": false
+    }
+  ],
+  "diagnostics": [
+    {
+      "method": "random",
+      "campaigns": 256,
+      "decisions": 1531,
+      "optional_waits": 0,
+      "forced_waits": 1532,
+      "fallback_reasons": {},
+      "fallback_decision_share": 0.0,
+      "branches": 0,
+      "dense_fallback_branches": 0,
+      "exact_refined_candidates": 0,
+      "eligible_branch_candidates": 0,
+      "zero_tail_skipped_branches": null,
+      "zero_tail_skipped_candidates": null,
+      "positive_tail_branches": null,
+      "nontrivial_bound_refinements_saved": null,
+      "maximum_reported_root_gap": 0,
+      "learned_action_share": 0
+    },
+    {
+      "method": "nearest_hit",
+      "campaigns": 256,
+      "decisions": 1549,
+      "optional_waits": 0,
+      "forced_waits": 1549,
+      "fallback_reasons": {},
+      "fallback_decision_share": 0.0,
+      "branches": 0,
+      "dense_fallback_branches": 0,
+      "exact_refined_candidates": 0,
+      "eligible_branch_candidates": 0,
+      "zero_tail_skipped_branches": null,
+      "zero_tail_skipped_candidates": null,
+      "positive_tail_branches": null,
+      "nontrivial_bound_refinements_saved": null,
+      "maximum_reported_root_gap": 0,
+      "learned_action_share": 0
+    },
+    {
+      "method": "frozen_greedy",
+      "campaigns": 256,
+      "decisions": 1556,
+      "optional_waits": 0,
+      "forced_waits": 1556,
+      "fallback_reasons": {},
+      "fallback_decision_share": 0.0,
+      "branches": 0,
+      "dense_fallback_branches": 0,
+      "exact_refined_candidates": 0,
+      "eligible_branch_candidates": 0,
+      "zero_tail_skipped_branches": null,
+      "zero_tail_skipped_candidates": null,
+      "positive_tail_branches": null,
+      "nontrivial_bound_refinements_saved": null,
+      "maximum_reported_root_gap": 0,
+      "learned_action_share": 0
+    },
+    {
+      "method": "greedy",
+      "campaigns": 256,
+      "decisions": 1539,
+      "optional_waits": 0,
+      "forced_waits": 1539,
+      "fallback_reasons": {},
+      "fallback_decision_share": 0.0,
+      "branches": 0,
+      "dense_fallback_branches": 0,
+      "exact_refined_candidates": 0,
+      "eligible_branch_candidates": 0,
+      "zero_tail_skipped_branches": null,
+      "zero_tail_skipped_candidates": null,
+      "positive_tail_branches": null,
+      "nontrivial_bound_refinements_saved": null,
+      "maximum_reported_root_gap": 0,
+      "learned_action_share": 0
+    },
+    {
+      "method": "parameter_ts",
+      "campaigns": 256,
+      "decisions": 1536,
+      "optional_waits": 0,
+      "forced_waits": 1536,
+      "fallback_reasons": {},
+      "fallback_decision_share": 0.0,
+      "branches": 0,
+      "dense_fallback_branches": 0,
+      "exact_refined_candidates": 0,
+      "eligible_branch_candidates": 0,
+      "zero_tail_skipped_branches": null,
+      "zero_tail_skipped_candidates": null,
+      "positive_tail_branches": null,
+      "nontrivial_bound_refinements_saved": null,
+      "maximum_reported_root_gap": 0,
+      "learned_action_share": 0
+    },
+    {
+      "method": "fingerprint_rf",
+      "campaigns": 256,
+      "decisions": 1547,
+      "optional_waits": 0,
+      "forced_waits": 1547,
+      "fallback_reasons": {},
+      "fallback_decision_share": 0.0,
+      "branches": 0,
+      "dense_fallback_branches": 0,
+      "exact_refined_candidates": 0,
+      "eligible_branch_candidates": 0,
+      "zero_tail_skipped_branches": null,
+      "zero_tail_skipped_candidates": null,
+      "positive_tail_branches": null,
+      "nontrivial_bound_refinements_saved": null,
+      "maximum_reported_root_gap": 0,
+      "learned_action_share": 0
+    },
+    {
+      "method": "count_ens",
+      "campaigns": 256,
+      "decisions": 1566,
+      "optional_waits": 135,
+      "forced_waits": 1322,
+      "fallback_reasons": {},
+      "fallback_decision_share": 0.0,
+      "branches": 55910,
+      "dense_fallback_branches": 0,
+      "exact_refined_candidates": 9846792,
+      "eligible_branch_candidates": 9846792,
+      "zero_tail_skipped_branches": null,
+      "zero_tail_skipped_candidates": null,
+      "positive_tail_branches": null,
+      "nontrivial_bound_refinements_saved": null,
+      "maximum_reported_root_gap": 1.7763568394002505e-15,
+      "learned_action_share": 0
+    },
+    {
+      "method": "cpe_scheduler",
+      "campaigns": 256,
+      "decisions": 1539,
+      "optional_waits": 0,
+      "forced_waits": 1539,
+      "fallback_reasons": {},
+      "fallback_decision_share": 0.0,
+      "branches": 0,
+      "dense_fallback_branches": 0,
+      "exact_refined_candidates": 0,
+      "eligible_branch_candidates": 0,
+      "zero_tail_skipped_branches": null,
+      "zero_tail_skipped_candidates": null,
+      "positive_tail_branches": null,
+      "nontrivial_bound_refinements_saved": null,
+      "maximum_reported_root_gap": 0,
+      "learned_action_share": 0
+    },
+    {
+      "method": "greedy_rollout",
+      "campaigns": 256,
+      "decisions": 1544,
+      "optional_waits": 2,
+      "forced_waits": 1539,
+      "fallback_reasons": {},
+      "fallback_decision_share": 0.0,
+      "branches": 0,
+      "dense_fallback_branches": 0,
+      "exact_refined_candidates": 0,
+      "eligible_branch_candidates": 0,
+      "zero_tail_skipped_branches": null,
+      "zero_tail_skipped_candidates": null,
+      "positive_tail_branches": null,
+      "nontrivial_bound_refinements_saved": null,
+      "maximum_reported_root_gap": 0,
+      "learned_action_share": 0
+    },
+    {
+      "method": "event_dense",
+      "campaigns": 256,
+      "decisions": 1538,
+      "optional_waits": 0,
+      "forced_waits": 1538,
+      "fallback_reasons": {},
+      "fallback_decision_share": 0.0,
+      "branches": 34004,
+      "dense_fallback_branches": 0,
+      "exact_refined_candidates": 6170698,
+      "eligible_branch_candidates": 6170698,
+      "zero_tail_skipped_branches": null,
+      "zero_tail_skipped_candidates": null,
+      "positive_tail_branches": null,
+      "nontrivial_bound_refinements_saved": null,
+      "maximum_reported_root_gap": 8.881784197001252e-16,
+      "learned_action_share": 0
+    },
+    {
+      "method": "event_screened",
+      "campaigns": 256,
+      "decisions": 1538,
+      "optional_waits": 0,
+      "forced_waits": 1538,
+      "fallback_reasons": {},
+      "fallback_decision_share": 0.0,
+      "branches": 34004,
+      "dense_fallback_branches": 26236,
+      "exact_refined_candidates": 5429516,
+      "eligible_branch_candidates": 6170698,
+      "zero_tail_skipped_branches": 0,
+      "zero_tail_skipped_candidates": 0,
+      "positive_tail_branches": 34004,
+      "nontrivial_bound_refinements_saved": 741182,
+      "maximum_reported_root_gap": 4.440892098500626e-16,
+      "learned_action_share": 0
+    },
+    {
+      "method": "no_wait",
+      "campaigns": 256,
+      "decisions": 1538,
+      "optional_waits": 0,
+      "forced_waits": 1538,
+      "fallback_reasons": {},
+      "fallback_decision_share": 0.0,
+      "branches": 33584,
+      "dense_fallback_branches": 0,
+      "exact_refined_candidates": 6096224,
+      "eligible_branch_candidates": 6096224,
+      "zero_tail_skipped_branches": null,
+      "zero_tail_skipped_candidates": null,
+      "positive_tail_branches": null,
+      "nontrivial_bound_refinements_saved": null,
+      "maximum_reported_root_gap": 8.881784197001252e-16,
+      "learned_action_share": 0
+    },
+    {
+      "method": "no_pending_information",
+      "campaigns": 256,
+      "decisions": 1531,
+      "optional_waits": 0,
+      "forced_waits": 1531,
+      "fallback_reasons": {},
+      "fallback_decision_share": 0.0,
+      "branches": 32217,
+      "dense_fallback_branches": 0,
+      "exact_refined_candidates": 5864368,
+      "eligible_branch_candidates": 5864368,
+      "zero_tail_skipped_branches": null,
+      "zero_tail_skipped_candidates": null,
+      "positive_tail_branches": null,
+      "nontrivial_bound_refinements_saved": null,
+      "maximum_reported_root_gap": 0.0,
+      "learned_action_share": 0
+    },
+    {
+      "method": "timing_blind_tail",
+      "campaigns": 256,
+      "decisions": 1541,
+      "optional_waits": 41,
+      "forced_waits": 1475,
+      "fallback_reasons": {},
+      "fallback_decision_share": 0.0,
+      "branches": 36838,
+      "dense_fallback_branches": 0,
+      "exact_refined_candidates": 6604694,
+      "eligible_branch_candidates": 6604694,
+      "zero_tail_skipped_branches": null,
+      "zero_tail_skipped_candidates": null,
+      "positive_tail_branches": null,
+      "nontrivial_bound_refinements_saved": null,
+      "maximum_reported_root_gap": 8.881784197001252e-16,
+      "learned_action_share": 0
+    }
+  ],
+  "matched_compute_pairs": [
+    {
+      "operation": "async_mixed",
+      "repetition": 0,
+      "pairing_status": "PASS",
+      "public_states_equal": true,
+      "scientific_signature_equal": true,
+      "screened_policy_wall_seconds": 0.11061285086907446,
+      "dense_policy_wall_seconds": 0.07771185296587646,
+      "raw_unqualified_wall_ratio": 1.4233716820218525,
+      "raw_unqualified_cpu_ratio": 1.3823273736836779,
+      "screened_over_dense_wall_ratio": 1.4233716820218525,
+      "screened_over_dense_cpu_ratio": 1.3823273736836779
+    },
+    {
+      "operation": "async_mixed",
+      "repetition": 1,
+      "pairing_status": "PASS",
+      "public_states_equal": true,
+      "scientific_signature_equal": true,
+      "screened_policy_wall_seconds": 0.11586208315566182,
+      "dense_policy_wall_seconds": 0.07896718941628933,
+      "raw_unqualified_wall_ratio": 1.4672180181679586,
+      "raw_unqualified_cpu_ratio": 1.480758756119507,
+      "screened_over_dense_wall_ratio": 1.4672180181679586,
+      "screened_over_dense_cpu_ratio": 1.480758756119507
+    },
+    {
+      "operation": "async_mixed",
+      "repetition": 2,
+      "pairing_status": "PASS",
+      "public_states_equal": true,
+      "scientific_signature_equal": true,
+      "screened_policy_wall_seconds": 0.10528224729932845,
+      "dense_policy_wall_seconds": 0.07548893499188125,
+      "raw_unqualified_wall_ratio": 1.3946712496427647,
+      "raw_unqualified_cpu_ratio": 1.3945626091660903,
+      "screened_over_dense_wall_ratio": 1.3946712496427647,
+      "screened_over_dense_cpu_ratio": 1.3945626091660903
+    },
+    {
+      "operation": "async_mixed",
+      "repetition": 3,
+      "pairing_status": "PASS",
+      "public_states_equal": true,
+      "scientific_signature_equal": true,
+      "screened_policy_wall_seconds": 0.11787860584445298,
+      "dense_policy_wall_seconds": 0.07581245480105281,
+      "raw_unqualified_wall_ratio": 1.5548712431722498,
+      "raw_unqualified_cpu_ratio": 1.5664389645025676,
+      "screened_over_dense_wall_ratio": 1.5548712431722498,
+      "screened_over_dense_cpu_ratio": 1.5664389645025676
+    },
+    {
+      "operation": "async_mixed",
+      "repetition": 4,
+      "pairing_status": "PASS",
+      "public_states_equal": true,
+      "scientific_signature_equal": true,
+      "screened_policy_wall_seconds": 0.10453390097245574,
+      "dense_policy_wall_seconds": 0.07648071786388755,
+      "raw_unqualified_wall_ratio": 1.3668007295445936,
+      "raw_unqualified_cpu_ratio": 1.3695994777939686,
+      "screened_over_dense_wall_ratio": 1.3668007295445936,
+      "screened_over_dense_cpu_ratio": 1.3695994777939686
+    },
+    {
+      "operation": "sequential",
+      "repetition": 0,
+      "pairing_status": "PASS",
+      "public_states_equal": true,
+      "scientific_signature_equal": true,
+      "screened_policy_wall_seconds": 0.11236940487287939,
+      "dense_policy_wall_seconds": 0.10308649064972997,
+      "raw_unqualified_wall_ratio": 1.090049764665005,
+      "raw_unqualified_cpu_ratio": 1.1062731216660706,
+      "screened_over_dense_wall_ratio": 1.090049764665005,
+      "screened_over_dense_cpu_ratio": 1.1062731216660706
+    },
+    {
+      "operation": "sequential",
+      "repetition": 1,
+      "pairing_status": "PASS",
+      "public_states_equal": true,
+      "scientific_signature_equal": true,
+      "screened_policy_wall_seconds": 0.11380046000704169,
+      "dense_policy_wall_seconds": 0.09659742470830679,
+      "raw_unqualified_wall_ratio": 1.1780899993005254,
+      "raw_unqualified_cpu_ratio": 1.1632716626048634,
+      "screened_over_dense_wall_ratio": 1.1780899993005254,
+      "screened_over_dense_cpu_ratio": 1.1632716626048634
+    },
+    {
+      "operation": "sequential",
+      "repetition": 2,
+      "pairing_status": "PASS",
+      "public_states_equal": true,
+      "scientific_signature_equal": true,
+      "screened_policy_wall_seconds": 0.12848976580426097,
+      "dense_policy_wall_seconds": 0.10062297992408276,
+      "raw_unqualified_wall_ratio": 1.2769425622378003,
+      "raw_unqualified_cpu_ratio": 1.2805461207413635,
+      "screened_over_dense_wall_ratio": 1.2769425622378003,
+      "screened_over_dense_cpu_ratio": 1.2805461207413635
+    },
+    {
+      "operation": "sequential",
+      "repetition": 3,
+      "pairing_status": "PASS",
+      "public_states_equal": true,
+      "scientific_signature_equal": true,
+      "screened_policy_wall_seconds": 0.11104480619542301,
+      "dense_policy_wall_seconds": 0.09453275171108544,
+      "raw_unqualified_wall_ratio": 1.1746701982695091,
+      "raw_unqualified_cpu_ratio": 1.190845606186425,
+      "screened_over_dense_wall_ratio": 1.1746701982695091,
+      "screened_over_dense_cpu_ratio": 1.190845606186425
+    },
+    {
+      "operation": "sequential",
+      "repetition": 4,
+      "pairing_status": "PASS",
+      "public_states_equal": true,
+      "scientific_signature_equal": true,
+      "screened_policy_wall_seconds": 0.11191550339572132,
+      "dense_policy_wall_seconds": 0.09544345620088279,
+      "raw_unqualified_wall_ratio": 1.1725843536110983,
+      "raw_unqualified_cpu_ratio": 1.18879219652226,
+      "screened_over_dense_wall_ratio": 1.1725843536110983,
+      "screened_over_dense_cpu_ratio": 1.18879219652226
+    }
+  ],
+  "matched_compute_all_states_and_signatures_equal": true,
+  "median_screened_over_dense_wall_ratio": 1.321871645891197,
+  "reexecution_matches": 112,
+  "reexecution_cases": [
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "sequential",
+      "method": "random",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "sequential",
+      "method": "nearest_hit",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "sequential",
+      "method": "frozen_greedy",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "sequential",
+      "method": "greedy",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "sequential",
+      "method": "parameter_ts",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "sequential",
+      "method": "fingerprint_rf",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "sequential",
+      "method": "count_ens",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "sequential",
+      "method": "cpe_scheduler",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "sequential",
+      "method": "greedy_rollout",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "sequential",
+      "method": "event_dense",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "sequential",
+      "method": "event_screened",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "sequential",
+      "method": "no_wait",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "sequential",
+      "method": "no_pending_information",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "sequential",
+      "method": "timing_blind_tail",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_mixed",
+      "method": "random",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_mixed",
+      "method": "nearest_hit",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_mixed",
+      "method": "frozen_greedy",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_mixed",
+      "method": "greedy",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_mixed",
+      "method": "parameter_ts",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_mixed",
+      "method": "fingerprint_rf",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_mixed",
+      "method": "count_ens",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_mixed",
+      "method": "cpe_scheduler",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_mixed",
+      "method": "greedy_rollout",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_mixed",
+      "method": "event_dense",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_mixed",
+      "method": "event_screened",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_mixed",
+      "method": "no_wait",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_mixed",
+      "method": "no_pending_information",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_mixed",
+      "method": "timing_blind_tail",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_longtail",
+      "method": "random",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_longtail",
+      "method": "nearest_hit",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_longtail",
+      "method": "frozen_greedy",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_longtail",
+      "method": "greedy",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_longtail",
+      "method": "parameter_ts",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_longtail",
+      "method": "fingerprint_rf",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_longtail",
+      "method": "count_ens",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_longtail",
+      "method": "cpe_scheduler",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_longtail",
+      "method": "greedy_rollout",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_longtail",
+      "method": "event_dense",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_longtail",
+      "method": "event_screened",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_longtail",
+      "method": "no_wait",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_longtail",
+      "method": "no_pending_information",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "async_longtail",
+      "method": "timing_blind_tail",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "single_shift",
+      "method": "random",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "single_shift",
+      "method": "nearest_hit",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "single_shift",
+      "method": "frozen_greedy",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "single_shift",
+      "method": "greedy",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "single_shift",
+      "method": "parameter_ts",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "single_shift",
+      "method": "fingerprint_rf",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "single_shift",
+      "method": "count_ens",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "single_shift",
+      "method": "cpe_scheduler",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "single_shift",
+      "method": "greedy_rollout",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "single_shift",
+      "method": "event_dense",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "single_shift",
+      "method": "event_screened",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "single_shift",
+      "method": "no_wait",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "single_shift",
+      "method": "no_pending_information",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "operation": "single_shift",
+      "method": "timing_blind_tail",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "sequential",
+      "method": "random",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "sequential",
+      "method": "nearest_hit",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "sequential",
+      "method": "frozen_greedy",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "sequential",
+      "method": "greedy",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "sequential",
+      "method": "parameter_ts",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "sequential",
+      "method": "fingerprint_rf",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "sequential",
+      "method": "count_ens",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "sequential",
+      "method": "cpe_scheduler",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "sequential",
+      "method": "greedy_rollout",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "sequential",
+      "method": "event_dense",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "sequential",
+      "method": "event_screened",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "sequential",
+      "method": "no_wait",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "sequential",
+      "method": "no_pending_information",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "sequential",
+      "method": "timing_blind_tail",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_mixed",
+      "method": "random",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_mixed",
+      "method": "nearest_hit",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_mixed",
+      "method": "frozen_greedy",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_mixed",
+      "method": "greedy",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_mixed",
+      "method": "parameter_ts",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_mixed",
+      "method": "fingerprint_rf",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_mixed",
+      "method": "count_ens",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_mixed",
+      "method": "cpe_scheduler",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_mixed",
+      "method": "greedy_rollout",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_mixed",
+      "method": "event_dense",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_mixed",
+      "method": "event_screened",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_mixed",
+      "method": "no_wait",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_mixed",
+      "method": "no_pending_information",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_mixed",
+      "method": "timing_blind_tail",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_longtail",
+      "method": "random",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_longtail",
+      "method": "nearest_hit",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_longtail",
+      "method": "frozen_greedy",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_longtail",
+      "method": "greedy",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_longtail",
+      "method": "parameter_ts",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_longtail",
+      "method": "fingerprint_rf",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_longtail",
+      "method": "count_ens",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_longtail",
+      "method": "cpe_scheduler",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_longtail",
+      "method": "greedy_rollout",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_longtail",
+      "method": "event_dense",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_longtail",
+      "method": "event_screened",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_longtail",
+      "method": "no_wait",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_longtail",
+      "method": "no_pending_information",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "async_longtail",
+      "method": "timing_blind_tail",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "single_shift",
+      "method": "random",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "single_shift",
+      "method": "nearest_hit",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "single_shift",
+      "method": "frozen_greedy",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "single_shift",
+      "method": "greedy",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "single_shift",
+      "method": "parameter_ts",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "single_shift",
+      "method": "fingerprint_rf",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "single_shift",
+      "method": "count_ens",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "single_shift",
+      "method": "cpe_scheduler",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "single_shift",
+      "method": "greedy_rollout",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "single_shift",
+      "method": "event_dense",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "single_shift",
+      "method": "event_screened",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "single_shift",
+      "method": "no_wait",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "single_shift",
+      "method": "no_pending_information",
+      "equal": true
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "operation": "single_shift",
+      "method": "timing_blind_tail",
+      "equal": true
+    }
+  ],
+  "calibration": [
+    {
+      "role": "development",
+      "campaigns": 48,
+      "initial_only_diagnostic": true,
+      "brier_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.2547140724640108,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.24640802087383512,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.2522092454358902,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.26216522360415123
+      },
+      "log_loss_by_group": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.7026983233964743,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.6857679742243985,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.6976424309624998,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.7193958582097053
+      },
+      "not_calibration_proof_for_adaptive_histories": true
+    },
+    {
+      "role": "validation",
+      "campaigns": 16,
+      "initial_only_diagnostic": true,
+      "brier_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 0.2472936103151868,
+        "typed-ancestry-e95346fc689f9e34aeec": 0.24584023799521507
+      },
+      "log_loss_by_group": {
+        "typed-ancestry-94155e8b526e07fc302e": 0.6905379007686996,
+        "typed-ancestry-e95346fc689f9e34aeec": 0.6849151307846307
+      },
+      "not_calibration_proof_for_adaptive_histories": true
+    }
+  ],
+  "final_outcome_use": false,
+  "calibration_per_task_seed": [
+    {
+      "task_id": "CHEMBL1614225",
+      "role": "development",
+      "family_id": "typed-ancestry-3d78be158d61c2c9cfd8",
+      "seed": 101,
+      "audit_n": 152,
+      "brier": 0.2498318438601741,
+      "log_loss": 0.6928145874013376,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 152,
+          "mean_probability": 0.5066945018958025,
+          "active_fraction": 0.4868421052631579
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "role": "development",
+      "family_id": "typed-ancestry-3d78be158d61c2c9cfd8",
+      "seed": 211,
+      "audit_n": 152,
+      "brier": 0.252835545714871,
+      "log_loss": 0.6989373491529998,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 2,
+          "mean_probability": 0.38782776095414456,
+          "active_fraction": 0.5
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 150,
+          "mean_probability": 0.4371193989176151,
+          "active_fraction": 0.49333333333333335
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "role": "development",
+      "family_id": "typed-ancestry-3d78be158d61c2c9cfd8",
+      "seed": 307,
+      "audit_n": 152,
+      "brier": 0.2578701663705298,
+      "log_loss": 0.7091002437301424,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 134,
+          "mean_probability": 0.5581855302981747,
+          "active_fraction": 0.4552238805970149
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 18,
+          "mean_probability": 0.6185188265001317,
+          "active_fraction": 0.6666666666666666
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "role": "development",
+      "family_id": "typed-ancestry-3d78be158d61c2c9cfd8",
+      "seed": 401,
+      "audit_n": 152,
+      "brier": 0.2539986998671939,
+      "log_loss": 0.7012365177331938,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 150,
+          "mean_probability": 0.5185404127869488,
+          "active_fraction": 0.49333333333333335
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 2,
+          "mean_probability": 0.6138097814855101,
+          "active_fraction": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "role": "development",
+      "family_id": "typed-ancestry-3d78be158d61c2c9cfd8",
+      "seed": 503,
+      "audit_n": 152,
+      "brier": 0.24702198264466474,
+      "log_loss": 0.6871842970594946,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 152,
+          "mean_probability": 0.5019250822683115,
+          "active_fraction": 0.4868421052631579
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "role": "development",
+      "family_id": "typed-ancestry-3d78be158d61c2c9cfd8",
+      "seed": 601,
+      "audit_n": 152,
+      "brier": 0.24945510047063502,
+      "log_loss": 0.6920634695455943,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 152,
+          "mean_probability": 0.5058486053919019,
+          "active_fraction": 0.4868421052631579
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "role": "development",
+      "family_id": "typed-ancestry-3d78be158d61c2c9cfd8",
+      "seed": 701,
+      "audit_n": 152,
+      "brier": 0.24955120565925357,
+      "log_loss": 0.6922554800959814,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 152,
+          "mean_probability": 0.4987538495625569,
+          "active_fraction": 0.4868421052631579
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1614225",
+      "role": "development",
+      "family_id": "typed-ancestry-3d78be158d61c2c9cfd8",
+      "seed": 809,
+      "audit_n": 152,
+      "brier": 0.25710941889979927,
+      "log_loss": 0.7075475029812549,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 150,
+          "mean_probability": 0.5577087697240639,
+          "active_fraction": 0.4866666666666667
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 2,
+          "mean_probability": 0.6196082730964833,
+          "active_fraction": 0.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1737942",
+      "role": "development",
+      "family_id": "typed-ancestry-3bdd4e9dd09027c116b1",
+      "seed": 101,
+      "audit_n": 254,
+      "brier": 0.23978507214423259,
+      "log_loss": 0.6722283587671894,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 35,
+          "mean_probability": 0.37750758465156775,
+          "active_fraction": 0.11428571428571428
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 219,
+          "mean_probability": 0.4694800674776102,
+          "active_fraction": 0.5388127853881278
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1737942",
+      "role": "development",
+      "family_id": "typed-ancestry-3bdd4e9dd09027c116b1",
+      "seed": 211,
+      "audit_n": 254,
+      "brier": 0.24133231801030194,
+      "log_loss": 0.6754128585302785,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 30,
+          "mean_probability": 0.3829440735575129,
+          "active_fraction": 0.03333333333333333
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 224,
+          "mean_probability": 0.47131293981754085,
+          "active_fraction": 0.5401785714285714
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1737942",
+      "role": "development",
+      "family_id": "typed-ancestry-3bdd4e9dd09027c116b1",
+      "seed": 307,
+      "audit_n": 254,
+      "brier": 0.24205493940743664,
+      "log_loss": 0.6769826104828147,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 14,
+          "mean_probability": 0.38741999123226867,
+          "active_fraction": 0.0
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 240,
+          "mean_probability": 0.4483706868732587,
+          "active_fraction": 0.5083333333333333
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1737942",
+      "role": "development",
+      "family_id": "typed-ancestry-3bdd4e9dd09027c116b1",
+      "seed": 401,
+      "audit_n": 254,
+      "brier": 0.2525772212124888,
+      "log_loss": 0.6982918729632102,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 193,
+          "mean_probability": 0.3641760878298589,
+          "active_fraction": 0.44559585492227977
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 61,
+          "mean_probability": 0.4281257472914262,
+          "active_fraction": 0.6065573770491803
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1737942",
+      "role": "development",
+      "family_id": "typed-ancestry-3bdd4e9dd09027c116b1",
+      "seed": 503,
+      "audit_n": 254,
+      "brier": 0.25636377052479015,
+      "log_loss": 0.7058442948647305,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 177,
+          "mean_probability": 0.366218197671771,
+          "active_fraction": 0.5084745762711864
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 77,
+          "mean_probability": 0.41930384621642774,
+          "active_fraction": 0.42857142857142855
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1737942",
+      "role": "development",
+      "family_id": "typed-ancestry-3bdd4e9dd09027c116b1",
+      "seed": 601,
+      "audit_n": 254,
+      "brier": 0.24425791514034154,
+      "log_loss": 0.6815522585263007,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 1,
+          "mean_probability": 0.39374004282219954,
+          "active_fraction": 0.0
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 246,
+          "mean_probability": 0.5100038704256848,
+          "active_fraction": 0.4715447154471545
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 7,
+          "mean_probability": 0.6100225500494248,
+          "active_fraction": 0.7142857142857143
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1737942",
+      "role": "development",
+      "family_id": "typed-ancestry-3bdd4e9dd09027c116b1",
+      "seed": 701,
+      "audit_n": 254,
+      "brier": 0.24114907848535008,
+      "log_loss": 0.6752903556626959,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 1,
+          "mean_probability": 0.3988589391292465,
+          "active_fraction": 0.0
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 252,
+          "mean_probability": 0.47835621226990155,
+          "active_fraction": 0.47619047619047616
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 1,
+          "mean_probability": 0.6131444110294044,
+          "active_fraction": 1.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1737942",
+      "role": "development",
+      "family_id": "typed-ancestry-3bdd4e9dd09027c116b1",
+      "seed": 809,
+      "audit_n": 254,
+      "brier": 0.25374385206573924,
+      "log_loss": 0.7005411839979679,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 140,
+          "mean_probability": 0.37542589767190376,
+          "active_fraction": 0.4785714285714286
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 114,
+          "mean_probability": 0.4222957887626904,
+          "active_fraction": 0.49122807017543857
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1738549",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "seed": 101,
+      "audit_n": 287,
+      "brier": 0.2614354907077134,
+      "log_loss": 0.7165307104141155,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 150,
+          "mean_probability": 0.38110614929046166,
+          "active_fraction": 0.49333333333333335
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 137,
+          "mean_probability": 0.4204776371877783,
+          "active_fraction": 0.5401459854014599
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1738549",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "seed": 211,
+      "audit_n": 287,
+      "brier": 0.2528220516198852,
+      "log_loss": 0.6988041815769747,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 1,
+          "mean_probability": 0.3781796681185237,
+          "active_fraction": 0.0
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 286,
+          "mean_probability": 0.4507829891091372,
+          "active_fraction": 0.513986013986014
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1738549",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "seed": 307,
+      "audit_n": 287,
+      "brier": 0.2527664362419232,
+      "log_loss": 0.6986856130265955,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 287,
+          "mean_probability": 0.4527902093251259,
+          "active_fraction": 0.5121951219512195
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1738549",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "seed": 401,
+      "audit_n": 287,
+      "brier": 0.2501107617072503,
+      "log_loss": 0.6933702549640075,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 287,
+          "mean_probability": 0.5012169272130071,
+          "active_fraction": 0.5087108013937283
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1738549",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "seed": 503,
+      "audit_n": 287,
+      "brier": 0.25117156515963857,
+      "log_loss": 0.6955014287025494,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 287,
+          "mean_probability": 0.4595550001758518,
+          "active_fraction": 0.5121951219512195
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1738549",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "seed": 601,
+      "audit_n": 287,
+      "brier": 0.25240968938676484,
+      "log_loss": 0.6979903125160871,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 287,
+          "mean_probability": 0.45914368485630774,
+          "active_fraction": 0.5121951219512195
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1738549",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "seed": 701,
+      "audit_n": 287,
+      "brier": 0.2618236198052234,
+      "log_loss": 0.7172629025704409,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 152,
+          "mean_probability": 0.38297653017704164,
+          "active_fraction": 0.4605263157894737
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 135,
+          "mean_probability": 0.41539739074121235,
+          "active_fraction": 0.5777777777777777
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1738549",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "seed": 809,
+      "audit_n": 287,
+      "brier": 0.25238727319752885,
+      "log_loss": 0.6979517708148513,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 287,
+          "mean_probability": 0.5541631834779972,
+          "active_fraction": 0.5052264808362369
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1738553",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "seed": 101,
+      "audit_n": 232,
+      "brier": 0.2522435402816308,
+      "log_loss": 0.697636498929417,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 232,
+          "mean_probability": 0.438873374958993,
+          "active_fraction": 0.5
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1738553",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "seed": 211,
+      "audit_n": 232,
+      "brier": 0.2597240006881768,
+      "log_loss": 0.7128404393737845,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 94,
+          "mean_probability": 0.5869847107848325,
+          "active_fraction": 0.39361702127659576
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 138,
+          "mean_probability": 0.6115701430244491,
+          "active_fraction": 0.5507246376811594
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1738553",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "seed": 307,
+      "audit_n": 232,
+      "brier": 0.24972439975527924,
+      "log_loss": 0.6925373809255025,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 227,
+          "mean_probability": 0.5463622208632357,
+          "active_fraction": 0.4801762114537445
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 5,
+          "mean_probability": 0.6096877380700921,
+          "active_fraction": 1.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1738553",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "seed": 401,
+      "audit_n": 232,
+      "brier": 0.25116736541397167,
+      "log_loss": 0.6954605632511955,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 2,
+          "mean_probability": 0.3944535774876503,
+          "active_fraction": 0.0
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 230,
+          "mean_probability": 0.433373000988248,
+          "active_fraction": 0.5043478260869565
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1738553",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "seed": 503,
+      "audit_n": 232,
+      "brier": 0.260590239163457,
+      "log_loss": 0.7146833351365803,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 112,
+          "mean_probability": 0.5848856370042306,
+          "active_fraction": 0.4375
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 120,
+          "mean_probability": 0.6175373539845995,
+          "active_fraction": 0.5333333333333333
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1738553",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "seed": 601,
+      "audit_n": 232,
+      "brier": 0.24889658608450946,
+      "log_loss": 0.6908319354544792,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 227,
+          "mean_probability": 0.5511636667789102,
+          "active_fraction": 0.4801762114537445
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 5,
+          "mean_probability": 0.6068085407791678,
+          "active_fraction": 1.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1738553",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "seed": 701,
+      "audit_n": 232,
+      "brier": 0.2550480886931233,
+      "log_loss": 0.7032194019610782,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 174,
+          "mean_probability": 0.5782382396798017,
+          "active_fraction": 0.4425287356321839
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 58,
+          "mean_probability": 0.6143146276213549,
+          "active_fraction": 0.6206896551724138
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL1738553",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "seed": 809,
+      "audit_n": 232,
+      "brier": 0.26310405151809646,
+      "log_loss": 0.7198664447259294,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 38,
+          "mean_probability": 0.5873149473730115,
+          "active_fraction": 0.34210526315789475
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 194,
+          "mean_probability": 0.6213588716416791,
+          "active_fraction": 0.5154639175257731
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL2219098",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "seed": 101,
+      "audit_n": 113,
+      "brier": 0.26425876501927553,
+      "log_loss": 0.7222988419167027,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 58,
+          "mean_probability": 0.5645191724388955,
+          "active_fraction": 0.3793103448275862
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 55,
+          "mean_probability": 0.637079041490141,
+          "active_fraction": 0.5454545454545454
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL2219098",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "seed": 211,
+      "audit_n": 113,
+      "brier": 0.26860288376003666,
+      "log_loss": 0.7311108882915278,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 44,
+          "mean_probability": 0.5856887069719496,
+          "active_fraction": 0.4772727272727273
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 69,
+          "mean_probability": 0.6133860993817432,
+          "active_fraction": 0.4492753623188406
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL2219098",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "seed": 307,
+      "audit_n": 113,
+      "brier": 0.2540598870108651,
+      "log_loss": 0.7013371319121829,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 113,
+          "mean_probability": 0.45592310513771106,
+          "active_fraction": 0.48672566371681414
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL2219098",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "seed": 401,
+      "audit_n": 113,
+      "brier": 0.2670274571697531,
+      "log_loss": 0.7278910093339288,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 36,
+          "mean_probability": 0.578949802941381,
+          "active_fraction": 0.3611111111111111
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 77,
+          "mean_probability": 0.6280475893297904,
+          "active_fraction": 0.5064935064935064
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL2219098",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "seed": 503,
+      "audit_n": 113,
+      "brier": 0.27221987111657875,
+      "log_loss": 0.7396916588722822,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 111,
+          "mean_probability": 0.34323086997890606,
+          "active_fraction": 0.5045045045045045
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 2,
+          "mean_probability": 0.4061229562562163,
+          "active_fraction": 0.5
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL2219098",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "seed": 601,
+      "audit_n": 113,
+      "brier": 0.24706653980454177,
+      "log_loss": 0.6872343116581034,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 2,
+          "mean_probability": 0.3948367243026405,
+          "active_fraction": 0.0
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 111,
+          "mean_probability": 0.4522390625006401,
+          "active_fraction": 0.4954954954954955
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL2219098",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "seed": 701,
+      "audit_n": 113,
+      "brier": 0.24890067672674976,
+      "log_loss": 0.6909678198833928,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 3,
+          "mean_probability": 0.3971799109330334,
+          "active_fraction": 0.6666666666666666
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 110,
+          "mean_probability": 0.4413017204989216,
+          "active_fraction": 0.4818181818181818
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL2219098",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "seed": 809,
+      "audit_n": 113,
+      "brier": 0.26425414886955123,
+      "log_loss": 0.7220347135899294,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 62,
+          "mean_probability": 0.582976236007929,
+          "active_fraction": 0.41935483870967744
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 51,
+          "mean_probability": 0.6153284436624904,
+          "active_fraction": 0.5098039215686274
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL3705420",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "seed": 101,
+      "audit_n": 151,
+      "brier": 0.24895651791599452,
+      "log_loss": 0.6910020938943268,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 151,
+          "mean_probability": 0.5581504211566395,
+          "active_fraction": 0.4966887417218543
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL3705420",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "seed": 211,
+      "audit_n": 151,
+      "brier": 0.26807370504876066,
+      "log_loss": 0.73006837130673,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 30,
+          "mean_probability": 0.5387165615307786,
+          "active_fraction": 0.5666666666666667
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 121,
+          "mean_probability": 0.6380166938829592,
+          "active_fraction": 0.47107438016528924
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL3705420",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "seed": 307,
+      "audit_n": 151,
+      "brier": 0.25796369934144703,
+      "log_loss": 0.7096194178001014,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 79,
+          "mean_probability": 0.5465903245003286,
+          "active_fraction": 0.5316455696202531
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 72,
+          "mean_probability": 0.6228317041006791,
+          "active_fraction": 0.4583333333333333
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL3705420",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "seed": 401,
+      "audit_n": 151,
+      "brier": 0.25383500053800023,
+      "log_loss": 0.7009498006809776,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 3,
+          "mean_probability": 0.3953801976846651,
+          "active_fraction": 1.0
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 148,
+          "mean_probability": 0.4538294131064577,
+          "active_fraction": 0.49324324324324326
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL3705420",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "seed": 503,
+      "audit_n": 151,
+      "brier": 0.3311003991651703,
+      "log_loss": 0.8798884021170067,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 142,
+          "mean_probability": 0.7609591082617626,
+          "active_fraction": 0.43661971830985913
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 9,
+          "mean_probability": 0.8030237407072037,
+          "active_fraction": 1.0
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL3705420",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "seed": 601,
+      "audit_n": 151,
+      "brier": 0.24936436966437298,
+      "log_loss": 0.6919302513080481,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 151,
+          "mean_probability": 0.4551952629544717,
+          "active_fraction": 0.5099337748344371
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL3705420",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "seed": 701,
+      "audit_n": 151,
+      "brier": 0.25318832148361614,
+      "log_loss": 0.6996239842611193,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 150,
+          "mean_probability": 0.5643219564986313,
+          "active_fraction": 0.49333333333333335
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 1,
+          "mean_probability": 0.6044544725510833,
+          "active_fraction": 1.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL3705420",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "seed": 809,
+      "audit_n": 151,
+      "brier": 0.2457713350317058,
+      "log_loss": 0.6846850345289265,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 151,
+          "mean_probability": 0.5015372002888491,
+          "active_fraction": 0.5033112582781457
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "role": "validation",
+      "family_id": "typed-ancestry-94155e8b526e07fc302e",
+      "seed": 101,
+      "audit_n": 146,
+      "brier": 0.2710568163594298,
+      "log_loss": 0.7454757494025687,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 6,
+          "mean_probability": 0.17690578636881224,
+          "active_fraction": 0.8333333333333334
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 86,
+          "mean_probability": 0.2876486548024254,
+          "active_fraction": 0.4418604651162791
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 45,
+          "mean_probability": 0.4742988912780424,
+          "active_fraction": 0.5333333333333333
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 9,
+          "mean_probability": 0.6522253751091915,
+          "active_fraction": 0.5555555555555556
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "role": "validation",
+      "family_id": "typed-ancestry-94155e8b526e07fc302e",
+      "seed": 211,
+      "audit_n": 146,
+      "brier": 0.23578196343955404,
+      "log_loss": 0.6639075776862031,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 28,
+          "mean_probability": 0.31711586134920544,
+          "active_fraction": 0.4642857142857143
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 87,
+          "mean_probability": 0.5153443746127344,
+          "active_fraction": 0.3448275862068966
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 31,
+          "mean_probability": 0.6375779466815326,
+          "active_fraction": 0.8387096774193549
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "role": "validation",
+      "family_id": "typed-ancestry-94155e8b526e07fc302e",
+      "seed": 307,
+      "audit_n": 146,
+      "brier": 0.23718504836916265,
+      "log_loss": 0.6706370984170462,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 2,
+          "mean_probability": 0.19552088438869547,
+          "active_fraction": 1.0
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 65,
+          "mean_probability": 0.2865297768851373,
+          "active_fraction": 0.3076923076923077
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 74,
+          "mean_probability": 0.4944547619690201,
+          "active_fraction": 0.6216216216216216
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 5,
+          "mean_probability": 0.6125479348519004,
+          "active_fraction": 0.6
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "role": "validation",
+      "family_id": "typed-ancestry-94155e8b526e07fc302e",
+      "seed": 401,
+      "audit_n": 146,
+      "brier": 0.23777489604490787,
+      "log_loss": 0.6683243188752487,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 75,
+          "mean_probability": 0.3407259107722955,
+          "active_fraction": 0.38666666666666666
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 70,
+          "mean_probability": 0.4854127090738117,
+          "active_fraction": 0.5714285714285714
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 1,
+          "mean_probability": 0.6221455239321221,
+          "active_fraction": 1.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "role": "validation",
+      "family_id": "typed-ancestry-94155e8b526e07fc302e",
+      "seed": 503,
+      "audit_n": 146,
+      "brier": 0.23135810323309927,
+      "log_loss": 0.6564198049395121,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 55,
+          "mean_probability": 0.3232646382648517,
+          "active_fraction": 0.3090909090909091
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 40,
+          "mean_probability": 0.5419708315413623,
+          "active_fraction": 0.35
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 51,
+          "mean_probability": 0.6374409831562371,
+          "active_fraction": 0.7450980392156863
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "role": "validation",
+      "family_id": "typed-ancestry-94155e8b526e07fc302e",
+      "seed": 601,
+      "audit_n": 146,
+      "brier": 0.27703117512676817,
+      "log_loss": 0.753966836307736,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 97,
+          "mean_probability": 0.31856749455741096,
+          "active_fraction": 0.4845360824742268
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 49,
+          "mean_probability": 0.4454103751277874,
+          "active_fraction": 0.4897959183673469
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "role": "validation",
+      "family_id": "typed-ancestry-94155e8b526e07fc302e",
+      "seed": 701,
+      "audit_n": 146,
+      "brier": 0.22374474432187652,
+      "log_loss": 0.6421949033811009,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 1,
+          "mean_probability": 0.19214635221905035,
+          "active_fraction": 1.0
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 65,
+          "mean_probability": 0.2954618806900884,
+          "active_fraction": 0.2923076923076923
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 67,
+          "mean_probability": 0.5235062213653595,
+          "active_fraction": 0.5522388059701493
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 13,
+          "mean_probability": 0.6448583234307849,
+          "active_fraction": 1.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL4257016",
+      "role": "validation",
+      "family_id": "typed-ancestry-94155e8b526e07fc302e",
+      "seed": 809,
+      "audit_n": 146,
+      "brier": 0.264416135626696,
+      "log_loss": 0.7233769171401815,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 138,
+          "mean_probability": 0.34825486442865516,
+          "active_fraction": 0.4855072463768116
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 8,
+          "mean_probability": 0.4333866632299337,
+          "active_fraction": 0.625
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL830838",
+      "role": "validation",
+      "family_id": "typed-ancestry-e95346fc689f9e34aeec",
+      "seed": 101,
+      "audit_n": 152,
+      "brier": 0.28393348029230164,
+      "log_loss": 0.765621707581723,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 151,
+          "mean_probability": 0.30260668422644704,
+          "active_fraction": 0.5165562913907285
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 1,
+          "mean_probability": 0.4025511092397526,
+          "active_fraction": 1.0
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL830838",
+      "role": "validation",
+      "family_id": "typed-ancestry-e95346fc689f9e34aeec",
+      "seed": 211,
+      "audit_n": 152,
+      "brier": 0.22503878618837822,
+      "log_loss": 0.6418204539110984,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 60,
+          "mean_probability": 0.3539169579708297,
+          "active_fraction": 0.21666666666666667
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 90,
+          "mean_probability": 0.4907480706264172,
+          "active_fraction": 0.6777777777777778
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 2,
+          "mean_probability": 0.6227532334607346,
+          "active_fraction": 1.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL830838",
+      "role": "validation",
+      "family_id": "typed-ancestry-e95346fc689f9e34aeec",
+      "seed": 307,
+      "audit_n": 152,
+      "brier": 0.25416749039574993,
+      "log_loss": 0.7012620678616813,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 22,
+          "mean_probability": 0.3595107975510372,
+          "active_fraction": 0.45454545454545453
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 93,
+          "mean_probability": 0.5115664316486758,
+          "active_fraction": 0.40860215053763443
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 37,
+          "mean_probability": 0.6401679962903746,
+          "active_fraction": 0.7027027027027027
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL830838",
+      "role": "validation",
+      "family_id": "typed-ancestry-e95346fc689f9e34aeec",
+      "seed": 401,
+      "audit_n": 152,
+      "brier": 0.23207704646719682,
+      "log_loss": 0.6549650777565541,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 61,
+          "mean_probability": 0.5374670860319172,
+          "active_fraction": 0.19672131147540983
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 91,
+          "mean_probability": 0.6701911632363777,
+          "active_fraction": 0.6703296703296703
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL830838",
+      "role": "validation",
+      "family_id": "typed-ancestry-e95346fc689f9e34aeec",
+      "seed": 503,
+      "audit_n": 152,
+      "brier": 0.24610940329275197,
+      "log_loss": 0.685665454662618,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 136,
+          "mean_probability": 0.5221335063567762,
+          "active_fraction": 0.47794117647058826
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 16,
+          "mean_probability": 0.6973864839160168,
+          "active_fraction": 0.5625
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL830838",
+      "role": "validation",
+      "family_id": "typed-ancestry-e95346fc689f9e34aeec",
+      "seed": 601,
+      "audit_n": 152,
+      "brier": 0.23081986611473138,
+      "log_loss": 0.6540425897573643,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 19,
+          "mean_probability": 0.36607708368690905,
+          "active_fraction": 0.10526315789473684
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 123,
+          "mean_probability": 0.5077947797496055,
+          "active_fraction": 0.5284552845528455
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 10,
+          "mean_probability": 0.616184566866077,
+          "active_fraction": 0.8
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL830838",
+      "role": "validation",
+      "family_id": "typed-ancestry-e95346fc689f9e34aeec",
+      "seed": 701,
+      "audit_n": 152,
+      "brier": 0.27508973990249347,
+      "log_loss": 0.7452294346331793,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 146,
+          "mean_probability": 0.30524099550492234,
+          "active_fraction": 0.5
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 6,
+          "mean_probability": 0.4070008278698265,
+          "active_fraction": 1.0
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    },
+    {
+      "task_id": "CHEMBL830838",
+      "role": "validation",
+      "family_id": "typed-ancestry-e95346fc689f9e34aeec",
+      "seed": 809,
+      "audit_n": 152,
+      "brier": 0.21948609130811714,
+      "log_loss": 0.6307142601128275,
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.4,
+          "n": 7,
+          "mean_probability": 0.38467697725494904,
+          "active_fraction": 0.0
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.6,
+          "n": 111,
+          "mean_probability": 0.5133211300762981,
+          "active_fraction": 0.43243243243243246
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.8,
+          "n": 34,
+          "mean_probability": 0.6425312502667199,
+          "active_fraction": 0.7941176470588235
+        },
+        {
+          "lower": 0.8,
+          "upper": 1.0,
+          "n": 0,
+          "mean_probability": null,
+          "active_fraction": null
+        }
+      ]
+    }
+  ],
+  "analysis_source_sha256": "5f99778bf37b922370c29ebac087ff21811cb247e120f18269bc385bf37bb1c4",
+  "protocol_sha256": "2f7caedbca8baf14f9fdd84afa97f81fe4132a7f0eca13bb2ee7dc602205b8dd",
+  "limitations": [
+    "4development/2validation annotation-connected groups, not certified independent evolutionary families",
+    "Descriptive group bootstrap does not certify population coverage or confirmatory significance",
+    "Potency-derived source labels; simulated IID operations and negligible decision latency",
+    "Residual scaffold/analogue dependence; no chemical OOD claim",
+    "Frozen dense reference still computes zero-tail rows; zero-tail skips are not evidence of useful TV/chi-square bound pruning",
+    "No learned RL controller, clinical efficacy, novel theorem or journal-readiness claim"
+  ]
+}

@@ -11,22 +11,23 @@ before unresolved material choices; no Goal5/final study or journal action.
 Retrieve and hash-verify task code/data/artifacts/evidence locally before
 deleting verified task-owned remote code/data. Never delete other projects.
 
-Current checkpoint: owner-approved revision A passed4/2/12annotation-connected
-group quotas,6/2/16assays; first failed2/2/7attempt remains intact. Do not edit
-frozen feature-v1/v2 sources/configurations/outputs. Follow
-`docs/06_execution/GOAL3_READINESS_REVISION_A_20261105.md` and its dataset card.
-Goal4 is authorized after private evaluator/protocol checks and freeze; final
-outcomes remain reserved. The owner approved reserve expansion A; follow
-`docs/06_execution/GOAL3_REVISION_A_AUTHORIZATION_20261105.md`. Freeze a new
-preparation version before new member access; real Goal4 remains conditional
-on its data/readiness gates. Exact chemical purge/no chemical OOD claim is owner-selected. Trusted
-row parsing suppressed outcome values; no semantic final evaluation occurred.
-Old Goal2 and current PlanA audit/helper roots were fully returned/hash-verified
-and deleted, including the PlanA export root; see the latest checkpoint report.
-Constructed planner/adapter checks passed119tests; actual Goal4 stays NOT_RUN.
-Future remote work requires a new owned task-root version and fresh preflight.
-Older no-remote-job/
-unopened-archive/preparatory-only statements below describe earlier checkpoints.
+Current checkpoint: the prescribed Plan A trials and remote closeout are complete;
+Goal4 scientific exit is NOT_PASSED and final-study design NOT_FROZEN.
+Owner-approved A passed 4/2/12 annotation-connected groups,
+6/2/16 assays; the failed first cohort stays intact. Goal4 completed 6,488
+campaign executions and 64 calibration diagnostics, selected M128 before
+validation, and retained negative/mixed results. Screening was slower in the
+matched timing test; the selected-M128 planner made no optional WAIT in its 256
+crossed campaigns. The method-advance gate
+is NOT_PASSED. Stop for owner review; do not launch Goal5 or a fourth candidate.
+Read `docs/06_execution/PLAN_A_CLOSEOUT_20261105.md` and
+`docs/03_research/GOAL4_RESULTS_V1.md`. Do not edit frozen feature/protocol/source
+or result bytes. Final outcomes remain reserved; no chemical OOD or certified
+independent-evolutionary-family claim. All 15,614 current remote task files were
+returned and reread/hash-verified before task/export deletion; a fresh check
+found all five scoped current/historical roots absent. Future work needs a new
+bounded goal/window and owned remote task-root version. Older pending-decision,
+NOT_RUN/no-remote-job/unopened-archive statements below are historical.
 
 ## Owner consultation instruction, 5 November 2026
 

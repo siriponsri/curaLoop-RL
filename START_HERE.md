@@ -2,6 +2,15 @@
 
 ## Current local continuation
 
+Current closeout: [Plan A Goals 3–4](docs/06_execution/PLAN_A_CLOSEOUT_20261105.md)
+completed the prescribed trials and remote closeout. The
+[Goal4 results](docs/03_research/GOAL4_RESULTS_V1.md) retain mixed discovery
+effects, slower screening and no optional WAIT by the selected-M128 planner. The method-advance gate was
+not passed; Goal4 scientific exit/final-design freeze remain unresolved. All task
+bytes returned/verified and remote task/export roots deleted.
+Stop for joint owner review before any new method direction or Goal5. Earlier
+in-progress/pending-decision statements below are historical.
+
 Latest 5 November checkpoint: owner-approved reserve expansion A passed
 4/2/12 annotation-connected groups, with 6/2/16 assays. Read the
 [dataset card](docs/03_research/FSMOL_DATASET_CARD_V2.md) and

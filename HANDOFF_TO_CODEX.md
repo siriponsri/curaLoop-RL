@@ -1,6 +1,20 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
-## Active Plan A, 5 November
+## Current Plan A closeout, 5 November
+
+Read the self-contained [closeout](docs/06_execution/PLAN_A_CLOSEOUT_20261105.md)
+and [results](docs/03_research/GOAL4_RESULTS_V1.md). The authorized Goals3–4
+prescribed trial allocation is complete; the method-advance gate is NOT_PASSED
+and final-study design is NOT_FROZEN. Goal4 scientific exit remains unresolved. A passed
+4/2/12-component cohort enabled 6,488 campaigns and 64 calibration diagnostics,
+with M128 selected on development only. Retain slower screening, mixed discovery
+effects and zero optional WAITs for the selected-M128 planner. Do not run Goal5 or change thesis without owner
+review. Complete local retention and exact remote deletion proofs are in the
+closeout; all five scoped current/historical remote roots were checked absent.
+The final main closeout commit identifies these artifacts; previous pushed
+Goal3 checkpoint is `27aa3593d69d17122a40304ac82698ad6a7e6b95`.
+
+## Historical active Plan A checkpoint
 
 Owner-approved Goals3–4:48CPU-hours/24hours/maximum4CPUs. Parent is sole writer;
 three specialists review data/source, methods and English/evidence read-only.
