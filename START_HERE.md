@@ -9,10 +9,14 @@ selected a new verified biological-family split, retaining source roles as
 provenance and exact chemical purge, without a chemical OOD claim. The first
 cohort failed its4/2/12family quotas, producing2/2/7. See
 [revision options](docs/06_execution/GOAL3_COHORT_REVISION_OPTIONS_20261105.md).
+The [latest checkpoint](docs/06_execution/PLAN_A_CHECKPOINT_20261105.md) records
+119passing constructed planner/adapter/preservation tests, source identities,
+resource accounting and the exact pending owner decision.
 Trusted preparation parsed structure rows with outcome values suppressed; no
 semantic final-label use or real Goal4 campaign occurred. Goal2 remote files
-were fully retrieved/hash-verified and the old task root deleted. PlanA's own
-remote helper root remains for final retrieval/cleanup.
+were fully retrieved/hash-verified and its task root deleted. PlanA's audit/helper
+and export roots were also returned/verified and deleted; all three task roots
+were checked absent. Future remote processing needs a new task-root version.
 
 Current sequential checkpoint: [Goal 2 results](docs/03_research/GOAL_02_RESULTS_V1.md)
 and [goal tracker](docs/06_execution/GOAL_TRACKER.md). The real-data prototype

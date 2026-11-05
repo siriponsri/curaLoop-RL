@@ -66,13 +66,32 @@ def main():
     }
     charged = download + sum(reservations.values())
     jobs = []
-    for path in RAW.glob("feature-cohort-*/resources.json"):
+    job_paths = list(RAW.glob("feature-cohort-*/resources.json"))
+    job_paths += list((ROOT / "docs/evidence/plan-a-20261105-v1").glob("*-resources-*.json"))
+    job_paths += list(
+        (ROOT / "docs/evidence/plan-a-20261105-v1").glob("constructed-all-*-resources.json")
+    )
+    for path in sorted(job_paths):
         report = json.loads(path.read_text())
+        if report.get("schema_version") != "curaloop.resource-receipt.v1":
+            raise ValueError("Unexpected resource receipt schema.")
         jobs.append(
             {
                 "path": str(path.relative_to(ROOT)),
                 "status": report["status"],
                 "measured_cpu_seconds": report["cpu_seconds"],
+            }
+        )
+    return_proof = (
+        ROOT / "docs/evidence/plan-a-20261105-v1/plan-a-return-local-verification-v2.json"
+    )
+    if return_proof.exists():
+        proof = json.loads(return_proof.read_text())
+        jobs.append(
+            {
+                "path": str(return_proof.relative_to(ROOT)),
+                "status": proof["status"],
+                "measured_cpu_seconds": proof["verification_cpu_seconds"],
             }
         )
     measured = sum(r["measured_cpu_seconds"] for r in sources) + sum(

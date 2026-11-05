@@ -13,11 +13,15 @@ and exact chemical purge with no chemical OOD claim. Trusted row parsing
 suppressed outcomes; no semantic final labels opened. Record the training-aggregate
 metadata exposure from the access ledger. Retrieve/hash-verify all task-owned
 remote code/data/artifacts/evidence locally before deleting only verified roots.
-Old Goal2 root was retrieved, hash-verified and deleted; current PlanA helper
-root still needs final retrieval/cleanup. Frozen first-preparation sources must
+Old Goal2 and current PlanA task/export roots were retrieved, hash-verified and
+deleted, with a fresh three-root absence check. Constructed method/adapter/
+preservation checks passed119tests. Read the
+[exact checkpoint](docs/06_execution/PLAN_A_CHECKPOINT_20261105.md) for source
+identities, local retention paths, remaining gates and the pending owner choice.
+Future remote work needs a new owned root/version. Frozen first-preparation sources must
 not be edited or its outputs overwritten when implementing a later revision.
 
-## Current sequential work: Goal 2 complete, candidate advantage failed
+## Historical Goal 2 completion checkpoint
 
 Read [Goal 2 results](docs/03_research/GOAL_02_RESULTS_V1.md) and
 [continuation](docs/CONTINUATION.md) first. Owner approved real paper-backed
@@ -27,7 +31,8 @@ Content pruning preserved all decisions but increased policy time by 24.3%.
 It is not the established high-impact contribution. No final roles were opened.
 
 Implementation `12574b9`; freeze `2e45155`; the following report commit is Git HEAD.
-Raw outputs remain local and on dr-train as linked in the report. One CPU,
+Raw outputs were retained locally and on dr-train at that checkpoint; the
+later verified return/cleanup is recorded above. One CPU,
 151.20 run-wall seconds, no GPU, dependencies, paid action or journal submission.
 The owner supplied FS-Mol on 5 November; its archive passed size/MD5 verification
 and SHA256 was recorded in [the receipt](docs/evidence/fs-mol-receipt-20261105-v1/README.md).

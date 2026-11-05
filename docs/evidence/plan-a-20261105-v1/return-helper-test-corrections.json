@@ -1,0 +1,8 @@
+{
+  "scope": "CONSTRUCTED_FILESYSTEM_TEST_FIXTURES_ONLY",
+  "remote_actions_before_fixes": "NONE",
+  "first_failure": "Test UID lambda referenced the deliberately deleted task directory; capture fixture UID before deletion instead",
+  "second_failure": "Manifest-change regression lacked pathlib.Path import; retained failed plan-a-return-tests-v1.xml",
+  "runtime_helper_changed_to_hide_failure": false,
+  "v2_local_verifier": "Retains original complete-file PASS and creates a new program-generated unchanged-manifest proof; no manual PASS assertion"
+}

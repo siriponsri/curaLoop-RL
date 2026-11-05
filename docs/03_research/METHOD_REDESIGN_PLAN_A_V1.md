@@ -1,7 +1,7 @@
 # Plan A method decision: conditional event-time active search
 
-5 November 2026. **SELECTED FOR IMPLEMENTATION CHALLENGE, NOT IMPLEMENTED OR
-VALIDATED.** Goal4 is conditional on Goal3 data/source/readiness review. The
+5 November 2026. **CONSTRUCTED PROTOTYPE IMPLEMENTED; REAL-DATA EVALUATION
+NOT_RUN.** Goal4 is conditional on Goal3 data/source/readiness review. The
 independent methods reviewer recommended this single architecture, with three
 prespecified parameter-support sizes, after the failed Goal2 relaxation.
 
@@ -29,6 +29,11 @@ Fit regularized Bayesian logistic regression from delivered/initial labels only;
 a proper Gaussian prior includes the intercept, retaining one-class starts.
 No class-balancing weights that change hit-probability semantics. Freeze prior,
 optimizer/tolerances, feature construction and all fallback behavior before runs.
+The constructed implementation uses a zero-mean N(0,4) intercept and N(0,1)
+anchor coefficients, L-BFGS-B100iterations/ftol1e-12/gtol1e-8/maxls30, and
+probability clipping1e-9. Nonconvergence/Cholesky failure explicitly returns the
+prior mixture. Antithetic nested draws retain hypothesis prefixes across M.
+Study seeds are explicit unsigned32-bit integers; caller provenance is reviewed.
 
 At each real decision, freeze M parameter hypotheses theta_m drawn from the
 declared Laplace approximation, with weights w_m and probabilities p_mi.
@@ -54,6 +59,10 @@ capacity, plus WAIT if pending work exists. Include exploitation and information
 sensitive candidates in the shortlist, with deterministic ties; a mean-only
 shortlist can miss useful information. The final exact construction is frozen
 in the Goal4 configuration. Certificates remain root-shortlist-relative.
+The prototype retains posterior-mean top capacity candidates and fills a
+four-candidate shortlist by maximizing finite-mixture Bernoulli mutual
+information, with deterministic ties. It supports1–2assay workers; with capacity2
+there are at most11root actions including WAIT. Every accepted ID is excluded.
 
 For a forced root action, integrate the next public delivery time/identities
 and JOINT labels. Update hypothesis weights from labels and choose a fixed list
@@ -98,6 +107,11 @@ top-k candidates still require exact evaluation or certified rank refinement.
 Refine only unresolved candidates, and optionally prune root actions when their
 integrated upper is below an evaluated feasible lower. Validate every bound
 and chosen action against exact evaluation; record remaining gap/fallback.
+The prototype reports actual evaluated-root gap and the1e-12 numerical tie
+tolerance; it does not round that loss to zero. Nonfinite chi-square arithmetic
+falls back to the finite TV bound. Screening preparation is lazy: dense
+references never pay for bounds they do not use. The fixed dense-fallback
+retained-fraction threshold is0.7, with per-branch fallback reporting.
 
 The primary computational reference is batched **vectorized** full q@P with
 partial selection THEN sorting of the selected top-budget values, since omega
@@ -114,7 +128,7 @@ One architecture, varying only M: C1=32, C2=64, C3=128 hypotheses;64 anchors fix
 Use nested parameter draws where feasible and matched seeds/histories. No fourth
 candidate or outcomes-driven expansion. A failed configuration remains recorded.
 
-Controls: Random, analytical posterior-mean Greedy, frozen-model Greedy,
+Controls: Random, finite-mixture posterior-mean Greedy, frozen-model Greedy,
 nearest-hit, parameter Thompson sampling, count-budget ENS adaptation,
 unpruned event-time recourse, Azimi2011-inspired CPE scheduling and full greedy
 rollout. Include strong standard fingerprint exploitation where feasible in the
@@ -125,6 +139,15 @@ Freeze root-action, queue-state and rollout-trajectory caps before the canary.
 Charge fitting, DP and all baselines to the allocation. Random and nearest-hit
 skip unused belief construction. Alternate repeated compute-only comparisons
 on identical retained development states to reduce timing-order effects.
+The constructed CPE control prioritizes expected additional completions, then
+expected prior completed-experiment counts at launch. This explicit adaptation
+differs from the source's safety-constrained policy generator. Its20000-state
+cap/cache belongs to one campaign; fallback and per-call expansions are logged.
+The greedy-rollout reference uses16common-random-number trajectories, lazy
+virtual label draws and at most16events. It retains samples/Monte Carlo standard
+errors; these are not family-level uncertainty or an exact-value certificate.
+No extra exact-recourse computation or full candidate sort is added to that
+reference. Unused-candidate count caps the count scheduler's remaining budget.
 Required ablations: no-WAIT, suppressed anticipated pending-label information,
 and timing-blind budget tail. Shared exclusion of observed/pending duplicates
 is feasibility, not a treatment. Model and acquisition effects stay separate.
@@ -147,3 +170,26 @@ The output is an evidence-backed candidate decision, not guaranteed success.
 If all three configurations lack credible value, consult the owner before a
 new thesis or larger study. No confirmatory material-effect threshold is added.
 Separate-operator computational reexecution is not external scientific replication.
+
+## Constructed adapter and remaining real-data gate
+
+`research/planning_v3/` now contains the queue, mixture/rank bounds, Laplace
+belief, one-event recourse, count/rollout controls and public-Observation adapter.
+The adapter receives no Task, source file, resource hash or private due-time
+object. Only initial/delivered labels enter fitting; an owned acceptance log
+reconciles pending ages, unit commitments and missing results. Hidden-outcome/
+duration permutation and actual-engine accounting tests cover all14arms.
+
+Initialize and finish one campaign per worker before initializing another so
+the process-global pure queue cache cannot confer an arm-order advantage.
+Policy computation is `setup_seconds + sum(decision.policy_seconds)`, counting
+setup once, including frozen-model fitting. Source-preparation CPU and process
+startup remain separate recorded costs, never simulated assay time.
+
+These are constructed correctness checks, not molecular discovery results.
+The first real feature cohort failed required4/2/12group quotas at2/2/7;
+the owner must select a [data revision](../06_execution/GOAL3_COHORT_REVISION_OPTIONS_20261105.md)
+before dependent preparation/real Goal4 work. A real-data protocol, role-checked
+private evaluator, canary/all-arm feasibility measurement, fixed trial selection,
+validation and reexecution remain NOT_RUN. No method advantage or novelty is
+established by the prototype.

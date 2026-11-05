@@ -20,8 +20,10 @@ ledger marks CHEMBL1614128 development-only. Do not use target_info.csv.
 Raw archive header audit found27065 files; all5135 default-manifest tasks
 are present, with21930 additional physical training files. Source metadata
 and member names were audited before subsequent trusted feature preparation.
-Old Goal2 remote files were completely returned/hash-verified and its root
-deleted. PlanA's helper root remains for final retrieval/cleanup. Current
+Old Goal2 and PlanA audit/helper files were completely returned/hash-verified;
+both task roots and the PlanA export root were deleted and checked absent.
+The constructed prototype/adapter passed119source-identified tests. Read the
+[latest checkpoint](06_execution/PLAN_A_CHECKPOINT_20261105.md). Current
 resource charges and source/access limitations are in the
 [PlanA evidence packet](evidence/plan-a-20261105-v1/README.md).
 Earlier checkpoints below are historical.

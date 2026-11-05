@@ -15,16 +15,26 @@ sets exact caps, authority and the stopping boundary before Goal5.
 | [Feature freeze](feature-preparation-freeze-v1.json) | Exact reviewed sources/config frozen before new assay-member parsing |
 | [Executed cohort](feature-cohort-v1-result.json), [chemical audit](chemical-audit-v1.json) | FAIL4/2/12quota; actual2/2/7groups,3/2/8assays; no semantic outcome use |
 | [Preparation tests](preparation-tests-v1.txt), [JUnit](preparation-tests-v1.xml) | PASS27tests: safe headers/remote preservation, exact queue enumeration, outcome noninterference and chemical purge regressions |
+| [Fresh combined119tests](constructed-all-v1-tests.txt), [source/environment identity](constructed-all-v1-identity.json), [resource receipt](constructed-all-v1-resources.json) | PASS119constructed planner/adapter/data/preservation tests; exact sources unchanged; not molecular efficacy, novelty or full-app-suite evidence |
 | [Access ledger](access-ledger.json) | Retains aggregate metadata exposure and trusted physical parsing; no agent-visible compound/final outcomes |
 | [Budget after first cohort](budget-after-features-v1.json) | About50recordedCPU seconds plus7,200-second conservative overhead charge; metadata123,663,827bytes charged including unknown-usage reserves, below200MB |
 | [Delegated accounting limitation](delegated-metadata-accounting.json) | Exact delegated request count/bytes UNKNOWN; conservative80MBreservation, not measured usage |
 | [Old Goal2 return inventory](goal2-return-manifest.json), [local verification](goal2-return-local-verification.json), [remote deletion](goal2-remote-cleanup.txt) | PASS382files,4,882,614bytes returned and checked before deletion; original remote root absent |
+| [PlanA return inventory](plan-a-return-manifest-v1.json), [enhanced local proof](plan-a-return-local-verification-v2.json), [both-root cleanup](plan-a-remote-cleanup-v1.txt), [fresh absence check](remote-absence-v1.json) | PASS8files/1,564,567bytes returned/verified, then task/export removed; all three scoped task roots checked absent |
+| [Current budget](budget-after-constructed-v1.json) |68.46875recorded CPU seconds plus7,200-second conservative unmetered-overhead charge; no new real-data campaign |
 
 The failed cohort is retained under the ignored source cache. The public packet
 contains task IDs/hashes and aggregate audits, without structures or labels.
 See [source notices](../../03_research/PLAN_A_DATA_SOURCE_NOTICES_V1.md).
 [Revision options](../../06_execution/GOAL3_COHORT_REVISION_OPTIONS_20261105.md)
-await owner selection; do not silently expand the frozen reserve. PlanA remote
-helper files still require final retrieval/cleanup. No new real campaign,
+await owner selection; do not silently expand the frozen reserve. Remote
+preservation/cleanup for this checkpoint is complete. No new real campaign,
 trained controller, held-out result, external replication, journal submission
 or algorithm advantage is established by these preparation checks.
+Read the [self-contained checkpoint](../../06_execution/PLAN_A_CHECKPOINT_20261105.md)
+for actual work, limits, remaining steps and the current owner decision.
+
+The generic package check's `source_commit` identifies its historical protected
+catalogue, and its `not_run` fields describe that checker alone. Live main-push
+verification is a separate operation. Constructed-test success does not replace
+the failed dataset gate or a real-data experiment.

@@ -31,6 +31,13 @@ purge and no chemical OOD claim. Do not expand the frozen reserves or start
 Goal4 campaigns before resolving the data gate. Evidence and every failed
 attempt remain retained in the PlanA packet.
 
+[Latest checkpoint](PLAN_A_CHECKPOINT_20261105.md): the independent constructed
+planner/adapter work passed119tests with unchanged recorded source hashes.
+Old Goal2 and current PlanA task/export roots were completely preserved locally
+before removal; all three checked absent. No real Goal4 campaign, final outcome
+use or new algorithm advantage is established. The data-revision decision remains
+the next owner action.
+
 Detailed [Goal 3 proposal](GOAL_03_PROPOSAL_20261105.md), 5 November: source/family/
 split readiness plus a stronger method decision after Goal 2's failed usefulness
 test. It targets real held-out families and explicitly separates potency labels

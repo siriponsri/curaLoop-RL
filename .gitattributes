@@ -58,4 +58,10 @@ tools/verify_remote_return_v1.py -text whitespace=cr-at-eol
 tools/resource_guard_v1.py -text whitespace=cr-at-eol
 tools/freeze_goal3_features_v1.py -text whitespace=cr-at-eol
 tools/snapshot_plan_a_budget_v1.py -text whitespace=cr-at-eol
+tools/verify_remote_return_v2.py -text whitespace=cr-at-eol
+tests/research/test_*_v3.py -text whitespace=cr-at-eol
+tests/research/test_plan_a_return_v1.py -text whitespace=cr-at-eol
+tools/run_plan_a_constructed_checks_v1.py -text whitespace=cr-at-eol
 docs/evidence/plan-a-20261105-v1/** whitespace=cr-at-eol
+# Keep the captured failed-test traceback byte-for-byte, including indentation.
+docs/evidence/plan-a-20261105-v1/plan-a-return-tests-v1.xml whitespace=-blank-at-eol,cr-at-eol

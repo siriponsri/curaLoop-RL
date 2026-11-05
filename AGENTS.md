@@ -17,8 +17,11 @@ Do not edit frozen feature-v1 sources/outputs or start real Goal4 campaigns.
 Owner revision choice is pending; follow the newest accepted revision if one
 arrives. Exact chemical purge/no chemical OOD claim is owner-selected. Trusted
 row parsing suppressed outcome values; no semantic final evaluation occurred.
-Old Goal2 remote root was fully returned/hash-verified and deleted. Current
-PlanA helper root still needs final preservation/cleanup. Older no-remote-job/
+Old Goal2 and current PlanA audit/helper roots were fully returned/hash-verified
+and deleted, including the PlanA export root; see the latest checkpoint report.
+Constructed planner/adapter checks passed119tests; actual Goal4 stays NOT_RUN.
+Future remote work requires a new owned task-root version and fresh preflight.
+Older no-remote-job/
 unopened-archive/preparatory-only statements below describe earlier checkpoints.
 
 ## Owner consultation instruction, 5 November 2026

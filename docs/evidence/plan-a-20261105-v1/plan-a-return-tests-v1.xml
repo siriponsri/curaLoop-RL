@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="6" time="1.020" timestamp="2026-11-05T08:17:31.886911+07:00" hostname="DESKTOP-C8EHASQ"><testcase classname="tests.research.test_plan_a_return_v1" name="test_both_roots_removed_only_after_unchanged_manifest_and_complete_file_verification" time="0.249" /><testcase classname="tests.research.test_plan_a_return_v1" name="test_change_after_snapshot_or_local_proof_keeps_remote_files[source]" time="0.176" /><testcase classname="tests.research.test_plan_a_return_v1" name="test_change_after_snapshot_or_local_proof_keeps_remote_files[zip]" time="0.158" /><testcase classname="tests.research.test_plan_a_return_v1" name="test_change_after_snapshot_or_local_proof_keeps_remote_files[receipt]" time="0.149" /><testcase classname="tests.research.test_plan_a_return_v1" name="test_active_process_stops_before_snapshot_creation" time="0.012" /><testcase classname="tests.research.test_plan_a_return_v1" name="test_manifest_changed_during_verification_cannot_get_enhanced_pass" time="0.087"><failure message="NameError: name 'Path' is not defined">tmp_path = WindowsPath('C:/Users/User/AppData/Local/Temp/pytest-of-User/pytest-2064/test_manifest_changed_during_v0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000029482BCC290&gt;
+
+    def test_manifest_changed_during_verification_cannot_get_enhanced_pass(tmp_path, monkeypatch):
+        _, _, core = fixture(tmp_path, monkeypatch)
+        helper.snapshot(core)
+        real = base.main
+    
+        def changed_after_base_check():
+            real()
+            folder = Path(sys.argv[2])
+            with (folder / "manifest.json").open("ab") as handle:
+                handle.write(b" ")
+    
+        monkeypatch.setattr(base, "main", changed_after_base_check)
+        with pytest.raises(ValueError, match="changed during"):
+&gt;           preserve_local(tmp_path, monkeypatch, core)
+
+tests\research\test_plan_a_return_v1.py:104: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\research\test_plan_a_return_v1.py:43: in preserve_local
+    verifier.main()
+tools\verify_remote_return_v2.py:32: in main
+    base.main()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def changed_after_base_check():
+        real()
+&gt;       folder = Path(sys.argv[2])
+                 ^^^^
+E       NameError: name 'Path' is not defined
+
+tests\research\test_plan_a_return_v1.py:98: NameError</failure></testcase></testsuite></testsuites>

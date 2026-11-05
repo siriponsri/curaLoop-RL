@@ -1,0 +1,16 @@
+{
+  "scope": "CONSTRUCTED_UNIT_FIXTURE_ONLY_NOT_ASSAY_RESULT",
+  "initial_test_result": "1failed_3passed",
+  "test": "test_count_scheduler_has_information_waiting_and_explicit_scope",
+  "initial_expectation": "WAIT at horizon4, budget2, one age0 pending job, deterministic duration2",
+  "observed": "Dispatch1 retained by the declared work-conserving tie rule",
+  "explanation": "Both schedules have count-proxy value2; the initial fixture did not establish a strict WAIT benefit",
+  "second_test_result": "1failed_17passed; pure CPE still permits waiting to launch an experiment that cannot finish, tying the proposed strict case",
+  "correction": "Before any study freeze, replace the pure-CPE draft with explicit completion-count-first, CPE-second adaptation; horizon3/pendingage1 now gives strict WAIT benefit, horizon1 retains work-conserving tie",
+  "source_check": "Azimi et al.2011 primary PDF sections3-5 has both completion safety and information goals; the new lexicographic adaptation is declared and does not inherit its p-safe theorem",
+  "preserved_rejected_draft": ".local/plan-a-20261105-v1/constructed-control-drafts/controls-count-only-prefreeze.py",
+  "preserved_rejected_draft_sha256": "76ef7a6ec3d3703016ef0eabef7cc17a3c25bb793ccc4b46009fba4996d87773",
+  "real_data_access": false,
+  "algorithm_revision_reason": "Source-aligned comparator fairness before real-data outcomes; not tuning biological results",
+  "new_comparator_tests": "19passed across control/recourse/oracle files after the completion-priority revision"
+}
