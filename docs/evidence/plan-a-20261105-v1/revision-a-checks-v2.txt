@@ -1,0 +1,49 @@
+...F..F........                                                          [100%]
+================================== FAILURES ===================================
+________ test_member_integrity_and_row_bound_without_outcome_emission _________
+
+    def test_member_integrity_and_row_bound_without_outcome_emission():
+        config = {
+            "maximum_member_compressed_bytes": 10000,
+            "maximum_total_compressed_bytes": 10000,
+            "maximum_rows_per_assay": 3,
+            "maximum_row_bytes": 1024,
+            "maximum_member_expanded_bytes": 10000,
+            "maximum_total_expanded_bytes": 10000,
+            "maximum_total_canonical_rows": 10,
+        }
+        source = b"".join(
+            json.dumps({"SMILES": smi, "Assay_ID": "CHEMBL1", "Property": "private"}).encode() + b"\n"
+            for smi in ("CCO", "CCC", "CCO")
+        )
+        data = gzip.compress(source)
+>       rows, support, stats = read_member(
+            io.BytesIO(data), {"bytes": len(data), "data_offset": 0}, "CHEMBL1", config, Counter()
+        )
+
+tests\research\test_feature_projection_v3.py:74: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+research\benchmark_v3\prepare_features.py:120: in read_member
+    smi = canonical(project_row(line, aid))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+smiles = 'CCO'
+
+    def canonical(smiles):
+>       from rdkit import Chem, rdBase
+E       ModuleNotFoundError: No module named 'rdkit'
+
+research\benchmark_v3\prepare_features.py:42: ModuleNotFoundError
+___ test_chemical_audit_computes_exact_overlap_and_excludes_empty_scaffolds ___
+
+    def test_chemical_audit_computes_exact_overlap_and_excludes_empty_scaffolds():
+>       from rdkit.Chem import rdFingerprintGenerator
+E       ModuleNotFoundError: No module named 'rdkit'
+
+tests\research\test_feature_projection_v3.py:126: ModuleNotFoundError
+- generated xml file: C:\Users\User\Desktop\myProject\curaloop-rl\docs\evidence\plan-a-20261105-v1\revision-a-checks-v2.xml -
+=========================== short test summary info ===========================
+FAILED tests/research/test_feature_projection_v3.py::test_member_integrity_and_row_bound_without_outcome_emission
+FAILED tests/research/test_feature_projection_v3.py::test_chemical_audit_computes_exact_overlap_and_excludes_empty_scaffolds
+2 failed, 13 passed in 2.01s

@@ -1,0 +1,306 @@
+{
+  "status": "PASS_FEATURE_COHORT",
+  "manifest_sha256": "66ddda3ae98fe317f8c26e0fe6443ac40f0522a84b7e8d683eeec9012a726006",
+  "source_identities": {
+    "config_sha256": "e07917dd3af9e76ca9f4f8d2b784deaf2af61f4eabfc9156deff7d8f42446fe4",
+    "preparer_sha256": "9a6d0bc90fee123ef42ad33a1f01602e80fcc80adcab0170e1ef9f920d2d0cf7",
+    "family_registry_sha256": "e81838e46c0b77c1d2bbd462fe988d04a86812a766a0c6f832466196a4da8a05",
+    "header_index_sha256": "4f4c83b8ce310f80681684a435a92a0c592461c897672d52b63cec1134391746",
+    "access_policy_sha256": "e76bef5dd0253fbde3f117a4f5d12e447f0c5e27be26cd619df6da594c09399e",
+    "archive_sha256": "528a9c4e8d74c4287acda79536eecbf91418d6d0ac2c55918b270d78c2333ebc",
+    "rdkit": "2026.09.1"
+  },
+  "selected_family_counts": {
+    "development": 4,
+    "validation": 2,
+    "final": 12
+  },
+  "selected_assay_counts": {
+    "development": 6,
+    "validation": 2,
+    "final": 16
+  },
+  "attempted_assays": 457,
+  "attempted_families": {
+    "development": 40,
+    "validation": 34,
+    "final": 65
+  },
+  "processing_totals": {
+    "compressed_bytes": 35997355,
+    "expanded_bytes": 541116193,
+    "source_rows_trusted_parsed": 41800,
+    "canonical_rows": 41351,
+    "canonical_characters": 1898604
+  },
+  "selected_task_manifest": [
+    {
+      "assay_id": "CHEMBL1614225",
+      "role": "development",
+      "source_role": "train",
+      "family_id": "typed-ancestry-3d78be158d61c2c9cfd8",
+      "family": "globin family",
+      "feature_sha256": "9f591fc4bbca6d29c57e10a9f11c0d7a1d1ecbf1e2513996700d55196c4a73e1",
+      "retained_structures": 168,
+      "member_sha256": "2a6bd5a9115fe154e640ae157a1708c5e28022dc63c453b603d025429e70ba6f"
+    },
+    {
+      "assay_id": "CHEMBL1738549",
+      "role": "development",
+      "source_role": "train",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "family": "mit/tfe family",
+      "feature_sha256": "adfea9ae77ec8aecbc9d35d21f2189eebd51a757121be84fbac1372475345b39",
+      "retained_structures": 303,
+      "member_sha256": "8ea761cb779af2b01992eac495cd116e6e3401dc88e605373b2fa4d66915dcd6"
+    },
+    {
+      "assay_id": "CHEMBL1738553",
+      "role": "development",
+      "source_role": "train",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "family": "mit/tfe family",
+      "feature_sha256": "632d3018438411b70bdbfc9d369014c341fc6d815a54937a754692e011d8acf4",
+      "retained_structures": 248,
+      "member_sha256": "2c5859a364443072d5774a63f128ed1abcc02977183039866b810478a59855e3"
+    },
+    {
+      "assay_id": "CHEMBL1737942",
+      "role": "development",
+      "source_role": "train",
+      "family_id": "typed-ancestry-3bdd4e9dd09027c116b1",
+      "family": "tumor necrosis factor family",
+      "feature_sha256": "90e1237dee299f61146ab6bd74d2897490a2d02c4d2431b2c4510738f32f0723",
+      "retained_structures": 270,
+      "member_sha256": "463fe448c7e9d3538992d4b7d92e5f8ff4f21caddc1eae38daeea0cf39634311"
+    },
+    {
+      "assay_id": "CHEMBL3705420",
+      "role": "development",
+      "source_role": "train",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "family": "aaa atpase family; abc transporter superfamily; adenosylhomocysteinase family; app family; aromatic-ring hydroxylase family; artd/parp family; arylamine n-acetyltransferase family; bet family; beta-catenin family; calcium channel alpha-1 subunit (tc 1.a.1.11) family; carotenoid/retinoid oxidoreductase family; ccr4/nocturin family; choline/ethanolamine kinase family; class-i pyridine nucleotide-disulfide oxidoreductase family; complement c6/c7/c8/c9 family; cyclic nucleotide phosphodiesterase family; d-isomer specific 2-hydroxyacid dehydrogenase family; dead box helicase family; dna polymerase type-c family; dna polymerase type-x family; dna repair enzymes ap/exoa family; dwarfin/smad family; flavin monoamine oxidase family; g protein-coupled receptor 1 family; g protein-coupled receptor fz/smo family; g-alpha family; glucose-6-phosphate dehydrogenase family; glutaminase family; glyceraldehyde-3-phosphate dehydrogenase family; glycosyl hydrolase 2 family; glycosyl hydrolase 30 family; glycosyl hydrolase 31 family; glycosyl hydrolase 79 family; helicase family; hepacivirus polyprotein family; hsf family; huntingtin family; immunoglobulin superfamily; inward rectifier-type potassium channel (tc 1.a.2.1) family; keap1 family; ldh/mdh superfamily; nad(p)h dehydrogenase (quinone) family; nad-dependent dna ligase family; neuropilin family; nf-kappa-b inhibitor family; nlrp family; nod1-nod2 family; nos family; p53 family; papillomaviridae e1 protein family; peptidase c1 family; peptidase c19 family; peptidase c2 family; peptidase c48 family; peptidase c54 family; peptidase m1 family; peptidase m10a family; peptidase m13 family; peptidase m17 family; peptidase m24a family; peptidase m27 family; peptidase m34 family; peptidase s1 family; phospholipase d family; pi3/pi4-kinase family; plakin or cytolinker family; polyadenylate-binding protein type-1 family; potassium channel family; potassium channel hcn family; protein kinase superfamily; protein-tyrosine phosphatase family; protoporphyrinogen/coproporphyrinogen oxidase family; replication factor a protein 1 family; reverse transcriptase family; selectin/lecam family; short-chain dehydrogenases/reductases (sdr) family; small gtpase superfamily; sodium channel (tc 1.a.1.10) family; toll-like receptor family; trafac class myosin-kinesin atpase superfamily; transcription factor stat family; transglutaminase superfamily; transient receptor (tc 1.a.4) family; ubiquitin family; ubiquitin-conjugating enzyme family; wd repeat wdr5/wds family; zinc-containing alcohol dehydrogenase family",
+      "feature_sha256": "2449d3416695508427c6bbde8d4f22edad849b6dee2bc937727a928b78003943",
+      "retained_structures": 167,
+      "member_sha256": "87d0b1d89067166af6a8d3b5ad66664814aeb1a6a7f999378d0dcbffaae4da86"
+    },
+    {
+      "assay_id": "CHEMBL2219098",
+      "role": "development",
+      "source_role": "test",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "family": "aaa atpase family; abc transporter superfamily; adenosylhomocysteinase family; app family; aromatic-ring hydroxylase family; artd/parp family; arylamine n-acetyltransferase family; bet family; beta-catenin family; calcium channel alpha-1 subunit (tc 1.a.1.11) family; carotenoid/retinoid oxidoreductase family; ccr4/nocturin family; choline/ethanolamine kinase family; class-i pyridine nucleotide-disulfide oxidoreductase family; complement c6/c7/c8/c9 family; cyclic nucleotide phosphodiesterase family; d-isomer specific 2-hydroxyacid dehydrogenase family; dead box helicase family; dna polymerase type-c family; dna polymerase type-x family; dna repair enzymes ap/exoa family; dwarfin/smad family; flavin monoamine oxidase family; g protein-coupled receptor 1 family; g protein-coupled receptor fz/smo family; g-alpha family; glucose-6-phosphate dehydrogenase family; glutaminase family; glyceraldehyde-3-phosphate dehydrogenase family; glycosyl hydrolase 2 family; glycosyl hydrolase 30 family; glycosyl hydrolase 31 family; glycosyl hydrolase 79 family; helicase family; hepacivirus polyprotein family; hsf family; huntingtin family; immunoglobulin superfamily; inward rectifier-type potassium channel (tc 1.a.2.1) family; keap1 family; ldh/mdh superfamily; nad(p)h dehydrogenase (quinone) family; nad-dependent dna ligase family; neuropilin family; nf-kappa-b inhibitor family; nlrp family; nod1-nod2 family; nos family; p53 family; papillomaviridae e1 protein family; peptidase c1 family; peptidase c19 family; peptidase c2 family; peptidase c48 family; peptidase c54 family; peptidase m1 family; peptidase m10a family; peptidase m13 family; peptidase m17 family; peptidase m24a family; peptidase m27 family; peptidase m34 family; peptidase s1 family; phospholipase d family; pi3/pi4-kinase family; plakin or cytolinker family; polyadenylate-binding protein type-1 family; potassium channel family; potassium channel hcn family; protein kinase superfamily; protein-tyrosine phosphatase family; protoporphyrinogen/coproporphyrinogen oxidase family; replication factor a protein 1 family; reverse transcriptase family; selectin/lecam family; short-chain dehydrogenases/reductases (sdr) family; small gtpase superfamily; sodium channel (tc 1.a.1.10) family; toll-like receptor family; trafac class myosin-kinesin atpase superfamily; transcription factor stat family; transglutaminase superfamily; transient receptor (tc 1.a.4) family; ubiquitin family; ubiquitin-conjugating enzyme family; wd repeat wdr5/wds family; zinc-containing alcohol dehydrogenase family",
+      "feature_sha256": "2747d4136ad2cfd482f61372a304f17ade0650ce3dc60ed32839f3f26e65fab3",
+      "retained_structures": 129,
+      "member_sha256": "28443feb2e768cbe3cde3b0103fd3ddb92e59733acceb55bf36e854e49e28ff9"
+    },
+    {
+      "assay_id": "CHEMBL830838",
+      "role": "validation",
+      "source_role": "train",
+      "family_id": "typed-ancestry-e95346fc689f9e34aeec",
+      "family": "dihydrofolate reductase family",
+      "feature_sha256": "5d3e921f7541354133a73e64ecb7f63359e23db522b3725f02403fb515c0efe1",
+      "retained_structures": 168,
+      "member_sha256": "e245c577aeeab54aa2ebad99d4d3feb3e4b87c7196be94bd8305f57841a920ec"
+    },
+    {
+      "assay_id": "CHEMBL4257016",
+      "role": "validation",
+      "source_role": "train",
+      "family_id": "typed-ancestry-94155e8b526e07fc302e",
+      "family": "isocitrate and isopropylmalate dehydrogenases family",
+      "feature_sha256": "2512b49d47410a40c48b6099ee7e0cf3b7dddc24ddbceedbbee145698c2563bd",
+      "retained_structures": 162,
+      "member_sha256": "44abe97bd757b41665529228e9b4d29c4feaf6fe2688246368c69b00572dbfa5"
+    },
+    {
+      "assay_id": "CHEMBL1738508",
+      "role": "final",
+      "source_role": "train",
+      "family_id": "typed-ancestry-6acacea708ddf9cda45d",
+      "family": "tim17/tim22/tim23 family",
+      "feature_sha256": "cca7f6a1ef3c570a7b83f02b81eec0e809cae288a0bbfa6b1551f211709a2007",
+      "retained_structures": 210,
+      "member_sha256": "80468d8678815ac01d5aba2e9381e9cd0bc434f550d2f85477d1eb19da618a79"
+    },
+    {
+      "assay_id": "CHEMBL1613907",
+      "role": "final",
+      "source_role": "test",
+      "family_id": "typed-ancestry-12ffe73d1d54d6ad232c",
+      "family": "pyruvate kinase family",
+      "feature_sha256": "8541b001dc80ef11828b324894260dd9e5e4b0257291e3f43e6971b3df8e11d3",
+      "retained_structures": 134,
+      "member_sha256": "e3684dbbe4ba60f86c765da487b82f2e624112dac4ac8ced4d2979df557ac480"
+    },
+    {
+      "assay_id": "CHEMBL4055896",
+      "role": "final",
+      "source_role": "train",
+      "family_id": "typed-ancestry-b2736caed8839c9b48fb",
+      "family": "transthyretin family",
+      "feature_sha256": "f62276a31b7e84bfbc7aebe2259881d06215a2dc9bf8f0dbf180b2a8b6d20970",
+      "retained_structures": 280,
+      "member_sha256": "4307703c157a500301dad0bcec99c0f61e16070ddf5f6b020a35d128096eb5e7"
+    },
+    {
+      "assay_id": "CHEMBL1614213",
+      "role": "final",
+      "source_role": "valid",
+      "family_id": "typed-ancestry-0cbb7451dd8c710aa36d",
+      "family": "inositol monophosphatase superfamily",
+      "feature_sha256": "c1d523bc14709f1fc071ab9b74a72725f1dd04135666a8de6524efa20f353d46",
+      "retained_structures": 600,
+      "member_sha256": "42ebd3da59fc12046a8a386dfb7580b2de58fb6379a639ea64acc18c82eb54a2"
+    },
+    {
+      "assay_id": "CHEMBL3883076",
+      "role": "final",
+      "source_role": "train",
+      "family_id": "typed-ancestry-a81af4a86491ac3603ec",
+      "family": "ferroportin (fp) (tc 2.a.100) family; major facilitator (tc 2.a.1) superfamily; major facilitator superfamily; organo anion transporter (tc 2.a.60) family; slc29a/ent transporter (tc 2.a.57) family",
+      "feature_sha256": "07086ae815b45073e1bae9c02b39b910685331a3c2f8d531bb19cdbe89e34082",
+      "retained_structures": 248,
+      "member_sha256": "8592650492569358f298d752b91750c23019076283c422b9044df9d74bab6d5b"
+    },
+    {
+      "assay_id": "CHEMBL4257289",
+      "role": "final",
+      "source_role": "train",
+      "family_id": "typed-ancestry-a81af4a86491ac3603ec",
+      "family": "ferroportin (fp) (tc 2.a.100) family; major facilitator (tc 2.a.1) superfamily; major facilitator superfamily; organo anion transporter (tc 2.a.60) family; slc29a/ent transporter (tc 2.a.57) family",
+      "feature_sha256": "6cab3b1b4cbed7fe866acf5566ba5eef677aa195f3cc30c1692751e95d4a736e",
+      "retained_structures": 356,
+      "member_sha256": "70a790a2f9b77ac351afc9148166623b812e25cb026f2f7b754ca21654ed9efd"
+    },
+    {
+      "assay_id": "CHEMBL2114931",
+      "role": "final",
+      "source_role": "train",
+      "family_id": "typed-ancestry-6ac8d2012551da0ca1b6",
+      "family": "g protein-coupled receptor 2 family",
+      "feature_sha256": "83e08f3bf7016bca07ecfe527f64658126d76d8feb67e3c1737145942f9ffa84",
+      "retained_structures": 600,
+      "member_sha256": "7fa7ec9f8ead5beb506f2dc0787a1a589b1752ba85fc7ce69ed700226c9676cb"
+    },
+    {
+      "assay_id": "CHEMBL4005586",
+      "role": "final",
+      "source_role": "test",
+      "family_id": "typed-ancestry-e4b1e1580ede63b917d6",
+      "family": "sirtuin family; tpp enzyme family",
+      "feature_sha256": "771eddd78ff806fe1de42d3489ad78dac02b7a55aa082fa72e6005a700ad26b4",
+      "retained_structures": 248,
+      "member_sha256": "d8d5204e5689aae3efe58f3615dd4552a55ac2256acd7c8be5f7d28a73ca8959"
+    },
+    {
+      "assay_id": "CHEMBL2114845",
+      "role": "final",
+      "source_role": "train",
+      "family_id": "typed-ancestry-754bd04639701ffa0d09",
+      "family": "bzip family",
+      "feature_sha256": "35fd91a83f8c113d0566a756a6fc76af907322d2adbce367ddf7381ccda66963",
+      "retained_structures": 321,
+      "member_sha256": "ea62b54daa5e1bdfa33c003585411474e25df9bc239c365cfba746512362d241"
+    },
+    {
+      "assay_id": "CHEMBL1738408",
+      "role": "final",
+      "source_role": "train",
+      "family_id": "typed-ancestry-c53488cb18d7e3643317",
+      "family": "cytidine and deoxycytidylate deaminase family",
+      "feature_sha256": "e59b2df43a2628fbd62a6fd91e65183b5953e0e46c21a4747f40e8c00ea588a7",
+      "retained_structures": 426,
+      "member_sha256": "dc6d522d6fee4f98bf61c10968d786c6d835ac90b6f04f72915a2e4afd467152"
+    },
+    {
+      "assay_id": "CHEMBL2114898",
+      "role": "final",
+      "source_role": "train",
+      "family_id": "typed-ancestry-c53488cb18d7e3643317",
+      "family": "cytidine and deoxycytidylate deaminase family",
+      "feature_sha256": "4ad73420705f843e81666e4d723865ad0b52401039113bbdba474c3f0e5d6857",
+      "retained_structures": 231,
+      "member_sha256": "a3c29481badfa956a74c1145af56dca48e1d0bc7c2274c8b5e6dfd87af48e11a"
+    },
+    {
+      "assay_id": "CHEMBL3431932",
+      "role": "final",
+      "source_role": "test",
+      "family_id": "typed-ancestry-c23b8ace330d01e17af2",
+      "family": "carnitine/choline acetyltransferase family",
+      "feature_sha256": "60348619f67432491a405f0f7c9ba38597d4bdc60b39d9db24eaeb077b2a1a48",
+      "retained_structures": 455,
+      "member_sha256": "394450e51e4a2b8003389615c0eea465735809205a69e042a0e666210296d507"
+    },
+    {
+      "assay_id": "CHEMBL3431930",
+      "role": "final",
+      "source_role": "test",
+      "family_id": "typed-ancestry-c23b8ace330d01e17af2",
+      "family": "carnitine/choline acetyltransferase family",
+      "feature_sha256": "96301d74f7cd434e7cc4db2311cb485454ece319d20059244bcb1d8f161b0d3d",
+      "retained_structures": 472,
+      "member_sha256": "67469e16c9799d56ce4a4624162248b676f444e8c6bf8c510e5768fe4ab0959d"
+    },
+    {
+      "assay_id": "CHEMBL1614311",
+      "role": "final",
+      "source_role": "train",
+      "family_id": "typed-ancestry-26555f9fca97144932bc",
+      "family": "bcl-2 family",
+      "feature_sha256": "10b8362ff0851dfd6716e54b5468ce65540afd87c35657f3590d29a19edc7fbf",
+      "retained_structures": 156,
+      "member_sha256": "5d29a2ea5b4a65cec295511be596a40bb6686be88368b1faa1675d233302e78b"
+    },
+    {
+      "assay_id": "CHEMBL1614363",
+      "role": "final",
+      "source_role": "train",
+      "family_id": "typed-ancestry-26555f9fca97144932bc",
+      "family": "bcl-2 family",
+      "feature_sha256": "c218b9afbf45f518d3f9d15babfa1f08d627b8df83a7a9ce39cc4fdba076c451",
+      "retained_structures": 139,
+      "member_sha256": "37334f8307f0030e8e0c368655a9189049a09205f2ddf56a32d877cf36dc15ce"
+    },
+    {
+      "assay_id": "CHEMBL3705334",
+      "role": "final",
+      "source_role": "test",
+      "family_id": "typed-ancestry-d66e1df1305ef3ef5f89",
+      "family": "dutpase family",
+      "feature_sha256": "f59d0dd0975a1318f3907e07eaa10ddffcb9b8edd281ed175deb1fe1506e8eaf",
+      "retained_structures": 139,
+      "member_sha256": "80801acd7706bc7ed477775dd1ee8b35ddea2d5961057e954ede4f424da68a8d"
+    }
+  ],
+  "resource_receipt": {
+    "schema_version": "curaloop.resource-receipt.v1",
+    "pid": 33784,
+    "start_utc": "2026-11-05T11:49:41.321174+00:00",
+    "cpu_affinity": [
+      11
+    ],
+    "wall_limit_seconds": 1800,
+    "cpu_limit_seconds": 1800,
+    "memory_limit_bytes": 1073741824,
+    "descendant_processes_allowed": false,
+    "threads_per_blas": 1,
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "command": [
+      "-c"
+    ],
+    "guard_source_sha256": "6190b66653cf849a80024b2b9edf86ff045f8f98394a2a155e89cad03f4aff6a",
+    "status": "PASS",
+    "wall_seconds": 210.68799999996554,
+    "cpu_seconds": 120.484375,
+    "output_bytes": 7321889
+  },
+  "outcome_values_emitted": false,
+  "semantic_outcome_use": false,
+  "goal4_data_gate": "PASS_FEATURE_COUNTS_ONLY",
+  "new_campaigns_run": 0,
+  "final_evaluation": false,
+  "terms_notice": "See docs/03_research/PLAN_A_DATA_SOURCE_NOTICES_V1.md; software MIT does not replace data terms"
+}

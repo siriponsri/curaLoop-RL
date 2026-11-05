@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="15" time="1.661" timestamp="2026-11-05T18:47:03.747382+07:00" hostname="DESKTOP-C8EHASQ"><testcase classname="tests.research.test_feature_projection_v3" name="test_arbitrary_hidden_outcomes_cannot_change_projection_or_duplicate_rule" time="0.001" /><testcase classname="tests.research.test_feature_projection_v3" name="test_projection_uses_explicit_assay_identity_and_sanitizes_json" time="0.002" /><testcase classname="tests.research.test_feature_projection_v3" name="test_cross_role_purge_removes_from_every_role_and_preserves_within_role" time="0.001" /><testcase classname="tests.research.test_feature_projection_v3" name="test_member_integrity_and_row_bound_without_outcome_emission" time="0.008"><failure message="ModuleNotFoundError: No module named 'rdkit'">def test_member_integrity_and_row_bound_without_outcome_emission():
+        config = {
+            "maximum_member_compressed_bytes": 10000,
+            "maximum_total_compressed_bytes": 10000,
+            "maximum_rows_per_assay": 3,
+            "maximum_row_bytes": 1024,
+            "maximum_member_expanded_bytes": 10000,
+            "maximum_total_expanded_bytes": 10000,
+            "maximum_total_canonical_rows": 10,
+        }
+        source = b"".join(
+            json.dumps({"SMILES": smi, "Assay_ID": "CHEMBL1", "Property": "private"}).encode() + b"\n"
+            for smi in ("CCO", "CCC", "CCO")
+        )
+        data = gzip.compress(source)
+&gt;       rows, support, stats = read_member(
+            io.BytesIO(data), {"bytes": len(data), "data_offset": 0}, "CHEMBL1", config, Counter()
+        )
+
+tests\research\test_feature_projection_v3.py:74: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+research\benchmark_v3\prepare_features.py:120: in read_member
+    smi = canonical(project_row(line, aid))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+smiles = 'CCO'
+
+    def canonical(smiles):
+&gt;       from rdkit import Chem, rdBase
+E       ModuleNotFoundError: No module named 'rdkit'
+
+research\benchmark_v3\prepare_features.py:42: ModuleNotFoundError</failure></testcase><testcase classname="tests.research.test_feature_projection_v3" name="test_duplicate_or_ineligible_pool_still_blocks_cross_role_collision" time="0.002" /><testcase classname="tests.research.test_feature_projection_v3" name="test_failed_bounded_read_is_charged_and_cannot_become_an_empty_collision_pool" time="0.002" /><testcase classname="tests.research.test_feature_projection_v3" name="test_chemical_audit_computes_exact_overlap_and_excludes_empty_scaffolds" time="0.005"><failure message="ModuleNotFoundError: No module named 'rdkit'">def test_chemical_audit_computes_exact_overlap_and_excludes_empty_scaffolds():
+&gt;       from rdkit.Chem import rdFingerprintGenerator
+E       ModuleNotFoundError: No module named 'rdkit'
+
+tests\research\test_feature_projection_v3.py:126: ModuleNotFoundError</failure></testcase><testcase classname="tests.research.test_feature_reserve_expansion_v3" name="test_previous_source_and_frozen_configuration_are_unchanged" time="0.002" /><testcase classname="tests.research.test_feature_reserve_expansion_v3" name="test_only_declared_entrypoint_and_output_identity_changes" time="0.002" /><testcase classname="tests.research.test_feature_reserve_expansion_v3" name="test_only_reserve_and_version_provenance_change_in_configuration" time="0.002" /><testcase classname="tests.research.test_feature_reserve_expansion_v3" name="test_metadata_only_reserve_matches_fixed_header_projection" time="0.373" /><testcase classname="tests.research.test_feature_reserve_expansion_v3" name="test_old_ranked_reserves_are_subsets_with_original_order" time="0.225" /><testcase classname="tests.research.test_feature_reserve_expansion_v3" name="test_hidden_values_cannot_change_structure_projection_or_purge[research.benchmark_v3.prepare_features]" time="0.002" /><testcase classname="tests.research.test_feature_reserve_expansion_v3" name="test_hidden_values_cannot_change_structure_projection_or_purge[research.benchmark_v3.prepare_features_v2]" time="0.001" /><testcase classname="tests.research.test_feature_reserve_expansion_v3" name="test_v2_incomplete_capped_projection_aborts_instead_of_omitting_collision_pool" time="0.001" /></testsuite></testsuites>

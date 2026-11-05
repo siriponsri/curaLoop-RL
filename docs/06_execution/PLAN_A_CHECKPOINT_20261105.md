@@ -1,5 +1,9 @@
 # Plan A checkpoint: data revision required before Goal 4
 
+Later 5 November update: the owner approved A and the new feature-v2 cohort
+passed4/2/12groups. Read [current Goal3 readiness](GOAL3_READINESS_REVISION_A_20261105.md).
+The older pending-decision checkpoint below is retained as history.
+
 5 November 2026, Asia/Bangkok. **Goal3 IN_PROGRESS; Goal4 real-data work NOT_RUN.**
 Authorized window:4November22:37:04UTC to5November22:37:04UTC,48CPU-hours total,
 maximum4CPU workers. This checkpoint does not complete Goals3–4 or authorize

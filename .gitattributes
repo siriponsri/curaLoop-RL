@@ -65,3 +65,6 @@ tools/run_plan_a_constructed_checks_v1.py -text whitespace=cr-at-eol
 docs/evidence/plan-a-20261105-v1/** whitespace=cr-at-eol
 # Keep the captured failed-test traceback byte-for-byte, including indentation.
 docs/evidence/plan-a-20261105-v1/plan-a-return-tests-v1.xml whitespace=-blank-at-eol,cr-at-eol
+tools/*goal3*_v2.py -text whitespace=cr-at-eol
+tools/run_goal3_revision_a_checks_v2.py -text whitespace=cr-at-eol
+docs/evidence/plan-a-20261105-v1/revision-a-checks-v2.* whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol

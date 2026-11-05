@@ -1,0 +1,19 @@
+{
+  "verdict": "PASS_SCOPED_FEATURE_COUNT_AND_ARTIFACT_INTEGRITY_GATE",
+  "reviewer": "Independent read-only cohort_a_review agent; parent transcribed report",
+  "checked": ["public feature result", "chemical audit", "readback", "freeze and exact source/config hashes", "v1 original feature hashes"],
+  "result_sha256": "5b2f0596f385d9f2e495a768cd98159d71663c0486911145597cde215341f609",
+  "chemical_audit_sha256": "03e74b83a19fbc68462b3ab8b8ef4be25c51c42f434fee1ff456bc9748992914",
+  "readback_sha256": "70300d19fe6daa0daebc0dc610ffb646781a55ba02bd55dc8ca6c881affef702",
+  "selected_groups": {"development": 4, "validation": 2, "final": 12},
+  "v1_source_config_public_result_original_feature_hashes_preserved": true,
+  "frozen_v2_sources_config_match": true,
+  "no_source_outcomes_or_feature_records_semantically_read_by_reviewer": true,
+  "limits": [
+    "Annotation-connected components, not certified independent evolutionary families",
+    "Shared scaffolds and near analogues remain; no chemical OOD claim",
+    "Within-role repeats and only two validation components limit uncertainty/generalization",
+    "Readback trusts frozen chemistry routines rather than independent full reprocessing",
+    "No calibration, method utility, novelty or journal-readiness evidence"
+  ]
+}

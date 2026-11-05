@@ -1,0 +1,44 @@
+{
+  "created_utc": "2026-11-05T12:00:34.424757+00:00",
+  "status": "PASS_CONSERVATIVE_CHARGE",
+  "previous_snapshot": "budget-after-constructed-v1.json",
+  "previous_recorded_cpu_seconds": 68.46875,
+  "new_jobs": [
+    {
+      "path": "research/raw_data/external-benchmarks/fs-mol-0.1/feature-cohort-v2/resources.json",
+      "status": "PASS",
+      "cpu_seconds": 120.484375,
+      "wall_seconds": 210.68799999996554
+    },
+    {
+      "path": "docs/evidence/plan-a-20261105-v1/revision-a-checks-v2.resources.json",
+      "status": "FAIL",
+      "cpu_seconds": 2.453125,
+      "wall_seconds": 4.672000000020489
+    },
+    {
+      "path": "docs/evidence/plan-a-20261105-v1/revision-a-checks-v2b.resources.json",
+      "status": "PASS",
+      "cpu_seconds": 2.140625,
+      "wall_seconds": 11.875
+    },
+    {
+      "path": "docs/evidence/plan-a-20261105-v1/revision-a-audit-resources-v2.json",
+      "status": "PASS",
+      "cpu_seconds": 0.484375,
+      "wall_seconds": 0.9370000000344589
+    }
+  ],
+  "recorded_goal3_cpu_seconds": 194.03125,
+  "historical_unmetered_overhead_charge_seconds": 7200,
+  "revision_a_additional_unmetered_utility_charge_seconds": 300,
+  "goal3_charged_cpu_seconds": 7694.03125,
+  "goal3_ceiling_seconds": 28800,
+  "global_ceiling_seconds": 172800,
+  "goal4_ceiling_seconds": 144000,
+  "metadata_conservative_charged_bytes": 123663827,
+  "new_download_bytes": 0,
+  "exhaustive_historical_accounting_certified": false,
+  "reserves_are_not_measured_usage": true,
+  "goal4_campaigns_run": 0
+}

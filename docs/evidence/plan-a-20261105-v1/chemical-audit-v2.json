@@ -1,0 +1,121 @@
+{
+  "status": "PASS_EXACT_PURGE_ONLY",
+  "threshold": 0.8,
+  "roles": {
+    "development": {
+      "unique_structures": 1107,
+      "structures_in_multiple_assays": 178,
+      "unique_nonempty_scaffolds": 710,
+      "acyclic_unique_structures": 0
+    },
+    "final": {
+      "unique_structures": 4416,
+      "structures_in_multiple_assays": 599,
+      "unique_nonempty_scaffolds": 2568,
+      "acyclic_unique_structures": 4
+    },
+    "validation": {
+      "unique_structures": 330,
+      "structures_in_multiple_assays": 0,
+      "unique_nonempty_scaffolds": 129,
+      "acyclic_unique_structures": 0
+    }
+  },
+  "cross_role_pairs": [
+    {
+      "roles": [
+        "development",
+        "final"
+      ],
+      "exact_canonical_overlap": 0,
+      "shared_nonempty_scaffolds": 63,
+      "nearest": {
+        "development_to_final": {
+          "query_n": 1107,
+          "count_at_least_threshold": 4,
+          "mean_nearest_tanimoto": 0.3794857583150862,
+          "max_nearest_tanimoto": 0.864406779661017
+        },
+        "final_to_development": {
+          "query_n": 4416,
+          "count_at_least_threshold": 4,
+          "mean_nearest_tanimoto": 0.3192432196904764,
+          "max_nearest_tanimoto": 0.864406779661017
+        }
+      }
+    },
+    {
+      "roles": [
+        "development",
+        "validation"
+      ],
+      "exact_canonical_overlap": 0,
+      "shared_nonempty_scaffolds": 0,
+      "nearest": {
+        "development_to_validation": {
+          "query_n": 1107,
+          "count_at_least_threshold": 0,
+          "mean_nearest_tanimoto": 0.19481251681033693,
+          "max_nearest_tanimoto": 0.46551724137931033
+        },
+        "validation_to_development": {
+          "query_n": 330,
+          "count_at_least_threshold": 0,
+          "mean_nearest_tanimoto": 0.2720714888700372,
+          "max_nearest_tanimoto": 0.46551724137931033
+        }
+      }
+    },
+    {
+      "roles": [
+        "final",
+        "validation"
+      ],
+      "exact_canonical_overlap": 0,
+      "shared_nonempty_scaffolds": 0,
+      "nearest": {
+        "final_to_validation": {
+          "query_n": 4416,
+          "count_at_least_threshold": 0,
+          "mean_nearest_tanimoto": 0.20513408474827693,
+          "max_nearest_tanimoto": 0.4318181818181818
+        },
+        "validation_to_final": {
+          "query_n": 330,
+          "count_at_least_threshold": 0,
+          "mean_nearest_tanimoto": 0.27030096746071003,
+          "max_nearest_tanimoto": 0.4318181818181818
+        }
+      }
+    }
+  ],
+  "prior_reference_n": 8678,
+  "prior_reference_overlap": {
+    "development": {
+      "exact_canonical_overlap": 0,
+      "shared_nonempty_scaffolds": 54,
+      "query_n": 1107,
+      "count_at_least_threshold": 5,
+      "mean_nearest_tanimoto": 0.3905103105350326,
+      "max_nearest_tanimoto": 1.0
+    },
+    "final": {
+      "exact_canonical_overlap": 0,
+      "shared_nonempty_scaffolds": 144,
+      "query_n": 4416,
+      "count_at_least_threshold": 10,
+      "mean_nearest_tanimoto": 0.36107890318995056,
+      "max_nearest_tanimoto": 1.0
+    },
+    "validation": {
+      "exact_canonical_overlap": 0,
+      "shared_nonempty_scaffolds": 0,
+      "query_n": 330,
+      "count_at_least_threshold": 0,
+      "mean_nearest_tanimoto": 0.308472264265357,
+      "max_nearest_tanimoto": 0.5319148936170213
+    }
+  },
+  "chemical_ood_claim": false,
+  "scaffold_and_analogue_purge": false
+}

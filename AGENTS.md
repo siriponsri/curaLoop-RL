@@ -11,11 +11,15 @@ before unresolved material choices; no Goal5/final study or journal action.
 Retrieve and hash-verify task code/data/artifacts/evidence locally before
 deleting verified task-owned remote code/data. Never delete other projects.
 
-Current checkpoint: metadata/rights/preparation reviews passed in their scoped
-senses; first frozen feature-only cohort FAILED4/2/12quotas at2/2/7groups.
-Do not edit frozen feature-v1 sources/outputs or start real Goal4 campaigns.
-Owner revision choice is pending; follow the newest accepted revision if one
-arrives. Exact chemical purge/no chemical OOD claim is owner-selected. Trusted
+Current checkpoint: owner-approved revision A passed4/2/12annotation-connected
+group quotas,6/2/16assays; first failed2/2/7attempt remains intact. Do not edit
+frozen feature-v1/v2 sources/configurations/outputs. Follow
+`docs/06_execution/GOAL3_READINESS_REVISION_A_20261105.md` and its dataset card.
+Goal4 is authorized after private evaluator/protocol checks and freeze; final
+outcomes remain reserved. The owner approved reserve expansion A; follow
+`docs/06_execution/GOAL3_REVISION_A_AUTHORIZATION_20261105.md`. Freeze a new
+preparation version before new member access; real Goal4 remains conditional
+on its data/readiness gates. Exact chemical purge/no chemical OOD claim is owner-selected. Trusted
 row parsing suppressed outcome values; no semantic final evaluation occurred.
 Old Goal2 and current PlanA audit/helper roots were fully returned/hash-verified
 and deleted, including the PlanA export root; see the latest checkpoint report.

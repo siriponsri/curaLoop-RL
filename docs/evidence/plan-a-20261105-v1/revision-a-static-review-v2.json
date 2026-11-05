@@ -1,0 +1,22 @@
+{
+  "status": "PASS_FOR_FREEZE",
+  "reviewer": "Independent read-only cohort_a_review agent; parent transcribed returned review",
+  "preparer": "research/benchmark_v3/prepare_features_v2.py",
+  "preparer_sha256": "9a6d0bc90fee123ef42ad33a1f01602e80fcc80adcab0170e1ef9f920d2d0cf7",
+  "draft_config_sha256": "a9dd7ec1716faf84936012ba9e106a0372d75fad039dc059a90a8df18576324d",
+  "freeze_helper_sha256": "47c419d07b2a446cde6976da82ae0d80250080ba7ae1021022da7b4ebdc576bd",
+  "checks_inspected": "revision-a-checks-v2b: 15 tests, zero failures/errors/skips; all nine tested file hashes match; reviewer did not rerun tests",
+  "metadata_only_projection": {
+    "reserve_groups": {"development": 40, "validation": 34, "final": 65},
+    "assays": 457,
+    "compressed_bytes": 35997355,
+    "maximum_member_bytes": 4712666
+  },
+  "preparer_diff": "Exactly three substitutions: docstring, configuration filename, output directory; projection/purge/ranking/selection unchanged",
+  "criteria_limits_roles_ranks_preserved": true,
+  "v1_source_configuration_unchanged": true,
+  "freeze_helper_exact_identities_rights_tests_registry_checks": "PASS",
+  "assay_contents_labels_feature_records_accessed_by_reviewer": false,
+  "real_cohort_gate": "NOT_RUN",
+  "scope": "Static source/config/freeze-helper review and receipt inspection only; not cohort or Goal4 completion"
+}

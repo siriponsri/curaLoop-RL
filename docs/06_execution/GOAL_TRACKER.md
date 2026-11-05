@@ -9,8 +9,8 @@ Repository artifacts remain English. Goal2 base is main commit `729e13b`.
 | --- | --- | --- |
 | 1 | Select an ambitious, defensible research thesis; closest-work challenge, mechanism example, validation and stop criteria | COMPLETE: reviewed planning decision; novelty/benefit not yet established |
 | 2 | Real paper-backed assay prototype, exact tiny-state oracles, matched cheap controls and external benchmark acquisition | COMPLETE as a bounded challenge; computational/discovery advantage not demonstrated; owner FS-Mol archive byte-verified 5 November, not ingested |
-| 3 | Close data rights/endpoints, feature overlap, family/source and operational splits for the broader study | AUTHORIZED; IN_PROGRESS; metadata review passed; first feature cohort FAIL at2/2/7groups; revision choice pending |
-| 4 | Development training/adapter/baseline feasibility, resource measurement and final design freeze | CONDITIONALLY_AUTHORIZED in Plan A; NOT_STARTED until Goal3 readiness gate |
+| 3 | Close data rights/endpoints, feature overlap, family/source and operational splits for the broader study | COMPLETE scoped readiness after owner-approved A:4/2/12annotation-connected groups,6/2/16assays; first failed2/2/7attempt retained |
+| 4 | Development training/adapter/baseline feasibility, resource measurement and final design freeze | AUTHORIZED in Plan A; IN_PROGRESS at evaluator/protocol preparation; campaigns NOT_RUN |
 | 5 | Frozen held-out study, uncertainty/ablation analysis and independent reproduction | PROPOSED; NOT_STARTED |
 | 6A | English manuscript/figures/supplement/reproduction package and venue fit, ready for human author review | PROPOSED; NOT_STARTED; older review drafts already exist |
 | 6B | Actual submission of the exact human-reviewed package within the confirmed publication budget | PROPOSED; NOT_AUTHORIZED; declarations and final approval required |

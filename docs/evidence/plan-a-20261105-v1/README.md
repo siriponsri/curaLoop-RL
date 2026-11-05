@@ -1,5 +1,15 @@
 # Plan A execution evidence
 
+Latest 5 November revision: the owner approved A. The
+[new result](feature-cohort-v2-result.json), [chemical audit](chemical-audit-v2.json),
+[readback](revision-a-feature-readback-v2.json), [independent review](revision-a-postrun-review-v2.json)
+and [English review](revision-a-english-review-v2.json) support scoped Goal3
+readiness at 4/2/12 annotation-connected groups, with 6/2/16 assays. See the
+[dataset card](../../03_research/FSMOL_DATASET_CARD_V2.md) and
+[updated budget](revision-a-budget-v2.json). The first failed cohort remains
+intact. Goal4 proceeds to evaluator/protocol freeze; final outcomes stay reserved.
+The earlier pending-decision descriptions below are historical.
+
 5 November 2026. **Goal3 IN_PROGRESS / first cohort FAIL / Goal4 NOT_RUN.**
 Owner authorization covers Goals3–4,48CPU-hours/24hours/maximum4CPUs, with
 verified task-local remote retrieval followed by deletion. The

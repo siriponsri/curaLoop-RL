@@ -1,0 +1,8 @@
+{
+  "status": "FAILED_CHECK_ATTEMPT_RETAINED",
+  "failed_attempt": "revision-a-checks-v2",
+  "cause": "Default Python 3.13 environment lacked RDKit; two existing chemical tests failed with ModuleNotFoundError, thirteen tests passed.",
+  "repair": "Use the existing repository .venv Python 3.12 environment and a new v2b check receipt; no package installation or scientific source/test change.",
+  "original_failure_log_and_xml_preserved": true,
+  "new_assay_members_read": false
+}

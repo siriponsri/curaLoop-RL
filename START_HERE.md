@@ -2,6 +2,13 @@
 
 ## Current local continuation
 
+Latest 5 November checkpoint: owner-approved reserve expansion A passed
+4/2/12 annotation-connected groups, with 6/2/16 assays. Read the
+[dataset card](docs/03_research/FSMOL_DATASET_CARD_V2.md) and
+[Goal3 readiness](docs/06_execution/GOAL3_READINESS_REVISION_A_20261105.md).
+Goal4 now proceeds to evaluator/protocol checks and freeze; final outcomes stay
+reserved. Earlier first-cohort/pending-decision descriptions below are history.
+
 Active work: owner-authorized [Plan A, Goals3–4](docs/06_execution/PLAN_A_EXECUTION_CONTRACT_20261105.md),
 48 CPU-hours/24 hours, maximum4CPU workers. Goal3 metadata/header/source audits
 and a frozen feature-only preparation ran; Goal4 fitting/campaigns wait for the readiness gate. The owner
