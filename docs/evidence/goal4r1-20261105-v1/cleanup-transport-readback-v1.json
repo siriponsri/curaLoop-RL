@@ -1,0 +1,14 @@
+{
+  "status": "LOCAL_REPLY_PARSE_FAILED_REMOTE_ABSENCE_VERIFIED_SEPARATELY",
+  "local_controller_exit_code": 1,
+  "exception": "JSONDecodeError: Extra data: line 2 column 1 (char 239)",
+  "cause": "Pinned preservation core and scoped wrapper each print one JSON receipt; the original local parser expected only one object",
+  "remote_transport_returned_stdout_without_error": true,
+  "raw_cleanup_stdout_retained": false,
+  "cleanup_was_not_retried": true,
+  "authoritative_fresh_readback": "remote-absence-v1.json",
+  "readback_status": "PASS_ALL_SCOPED_ROOTS_AND_IDENTIFIED_FIXTURES_ABSENT",
+  "complete_local_return_verified_before_cleanup": true,
+  "original_controller_preserved_local": ".local/goal4r1-20261105-v1/local-controller-history/pre-multijson-fix.py",
+  "repair": "Decode and retain sequential JSON objects; engineering regression added without new scientific execution"
+}

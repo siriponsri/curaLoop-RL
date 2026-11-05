@@ -1,6 +1,36 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
-## Latest owner review packet, 5 November
+## Current 4R1 completed checkpoint
+
+Read [4R1 results](docs/03_research/GOAL4R1_RESULTS_V1.md),
+[closeout](docs/06_execution/GOAL4R1_CLOSEOUT_20261105.md) and
+[evidence index](docs/evidence/goal4r1-20261105-v1/README.md).
+The approved 8 CPU-hour/12-hour diagnosis ran on dr-train and ended with
+STOP_CURRENT_ACQUISITION_THESIS. GP is a promising development predictor repair;
+the current planner has no established incremental benefit. Do not use this
+as approval for 4R2/P1/Goal5 or open final outcomes. Four components and all four
+operating regimes are exposed; fresh validation remains a later data decision.
+
+Main base was `6e1458326300a4042f805dac9e73b98f16180dbc`.
+Protocol SHA `eea121b9fdac7bcde6fb32fb600c983caeb5f37bc7bee9e4e123a71885c025d4`.
+Source/config/result bytes are frozen. 22 remote numerical/privacy/resource tests
+and 7 reporting checks passed; one local transport regression passed. There were
+3,072 scientific campaigns, 52 campaign canaries and 52 reexecutions; all 3,176 logs
+reconciled and 52/52 signatures matched. Predictor diagnostics were 576 cases plus
+12 canaries.
+
+Complete local retention:
+`.local/goal4r1-20261105-v1/remote-return/full-v1/`, containing original ZIP/manifest,
+raw/enhanced proofs and 11,499 regular files/401,454,270 bytes under `files/`.
+Tree SHA `bac64858e3674fb30b2d669ce43d4141ad23bb9ceb618e655c003c31a882fcb5`.
+The fresh 5 Nov 16:13:35 UTC probe found both new roots, five historical roots and
+two identified synthetic fixture leaves absent. Never recreate those roots.
+Conservative charge 0.69755 CPU-hours/8 includes utility reserves; exact exhaustive
+host accounting is not certified. No GPU, paid service, final study or live
+connector was used. The final delivery commit contains these artifacts; check
+current Git HEAD and origin/main for publication state before continuing.
+
+## Historical proposal packet before 4R1 approval, 5 November
 
 The owner requested a method/predictor redesign proposal and deep related-paper
 research, then added an automatic agentic R&D plugin/business direction. Selected

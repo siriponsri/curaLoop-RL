@@ -1,0 +1,216 @@
+{
+  "status": "PASS_REMOTE_EXECUTION_COMPLETE_BEFORE_PRESERVATION",
+  "utc": "2026-11-05T15:51:43.193867+00:00",
+  "phase_actual_worker_cpu_seconds": {
+    "D0": 19.165569334999997,
+    "D1": 50.91430807100001,
+    "D2": 655.269980448,
+    "D3": 9.829722724
+  },
+  "analysis_cpu_inside_allowances": [
+    {
+      "file": "selection-resources.json",
+      "stage": "D1",
+      "actual_cpu_seconds": 0.163378325,
+      "sha256": "aa26fb79ae1635c718424856fafdc59f1c69c35bc5a401852bed1171e3bb0bbe"
+    },
+    {
+      "file": "reporting-check-resources.json",
+      "stage": "D3",
+      "actual_cpu_seconds": 0.147838626,
+      "sha256": "779941427b88468b2dfe344f4ee143d34944d73d85f8d24e164d51a2ebd72190"
+    },
+    {
+      "file": "analysis-resources.json",
+      "stage": "D3",
+      "actual_cpu_seconds": 2.66383521,
+      "sha256": "107c1c1e09ae557ba80bf198c438046d48f99b71f79a1f934c408b7195b5995a"
+    }
+  ],
+  "conservative_phase_charges_seconds": {
+    "D0": 625.1655693350001,
+    "D1": 180.914308071,
+    "D2": 793.269980448,
+    "D3": 911.829722724
+  },
+  "conservative_total_charge_seconds": 2511.1795805780002,
+  "utility_allowances_seconds": {
+    "D0": 600,
+    "D1": 120,
+    "D2": 120,
+    "D3": 900
+  },
+  "phase_caps_seconds": {
+    "D0": 3600,
+    "D1": 7200,
+    "D2": 10800,
+    "D3": 7200
+  },
+  "global_cap_seconds": 28800,
+  "exhaustive_exact_host_cpu_accounting": "NOT_CERTIFIED; startup margins and utility reserves are conservative",
+  "maximum_scientific_cpu_workers": 4,
+  "blas_threads_per_worker": 1,
+  "gpu_used": false,
+  "all_worker_receipts_passed": true,
+  "active_task_workers": 0,
+  "receipts": [
+    {
+      "phase": "setup",
+      "shard": 0,
+      "cpu_seconds": 16.026589012,
+      "wall_seconds": 18.989494198933244,
+      "finish_utc": "2026-11-05T15:02:58.012384+00:00",
+      "receipt_sha256": "3837f03a3a914fc4df0cc77a4943fa22c0dd06912df73be59c958709c28bfe7e"
+    },
+    {
+      "phase": "constructed",
+      "shard": 0,
+      "cpu_seconds": 1.583526383,
+      "wall_seconds": 1.599693630123511,
+      "finish_utc": "2026-11-05T15:08:46.707081+00:00",
+      "receipt_sha256": "8c616ef54d4f2b0f0a02474d058be7a362aabbf2cb522f220ad85eb79787c9b6"
+    },
+    {
+      "phase": "constructed",
+      "shard": 0,
+      "cpu_seconds": 1.55545394,
+      "wall_seconds": 1.597858915105462,
+      "finish_utc": "2026-11-05T15:11:31.780839+00:00",
+      "receipt_sha256": "b2f582fd95794df1d3d26681bd69543952424696e61e92fd04aa655714080aab"
+    },
+    {
+      "phase": "diagnosis_canary",
+      "shard": 0,
+      "cpu_seconds": 2.0843930740000003,
+      "wall_seconds": 2.0844328131061047,
+      "finish_utc": "2026-11-05T15:15:03.258623+00:00",
+      "receipt_sha256": "dd25d6506981aca093f54a3792c801eb2a018c33354d3a23fd83907b875a2d38"
+    },
+    {
+      "phase": "diagnosis",
+      "shard": 0,
+      "cpu_seconds": 8.642695841,
+      "wall_seconds": 8.64969098707661,
+      "finish_utc": "2026-11-05T15:17:26.472114+00:00",
+      "receipt_sha256": "df4d1a4122329b6efce3f40b3e3ad6f360de5093361d09c1e119a78d0ffca759"
+    },
+    {
+      "phase": "diagnosis",
+      "shard": 1,
+      "cpu_seconds": 15.952786693,
+      "wall_seconds": 15.963477097917348,
+      "finish_utc": "2026-11-05T15:17:33.789060+00:00",
+      "receipt_sha256": "cd485981eb6267deee870e006ab60a0c23051c90e7398a3cba27f7c2e2239a04"
+    },
+    {
+      "phase": "diagnosis",
+      "shard": 2,
+      "cpu_seconds": 8.756268444,
+      "wall_seconds": 8.761096441186965,
+      "finish_utc": "2026-11-05T15:17:26.587787+00:00",
+      "receipt_sha256": "2cb211dff04223f3f84e63a860b74b635c978126ca2b7f9e974ceaa2ffb024b6"
+    },
+    {
+      "phase": "diagnosis",
+      "shard": 3,
+      "cpu_seconds": 15.478164019000001,
+      "wall_seconds": 15.483018100028858,
+      "finish_utc": "2026-11-05T15:17:33.313880+00:00",
+      "receipt_sha256": "bb7f02fa1bb82a7c613248b39d52111e6162fd4b1c4610e6ad210c1c36993e4e"
+    },
+    {
+      "phase": "campaign_canary",
+      "shard": 0,
+      "cpu_seconds": 13.457108571000001,
+      "wall_seconds": 13.499873311957344,
+      "finish_utc": "2026-11-05T15:27:52.317786+00:00",
+      "receipt_sha256": "ebd35df7c40458487ef8f28495ea4c3accf42bc9f5eb596ff65ccdfa79dc3f6c"
+    },
+    {
+      "phase": "campaign",
+      "shard": 0,
+      "cpu_seconds": 105.980891986,
+      "wall_seconds": 106.00024013197981,
+      "finish_utc": "2026-11-05T15:32:04.723452+00:00",
+      "receipt_sha256": "b99aacc83f973c0463bf5e424cbc0ac034c6f88edfcb7ecbb0e683e5211a0b3b"
+    },
+    {
+      "phase": "campaign",
+      "shard": 1,
+      "cpu_seconds": 184.738734247,
+      "wall_seconds": 184.8101370499935,
+      "finish_utc": "2026-11-05T15:33:23.532212+00:00",
+      "receipt_sha256": "7b29eda13a55a9ee20a7f8a8ba269af1ad74ef2efa006e8f4d8c27e03c0d03ba"
+    },
+    {
+      "phase": "campaign",
+      "shard": 2,
+      "cpu_seconds": 132.963354783,
+      "wall_seconds": 133.05306747113355,
+      "finish_utc": "2026-11-05T15:32:31.777930+00:00",
+      "receipt_sha256": "20b2ea01cbf541de91fe8658b2da42e3100df7276850b68fe1a813c0bf2c6ed5"
+    },
+    {
+      "phase": "campaign",
+      "shard": 3,
+      "cpu_seconds": 114.39303222699999,
+      "wall_seconds": 114.4326268590521,
+      "finish_utc": "2026-11-05T15:32:13.161578+00:00",
+      "receipt_sha256": "430ff470fd1a10bf78d4c99ca494299667bf88ab5212ee08e7bf5a8db5197ed6"
+    },
+    {
+      "phase": "ablation",
+      "shard": 0,
+      "cpu_seconds": 27.227953058,
+      "wall_seconds": 27.235638812882826,
+      "finish_utc": "2026-11-05T15:34:22.914492+00:00",
+      "receipt_sha256": "75cf5587e9455da30d87ee9fc35826ef95eed4b93c63aadc070a114cbb6663a4"
+    },
+    {
+      "phase": "ablation",
+      "shard": 1,
+      "cpu_seconds": 26.423575900000003,
+      "wall_seconds": 26.425568360835314,
+      "finish_utc": "2026-11-05T15:34:22.105655+00:00",
+      "receipt_sha256": "2e0aa64ddf2e2b7bd369e46bfe4004b0e0c83894d354aeb7f80fbeb640ff307f"
+    },
+    {
+      "phase": "ablation",
+      "shard": 2,
+      "cpu_seconds": 25.709519522,
+      "wall_seconds": 25.71446613315493,
+      "finish_utc": "2026-11-05T15:34:21.395670+00:00",
+      "receipt_sha256": "2491436753e6fc9775d231d6b292c5a9556a1be5cf4820e9437c10931dba1801"
+    },
+    {
+      "phase": "ablation",
+      "shard": 3,
+      "cpu_seconds": 24.375810154,
+      "wall_seconds": 24.380574475973845,
+      "finish_utc": "2026-11-05T15:34:20.052493+00:00",
+      "receipt_sha256": "05e0d4759b26efd0c9c9ace8aed6a3f0b9e405732b69351ec30280cd1a656e0f"
+    },
+    {
+      "phase": "reexecution",
+      "shard": 0,
+      "cpu_seconds": 9.829722724,
+      "wall_seconds": 9.832330473000184,
+      "finish_utc": "2026-11-05T15:37:22.491364+00:00",
+      "receipt_sha256": "aa4a57242c56f1cd8f24cac01a219ec5f5644cad8288d6e4cd5652b1524ef8a1"
+    }
+  ],
+  "setup_actual_cpu_with_children": 16.026589012,
+  "setup_aggregate_watchdog_implemented": false,
+  "frozen_protocol_sha256": "eea121b9fdac7bcde6fb32fb600c983caeb5f37bc7bee9e4e123a71885c025d4",
+  "all_frozen_source_hashes_verified": true,
+  "main_campaigns": 2496,
+  "ablation_campaigns": 576,
+  "campaign_canary": 52,
+  "reexecution": 52,
+  "actual_campaign_executions": 3176,
+  "diagnostic_cases": 576,
+  "diagnostic_canary": 12,
+  "final_outcome_files": 0,
+  "source_sha256": "f15e72a5a5431d300efc2a3752c77328b42a2051f166eb2979a34a0ea8e68d90",
+  "preservation_status": "PENDING_FULL_LOCAL_RETURN_AND_VERIFICATION"
+}

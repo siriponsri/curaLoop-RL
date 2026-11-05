@@ -1,0 +1,192 @@
+{
+  "schema": "curaloop.goal4r1.protocol.v1",
+  "status": "FROZEN_BEFORE_NEW_CODE_EVALUATION",
+  "start_utc": "2026-11-05T14:43:55Z",
+  "deadline_utc": "2026-11-06T02:43:55Z",
+  "cpu_cap_seconds": 28800,
+  "phase_caps_seconds": {
+    "D0": 3600,
+    "D1": 7200,
+    "D2": 10800,
+    "D3": 7200
+  },
+  "host_workers_max": 4,
+  "compute_host": "dr-train",
+  "worker_memory_bytes": 1073741824,
+  "permitted_outcome_roles": [
+    "development"
+  ],
+  "tasks": [
+    {
+      "task_id": "CHEMBL1614225",
+      "role": "development",
+      "family_id": "typed-ancestry-3d78be158d61c2c9cfd8",
+      "rows": 168,
+      "sha256": "401489ebb1ec2a62eb3ea65d9a238d8c10b10fd9e771597368ec56847cff9780"
+    },
+    {
+      "task_id": "CHEMBL1738549",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "rows": 303,
+      "sha256": "22ff4ef6d917a8eac225cbadbaac5f12b60c158393a4925ebc8a029f4fe67cb2"
+    },
+    {
+      "task_id": "CHEMBL1738553",
+      "role": "development",
+      "family_id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "rows": 248,
+      "sha256": "49ac1b2b50c5b6ac03b3d056ea77025587d5c73bbe3b71903baa65b15f43ff38"
+    },
+    {
+      "task_id": "CHEMBL1737942",
+      "role": "development",
+      "family_id": "typed-ancestry-3bdd4e9dd09027c116b1",
+      "rows": 270,
+      "sha256": "b92f962479a74ab00f3fb4adc00fccd73bbf4c9688efc77917b329c8085fe7d1"
+    },
+    {
+      "task_id": "CHEMBL3705420",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "rows": 167,
+      "sha256": "9f47e7c3b987d321bcfb4f7717da7f7dea916c035526b6989138ad3d81e77f3b"
+    },
+    {
+      "task_id": "CHEMBL2219098",
+      "role": "development",
+      "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "rows": 129,
+      "sha256": "22efb01faef62dbc0c9144b3039684af585f2f44eb363b53daa41a5b79bac922"
+    }
+  ],
+  "seeds": [
+    101,
+    211,
+    307,
+    401,
+    503,
+    601,
+    701,
+    809
+  ],
+  "operations": [
+    {
+      "id": "sequential",
+      "role": "familiar",
+      "capacity": 1,
+      "law": {
+        "1": 1.0
+      },
+      "deadline": 12
+    },
+    {
+      "id": "async_mixed",
+      "role": "familiar",
+      "capacity": 2,
+      "law": {
+        "1": 0.5,
+        "4": 0.5
+      },
+      "deadline": 8
+    },
+    {
+      "id": "async_longtail",
+      "role": "held_out",
+      "capacity": 2,
+      "law": {
+        "1": 0.5,
+        "3": 0.25,
+        "9": 0.25
+      },
+      "deadline": 7
+    },
+    {
+      "id": "single_shift",
+      "role": "held_out",
+      "capacity": 1,
+      "law": {
+        "2": 0.5,
+        "5": 0.5
+      },
+      "deadline": 9
+    }
+  ],
+  "initial_labels": 16,
+  "budget": 12,
+  "hypotheses": 128,
+  "repair_variants": [
+    "anchor_normalized",
+    "tanimoto_gp"
+  ],
+  "main_arms": [
+    "anchor_original__greedy",
+    "anchor_original__frozen_greedy",
+    "anchor_original__event_dense",
+    "anchor_normalized__greedy",
+    "anchor_normalized__frozen_greedy",
+    "anchor_normalized__event_dense",
+    "tanimoto_gp__greedy",
+    "tanimoto_gp__frozen_greedy",
+    "tanimoto_gp__event_dense",
+    "fingerprint_rf",
+    "tanimoto_knn",
+    "nearest_hit",
+    "random"
+  ],
+  "diagnostic_predictors": [
+    "anchor_original",
+    "anchor_normalized",
+    "tanimoto_gp",
+    "fingerprint_rf",
+    "tanimoto_knn",
+    "nearest_hit"
+  ],
+  "diagnostic_supports": [
+    16,
+    28
+  ],
+  "query": "Same complement of nested28support for both supports",
+  "knn": {
+    "k": 8,
+    "weights": "Tanimoto",
+    "smoothing": "Beta(1,1)",
+    "tie": "candidate ID"
+  },
+  "gp": {
+    "intercept_variance": 4,
+    "tanimoto_amplitude": 1,
+    "nugget": 1e-08,
+    "likelihood": "logistic Bernoulli",
+    "inference": "observed-coordinate whitened MAP/Laplace",
+    "optimizer": {
+      "maxiter": 100,
+      "ftol": 1e-12,
+      "gtol": 1e-08,
+      "maxls": 30
+    },
+    "clip": 1e-09,
+    "sampling": "128 antithetic correlated pool functions via conditional Gaussian simulation"
+  },
+  "ablations": [
+    "no_wait",
+    "no_pending_information",
+    "timing_blind_tail"
+  ],
+  "canary_reuse": false,
+  "canary": "Largest development pool then taskID, seed101, all supports/predictors or all four operations/13arms",
+  "selection": "Minimum equal-component-macro query logloss at16support; exact tie lower mean fit CPU then lexicographic repair ID",
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 20261105,
+  "runtime_packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "threadpoolctl": "3.6.0",
+    "joblib": "1.5.3",
+    "pytest": "9.2.0"
+  },
+  "final_outcome_use": false,
+  "learned_controller": false,
+  "frozen_utc": "2026-11-05T15:13:44.709781+00:00"
+}

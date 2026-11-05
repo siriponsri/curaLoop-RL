@@ -1,6 +1,33 @@
 # Agent instructions: CuraLoop-RL
 
-## Current proposal-only direction, 5 November 2026
+## Current 4R1 closeout, 5 November 2026
+
+4R1 bounded diagnosis is complete: STOP_CURRENT_ACQUISITION_THESIS. Read
+`docs/03_research/GOAL4R1_RESULTS_V1.md` and
+`docs/06_execution/GOAL4R1_CLOSEOUT_20261105.md`. GP won the two-repair predictor
+selection and improved familiar-condition Greedy; incremental planning value is
+not established. All 3,176 actual campaign logs reconciled; 52/52 signatures
+reexecuted. Full 11,499-file return was reread/hash-verified before exact remote
+task/export and identified synthetic-fixture deletion. Fresh absence confirmed.
+Do not launch more 4R1 cases, 4R2, V2, P1 or Goal5 without the respective owner
+decision. Historical Goal4 scientific exit stays NOT_PASSED, final design
+NOT_FROZEN and final outcomes reserved. Preserve all frozen scientific bytes.
+
+## Active Goal 4R1 owner authorization, 5 November 2026
+
+The owner approved 4R1 after reviewing the proposal: 8 cumulative CPU-hours,
+12 elapsed hours, maximum 4 CPU workers. Start 2026-11-05T14:43:55Z; deadline
+2026-11-06T02:43:55Z (Bangkok 21:43:55 on 5 November to 09:43:55 on 6 November).
+Follow `docs/06_execution/GOAL4R1_EXECUTION_CONTRACT_20261105.md`.
+This supersedes proposal-only wording below for 4R1, not P1/4R2/V2/Goal5.
+Exactly two repairs plus old control; development-only selection, old validation
+exposed diagnostics, final outcomes reserved. Preserve all frozen old bytes.
+Parent remains sole writer; specialists review read-only. Normal main push is
+authorized. The owner subsequently directed CPU processing on dr-train directly;
+use a fresh owned root and verified full return before deletion. Local preparation
+and return verification remain permitted; scientific compute runs on dr-train.
+
+## Historical proposal direction before 4R1 approval, 5 November 2026
 
 The owner requested method/predictor proposals, deep related-paper research and
 an agentic plugin for future R&D/business use. The selected first plugin workflow
@@ -8,10 +35,11 @@ is paper/molecular-database search followed by plan/report delivery to team tool
 Read `docs/02_literature/REDESIGN_DEEP_REVIEW_20261105.md`,
 `docs/03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md` and
 `docs/04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md`.
-These are proposals, not a new experiment/window or live connector authorization.
-Goal4R1's 8CPU-hour/12-hour cap and P1 implementation need separate bounded
-approval. Preserve the old final panel and exposed-validation distinction.
-No new trials, final outcomes, remote processing or team-tool writes occurred.
+These documents proposed the redesign and plugin direction. The subsequent 4R1
+approval and completed diagnosis are recorded above; P1 implementation and live
+connector writes remain unapproved. Preserve the old final panel and
+exposed-validation distinction. No new trials or remote jobs had occurred at
+that proposal checkpoint; final outcomes and team-tool writes remain untouched.
 
 ## Active Plan A authorization, 5 November 2026
 

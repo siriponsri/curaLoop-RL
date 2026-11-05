@@ -82,3 +82,12 @@ docs/03_research/GOAL4_RESULTS_V1.md -text whitespace=cr-at-eol
 docs/06_execution/PLAN_A_CLOSEOUT_20261105.md -text whitespace=cr-at-eol
 docs/03_research/FSMOL_DATASET_CARD_V2.md -text whitespace=cr-at-eol
 docs/06_execution/GOAL3_READINESS_REVISION_A_20261105.md -text whitespace=cr-at-eol
+
+# Preserve evaluated Goal 4R1 runtime, configuration and constructed-check bytes.
+research/__init__.py -text whitespace=cr-at-eol
+research/redesign_v1/*.py -text whitespace=cr-at-eol
+research/configs/goal4r1_protocol_v1.json -text whitespace=cr-at-eol
+research/requirements_goal4r1_v1.txt -text whitespace=cr-at-eol
+tests/research/test_goal4r1*_v1.py -text whitespace=cr-at-eol
+tools/goal4r1_*.py -text whitespace=cr-at-eol
+tools/verify_goal4r1_return_v2.py -text whitespace=cr-at-eol

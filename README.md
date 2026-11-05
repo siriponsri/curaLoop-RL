@@ -62,14 +62,21 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 ## Research and R&D pilot programme
 
-Proposed next direction: [predictor and decision-value redesign](docs/03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md)
-and an [agentic R&D plugin](docs/04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md)
-for paper/database search and evidence-linked plans/reports. The
-[related-work review](docs/02_literature/REDESIGN_DEEP_REVIEW_20261105.md)
-records prior art and open questions. These proposals are not implemented or
-validated capabilities.
+Latest: [Goal 4R1 results](docs/03_research/GOAL4R1_RESULTS_V1.md) separate
+predictor gains from planning gains. The direct Tanimoto GP improves familiar-
+condition Greedy discovery on the development panel; incremental planning value
+remains unestablished. The bounded challenge and verified remote cleanup are
+[complete](docs/06_execution/GOAL4R1_CLOSEOUT_20261105.md). Final outcomes stay reserved.
 
-Latest: [Plan A, Goals 3–4](docs/06_execution/PLAN_A_CLOSEOUT_20261105.md)
+The reviewed [predictor/decision-value proposal](docs/03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md)
+led to the completed 4R1 diagnosis above. An
+[agentic R&D plugin](docs/04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md)
+for paper/database search and evidence-linked plans/reports remains proposed. The
+[related-work review](docs/02_literature/REDESIGN_DEEP_REVIEW_20261105.md)
+records prior art and open questions. Live plugin integration and broader
+method benefits remain unvalidated.
+
+Earlier: [Plan A, Goals 3–4](docs/06_execution/PLAN_A_CLOSEOUT_20261105.md)
 completed a paper-backed FS-Mol cohort and a frozen development/validation challenge.
 The candidate screening method was slower in matched timing checks; broader
 discovery benefit remains unestablished. Read the [results and limits](docs/03_research/GOAL4_RESULTS_V1.md).

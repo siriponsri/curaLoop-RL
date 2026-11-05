@@ -2,14 +2,21 @@
 
 ## Current local continuation
 
-Latest owner review packet: [deep related-work review](docs/02_literature/REDESIGN_DEEP_REVIEW_20261105.md),
+Latest completed goal: [4R1 results](docs/03_research/GOAL4R1_RESULTS_V1.md) and
+[closeout](docs/06_execution/GOAL4R1_CLOSEOUT_20261105.md). The bounded diagnosis
+completed with STOP_CURRENT_ACQUISITION_THESIS: GP improved familiar-condition
+Greedy, while incremental planning value remains unestablished. All regular task
+files returned/verified before scoped remote cleanup. Final outcomes remain reserved;
+P1 and a new research direction need separate owner decisions.
+
+Historical proposal packet before 4R1 approval: [deep related-work review](docs/02_literature/REDESIGN_DEEP_REVIEW_20261105.md),
 [Goal4R predictor/decision-value proposal](docs/03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md)
 and [agentic R&D plugin proposal](docs/04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md).
 The owner selected paper/molecular-database search and plan/report delivery as
-the first plugin workflow. Execution and live connections remain NOT_RUN;
-the proposed new budget/window and implementation require owner review.
+the first plugin workflow. The bounded 4R1 execution is reported above;
+plugin implementation and live connections remain NOT_RUN.
 
-Current closeout: [Plan A Goals 3–4](docs/06_execution/PLAN_A_CLOSEOUT_20261105.md)
+Earlier closeout: [Plan A Goals 3–4](docs/06_execution/PLAN_A_CLOSEOUT_20261105.md)
 completed the prescribed trials and remote closeout. The
 [Goal4 results](docs/03_research/GOAL4_RESULTS_V1.md) retain mixed discovery
 effects, slower screening and no optional WAIT by the selected-M128 planner. The method-advance gate was

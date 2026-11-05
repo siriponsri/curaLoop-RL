@@ -1,0 +1,1531 @@
+{
+  "status": "PASS_FIXED_CHALLENGE_AND_READBACK",
+  "utc": "2026-11-05T15:38:47.159960+00:00",
+  "selected_repair": "tanimoto_gp",
+  "main_campaigns": 2496,
+  "ablation_campaigns": 576,
+  "protocol_sha256": "eea121b9fdac7bcde6fb32fb600c983caeb5f37bc7bee9e4e123a71885c025d4",
+  "selection_sha256": "2215b354ed687af533bcb963c4b2c8280df76104173e8566c107ca7066878aec",
+  "selection_proof_sha256": "876a06282844ec350c94fbdfde3f9c5ab46a1bfb7c6cfe14efc89f19d20e4daa",
+  "reexecution_cases": 52,
+  "reexecution_signature_matches": 52,
+  "campaign_canary_cases": 52,
+  "actual_campaign_executions": 3176,
+  "actual_event_logs_reconciled": 3176,
+  "method_cells": [
+    {
+      "arm": "anchor_original__greedy",
+      "operation_role_provenance": "familiar",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 6.0078125,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 6.84375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.0625,
+        "typed-ancestry-52211aa39e1b3526ca3b": 7.25
+      },
+      "policy_cpu": 0.05414689914843834,
+      "policy_wall": 0.05387264013370441,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "anchor_original__frozen_greedy",
+      "operation_role_provenance": "familiar",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 5.8046875,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 6.09375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.8125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 6.4375
+      },
+      "policy_cpu": 0.03365559799218651,
+      "policy_wall": 0.033441270263210754,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "anchor_original__event_dense",
+      "operation_role_provenance": "familiar",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 6.15625,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 7.1875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.8125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.5,
+        "typed-ancestry-52211aa39e1b3526ca3b": 7.125
+      },
+      "policy_cpu": 0.08317388688281017,
+      "policy_wall": 0.08303820878609258,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "anchor_normalized__greedy",
+      "operation_role_provenance": "familiar",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 5.8125,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 6.75,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 6.1875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.4375,
+        "typed-ancestry-52211aa39e1b3526ca3b": 5.875
+      },
+      "policy_cpu": 0.053835435820311035,
+      "policy_wall": 0.053648231172701344,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 1
+    },
+    {
+      "arm": "anchor_normalized__frozen_greedy",
+      "operation_role_provenance": "familiar",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 5.53125,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 6.0,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 6.0625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.8125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 5.25
+      },
+      "policy_cpu": 0.0373915817187493,
+      "policy_wall": 0.03707869731624669,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "anchor_normalized__event_dense",
+      "operation_role_provenance": "familiar",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 5.6953125,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 6.6875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 6.125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 5.84375
+      },
+      "policy_cpu": 0.08149914551562534,
+      "policy_wall": 0.08122462105711747,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 1
+    },
+    {
+      "arm": "tanimoto_gp__greedy",
+      "operation_role_provenance": "familiar",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 6.9609375,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 7.53125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 6.25,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 6.6875,
+        "typed-ancestry-52211aa39e1b3526ca3b": 7.375
+      },
+      "policy_cpu": 0.08561734395312541,
+      "policy_wall": 0.08524228492024122,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "tanimoto_gp__frozen_greedy",
+      "operation_role_provenance": "familiar",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 6.6953125,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 7.65625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.6875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 6.875,
+        "typed-ancestry-52211aa39e1b3526ca3b": 6.5625
+      },
+      "policy_cpu": 0.061486135632812494,
+      "policy_wall": 0.06114919116043893,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "tanimoto_gp__event_dense",
+      "operation_role_provenance": "familiar",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 7.0546875,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 7.375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 6.3125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 7.125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 7.40625
+      },
+      "policy_cpu": 0.11408018800781239,
+      "policy_wall": 0.1136799572777818,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "fingerprint_rf",
+      "operation_role_provenance": "familiar",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 6.703125,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 6.9375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 5.6875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 6.9375,
+        "typed-ancestry-52211aa39e1b3526ca3b": 7.25
+      },
+      "policy_cpu": 1.723796005937499,
+      "policy_wall": 1.723522612330271,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "tanimoto_knn",
+      "operation_role_provenance": "familiar",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 6.671875,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 6.65625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 6.8125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 6.0,
+        "typed-ancestry-52211aa39e1b3526ca3b": 7.21875
+      },
+      "policy_cpu": 0.06378008110156118,
+      "policy_wall": 0.06332630768338277,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "nearest_hit",
+      "operation_role_provenance": "familiar",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 6.671875,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 7.09375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 6.0,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 8.125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 5.46875
+      },
+      "policy_cpu": 0.033119201851561794,
+      "policy_wall": 0.03276769977492222,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "random",
+      "operation_role_provenance": "familiar",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 4.2734375,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 3.9375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 4.5,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 4.25,
+        "typed-ancestry-52211aa39e1b3526ca3b": 4.40625
+      },
+      "policy_cpu": 0.0022498436171876045,
+      "policy_wall": 0.001776370161678642,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "tanimoto_gp__no_wait",
+      "operation_role_provenance": "familiar",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 7.0546875,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 7.375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 6.3125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 7.125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 7.40625
+      },
+      "policy_cpu": 0.11136093532031249,
+      "policy_wall": 0.11121713037209702,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "tanimoto_gp__no_pending_information",
+      "operation_role_provenance": "familiar",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 7.0625,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 7.34375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 6.3125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 7.1875,
+        "typed-ancestry-52211aa39e1b3526ca3b": 7.40625
+      },
+      "policy_cpu": 0.11308145121093757,
+      "policy_wall": 0.11293096789995616,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "tanimoto_gp__timing_blind_tail",
+      "operation_role_provenance": "familiar",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 6.8046875,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 7.25,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 6.1875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 6.8125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 6.96875
+      },
+      "policy_cpu": 0.1158982549453125,
+      "policy_wall": 0.11538526713229658,
+      "optional_waits": 28,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "anchor_original__greedy",
+      "operation_role_provenance": "held_out",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 2.2109375,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.6875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.5625,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.46875
+      },
+      "policy_cpu": 0.04018483217187607,
+      "policy_wall": 0.039923433721924084,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "anchor_original__frozen_greedy",
+      "operation_role_provenance": "held_out",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 2.125,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.4375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.375,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.3125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.375
+      },
+      "policy_cpu": 0.03258647980468756,
+      "policy_wall": 0.03251769279449945,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "anchor_original__event_dense",
+      "operation_role_provenance": "held_out",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 2.15625,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.5625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.375,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.5625
+      },
+      "policy_cpu": 0.05803414221093674,
+      "policy_wall": 0.05769893315118679,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "anchor_normalized__greedy",
+      "operation_role_provenance": "held_out",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 2.25,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.5625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.4375,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.375
+      },
+      "policy_cpu": 0.041649751382813766,
+      "policy_wall": 0.04135520055569941,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "anchor_normalized__frozen_greedy",
+      "operation_role_provenance": "held_out",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 1.9609375,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.34375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.1875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.375,
+        "typed-ancestry-52211aa39e1b3526ca3b": 1.9375
+      },
+      "policy_cpu": 0.036832616453125924,
+      "policy_wall": 0.03662844642713026,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "anchor_normalized__event_dense",
+      "operation_role_provenance": "held_out",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 2.1484375,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.21875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.5,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.4375,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.4375
+      },
+      "policy_cpu": 0.06142541704687536,
+      "policy_wall": 0.061169484521087725,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "tanimoto_gp__greedy",
+      "operation_role_provenance": "held_out",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 2.2578125,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.46875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 1.9375,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 2.3125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.3125
+      },
+      "policy_cpu": 0.06699456844531321,
+      "policy_wall": 0.06640160776260018,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "tanimoto_gp__frozen_greedy",
+      "operation_role_provenance": "held_out",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 2.4296875,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.84375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 1.9375,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 2.5,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.4375
+      },
+      "policy_cpu": 0.05868752464843861,
+      "policy_wall": 0.058578028349074884,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "tanimoto_gp__event_dense",
+      "operation_role_provenance": "held_out",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 2.1875,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.5,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 1.625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 2.3125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.3125
+      },
+      "policy_cpu": 0.08601999810937459,
+      "policy_wall": 0.08587984902987955,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "fingerprint_rf",
+      "operation_role_provenance": "held_out",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 2.1875,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.40625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 1.9375,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.875,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.53125
+      },
+      "policy_cpu": 0.6610396851875009,
+      "policy_wall": 0.6602078272881045,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "tanimoto_knn",
+      "operation_role_provenance": "held_out",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 2.03125,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 1.6875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.75,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.5625
+      },
+      "policy_cpu": 0.03633696177343747,
+      "policy_wall": 0.0361652157134813,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "nearest_hit",
+      "operation_role_provenance": "held_out",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 2.3828125,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.59375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 2.5,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 2.3125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.125
+      },
+      "policy_cpu": 0.023531281710937955,
+      "policy_wall": 0.023341752859778353,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "random",
+      "operation_role_provenance": "held_out",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 1.640625,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 1.46875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 1.75,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.8125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 1.53125
+      },
+      "policy_cpu": 0.0016291412109378095,
+      "policy_wall": 0.000954225355599192,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "tanimoto_gp__no_wait",
+      "operation_role_provenance": "held_out",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 2.1875,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.5,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 1.625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 2.3125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.3125
+      },
+      "policy_cpu": 0.08416400389843759,
+      "policy_wall": 0.08374766868837469,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "tanimoto_gp__no_pending_information",
+      "operation_role_provenance": "held_out",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 2.234375,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.53125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 1.75,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 2.3125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.34375
+      },
+      "policy_cpu": 0.08300763280468729,
+      "policy_wall": 0.08270792371877178,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    },
+    {
+      "arm": "tanimoto_gp__timing_blind_tail",
+      "operation_role_provenance": "held_out",
+      "operation_exposure": "Previously evaluated; not untouched operating validation",
+      "campaigns": 96,
+      "H": 2.3203125,
+      "component_H": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 2.8125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 1.6875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 2.25,
+        "typed-ancestry-52211aa39e1b3526ca3b": 2.53125
+      },
+      "policy_cpu": 0.0839941174140627,
+      "policy_wall": 0.08385029390774434,
+      "optional_waits": 0,
+      "campaigns_with_fallback": 0
+    }
+  ],
+  "paired_contrasts": [
+    {
+      "left": "anchor_original__event_dense",
+      "right": "anchor_original__greedy",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": 0.1484375,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.34375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.0625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.4375,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.125
+      },
+      "descriptive_bootstrap_95": [
+        -0.09375,
+        0.390625
+      ],
+      "components": 4,
+      "range": [
+        -0.125,
+        0.4375
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "anchor_original__greedy",
+      "right": "anchor_original__frozen_greedy",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": 0.203125,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.75,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.0,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.75,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.8125
+      },
+      "descriptive_bootstrap_95": [
+        -0.375,
+        0.78125
+      ],
+      "components": 4,
+      "range": [
+        -0.75,
+        0.8125
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "anchor_normalized__event_dense",
+      "right": "anchor_normalized__greedy",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": -0.1171875,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.0625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.0625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.3125,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.03125
+      },
+      "descriptive_bootstrap_95": [
+        -0.25,
+        -0.0390625
+      ],
+      "components": 4,
+      "range": [
+        -0.3125,
+        -0.03125
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "anchor_normalized__greedy",
+      "right": "anchor_normalized__frozen_greedy",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": 0.28125,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.75,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.375,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.625
+      },
+      "descriptive_bootstrap_95": [
+        -0.125,
+        0.6875
+      ],
+      "components": 4,
+      "range": [
+        -0.375,
+        0.75
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "anchor_normalized__greedy",
+      "right": "anchor_original__greedy",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": -0.1953125,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.09375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.3125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.375,
+        "typed-ancestry-52211aa39e1b3526ca3b": -1.375
+      },
+      "descriptive_bootstrap_95": [
+        -0.953125,
+        0.34375
+      ],
+      "components": 4,
+      "range": [
+        -1.375,
+        0.375
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "tanimoto_gp__greedy",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": 0.09375,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.15625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.0625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.4375,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.03125
+      },
+      "descriptive_bootstrap_95": [
+        -0.1015625,
+        0.3359375
+      ],
+      "components": 4,
+      "range": [
+        -0.15625,
+        0.4375
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__greedy",
+      "right": "tanimoto_gp__frozen_greedy",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": 0.265625,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.5625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.1875,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.8125
+      },
+      "descriptive_bootstrap_95": [
+        -0.15625,
+        0.6875
+      ],
+      "components": 4,
+      "range": [
+        -0.1875,
+        0.8125
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__greedy",
+      "right": "anchor_original__greedy",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": 0.953125,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.6875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.375,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 2.625,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.125
+      },
+      "descriptive_bootstrap_95": [
+        0.25,
+        2.0625
+      ],
+      "components": 4,
+      "range": [
+        0.125,
+        2.625
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "anchor_original__event_dense",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": 0.8984375,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.1875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.5,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 2.625,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.28125
+      },
+      "descriptive_bootstrap_95": [
+        0.234375,
+        2.0390625
+      ],
+      "components": 4,
+      "range": [
+        0.1875,
+        2.625
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "anchor_original__greedy",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": 1.046875,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.53125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.4375,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 3.0625,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.15625
+      },
+      "descriptive_bootstrap_95": [
+        0.25,
+        2.40625
+      ],
+      "components": 4,
+      "range": [
+        0.15625,
+        3.0625
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "fingerprint_rf",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": 0.3515625,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.4375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.1875,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.15625
+      },
+      "descriptive_bootstrap_95": [
+        0.171875,
+        0.53125
+      ],
+      "components": 4,
+      "range": [
+        0.15625,
+        0.625
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "nearest_hit",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": 0.3828125,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.28125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.3125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -1.0,
+        "typed-ancestry-52211aa39e1b3526ca3b": 1.9375
+      },
+      "descriptive_bootstrap_95": [
+        -0.671875,
+        1.5234375
+      ],
+      "components": 4,
+      "range": [
+        -1.0,
+        1.9375
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "tanimoto_knn",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": 0.3828125,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.71875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.5,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 1.125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.1875
+      },
+      "descriptive_bootstrap_95": [
+        -0.1953125,
+        0.921875
+      ],
+      "components": 4,
+      "range": [
+        -0.5,
+        1.125
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "tanimoto_gp__no_wait",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": 0.0,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.0,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.0,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.0,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.0
+      },
+      "descriptive_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "components": 4,
+      "range": [
+        0.0,
+        0.0
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "tanimoto_gp__no_pending_information",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": -0.0078125,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.03125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.0,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.0625,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.0
+      },
+      "descriptive_bootstrap_95": [
+        -0.046875,
+        0.0234375
+      ],
+      "components": 4,
+      "range": [
+        -0.0625,
+        0.03125
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "tanimoto_gp__timing_blind_tail",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": 0.25,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.3125,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.4375
+      },
+      "descriptive_bootstrap_95": [
+        0.125,
+        0.375
+      ],
+      "components": 4,
+      "range": [
+        0.125,
+        0.4375
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "anchor_normalized__planning_gain",
+      "right": "anchor_original__planning_gain",
+      "contrast_type": "predictor_by_acquisition_interaction",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": -0.265625,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.40625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.0,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.75,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.09375
+      },
+      "descriptive_bootstrap_95": [
+        -0.578125,
+        0.046875
+      ],
+      "components": 4,
+      "range": [
+        -0.75,
+        0.09375
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__planning_gain",
+      "right": "anchor_original__planning_gain",
+      "contrast_type": "predictor_by_acquisition_interaction",
+      "operation_role_provenance": "familiar",
+      "mean_difference_H": -0.0546875,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.5,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.0,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.15625
+      },
+      "descriptive_bootstrap_95": [
+        -0.34375,
+        0.140625
+      ],
+      "components": 4,
+      "range": [
+        -0.5,
+        0.15625
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "anchor_original__event_dense",
+      "right": "anchor_original__greedy",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": -0.0546875,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.0,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.1875,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.09375
+      },
+      "descriptive_bootstrap_95": [
+        -0.15625,
+        0.046875
+      ],
+      "components": 4,
+      "range": [
+        -0.1875,
+        0.09375
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "anchor_original__greedy",
+      "right": "anchor_original__frozen_greedy",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": 0.0859375,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.25,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.25,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.25,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.09375
+      },
+      "descriptive_bootstrap_95": [
+        -0.125,
+        0.25
+      ],
+      "components": 4,
+      "range": [
+        -0.25,
+        0.25
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "anchor_normalized__event_dense",
+      "right": "anchor_normalized__greedy",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": -0.1015625,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.40625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.0625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.0,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.0625
+      },
+      "descriptive_bootstrap_95": [
+        -0.3046875,
+        0.03125
+      ],
+      "components": 4,
+      "range": [
+        -0.40625,
+        0.0625
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "anchor_normalized__greedy",
+      "right": "anchor_normalized__frozen_greedy",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": 0.2890625,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.28125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.375,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.0625,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.4375
+      },
+      "descriptive_bootstrap_95": [
+        0.140625,
+        0.40625
+      ],
+      "components": 4,
+      "range": [
+        0.0625,
+        0.4375
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "anchor_normalized__greedy",
+      "right": "anchor_original__greedy",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": 0.0390625,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.0625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.4375,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.125,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.09375
+      },
+      "descriptive_bootstrap_95": [
+        -0.109375,
+        0.3046875
+      ],
+      "components": 4,
+      "range": [
+        -0.125,
+        0.4375
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "tanimoto_gp__greedy",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": -0.0703125,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.03125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.3125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.0,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.0
+      },
+      "descriptive_bootstrap_95": [
+        -0.234375,
+        0.0234375
+      ],
+      "components": 4,
+      "range": [
+        -0.3125,
+        0.03125
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__greedy",
+      "right": "tanimoto_gp__frozen_greedy",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": -0.171875,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.0,
+        "typed-ancestry-3d78be158d61c2c9cfd8": -0.1875,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.125
+      },
+      "descriptive_bootstrap_95": [
+        -0.3125,
+        -0.046875
+      ],
+      "components": 4,
+      "range": [
+        -0.375,
+        0.0
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__greedy",
+      "right": "anchor_original__greedy",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": 0.046875,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.21875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.1875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.75,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.15625
+      },
+      "descriptive_bootstrap_95": [
+        -0.203125,
+        0.515625
+      ],
+      "components": 4,
+      "range": [
+        -0.21875,
+        0.75
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "anchor_original__event_dense",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": 0.03125,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.0625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.5,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.9375,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.25
+      },
+      "descriptive_bootstrap_95": [
+        -0.390625,
+        0.640625
+      ],
+      "components": 4,
+      "range": [
+        -0.5,
+        0.9375
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "anchor_original__greedy",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": -0.0234375,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.1875,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.5,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.75,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.15625
+      },
+      "descriptive_bootstrap_95": [
+        -0.4140625,
+        0.515625
+      ],
+      "components": 4,
+      "range": [
+        -0.5,
+        0.75
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "fingerprint_rf",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": 0.0,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.09375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.3125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.4375,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.21875
+      },
+      "descriptive_bootstrap_95": [
+        -0.265625,
+        0.2734375
+      ],
+      "components": 4,
+      "range": [
+        -0.3125,
+        0.4375
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "nearest_hit",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": -0.1953125,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.09375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.875,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.0,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.1875
+      },
+      "descriptive_bootstrap_95": [
+        -0.65625,
+        0.1171875
+      ],
+      "components": 4,
+      "range": [
+        -0.875,
+        0.1875
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "tanimoto_knn",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": 0.15625,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.375,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.0625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.5625,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.25
+      },
+      "descriptive_bootstrap_95": [
+        -0.15625,
+        0.46875
+      ],
+      "components": 4,
+      "range": [
+        -0.25,
+        0.5625
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "tanimoto_gp__no_wait",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": 0.0,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.0,
+        "typed-ancestry-3bdd4e9dd09027c116b1": 0.0,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.0,
+        "typed-ancestry-52211aa39e1b3526ca3b": 0.0
+      },
+      "descriptive_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "components": 4,
+      "range": [
+        0.0,
+        0.0
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "tanimoto_gp__no_pending_information",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": -0.046875,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.03125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.0,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.03125
+      },
+      "descriptive_bootstrap_95": [
+        -0.1015625,
+        -0.0078125
+      ],
+      "components": 4,
+      "range": [
+        -0.125,
+        0.0
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__event_dense",
+      "right": "tanimoto_gp__timing_blind_tail",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": -0.1328125,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.3125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.0625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.0625,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.21875
+      },
+      "descriptive_bootstrap_95": [
+        -0.265625,
+        0.0
+      ],
+      "components": 4,
+      "range": [
+        -0.3125,
+        0.0625
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "anchor_normalized__planning_gain",
+      "right": "anchor_original__planning_gain",
+      "contrast_type": "predictor_by_acquisition_interaction",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": -0.046875,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": -0.28125,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.0625,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.1875,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.03125
+      },
+      "descriptive_bootstrap_95": [
+        -0.21875,
+        0.125
+      ],
+      "components": 4,
+      "range": [
+        -0.28125,
+        0.1875
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    },
+    {
+      "left": "tanimoto_gp__planning_gain",
+      "right": "anchor_original__planning_gain",
+      "contrast_type": "predictor_by_acquisition_interaction",
+      "operation_role_provenance": "held_out",
+      "mean_difference_H": -0.015625,
+      "component_effects": {
+        "typed-ancestry-341ed92ba201e1cfedfc": 0.15625,
+        "typed-ancestry-3bdd4e9dd09027c116b1": -0.3125,
+        "typed-ancestry-3d78be158d61c2c9cfd8": 0.1875,
+        "typed-ancestry-52211aa39e1b3526ca3b": -0.09375
+      },
+      "descriptive_bootstrap_95": [
+        -0.203125,
+        0.171875
+      ],
+      "components": 4,
+      "range": [
+        -0.3125,
+        0.1875
+      ],
+      "interval_is_confirmatory_or_population_coverage": false
+    }
+  ],
+  "mechanism": [
+    {
+      "arm": "anchor_original__greedy",
+      "campaigns": 192,
+      "decisions": 1166,
+      "optional_waits": 0,
+      "forced_waits": 1166,
+      "fallback_decisions": 0,
+      "learned_controller_actions": 0,
+      "maximum_root_gap": 0
+    },
+    {
+      "arm": "anchor_original__frozen_greedy",
+      "campaigns": 192,
+      "decisions": 1169,
+      "optional_waits": 0,
+      "forced_waits": 1169,
+      "fallback_decisions": 0,
+      "learned_controller_actions": 0,
+      "maximum_root_gap": 0
+    },
+    {
+      "arm": "anchor_original__event_dense",
+      "campaigns": 192,
+      "decisions": 1159,
+      "optional_waits": 0,
+      "forced_waits": 1159,
+      "fallback_decisions": 0,
+      "learned_controller_actions": 0,
+      "maximum_root_gap": 8.881784197001252e-16
+    },
+    {
+      "arm": "anchor_normalized__greedy",
+      "campaigns": 192,
+      "decisions": 1161,
+      "optional_waits": 0,
+      "forced_waits": 1161,
+      "fallback_decisions": 1,
+      "learned_controller_actions": 0,
+      "maximum_root_gap": 0
+    },
+    {
+      "arm": "anchor_normalized__frozen_greedy",
+      "campaigns": 192,
+      "decisions": 1139,
+      "optional_waits": 0,
+      "forced_waits": 1139,
+      "fallback_decisions": 0,
+      "learned_controller_actions": 0,
+      "maximum_root_gap": 0
+    },
+    {
+      "arm": "anchor_normalized__event_dense",
+      "campaigns": 192,
+      "decisions": 1153,
+      "optional_waits": 0,
+      "forced_waits": 1153,
+      "fallback_decisions": 1,
+      "learned_controller_actions": 0,
+      "maximum_root_gap": 0.0
+    },
+    {
+      "arm": "tanimoto_gp__greedy",
+      "campaigns": 192,
+      "decisions": 1146,
+      "optional_waits": 0,
+      "forced_waits": 1146,
+      "fallback_decisions": 0,
+      "learned_controller_actions": 0,
+      "maximum_root_gap": 0
+    },
+    {
+      "arm": "tanimoto_gp__frozen_greedy",
+      "campaigns": 192,
+      "decisions": 1184,
+      "optional_waits": 0,
+      "forced_waits": 1184,
+      "fallback_decisions": 0,
+      "learned_controller_actions": 0,
+      "maximum_root_gap": 0
+    },
+    {
+      "arm": "tanimoto_gp__event_dense",
+      "campaigns": 192,
+      "decisions": 1145,
+      "optional_waits": 0,
+      "forced_waits": 1145,
+      "fallback_decisions": 0,
+      "learned_controller_actions": 0,
+      "maximum_root_gap": 0.0
+    },
+    {
+      "arm": "fingerprint_rf",
+      "campaigns": 192,
+      "decisions": 1164,
+      "optional_waits": 0,
+      "forced_waits": 1164,
+      "fallback_decisions": 0,
+      "learned_controller_actions": 0,
+      "maximum_root_gap": 0
+    },
+    {
+      "arm": "tanimoto_knn",
+      "campaigns": 192,
+      "decisions": 1159,
+      "optional_waits": 0,
+      "forced_waits": 1159,
+      "fallback_decisions": 0,
+      "learned_controller_actions": 0,
+      "maximum_root_gap": 0
+    },
+    {
+      "arm": "nearest_hit",
+      "campaigns": 192,
+      "decisions": 1173,
+      "optional_waits": 0,
+      "forced_waits": 1173,
+      "fallback_decisions": 0,
+      "learned_controller_actions": 0,
+      "maximum_root_gap": 0
+    },
+    {
+      "arm": "random",
+      "campaigns": 192,
+      "decisions": 1150,
+      "optional_waits": 0,
+      "forced_waits": 1151,
+      "fallback_decisions": 0,
+      "learned_controller_actions": 0,
+      "maximum_root_gap": 0
+    },
+    {
+      "arm": "tanimoto_gp__no_wait",
+      "campaigns": 192,
+      "decisions": 1145,
+      "optional_waits": 0,
+      "forced_waits": 1145,
+      "fallback_decisions": 0,
+      "learned_controller_actions": 0,
+      "maximum_root_gap": 0.0
+    },
+    {
+      "arm": "tanimoto_gp__no_pending_information",
+      "campaigns": 192,
+      "decisions": 1146,
+      "optional_waits": 0,
+      "forced_waits": 1146,
+      "fallback_decisions": 0,
+      "learned_controller_actions": 0,
+      "maximum_root_gap": 0.0
+    },
+    {
+      "arm": "tanimoto_gp__timing_blind_tail",
+      "campaigns": 192,
+      "decisions": 1172,
+      "optional_waits": 28,
+      "forced_waits": 1131,
+      "fallback_decisions": 0,
+      "learned_controller_actions": 0,
+      "maximum_root_gap": 0.0
+    }
+  ],
+  "development_assays": 6,
+  "annotation_components": 4,
+  "new_validation_or_final_labels_used": false,
+  "intervals": "Descriptive component bootstrap; only4 connected components, not independent population coverage",
+  "joint_dependence_interpretation": "Includes shared-intercept/prevalence and chemical covariance; not isolated chemical mechanism or calibrated counterfactual VOI",
+  "operation_roles": "Original familiar/held_out flags retained as provenance; all four regimes were previously evaluated",
+  "source_sha256": "7ac054eae9799ece9eafe212234b75ff2ea647ad373fc1e15379208b07a0ea7d",
+  "reporting_source_sha256": "07a6f20037730787ff615b666bded262a8be84791b341263b2e8530504c06084",
+  "final_study_design": "NOT_FROZEN",
+  "novel_method_established": false
+}

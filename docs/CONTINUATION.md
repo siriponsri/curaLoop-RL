@@ -1,12 +1,19 @@
-# Current checkpoint: Plan A Goals 3–4 closeout
+# Current checkpoint: Goal 4R1 closeout
 
-Latest review packet: [related-work investigation](02_literature/REDESIGN_DEEP_REVIEW_20261105.md),
+Current completed checkpoint: [4R1 results](03_research/GOAL4R1_RESULTS_V1.md) and
+[closeout](06_execution/GOAL4R1_CLOSEOUT_20261105.md). The bounded diagnosis
+finished with STOP_CURRENT_ACQUISITION_THESIS; GP helped familiar-condition
+Greedy, with no established incremental planning advance. Full local return
+and scoped remote cleanup are verified. Stop for the owner's next bounded goal;
+P1/new research/final outcomes remain outside this completed approval.
+
+Historical proposal packet: [related-work investigation](02_literature/REDESIGN_DEEP_REVIEW_20261105.md),
 [Goal4R proposal](03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md) and
 [agentic plugin proposal](04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md).
 The owner chose literature/molecular-source search followed by plan/report
-delivery to team tools as the first product workflow. This delivery is
-proposal-only. New trials/window, plugin implementation and live writes remain
-unstarted and require their respective bounded decisions.
+delivery to team tools as the first product workflow. Its 4R1 diagnostic approval
+has now been executed as reported above. Plugin implementation, live writes and
+any further study need their respective bounded decisions.
 
 The owner-approved A cohort passed 4/2/12 annotation-connected groups. The
 prescribed trial allocation completed 6,488 campaigns plus 64 calibration

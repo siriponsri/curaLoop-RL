@@ -1,9 +1,14 @@
 # Documentation map
 
-Current proposal packet: [deep related-work review](02_literature/REDESIGN_DEEP_REVIEW_20261105.md),
+Latest executed goal: [4R1 results](03_research/GOAL4R1_RESULTS_V1.md),
+[closeout](06_execution/GOAL4R1_CLOSEOUT_20261105.md) and
+[evidence](evidence/goal4r1-20261105-v1/README.md). Diagnosis completed with a stop
+decision for the current acquisition thesis; final-study design remains unfrozen.
+
+Reviewed proposal basis: [deep related-work review](02_literature/REDESIGN_DEEP_REVIEW_20261105.md),
 [Goal4R method/predictor proposal](03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md)
 and [agentic R&D plugin proposal](04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md).
-These are reviewable directions; experiments and live integrations are NOT_RUN.
+The subsequent 4R1 diagnosis is linked above; live plugin integration remains NOT_RUN.
 
 Sequential research: [Goal tracker](06_execution/GOAL_TRACKER.md),
 [Goal 2 real-data results](03_research/GOAL_02_RESULTS_V1.md),
