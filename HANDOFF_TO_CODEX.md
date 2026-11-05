@@ -13,6 +13,9 @@ review. Complete local retention and exact remote deletion proofs are in the
 closeout; all five scoped current/historical remote roots were checked absent.
 The final main closeout commit identifies these artifacts; previous pushed
 Goal3 checkpoint is `27aa3593d69d17122a40304ac82698ad6a7e6b95`.
+The two validation groups have now been evaluated and their aggregates released.
+A revised method must not reuse them as untouched validation. Prespecify new
+exposure/validation rules before additional selection; final outcomes stay sealed.
 
 ## Historical active Plan A checkpoint
 

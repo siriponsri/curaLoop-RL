@@ -20,6 +20,9 @@ validation, and retained negative/mixed results. Screening was slower in the
 matched timing test; the selected-M128 planner made no optional WAIT in its 256
 crossed campaigns. The method-advance gate
 is NOT_PASSED. Stop for owner review; do not launch Goal5 or a fourth candidate.
+Validation aggregates have now been released. After redesign, do not treat those
+two evaluated groups as untouched validation; freeze new exposure/validation
+rules before any further selection.
 Read `docs/06_execution/PLAN_A_CLOSEOUT_20261105.md` and
 `docs/03_research/GOAL4_RESULTS_V1.md`. Do not edit frozen feature/protocol/source
 or result bytes. Final outcomes remain reserved; no chemical OOD or certified
