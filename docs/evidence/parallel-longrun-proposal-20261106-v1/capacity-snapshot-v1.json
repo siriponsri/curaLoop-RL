@@ -1,0 +1,44 @@
+{
+  "status": "READ_ONLY_CAPACITY_SNAPSHOT_NOT_RESERVED",
+  "inspection_interval_utc": [
+    "2026-11-06T09:18:02Z",
+    "2026-11-06T09:21:20Z"
+  ],
+  "local": {
+    "cpu": "Intel Core i5-13420H",
+    "physical_cores": 8,
+    "logical_processors": 12,
+    "visible_memory_kib": 16429944,
+    "available_memory_kib": 2245560,
+    "disk_free_bytes": 65801736192,
+    "sampled_cpu_load_percent": 22,
+    "repo_venv_packages": {
+      "python": "3.12.10",
+      "rdkit": "2026.9.1",
+      "numpy": "2.3.5",
+      "scikit_learn": "1.8.0",
+      "torch": null
+    },
+    "native_runtime_or_parity_test": "NOT_RUN"
+  },
+  "remote": {
+    "host": "dr-train",
+    "utc": "2026-11-06T09:19:18Z",
+    "allowed_logical_cpus": 72,
+    "RAM_GiB": 125.76,
+    "available_RAM_GiB": 115.52,
+    "disk_free_GiB": 109.45,
+    "load_average": [
+      0.41796875,
+      0.64306640625,
+      0.74658203125
+    ],
+    "sanitized_python_job_count": 21,
+    "closed_A3_root_exists": false,
+    "exclusive_capacity": "NOT_RESERVED"
+  },
+  "new_study_or_remote_root_created": false,
+  "protected_data_access": false,
+  "source_intake": false,
+  "initial_local_query_attempts": "Formatting/projection errors; final structured snapshot used"
+}

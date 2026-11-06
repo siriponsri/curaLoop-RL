@@ -1,5 +1,9 @@
 # Documentation map
 
+Proposed next continuation: [parallel long run across local CPU and dr-train](06_execution/PARALLEL_LONG_RUN_PROPOSAL_20261106.md).
+LR-B/LR-BC preserve cumulative CPU accounting and use gated progression; this
+proposal has not been approved or started.
+
 Latest completed goal: [A3 qualification](03_research/GOAL4R2A3_QUALIFICATION_V1.md),
 [closeout](06_execution/GOAL4R2A3_CLOSEOUT_20261106.md) and
 [evidence](evidence/goal4r2a3-20261106-v1/README.md). Source/structure engineering
