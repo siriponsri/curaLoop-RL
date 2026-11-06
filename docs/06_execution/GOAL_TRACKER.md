@@ -21,6 +21,13 @@ Repository artifacts remain English. Goal2 base is main commit `729e13b`.
 | 6B | Actual submission of the exact human-reviewed package within the confirmed publication budget | PROPOSED; NOT_AUTHORIZED; declarations and final approval required |
 | 7 | Revisions and response to actual editorial review | FUTURE; depends on external feedback and a bounded revision contract |
 
+Before A3, the owner requested CPU/time expansion alternatives and excluded new
+paid model/API spending. The [resource options](PRE_A3_CPU_TIME_OPTIONS_20261106.md)
+propose 16/24, 48/72 or 96/168 CPU-hour/elapsed-hour envelopes. These are
+PROPOSED_ONLY; no expanded ceiling, intake or downstream execution is approved.
+The recommendation reserves 48 CPU-hours but releases A3's first 16 only after
+its exact contract, then returns for owner review.
+
 [Roadmap and long-run options](RESEARCH_ROADMAP_AND_LONG_RUN_20261105.md),
 5 November: recommended first block through Goal 4; maximum proposed internal
 endpoint Goal 6A if evidence gates pass. These are proposals, not execution
