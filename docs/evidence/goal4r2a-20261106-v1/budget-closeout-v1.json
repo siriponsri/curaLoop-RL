@@ -1,0 +1,105 @@
+{
+  "status": "PASS_BOUNDED_FEASIBILITY_AND_PRESERVATION",
+  "utc": "2026-11-06T00:43:30.513648+00:00",
+  "remote_jobs": 5,
+  "worker_resources": [
+    {
+      "attempt": "cases-v1",
+      "start_utc": "2026-11-06T00:16:35.953367+00:00",
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+      "cpu_affinity": [
+        71
+      ],
+      "cpu_ceiling": 120,
+      "wall_ceiling": 600,
+      "descendant_processes_allowed": false,
+      "environment_installation": "NONE_STDLIB_ONLY",
+      "source_bundle": "bundle-v1",
+      "status": "PASS",
+      "finish_utc": "2026-11-06T00:16:36.466791+00:00",
+      "cpu_seconds": 0.197030598,
+      "wall_seconds": 0.5139757969882339
+    },
+    {
+      "attempt": "pdf-v1",
+      "status": "PASS",
+      "cpu_seconds": 0.38220041200000004,
+      "wall_seconds": 0.3912901191506535,
+      "cpu_affinity": [
+        71
+      ],
+      "start_utc": "2026-11-06T00:17:11.974122+00:00",
+      "finish_utc": "2026-11-06T00:17:12.365430+00:00",
+      "cpu_ceiling": 120,
+      "wall_ceiling": 600,
+      "dependency_installation": "NONE_EXISTING_BUNDLED_SOURCE_COPY"
+    },
+    {
+      "attempt": "si-toc-v1",
+      "status": "PASS",
+      "cpu_seconds": 0.40872774700000003,
+      "wall_seconds": 0.4088804970961064,
+      "cpu_affinity": [
+        71
+      ],
+      "start_utc": "2026-11-06T00:31:07.988170+00:00",
+      "finish_utc": "2026-11-06T00:31:08.397069+00:00",
+      "cpu_ceiling": 120,
+      "wall_ceiling": 600,
+      "dependency_installation": "NONE_EXISTING_BUNDLED_SOURCE_COPY"
+    },
+    {
+      "attempt": "si-metadata-v1",
+      "status": "PASS",
+      "cpu_seconds": 0.7644081749999999,
+      "wall_seconds": 0.7647642539814115,
+      "cpu_affinity": [
+        71
+      ],
+      "start_utc": "2026-11-06T00:32:11.911582+00:00",
+      "finish_utc": "2026-11-06T00:32:12.676363+00:00",
+      "cpu_ceiling": 120,
+      "wall_ceiling": 600,
+      "dependency_installation": "NONE_EXISTING_BUNDLED_SOURCE_COPY"
+    },
+    {
+      "attempt": "si-audit-v1",
+      "status": "PASS",
+      "cpu_seconds": 0.005463927,
+      "wall_seconds": 0.005482523003593087,
+      "cpu_affinity": [
+        71
+      ],
+      "start_utc": "2026-11-06T00:34:27.042259+00:00",
+      "finish_utc": "2026-11-06T00:34:27.047771+00:00",
+      "cpu_ceiling": 120,
+      "wall_ceiling": 600
+    }
+  ],
+  "recorded_worker_cpu_seconds": 1.757830859,
+  "conservative_worker_reservations_seconds": 600,
+  "utility_reserves_seconds": {
+    "preparation_retrieval_transport_checks": 1800,
+    "preservation_and_local_verification": 1200,
+    "administration_and_startup": 600
+  },
+  "conservative_total_charge_seconds": 4200,
+  "conservative_cpu_hours": 1.1666666666666667,
+  "owner_cap_cpu_hours": 4,
+  "maximum_recorded_worker_overlap": 1,
+  "owner_worker_limit": 2,
+  "snapshot_cpu_seconds_inside_reserve": 0.537918484,
+  "local_verification_cpu_seconds_inside_reserve": 1.546875,
+  "exact_exhaustive_host_cpu_accounting": "NOT_CERTIFIED; conservative reserves remain charged",
+  "scientific_campaigns": 0,
+  "llm_calls": 0,
+  "live_team_writes": 0,
+  "publication_metadata_gate": "PASS_60_PAIRS_AND_105_VERSION_TUPLES",
+  "scientific_method_claim": "NO_GO",
+  "actual_eligible_dataset_count": "UNKNOWN",
+  "retained_regular_files": 220,
+  "retained_bytes": 12823111,
+  "archive_bytes": 5339875,
+  "remote_absence_utc": "2026-11-06T00:41:39.851094+00:00"
+}

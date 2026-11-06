@@ -1,6 +1,14 @@
-# Current checkpoint: Goal 4R1 closeout
+# Current checkpoint: Goal 4R2-A closeout
 
-Current completed checkpoint: [4R1 results](03_research/GOAL4R1_RESULTS_V1.md) and
+Current completed checkpoint: [4R2-A report](03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md),
+[workflow guide](05_product/OFFLINE_RD_WORKFLOW_V1.md) and
+[closeout](06_execution/GOAL4R2A_CLOSEOUT_20261106.md). The offline prototype
+passed 20 engineering checks and source SI metadata covers 60 pairs/105 AIDs.
+Scientific method/cohort gates remain NO_GO; no model/agent/MCP/live delivery
+evaluation ran. Full return and scoped remote cleanup are complete. Stop for
+owner review of the [expansion proposal](06_execution/GOAL4R2A_EXPANSION_PROPOSAL_20261106.md).
+
+Earlier completed checkpoint: [4R1 results](03_research/GOAL4R1_RESULTS_V1.md) and
 [closeout](06_execution/GOAL4R1_CLOSEOUT_20261105.md). The bounded diagnosis
 finished with STOP_CURRENT_ACQUISITION_THESIS; GP helped familiar-condition
 Greedy, with no established incremental planning advance. Full local return

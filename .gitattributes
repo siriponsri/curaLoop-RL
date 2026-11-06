@@ -91,3 +91,11 @@ research/requirements_goal4r1_v1.txt -text whitespace=cr-at-eol
 tests/research/test_goal4r1*_v1.py -text whitespace=cr-at-eol
 tools/goal4r1_*.py -text whitespace=cr-at-eol
 tools/verify_goal4r1_return_v2.py -text whitespace=cr-at-eol
+
+# Freeze Goal 4R2-A prototype/check/config bytes independently of Windows EOL.
+src/curaloop_rd/*.py -text whitespace=cr-at-eol
+tests/rd_workflow_v1/*.py -text whitespace=cr-at-eol
+research/configs/goal4r2a_*.json -text whitespace=cr-at-eol
+research/manifests/goal4r2a_*.json -text whitespace=cr-at-eol
+tools/*goal4r2a*_v1.py -text whitespace=cr-at-eol
+tools/*goal4r2a*_v2.py -text whitespace=cr-at-eol

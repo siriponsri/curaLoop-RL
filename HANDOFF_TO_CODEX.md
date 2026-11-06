@@ -1,6 +1,30 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
-## Current 4R1 completed checkpoint
+## Current 4R2-A completed checkpoint
+
+Read [feasibility](docs/03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md),
+[workflow guide](docs/05_product/OFFLINE_RD_WORKFLOW_V1.md),
+[closeout](docs/06_execution/GOAL4R2A_CLOSEOUT_20261106.md) and
+[evidence](docs/evidence/goal4r2a-20261106-v1/README.md).
+Base main was `1ba48632540c6e8b38bea93ac6a16e23b65d924e`.
+The approved 4 CPU-hour/12-hour/two-worker feasibility goal is complete.
+Source-frozen offline tools passed 12 prespecified cases plus 8 boundary checks;
+no molecular campaign, LLM, MCP or live destination evaluation occurred.
+The correct SI now specifies historical versions for all 105 AIDs and corroborates
+60 stage pairs. Source-row reconstruction, biological independence and eligible
+cohort counts remain unverified; no novel method or scientific pilot is cleared.
+
+All 220 regular files / 12,823,111 bytes were returned and reread before exact
+task/export deletion, with fresh absence at 6 November 00:41:39 UTC.
+Canonical retention: `.local/goal4r2a-20261106-v1/remote-return/full-v1/`.
+Tree SHA `a275c114ce27f40a20c77b6cdb496380068c3318c9052f8488e7a23459a58e18`.
+Conservative charge 1.166667 CPU-hours includes all five 120-second reservations
+and utility reserves; exact host CPU is not certified. Do not recreate the closed
+roots or start another study. Review the proposed
+[data/benchmark expansion](docs/06_execution/GOAL4R2A_EXPANSION_PROPOSAL_20261106.md)
+or P1 integration with the owner. Check current HEAD/live origin/main for publication.
+
+## Historical 4R1 completed checkpoint
 
 Read [4R1 results](docs/03_research/GOAL4R1_RESULTS_V1.md),
 [closeout](docs/06_execution/GOAL4R1_CLOSEOUT_20261105.md) and

@@ -1,6 +1,14 @@
 # Documentation map
 
-Latest executed goal: [4R1 results](03_research/GOAL4R1_RESULTS_V1.md),
+Latest executed goal: [4R2-A feasibility](03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md),
+[workflow guide](05_product/OFFLINE_RD_WORKFLOW_V1.md),
+[closeout](06_execution/GOAL4R2A_CLOSEOUT_20261106.md) and
+[evidence](evidence/goal4r2a-20261106-v1/README.md). Offline engineering passed;
+scientific advancement remains NO_GO. Next
+[dataset/benchmark expansion](06_execution/GOAL4R2A_EXPANSION_PROPOSAL_20261106.md)
+is proposed, not authorized execution.
+
+Earlier executed goal: [4R1 results](03_research/GOAL4R1_RESULTS_V1.md),
 [closeout](06_execution/GOAL4R1_CLOSEOUT_20261105.md) and
 [evidence](evidence/goal4r1-20261105-v1/README.md). Diagnosis completed with a stop
 decision for the current acquisition thesis; final-study design remains unfrozen.
@@ -10,8 +18,8 @@ Reviewed proposal basis: [deep related-work review](02_literature/REDESIGN_DEEP_
 and [agentic R&D plugin proposal](04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md).
 The subsequent 4R1 diagnosis is linked above; live plugin integration remains NOT_RUN.
 
-Next decision: [post-4R1 directions and bounded 4R2-A proposal](06_execution/POST_4R1_DIRECTION_PROPOSAL_20261106.md).
-This is a proposal only; no new goal or remote execution has started.
+Earlier basis: [post-4R1 directions and 4R2-A proposal](06_execution/POST_4R1_DIRECTION_PROPOSAL_20261106.md).
+Its subsequent 4R2-A approval and execution are recorded above; later stages remain proposed.
 
 Sequential research: [Goal tracker](06_execution/GOAL_TRACKER.md),
 [Goal 2 real-data results](03_research/GOAL_02_RESULTS_V1.md),

@@ -1,0 +1,19 @@
+{
+  "schema": "curaloop.offline-workflow-cases.v1",
+  "status": "FROZEN_BEFORE_IMPLEMENTATION",
+  "population": "ENGINEERING_SYNTHETIC_FIXTURES_NOT_MOLECULAR_EVIDENCE",
+  "cases": [
+    {"id": "N01", "kind": "normal", "purpose": "One permitted source produces a supported local plan and report", "expected": "REPORT_READY"},
+    {"id": "N02", "kind": "normal", "purpose": "Compatible evidence records retain all citation identities", "expected": "REPORT_READY"},
+    {"id": "N03", "kind": "normal", "purpose": "Measured and default-filled records remain distinct in the report", "expected": "REPORT_READY_WITH_LIMITS"},
+    {"id": "N04", "kind": "normal", "purpose": "A plan exactly at the declared cost ceiling validates", "expected": "REPORT_READY"},
+    {"id": "N05", "kind": "normal", "purpose": "A resumed completed workflow returns the identical bundle identity", "expected": "SAME_BUNDLE"},
+    {"id": "N06", "kind": "normal", "purpose": "A destination preview records that no external delivery occurred", "expected": "PREVIEW_ONLY"},
+    {"id": "F01", "kind": "failure", "purpose": "An unavailable required source stops without fabricated evidence", "expected": "SOURCE_UNAVAILABLE"},
+    {"id": "F02", "kind": "failure", "purpose": "Conflicting endpoint definitions stop plan validation", "expected": "ENDPOINT_CONFLICT"},
+    {"id": "F03", "kind": "failure", "purpose": "Reserved evidence is denied before content inspection or report construction", "expected": "RESERVED_EVIDENCE"},
+    {"id": "F04", "kind": "failure", "purpose": "A stale expected revision cannot overwrite current workflow state", "expected": "STALE_REVISION"},
+    {"id": "F05", "kind": "failure", "purpose": "Interruption after durable validation resumes to a complete consistent report", "expected": "RECOVERED_REPORT"},
+    {"id": "F06", "kind": "failure", "purpose": "Duplicate preview requests return one stored receipt without another delivery", "expected": "ONE_PREVIEW_RECEIPT"}
+  ]
+}

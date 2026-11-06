@@ -2,7 +2,15 @@
 
 ## Current local continuation
 
-Latest completed goal: [4R1 results](docs/03_research/GOAL4R1_RESULTS_V1.md) and
+Latest completed goal: [4R2-A feasibility](docs/03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md),
+[offline workflow guide](docs/05_product/OFFLINE_RD_WORKFLOW_V1.md) and
+[closeout](docs/06_execution/GOAL4R2A_CLOSEOUT_20261106.md). Twenty engineering
+checks passed; publication metadata specifies 60 stage pairs and 105 AID versions.
+No new scientific method or cohort is cleared. All 220 regular task files were
+returned/reread before exact cleanup and fresh absence confirmation. Next
+[expansion](docs/06_execution/GOAL4R2A_EXPANSION_PROPOSAL_20261106.md) is proposed only.
+
+Earlier completed goal: [4R1 results](docs/03_research/GOAL4R1_RESULTS_V1.md) and
 [closeout](docs/06_execution/GOAL4R1_CLOSEOUT_20261105.md). The bounded diagnosis
 completed with STOP_CURRENT_ACQUISITION_THESIS: GP improved familiar-condition
 Greedy, while incremental planning value remains unestablished. All regular task

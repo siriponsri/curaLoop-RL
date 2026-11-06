@@ -1,0 +1,26 @@
+{
+  "schema": "curaloop.candidate-data-feasibility.v1",
+  "status": "METADATA_ONLY_NOT_CLEARED_FOR_SCIENTIFIC_PILOT",
+  "paper": {"title": "MF-PCBA: Multifidelity High-Throughput Screening Benchmarks for Drug Discovery and Machine Learning", "year": 2023, "doi": "10.1021/acs.jcim.2c01569", "article_license": "CC-BY-4.0_SOURCE_REPORTED"},
+  "source_commit": "776cb013a5ab9949adfc9c11a212cd7ad7dada7a",
+  "source_commit_date": "2025-07-29",
+  "directory_url": "https://github.com/davidbuterez/mf-pcba/tree/776cb013a5ab9949adfc9c11a212cd7ad7dada7a/retrieve-scripts",
+  "source_evidence": "Read-only specialist inspected official GitHub directory metadata; AIDs below are inferred from documented DR-SD filename convention. All 60 script bodies were not independently parsed.",
+  "stage_assignment": "For DR-SD.sh: first number is DR AID, second is SD AID; a single-ID script uses the same AID for both stages.",
+  "software_license": "MIT",
+  "underlying_provider_row_redistribution_rights": "NOT_CERTIFIED",
+  "source_script_names": [
+    "1053173-743445.sh", "1117362-1117319.sh", "1259350-1224905.sh", "1259375-1259374.sh", "1259418-1259416.sh", "1259420-1259416.sh", "1431-873.sh", "1445.sh", "1465.sh", "1619.sh", "1903.sh", "1914-1662.sh", "1949.sh", "1960-1832.sh", "1964-1832.sh", "2382-2098.sh", "2423-1979.sh", "2696-2553.sh", "434937-2237.sh", "434941-2227.sh", "434942-2247.sh", "434954-2097.sh", "435004-504408.sh", "435010-2221.sh", "435023-2629.sh", "435026-2216.sh", "449749-2221.sh", "449750-2221.sh", "449756-435005.sh", "449762.sh", "463203-2650.sh", "488835-2099.sh", "489005-449739.sh", "493073-488899.sh", "493155-485273.sh", "493248-485317.sh", "504313-2732.sh", "504329.sh", "504840-488975.sh", "504941-488895.sh", "540268-504621.sh", "540271-504582.sh", "540297-493091.sh", "588343-504558.sh", "588398-504558.sh", "588524-489030.sh", "588689.sh", "602259-588489.sh", "624273-588549.sh", "624326-602261.sh", "624330.sh", "624474-624304.sh", "652116-651710.sh", "687022-651658.sh", "687027-652154.sh", "720512-652162.sh", "720591-652115.sh", "720597-652115.sh", "720632-686996.sh", "743267-720511.sh"
+  ],
+  "expected_metadata_counts": {"definitions": 60, "unique_primary_aids": 54, "unique_confirmatory_aids": 60, "same_aid_definitions": 9},
+  "certification_state": {"certified_independent_biological_groups": 0, "cleared_pilot_datasets": 0, "actual_eligible_dataset_count": "UNKNOWN", "actual_independent_group_count": "UNKNOWN", "zero_is_certification_state_not_absence_of_biological_diversity": true},
+  "code_evidence": {
+    "pubchem_retrieve.py": {"bytes": 19396, "sha256": "c235aa4cb61a305a455cf170a174a544fa29a667d28aa73c0a9999316cdb1e31", "findings": {"L68": "Live AID CSV request has no source version argument", "L72": "Activity derives from PubChem activity outcome", "L88": "Current molecule source uses ConnectivitySMILES", "L95_L277_L281": "SD aggregation defaults to median with no main-call override; paper reports mean", "L116_L120": "Numeric coercion and micromolar-to-pXC50 conversion", "L214": "Stereochemical deduplication retains highest selected sort value", "L344_L347": "General censor relations and target/family fields are not retained"}},
+    "add_default_pXC50.ipynb": {"bytes": 3621, "sha256": "e3ffbec950c16dd26cfb67594d9200f43a4bfdfbc786aa9926cf55f706249081", "inspection": "Code-cell sources only; notebook outputs not semantically inspected", "separate_aid": "NaN-based experimental/default flag then minimum observed DR replacement", "same_aid": "Drops missing DR rows and does not create the determination flag"}
+  },
+  "measurement_states_required": ["exact_measured_potency", "tested_censored_or_qualitative_confirmation", "not_followed_up"],
+  "unresolved": ["Publication-specific assay revisions pending SI", "Target/family identities and verified grouping", "Compound overlap, structure transformations and reserved-panel exclusion", "Confirmation cohort coverage and historical selection", "Censor qualifiers, concentrations and binary endpoint justification", "Actual assay cost/time and underlying provider terms"],
+  "supporting_information": {"filename": "ci2c01569_si_001.pdf", "url": "https://pubs.acs.org/doi/suppl/10.1021/acs.jcim.2c01569/suppl_file/ci2c01569_si_001.pdf", "access": "ACS_403_PMC_DOWNLOAD_HTML; owner assistance requested", "local_target": "research/raw_data/external-benchmarks/mf-pcba-2023/metadata/ci2c01569_si_001.pdf"},
+  "activity_rows_read": false,
+  "old_final_outcomes_accessed": false
+}

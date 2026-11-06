@@ -1,5 +1,32 @@
 # Agent instructions: CuraLoop-RL
 
+## Current Goal 4R2-A closeout, 6 November 2026
+
+4R2-A feasibility is complete. Read
+`docs/06_execution/GOAL4R2A_CLOSEOUT_20261106.md` and
+`docs/03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md`.
+The independent offline package passed 12 frozen cases plus 8 boundary checks.
+SI corroborated 60 stage pairs and 105 published AID version tuples. No cohort
+or novel method is cleared; scientific advancement remains NO_GO. All 220 task
+files were returned/reread before exact new task/export deletion; fresh absence
+was confirmed. No further 4R2-A processing or closed-root recreation. Expansion
+is proposed only. Stop for the next owner decision; final outcomes stay reserved.
+
+## Goal 4R2-A owner authorization, 6 November 2026
+
+The owner approved 4R2-A as proposed: 4 cumulative CPU-hours, 12 elapsed hours,
+maximum two CPU workers; processing/tests on dr-train. Window starts
+2026-11-05T23:57:53Z and ends 2026-11-06T11:57:53Z (Bangkok 06:57:53 to
+18:57:53 on 6 November). Follow
+`docs/06_execution/GOAL4R2A_EXECUTION_CONTRACT_20261106.md`.
+This supersedes proposal-only wording for the bounded offline feasibility
+prototype, not a scientific pilot, full P1/MCP integration or live destination
+writes. Dataset/benchmark expansion may be proposed immediately; the owner did
+not authorize executing an expansion. Preserve all prior frozen bytes and final
+outcomes. Parent is sole writer; specialists review read-only. Normal main push
+remains authorized. Return and verify every new owned remote-task file before
+scoped deletion; do not recreate old closed task roots.
+
 ## Current 4R1 closeout, 5 November 2026
 
 4R1 bounded diagnosis is complete: STOP_CURRENT_ACQUISITION_THESIS. Read

@@ -62,7 +62,16 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 ## Research and R&D pilot programme
 
-Latest: [Goal 4R1 results](docs/03_research/GOAL4R1_RESULTS_V1.md) separate
+Latest: [Goal 4R2-A](docs/03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md)
+delivers an [offline evidence-to-plan/report prototype](docs/05_product/OFFLINE_RD_WORKFLOW_V1.md)
+with 20 passing engineering checks. MF-PCBA publication metadata now covers
+60 stage pairs and 105 AID version tuples. Scientific cohort eligibility and a
+novel method remain unestablished. The [verified closeout](docs/06_execution/GOAL4R2A_CLOSEOUT_20261106.md)
+and [proposed dataset/benchmark expansion](docs/06_execution/GOAL4R2A_EXPANSION_PROPOSAL_20261106.md)
+separate completed work from the next decision. Live agent/MCP/team integration
+has not been evaluated.
+
+Earlier: [Goal 4R1 results](docs/03_research/GOAL4R1_RESULTS_V1.md) separate
 predictor gains from planning gains. The direct Tanimoto GP improves familiar-
 condition Greedy discovery on the development panel; incremental planning value
 remains unestablished. The bounded challenge and verified remote cleanup are
@@ -71,7 +80,8 @@ remains unestablished. The bounded challenge and verified remote cleanup are
 The reviewed [predictor/decision-value proposal](docs/03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md)
 led to the completed 4R1 diagnosis above. An
 [agentic R&D plugin](docs/04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md)
-for paper/database search and evidence-linked plans/reports remains proposed. The
+for live paper/database search and team delivery remains proposed; its offline
+subset is described above. The
 [related-work review](docs/02_literature/REDESIGN_DEEP_REVIEW_20261105.md)
 records prior art and open questions. Live plugin integration and broader
 method benefits remain unvalidated.
