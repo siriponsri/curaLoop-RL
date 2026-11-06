@@ -1,0 +1,476 @@
+{
+  "status": "PASS",
+  "briefs": 12,
+  "source_groups": 6,
+  "all_sources_exposed": true,
+  "correct_briefs": {
+    "simple": 12,
+    "durable": 12
+  },
+  "unsupported_claims": {
+    "simple": 0,
+    "durable": 0
+  },
+  "missing_claims": {
+    "simple": 0,
+    "durable": 0
+  },
+  "durable_wins": 0,
+  "simple_wins": 0,
+  "ties": 12,
+  "boundary_checks": [
+    "UNREGISTERED_ALIAS_DENIED_BEFORE_OPEN",
+    "STALE_REVISION_DENIED",
+    "VALID_CHANGED_CONTENT_CAS_DENIED",
+    "FORGED_LOCATOR_SCORED_UNSUPPORTED",
+    "EXTRA_FALSE_CLAIM_SCORED_UNSUPPORTED"
+  ],
+  "source_group_leave_one_out": [
+    {
+      "omitted_group": "endpoint",
+      "remaining_briefs": 10,
+      "durable_minus_simple_correct": 0
+    },
+    {
+      "omitted_group": "historical",
+      "remaining_briefs": 10,
+      "durable_minus_simple_correct": 0
+    },
+    {
+      "omitted_group": "identity",
+      "remaining_briefs": 10,
+      "durable_minus_simple_correct": 0
+    },
+    {
+      "omitted_group": "rights",
+      "remaining_briefs": 10,
+      "durable_minus_simple_correct": 0
+    },
+    {
+      "omitted_group": "unavailable",
+      "remaining_briefs": 10,
+      "durable_minus_simple_correct": 0
+    },
+    {
+      "omitted_group": "unit",
+      "remaining_briefs": 10,
+      "durable_minus_simple_correct": 0
+    }
+  ],
+  "content_signature_sha256": "060691c3f5628e121d309e341bfb49f77e6e70369e4df8a44a397a27eaaa4523",
+  "rows": [
+    {
+      "id": "W01",
+      "group": "endpoint",
+      "arms": {
+        "simple": {
+          "correct": true,
+          "mandatory_claims": 4,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": false,
+          "recovered": false,
+          "duplicate_artifacts": 0,
+          "report_sha256": "0c0d5de52e4311d44879f6b8fe686a9e6321dab03362f71bfd744c33758a6ceb",
+          "failure": null,
+          "cpu_seconds": 0.002560482000000003,
+          "wall_seconds": 0.007151216035708785
+        },
+        "durable": {
+          "correct": true,
+          "mandatory_claims": 4,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": false,
+          "recovered": false,
+          "duplicate_artifacts": 0,
+          "report_sha256": "0c0d5de52e4311d44879f6b8fe686a9e6321dab03362f71bfd744c33758a6ceb",
+          "failure": null,
+          "cpu_seconds": 0.003418920000000006,
+          "wall_seconds": 0.014016300905495882
+        }
+      }
+    },
+    {
+      "id": "W02",
+      "group": "endpoint",
+      "arms": {
+        "simple": {
+          "correct": true,
+          "mandatory_claims": 4,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": false,
+          "recovered": false,
+          "duplicate_artifacts": 0,
+          "report_sha256": "945ae90dcafd374b673b713ab427319975118baad4c95f50a2ee4979ffe5a844",
+          "failure": null,
+          "cpu_seconds": 0.0015005509999999889,
+          "wall_seconds": 0.005829986184835434
+        },
+        "durable": {
+          "correct": true,
+          "mandatory_claims": 4,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": false,
+          "recovered": false,
+          "duplicate_artifacts": 0,
+          "report_sha256": "945ae90dcafd374b673b713ab427319975118baad4c95f50a2ee4979ffe5a844",
+          "failure": null,
+          "cpu_seconds": 0.003406603000000008,
+          "wall_seconds": 0.010787101928144693
+        }
+      }
+    },
+    {
+      "id": "W03",
+      "group": "unit",
+      "arms": {
+        "simple": {
+          "correct": true,
+          "mandatory_claims": 4,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": false,
+          "recovered": false,
+          "duplicate_artifacts": 0,
+          "report_sha256": "4805018b65ca89b0cbb4e8710f376d3d31891bc94be43f92d540999980f63d17",
+          "failure": null,
+          "cpu_seconds": 0.006171560999999992,
+          "wall_seconds": 0.009636729955673218
+        },
+        "durable": {
+          "correct": true,
+          "mandatory_claims": 4,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": false,
+          "recovered": false,
+          "duplicate_artifacts": 0,
+          "report_sha256": "4805018b65ca89b0cbb4e8710f376d3d31891bc94be43f92d540999980f63d17",
+          "failure": null,
+          "cpu_seconds": 0.005659903000000008,
+          "wall_seconds": 0.013360526878386736
+        }
+      }
+    },
+    {
+      "id": "W04",
+      "group": "unit",
+      "arms": {
+        "simple": {
+          "correct": true,
+          "mandatory_claims": 4,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": false,
+          "recovered": false,
+          "duplicate_artifacts": 0,
+          "report_sha256": "be17c9ea5b353e8360f271f3173ffd5b79dbf071713bd625ff16bb282b442db1",
+          "failure": null,
+          "cpu_seconds": 0.005656346999999992,
+          "wall_seconds": 0.009087438927963376
+        },
+        "durable": {
+          "correct": true,
+          "mandatory_claims": 4,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": false,
+          "recovered": false,
+          "duplicate_artifacts": 0,
+          "report_sha256": "be17c9ea5b353e8360f271f3173ffd5b79dbf071713bd625ff16bb282b442db1",
+          "failure": null,
+          "cpu_seconds": 0.0060670179999999935,
+          "wall_seconds": 0.013493073871359229
+        }
+      }
+    },
+    {
+      "id": "W05",
+      "group": "historical",
+      "arms": {
+        "simple": {
+          "correct": true,
+          "mandatory_claims": 6,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": false,
+          "recovered": false,
+          "duplicate_artifacts": 0,
+          "report_sha256": "bae02844247b8aa917b219db9a1ef03aee16f06a06ae2cc62e8471795f54d7ac",
+          "failure": null,
+          "cpu_seconds": 0.004049931000000007,
+          "wall_seconds": 0.007609355030581355
+        },
+        "durable": {
+          "correct": true,
+          "mandatory_claims": 6,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": false,
+          "recovered": false,
+          "duplicate_artifacts": 0,
+          "report_sha256": "bae02844247b8aa917b219db9a1ef03aee16f06a06ae2cc62e8471795f54d7ac",
+          "failure": null,
+          "cpu_seconds": 0.004822527999999993,
+          "wall_seconds": 0.012156230164691806
+        }
+      }
+    },
+    {
+      "id": "W06",
+      "group": "historical",
+      "arms": {
+        "simple": {
+          "correct": true,
+          "mandatory_claims": 6,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": true,
+          "recovered": true,
+          "duplicate_artifacts": 0,
+          "report_sha256": "c473af371d151cc0e9116812800d17031653b44d173a06c429f3dff8582fbe0a",
+          "failure": null,
+          "cpu_seconds": 0.005271420999999998,
+          "wall_seconds": 0.008444194914773107
+        },
+        "durable": {
+          "correct": true,
+          "mandatory_claims": 6,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": true,
+          "recovered": true,
+          "duplicate_artifacts": 0,
+          "report_sha256": "c473af371d151cc0e9116812800d17031653b44d173a06c429f3dff8582fbe0a",
+          "failure": null,
+          "cpu_seconds": 0.006405920000000009,
+          "wall_seconds": 0.013898007804527879
+        }
+      }
+    },
+    {
+      "id": "W07",
+      "group": "identity",
+      "arms": {
+        "simple": {
+          "correct": true,
+          "mandatory_claims": 2,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": false,
+          "recovered": false,
+          "duplicate_artifacts": 0,
+          "report_sha256": "e566dd1dc93ed2678c1e33b95f85a95ec2755f84dee3e01252f1ffa319fab4a5",
+          "failure": null,
+          "cpu_seconds": 0.004407463,
+          "wall_seconds": 0.007923915982246399
+        },
+        "durable": {
+          "correct": true,
+          "mandatory_claims": 2,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": false,
+          "recovered": false,
+          "duplicate_artifacts": 0,
+          "report_sha256": "e566dd1dc93ed2678c1e33b95f85a95ec2755f84dee3e01252f1ffa319fab4a5",
+          "failure": null,
+          "cpu_seconds": 0.005683715000000006,
+          "wall_seconds": 0.01326818810775876
+        }
+      }
+    },
+    {
+      "id": "W08",
+      "group": "identity",
+      "arms": {
+        "simple": {
+          "correct": true,
+          "mandatory_claims": 2,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": true,
+          "recovered": true,
+          "duplicate_artifacts": 0,
+          "report_sha256": "fba237abcc341eb45e50f787a5874cf7c67a894acc74ecefd6330b8db17c99b1",
+          "failure": null,
+          "cpu_seconds": 0.005438629,
+          "wall_seconds": 0.008818546077236533
+        },
+        "durable": {
+          "correct": true,
+          "mandatory_claims": 2,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": true,
+          "recovered": true,
+          "duplicate_artifacts": 0,
+          "report_sha256": "fba237abcc341eb45e50f787a5874cf7c67a894acc74ecefd6330b8db17c99b1",
+          "failure": null,
+          "cpu_seconds": 0.006707083000000003,
+          "wall_seconds": 0.014296139124780893
+        }
+      }
+    },
+    {
+      "id": "W09",
+      "group": "rights",
+      "arms": {
+        "simple": {
+          "correct": true,
+          "mandatory_claims": 1,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": false,
+          "recovered": false,
+          "duplicate_artifacts": 0,
+          "report_sha256": "f4ce716ae4e12883ca17e56ffa4245347213b03f6835acb851214a1d3880cc2c",
+          "failure": null,
+          "cpu_seconds": 0.0032007910000000084,
+          "wall_seconds": 0.007636067923158407
+        },
+        "durable": {
+          "correct": true,
+          "mandatory_claims": 1,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": false,
+          "recovered": false,
+          "duplicate_artifacts": 0,
+          "report_sha256": "f4ce716ae4e12883ca17e56ffa4245347213b03f6835acb851214a1d3880cc2c",
+          "failure": null,
+          "cpu_seconds": 0.005534600000000001,
+          "wall_seconds": 0.011967011028900743
+        }
+      }
+    },
+    {
+      "id": "W10",
+      "group": "rights",
+      "arms": {
+        "simple": {
+          "correct": true,
+          "mandatory_claims": 1,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": true,
+          "recovered": true,
+          "duplicate_artifacts": 0,
+          "report_sha256": "0f16cef2413328b2d9243628976f1eb6d8cd602f43f3777c32a5b40e11f4873c",
+          "failure": null,
+          "cpu_seconds": 0.00498464500000001,
+          "wall_seconds": 0.008838749025017023
+        },
+        "durable": {
+          "correct": true,
+          "mandatory_claims": 1,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": true,
+          "recovered": true,
+          "duplicate_artifacts": 0,
+          "report_sha256": "0f16cef2413328b2d9243628976f1eb6d8cd602f43f3777c32a5b40e11f4873c",
+          "failure": null,
+          "cpu_seconds": 0.006800984999999982,
+          "wall_seconds": 0.014344956958666444
+        }
+      }
+    },
+    {
+      "id": "W11",
+      "group": "unavailable",
+      "arms": {
+        "simple": {
+          "correct": true,
+          "mandatory_claims": 4,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": false,
+          "recovered": false,
+          "duplicate_artifacts": 0,
+          "report_sha256": "eb87be44e2974342d798bdbd105cef9bc216abdf6b81ec9258fd8ba06e2df733",
+          "failure": null,
+          "cpu_seconds": 0.005519689999999994,
+          "wall_seconds": 0.008838514797389507
+        },
+        "durable": {
+          "correct": true,
+          "mandatory_claims": 4,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": false,
+          "recovered": false,
+          "duplicate_artifacts": 0,
+          "report_sha256": "eb87be44e2974342d798bdbd105cef9bc216abdf6b81ec9258fd8ba06e2df733",
+          "failure": null,
+          "cpu_seconds": 0.007361389000000024,
+          "wall_seconds": 0.013585010077804327
+        }
+      }
+    },
+    {
+      "id": "W12",
+      "group": "unavailable",
+      "arms": {
+        "simple": {
+          "correct": true,
+          "mandatory_claims": 4,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": true,
+          "recovered": true,
+          "duplicate_artifacts": 0,
+          "report_sha256": "ea7988709271bbead64b95b44ec7c318c0b66d2d170767d15fe23adc6fed760d",
+          "failure": null,
+          "cpu_seconds": 0.005468744999999997,
+          "wall_seconds": 0.00936378096230328
+        },
+        "durable": {
+          "correct": true,
+          "mandatory_claims": 4,
+          "missing_claims": 0,
+          "unsupported_claims": 0,
+          "source_ledger_correct": true,
+          "recovery_injected": true,
+          "recovered": true,
+          "duplicate_artifacts": 0,
+          "report_sha256": "ea7988709271bbead64b95b44ec7c318c0b66d2d170767d15fe23adc6fed760d",
+          "failure": null,
+          "cpu_seconds": 0.009065219999999985,
+          "wall_seconds": 0.015403519850224257
+        }
+      }
+    }
+  ],
+  "new_source_requests": 0,
+  "live_llm_or_agent_evaluation": "NOT_RUN",
+  "independent_benchmark": false,
+  "shared_decision_code": true,
+  "research_or_business_advantage_established": false
+}

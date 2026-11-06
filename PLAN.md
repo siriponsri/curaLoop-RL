@@ -2,12 +2,12 @@
 
 ## Current bounded execution checkpoint
 
-[A3 qualification and cleanup](docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md)
-are complete; pilot advancement is NO_GO and owner review is required. The
-[B execution contract](docs/06_execution/PLAN_B_EXECUTION_CONTRACT_20261106.md)
-sets hard CPU/deadline limits for current work. The roadmap below is a long-term
-dependency map, not permission to bypass those limits or reopen final outcomes.
-
+[LR-BC core work](docs/06_execution/LRBC_CORE_CLOSEOUT_20261106.md) is complete,
+with molecular research NOT_READY and a narrowly supported metadata/report core.
+The [bilingual UI amendment](docs/06_execution/UI_REDESIGN_EXECUTION_20261106.md)
+is active under the unchanged C clock/budget. Preserve all prior source STOPs,
+failed attempts and final outcomes. The roadmap below does not release a new
+scientific study, paid service or external destination write.
 
 This plan supersedes the completed English/local-persistence delivery plan while retaining its evidence. Milestones advance when their outputs are inspectable. Long-term roadmap milestones do not imply an open-ended execution window.
 

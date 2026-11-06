@@ -123,3 +123,16 @@ tools/*goal4r2a3*_v4.py -text whitespace=cr-at-eol
 tools/*goal4r2a3*_v5.py -text whitespace=cr-at-eol
 tools/*goal4r2a3*_v6.py -text whitespace=cr-at-eol
 tests/research/test_qualification_v1.py -text whitespace=cr-at-eol
+
+# LR-BC sources remain byte-identical between Windows and the Linux worker.
+research/longrun_v1/*.py -text whitespace=cr-at-eol
+research/configs/lrbc_*.json -text whitespace=cr-at-eol
+tools/lrbc_*.py -text whitespace=cr-at-eol
+docs/06_execution/LRBC_EXECUTION_CONTRACT_20261106.md -text whitespace=cr-at-eol
+docs/06_execution/LRBC_*.md -text whitespace=cr-at-eol
+docs/06_execution/B_POTENTIAL_DECISION_LRBC_20261106.md -text whitespace=cr-at-eol
+research/portfolio_v1/*.py -text whitespace=cr-at-eol
+docs/evidence/lrbc-20261106-v1/** whitespace=cr-at-eol
+docs/evidence/lrbc-c-20261106-v1/** whitespace=cr-at-eol
+docs/evidence/ui-modern-bilingual-20261106-v1/** whitespace=cr-at-eol
+docs/05_product/metadata-portfolio-demo/** -text whitespace=cr-at-eol

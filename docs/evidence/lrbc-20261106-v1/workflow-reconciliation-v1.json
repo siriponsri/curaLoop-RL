@@ -1,0 +1,46 @@
+{
+  "status": "PASS_SAME_HOST_FRESH_PROCESS_REPRODUCTION",
+  "distinct_briefs": 12,
+  "source_groups": 6,
+  "evaluation_executions": 2,
+  "arm_case_executions": 48,
+  "comparison_correctness_difference_durable_minus_simple": 0,
+  "source_group_leave_one_out_difference": 0,
+  "counts_not_population_generalization": true,
+  "matching_content_signature_sha256": "060691c3f5628e121d309e341bfb49f77e6e70369e4df8a44a397a27eaaa4523",
+  "costs": [
+    {
+      "run": "first",
+      "cpu_seconds": {
+        "simple": 0.05499971800000003,
+        "durable": 0.07599832099999998
+      },
+      "wall_seconds": {
+        "simple": 0.10615815105848014,
+        "durable": 0.16531752422451973
+      },
+      "injected_recoveries": {
+        "simple": 4,
+        "durable": 4
+      }
+    },
+    {
+      "run": "reproduction",
+      "cpu_seconds": {
+        "simple": 0.05423025599999999,
+        "durable": 0.07093388400000002
+      },
+      "wall_seconds": {
+        "simple": 0.09917849581688643,
+        "durable": 0.16057606670074165
+      },
+      "injected_recoveries": {
+        "simple": 4,
+        "durable": 4
+      }
+    }
+  ],
+  "timing_order": "simple then durable for each brief; descriptive same-host costs, no timing-superiority inference",
+  "live_agent_evaluation": "NOT_RUN",
+  "molecular_decision_value": "NOT_RUN"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "FROZEN_BEFORE_COORDINATOR_IMPLEMENTATION_OR_NEW_WORKER_EXECUTION",
+  "cases": [
+    {"id": "L01", "name": "Historical charge and cumulative stage/B/C ceilings cannot be reset or overreserved"},
+    {"id": "L02", "name": "Concurrent reservations admit at most four combined workers and one local worker"},
+    {"id": "L03", "name": "CPU leases are unique per host and immutable attempt identifiers reject duplicate dispatch"},
+    {"id": "L04", "name": "Unresolved and failed launches retain full CPU charge and cannot silently retry"},
+    {"id": "L05", "name": "Only verified completion releases a running slot; malformed/stale transitions fail"},
+    {"id": "L06", "name": "Absolute stage/B/C deadlines prevent new work and C remains locked without its recorded gate"},
+    {"id": "L07", "name": "Local RAM tier and remote admission limits fail closed before dispatch"},
+    {"id": "L08", "name": "Inherited request/byte counters, stopped service and metadata-only bucket cannot be bypassed"},
+    {"id": "L09", "name": "Immutable bundle/attempt output identity and source hash mismatch stop processing"},
+    {"id": "L10", "name": "Private response/error sentinel cannot enter public process receipts"},
+    {"id": "L11", "name": "Endpoint metadata diagnostics validate every requested row ID before TID-presence counting and never emit values"},
+    {"id": "L12", "name": "Same-host comparison blocks and deterministic fixture results reconcile across worker partitions"}
+  ],
+  "new_activity_requests_in_r0": 0,
+  "final_outcome_access": false,
+  "scientific_performance_evidence": false
+}

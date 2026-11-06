@@ -1,0 +1,50 @@
+{
+  "schema": "curaloop.lrbc.workflow-cases.v1",
+  "status": "FROZEN_BEFORE_V2_IMPLEMENTATION_AND_EVALUATION",
+  "purpose": "Source-grounded functional evaluation on six fully exposed metadata bundles; not an independent benchmark",
+  "units": "12 authored briefs nested in 6 source groups; repeats do not add units",
+  "new_network_requests": 0,
+  "roles": "All metadata sources and reference facts are development-exposed",
+  "maximum_evaluation_launches": 2,
+  "reservation_seconds_per_launch": 900,
+  "candidate": "durable typed evidence/decision/report workflow",
+  "control": "simple deterministic inspect/template with equal source validation, atomic files and one bounded resume",
+  "primary_metric": "All mandatory source-supported facts/locators and correct disposition, with no unsupported ready claim",
+  "secondary_metrics": ["mandatory fact coverage", "unsupported assertions", "paired wins/ties/losses", "recovery", "duplicate artifacts", "worker CPU and wall time"],
+  "sources": {
+    "D743445": ["A2", "runs/metadata-acquire-v1/description-743445.txt", "794fbfe99e777d2b79bb1192b9e3d3f76454a92652a8d58be5b9368a11a1f7e1"],
+    "D1053173": ["A2", "runs/metadata-acquire-v1/description-1053173.txt", "7018ed98d8bd25c2c7baee04b8d9cc55e280c20f2afc7a18f9c3dee231b733e9"],
+    "D1259375": ["A2", "runs/metadata-acquire-v1/description-1259375.txt", "da0ed5b24f308f037bc291c390fe711f00d0edcd664b2770a5d8b54321fbb186"],
+    "D873_PUBLISHED": ["A2", "runs/metadata-acquire-v1/description-873-published.txt", "6a650785d737d7e860d74ebb17a23fd4639f1a380896c8a68bcfe10d73e40d13"],
+    "D873_INVALID": ["A2", "runs/metadata-acquire-v1/description-873-invalid.txt", "6a650785d737d7e860d74ebb17a23fd4639f1a380896c8a68bcfe10d73e40d13"],
+    "R873_PUBLISHED": ["A2", "runs/metadata-acquire-v1/request-873-published.json", "d1aee7f6d2cd40c1e45a78ac3a8c80a91bc0baab138f3efc75e5a78af0464034"],
+    "R873_INVALID": ["A2", "runs/metadata-acquire-v1/request-873-invalid.json", "fed2b9d1a3dfec128e7998d73c52e84d8191cd3f775620aa605ea63b12373b60"],
+    "D2097": ["A2", "runs/metadata-acquire-v1/description-2097.txt", "9862a82f821d82ecce14de461cdbbf07026b795c9f353be976933db88ab13a21"],
+    "UNIPROT014": ["A3", "runs/xref-metadata-v1/xref-014.txt", "7b734ededc754e70b41d929520fd596b8ed3b50506fd466421c4f80c5db170fb"],
+    "NLM_POLICY": ["A3", "private-inputs/source-evidence/pubchem-policy.md", "fafab3c73722fb386d0245f16eded3f3245cb9a123cddc5e9c1d0601425afcf3"],
+    "NCBI_SCHEMA": ["A3", "private-inputs/source-evidence/pcassay2.asn", "b6b3bc11bbc0cb781424dbab8b02509080af331c41fe3120c0465e50c768cfdc"],
+    "SOURCE_ATTEMPTS": ["A3", "private-inputs/source-evidence-manifest-v1.json", "3b539f6f8ecf163042fec83be68d955e68aacdb07b3f1db96543032ebfb220c6"]
+  },
+  "cases": [
+    {"id":"W01","group":"endpoint","question":"Describe the primary activity-score endpoint for AID743445.","kind":"endpoint","source":"D743445","tid":3,"expected_name":"REPLICATE_A_ACTIVITY_SCORE_12.48uM_(%)","expected_type":1,"expected_unit":15,"expected_disposition":"METADATA_REPORT"},
+    {"id":"W02","group":"endpoint","question":"Can AID1053173 pAC50_M be treated as the same endpoint and unit as the primary activity score?","kind":"endpoint","source":"D1053173","tid":3,"expected_name":"pAC50_M","expected_type":4,"expected_unit":"ABSENT","expected_disposition":"BLOCKED_ENDPOINT_UNRESOLVED"},
+    {"id":"W03","group":"unit","question":"Report the declared IC50 unit for AID1259375 without converting it.","kind":"endpoint","source":"D1259375","tid":2,"expected_name":"IC50","expected_type":1,"expected_unit":5,"expected_disposition":"METADATA_REPORT"},
+    {"id":"W04","group":"unit","question":"Does the source declare a unit for the LogIC50 readout?","kind":"endpoint","source":"D1259375","tid":3,"expected_name":"LogIC50","expected_type":4,"expected_unit":"ABSENT","expected_disposition":"BLOCKED_ENDPOINT_UNRESOLVED"},
+    {"id":"W05","group":"historical","question":"Does a successful published-version selector prove a reconstructed historical snapshot?","kind":"historical","sources":["R873_PUBLISHED","R873_INVALID","D873_PUBLISHED","D873_INVALID"],"expected_disposition":"BLOCKED_HISTORICAL_IDENTITY"},
+    {"id":"W06","group":"historical","question":"Interpret an invalid selector returning the same response hash as the published selector.","kind":"historical","sources":["R873_PUBLISHED","R873_INVALID","D873_PUBLISHED","D873_INVALID"],"expected_disposition":"BLOCKED_HISTORICAL_IDENTITY","fault":"SYNTHETIC_INTERRUPT_AFTER_PERSIST"},
+    {"id":"W07","group":"identity","question":"Map the AID2097 target NP_002084.2 through reviewed exact RefSeq evidence.","kind":"identity","sources":["D2097","UNIPROT014"],"expected_accession":"P49841","expected_disposition":"METADATA_REPORT"},
+    {"id":"W08","group":"identity","question":"May the adjacent GSK3-alpha entry P49840 replace the exact target match?","kind":"identity","sources":["D2097","UNIPROT014"],"expected_accession":"P49841","expected_disposition":"METADATA_REPORT","fault":"SYNTHETIC_INTERRUPT_AFTER_PERSIST"},
+    {"id":"W09","group":"rights","question":"Does NLM public hosting alone clear commercial redistribution of contributed assay data?","kind":"rights","source":"NLM_POLICY","expected_disposition":"BLOCKED_RIGHTS_UNRESOLVED"},
+    {"id":"W10","group":"rights","question":"Prepare a useful rights-gap report with the exact policy citation.","kind":"rights","source":"NLM_POLICY","expected_disposition":"BLOCKED_RIGHTS_UNRESOLVED","fault":"SYNTHETIC_INTERRUPT_AFTER_PERSIST"},
+    {"id":"W11","group":"unavailable","question":"What support is missing from the retained NIH-document access attempts?","kind":"unavailable","source":"SOURCE_ATTEMPTS","expected_disposition":"BLOCKED_REQUIRED_SOURCE"},
+    {"id":"W12","group":"unavailable","question":"Prepare a source-gap report without inventing or retrying the unavailable NIH policy bodies.","kind":"unavailable","source":"SOURCE_ATTEMPTS","expected_disposition":"BLOCKED_REQUIRED_SOURCE","fault":"SYNTHETIC_INTERRUPT_AFTER_PERSIST"}
+  ],
+  "scoring_constraints": [
+    "Reference facts are used only by the scorer, not passed as answer fields to either arm",
+    "Both arms use identical positive metadata projections, retrieval sets, checks and fault schedules",
+    "Blocked reports are useful artifacts; refusal on answerable metadata questions is a failure",
+    "Exact counts describe this curated census; do not compute population-generalization confidence intervals",
+    "Report source-group leave-one-out sensitivity and all failures",
+    "Native benchmark and live LLM/agent/customer-time claims remain NOT_RUN"
+  ]
+}

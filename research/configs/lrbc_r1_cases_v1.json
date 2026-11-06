@@ -1,0 +1,23 @@
+{
+  "status": "FROZEN_BEFORE_R1_IMPLEMENTATION_AND_NEW_INTAKE",
+  "estimand": "Fixed cleared development population coverage and paired complete-tuple attrition",
+  "maximum_new_pug_calls": 20,
+  "maximum_decoded_bytes_per_response": 1048576,
+  "maximum_new_reserved_decoded_bytes": 20971520,
+  "historical_pug_calls": 24,
+  "historical_decoded_bytes": 28715980,
+  "old_stop_ledger_sha256": "dee45c033a03d4e7d800f5403f2b8ea6bfe11eb4b380aa0f0a86f5b821eab906",
+  "original_manifest_sha256": "afca38be68334b60c2657099f316e839acb4a06c41264eedd68fe021c8ae7146",
+  "original_structure_release_sha256": "fb5f8940c239be7ade7517f982cae4decf4795294405ebe63b5a32c9b37513a4",
+  "cases": [
+    {"id":"Q01","name":"Native submit/container adapters retain exact source/version/readout/unit semantics"},
+    {"id":"Q02","name":"Validate every returned identity before any value; duplicate/unexpected/protected IDs fail"},
+    {"id":"Q03","name":"Missing/null/zero/censored/text/conflicting observations remain distinct without imputation"},
+    {"id":"Q04","name":"All20 source allocations inherit old charges and STOP reference; denial never retries"},
+    {"id":"Q05","name":"Canary and full manifest populations remain fixed; no availability-selected subset or duplicate counting"},
+    {"id":"Q06","name":"Private parser/transport text never enters public aggregates"}
+  ],
+  "pilot_released": false,
+  "final_outcomes_authorized": false,
+  "commercial_data_rights": "NOT_CLEARED"
+}

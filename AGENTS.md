@@ -1,5 +1,67 @@
 # Agent instructions: CuraLoop-RL
 
+## Active bilingual UI refinement, 6 November 2026
+
+The owner's latest no-slop-ui direction rejects the opened competitors as visual
+templates. Apply its SKILL/banned-patterns/checklist: content-first, no dashboard
+hero/KPI-card wall/nested cards/decorative gradients/eyebrows or hover transforms.
+Runtime motion is restrained opacity/color; HyperFrames is the separate approved
+walkthrough/prototype. Existing brand/data/accessibility requirements take priority.
+
+The owner explicitly confirmed redesigning BOTH the main React app and C
+Workspace as minimal/modern EN/TH, using Oil UI and HyperFrames for motion
+prototypes/video with GSAP/CSS runtime. Read
+docs/06_execution/UI_REDESIGN_EXECUTION_20261106.md and the corresponding brief
+in docs/05_product. This supersedes English-only PRODUCT UI; docs stay English.
+Preserve all scientific/source/engine/state/privacy invariants and frozen C v1
+bytes. Version C renderer/exports; do not overwrite old report hashes. Rebuild
+frontend/dist and refresh actual English screenshots/manual after UI changes.
+C clocks/48hour increment/max4CPU and inherited sourceSTOPs remain unchanged.
+B8.0+Ccore1.5=9.5conservativeCPU-hours before this extension; no reset.
+B and initialC roots are closed after fullreturn/reread. FreshUIownedroot only.
+Parentsolewriter; specialistsread-only. Ask before unresolved material scope,
+rights or resource changes. Current UI work may proceed within this authority.
+
+## Active conditional C, 6 November 2026
+
+LR-BC B is closed. Read docs/06_execution/B_POTENTIAL_DECISION_LRBC_20261106.md
+and LRBC_C_EXECUTION_CONTRACT_20261106.md in that directory. All five potential
+gates pass ONLY for internal registered cached metadata/readiness/report tools.
+Molecular research remains NOT_READY; R1 stopped on third request HTTP504, no
+retry/full/pilot. B's347files/2078084bytes returned+reread before exact cleanup;
+fresh absence10:59:54Z. Never recreate the B root.
+C released11:04:20Z6Nov; ends11:04:20Z10Nov (also within13Nov05:13:23Z).
+At most48additionalCPU-hours including1800utility seconds; B8.0hours stays
+charged; max4combinedworkers. Freshlrbc-c-20261106-v1root only. Parentsolewriter;
+specialistsread-only; defaultremote processing when localRAMadmission fails.
+Inherit44/96heldPUG,27/32UniProt,49687500/268435456bytes. Cnewscientificcalls0.
+Keep original molecular replay acceptance UNMET; no liveLLM/client efficacy,
+commercial data permission, externalteamwrite, deployment or journal action.
+The Windows venv PID-binding failure remains FAILED_RECONCILED with900seconds
+retained; prepared direct-executable repair was NOT_RUN after lowRAMadmission.
+Return/reread before scoped cleanup. Normal English main delivery/push authorized.
+Older R0/R1 and A3 instructions below are historical within these active bounds.
+
+## Active LR-BC approval, 6 November 2026
+
+The owner approved LR-BC at proposal f1f3172. Follow
+docs/06_execution/LRBC_EXECUTION_CONTRACT_20261106.md.
+R0 starts2026-11-06T09:46:22Z, ends17:46:22Z; cap4CPU-hours including
+1800utility seconds and retained900-second worker reservations. Max4workers
+combined acrosslocal/dr-train; default1local/3remote withdistinctleasedCPUs.
+Historical5.5CPU-hours remains charged; B48total byNov9 05:13:23Z; conditional
+C adds48 to96total byNov13 same time. This approval releases R0metadata,
+value-free existing-canary diagnostics, synthetic runner fixtures and independent
+workflow/tool work. R0 newactivity0; oldSTOP/NO_GO/finaloutcomes remain unchanged.
+Local512MiB initially;1GiBhardmax onlycanary plus4GiBavailable. Remote1CPU/4GiB
+nice19/singlethreads. Parentsolewriter; specialistsread-only. Use freshlrbc
+root only. No oldrootrecreation. Later gatesmayadvancewithout routineapproval
+onlywithinthecontract; unresolvedmaterialendpoint/population/rights decisions
+anduncertainpotential stillrequireownerconsultation. Fullreturn/reread before
+scopedcleanup, English main delivery remains authorized. Older A3 review-stop
+wording below is historical exceptfor preservedsource/protection constraints.
+
+
 ## Current A3 closeout and owner-review checkpoint, 6 November 2026
 
 A3 bounded qualification is complete with scientific advancement NO_GO. Read

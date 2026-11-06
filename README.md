@@ -62,18 +62,29 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 ## Research and R&D pilot programme
 
-Latest completed goal: [A3 population/observation qualification](docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md).
-Five metadata pairs and 589 of 640 sampled SIDs passed structure controls. The
-live canary stopped on a native-envelope mismatch; offline repair validated only
-16 primary-assay rows, with zero complete selected readout tuples. Paired
-qualification and the scientific pilot remain **NOT_RUN / NO_GO**.
+Current work: [minimal/modern EN/TH redesign](docs/06_execution/UI_REDESIGN_EXECUTION_20261106.md)
+of the main screening application and C Workspace, using Oil UI, HyperFrames
+motion prototypes/video and GSAP/CSS runtime. This owner-directed refinement is
+active; the preserved previews below are the pre-redesign baseline.
 
-[Complete return and cleanup](docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md)
-are verified. A3 charged 5.5 conservative CPU-hours within the
-[B execution contract](docs/06_execution/PLAN_B_EXECUTION_CONTRACT_20261106.md).
-The selected owner review precedes further intake or the pilot. The
-[B/conditional-C portfolio plan](docs/06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md)
-remains in force; sufficient C potential has not been established.
+The [LR-BC core checkpoint](docs/06_execution/LRBC_CORE_CLOSEOUT_20261106.md)
+delivers four typed metadata tools, cited readiness/gap reports, portable local
+exports and a tested MCP stdio surface. Two ten-case C acceptance runs, four
+native pipe checks and an eleven-response engineering client/server path passed.
+[Core guide](docs/05_product/METADATA_PORTFOLIO_GUIDE_V1.md) ·
+[C evidence](docs/evidence/lrbc-c-20261106-v1/README.md).
+
+Research remains **NOT_READY**. R1 stopped on the third source request after
+HTTP504; full molecular qualification and the pilot were NOT_RUN. The real-metadata
+functional comparison tied12/12 versus12/12 using shared decision code, supporting
+the [narrow product continuation](docs/06_execution/B_POTENTIAL_DECISION_LRBC_20261106.md)
+without a superiority or live-agent claim. All B/C owned remote files returned
+and were reread before exact cleanup. Conservative cumulative charge before UI:
+9.5CPU-hours. Final outcomes and all source STOPs remain preserved.
+
+Earlier completed goal: [A3 population/observation qualification](docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md).
+Its original canary NO_GO, offline repair and
+[verified closeout](docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md) remain unchanged.
 
 Earlier completed goal: [Goal 4R2-A2 readiness](docs/03_research/GOAL4R2A2_READINESS_V1.md)
 retrieved descriptions for all 105 MF-PCBA AIDs, with version/revision metadata

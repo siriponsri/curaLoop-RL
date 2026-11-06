@@ -1,0 +1,78 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]: CuraLoop / Internal research prototype
+    - heading "Evidence before decisions." [level=1] [ref=e5]
+    - paragraph [ref=e6]: One traceable path from registered metadata to a readiness plan and local handoff.
+    - generic [ref=e7]: Cached metadata · Molecular replay unmet · Live agent untested
+  - navigation [ref=e8]:
+    - link "Evidence Workspace" [ref=e9] [cursor=pointer]:
+      - /url: "#evidence"
+    - link "Decision Workbench" [ref=e10] [cursor=pointer]:
+      - /url: "#decision"
+    - link "Integration Kit" [ref=e11] [cursor=pointer]:
+      - /url: "#integration"
+  - generic [ref=e12]:
+    - generic [ref=e13]: readiness-ic50
+    - heading "Inspect the declared IC50 endpoint and unit." [level=2] [ref=e14]
+    - generic [ref=e15]: METADATA_REPORT
+  - generic [ref=e16]:
+    - heading "Evidence Workspace" [level=2] [ref=e17]
+    - paragraph [ref=e18]: Declared fields and missingness are preserved.
+    - table [ref=e19]:
+      - rowgroup [ref=e20]:
+        - row [ref=e21]:
+          - columnheader "Fact" [ref=e22]
+          - columnheader "State" [ref=e23]
+          - columnheader "Value" [ref=e24]
+          - columnheader "Source" [ref=e25]
+      - rowgroup [ref=e26]:
+        - row [ref=e27]:
+          - cell "tid" [ref=e28]
+          - cell "VALUE" [ref=e29]
+          - cell "2" [ref=e30]
+          - cell "D1259375" [ref=e31]
+        - row [ref=e32]:
+          - cell "name" [ref=e33]
+          - cell "VALUE" [ref=e34]
+          - cell "IC50" [ref=e35]
+          - cell "D1259375" [ref=e36]
+        - row [ref=e37]:
+          - cell "type" [ref=e38]
+          - cell "VALUE" [ref=e39]
+          - cell "1" [ref=e40]
+          - cell "D1259375" [ref=e41]
+        - row [ref=e42]:
+          - cell "unit" [ref=e43]
+          - cell "VALUE" [ref=e44]
+          - cell "5" [ref=e45]
+          - cell "D1259375" [ref=e46]
+    - group [ref=e47]:
+      - generic "Inspect captured provenance" [active] [ref=e48] [cursor=pointer]
+      - list [ref=e65]:
+        - listitem [ref=e66]:
+          - strong [ref=e67]: D1259375
+          - paragraph [ref=e68]: https://pubchem.ncbi.nlm.nih.gov/rest/pug/assay/aid/1259375/description/JSON
+          - code [ref=e69]: da0ed5b24f308f037bc291c390fe711f00d0edcd664b2770a5d8b54321fbb186
+  - generic [ref=e49]:
+    - heading "Decision Workbench" [level=2] [ref=e50]
+    - paragraph [ref=e51]: Metadata readiness and gaps. No molecular experiment has been released.
+    - list [ref=e52]:
+      - listitem [ref=e53]: Review the declared metadata and intended-use limits.
+      - listitem [ref=e54]: Define and qualify a scientific endpoint/population before any molecular experiment.
+  - generic [ref=e55]:
+    - heading "Integration Kit" [level=2] [ref=e56]
+    - paragraph [ref=e57]: "Portable files with a stable report identity. Destination: local preview only."
+    - paragraph [ref=e58]:
+      - link "English report" [ref=e59] [cursor=pointer]:
+        - /url: report.md
+      - text: ·
+      - link "Structured evidence" [ref=e60] [cursor=pointer]:
+        - /url: report.json
+      - text: ·
+      - link "Readiness plan" [ref=e61] [cursor=pointer]:
+        - /url: readiness-plan.json
+      - text: ·
+      - link "Handoff manifest" [ref=e62] [cursor=pointer]:
+        - /url: handoff-manifest.json
+    - code [ref=e63]: 706eb54e7417a31d161f333ef88b7ca752b1c1c20c6bae146fd48f071e16e50f
+  - generic [ref=e64]: Internal metadata research. No commercial data clearance, autonomous-agent efficacy or molecular benefit is established.

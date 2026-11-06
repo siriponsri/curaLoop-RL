@@ -1,23 +1,28 @@
 # Start here
 
-## Current checkpoint: A3 completed, pilot NO_GO
+## Current checkpoint: core complete, bilingual UI refinement active
 
-Read the [A3 report](docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md),
-[closeout](docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md) and
-[evidence](docs/evidence/goal4r2a3-20261106-v1/README.md).
-Structure controls cleared 589 of 640 SIDs. Only 16 primary-assay rows were
-normalized offline; no complete selected tuples or paired qualification exist.
-The original canary NO_GO and service STOP remain. No scientific campaign ran.
+Read the [LR-BC core checkpoint](docs/06_execution/LRBC_CORE_CLOSEOUT_20261106.md),
+[B potential decision](docs/06_execution/B_POTENTIAL_DECISION_LRBC_20261106.md),
+[metadata portfolio guide](docs/05_product/METADATA_PORTFOLIO_GUIDE_V1.md) and
+[owner-directed UI refinement](docs/06_execution/UI_REDESIGN_EXECUTION_20261106.md).
 
-All 1,963 remote files returned and were reread/hash-verified before exact
-task/export deletion; fresh absence is verified. Do not recreate closed roots.
-A3 charged 5.5 conservative CPU-hours within B's 48-hour CPU allowance.
-B's fixed window is 6–9 November, 05:13:23 UTC / 12:13:23 Bangkok.
-Follow the [execution contract](docs/06_execution/PLAN_B_EXECUTION_CONTRACT_20261106.md)
-and selected owner review before the pilot. C remains conditional; potential is
-NOT_EVALUATED. Final outcomes remain reserved. The original
-[portfolio selection record](docs/06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md)
-is historical planning evidence, not the latest execution status.
+B's molecular source phase stopped on HTTP504 at its third request; full
+qualification and fitting remain NOT_RUN. The shared-decision metadata comparison
+tied12/12 versus12/12. Narrow C tooling passed two ten-case acceptance runs, four
+native-pipe checks and an actual eleven-response stdio client/server path.
+Molecular replay is UNMET, live-agent evaluation NOT_RUN and commercial data
+permission NOT_CLEARED. No protected final outcomes were opened.
+
+B347files and C175files returned and were completely reread/hash-verified before
+exact task/export deletion; fresh absence is recorded. Do not recreate closed
+roots. The cumulative conservative charge before the UI extension is9.5CPU-hours.
+C's clock remains6November11:04:20UTC→10November11:04:20UTC, with at most48
+additional CPU-hours and maxfour processing workers. Normal main delivery is
+authorized. The new UI supports both EN/TH; repository documentation stays English.
+
+Earlier A3 records: [qualification](docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md),
+[closeout](docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md).
 
 Earlier completed goal: [4R2-A2 source/benchmark readiness](docs/03_research/GOAL4R2A2_READINESS_V1.md),
 [compatibility/exposure](docs/03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md)

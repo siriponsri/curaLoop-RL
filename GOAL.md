@@ -2,14 +2,12 @@
 
 ## Current checkpoint, 6 November 2026
 
-[A3 qualification](docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md) is complete with
-scientific advancement NO_GO. The current data question concerns protected,
-explicitly observed populations and complete endpoints for a future decision
-study. The original acquisition thesis below remains historical; its incremental
-value was not established in Goal4/4R1. The selected A3 owner review precedes the
-pilot. Normal main delivery is authorized; final study, live team writes and
-journal submission remain separate. See the [closeout](docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md).
-
+The [LR-BC core](docs/06_execution/LRBC_CORE_CLOSEOUT_20261106.md) supports narrow
+internal metadata/readiness/report tools. Molecular research remains NOT_READY;
+source intake stopped on HTTP504 and full qualification/fitting were NOT_RUN.
+The owner requested [minimal/modern EN/TH UI refinement](docs/06_execution/UI_REDESIGN_EXECUTION_20261106.md)
+for both the screening app and C Workspace. C's48-hour CPU increment and original
+clock remain; no protected final outcome, real team write or journal action is released.
 
 ## Intended outcome
 

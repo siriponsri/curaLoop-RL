@@ -1,0 +1,61 @@
+{
+  "status": "NO_GO_R1_INTAKE_STOP",
+  "mode": "canary",
+  "source_attempts": 3,
+  "stop": {
+    "request_index": 2,
+    "aid": "588489",
+    "error_type": "QualificationError",
+    "reason": "SOURCE_REQUEST_OR_TRANSPORT",
+    "http_status": 504
+  },
+  "assays": [
+    {
+      "aid": "2097",
+      "role": "DEVELOPMENT_EXPOSED",
+      "record_count": 16,
+      "sampled_sid_count": 16,
+      "returned_sid_count": 16,
+      "readout_state_counts": {
+        "EXACT_NUMERIC": 16,
+        "MISSING_TID": 16
+      },
+      "source_sha256": "bb77fb872d6b8159e433c02e7b526e10f1056e25bb052894d8653db9dddb9596",
+      "raw_outcomes_or_values_included": false,
+      "scientific_campaigns": 0,
+      "historical_rows_equivalent": "NOT_CERTIFIED",
+      "script": "retrieve-scripts/434954-2097.sh",
+      "stage": "primary",
+      "exact_complete_sids": 0
+    },
+    {
+      "aid": "434954",
+      "role": "DEVELOPMENT_EXPOSED",
+      "record_count": 16,
+      "sampled_sid_count": 16,
+      "returned_sid_count": 16,
+      "readout_state_counts": {
+        "EXACT_NUMERIC": 4,
+        "MISSING_TID": 12
+      },
+      "source_sha256": "fa254e88188158103e13ac1b81f8a3277001eddbc365d42cf93bf355de57f6a1",
+      "raw_outcomes_or_values_included": false,
+      "scientific_campaigns": 0,
+      "historical_rows_equivalent": "NOT_CERTIFIED",
+      "script": "retrieve-scripts/434954-2097.sh",
+      "stage": "confirmation",
+      "exact_complete_sids": 4
+    }
+  ],
+  "paired": [],
+  "decoded_bytes_observed": 54362,
+  "reserved_calls_retained": 20,
+  "request_plan_sha256": "e5d532c517296d522053b095b0aaed216e8d02c6cfc15c86b873cf4011f677a0",
+  "role": "DEVELOPMENT_EXPOSED",
+  "independent_components": 1,
+  "pilot_released": false,
+  "scientific_eligibility": "NOT_ESTABLISHED_BY_SOURCE_CANARY",
+  "historical_rows_equivalent": "NOT_CERTIFIED",
+  "old_stop_preserved": true,
+  "raw_values_or_identifiers_included": false
+}

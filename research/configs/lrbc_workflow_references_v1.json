@@ -1,0 +1,491 @@
+{
+  "status": "STATIC_REVIEW_ADDENDUM_BEFORE_FIRST_EXECUTION",
+  "all_reference_facts_exposed": true,
+  "no_runtime_results_used": true,
+  "source_case_config_sha256": "d9cfc5a45083d1ad05fe96d744f68ffefff65d91320968b5177b2acaa3699c19",
+  "annotation_basis": "Read-only primary capture verification; exact claim roster adds mandatory support/unsupported-claim scoring before any run",
+  "cases": {
+    "W01": {
+      "disposition": "METADATA_REPORT",
+      "claims": [
+        {
+          "key": "tid",
+          "state": "VALUE",
+          "value": 3,
+          "evidence": {
+            "source_id": "D743445",
+            "source_sha256": "794fbfe99e777d2b79bb1192b9e3d3f76454a92652a8d58be5b9368a11a1f7e1",
+            "locator": "/PC_AssayContainer/0/assay/descr/results/2/tid"
+          }
+        },
+        {
+          "key": "name",
+          "state": "VALUE",
+          "value": "REPLICATE_A_ACTIVITY_SCORE_12.48uM_(%)",
+          "evidence": {
+            "source_id": "D743445",
+            "source_sha256": "794fbfe99e777d2b79bb1192b9e3d3f76454a92652a8d58be5b9368a11a1f7e1",
+            "locator": "/PC_AssayContainer/0/assay/descr/results/2/name"
+          }
+        },
+        {
+          "key": "type",
+          "state": "VALUE",
+          "value": 1,
+          "evidence": {
+            "source_id": "D743445",
+            "source_sha256": "794fbfe99e777d2b79bb1192b9e3d3f76454a92652a8d58be5b9368a11a1f7e1",
+            "locator": "/PC_AssayContainer/0/assay/descr/results/2/type"
+          }
+        },
+        {
+          "key": "unit",
+          "state": "VALUE",
+          "value": 15,
+          "evidence": {
+            "source_id": "D743445",
+            "source_sha256": "794fbfe99e777d2b79bb1192b9e3d3f76454a92652a8d58be5b9368a11a1f7e1",
+            "locator": "/PC_AssayContainer/0/assay/descr/results/2/unit"
+          }
+        }
+      ]
+    },
+    "W02": {
+      "disposition": "BLOCKED_ENDPOINT_UNRESOLVED",
+      "claims": [
+        {
+          "key": "tid",
+          "state": "VALUE",
+          "value": 3,
+          "evidence": {
+            "source_id": "D1053173",
+            "source_sha256": "7018ed98d8bd25c2c7baee04b8d9cc55e280c20f2afc7a18f9c3dee231b733e9",
+            "locator": "/PC_AssayContainer/0/assay/descr/results/2/tid"
+          }
+        },
+        {
+          "key": "name",
+          "state": "VALUE",
+          "value": "pAC50_M",
+          "evidence": {
+            "source_id": "D1053173",
+            "source_sha256": "7018ed98d8bd25c2c7baee04b8d9cc55e280c20f2afc7a18f9c3dee231b733e9",
+            "locator": "/PC_AssayContainer/0/assay/descr/results/2/name"
+          }
+        },
+        {
+          "key": "type",
+          "state": "VALUE",
+          "value": 4,
+          "evidence": {
+            "source_id": "D1053173",
+            "source_sha256": "7018ed98d8bd25c2c7baee04b8d9cc55e280c20f2afc7a18f9c3dee231b733e9",
+            "locator": "/PC_AssayContainer/0/assay/descr/results/2/type"
+          }
+        },
+        {
+          "key": "unit",
+          "state": "ABSENT",
+          "value": null,
+          "evidence": {
+            "source_id": "D1053173",
+            "source_sha256": "7018ed98d8bd25c2c7baee04b8d9cc55e280c20f2afc7a18f9c3dee231b733e9",
+            "locator": "/PC_AssayContainer/0/assay/descr/results/2/unit"
+          }
+        }
+      ]
+    },
+    "W03": {
+      "disposition": "METADATA_REPORT",
+      "claims": [
+        {
+          "key": "tid",
+          "state": "VALUE",
+          "value": 2,
+          "evidence": {
+            "source_id": "D1259375",
+            "source_sha256": "da0ed5b24f308f037bc291c390fe711f00d0edcd664b2770a5d8b54321fbb186",
+            "locator": "/PC_AssayContainer/0/assay/descr/results/1/tid"
+          }
+        },
+        {
+          "key": "name",
+          "state": "VALUE",
+          "value": "IC50",
+          "evidence": {
+            "source_id": "D1259375",
+            "source_sha256": "da0ed5b24f308f037bc291c390fe711f00d0edcd664b2770a5d8b54321fbb186",
+            "locator": "/PC_AssayContainer/0/assay/descr/results/1/name"
+          }
+        },
+        {
+          "key": "type",
+          "state": "VALUE",
+          "value": 1,
+          "evidence": {
+            "source_id": "D1259375",
+            "source_sha256": "da0ed5b24f308f037bc291c390fe711f00d0edcd664b2770a5d8b54321fbb186",
+            "locator": "/PC_AssayContainer/0/assay/descr/results/1/type"
+          }
+        },
+        {
+          "key": "unit",
+          "state": "VALUE",
+          "value": 5,
+          "evidence": {
+            "source_id": "D1259375",
+            "source_sha256": "da0ed5b24f308f037bc291c390fe711f00d0edcd664b2770a5d8b54321fbb186",
+            "locator": "/PC_AssayContainer/0/assay/descr/results/1/unit"
+          }
+        }
+      ]
+    },
+    "W04": {
+      "disposition": "BLOCKED_ENDPOINT_UNRESOLVED",
+      "claims": [
+        {
+          "key": "tid",
+          "state": "VALUE",
+          "value": 3,
+          "evidence": {
+            "source_id": "D1259375",
+            "source_sha256": "da0ed5b24f308f037bc291c390fe711f00d0edcd664b2770a5d8b54321fbb186",
+            "locator": "/PC_AssayContainer/0/assay/descr/results/2/tid"
+          }
+        },
+        {
+          "key": "name",
+          "state": "VALUE",
+          "value": "LogIC50",
+          "evidence": {
+            "source_id": "D1259375",
+            "source_sha256": "da0ed5b24f308f037bc291c390fe711f00d0edcd664b2770a5d8b54321fbb186",
+            "locator": "/PC_AssayContainer/0/assay/descr/results/2/name"
+          }
+        },
+        {
+          "key": "type",
+          "state": "VALUE",
+          "value": 4,
+          "evidence": {
+            "source_id": "D1259375",
+            "source_sha256": "da0ed5b24f308f037bc291c390fe711f00d0edcd664b2770a5d8b54321fbb186",
+            "locator": "/PC_AssayContainer/0/assay/descr/results/2/type"
+          }
+        },
+        {
+          "key": "unit",
+          "state": "ABSENT",
+          "value": null,
+          "evidence": {
+            "source_id": "D1259375",
+            "source_sha256": "da0ed5b24f308f037bc291c390fe711f00d0edcd664b2770a5d8b54321fbb186",
+            "locator": "/PC_AssayContainer/0/assay/descr/results/2/unit"
+          }
+        }
+      ]
+    },
+    "W05": {
+      "disposition": "BLOCKED_HISTORICAL_IDENTITY",
+      "claims": [
+        {
+          "key": "published_selector",
+          "state": "VALUE",
+          "value": "1.13",
+          "evidence": {
+            "source_id": "R873_PUBLISHED",
+            "source_sha256": "d1aee7f6d2cd40c1e45a78ac3a8c80a91bc0baab138f3efc75e5a78af0464034",
+            "locator": "/request/params/version"
+          }
+        },
+        {
+          "key": "invalid_selector",
+          "state": "VALUE",
+          "value": "999999.999999",
+          "evidence": {
+            "source_id": "R873_INVALID",
+            "source_sha256": "fed2b9d1a3dfec128e7998d73c52e84d8191cd3f775620aa605ea63b12373b60",
+            "locator": "/request/params/version"
+          }
+        },
+        {
+          "key": "published_response_sha256",
+          "state": "VALUE",
+          "value": "6a650785d737d7e860d74ebb17a23fd4639f1a380896c8a68bcfe10d73e40d13",
+          "evidence": {
+            "source_id": "R873_PUBLISHED",
+            "source_sha256": "d1aee7f6d2cd40c1e45a78ac3a8c80a91bc0baab138f3efc75e5a78af0464034",
+            "locator": "/response_sha256"
+          }
+        },
+        {
+          "key": "invalid_response_sha256",
+          "state": "VALUE",
+          "value": "6a650785d737d7e860d74ebb17a23fd4639f1a380896c8a68bcfe10d73e40d13",
+          "evidence": {
+            "source_id": "R873_INVALID",
+            "source_sha256": "fed2b9d1a3dfec128e7998d73c52e84d8191cd3f775620aa605ea63b12373b60",
+            "locator": "/response_sha256"
+          }
+        },
+        {
+          "key": "published_http_status",
+          "state": "VALUE",
+          "value": 200,
+          "evidence": {
+            "source_id": "R873_PUBLISHED",
+            "source_sha256": "d1aee7f6d2cd40c1e45a78ac3a8c80a91bc0baab138f3efc75e5a78af0464034",
+            "locator": "/result/status_code"
+          }
+        },
+        {
+          "key": "invalid_http_status",
+          "state": "VALUE",
+          "value": 200,
+          "evidence": {
+            "source_id": "R873_INVALID",
+            "source_sha256": "fed2b9d1a3dfec128e7998d73c52e84d8191cd3f775620aa605ea63b12373b60",
+            "locator": "/result/status_code"
+          }
+        }
+      ]
+    },
+    "W06": {
+      "disposition": "BLOCKED_HISTORICAL_IDENTITY",
+      "claims": [
+        {
+          "key": "published_selector",
+          "state": "VALUE",
+          "value": "1.13",
+          "evidence": {
+            "source_id": "R873_PUBLISHED",
+            "source_sha256": "d1aee7f6d2cd40c1e45a78ac3a8c80a91bc0baab138f3efc75e5a78af0464034",
+            "locator": "/request/params/version"
+          }
+        },
+        {
+          "key": "invalid_selector",
+          "state": "VALUE",
+          "value": "999999.999999",
+          "evidence": {
+            "source_id": "R873_INVALID",
+            "source_sha256": "fed2b9d1a3dfec128e7998d73c52e84d8191cd3f775620aa605ea63b12373b60",
+            "locator": "/request/params/version"
+          }
+        },
+        {
+          "key": "published_response_sha256",
+          "state": "VALUE",
+          "value": "6a650785d737d7e860d74ebb17a23fd4639f1a380896c8a68bcfe10d73e40d13",
+          "evidence": {
+            "source_id": "R873_PUBLISHED",
+            "source_sha256": "d1aee7f6d2cd40c1e45a78ac3a8c80a91bc0baab138f3efc75e5a78af0464034",
+            "locator": "/response_sha256"
+          }
+        },
+        {
+          "key": "invalid_response_sha256",
+          "state": "VALUE",
+          "value": "6a650785d737d7e860d74ebb17a23fd4639f1a380896c8a68bcfe10d73e40d13",
+          "evidence": {
+            "source_id": "R873_INVALID",
+            "source_sha256": "fed2b9d1a3dfec128e7998d73c52e84d8191cd3f775620aa605ea63b12373b60",
+            "locator": "/response_sha256"
+          }
+        },
+        {
+          "key": "published_http_status",
+          "state": "VALUE",
+          "value": 200,
+          "evidence": {
+            "source_id": "R873_PUBLISHED",
+            "source_sha256": "d1aee7f6d2cd40c1e45a78ac3a8c80a91bc0baab138f3efc75e5a78af0464034",
+            "locator": "/result/status_code"
+          }
+        },
+        {
+          "key": "invalid_http_status",
+          "state": "VALUE",
+          "value": 200,
+          "evidence": {
+            "source_id": "R873_INVALID",
+            "source_sha256": "fed2b9d1a3dfec128e7998d73c52e84d8191cd3f775620aa605ea63b12373b60",
+            "locator": "/result/status_code"
+          }
+        }
+      ]
+    },
+    "W07": {
+      "disposition": "METADATA_REPORT",
+      "claims": [
+        {
+          "key": "target_refseq",
+          "state": "VALUE",
+          "value": "NP_002084.2",
+          "evidence": {
+            "source_id": "D2097",
+            "source_sha256": "9862a82f821d82ecce14de461cdbbf07026b795c9f353be976933db88ab13a21",
+            "locator": "/PC_AssayContainer/0/assay/descr/target/0/mol_id/protein_accession"
+          }
+        },
+        {
+          "key": "uniprot_accession",
+          "state": "VALUE",
+          "value": "P49841",
+          "evidence": {
+            "source_id": "UNIPROT014",
+            "source_sha256": "7b734ededc754e70b41d929520fd596b8ed3b50506fd466421c4f80c5db170fb",
+            "locator": "TSV line 26, Entry/Reviewed/RefSeq"
+          }
+        }
+      ]
+    },
+    "W08": {
+      "disposition": "METADATA_REPORT",
+      "claims": [
+        {
+          "key": "target_refseq",
+          "state": "VALUE",
+          "value": "NP_002084.2",
+          "evidence": {
+            "source_id": "D2097",
+            "source_sha256": "9862a82f821d82ecce14de461cdbbf07026b795c9f353be976933db88ab13a21",
+            "locator": "/PC_AssayContainer/0/assay/descr/target/0/mol_id/protein_accession"
+          }
+        },
+        {
+          "key": "uniprot_accession",
+          "state": "VALUE",
+          "value": "P49841",
+          "evidence": {
+            "source_id": "UNIPROT014",
+            "source_sha256": "7b734ededc754e70b41d929520fd596b8ed3b50506fd466421c4f80c5db170fb",
+            "locator": "TSV line 26, Entry/Reviewed/RefSeq"
+          }
+        }
+      ]
+    },
+    "W09": {
+      "disposition": "BLOCKED_RIGHTS_UNRESOLVED",
+      "claims": [
+        {
+          "key": "commercial_clearance",
+          "state": "UNRESOLVED",
+          "value": "NOT_ESTABLISHED_BY_PUBLIC_HOSTING",
+          "evidence": {
+            "source_id": "NLM_POLICY",
+            "source_sha256": "fafab3c73722fb386d0245f16eded3f3245cb9a123cddc5e9c1d0601425afcf3",
+            "locator": "lines 25,27"
+          },
+          "inference_rule": "NLM_PUBLIC_HOSTING_NOT_RIGHTS_CERTIFICATE"
+        }
+      ]
+    },
+    "W10": {
+      "disposition": "BLOCKED_RIGHTS_UNRESOLVED",
+      "claims": [
+        {
+          "key": "commercial_clearance",
+          "state": "UNRESOLVED",
+          "value": "NOT_ESTABLISHED_BY_PUBLIC_HOSTING",
+          "evidence": {
+            "source_id": "NLM_POLICY",
+            "source_sha256": "fafab3c73722fb386d0245f16eded3f3245cb9a123cddc5e9c1d0601425afcf3",
+            "locator": "lines 25,27"
+          },
+          "inference_rule": "NLM_PUBLIC_HOSTING_NOT_RIGHTS_CERTIFICATE"
+        }
+      ]
+    },
+    "W11": {
+      "disposition": "BLOCKED_REQUIRED_SOURCE",
+      "claims": [
+        {
+          "key": "required_source_0",
+          "state": "VALUE",
+          "value": "ACCESS_FAILED",
+          "evidence": {
+            "source_id": "SOURCE_ATTEMPTS",
+            "source_sha256": "3b539f6f8ecf163042fec83be68d955e68aacdb07b3f1db96543032ebfb220c6",
+            "locator": "/files/66/status"
+          }
+        },
+        {
+          "key": "required_source_1",
+          "state": "VALUE",
+          "value": "ACCESS_FAILED",
+          "evidence": {
+            "source_id": "SOURCE_ATTEMPTS",
+            "source_sha256": "3b539f6f8ecf163042fec83be68d955e68aacdb07b3f1db96543032ebfb220c6",
+            "locator": "/files/67/status"
+          }
+        },
+        {
+          "key": "required_source_2",
+          "state": "VALUE",
+          "value": "ACCESS_FAILED",
+          "evidence": {
+            "source_id": "SOURCE_ATTEMPTS",
+            "source_sha256": "3b539f6f8ecf163042fec83be68d955e68aacdb07b3f1db96543032ebfb220c6",
+            "locator": "/files/68/status"
+          }
+        },
+        {
+          "key": "required_source_3",
+          "state": "VALUE",
+          "value": "ACCESS_FAILED",
+          "evidence": {
+            "source_id": "SOURCE_ATTEMPTS",
+            "source_sha256": "3b539f6f8ecf163042fec83be68d955e68aacdb07b3f1db96543032ebfb220c6",
+            "locator": "/files/69/status"
+          }
+        }
+      ]
+    },
+    "W12": {
+      "disposition": "BLOCKED_REQUIRED_SOURCE",
+      "claims": [
+        {
+          "key": "required_source_0",
+          "state": "VALUE",
+          "value": "ACCESS_FAILED",
+          "evidence": {
+            "source_id": "SOURCE_ATTEMPTS",
+            "source_sha256": "3b539f6f8ecf163042fec83be68d955e68aacdb07b3f1db96543032ebfb220c6",
+            "locator": "/files/66/status"
+          }
+        },
+        {
+          "key": "required_source_1",
+          "state": "VALUE",
+          "value": "ACCESS_FAILED",
+          "evidence": {
+            "source_id": "SOURCE_ATTEMPTS",
+            "source_sha256": "3b539f6f8ecf163042fec83be68d955e68aacdb07b3f1db96543032ebfb220c6",
+            "locator": "/files/67/status"
+          }
+        },
+        {
+          "key": "required_source_2",
+          "state": "VALUE",
+          "value": "ACCESS_FAILED",
+          "evidence": {
+            "source_id": "SOURCE_ATTEMPTS",
+            "source_sha256": "3b539f6f8ecf163042fec83be68d955e68aacdb07b3f1db96543032ebfb220c6",
+            "locator": "/files/68/status"
+          }
+        },
+        {
+          "key": "required_source_3",
+          "state": "VALUE",
+          "value": "ACCESS_FAILED",
+          "evidence": {
+            "source_id": "SOURCE_ATTEMPTS",
+            "source_sha256": "3b539f6f8ecf163042fec83be68d955e68aacdb07b3f1db96543032ebfb220c6",
+            "locator": "/files/69/status"
+          }
+        }
+      ]
+    }
+  }
+}
