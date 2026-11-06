@@ -1,4 +1,22 @@
-# Current checkpoint: Goal 4R2-A2 readiness closeout
+# Current checkpoint: selected B and conditional C portfolio
+
+The owner selected [B and conditional C](06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md).
+B reserves 48 CPU-hours/72 hours/max four workers on dr-train, initially two;
+A3's first sixteen-hour allocation needs its exact rights/intake contract and
+clock. Retain the selected A3-to-pilot owner review. B/C processing is NOT_STARTED.
+
+If B's documented potential is sufficient, continue to C automatically within
+the standing conditional authority: extra 48 CPU-hours, combined 96/seven days,
+max four workers. The portfolio uses a shared software core across Evidence Workspace,
+Decision Workbench and Integration Kit. Completion alone does not establish
+potential. Uncertain potential or material scope/resource/rights changes need
+consultation; no new paid service, protected final outcome or real team write is
+included. Current potential gate is NOT_EVALUATED and no clock has started.
+
+Latest executed goal remains A2 below. The old resource alternatives are
+historical; the canonical selected plan governs the next continuation.
+
+## Latest executed goal: 4R2-A2 readiness closeout
 
 Completed: [A2 source/benchmark readiness](03_research/GOAL4R2A2_READINESS_V1.md),
 [compatibility/exposure](03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md) and

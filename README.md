@@ -62,6 +62,12 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 ## Research and R&D pilot programme
 
+Selected next plan: [B with conditional C portfolio](docs/06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md).
+B reserves 48 CPU-hours for data qualification and an approved decision-method
+pilot. Sufficient demonstrated potential permits continuation to a R&D product portfolio built on shared
+components within a combined 96 CPU-hour ceiling. These are selected/
+conditional plans; execution and potential assessment have not started.
+
 Latest: [Goal 4R2-A2 readiness](docs/03_research/GOAL4R2A2_READINESS_V1.md)
 retrieved descriptions for all 105 MF-PCBA AIDs, with version/revision metadata
 matching the publication, and passed ten engineering contract checks on dr-train.

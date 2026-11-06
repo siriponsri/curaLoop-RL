@@ -1,12 +1,20 @@
 # Documentation map
 
+Selected next programme: [Plan B with conditional C portfolio](06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md).
+B reserves 48 CPU-hours/72 hours/max four workers; C may follow a documented
+sufficient-potential verdict without repeat permission inside scope, adding
+at most 48 CPU-hours within a combined 96/seven-day ceiling. Neither execution
+nor the potential assessment has started. Exact A3 intake/clock and its review
+checkpoint remain pending. The [original alternatives](06_execution/PRE_A3_CPU_TIME_OPTIONS_20261106.md)
+are retained as history.
+
 Latest executed goal: [4R2-A2 readiness](03_research/GOAL4R2A2_READINESS_V1.md),
 [benchmark/exposure assessment](03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md),
 [closeout](06_execution/GOAL4R2A2_CLOSEOUT_20261106.md) and
 [evidence](evidence/goal4r2a2-20261106-v1/README.md). All 105 AID descriptions
 retrieved, ten contract cases passed and complete return/cleanup verified.
 Scientific pilot NO_GO; MolDesignBench direct workflow use NO_GO and commercial
-dataset reuse NOT_CLEARED. Next A3/P1 work needs its own owner decision.
+dataset reuse NOT_CLEARED. The subsequent selected B/C planning decision is above.
 
 Earlier executed goal: [4R2-A feasibility](03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md),
 [workflow guide](05_product/OFFLINE_RD_WORKFLOW_V1.md),

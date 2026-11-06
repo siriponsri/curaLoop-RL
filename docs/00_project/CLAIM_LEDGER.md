@@ -49,6 +49,7 @@ Use this ledger to reconcile the manuscript, README, presentation, pilot report 
 | C43 | MolDesignBench directly validates CuraLoop's plan/report workflow or business data rights | NOT_ESTABLISHED_DIRECT_WORKFLOW_NO_GO | [Compatibility/exposure assessment](../03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md); native molecule/refusal output mismatch, data CC BY-NC/commercial reuse NOT_CLEARED, auxiliary design conditional, native evaluation NOT_RUN |
 | C44 | A2 metadata/schema and prospective benchmark gates pass fixed checks | ENGINEERING_CONTRACT_EVIDENCE_ONLY | [Ten actual META cases](../evidence/goal4r2a2-20261106-v1/contract-results-v1.json); dr-train run, synthetic metric diagnostic, no scientific/agent performance claim or concrete heldout roster |
 | C45 | A2 remote task files were returned before scoped deletion | VERIFIED_COMPLETE_RETURN_AND_FRESH_ABSENCE | [A2 closeout](../06_execution/GOAL4R2A2_CLOSEOUT_20261106.md); 244 regular files/4,919,055 bytes completely reread/hash-verified before exact task/export cleanup; fresh absence 6 November 01:44:59.394922 UTC |
+| C46 | B is selected and sufficient B potential permits a C product portfolio | OWNER_SELECTED_PLAN_AND_CONDITIONAL_AUTHORITY_ONLY | [Canonical B/C plan](../06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md); B 48 CPU-hours/72 hours, C increment 48/B+C 96 within seven days; processing NOT_STARTED, potential NOT_EVALUATED, no product/customer benefit claim |
 
 ## Language rules
 

@@ -2,6 +2,14 @@
 
 ## Current local continuation
 
+Selected next work: [Plan B with conditional C product portfolio](docs/06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md).
+B: 48 CPU-hours/72 hours/max four workers, initially two; exact A3 intake contract
+and clock pending. C may proceed directly after a documented verdict that B has sufficient
+potential, adding at most 48 CPU-hours within a combined 96/seven-day
+ceiling. Evidence Workspace, Decision Workbench and Integration Kit share one
+core. No B/C execution or potential verdict exists yet; paid services and final
+outcomes remain outside scope. Read the canonical plan before starting work.
+
 Latest completed goal: [4R2-A2 source/benchmark readiness](docs/03_research/GOAL4R2A2_READINESS_V1.md),
 [compatibility/exposure](docs/03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md)
 and [closeout](docs/06_execution/GOAL4R2A2_CLOSEOUT_20261106.md). All 105 AID
@@ -9,8 +17,8 @@ descriptions match SI version/revision metadata; dates/row equivalence and
 scientific eligibility remain unresolved. Ten frozen engineering cases passed.
 MolDesignBench is conditional auxiliary molecular design, not a direct plan/report
 benchmark; commercial dataset reuse is NOT_CLEARED. All 244 task files returned/
-reread before scoped deletion and fresh absence. Stop for the next bounded owner
-decision; final outcomes remain reserved. Earlier checkpoints below are history.
+reread before scoped deletion and fresh absence. The subsequent B/C planning
+decision is above; final outcomes remain reserved. Earlier checkpoints are history.
 
 Earlier completed goal: [4R2-A feasibility](docs/03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md),
 [offline workflow guide](docs/05_product/OFFLINE_RD_WORKFLOW_V1.md) and

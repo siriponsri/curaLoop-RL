@@ -1,5 +1,27 @@
 # Agent instructions: CuraLoop-RL
 
+## Selected Plan B and conditional C portfolio, 6 November 2026
+
+The owner selected B and authorized direct continuation to C's product portfolio
+if B demonstrates sufficient potential. Canonical authority/scope record:
+`docs/06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md`.
+B: 48 cumulative CPU-hours / 72 elapsed hours / max four CPU workers on dr-train,
+initially two; sixteen CPU-hours for A3, with the selected owner-review checkpoint
+before the remaining pilot allocation. B execution is NOT_STARTED: exact A3
+rights/intake contract and start/deadline remain pending. This plan-recording
+request does not open outcomes, create remote roots or start the clock.
+C: conditionally authorized after the documented POTENTIAL_SUFFICIENT verdict,
+without repeat approval for routine work inside the plan. Increment at most
+48 CPU-hours, B+C at most 96 CPU-hours / seven elapsed days from eventual B
+start, max four workers. Use one shared core for Evidence Workspace, Decision
+Workbench and Integration Kit. No automatic extra 96 CPU-hour allocation.
+Distinguish completed B execution from scientific/product potential; record fair
+comparisons, uncertainty, failures, reproducibility and intended-use rights.
+Ask on uncertain potential or material scope/rights/resource changes; paid
+services, protected final outcomes, real team writes and publication stay outside
+this authority. Preserve frozen bytes and closed roots. Repository artifacts
+English; parent sole writer. Normal main documentation delivery remains authorized.
+
 ## Current Goal 4R2-A2 closeout, 6 November 2026
 
 A2 source/benchmark readiness is complete. Read

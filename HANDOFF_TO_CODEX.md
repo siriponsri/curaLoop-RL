@@ -1,6 +1,27 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
-## Current 4R2-A2 completed checkpoint
+## Current planning checkpoint: selected B and conditional C
+
+Read the [canonical B/C record](docs/06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md).
+The owner selected B (48 CPU-hours/72 hours/max four CPU workers on dr-train,
+initially two) and authorized direct continuation to C's product portfolio when
+B demonstrates sufficient potential. This is standing conditional authority for
+the recorded scope, not an automatic positive finding or an open-ended budget.
+C adds at most 48 CPU-hours; B+C at most 96 CPU-hours/seven days from eventual B
+start, maximum four workers. Use a shared software core for Evidence Workspace, Decision
+Workbench and Integration Kit. No repeat B-to-C permission for routine in-scope
+work; consult on uncertain potential and material changes.
+
+Execution NOT_STARTED, start/deadline NOT_SET, potential NOT_EVALUATED. Next
+artifact is the precise A3 rights/intake/execution contract within B's first
+sixteen CPU-hours. Retain the selected owner-review checkpoint after A3 before
+the remaining pilot allocation. Preserve all frozen prior bytes/final outcomes.
+No SSH, row intake, scientific/model run, payment or team write occurred during
+this recording task. Base main: `9f06e1cf8be6514fe600b2a56088a80fff51e912`;
+the normal documentation-delivery commit and live main readback identify the
+published planning update. Existing closed task roots remain absent/closed.
+
+## Latest executed goal: 4R2-A2 completed checkpoint
 
 Read [readiness](docs/03_research/GOAL4R2A2_READINESS_V1.md),
 [benchmark compatibility/exposure](docs/03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md),

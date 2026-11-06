@@ -1,5 +1,11 @@
 # CPU and time options before Goal 4R2-A3
 
+Historical option comparison. The owner subsequently selected B and authorized
+conditional C continuation when B shows sufficient potential. The current
+decision, portfolio scope and cumulative-budget interpretation are recorded in
+[the selected B/C plan](PLAN_B_WITH_CONDITIONAL_C_20261106.md). Original
+proposal statuses and selection instructions below describe the earlier checkpoint.
+
 6 November 2026. **PROPOSED ONLY; READY_FOR_OWNER_REVIEW.**
 
 The owner requested alternatives for expanding resources before A3 and clarified
