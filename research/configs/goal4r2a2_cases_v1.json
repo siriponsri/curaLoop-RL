@@ -1,0 +1,18 @@
+{
+  "schema": "curaloop.metadata-readiness-cases.v1",
+  "status": "FROZEN_BEFORE_IMPLEMENTATION",
+  "cases": [
+    {"id": "META01", "purpose": "Valid description metadata preserves requested AID and source pointers", "expected": "VALID_METADATA_ONLY"},
+    {"id": "META02", "purpose": "Absent, null and observed zero remain different states", "expected": "NO_DEFAULT_SUBSTITUTION"},
+    {"id": "META03", "purpose": "Duplicate JSON keys, nonfinite values and Boolean numeric fields are rejected", "expected": "INVALID_INPUT_REJECTED"},
+    {"id": "META04", "purpose": "Wrong/duplicate AIDs and incomplete roster cannot claim complete coverage", "expected": "COVERAGE_FAIL_CLOSED"},
+    {"id": "META05", "purpose": "Matching published/current version tuples establish metadata concordance only", "expected": "HISTORICAL_ROWS_NOT_CERTIFIED"},
+    {"id": "META06", "purpose": "Different revisions, missing fields and different date meanings retain distinct verdicts", "expected": "DIFFERENT_OR_INDETERMINATE"},
+    {"id": "META07", "purpose": "Unresolved target/endpoint/unit cannot be promoted to a ready scientific plan", "expected": "NOT_STUDY_READY"},
+    {"id": "META08", "purpose": "Oversize/deep/activity/task/gold envelopes stop before semantic row processing", "expected": "UNEXPECTED_CONTENT_REJECTED"},
+    {"id": "META09", "purpose": "Benchmark objective/schema/rights incompatibilities produce named blockers", "expected": "NO_UNIVERSAL_COMPATIBILITY_CLAIM"},
+    {"id": "META10", "purpose": "Exposed or unresolved example groups and changed split manifests cannot certify holdout", "expected": "ROSTER_NOT_FROZEN"}
+  ],
+  "synthetic_contract_examples_only": true,
+  "scientific_or_benchmark_trials": 0
+}

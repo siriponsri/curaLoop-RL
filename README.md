@@ -62,7 +62,17 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 ## Research and R&D pilot programme
 
-Latest: [Goal 4R2-A](docs/03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md)
+Latest: [Goal 4R2-A2 readiness](docs/03_research/GOAL4R2A2_READINESS_V1.md)
+retrieved descriptions for all 105 MF-PCBA AIDs, with version/revision metadata
+matching the publication, and passed ten engineering contract checks on dr-train.
+Historical activity equivalence and scientific cohort eligibility remain open.
+The [MolDesignBench assessment](docs/03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md)
+finds an output mismatch with the current plan/report workflow and a
+noncommercial dataset restriction. Full return and scoped remote cleanup are
+[verified](docs/06_execution/GOAL4R2A2_CLOSEOUT_20261106.md). Scientific pilot
+advancement remains NO_GO; live integration and benchmark evaluation remain unrun.
+
+Earlier: [Goal 4R2-A](docs/03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md)
 delivers an [offline evidence-to-plan/report prototype](docs/05_product/OFFLINE_RD_WORKFLOW_V1.md)
 with 20 passing engineering checks. MF-PCBA publication metadata now covers
 60 stage pairs and 105 AID version tuples. Scientific cohort eligibility and a

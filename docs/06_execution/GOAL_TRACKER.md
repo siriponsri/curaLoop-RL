@@ -13,7 +13,8 @@ Repository artifacts remain English. Goal2 base is main commit `729e13b`.
 | 4 | Development training/adapter/baseline feasibility, resource measurement and final design freeze | PRESCRIBED TRIALS COMPLETE; method-advance gate NOT_PASSED; final-study design NOT_FROZEN; owner direction required before more configurations/Goal5 |
 | 4R1 | Diagnose predictor versus acquisition effects; two repair variants, strong controls and preserved final outcomes | COMPLETE BOUNDED DIAGNOSIS: [results](../03_research/GOAL4R1_RESULTS_V1.md); STOP_CURRENT_ACQUISITION_THESIS; complete verified return/cleanup; broader Goal4 advance NOT_PASSED |
 | 4R2-A | Offline evidence-to-plan/report prototype, source metadata and scientific feasibility decision | COMPLETE: [20 engineering checks and feasibility](../03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md), 60 SI-verified pairs/105 AID version tuples, verified return/cleanup; scientific advancement NO_GO |
-| 4R2-A2 | Source reconstruction and external workflow-benchmark readiness | PROPOSED ONLY: [expansion](GOAL4R2A_EXPANSION_PROPOSAL_20261106.md); new 4 CPU-hour/12-hour/two-worker cap proposed, no execution |
+| 4R2-A2 | Source reconstruction and external workflow-benchmark readiness | COMPLETE: [readiness](../03_research/GOAL4R2A2_READINESS_V1.md), 105 descriptions with SI version/revision concordance, ten engineering cases, verified full return/cleanup; scientific pilot NO_GO, historical rows NOT_CERTIFIED; benchmark direct-workflow NO_GO/commercial data NOT_CLEARED |
+| 4R2-A3 | Historical observation/population qualification | PROPOSED ONLY in [A2 report](../03_research/GOAL4R2A2_READINESS_V1.md); eight CPU-hours/twelve hours/two workers, new rights/intake contract and owner decision required |
 | P1 | Agentic paper/molecular-source search to study plan/report and team-tool delivery | OFFLINE SUBSET implemented in 4R2-A; [full integration proposal](../04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md), model/provider evaluation and live destination remain NOT_RUN |
 | 5 | Frozen held-out study, uncertainty/ablation analysis and independent reproduction | PROPOSED; NOT_STARTED |
 | 6A | English manuscript/figures/supplement/reproduction package and venue fit, ready for human author review | PROPOSED; NOT_STARTED; older review drafts already exist |
@@ -24,23 +25,23 @@ Repository artifacts remain English. Goal2 base is main commit `729e13b`.
 5 November: recommended first block through Goal 4; maximum proposed internal
 endpoint Goal 6A if evidence gates pass. These are proposals, not execution
 authority. The owner requires alternatives and consultation before unresolved
-material decisions. The owner subsequently authorized Option A. Goal 3 is in
+material decisions. At that historical checkpoint the owner authorized Option A. Goal 3 was in
 progress under the [execution contract](PLAN_A_EXECUTION_CONTRACT_20261105.md);
-Goal 4 remains gated.
+Goal 4 was still gated; completed execution is recorded in the table above.
 
-Current [cohort revision options](GOAL3_COHORT_REVISION_OPTIONS_20261105.md):
+Historical [cohort revision options](GOAL3_COHORT_REVISION_OPTIONS_20261105.md):
 first frozen structure-only pass processed136assays/17,601rows with outcome
 values suppressed. Its4/2/12group quotas failed. Owner chose exact chemical
 purge and no chemical OOD claim. Do not expand the frozen reserves or start
 Goal4 campaigns before resolving the data gate. Evidence and every failed
 attempt remain retained in the PlanA packet.
 
-[Latest checkpoint](PLAN_A_CHECKPOINT_20261105.md): the independent constructed
+[Historical checkpoint](PLAN_A_CHECKPOINT_20261105.md): the independent constructed
 planner/adapter work passed119tests with unchanged recorded source hashes.
 Old Goal2 and current PlanA task/export roots were completely preserved locally
 before removal; all three checked absent. No real Goal4 campaign, final outcome
-use or new algorithm advantage is established. The data-revision decision remains
-the next owner action.
+use or new algorithm advantage is established. At that checkpoint, the data-revision decision remained
+the next owner action; subsequent approval/execution is recorded above.
 
 Detailed [Goal 3 proposal](GOAL_03_PROPOSAL_20261105.md), 5 November: source/family/
 split readiness plus a stronger method decision after Goal 2's failed usefulness

@@ -1,12 +1,20 @@
 # Documentation map
 
-Latest executed goal: [4R2-A feasibility](03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md),
+Latest executed goal: [4R2-A2 readiness](03_research/GOAL4R2A2_READINESS_V1.md),
+[benchmark/exposure assessment](03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md),
+[closeout](06_execution/GOAL4R2A2_CLOSEOUT_20261106.md) and
+[evidence](evidence/goal4r2a2-20261106-v1/README.md). All 105 AID descriptions
+retrieved, ten contract cases passed and complete return/cleanup verified.
+Scientific pilot NO_GO; MolDesignBench direct workflow use NO_GO and commercial
+dataset reuse NOT_CLEARED. Next A3/P1 work needs its own owner decision.
+
+Earlier executed goal: [4R2-A feasibility](03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md),
 [workflow guide](05_product/OFFLINE_RD_WORKFLOW_V1.md),
 [closeout](06_execution/GOAL4R2A_CLOSEOUT_20261106.md) and
 [evidence](evidence/goal4r2a-20261106-v1/README.md). Offline engineering passed;
-scientific advancement remains NO_GO. Next
+scientific advancement remains NO_GO. The
 [dataset/benchmark expansion](06_execution/GOAL4R2A_EXPANSION_PROPOSAL_20261106.md)
-is proposed, not authorized execution.
+was proposed at that earlier checkpoint; its A2 execution is reported above.
 
 Earlier executed goal: [4R1 results](03_research/GOAL4R1_RESULTS_V1.md),
 [closeout](06_execution/GOAL4R1_CLOSEOUT_20261105.md) and
@@ -36,14 +44,14 @@ Publication preparation: [reconciled manuscript](01_paper/MANUSCRIPT.md),
 [English/manuscript audit](07_audit/LANGUAGE_AND_MANUSCRIPT_AUDIT.md).
 These are review drafts, not a submitted or accepted article.
 
-Latest preparation: [candidate assay audit](03_research/CANDIDATE_ASSAY_AUDIT_V1.md),
+Earlier preparation: [candidate assay audit](03_research/CANDIDATE_ASSAY_AUDIT_V1.md),
 [design/CPU sensitivity](03_research/DESIGN_SENSITIVITY_V1.md) and
 [exposure/rights protocol](03_research/FINAL_DESIGN_PREPARATION_PROTOCOL_V1.md).
 These are source/feature and hypothetical design evidence, not final outcomes.
 
 Start with [the master plan](../ACADEMIC_BUSINESS_MASTERPLAN.md). Active documentation is organized below. The manuscript contains a historical pilot and an explicitly unexecuted new study. Historical evidence and requirements_v3 remain reference snapshots.
 
-Current local work: [fresh-environment reproduction](03_research/NCATS_REPRODUCTION_V1.md),
+Earlier supporting work: [fresh-environment reproduction](03_research/NCATS_REPRODUCTION_V1.md),
 [Gaussian comparator results](03_research/NCATS_GAUSSIAN_RESULTS_V1.md),
 [Gaussian frozen protocol](03_research/NCATS_GAUSSIAN_PROTOCOL_V1.md),
 [108-run NCATS development results](03_research/NCATS_DEVELOPMENT_RESULTS_V1.md),

@@ -2,13 +2,24 @@
 
 ## Current local continuation
 
-Latest completed goal: [4R2-A feasibility](docs/03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md),
+Latest completed goal: [4R2-A2 source/benchmark readiness](docs/03_research/GOAL4R2A2_READINESS_V1.md),
+[compatibility/exposure](docs/03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md)
+and [closeout](docs/06_execution/GOAL4R2A2_CLOSEOUT_20261106.md). All 105 AID
+descriptions match SI version/revision metadata; dates/row equivalence and
+scientific eligibility remain unresolved. Ten frozen engineering cases passed.
+MolDesignBench is conditional auxiliary molecular design, not a direct plan/report
+benchmark; commercial dataset reuse is NOT_CLEARED. All 244 task files returned/
+reread before scoped deletion and fresh absence. Stop for the next bounded owner
+decision; final outcomes remain reserved. Earlier checkpoints below are history.
+
+Earlier completed goal: [4R2-A feasibility](docs/03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md),
 [offline workflow guide](docs/05_product/OFFLINE_RD_WORKFLOW_V1.md) and
 [closeout](docs/06_execution/GOAL4R2A_CLOSEOUT_20261106.md). Twenty engineering
 checks passed; publication metadata specifies 60 stage pairs and 105 AID versions.
 No new scientific method or cohort is cleared. All 220 regular task files were
-returned/reread before exact cleanup and fresh absence confirmation. Next
-[expansion](docs/06_execution/GOAL4R2A_EXPANSION_PROPOSAL_20261106.md) is proposed only.
+returned/reread before exact cleanup and fresh absence confirmation. The
+[expansion](docs/06_execution/GOAL4R2A_EXPANSION_PROPOSAL_20261106.md) was proposed
+at that earlier checkpoint; its A2 execution is reported above.
 
 Earlier completed goal: [4R1 results](docs/03_research/GOAL4R1_RESULTS_V1.md) and
 [closeout](docs/06_execution/GOAL4R1_CLOSEOUT_20261105.md). The bounded diagnosis
@@ -33,14 +44,14 @@ bytes returned/verified and remote task/export roots deleted.
 Stop for joint owner review before any new method direction or Goal5. Earlier
 in-progress/pending-decision statements below are historical.
 
-Latest 5 November checkpoint: owner-approved reserve expansion A passed
+Historical 5 November checkpoint: owner-approved reserve expansion A passed
 4/2/12 annotation-connected groups, with 6/2/16 assays. Read the
 [dataset card](docs/03_research/FSMOL_DATASET_CARD_V2.md) and
 [Goal3 readiness](docs/06_execution/GOAL3_READINESS_REVISION_A_20261105.md).
 Goal4 now proceeds to evaluator/protocol checks and freeze; final outcomes stay
 reserved. Earlier first-cohort/pending-decision descriptions below are history.
 
-Active work: owner-authorized [Plan A, Goals3–4](docs/06_execution/PLAN_A_EXECUTION_CONTRACT_20261105.md),
+Historical Plan A authorization: owner-authorized [Plan A, Goals3–4](docs/06_execution/PLAN_A_EXECUTION_CONTRACT_20261105.md),
 48 CPU-hours/24 hours, maximum4CPU workers. Goal3 metadata/header/source audits
 and a frozen feature-only preparation ran; Goal4 fitting/campaigns wait for the readiness gate. The owner
 selected a new verified biological-family split, retaining source roles as
@@ -56,7 +67,7 @@ were fully retrieved/hash-verified and its task root deleted. PlanA's audit/help
 and export roots were also returned/verified and deleted; all three task roots
 were checked absent. Future remote processing needs a new task-root version.
 
-Current sequential checkpoint: [Goal 2 results](docs/03_research/GOAL_02_RESULTS_V1.md)
+Earlier sequential checkpoint: [Goal 2 results](docs/03_research/GOAL_02_RESULTS_V1.md)
 and [goal tracker](docs/06_execution/GOAL_TRACKER.md). The real-data prototype
 completed 180 Tox21 development runs on dr-train. Its bound preserved rollout
 decisions but increased policy time by 24.3%; nearest-hit found more actives.

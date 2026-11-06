@@ -1,0 +1,32 @@
+[
+  {
+    "attempt": "metadata-probe-v1",
+    "bundle": "probe-v1",
+    "mode": "probe",
+    "reserved_cpu_seconds": 120,
+    "status": "COMPLETED",
+    "utc": "2026-11-06T01:17:35.442941+00:00",
+    "exit_code": 0,
+    "actual_cpu_seconds": 0.150157506
+  },
+  {
+    "attempt": "contracts-v1",
+    "bundle": "contracts-v1",
+    "mode": "validate",
+    "reserved_cpu_seconds": 120,
+    "status": "COMPLETED",
+    "utc": "2026-11-06T01:35:46.383011+00:00",
+    "exit_code": 0,
+    "actual_cpu_seconds": 0.038152347
+  },
+  {
+    "attempt": "metadata-acquire-v1",
+    "bundle": "contracts-v1",
+    "mode": "acquire",
+    "reserved_cpu_seconds": 120,
+    "status": "COMPLETED",
+    "utc": "2026-11-06T01:39:43.489260+00:00",
+    "exit_code": 0,
+    "actual_cpu_seconds": 8.812219154000001
+  }
+]

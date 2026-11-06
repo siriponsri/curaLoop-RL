@@ -1,0 +1,49 @@
+{
+  "status": "PASS_CONSERVATIVE_BUDGET_WITH_EXPLICIT_ACCOUNTING_LIMITS",
+  "start_utc": "2026-11-06T01:05:41Z",
+  "deadline_utc": "2026-11-06T13:05:41Z",
+  "evidence_created_utc": "2026-11-06T01:46:18.956926+00:00",
+  "cpu_cap_seconds": 14400,
+  "maximum_workers": 2,
+  "observed_remote_worker_overlap": 1,
+  "worker_jobs": 3,
+  "unresolved_reservations": 0,
+  "measured_worker_cpu_seconds": 9.000529007,
+  "retained_worker_reservations_seconds": 360,
+  "utility_reserve_seconds": 3600,
+  "conservative_charge_seconds": 3960,
+  "conservative_charge_cpu_hours": 1.1,
+  "snapshot_cpu_seconds": 0.263044353,
+  "inner_verification_cpu_seconds": 1.640625,
+  "complete_guarded_verification": {
+    "schema_version": "curaloop.goal4r2a2.resources.v1",
+    "pid": 89236,
+    "start_utc": "2026-11-06T01:44:24.449757+00:00",
+    "absolute_deadline_utc": "2026-11-06T13:05:41+00:00",
+    "cpu_affinity": [
+      11
+    ],
+    "wall_limit_seconds": 1800,
+    "cpu_limit_seconds": 300,
+    "memory_limit_bytes": 1073741824,
+    "descendant_processes_allowed": false,
+    "threads_per_blas": 1,
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "command": [
+      "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\tools\\goal4r2a2_verify_local_v1.py",
+      "--folder",
+      ".local/goal4r2a2-20261106-v1/remote-return/full-v1"
+    ],
+    "guard_source_sha256": "c59d178d12b2ecc70daf28cbabaf439c46128fa5663f9056039629debe04165a",
+    "status": "PASS",
+    "wall_seconds": 7.953000000095926,
+    "cpu_seconds": 1.671875,
+    "scientific_contents_deserialized": false,
+    "preservation_utility_reserve_covers_process": true
+  },
+  "preservation_measurements_included_in_utility_reserve": true,
+  "remote_return_helper_hard_cpu_guard": "NOT_IMPLEMENTED",
+  "exact_exhaustive_host_cpu_accounting": "NOT_CERTIFIED",
+  "remote_absence_utc": "2026-11-06T01:44:59.394922+00:00",
+  "gpu_or_new_paid_service": false
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "curaloop.external-benchmark-readiness.v1",
+  "benchmark": "MolDesignBench",
+  "paper": "https://arxiv.org/html/2609.27349v1",
+  "code_commit": "69b0dc5571202e03e8867efa898899781fb7d74a",
+  "code_tree_oid": "72ab86a7b1d59e02e0560c14b0e566af049b10d2",
+  "code_license": "MIT",
+  "data_repository": "LG-AI-Research/MolDesignBench",
+  "data_commit": "34f8dc0ac2ae77870952d06471f836d2bd9e7c3e",
+  "data_card_blob_oid": "a4a2dec0d27826ead3054ae8e88442f03208b617",
+  "data_jsonl_blob_oid_metadata_only": "21e64a39ab105d29d0b5558ea28ac53959343947",
+  "data_jsonl_bytes_metadata_only": 4149306,
+  "git_oids_are_not_sha256": true,
+  "data_license": "CC-BY-NC-4.0",
+  "additional_terms": "Card invokes creation-model Terms of Use; exact terms version not pinned",
+  "commercial_data_reuse": "NOT_CLEARED",
+  "source_reported_counts": {"total": 2000, "generation": 1000, "optimization": 1000, "feasible": 1800, "infeasible": 200},
+  "counts_independently_counted_from_rows": false,
+  "official_splits": ["test"],
+  "schema_fields_from_metadata": ["id", "task_type", "question", "answer", "meta_info"],
+  "native_output": "MOLECULE_SMILES_OR_EXPLICIT_NONE",
+  "curaloop_current_output": "EVIDENCE_PLAN_REPORT_BUNDLE",
+  "direct_workflow_compatibility": false,
+  "auxiliary_molecular_design_evaluation": "CONDITIONAL_GO_NEW_ADAPTER_AND_APPROVAL",
+  "native_full_stack_cpu_readiness": "NOT_ESTABLISHED",
+  "tool_requirements": ["RDKit 2025.03.6", "NumPy 1.26.4", "PyTorch", "patched ADMET-AI and Chemprop", "Java 17 for documented environment", "NVIDIA MolMIM NIM for two optional/native generation tools"],
+  "metrics_discrepancy": {
+    "card_feasibility_f1": "Feasible true positive described as fully solved",
+    "pinned_code_feasibility_f1": "Feasible true positive uses attempted non-None, independently of molecular quality",
+    "scorer_blob_oid": "30bf591c8027535c9147735b6e9d3a335f448986",
+    "pin_definitions_and_denominators_before_evaluation": true
+  },
+  "exposure": {
+    "benchmark_task_or_gold_rows_seen": 0,
+    "card_generic_examples": ["logP property range", "pyridine ring count"],
+    "code_examples": ["BaseTool ethanol example", "analysis.py SMILES/property examples"],
+    "matching_example_ids_and_template_groups": "UNKNOWN_PENDING_AUTHORIZED_INDEX",
+    "external_schema_tool_internal_preview_attempt": "TIMEOUT_NO_ROW_CONTENT_RETURNED",
+    "external_provider_internal_row_access": "NOT_CERTIFIED",
+    "model_pretraining_exposure": "NOT_CERTIFIED"
+  },
+  "prospective_split": {
+    "status": "NOT_FROZEN_NO_AUTHORIZED_GROUP_INDEX",
+    "rule": "SHA256 of fixed salt plus provenance/template group, modulo 100: <20 development, <40 validation, otherwise evaluation",
+    "salt": "CuraLoop-4R2-A2-20261106-v1",
+    "exposed_or_unresolved_groups": "QUARANTINE",
+    "gold_visibility": "SCORER_ONLY_AFTER_FUTURE_AUTHORIZATION",
+    "actual_roster_created": false
+  },
+  "source_urls": [
+    "https://github.com/KU-AGI/MolDesignBench/blob/69b0dc5571202e03e8867efa898899781fb7d74a/LICENSE",
+    "https://github.com/KU-AGI/MolDesignBench/blob/69b0dc5571202e03e8867efa898899781fb7d74a/docs/evaluation.md",
+    "https://github.com/KU-AGI/MolDesignBench/blob/69b0dc5571202e03e8867efa898899781fb7d74a/evaluate/evaluate_benchmark.py",
+    "https://huggingface.co/datasets/LG-AI-Research/MolDesignBench/blob/34f8dc0ac2ae77870952d06471f836d2bd9e7c3e/README.md"
+  ],
+  "benchmark_execution": "NOT_RUN",
+  "task_gold_intake": "NOT_RUN"
+}

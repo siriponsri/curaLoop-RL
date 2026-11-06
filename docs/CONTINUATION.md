@@ -1,4 +1,28 @@
-# Current checkpoint: Goal 4R2-A closeout
+# Current checkpoint: Goal 4R2-A2 readiness closeout
+
+Completed: [A2 source/benchmark readiness](03_research/GOAL4R2A2_READINESS_V1.md),
+[compatibility/exposure](03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md) and
+[closeout](06_execution/GOAL4R2A2_CLOSEOUT_20261106.md). Current descriptions for
+105/105 AIDs match SI version/revision metadata. Inspected dates are absent;
+historical rows remain NOT_CERTIFIED. The invalid version control returned
+current metadata. Ten frozen contract cases passed on dr-train. Scientific
+pilot NO_GO; actual eligible population/group counts UNKNOWN. MolDesignBench
+is conditional auxiliary design, not direct plan/report evaluation; commercial
+dataset use NOT_CLEARED. No task/gold or activity rows were ingested.
+
+All 244 task files / 4,919,055 bytes returned/reread before exact task/export
+deletion; fresh absence at 01:44:59.394922 UTC. Private complete retention is
+`.local/goal4r2a2-20261106-v1/remote-return/full-v1/`. Do not recreate closed
+roots. Conservative charge is 1.1 of four CPU-hours including utility reserves;
+exhaustive host CPU is not certified. Base main was `19979f12bb5a07cabf4624cd8a2940e663953614`;
+normal main push is authorized and separately checked after commit against
+HEAD/origin/main/live remote. The ignored post-push receipt holds final delivery.
+
+Stop for the next owner decision. Proposed A3 observation qualification requires
+a new rights/intake contract; P1, final study and journal actions do not start
+automatically. Earlier checkpoints below are historical.
+
+## Historical Goal 4R2-A closeout
 
 Current completed checkpoint: [4R2-A report](03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md),
 [workflow guide](05_product/OFFLINE_RD_WORKFLOW_V1.md) and

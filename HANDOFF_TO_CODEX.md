@@ -1,6 +1,35 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
-## Current 4R2-A completed checkpoint
+## Current 4R2-A2 completed checkpoint
+
+Read [readiness](docs/03_research/GOAL4R2A2_READINESS_V1.md),
+[benchmark compatibility/exposure](docs/03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md),
+[closeout](docs/06_execution/GOAL4R2A2_CLOSEOUT_20261106.md) and
+[evidence](docs/evidence/goal4r2a2-20261106-v1/README.md).
+Base main was `19979f12bb5a07cabf4624cd8a2940e663953614`.
+The owner-approved four CPU-hour/twelve-hour/two-worker A2 goal is complete.
+All 105 fixed PubChem descriptions returned matching SI version/revision pairs;
+the inspected date is absent throughout. AID 873's invalid selector returned
+current metadata, so historical selection is not validated for this description
+path. Ten frozen engineering cases passed on dr-train. No assay/compound or
+benchmark task/gold rows were ingested, and no scientific/agent evaluation ran.
+
+Scientific pilot NO_GO, actual eligible cohort/group counts UNKNOWN, zero
+certified groups. MolDesignBench native output differs from CuraLoop's plans/
+reports; auxiliary design use is conditional and commercial data use NOT_CLEARED.
+The proposed A3 observation qualification needs owner approval and a new rights/
+intake contract. P1, final outcomes and journal actions remain outside A2.
+
+All 244 regular files / 4,919,055 bytes returned and reread before deletion.
+Canonical retention: `.local/goal4r2a2-20261106-v1/remote-return/full-v1/`.
+Tree SHA `6c400e66a1855b6ad975478e6f688061d49e8a2c2a68df348e6d3bd37ed83173`.
+Both exact task/export roots freshly absent at 6 November 01:44:59.394922 UTC.
+Do not recreate them. Measured workers used 9.000529007 CPU-seconds; conservative
+charge 1.1 of four CPU-hours includes all three reservations and utility reserves.
+Exact host CPU is not certified. Current HEAD, origin/main and live remote main
+identify the actual main delivery; the ignored post-push receipt records it.
+
+## Historical 4R2-A completed checkpoint
 
 Read [feasibility](docs/03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md),
 [workflow guide](docs/05_product/OFFLINE_RD_WORKFLOW_V1.md),

@@ -1,6 +1,34 @@
 # Agent instructions: CuraLoop-RL
 
-## Current Goal 4R2-A closeout, 6 November 2026
+## Current Goal 4R2-A2 closeout, 6 November 2026
+
+A2 source/benchmark readiness is complete. Read
+`docs/03_research/GOAL4R2A2_READINESS_V1.md` and
+`docs/06_execution/GOAL4R2A2_CLOSEOUT_20261106.md`.
+All 105 current AID descriptions match SI version/revision metadata; date/row
+equivalence and scientific eligibility remain unresolved. Ten frozen cases pass.
+Scientific pilot NO_GO. MolDesignBench is not a direct plan/report benchmark;
+auxiliary design is conditional and commercial data use NOT_CLEARED. All 244
+task files were returned/reread before exact task/export deletion and fresh
+absence. Do not recreate closed roots or begin A3/P1/data intake automatically.
+Preserve old final outcomes and every frozen source/result. Normal main delivery
+remains authorized; stop after reporting for the next bounded owner decision.
+
+## Historical Goal 4R2-A2 owner authorization, 6 November 2026
+
+The owner approved 4R2-A2: source-and-benchmark readiness, 4 cumulative CPU-hours,
+12 elapsed hours, maximum two CPU workers on dr-train. Window starts
+2026-11-06T01:05:41Z and ends 2026-11-06T13:05:41Z (Bangkok 08:05:41–20:05:41).
+Follow `docs/06_execution/GOAL4R2A2_EXECUTION_CONTRACT_20261106.md`.
+This supersedes proposal-only wording for A2 metadata/schema/source review only.
+No bulk assay activity, compound rows, benchmark task/gold rows, molecular/agent
+campaigns, live model/MCP/team writes or new paid service. Preserve all frozen
+prior bytes and final outcomes. Parent remains sole writer; specialists read-only.
+Use fresh owned `goal4r2a2-20261106-v1` remote roots; verify full local return
+before scoped cleanup. Normal main push remains authorized. A2 may complete
+with a documented readiness NO_GO; later data access/execution still needs approval.
+
+## Historical Goal 4R2-A closeout, 6 November 2026
 
 4R2-A feasibility is complete. Read
 `docs/06_execution/GOAL4R2A_CLOSEOUT_20261106.md` and
@@ -9,10 +37,11 @@ The independent offline package passed 12 frozen cases plus 8 boundary checks.
 SI corroborated 60 stage pairs and 105 published AID version tuples. No cohort
 or novel method is cleared; scientific advancement remains NO_GO. All 220 task
 files were returned/reread before exact new task/export deletion; fresh absence
-was confirmed. No further 4R2-A processing or closed-root recreation. Expansion
-is proposed only. Stop for the next owner decision; final outcomes stay reserved.
+was confirmed. No further 4R2-A processing or closed-root recreation. At that checkpoint, expansion
+was proposed only; its subsequent A2 approval and closeout are recorded above.
+Final outcomes stay reserved.
 
-## Goal 4R2-A owner authorization, 6 November 2026
+## Historical Goal 4R2-A owner authorization, 6 November 2026
 
 The owner approved 4R2-A as proposed: 4 cumulative CPU-hours, 12 elapsed hours,
 maximum two CPU workers; processing/tests on dr-train. Window starts
@@ -21,13 +50,13 @@ maximum two CPU workers; processing/tests on dr-train. Window starts
 `docs/06_execution/GOAL4R2A_EXECUTION_CONTRACT_20261106.md`.
 This supersedes proposal-only wording for the bounded offline feasibility
 prototype, not a scientific pilot, full P1/MCP integration or live destination
-writes. Dataset/benchmark expansion may be proposed immediately; the owner did
-not authorize executing an expansion. Preserve all prior frozen bytes and final
+writes. Dataset/benchmark expansion may be proposed immediately; at that earlier checkpoint the owner had
+not authorized executing an expansion; the subsequent A2 decision is above. Preserve all prior frozen bytes and final
 outcomes. Parent is sole writer; specialists review read-only. Normal main push
 remains authorized. Return and verify every new owned remote-task file before
 scoped deletion; do not recreate old closed task roots.
 
-## Current 4R1 closeout, 5 November 2026
+## Historical 4R1 closeout, 5 November 2026
 
 4R1 bounded diagnosis is complete: STOP_CURRENT_ACQUISITION_THESIS. Read
 `docs/03_research/GOAL4R1_RESULTS_V1.md` and
@@ -40,7 +69,7 @@ Do not launch more 4R1 cases, 4R2, V2, P1 or Goal5 without the respective owner
 decision. Historical Goal4 scientific exit stays NOT_PASSED, final design
 NOT_FROZEN and final outcomes reserved. Preserve all frozen scientific bytes.
 
-## Active Goal 4R1 owner authorization, 5 November 2026
+## Historical Goal 4R1 owner authorization, 5 November 2026
 
 The owner approved 4R1 after reviewing the proposal: 8 cumulative CPU-hours,
 12 elapsed hours, maximum 4 CPU workers. Start 2026-11-05T14:43:55Z; deadline
@@ -68,7 +97,7 @@ connector writes remain unapproved. Preserve the old final panel and
 exposed-validation distinction. No new trials or remote jobs had occurred at
 that proposal checkpoint; final outcomes and team-tool writes remain untouched.
 
-## Active Plan A authorization, 5 November 2026
+## Historical Plan A authorization, 5 November 2026
 
 The owner explicitly authorized execution through Goals 3–4, 48 cumulative
 CPU-hours and a 24-hour window, maximum4CPU workers, with existing dr-train
@@ -110,7 +139,7 @@ continue independent authorized work. Routine actions inside a clear approved
 contract remain authorized. Plan A through Goal4 is now approved under the
 active amendment above; the extended option through Goal6A remains proposed.
 
-## Active Goal 2 owner amendment, 4 November 2026
+## Historical Goal 2 owner amendment, 4 November 2026
 
 Goal 2 is approved for real paper-backed development datasets/benchmarks and
 existing dr-train SSH access. Follow the versioned Goal2 protocol. Use only

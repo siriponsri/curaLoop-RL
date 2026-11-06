@@ -1,0 +1,60 @@
+{
+  "status": "PASS_SCOPED_SOURCE_AND_REPORT_REVIEWS",
+  "reviews": [
+    {
+      "reviewer": "/root/plugin_architecture_map",
+      "status": "PASS_SCOPED_READ_ONLY_REVIEW",
+      "scope": "Pretest contracts and new-root preservation source",
+      "reviewed_sha256": {
+        "research/readiness_v1/contracts.py": "f21ddd4bc11e86184a9e0af7b040d8db61cd03a70f3bb04de814df11ea40352a",
+        "research/readiness_v1/jobs.py": "65ef6afec100c699850cb1cc459c15dc62c359db6f78571a1a71fe2ada31fc78",
+        "tests/research/test_readiness_v1.py": "9114a699e1425708776c19917d93ccc315ab1ebf060b86bea8b1c827a097109d",
+        "tools/goal4r2a2_return_v1.py": "660bbc019ebe43545570e1826e38d3c12726e7cb227da3028bd38fe85eadcb08"
+      },
+      "notes": [
+        "Five material findings corrected before validation; selector denial/schema stop checked.",
+        "LastDataChange/provider-state summary extension inspected after original review.",
+        "Pinned core and complete local reread/manifest proof required before deletion.",
+        "Remote return branch is not itself a hard CPU/deadline guard; measured costs charged to reserve."
+      ],
+      "independent_scientific_replication": false,
+      "reviewer_edits_ssh_or_jobs": false
+    },
+    {
+      "reviewer": "/root/cohort_a_review",
+      "status": "PASS_SCOPED_READ_ONLY_REVIEW",
+      "scope": "MF-PCBA source/population and actual receipt arithmetic",
+      "reviewed_sha256": {
+        "docs/03_research/GOAL4R2A2_READINESS_V1.md": "2291db7679022c5632983ef94582abd1a89dabb0d5ffb2b10c8c6ba89f56af5d",
+        "docs/evidence/goal4r2a2-20261106-v1/metadata-register-v1.json": "022b68dca8325dd3c67198b041c5eba99513ee328ad7c0303d6271ca21723286",
+        "docs/evidence/goal4r2a2-20261106-v1/readiness-audit-v1.json": "e471c789d48d538225910218c514375b1e57814d85f7c616d9c2c94cb814f499",
+        "docs/evidence/goal4r2a2-20261106-v1/request-receipts-v1.json": "a5dc4b38be850df25c80527d5cd9b81f0a8463b920a754b30cec4f6c4963a5d1",
+        "docs/evidence/goal4r2a2-20261106-v1/readout-definitions-v1.csv": "066c42399095f04d35e4c4425b22bff244133ff320ec341dd3957ba36e71c96b"
+      },
+      "notes": [
+        "105 unique AIDs, eleven provider names and 3287 unique AID/TID definitions reconciled.",
+        "107 GET description-only HTTP200 receipts; scoped negative selector conclusion valid.",
+        "Conditional estimand remains proposed; scientific pilot NO_GO and eligibility UNKNOWN."
+      ],
+      "independent_scientific_replication": false,
+      "reviewer_edits_ssh_or_jobs": false
+    },
+    {
+      "reviewer": "/root/goal4_protocol_review",
+      "status": "PASS_SCOPED_READ_ONLY_REVIEW",
+      "scope": "MolDesignBench pinned source, rights, metrics and exposure",
+      "reviewed_sha256": {
+        "docs/03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md": "708f22cdef1e2c2a048050fbf041790eedb7efd7330052fbb80f0dd214833ce4",
+        "research/manifests/goal4r2a2_benchmark_readiness_v1.json": "26988d20f78c5d277ba79cf9294dbe83b4b4c232abcaa7c89ad760c04e9b5880"
+      },
+      "notes": [
+        "Output mismatch, CC-BY-NC data restriction and runtime gates correctly distinguished.",
+        "Synthetic F1 arithmetic .8 attempt / .5 solved verified; not a benchmark result.",
+        "Internal preview uncertainty and prospective non-frozen split explicitly disclosed."
+      ],
+      "independent_scientific_replication": false,
+      "reviewer_edits_ssh_or_jobs": false
+    }
+  ],
+  "english_navigation_review": "Separate final documentation receipt after generated link targets exist"
+}
