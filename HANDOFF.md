@@ -5,7 +5,8 @@ then wait for explicit owner resume. **Do not start new research from this file.
 Scientific readiness remains NOT_READY. A pause does not renew absolute deadlines.
 
 Repository: C:\Users\User\Desktop\myProject\curaloop-rl; branch main.
-Pre-frontend committed checkpoint:3fbba89. The implementation commit and verified
+Pre-frontend committed checkpoint:3fbba89.
+Implementation checkpoint:ebffbd981143af3fc9d8268cbd9480c086e2ecad (pushed to main and live-readback verified). The implementation commit and verified
 origin state are recorded in docs/evidence/ui-modern-bilingual-20261106-v1/
 main-delivery-v1.json after commit. Verify Git freshly; do not infer push from an
 old note. Every shell command starts with rtk per C:\Users\User\.codex\RTK.md.
