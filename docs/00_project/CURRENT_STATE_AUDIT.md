@@ -1,5 +1,16 @@
 # Current-state audit
 
+## Amendment: A3 closeout, 6 November 2026
+
+[A3 qualification](../03_research/GOAL4R2A3_QUALIFICATION_V1.md) and
+[closeout](../06_execution/GOAL4R2A3_CLOSEOUT_20261106.md) supersede the milestone
+summary below: 589/640 sampled SIDs cleared, native canary failure retained,
+one primary response normalized offline, zero complete selected tuples and
+scientific advancement NO_GO. Paired/pilot/model work did not run. Complete
+return and exact cleanup are verified. All earlier source-cutoff records below
+are historical and retain their original evidence.
+
+
 > Latest sequential milestone: [Goal 2](../03_research/GOAL_02_RESULTS_V1.md)
 > completed a separate planning prototype and 180 real Tox21 development runs
 > on dr-train. No run failed. The content bound preserved rollout decisions but

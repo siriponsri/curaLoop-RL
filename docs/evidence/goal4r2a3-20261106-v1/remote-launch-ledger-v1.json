@@ -1,0 +1,72 @@
+[
+  {
+    "attempt": "metadata-audit-v1",
+    "bundle": "audit-v1",
+    "mode": "audit",
+    "reserved_cpu_seconds": 1800,
+    "status": "COMPLETED",
+    "utc": "2026-11-06T05:51:22.568584+00:00",
+    "exit_code": 0,
+    "actual_cpu_seconds": 1.351286865
+  },
+  {
+    "attempt": "xref-metadata-v1",
+    "bundle": "xref-v1",
+    "mode": "xref",
+    "reserved_cpu_seconds": 1800,
+    "status": "COMPLETED",
+    "utc": "2026-11-06T06:03:47.800979+00:00",
+    "exit_code": 0,
+    "actual_cpu_seconds": 3.403878816
+  },
+  {
+    "attempt": "cached-reconciliation-v1",
+    "bundle": "reconcile-v1",
+    "mode": "reconcile",
+    "reserved_cpu_seconds": 1800,
+    "status": "COMPLETED",
+    "utc": "2026-11-06T06:25:24.204609+00:00",
+    "exit_code": 0,
+    "actual_cpu_seconds": 1.156495233
+  },
+  {
+    "attempt": "cached-reconciliation-v2",
+    "bundle": "reconcile-v2",
+    "mode": "reconcile",
+    "reserved_cpu_seconds": 1800,
+    "status": "COMPLETED",
+    "utc": "2026-11-06T06:31:08.899462+00:00",
+    "exit_code": 0,
+    "actual_cpu_seconds": 1.183909058
+  },
+  {
+    "attempt": "identifier-structure-v1",
+    "bundle": "identifiers-v3",
+    "mode": "identifiers",
+    "reserved_cpu_seconds": 1800,
+    "status": "COMPLETED",
+    "utc": "2026-11-06T06:43:15.832734+00:00",
+    "exit_code": 0,
+    "actual_cpu_seconds": 7.16180651
+  },
+  {
+    "attempt": "observation-canary-v1",
+    "bundle": "observations-v2",
+    "mode": "canary",
+    "reserved_cpu_seconds": 1800,
+    "status": "COMPLETED",
+    "utc": "2026-11-06T06:59:20.259371+00:00",
+    "exit_code": 1,
+    "actual_cpu_seconds": 1.0152508630000001
+  },
+  {
+    "attempt": "offline-submit-v1",
+    "bundle": "offline-submit-v2",
+    "mode": "offline-submit",
+    "reserved_cpu_seconds": 1800,
+    "status": "COMPLETED",
+    "utc": "2026-11-06T07:11:55.459800+00:00",
+    "exit_code": 0,
+    "actual_cpu_seconds": 0.9449345859999999
+  }
+]

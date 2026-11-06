@@ -1,0 +1,2965 @@
+{
+  "records": [
+    {
+      "script": "retrieve-scripts/1053173-743445.sh",
+      "script_sha256": "c84df25c78501fc964afe80d8cac0800ae9ea3642507c299d8a5405c3170737a",
+      "primary_aid": "743445",
+      "confirmation_aid": "1053173",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE_12.48uM_(%)"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE_12.48uM_(%)",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 4,
+          "unit_present": false,
+          "unit": null,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/1117362-1117319.sh",
+      "script_sha256": "5153b382dff54e02fb240d9173160779acde315dae63b9c9343259bd1dbd75f5",
+      "primary_aid": "1117319",
+      "confirmation_aid": "1117362",
+      "primary_columns": [
+        "PrimaryScreen PctInh (R1)",
+        "PrimaryScreen PctInh (R2)",
+        "PrimaryPilotScreen PctInh (R1)",
+        "PrimaryPilotScreen PctInh (R2)"
+      ],
+      "confirmation_columns": [
+        "Average IC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "PrimaryScreen PctInh (R1)",
+          "tid": 54,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "PrimaryScreen PctInh (R2)",
+          "tid": 55,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "PrimaryPilotScreen PctInh (R1)",
+          "tid": 56,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "PrimaryPilotScreen PctInh (R2)",
+          "tid": 57,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "Average IC50",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": false,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/1259350-1224905.sh",
+      "script_sha256": "067c3356fc9195f484814a879aa69425d96958c2f6613cb7c4921acc31ad673a",
+      "primary_aid": "1224905",
+      "confirmation_aid": "1259350",
+      "primary_columns": [
+        "Z-score_A",
+        "Z-score_B"
+      ],
+      "confirmation_columns": [
+        "mP_A",
+        "mP_B",
+        "mP_C"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "Z-score_A",
+          "tid": 9,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "Z-score_B",
+          "tid": 10,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "mP_A",
+          "tid": 1,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "mP_B",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "mP_C",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": false,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/1259375-1259374.sh",
+      "script_sha256": "53e663f9e9ec159c444f5e60209244ccfad040c43e3eeb97a4dc99f1309f6572",
+      "primary_aid": "1259374",
+      "confirmation_aid": "1259375",
+      "primary_columns": [
+        "Inhibition at 2.6 uM"
+      ],
+      "confirmation_columns": [
+        "LogIC50"
+      ],
+      "source_transform": "minus",
+      "primary_bindings": [
+        {
+          "name": "Inhibition at 2.6 uM",
+          "tid": 1,
+          "type": 4,
+          "unit_present": false,
+          "unit": null,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "LogIC50",
+          "tid": 3,
+          "type": 4,
+          "unit_present": false,
+          "unit": null,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": false,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/1259418-1259416.sh",
+      "script_sha256": "afb30dea06e3a6b1f5327d042947633c07e09a24f3ef333645d217a9200f369b",
+      "primary_aid": "1259416",
+      "confirmation_aid": "1259418",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY",
+        "REPLICATE_B_ACTIVITY"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY",
+          "tid": 2,
+          "type": 1,
+          "unit_present": false,
+          "unit": null,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY",
+          "tid": 3,
+          "type": 1,
+          "unit_present": false,
+          "unit": null,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 14,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": false,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/1259420-1259416.sh",
+      "script_sha256": "02d7e514573383c9d690c916a5ae0635919af313393fa99c6014d907992fbc34",
+      "primary_aid": "1259416",
+      "confirmation_aid": "1259420",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY",
+        "REPLICATE_B_ACTIVITY"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY",
+          "tid": 2,
+          "type": 1,
+          "unit_present": false,
+          "unit": null,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY",
+          "tid": 3,
+          "type": 1,
+          "unit_present": false,
+          "unit": null,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 14,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": false,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/1431-873.sh",
+      "script_sha256": "b5d36311c984f87fb984349c1808a44d5a3024057ebff3231cf5219ab8cf1d1e",
+      "primary_aid": "873",
+      "confirmation_aid": "1431",
+      "primary_columns": [
+        "Percent inhibition"
+      ],
+      "confirmation_columns": [
+        "IC50 #1"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "Percent inhibition",
+          "tid": 1,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "IC50 #1",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/1445.sh",
+      "script_sha256": "88326a62efd638725610ea52bfa15d3208633603c1918e446f756d301d838e5e",
+      "primary_aid": "1445",
+      "confirmation_aid": "1445",
+      "primary_columns": [
+        "Primary Inhibition",
+        "Primary Inhibition Rep 2",
+        "Primary Inhibition Rep 3"
+      ],
+      "confirmation_columns": [
+        "IC50"
+      ],
+      "source_transform": "pXC50",
+      "binding_status": "QUARANTINE_BINDING",
+      "error_type": "QualificationError",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/1465.sh",
+      "script_sha256": "345f84939dcc25dbac0a8a43643ab349309ab3acf10b3e419daa1d6db2d4007a",
+      "primary_aid": "1465",
+      "confirmation_aid": "1465",
+      "primary_columns": [
+        "Primary Fold Induction @ 50 uM Rep 1",
+        "Primary Fold Induction @ 50 uM Rep 2",
+        "Primary Fold Induction @ 50 uM Rep 3",
+        "Primary Fold Induction @ 50 uM Rep 4",
+        "Primary Fold Induction @ 50 uM Rep 5"
+      ],
+      "confirmation_columns": [
+        "EC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "Primary Fold Induction @ 50 uM Rep 1",
+          "tid": 23,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "Primary Fold Induction @ 50 uM Rep 2",
+          "tid": 24,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "Primary Fold Induction @ 50 uM Rep 3",
+          "tid": 25,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "Primary Fold Induction @ 50 uM Rep 4",
+          "tid": 26,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "Primary Fold Induction @ 50 uM Rep 5",
+          "tid": 27,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "EC50",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/1619.sh",
+      "script_sha256": "f31a5823a73a0a0696db757599c0fa987530770a6e8168fc07d29a7bd4c89931",
+      "primary_aid": "1619",
+      "confirmation_aid": "1619",
+      "primary_columns": [
+        "Primary Inhibition @ 30 uM Rep 1",
+        "Primary Inhibition @ 30 uM Rep 2"
+      ],
+      "confirmation_columns": [
+        "IC50"
+      ],
+      "source_transform": "pXC50",
+      "binding_status": "QUARANTINE_BINDING",
+      "error_type": "QualificationError",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/1903.sh",
+      "script_sha256": "bd993c77749330a47c34bc1cf1df463d44540f45f08e2a71c557ef0f14f52707",
+      "primary_aid": "1903",
+      "confirmation_aid": "1903",
+      "primary_columns": [
+        "Primary % Inhibition @ 20 uM (Rep 1)",
+        "Primary % Inhibition @ 20 uM (Rep 2)",
+        "Primary % Inhibition @ 20 uM (Rep 3)",
+        "Primary % Inhibition @ 20 uM (Rep 4)"
+      ],
+      "confirmation_columns": [
+        "IC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "Primary % Inhibition @ 20 uM (Rep 1)",
+          "tid": 20,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "Primary % Inhibition @ 20 uM (Rep 2)",
+          "tid": 21,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "Primary % Inhibition @ 20 uM (Rep 3)",
+          "tid": 22,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "Primary % Inhibition @ 20 uM (Rep 4)",
+          "tid": 23,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "IC50",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/1914-1662.sh",
+      "script_sha256": "4f05829a73d48841fd1cd7ddcc216413e2c0b753fde97911d6bc69eec361422d",
+      "primary_aid": "1662",
+      "confirmation_aid": "1914",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE",
+        "REPLICATE_C_ACTIVITY_SCORE",
+        "REPLICATE_D_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "EC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 5,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_C_ACTIVITY_SCORE",
+          "tid": 6,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_D_ACTIVITY_SCORE",
+          "tid": 7,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "EC50",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/1949.sh",
+      "script_sha256": "87b831461d51ac252ac0e85ab6fe9982297ee99af95d589e842c53ea4dfd812d",
+      "primary_aid": "1949",
+      "confirmation_aid": "1949",
+      "primary_columns": [
+        "H37Rv Primary Screen % Inhibition @ 10 ug/mL Rep 1",
+        "H37Rv Primary Screen % Inhibition @ 10 ug/mL Rep 2",
+        "H37Rv Primary Screen % Inhibition @ 10 ug/mL Rep 3"
+      ],
+      "confirmation_columns": [
+        "H37Rv IC50"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "H37Rv Primary Screen % Inhibition @ 10 ug/mL Rep 1",
+          "tid": 40,
+          "type": 1,
+          "unit_present": true,
+          "unit": 10,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "H37Rv Primary Screen % Inhibition @ 10 ug/mL Rep 2",
+          "tid": 41,
+          "type": 1,
+          "unit_present": true,
+          "unit": 10,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "H37Rv Primary Screen % Inhibition @ 10 ug/mL Rep 3",
+          "tid": 42,
+          "type": 1,
+          "unit_present": true,
+          "unit": 10,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "H37Rv IC50",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 10,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": false,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/1960-1832.sh",
+      "script_sha256": "ed167b538625c8fe56388bf80df06fa0bb5e6b001a367c940c829d7c83c39a88",
+      "primary_aid": "1832",
+      "confirmation_aid": "1960",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE",
+        "REPLICATE_C_ACTIVITY_SCORE",
+        "REPLICATE_D_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "EC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_C_ACTIVITY_SCORE",
+          "tid": 5,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_D_ACTIVITY_SCORE",
+          "tid": 6,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "EC50",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/1964-1832.sh",
+      "script_sha256": "396e8a0731b5c8ec7d82511bc23270c82450a168cd4af08856097d20cc2c205d",
+      "primary_aid": "1832",
+      "confirmation_aid": "1964",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE",
+        "REPLICATE_C_ACTIVITY_SCORE",
+        "REPLICATE_D_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "EC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_C_ACTIVITY_SCORE",
+          "tid": 5,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_D_ACTIVITY_SCORE",
+          "tid": 6,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "EC50",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/2382-2098.sh",
+      "script_sha256": "dd3051a62ef5f8cc385da11e8c5e6e61a69a8cce6c1debb3d98686c6265d9b17",
+      "primary_aid": "2098",
+      "confirmation_aid": "2382",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE",
+        "REPLICATE_C_ACTIVITY_SCORE",
+        "REPLICATE_D_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "EC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_C_ACTIVITY_SCORE",
+          "tid": 5,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_D_ACTIVITY_SCORE",
+          "tid": 6,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "EC50",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/2423-1979.sh",
+      "script_sha256": "0d858f4a402283ca69ce30bafc0ef91641a7ceac7d96e1f805f3b108b3fec047",
+      "primary_aid": "1979",
+      "confirmation_aid": "2423",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE",
+        "REPLICATE_C_ACTIVITY_SCORE",
+        "REPLICATE_D_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "EC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_C_ACTIVITY_SCORE",
+          "tid": 5,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_D_ACTIVITY_SCORE",
+          "tid": 6,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "EC50",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/2696-2553.sh",
+      "script_sha256": "78f0315f02c3cfd4f317d9646a2e0bf2ec7cbdda9f5e6f7004ebcdcbcdce7754",
+      "primary_aid": "2553",
+      "confirmation_aid": "2696",
+      "primary_columns": [
+        "BScoreRatio"
+      ],
+      "confirmation_columns": [
+        "EC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "BScoreRatio",
+          "tid": 1,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "QUARANTINE_BINDING",
+      "error_type": "QualificationError",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/434937-2237.sh",
+      "script_sha256": "bc692b1e288b85ea3a42724c0a7fdcc7d100c62edc9de732e416aea8f584ed7d",
+      "primary_aid": "2237",
+      "confirmation_aid": "434937",
+      "primary_columns": [
+        "B score Activator Ratio"
+      ],
+      "confirmation_columns": [
+        "EC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "B score Activator Ratio",
+          "tid": 1,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "QUARANTINE_BINDING",
+      "error_type": "QualificationError",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/434941-2227.sh",
+      "script_sha256": "dc24911935038f254bb8486987e771c134475bb872c8c3b31b11baf6c3cbfb1c",
+      "primary_aid": "2227",
+      "confirmation_aid": "434941",
+      "primary_columns": [
+        "B score AlloActivator Ratio"
+      ],
+      "confirmation_columns": [
+        "EC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "B score AlloActivator Ratio",
+          "tid": 1,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "QUARANTINE_BINDING",
+      "error_type": "QualificationError",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/434942-2247.sh",
+      "script_sha256": "68d9b29fe94da5cf23cb4af4e98b6ccf1d4060b7170dc9a5d425b4259d455388",
+      "primary_aid": "2247",
+      "confirmation_aid": "434942",
+      "primary_columns": [
+        "B score Inhibitor Ratio"
+      ],
+      "confirmation_columns": [
+        "EC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "B score Inhibitor Ratio",
+          "tid": 1,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "QUARANTINE_BINDING",
+      "error_type": "QualificationError",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/434954-2097.sh",
+      "script_sha256": "764c6b06747b1f878ebfc70812d8bb24b6de973ee645cddeaff799ee35aa553c",
+      "primary_aid": "2097",
+      "confirmation_aid": "434954",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "Log_EC50_M"
+      ],
+      "source_transform": "minus",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "Log_EC50_M",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/435004-504408.sh",
+      "script_sha256": "68b18bae68c2e86c407a696580d4b3aa722f85b2a50797f2fb5529f837790f4c",
+      "primary_aid": "504408",
+      "confirmation_aid": "435004",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE_9uM_(%)",
+        "REPLICATE_B_ACTIVITY_SCORE_9uM_(%)",
+        "REPLICATE_C_ACTIVITY_SCORE_9uM_(%)",
+        "REPLICATE_D_ACTIVITY_SCORE_9uM_(%)"
+      ],
+      "confirmation_columns": [
+        "Log_EC50_M"
+      ],
+      "source_transform": "minus",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE_9uM_(%)",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE_9uM_(%)",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_C_ACTIVITY_SCORE_9uM_(%)",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_D_ACTIVITY_SCORE_9uM_(%)",
+          "tid": 5,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "Log_EC50_M",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/435010-2221.sh",
+      "script_sha256": "9a8202f2a4122bf2f4c8ae74e9df988d62f1957db95d71671813c92dcc4a2f08",
+      "primary_aid": "2221",
+      "confirmation_aid": "435010",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE",
+        "REPLICATE_C_ACTIVITY_SCORE",
+        "REPLICATE_D_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "Log_EC50_M"
+      ],
+      "source_transform": "minus",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_C_ACTIVITY_SCORE",
+          "tid": 5,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_D_ACTIVITY_SCORE",
+          "tid": 6,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "Log_EC50_M",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/435023-2629.sh",
+      "script_sha256": "695dcfed35769376441c1750f86784e8854f48c59b8983d0c4bf135edfb56462",
+      "primary_aid": "2629",
+      "confirmation_aid": "435023",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE",
+        "REPLICATE_C_ACTIVITY_SCORE",
+        "REPLICATE_D_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "Log_EC50_M"
+      ],
+      "source_transform": "minus",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_C_ACTIVITY_SCORE",
+          "tid": 5,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_D_ACTIVITY_SCORE",
+          "tid": 6,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "Log_EC50_M",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/435026-2216.sh",
+      "script_sha256": "1ad57517213d18ff97bf163f5279bb169c4c95e7db7b5649c1df1411905840ba",
+      "primary_aid": "2216",
+      "confirmation_aid": "435026",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE",
+        "REPLICATE_C_ACTIVITY_SCORE",
+        "REPLICATE_D_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "Log_EC50_M"
+      ],
+      "source_transform": "minus",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_C_ACTIVITY_SCORE",
+          "tid": 5,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_D_ACTIVITY_SCORE",
+          "tid": 6,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "Log_EC50_M",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/449749-2221.sh",
+      "script_sha256": "03cb65906e93d5ed23064d1197f2319cb462db08f94ed016d9ea03c36047b04c",
+      "primary_aid": "2221",
+      "confirmation_aid": "449749",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE",
+        "REPLICATE_C_ACTIVITY_SCORE",
+        "REPLICATE_D_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "Log_AC50_M"
+      ],
+      "source_transform": "minus",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_C_ACTIVITY_SCORE",
+          "tid": 5,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_D_ACTIVITY_SCORE",
+          "tid": 6,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "Log_AC50_M",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/449750-2221.sh",
+      "script_sha256": "a3972bbe6a963801ec42a5263e6a607a84dd74dc5fdd48f78725af9209109c89",
+      "primary_aid": "2221",
+      "confirmation_aid": "449750",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE",
+        "REPLICATE_C_ACTIVITY_SCORE",
+        "REPLICATE_D_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "Log_AC50_M"
+      ],
+      "source_transform": "minus",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_C_ACTIVITY_SCORE",
+          "tid": 5,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_D_ACTIVITY_SCORE",
+          "tid": 6,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "Log_AC50_M",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/449756-435005.sh",
+      "script_sha256": "6b50ccf36e68f358e36017e8dec9a59e0dcd322c69da1b02f44bab3707fc0a4e",
+      "primary_aid": "435005",
+      "confirmation_aid": "449756",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE",
+        "REPLICATE_C_ACTIVITY_SCORE",
+        "REPLICATE_D_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "Log_AC50_M"
+      ],
+      "source_transform": "minus",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_C_ACTIVITY_SCORE",
+          "tid": 5,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_D_ACTIVITY_SCORE",
+          "tid": 6,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "Log_AC50_M",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/449762.sh",
+      "script_sha256": "0504785053b5770e032be4600906823b0ad4ca4400efae7d0df648427c6fab31",
+      "primary_aid": "449762",
+      "confirmation_aid": "449762",
+      "primary_columns": [
+        "Primary Screen Percent Inhibition @ 25 uM Rep 1",
+        "Primary Screen Percent Inhibition @ 25 uM Rep 2"
+      ],
+      "confirmation_columns": [
+        "IC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "Primary Screen Percent Inhibition @ 25 uM Rep 1",
+          "tid": 23,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "Primary Screen Percent Inhibition @ 25 uM Rep 2",
+          "tid": 24,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "IC50",
+          "tid": 5,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/463203-2650.sh",
+      "script_sha256": "4f05b82806be446c811681a4a58e8d044f261121bb907f8f1f5705f58156f286",
+      "primary_aid": "2650",
+      "confirmation_aid": "463203",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "Log_AC50_M"
+      ],
+      "source_transform": "minus",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "Log_AC50_M",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/488835-2099.sh",
+      "script_sha256": "f8035bfe09443bed3c3aed0be2e2dc1551ecd57b21a691ab12c72c27ec44ad82",
+      "primary_aid": "2099",
+      "confirmation_aid": "488835",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE",
+        "REPLICATE_C_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "Log_AC50_M"
+      ],
+      "source_transform": "minus",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_C_ACTIVITY_SCORE",
+          "tid": 5,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "Log_AC50_M",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/489005-449739.sh",
+      "script_sha256": "686a4b69ae1c2ffb105881033f6b5e81d8bf62d46ae5faa7fcf0f089253d3697",
+      "primary_aid": "449739",
+      "confirmation_aid": "489005",
+      "primary_columns": [
+        "Bscore"
+      ],
+      "confirmation_columns": [
+        "EC50_1"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "Bscore",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "EC50_1",
+          "tid": 29,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/493073-488899.sh",
+      "script_sha256": "285de1b5625d7951f3dc8718ebfff891e3f42cab13be3341b05bdc20f3ef9a58",
+      "primary_aid": "488899",
+      "confirmation_aid": "493073",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 4,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/493155-485273.sh",
+      "script_sha256": "efdadc23c8d7c5c76b03de37b01fd7a20c64e4d1de843a82b11e1a8405b8298c",
+      "primary_aid": "485273",
+      "confirmation_aid": "493155",
+      "primary_columns": [
+        "%Inhibition at 20uM"
+      ],
+      "confirmation_columns": [
+        "IC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "%Inhibition at 20uM",
+          "tid": 1,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "IC50",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/493248-485317.sh",
+      "script_sha256": "5f5ca8bb0066ab68c7b621da3bdab8939d543596b91fc15f9dfe21bf806d8040",
+      "primary_aid": "485317",
+      "confirmation_aid": "493248",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 4,
+          "unit_present": false,
+          "unit": null,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/504313-2732.sh",
+      "script_sha256": "fb545d89a1f0e85cbe1ceda8be6a8bfcfbea46aae4a3f6acaafcc5a5f5ae451d",
+      "primary_aid": "2732",
+      "confirmation_aid": "504313",
+      "primary_columns": [
+        "Pct Inhibition"
+      ],
+      "confirmation_columns": [
+        "IC50 (XBP1)"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "Pct Inhibition",
+          "tid": 1,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "IC50 (XBP1)",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/504329.sh",
+      "script_sha256": "7d3efa113abca327094d04f13e0576fe6cc3bc33c4e4e1e1aaebfaaa02651f41",
+      "primary_aid": "504329",
+      "confirmation_aid": "504329",
+      "primary_columns": [
+        "Primary Screen Percent Inhibition @ 12.5 uM Rep 1",
+        "Primary Screen Percent Inhibition @ 12.5 uM Rep 2",
+        "Primary Screen Percent Inhibition @ 12.5 uM Rep 3"
+      ],
+      "confirmation_columns": [
+        "IC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "Primary Screen Percent Inhibition @ 12.5 uM Rep 1",
+          "tid": 19,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "Primary Screen Percent Inhibition @ 12.5 uM Rep 2",
+          "tid": 20,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "Primary Screen Percent Inhibition @ 12.5 uM Rep 3",
+          "tid": 21,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "IC50",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/504840-488975.sh",
+      "script_sha256": "0bfd3d8b99d0a9bf4bba62ad51d90e13b6fabde81c0e10bced5bff639c16c22d",
+      "primary_aid": "488975",
+      "confirmation_aid": "504840",
+      "primary_columns": [
+        "BScore_intRatio"
+      ],
+      "confirmation_columns": [
+        "IC50"
+      ],
+      "source_transform": "pXC50",
+      "binding_status": "QUARANTINE_BINDING",
+      "error_type": "QualificationError",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/504941-488895.sh",
+      "script_sha256": "13077e7e1e23850b1faa478ec71e3c6d24f213a2aafc6f424c36eddab8041819",
+      "primary_aid": "488895",
+      "confirmation_aid": "504941",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE",
+        "REPLICATE_B_ACTIVITY_SCORE"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 4,
+          "unit_present": false,
+          "unit": null,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/540268-504621.sh",
+      "script_sha256": "e43e6c0a8ea4e2d4d8ca27bdec3e0793069ca81f364cb87f875d946c23269900",
+      "primary_aid": "504621",
+      "confirmation_aid": "540268",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE_9.4uM_(%)",
+        "REPLICATE_B_ACTIVITY_SCORE_9.4uM_(%)"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE_9.4uM_(%)",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE_9.4uM_(%)",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 4,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/540271-504582.sh",
+      "script_sha256": "13abaf02dd032f4c3cd1a2c6c50cc2d60d45bbc21be4e16262e5506818849092",
+      "primary_aid": "504582",
+      "confirmation_aid": "540271",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE_12.5uM_(%)",
+        "REPLICATE_B_ACTIVITY_SCORE_12.5uM_(%)"
+      ],
+      "confirmation_columns": [
+        "pAbsAC1000_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE_12.5uM_(%)",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE_12.5uM_(%)",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAbsAC1000_M",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/540297-493091.sh",
+      "script_sha256": "e9160e62228948b6c0bb226d897b650be5366153cec0bd8553c3f125dc8f9719",
+      "primary_aid": "493091",
+      "confirmation_aid": "540297",
+      "primary_columns": [
+        "%Inhibition at 20 uM"
+      ],
+      "confirmation_columns": [
+        "IC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "%Inhibition at 20 uM",
+          "tid": 1,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "IC50",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/588343-504558.sh",
+      "script_sha256": "20cf822b305a5ddcce6a27c9d7dcdefdeea58fdfcb3a7cb285227db3bf2284a3",
+      "primary_aid": "504558",
+      "confirmation_aid": "588343",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE_12.5uM_(%)",
+        "REPLICATE_B_ACTIVITY_SCORE_12.5uM_(%)",
+        "REPLICATE_C_ACTIVITY_SCORE_12.5uM_(%)",
+        "REPLICATE_D_ACTIVITY_SCORE_12.5uM_(%)"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE_12.5uM_(%)",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE_12.5uM_(%)",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_C_ACTIVITY_SCORE_12.5uM_(%)",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_D_ACTIVITY_SCORE_12.5uM_(%)",
+          "tid": 5,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 4,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/588398-504558.sh",
+      "script_sha256": "508e9ad61f86abad511372df3752197b851467cfb620cdc6b1dabe2195c3e3c2",
+      "primary_aid": "504558",
+      "confirmation_aid": "588398",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE_12.5uM_(%)",
+        "REPLICATE_B_ACTIVITY_SCORE_12.5uM_(%)",
+        "REPLICATE_C_ACTIVITY_SCORE_12.5uM_(%)",
+        "REPLICATE_D_ACTIVITY_SCORE_12.5uM_(%)"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE_12.5uM_(%)",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE_12.5uM_(%)",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_C_ACTIVITY_SCORE_12.5uM_(%)",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_D_ACTIVITY_SCORE_12.5uM_(%)",
+          "tid": 5,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 4,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/588524-489030.sh",
+      "script_sha256": "71453a99f893f08ea884a799b92d1e07c4e86203db5ac35fe9845ecec76e11a0",
+      "primary_aid": "489030",
+      "confirmation_aid": "588524",
+      "primary_columns": [
+        "%Activity at 20 uM"
+      ],
+      "confirmation_columns": [
+        "IC50_Mean"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "%Activity at 20 uM",
+          "tid": 1,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "IC50_Mean",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/588689.sh",
+      "script_sha256": "946975e28192de98cc1dd8b88db7a37327d771028aefab62e6726dc0843df423",
+      "primary_aid": "588689",
+      "confirmation_aid": "588689",
+      "primary_columns": [
+        "Primary Screen % Inhibition @ 25 uM",
+        "Pilot 10K Screen % Inhibition @ 25 uM Rep 1",
+        "Pilot 10K Screen % Inhibition @ 25 uM Rep 2"
+      ],
+      "confirmation_columns": [
+        "IC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "Primary Screen % Inhibition @ 25 uM",
+          "tid": 18,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "Pilot 10K Screen % Inhibition @ 25 uM Rep 1",
+          "tid": 19,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "Pilot 10K Screen % Inhibition @ 25 uM Rep 2",
+          "tid": 20,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "IC50",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/602259-588489.sh",
+      "script_sha256": "cbd299a2f34325a97db1cd7d2b5e9335eab6e522a27d9f05b7e12bafd197dd8b",
+      "primary_aid": "588489",
+      "confirmation_aid": "602259",
+      "primary_columns": [
+        "%Activity at 20 uM"
+      ],
+      "confirmation_columns": [
+        "IC50_Mean"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "%Activity at 20 uM",
+          "tid": 1,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "IC50_Mean",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/624273-588549.sh",
+      "script_sha256": "6318d4cacf45eacc0d3d0a0c18bd43bb1b416a59dde41caa8a79850553775b67",
+      "primary_aid": "588549",
+      "confirmation_aid": "624273",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE_12.48uM_(%)",
+        "REPLICATE_B_ACTIVITY_SCORE_12.48uM_(%)"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE_12.48uM_(%)",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE_12.48uM_(%)",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 4,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/624326-602261.sh",
+      "script_sha256": "c92ff4adf89c5d8a0064b838374a501e45f1c3da66a25e7e06eab2d467460adc",
+      "primary_aid": "602261",
+      "confirmation_aid": "624326",
+      "primary_columns": [
+        "%Activity at 15 uM"
+      ],
+      "confirmation_columns": [
+        "IC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "%Activity at 15 uM",
+          "tid": 1,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "IC50",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/624330.sh",
+      "script_sha256": "1c7da49ae2a899e1d1d478e133071484f5ca204bef7650a2dac2d803c90946f4",
+      "primary_aid": "624330",
+      "confirmation_aid": "624330",
+      "primary_columns": [
+        "% Inhibition @ 30 uM (Primary Screen Rep 1)",
+        "% Inhibition @ 30 uM (Primary Screen Rep 2)",
+        "% Inhibition @ 30 uM (Primary Screen Rep 3)"
+      ],
+      "confirmation_columns": [
+        "IC50"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "% Inhibition @ 30 uM (Primary Screen Rep 1)",
+          "tid": 16,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "% Inhibition @ 30 uM (Primary Screen Rep 2)",
+          "tid": 17,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "% Inhibition @ 30 uM (Primary Screen Rep 3)",
+          "tid": 18,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "IC50",
+          "tid": 1,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/624474-624304.sh",
+      "script_sha256": "6c330b0fdebf5556a57f2cd5080fb9e1ea97cd875ac008c9144b949c71d7784f",
+      "primary_aid": "624304",
+      "confirmation_aid": "624474",
+      "primary_columns": [
+        "Ratio:Normalized at 21.8 uM"
+      ],
+      "confirmation_columns": [
+        "IC50_Mean"
+      ],
+      "source_transform": "pXC50",
+      "primary_bindings": [
+        {
+          "name": "Ratio:Normalized at 21.8 uM",
+          "tid": 1,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "IC50_Mean",
+          "tid": 2,
+          "type": 1,
+          "unit_present": true,
+          "unit": 5,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/652116-651710.sh",
+      "script_sha256": "f60f10be8141f648e063a3224f30969b655526ff7b4d64c19ab69821352127f6",
+      "primary_aid": "651710",
+      "confirmation_aid": "652116",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE_18.71uM_(%)"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE_18.71uM_(%)",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 4,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/687022-651658.sh",
+      "script_sha256": "43e20e6fa20f7b1a6a7104acf0b0c9a4c7564132487673f7dee84c9d4f84d919",
+      "primary_aid": "651658",
+      "confirmation_aid": "687022",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE_9.99uM_(%)"
+      ],
+      "confirmation_columns": [
+        "pAbsAC1_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE_9.99uM_(%)",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAbsAC1_M",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/687027-652154.sh",
+      "script_sha256": "2832b0e790cad9f7dde419e67bfaaf0a62ee5e62a2dcda27b326d48727e6d7bf",
+      "primary_aid": "652154",
+      "confirmation_aid": "687027",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE_12.62uM_(%)",
+        "REPLICATE_B_ACTIVITY_SCORE_12.62uM_(%)"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE_12.62uM_(%)",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE_12.62uM_(%)",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 4,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/720512-652162.sh",
+      "script_sha256": "2b78a6c62f583dfa2fae4879819df479bfa87612629d0e710e114e50cc071bcf",
+      "primary_aid": "652162",
+      "confirmation_aid": "720512",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE_9.99uM_(%)"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE_9.99uM_(%)",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 4,
+          "unit_present": false,
+          "unit": null,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/720591-652115.sh",
+      "script_sha256": "3ef3d65a3572a897f2be707c8ab85aa1e03cd9fac42a3e5ec1f1ce9f418ae780",
+      "primary_aid": "652115",
+      "confirmation_aid": "720591",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE_14.98uM_(%)"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE_14.98uM_(%)",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 4,
+          "unit_present": false,
+          "unit": null,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/720597-652115.sh",
+      "script_sha256": "95c3325d0dd288520908e4575755e16fb43a00b1a8105824030a5ff77e114064",
+      "primary_aid": "652115",
+      "confirmation_aid": "720597",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE_14.98uM_(%)"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE_14.98uM_(%)",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 4,
+          "unit_present": false,
+          "unit": null,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/720632-686996.sh",
+      "script_sha256": "32b39af1ac6eca93efc207391ec4a84e23915c6e967e7a6dee0837492c24b03e",
+      "primary_aid": "686996",
+      "confirmation_aid": "720632",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE_12.48uM_(%)"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE_12.48uM_(%)",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 4,
+          "unit_present": true,
+          "unit": 254,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    },
+    {
+      "script": "retrieve-scripts/743267-720511.sh",
+      "script_sha256": "822b2da82df988920c61f6a243a329912f476f00280fd5b186113c7fe98716a4",
+      "primary_aid": "720511",
+      "confirmation_aid": "743267",
+      "primary_columns": [
+        "REPLICATE_A_ACTIVITY_SCORE_7.58uM_(%)",
+        "REPLICATE_B_ACTIVITY_SCORE_7.58uM_(%)"
+      ],
+      "confirmation_columns": [
+        "pAC50_M"
+      ],
+      "source_transform": "no",
+      "primary_bindings": [
+        {
+          "name": "REPLICATE_A_ACTIVITY_SCORE_7.58uM_(%)",
+          "tid": 3,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        },
+        {
+          "name": "REPLICATE_B_ACTIVITY_SCORE_7.58uM_(%)",
+          "tid": 4,
+          "type": 1,
+          "unit_present": true,
+          "unit": 15,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "confirmation_bindings": [
+        {
+          "name": "pAC50_M",
+          "tid": 3,
+          "type": 4,
+          "unit_present": false,
+          "unit": null,
+          "sunit_present": false,
+          "sunit": null
+        }
+      ],
+      "binding_status": "EXACT_NAME_TID_UNIT_BINDING",
+      "both_programme_rights_supported": true,
+      "target_family_gate": "UNRESOLVED_PENDING_XREF_METADATA"
+    }
+  ],
+  "activity_rows": 0
+}

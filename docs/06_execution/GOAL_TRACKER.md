@@ -14,8 +14,8 @@ Repository artifacts remain English. Goal2 base is main commit `729e13b`.
 | 4R1 | Diagnose predictor versus acquisition effects; two repair variants, strong controls and preserved final outcomes | COMPLETE BOUNDED DIAGNOSIS: [results](../03_research/GOAL4R1_RESULTS_V1.md); STOP_CURRENT_ACQUISITION_THESIS; complete verified return/cleanup; broader Goal4 advance NOT_PASSED |
 | 4R2-A | Offline evidence-to-plan/report prototype, source metadata and scientific feasibility decision | COMPLETE: [20 engineering checks and feasibility](../03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md), 60 SI-verified pairs/105 AID version tuples, verified return/cleanup; scientific advancement NO_GO |
 | 4R2-A2 | Source reconstruction and external workflow-benchmark readiness | COMPLETE: [readiness](../03_research/GOAL4R2A2_READINESS_V1.md), 105 descriptions with SI version/revision concordance, ten engineering cases, verified full return/cleanup; scientific pilot NO_GO, historical rows NOT_CERTIFIED; benchmark direct-workflow NO_GO/commercial data NOT_CLEARED |
-| 4R2-A3 | Historical observation/population qualification | INITIAL STAGE OF SELECTED B: up to sixteen CPU-hours, initially two workers; exact rights/intake contract and clock pending; NOT_STARTED; [canonical B/C plan](PLAN_B_WITH_CONDITIONAL_C_20261106.md) supersedes the earlier eight-hour proposal |
-| Plan B | A3, one approved development pilot, robustness and verified evidence delivery | OWNER_SELECTED: 48 CPU-hours/72 elapsed hours/max four workers; A3 review checkpoint retained; execution NOT_STARTED |
+| 4R2-A3 | Observation/population qualification | COMPLETE WITH SCIENTIFIC ADVANCEMENT NO_GO: [report](../03_research/GOAL4R2A3_QUALIFICATION_V1.md); 589/640 structure-cleared, live canary stopped, offline primary 16 rows/zero complete tuples; paired qualification NOT_RUN; full return/cleanup verified |
+| Plan B | A3, approved pilot, robustness and evidence delivery | A3 COMPLETE; OWNER REVIEW BEFORE PILOT; 5.5 conservative CPU-hours charged within 48; fixed 6–9 November window; pilot NOT_RUN/NO_GO |
 | Plan C | Evidence Workspace, Decision Workbench and Integration Kit around shared validated assets | CONDITIONALLY_AUTHORIZED: continue directly after B POTENTIAL_SUFFICIENT; extra 48 CPU-hours, B+C ceiling 96/seven days/max four workers; potential NOT_EVALUATED and execution NOT_STARTED |
 | P1 | Agentic paper/molecular-source search to study plan/report and team-tool delivery | OFFLINE SUBSET implemented in 4R2-A; [full integration proposal](../04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md), model/provider evaluation and live destination remain NOT_RUN |
 | 5 | Frozen held-out study, uncertainty/ablation analysis and independent reproduction | PROPOSED; NOT_STARTED |
@@ -25,12 +25,12 @@ Repository artifacts remain English. Goal2 base is main commit `729e13b`.
 
 The owner selected [B with conditional C](PLAN_B_WITH_CONDITIONAL_C_20261106.md)
 after reviewing the [historical resource alternatives](PRE_A3_CPU_TIME_OPTIONS_20261106.md).
-Only CPU/time is included. B has no current clock/job; its first sixteen-hour
-A3 stage needs an exact intake contract, followed by the selected owner-review
-checkpoint. At B closeout, document potential separately from completion. A
-POTENTIAL_SUFFICIENT verdict authorizes C in scope without repeat permission;
-uncertain potential/material changes require consultation. C adds at most 48
-CPU-hours to B's 48, not an additional 96; no paid service or final outcome release.
+Only CPU/time is included. B started 6 November at 05:13:23 UTC and ends by
+9 November at the same time. The [A3 closeout](GOAL4R2A3_CLOSEOUT_20261106.md)
+reaches the selected owner checkpoint with scientific advancement NO_GO.
+Do not spend the pilot allocation or infer C potential from engineering checks.
+The standing C permission remains conditional; uncertain potential and material
+changes require consultation. No paid service or final outcome release is included.
 
 [Roadmap and long-run options](RESEARCH_ROADMAP_AND_LONG_RUN_20261105.md),
 5 November: recommended first block through Goal 4; maximum proposed internal

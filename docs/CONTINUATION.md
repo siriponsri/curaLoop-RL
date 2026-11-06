@@ -1,22 +1,28 @@
-# Current checkpoint: selected B and conditional C portfolio
+# Current checkpoint: A3 completed, owner review before pilot
 
-The owner selected [B and conditional C](06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md).
-B reserves 48 CPU-hours/72 hours/max four workers on dr-train, initially two;
-A3's first sixteen-hour allocation needs its exact rights/intake contract and
-clock. Retain the selected A3-to-pilot owner review. B/C processing is NOT_STARTED.
+Read the [A3 report](03_research/GOAL4R2A3_QUALIFICATION_V1.md),
+[closeout](06_execution/GOAL4R2A3_CLOSEOUT_20261106.md) and
+[evidence](evidence/goal4r2a3-20261106-v1/README.md).
+Seven one-CPU workers completed bounded qualification on dr-train. All 29
+distinct checks passed in 32 executions; the live canary failed on its native
+envelope. Offline normalization validated 16 primary rows with 16 missing selected
+cells and zero complete tuples. Paired qualification/pilot remain NOT_RUN/NO_GO.
 
-If B's documented potential is sufficient, continue to C automatically within
-the standing conditional authority: extra 48 CPU-hours, combined 96/seven days,
-max four workers. The portfolio uses a shared software core across Evidence Workspace,
-Decision Workbench and Integration Kit. Completion alone does not establish
-potential. Uncertain potential or material scope/resource/rights changes need
-consultation; no new paid service, protected final outcome or real team write is
-included. Current potential gate is NOT_EVALUATED and no clock has started.
+All 1,963 files / 689,826,056 bytes returned and were reread/hash-verified before
+exact task/export cleanup. Fresh absence: 6 November 07:23:26.859914 UTC.
+Private retention is `.local/goal4r2a3-20261106-v1/remote-return/full-v1/`.
+The PubChem STOP and original canary verdict remain preserved; do not recreate
+the closed root or restart intake from a new version silently.
 
-Latest executed goal remains A2 below. The old resource alternatives are
-historical; the canonical selected plan governs the next continuation.
+B starts 6 November 05:13:23 UTC and ends by 9 November at that time, with
+48 cumulative CPU-hours/max four workers. A3's conservative charge is 5.5 hours;
+the pilot allocation is unspent. Follow the [execution contract](06_execution/PLAN_B_EXECUTION_CONTRACT_20261106.md).
+The next decision concerns endpoint/provenance repair and broader independent
+family coverage before a revised contract/pilot. C potential is NOT_EVALUATED;
+standing conditional authority is not a positive finding. Final outcomes remain
+reserved. Older continuation instructions below describe historical checkpoints.
 
-## Latest executed goal: 4R2-A2 readiness closeout
+## Historical completed goal: 4R2-A2 readiness closeout
 
 Completed: [A2 source/benchmark readiness](03_research/GOAL4R2A2_READINESS_V1.md),
 [compatibility/exposure](03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md) and

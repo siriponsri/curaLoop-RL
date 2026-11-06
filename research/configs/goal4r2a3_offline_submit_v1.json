@@ -1,0 +1,43 @@
+{
+  "status": "FROZEN_BEFORE_OFFLINE_ADAPTER_EXECUTION; S01-S03_DEFINED_BEFORE_IMPLEMENTATION",
+  "source_attempt": "observation-canary-v1",
+  "additional_network_requests": 0,
+  "stopped_pubchem_latch_must_remain_unchanged": true,
+  "cases": [
+    {
+      "id": "S01",
+      "name": "Native PC_AssaySubmit envelope converts structurally without changing descriptor or raw rows"
+    },
+    {
+      "id": "S02",
+      "name": "Unexpected SID and wrapper fields are rejected before value interpretation; source bytes and manifest remain bound"
+    },
+    {
+      "id": "S03",
+      "name": "Offline readout normalization cannot release new requests or bypass the stopped service"
+    }
+  ],
+  "ncbi_schema_sha256": "b6b3bc11bbc0cb781424dbab8b02509080af331c41fe3120c0465e50c768cfdc",
+  "pre_canary_manifest_sha256": "afca38be68334b60c2657099f316e839acb4a06c41264eedd68fe021c8ae7146",
+  "permitted_source_binding": "FROM_ORIGINAL_PINNED_SKILL_RECEIPT_AND_PRE_CANARY_MANIFEST",
+  "original_source_files": {
+    "observation-000.txt": {
+      "sha256": "bb77fb872d6b8159e433c02e7b526e10f1056e25bb052894d8653db9dddb9596",
+      "bytes": 16029
+    },
+    "observation-000-receipt.json": {
+      "sha256": "a97986604a7fcec76ec04973e1f14803cd159fab74ec45c3697f81087892cd4b",
+      "bytes": 1622
+    },
+    "phase-request-manifest-private.json": {
+      "sha256": "b337bbb03d42b0015459dd551edd4aadd7305bdbfbae32bdd89fddfb53b9e83d",
+      "bytes": 2456
+    },
+    "results.json": {
+      "sha256": "d50e784290f23a47fe9afe2a17abc084d09adf645e962071684ed8196440a455",
+      "bytes": 309
+    }
+  },
+  "original_canary_status": "NO_GO_FILTERED_OBSERVATION_ACCESS_IDENTITY_OR_SCHEMA",
+  "pre_dispatch_source_pins_amendment": true
+}

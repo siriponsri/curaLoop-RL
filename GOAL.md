@@ -1,5 +1,16 @@
 # Goal: publishable evidence and a testable R&D product
 
+## Current checkpoint, 6 November 2026
+
+[A3 qualification](docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md) is complete with
+scientific advancement NO_GO. The current data question concerns protected,
+explicitly observed populations and complete endpoints for a future decision
+study. The original acquisition thesis below remains historical; its incremental
+value was not established in Goal4/4R1. The selected A3 owner review precedes the
+pilot. Normal main delivery is authorized; final study, live team writes and
+journal submission remain separate. See the [closeout](docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md).
+
+
 ## Intended outcome
 
 Develop CuraLoop-RL into a reproducible computational study of molecular screening under operational constraints, with a locally usable research product that can be evaluated by R&D teams. The owner selected public data for the first study and an R&D pilot as the first commercial route on 4 November 2026. Repository documentation is English. Work remains suitable for a solo investigator and CPU-first execution.
@@ -8,7 +19,7 @@ Develop CuraLoop-RL into a reproducible computational study of molecular screeni
 
 Success means a precise research question, source-grounded comparison with prior work, an immutable evaluation protocol, inspected datasets and executable experiments whose results support the manuscript. The study must determine when adaptation helps, fails or adds no measurable benefit. Strong baselines and unfavorable results are part of the deliverable. A new RL architecture is optional; demonstrated scientific value is required.
 
-The primary proposed question is whether pending-aware selection changes confirmed hit discovery by a fixed simulated deadline when resource use is matched. Separate questions cover transfer to held-out targets, structural diversity, sensitivity to scheduling assumptions and predictor calibration. Historical HIV evidence remains a pilot and regression fixture. It does not answer cross-target questions.
+The original proposed question was whether pending-aware selection changes confirmed hit discovery by a fixed simulated deadline when resource use is matched. Separate questions cover transfer to held-out targets, structural diversity, sensitivity to scheduling assumptions and predictor calibration. Historical HIV evidence remains a pilot and regression fixture. It does not answer cross-target questions.
 
 ## Product and business success
 
@@ -39,8 +50,8 @@ No paid service or GPU expenditure is authorized by this documentation request. 
 
 Subsequent owner direction on 4 November authorizes dr-train computation if
 necessary, subject to live access/allocation/conflict checks and the shared OS
-lock. It does not authorize paid infrastructure or reserve resources. The current
-continuation is local; no push or external publication is part of this milestone.
+lock. It does not authorize paid infrastructure or reserve resources. That historical milestone was local. Current approved B/A3 processing used
+dr-train; normal main delivery is authorized, while external publication is not.
 
 ## Scope limits
 

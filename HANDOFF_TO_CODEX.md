@@ -1,27 +1,51 @@
 # CuraLoop-RL handoff — English durable localhost POC
 
-## Current planning checkpoint: selected B and conditional C
+## Current checkpoint: A3 complete with scientific advancement NO_GO
 
-Read the [canonical B/C record](docs/06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md).
-The owner selected B (48 CPU-hours/72 hours/max four CPU workers on dr-train,
-initially two) and authorized direct continuation to C's product portfolio when
-B demonstrates sufficient potential. This is standing conditional authority for
-the recorded scope, not an automatic positive finding or an open-ended budget.
-C adds at most 48 CPU-hours; B+C at most 96 CPU-hours/seven days from eventual B
-start, maximum four workers. Use a shared software core for Evidence Workspace, Decision
-Workbench and Integration Kit. No repeat B-to-C permission for routine in-scope
-work; consult on uncertain potential and material changes.
+Read [qualification](docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md),
+[closeout](docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md),
+[evidence](docs/evidence/goal4r2a3-20261106-v1/README.md) and
+[execution contract](docs/06_execution/PLAN_B_EXECUTION_CONTRACT_20261106.md).
+Base main: `f548634cb6ac283ed92772e62fc04956094551ae`. Normal main delivery/push
+is authorized; its final SHA is recorded in the ignored post-push receipt and
+live Git readback, rather than invented in this pre-commit handoff.
 
-Execution NOT_STARTED, start/deadline NOT_SET, potential NOT_EVALUATED. Next
-artifact is the precise A3 rights/intake/execution contract within B's first
-sixteen CPU-hours. Retain the selected owner-review checkpoint after A3 before
-the remaining pilot allocation. Preserve all frozen prior bytes/final outcomes.
-No SSH, row intake, scientific/model run, payment or team write occurred during
-this recording task. Base main: `9f06e1cf8be6514fe600b2a56088a80fff51e912`;
-the normal documentation-delivery commit and live main readback identify the
-published planning update. Existing closed task roots remain absent/closed.
+A3 retained seven serialized one-CPU jobs. Twenty-nine distinct engineering
+checks passed in 32 executions. Five metadata pairs span four broad annotations
+inside one exposed development component; no twelve-independent-family claim.
+Structure controls cleared 589/640 SIDs, excluding 45 ambiguous/missing mappings
+and six protected matches without replacement.
 
-## Latest executed goal: 4R2-A2 completed checkpoint
+The first 16-SID/AID canary returned HTTP 200 with native PC_AssaySubmit and failed
+the frozen envelope validator. Intake stopped before readout interpretation.
+An additive offline adapter validated only that existing AID 2097 response:
+16 primary rows, 16 numeric cells, 16 missing-TID cells, zero complete selected
+tuples. Singleton consistency is not replicate validation. No second-stage or
+expanded observation request, model campaign or final outcome release occurred.
+
+All 1,963 files / 689,826,056 bytes were returned, extracted and completely reread/
+hash-verified before exact task/export deletion. Fresh absence at
+2026-11-06T07:23:26.859914Z. Retain the complete private return under
+`.local/goal4r2a3-20261106-v1/remote-return/full-v1/`, including original source,
+all bundle versions, raw response, stopped network ledger and native dependencies.
+Never deserialize raw values for a documentation/status check.
+
+B's window is 2026-11-06T05:13:23Z to 2026-11-09T05:13:23Z, 48 CPU-hours/max four
+workers. A3 cap 16 CPU-hours/max two; conservative charge 5.5 includes every launch
+reservation and the utility/preservation reserve. Measured worker CPU 16.217561931
+seconds is not total-host accounting. The 32-hour pilot allocation is unspent.
+C remains conditional on sufficient demonstrated B potential, max 48 additional
+hours, combined 96 by 2026-11-13T05:13:23Z; potential remains NOT_EVALUATED.
+
+Stop for the selected owner review. Prepare an endpoint/provenance repair and
+broader source/family coverage proposal before new intake or the pilot. Any new
+contract must inherit exposure and resource/network charges; the source STOP and
+old NO_GO cannot be silently reset. Do not recreate closed roots, modify frozen
+bytes/final roles, open final outcomes, use new paid services, write to team tools
+or submit a journal package. Publication/redistribution/commercial data rights
+remain NOT_CLEARED. Parent remains sole writer; specialists are read-only.
+
+## Historical completed goal: 4R2-A2 completed checkpoint
 
 Read [readiness](docs/03_research/GOAL4R2A2_READINESS_V1.md),
 [benchmark compatibility/exposure](docs/03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md),

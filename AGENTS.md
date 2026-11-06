@@ -1,5 +1,47 @@
 # Agent instructions: CuraLoop-RL
 
+## Current A3 closeout and owner-review checkpoint, 6 November 2026
+
+A3 bounded qualification is complete with scientific advancement NO_GO. Read
+`docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md` and
+`docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md`.
+Seven serialized dr-train workers; 29 distinct engineering cases / 32 executions.
+589/640 sampled SIDs cleared; 45 ambiguous/missing and six protected excluded.
+Original native-envelope canary NO_GO/service STOP retained. Offline-only adapter
+validated 16 primary rows, 16 numeric cells plus 16 missing-TID cells, zero complete selected
+tuples. Paired qualification/pilot/model campaigns NOT_RUN; final outcomes reserved.
+Five metadata pairs span four broad annotations inside one exposed conservative component;
+no twelve-independent-family or fresh-validation claim.
+
+All 1,963 files / 689,826,056 bytes returned and completely reread/hash-verified before
+exact task/export deletion; fresh absence at 07:23:26.859914 UTC. Preserve complete
+private return and every frozen source/result/failure. Do not recreate closed
+roots or reset the source STOP. Next bounded decision is endpoint/provenance
+repair and credible source/family expansion, initially metadata/value-free work.
+The selected owner review must precede new intake or B's unspent pilot allocation.
+B's existing 05:13:23 UTC 6–9 November window and 48 CPU-hour cap remain; conservative
+A3 charge of 5.5 CPU-hours. C potential remains NOT_EVALUATED; conditional authority
+does not establish success. No new paid service, final labels, live team write
+or publication action. Parent sole writer; specialists read-only. Normal English
+main delivery/push and status documentation remain authorized.
+
+
+## Historical Plan B / A3 execution approval, 6 November 2026
+
+The owner authorized proceeding with selected B. Follow
+`docs/06_execution/PLAN_B_EXECUTION_CONTRACT_20261106.md` and
+`docs/06_execution/GOAL4R2A3_INTAKE_CONTRACT_20261106.md`.
+B starts2026-11-06T05:13:23Z, ends2026-11-09T05:13:23Z; cap48CPU-hours,
+maxfourworkers, initiallytwo. InitialA3cap16CPU-hours/max2workers ends no later
+than2026-11-07T05:13:23Z. Local preparation/full return verification permitted;
+processing/tests use dr-train. Parent sole writer; specialists read-only.
+This supersedes NOT_STARTED/clock-pending planning text only for approved A3.
+Freeze exact intake/protection/rights gates before activity; no pilot until the
+selected A3 owner-review checkpoint. Conditional C authority remains unchanged.
+Use fresh goal4r2a3-20261106-v1 roots and verified complete return before cleanup.
+Preserve all frozen prior bytes and final outcomes. No GPU/new paid service,
+model campaign, bulk fallback, commercial-rights inference or real team write.
+
 ## Selected Plan B and conditional C portfolio, 6 November 2026
 
 The owner selected B and authorized direct continuation to C's product portfolio
@@ -7,7 +49,7 @@ if B demonstrates sufficient potential. Canonical authority/scope record:
 `docs/06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md`.
 B: 48 cumulative CPU-hours / 72 elapsed hours / max four CPU workers on dr-train,
 initially two; sixteen CPU-hours for A3, with the selected owner-review checkpoint
-before the remaining pilot allocation. B execution is NOT_STARTED: exact A3
+before the remaining pilot allocation. At the historical plan-recording checkpoint B was NOT_STARTED: exact A3
 rights/intake contract and start/deadline remain pending. This plan-recording
 request does not open outcomes, create remote roots or start the clock.
 C: conditionally authorized after the documented POTENTIAL_SUFFICIENT verdict,
@@ -22,7 +64,7 @@ services, protected final outcomes, real team writes and publication stay outsid
 this authority. Preserve frozen bytes and closed roots. Repository artifacts
 English; parent sole writer. Normal main documentation delivery remains authorized.
 
-## Current Goal 4R2-A2 closeout, 6 November 2026
+## Historical Goal 4R2-A2 closeout, 6 November 2026
 
 A2 source/benchmark readiness is complete. Read
 `docs/03_research/GOAL4R2A2_READINESS_V1.md` and

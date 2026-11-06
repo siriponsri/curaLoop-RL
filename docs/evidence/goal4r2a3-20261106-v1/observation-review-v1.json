@@ -1,0 +1,25 @@
+{
+  "status": "GO_FOR_APPROVED_GATED_OBSERVATION_STAGE",
+  "reviewers": [
+    "goal4_protocol_review",
+    "plugin_architecture_map"
+  ],
+  "utc": "2026-11-06T06:59:17.503513+00:00",
+  "sha256": {
+    "research/qualification_v1/observations_v1.py": "ce1be0b41b0f776d7f4b7ecd6bfdbba6cc9292ae8b466eb0ba030563ac0dfced",
+    "research/qualification_v1/public_receipts_v1.py": "228ffa7e4932b254a542028fbfa3519673ce3a0a71adc9429d6ece4f84ce5ab2",
+    "research/configs/goal4r2a3_observation_v1.json": "35e1fee4adebe6238d545bdc0fde6a274345ba1675c93bd8968a373109f1a284",
+    "tools/goal4r2a3_worker_v5.py": "a2ca964efe82835f2177ad59bfb000d5b5e28bba3e46725d09e7b9e2ca549264",
+    "tools/goal4r2a3_remote_v5.py": "0df4529fcd86138cadebdd4ae852f75869091ec16b6f2aa71bbd253725a0e2bf"
+  },
+  "bundle_sha256": "9cc061727911fabc84dd72ae3cfbd80985fb2a0fda4e5f3aa67556cfca11a875",
+  "scope": "Bounded16SID/AIDcanary; qualify only after complete exactPASS with unchangedplan/config",
+  "checks": "O01-O03 before HTTP; NOT_RUN by reviewers",
+  "scientific_pilot": "NOT_AUTHORIZED_BY_THIS_REVIEW",
+  "privacy": "No messages or child stdout/stderr in public receipts",
+  "persistent_stops": [
+    "access/schema/identityfailure",
+    "ambiguousqualifiers",
+    "incompletecanarycoverage"
+  ]
+}

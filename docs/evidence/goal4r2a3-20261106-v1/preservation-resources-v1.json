@@ -1,0 +1,26 @@
+{
+  "schema_version": "curaloop.goal4r2a3.resources.v1",
+  "pid": 85392,
+  "start_utc": "2026-11-06T07:17:39.427235+00:00",
+  "absolute_deadline_utc": "2026-11-07T05:13:23+00:00",
+  "cpu_affinity": [
+    11
+  ],
+  "wall_limit_seconds": 1800,
+  "cpu_limit_seconds": 300,
+  "memory_limit_bytes": 1073741824,
+  "descendant_processes_allowed": false,
+  "threads_per_blas": 1,
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "command": [
+    "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\tools\\goal4r2a3_verify_local_v1.py",
+    "--folder",
+    ".local/goal4r2a3-20261106-v1/remote-return/full-v1"
+  ],
+  "guard_source_sha256": "b9690a9f76d4ceaed3d8dae3df2331023c689839ba62d1255fd18493d4390cf0",
+  "status": "PASS",
+  "wall_seconds": 91.84400000004098,
+  "cpu_seconds": 21.6875,
+  "scientific_contents_deserialized": false,
+  "preservation_utility_reserve_covers_process": true
+}

@@ -1,14 +1,18 @@
 # Documentation map
 
-Selected next programme: [Plan B with conditional C portfolio](06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md).
-B reserves 48 CPU-hours/72 hours/max four workers; C may follow a documented
-sufficient-potential verdict without repeat permission inside scope, adding
-at most 48 CPU-hours within a combined 96/seven-day ceiling. Neither execution
-nor the potential assessment has started. Exact A3 intake/clock and its review
-checkpoint remain pending. The [original alternatives](06_execution/PRE_A3_CPU_TIME_OPTIONS_20261106.md)
-are retained as history.
+Latest completed goal: [A3 qualification](03_research/GOAL4R2A3_QUALIFICATION_V1.md),
+[closeout](06_execution/GOAL4R2A3_CLOSEOUT_20261106.md) and
+[evidence](evidence/goal4r2a3-20261106-v1/README.md). Source/structure engineering
+passed; the live canary NO_GO remains, offline normalization is limited to one
+primary assay, and scientific advancement is NO_GO. Full return/cleanup verified.
 
-Latest executed goal: [4R2-A2 readiness](03_research/GOAL4R2A2_READINESS_V1.md),
+The [B execution](06_execution/PLAN_B_EXECUTION_CONTRACT_20261106.md) and
+[A3 intake](06_execution/GOAL4R2A3_INTAKE_CONTRACT_20261106.md) contracts govern the
+current checkpoint. Owner review precedes the pilot. The selected
+[B/conditional-C portfolio](06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md)
+retains conditional authority; potential remains NOT_EVALUATED.
+
+Earlier completed goal: [4R2-A2 readiness](03_research/GOAL4R2A2_READINESS_V1.md),
 [benchmark/exposure assessment](03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md),
 [closeout](06_execution/GOAL4R2A2_CLOSEOUT_20261106.md) and
 [evidence](evidence/goal4r2a2-20261106-v1/README.md). All 105 AID descriptions

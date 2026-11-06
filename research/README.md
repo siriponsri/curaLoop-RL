@@ -1,5 +1,13 @@
 # Research specifications
 
+Latest completed qualification: [A3 report](../docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md),
+[closeout](../docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md) and
+[evidence](../docs/evidence/goal4r2a3-20261106-v1/README.md). The new package is
+`research/qualification_v1/`. Scientific advancement is NO_GO; paired/pilot work
+is NOT_RUN. Full private return and scoped cleanup are verified. The preparatory
+and NCATS sections below are historical evidence, not the current execution gate.
+
+
 Latest preparatory work: [candidate metadata/feature audit](../docs/03_research/CANDIDATE_ASSAY_AUDIT_V1.md)
 and [hierarchical estimation/resource sensitivity](../docs/03_research/DESIGN_SENSITIVITY_V1.md).
 Code is isolated under `research/preparation_v1/`. It does not ingest final

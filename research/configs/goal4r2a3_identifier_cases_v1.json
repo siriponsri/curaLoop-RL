@@ -1,0 +1,24 @@
+{
+  "status": "FROZEN_BEFORE_IDENTIFIER_EXECUTION_AND_ANY_PUG_INTAKE",
+  "cases": [
+    {"id": "I01", "name": "Grouped AID/SID and SID/CID projection rejects unexpected, duplicate, malformed or flattened identities"},
+    {"id": "I02", "name": "Complete stereochemical/isotopic SMILES canonicalization blocks the protected exact identity before any observation release"},
+    {"id": "I03", "name": "Common listed SID hash sample stays fixed before structures and outcomes, without replacement after exclusion"}
+  ],
+  "metadata_gate_attempt": "cached-reconciliation-v2",
+  "metadata_gate_sha256": "8febcd0105181f842d6df846a75aad3ed1b09353747b30c3647d11d89090fb43",
+  "protected_index_sha256": "a189e3064b28e09e0099db0dd81ee80b08475ccf39b134bdec37ccd341789520",
+  "additional_I02_subcheck": "Invalid private SMILES sentinel must not occur in native stdout/stderr capture or public receipts",
+  "maximum_sids_per_pair": 128,
+  "identifier_batch_size": 100,
+  "network_source": "https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest",
+  "permitted_operations": [
+    {"path_template": "assay/aid/{admitted_aid}/sids/JSON", "params": {"sids_type": "all", "list_return": "grouped"}},
+    {"path_template": "substance/sid/{selected_sids}/cids/JSON", "params": {"cids_type": "all", "list_return": "grouped"}},
+    {"path_template": "compound/cid/{unambiguous_cids}/property/SMILES,InChIKey/JSON", "params": {}}
+  ],
+  "activity_paths": "DISABLED",
+  "freeze_concrete_request_batches_before_each_dispatch": true,
+  "same_cumulative_network_and_resource_ledger": true,
+  "no_retry_fallback_or_unfiltered_activity": true
+}

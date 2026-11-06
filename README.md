@@ -62,13 +62,20 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 ## Research and R&D pilot programme
 
-Selected next plan: [B with conditional C portfolio](docs/06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md).
-B reserves 48 CPU-hours for data qualification and an approved decision-method
-pilot. Sufficient demonstrated potential permits continuation to a R&D product portfolio built on shared
-components within a combined 96 CPU-hour ceiling. These are selected/
-conditional plans; execution and potential assessment have not started.
+Latest completed goal: [A3 population/observation qualification](docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md).
+Five metadata pairs and 589 of 640 sampled SIDs passed structure controls. The
+live canary stopped on a native-envelope mismatch; offline repair validated only
+16 primary-assay rows, with zero complete selected readout tuples. Paired
+qualification and the scientific pilot remain **NOT_RUN / NO_GO**.
 
-Latest: [Goal 4R2-A2 readiness](docs/03_research/GOAL4R2A2_READINESS_V1.md)
+[Complete return and cleanup](docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md)
+are verified. A3 charged 5.5 conservative CPU-hours within the
+[B execution contract](docs/06_execution/PLAN_B_EXECUTION_CONTRACT_20261106.md).
+The selected owner review precedes further intake or the pilot. The
+[B/conditional-C portfolio plan](docs/06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md)
+remains in force; sufficient C potential has not been established.
+
+Earlier completed goal: [Goal 4R2-A2 readiness](docs/03_research/GOAL4R2A2_READINESS_V1.md)
 retrieved descriptions for all 105 MF-PCBA AIDs, with version/revision metadata
 matching the publication, and passed ten engineering contract checks on dr-train.
 Historical activity equivalence and scientific cohort eligibility remain open.

@@ -1,0 +1,36 @@
+{
+  "status": "SAFE_CANARY_TRANSPORT_DIAGNOSTIC_NO_RESPONSE_TEXT_OR_VALUES",
+  "http_status": 200,
+  "response_decoded_bytes": 16029,
+  "transport_error_type": null,
+  "receipt_error_type": null,
+  "client_ok": true,
+  "transport_trace_keys": [
+    "decoded_bytes_observed",
+    "decoded_sha256",
+    "headers",
+    "http_status",
+    "method",
+    "params",
+    "path",
+    "redirects_allowed",
+    "status"
+  ],
+  "completed_uniprot_requests": 27,
+  "completed_pubchem_requests": 24,
+  "failed_pubchem_requests": 0,
+  "decoded_bytes_charged": 28715980,
+  "stopped_services": [
+    "pubchem"
+  ],
+  "stop_events": [
+    {
+      "service": "pubchem",
+      "reason": "FILTERED_OBSERVATION_ACCESS_IDENTITY_OR_SCHEMA_FAILURE",
+      "utc": "2026-11-06T06:59:49.917523+00:00"
+    }
+  ],
+  "qualification_manifest_sha256": "afca38be68334b60c2657099f316e839acb4a06c41264eedd68fe021c8ae7146",
+  "cpu_seconds": 0.001643343999999998,
+  "charged_to_utility_reserve": true
+}

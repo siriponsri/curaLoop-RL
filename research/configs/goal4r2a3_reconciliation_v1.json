@@ -1,0 +1,29 @@
+{
+  "status": "FROZEN_BEFORE_METADATA_REPAIR_EXECUTION_AND_ACTIVITY",
+  "source_attempt": "xref-metadata-v1",
+  "source_release": "2026_04",
+  "additional_uniprot_requests": 0,
+  "refseq_token_rule": "Exact protein accession/version plus optional bracketed isoform tag whose parent equals returned UniProt Entry",
+  "base_only_matching": "MAY_BLOCK_PROTECTED_PROTEINS_BUT_CANNOT_CLEAR_UNPROTECTED_VERSION_EQUIVALENCE",
+  "supplemental_interpro": {
+    "accession": "IPR050332",
+    "url": "https://www.ebi.ac.uk/interpro/api/entry/interpro/IPR050332/",
+    "http_status": 410,
+    "response_sha256": "7ccf6d2cadbab1a7daedd288abb6d896b952b1ac1cc5232934fbb00567fe62be",
+    "type": "family",
+    "deleted": "2026-08-18T00:00:00.000Z",
+    "rule": "Retain retired family as positive protected identity; do not drop it or rewrite frozen InterPro110 types"
+  },
+  "preserve_original_source_and_results": true,
+  "cases": [
+    {"id": "R01", "name": "RefSeq isoform-tag parsing validates parent without dropping accession version"},
+    {"id": "R02", "name": "Pinned retired-family tombstone remains a protected family identity"},
+    {"id": "R03", "name": "Cached TSV repair requires original decoded response hashes and no new requests"}
+  ],
+  "activity_requests": 0,
+  "source_universe_changed": false,
+  "metadata_admission_may_change": true,
+  "future_scientific_population_not_frozen": true,
+  "original_request_plan_sha256": "59d40a31796d93156d57410da6c9d7fa61ee595b027fc60bedff815f00990fbd",
+  "original_response_roster_sha256": "540cec916168a72069304fc584cdcda63d9f29c310f2c00740375d2653a7dfe3"
+}

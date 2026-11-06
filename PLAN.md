@@ -1,6 +1,15 @@
 # Evidence-led implementation plan
 
-This plan supersedes the completed English/local-persistence delivery plan while retaining its evidence. Milestones advance when their outputs are inspectable. They do not depend on a fixed calendar deadline.
+## Current bounded execution checkpoint
+
+[A3 qualification and cleanup](docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md)
+are complete; pilot advancement is NO_GO and owner review is required. The
+[B execution contract](docs/06_execution/PLAN_B_EXECUTION_CONTRACT_20261106.md)
+sets hard CPU/deadline limits for current work. The roadmap below is a long-term
+dependency map, not permission to bypass those limits or reopen final outcomes.
+
+
+This plan supersedes the completed English/local-persistence delivery plan while retaining its evidence. Milestones advance when their outputs are inspectable. Long-term roadmap milestones do not imply an open-ended execution window.
 
 | Milestone | Work | Exit evidence |
 | --- | --- | --- |
@@ -19,7 +28,7 @@ This plan supersedes the completed English/local-persistence delivery plan while
 
 Literature, baseline implementation and business discovery materials can progress together. Final scientific evaluation follows data and protocol freezing. Customer claims follow customer evidence. The paper can report useful null results; do not redesign the final test after seeing them. Model improvements and schedule changes receive new experiment IDs and preserve prior runs.
 
-## First implementation sequence
+## Historical first implementation sequence
 
 Start with issues ENG-01 through ENG-05 in the implementation backlog: protected-state audit, data registry, scheduler specification, delay-invariance check and one strong baseline. These steps resolve whether the proposed research question is observable in the simulator. Avoid expanding UI scope before that question is testable.
 

@@ -1,16 +1,25 @@
 # Start here
 
-## Current local continuation
+## Current checkpoint: A3 completed, pilot NO_GO
 
-Selected next work: [Plan B with conditional C product portfolio](docs/06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md).
-B: 48 CPU-hours/72 hours/max four workers, initially two; exact A3 intake contract
-and clock pending. C may proceed directly after a documented verdict that B has sufficient
-potential, adding at most 48 CPU-hours within a combined 96/seven-day
-ceiling. Evidence Workspace, Decision Workbench and Integration Kit share one
-core. No B/C execution or potential verdict exists yet; paid services and final
-outcomes remain outside scope. Read the canonical plan before starting work.
+Read the [A3 report](docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md),
+[closeout](docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md) and
+[evidence](docs/evidence/goal4r2a3-20261106-v1/README.md).
+Structure controls cleared 589 of 640 SIDs. Only 16 primary-assay rows were
+normalized offline; no complete selected tuples or paired qualification exist.
+The original canary NO_GO and service STOP remain. No scientific campaign ran.
 
-Latest completed goal: [4R2-A2 source/benchmark readiness](docs/03_research/GOAL4R2A2_READINESS_V1.md),
+All 1,963 remote files returned and were reread/hash-verified before exact
+task/export deletion; fresh absence is verified. Do not recreate closed roots.
+A3 charged 5.5 conservative CPU-hours within B's 48-hour CPU allowance.
+B's fixed window is 6–9 November, 05:13:23 UTC / 12:13:23 Bangkok.
+Follow the [execution contract](docs/06_execution/PLAN_B_EXECUTION_CONTRACT_20261106.md)
+and selected owner review before the pilot. C remains conditional; potential is
+NOT_EVALUATED. Final outcomes remain reserved. The original
+[portfolio selection record](docs/06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md)
+is historical planning evidence, not the latest execution status.
+
+Earlier completed goal: [4R2-A2 source/benchmark readiness](docs/03_research/GOAL4R2A2_READINESS_V1.md),
 [compatibility/exposure](docs/03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md)
 and [closeout](docs/06_execution/GOAL4R2A2_CLOSEOUT_20261106.md). All 105 AID
 descriptions match SI version/revision metadata; dates/row equivalence and

@@ -1,0 +1,74 @@
+{
+  "status": "FROZEN_BEFORE_OBSERVATION_IMPLEMENTATION_AND_FIRST_ACTIVITY",
+  "utc": "2026-11-06T06:46:47.222110+00:00",
+  "cases": [
+    {
+      "id": "O01",
+      "name": "Only structure-cleared exact SID filters can enter both stages; no protected or unapproved ID"
+    },
+    {
+      "id": "O02",
+      "name": "Full qualification request manifest frozen before first canary outcome; later phase cannot alter it"
+    },
+    {
+      "id": "O03",
+      "name": "Canary coverage must be complete, while qualification reports missing cells and replicate conflict without imputation"
+    }
+  ],
+  "role": "DEVELOPMENT_EXPOSED",
+  "canary_maximum_sids_per_aid": 16,
+  "canary_pair": "retrieve-scripts/434954-2097.sh",
+  "maximum_pairs": 12,
+  "maximum_sids_per_pair": 128,
+  "qualification_pairs_fixed_before_canary": true,
+  "scientific_campaigns": 0,
+  "identifier_release_sha256": "fb5f8940c239be7ade7517f982cae4decf4795294405ebe63b5a32c9b37513a4",
+  "a2_metadata_register_sha256": "022b68dca8325dd3c67198b041c5eba99513ee328ad7c0303d6271ca21723286",
+  "source_versions": {
+    "2097": {
+      "version": 1,
+      "revision": 2
+    },
+    "2650": {
+      "version": 2,
+      "revision": 1
+    },
+    "434954": {
+      "version": 1,
+      "revision": 1
+    },
+    "449739": {
+      "version": 1,
+      "revision": 2
+    },
+    "463203": {
+      "version": 1,
+      "revision": 1
+    },
+    "485273": {
+      "version": 2,
+      "revision": 1
+    },
+    "489005": {
+      "version": 1,
+      "revision": 2
+    },
+    "493155": {
+      "version": 1,
+      "revision": 1
+    },
+    "588489": {
+      "version": 1,
+      "revision": 1
+    },
+    "602259": {
+      "version": 1,
+      "revision": 1
+    }
+  },
+  "request_template": "assay/aid/{fixed_aid}/JSON",
+  "params": "sid={comma-separated exact cleared SIDs}; no other filters",
+  "canary_gate": "EXACT_SOURCE_AND_READOUT_BINDING; ALL_REQUESTED_SIDS_RETURNED; NO_UNEXPECTED_IDS",
+  "historical_rows_equivalent": "NOT_CERTIFIED",
+  "no_new_endpoint_or_threshold_selection": true
+}
