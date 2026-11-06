@@ -1,0 +1,103 @@
+{
+  "schema": "curaloop.ui.accounting-amendment.v1",
+  "utc": "2026-11-06T12:21:00.495542+00:00",
+  "authority_sha256": "3263ca26f770c2a9ee55b0faa3375847d3f4e8457045f7adf00d5f203836dca1",
+  "before_contract": {
+    "approved_requests": {},
+    "b_cumulative_cap_seconds": 172800,
+    "b_deadline_utc": "2026-11-09T05:13:23Z",
+    "bc_cumulative_cap_seconds": 345600,
+    "bc_deadline_utc": "2026-11-10T11:04:20+00:00",
+    "c_deadline_utc": "2026-11-10T11:04:20+00:00",
+    "c_gate": "POTENTIAL_SUFFICIENT_REQUIRED",
+    "c_increment_cap_including_utility_seconds": 172800,
+    "c_start_utc": "2026-11-06T11:04:20+00:00",
+    "historical_cpu_seconds": 28800,
+    "historical_intake_decoded_bytes": 49687500,
+    "historical_requests": {
+      "ncbi_metadata": 0,
+      "pubchem": 44,
+      "uniprot": 27
+    },
+    "initial_job_reservation_seconds": 900,
+    "intake_decoded_byte_cap": 268435456,
+    "job_guard_cpu_seconds": 890,
+    "job_wall_seconds": 1800,
+    "local_hard_max_memory_bytes": 1073741824,
+    "local_initial_memory_bytes": 536870912,
+    "maximum_combined_workers": 4,
+    "maximum_local_workers": 1,
+    "new_activity_requests_in_r0": 0,
+    "old_pubchem_stop_preserved": true,
+    "paid_services_or_gpu": false,
+    "parent_sole_writer": true,
+    "per_response_byte_cap": 16777216,
+    "proposal_commit": "f1f31723014005e555e9e0ae1603671aeb0242da",
+    "r0_deadline_utc": "2026-11-10T11:04:20+00:00",
+    "r0_start_utc": "2026-11-06T11:04:20+00:00",
+    "r0_utility_reserve_seconds": 1800,
+    "remote_job_memory_bytes": 4294967296,
+    "remote_root": "/home/chaw/curaloop-rl/lrbc-c-20261106-v1",
+    "request_caps": {
+      "ncbi_metadata": 64,
+      "pubchem": 96,
+      "uniprot": 32
+    },
+    "schema": "curaloop.lrbc.execution.v1",
+    "stage_caps_seconds": {
+      "C": 171000
+    },
+    "status": "OWNER_CONDITIONALLY_AUTHORIZED_ACTIVE_C_METADATA_ONLY"
+  },
+  "after_contract": {
+    "approved_requests": {},
+    "b_cumulative_cap_seconds": 172800,
+    "b_deadline_utc": "2026-11-09T05:13:23Z",
+    "bc_cumulative_cap_seconds": 345600,
+    "bc_deadline_utc": "2026-11-10T11:04:20+00:00",
+    "c_deadline_utc": "2026-11-10T11:04:20+00:00",
+    "c_gate": "POTENTIAL_SUFFICIENT_REQUIRED",
+    "c_increment_cap_including_utility_seconds": 172800,
+    "c_start_utc": "2026-11-06T11:04:20+00:00",
+    "historical_cpu_seconds": 28800,
+    "historical_intake_decoded_bytes": 49687500,
+    "historical_requests": {
+      "ncbi_metadata": 0,
+      "pubchem": 44,
+      "uniprot": 27
+    },
+    "initial_job_reservation_seconds": 900,
+    "intake_decoded_byte_cap": 268435456,
+    "job_guard_cpu_seconds": 890,
+    "job_wall_seconds": 1800,
+    "local_hard_max_memory_bytes": 1073741824,
+    "local_initial_memory_bytes": 536870912,
+    "maximum_combined_workers": 4,
+    "maximum_local_workers": 1,
+    "new_activity_requests_in_r0": 0,
+    "old_pubchem_stop_preserved": true,
+    "paid_services_or_gpu": false,
+    "parent_sole_writer": true,
+    "per_response_byte_cap": 16777216,
+    "proposal_commit": "f1f31723014005e555e9e0ae1603671aeb0242da",
+    "r0_deadline_utc": "2026-11-10T11:04:20+00:00",
+    "r0_start_utc": "2026-11-06T11:04:20+00:00",
+    "r0_utility_reserve_seconds": 3600,
+    "remote_job_memory_bytes": 4294967296,
+    "remote_root": "/home/chaw/curaloop-rl/lrbc-c-20261106-v1",
+    "request_caps": {
+      "ncbi_metadata": 64,
+      "pubchem": 96,
+      "uniprot": 32
+    },
+    "schema": "curaloop.lrbc.execution.v1",
+    "stage_caps_seconds": {
+      "C": 169200
+    },
+    "status": "OWNER_CONDITIONALLY_AUTHORIZED_ACTIVE_C_METADATA_ONLY"
+  },
+  "previous_jobs_sha256": "851e8283ca291d776d147f52ac3915a9a1c92bb2cccdafecba68f43749dd6eee",
+  "backup_sha256": "fba32d3bc87e058089c79513e19a7709221328af25580f5e72f0f9ab057912d7",
+  "c_increment_cap_seconds": 172800,
+  "cumulative_conservative_seconds_before_ui_jobs": 36000
+}

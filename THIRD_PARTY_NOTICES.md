@@ -81,3 +81,18 @@ Original license/copyright texts and runtime assets are preserved.
 ## Version-2 supplied literature
 
 The public payload contains original review text, citations and PDF metadata, without the reading copies. The separate owner package includes the supplied HAL LIT-PCBA manuscript, ChemRxiv v3 and matching-title supplement, and BayBE publisher PDF unchanged. The HAL cover's authorization is not presented as a universal Creative Commons grant. The ChemRxiv cover and BayBE article state CC BY 4.0; retain attribution and check the specific onward-use context. No new upstream dataset license or commercial legal certification is inferred from a paper license.
+
+
+## Molecular Studio frontend continuation
+
+- GSAP3.15.1 is pinned in the frontend lockfile. Its distributed copyright and
+  license header is retained in the editable walkthrough asset. It is subject to
+  the GSAP Standard License (https://gsap.com/standard-license), not the repository
+  MIT license. The JavaScript bundle preserves its upstream notice.
+- Noto Sans Thai retains its OFL.txt beside the bundled font and exported views.
+- HyperFrames0.9.19 is task-owned authoring/render tooling, with its dependency
+  tree and notices preserved in the complete private remote return. The shipped
+  film is built from this project's actual screenshots. No competitor or GPO
+  artwork is shipped.
+- Oil UI and no-slop-ui informed design/review decisions. The reference sources
+  and the owner's approved direction are recorded in docs/05_product.

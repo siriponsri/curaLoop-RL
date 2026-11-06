@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/branding/curaloop-readme-header.png" alt="CuraLoop-RL" width="720">
-</p>
-
 <h1 align="center">Screening decisions you can audit.</h1>
 
 <p align="center">
@@ -10,7 +6,8 @@
 </p>
 
 <p align="center">
-  <a href="docs/manual/CuraLoop-RL-User-Manual-EN.pdf"><strong>English user manual (PDF)</strong></a> &nbsp;·&nbsp;
+  <a href="docs/manual/CuraLoop-RL-Molecular-Studio-Manual-EN-v2.pdf"><strong>English user manual (PDF)</strong></a> &nbsp;·&nbsp;
+  <a href="docs/media/molecular-studio-walkthrough.mp4">20-second walkthrough</a> &nbsp;·&nbsp;
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
   <a href="#architecture">Architecture</a> &nbsp;·&nbsp;
   <a href="START_HERE.md">Research programme</a> &nbsp;·&nbsp;
@@ -30,7 +27,7 @@ It includes a frozen MoleculeNet HIV replay dataset, clearly labelled synthetic
 fixtures, five selection policies and independent matched comparisons. The
 scientific engine runs in Python; the interface presents its actual state.
 
-![Actual CuraLoop-RL workbench with historical assay data](docs/evidence/readme-manual-v1/browser/manual/01-overview.png)
+![Actual CuraLoop-RL workbench with historical assay data](docs/evidence/ui-modern-bilingual-20261106-v1/browser-final-v7/01-overview-en.png)
 
 *Captured from the running English application. This is a retrospective research
 simulator; historical assay labels are distinct from simulated cost and timing.*
@@ -52,20 +49,34 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 | Workspace | What you can do |
 | --- | --- |
-| **Overview** | Understand the active scenario, data origin and live campaign counts. |
+| **Molecular Studio / Overview** | Inspect an eligible historical structure, page candidates, zoom and read the actual campaign record. |
 | **Compound explorer** | Search, filter, sort and inspect public descriptors and genuine historical molecular structures. |
 | **Scenario builder** | Configure dataset, seed, policy, budget, capacity, delay, jitter and missingness. |
 | **Simulation lab** | Select batches, advance time, finish, replay or reset; inspect outcomes, explanations and the budget ledger. |
 | **Benchmark arena** | Execute matched independent policies, inspect actual fallback usage and reopen saved comparisons. |
 | **Research evidence** | Inspect provenance and limitations; export, resume and recover saved campaigns or revisions. |
-| **Guided presentation** | Tell the project's story in 5-7 minutes using the same live campaign. |
+| **Guided presentation** | Explain the screening loop in 5-7 minutes using the same live campaign. |
+| **C Workspace** | Trace cached declared fields to their original sources, review readiness and export local files in EN/TH. |
 
 ## Research and R&D pilot programme
 
-Current work: [minimal/modern EN/TH redesign](docs/06_execution/UI_REDESIGN_EXECUTION_20261106.md)
-of the main screening application and C Workspace, using Oil UI, HyperFrames
-motion prototypes/video and GSAP/CSS runtime. This owner-directed refinement is
-active; the preserved previews below are the pre-redesign baseline.
+The **Molecular Studio frontend checkpoint is complete; research waits for owner
+resume.** Both the screening application and C Workspace now offer EN/TH,
+Graphite x Copper styling, responsive source inspection and reduced motion.
+
+[Checkpoint and limits](docs/06_execution/FRONTEND_CHECKPOINT_20261106.md) ·
+[English manual,12pages](docs/manual/CuraLoop-RL-Molecular-Studio-Manual-EN-v2.pdf) ·
+[Walkthrough](docs/media/molecular-studio-walkthrough.mp4) ·
+[Acceptance evidence](docs/evidence/ui-modern-bilingual-20261106-v1/README.md)
+
+![The source-linked C Workspace](docs/evidence/ui-modern-bilingual-20261106-v1/browser-final-v7/08-workspace-en.png)
+
+The additive [C Workspace HTML](docs/05_product/metadata-workspace-v2/workspace.html)
+opens from a local checkout or downloaded export. GitHub displays its source;
+download/open it to use the interactive view. Field selection follows the
+original source locator. Local export does not deliver to an external team tool.
+The [frozen v1 core guide](docs/05_product/METADATA_PORTFOLIO_GUIDE_V1.md) remains
+available; the new view preserves its report identity and original artifact bytes.
 
 The [LR-BC core checkpoint](docs/06_execution/LRBC_CORE_CLOSEOUT_20261106.md)
 delivers four typed metadata tools, cited readiness/gap reports, portable local
@@ -79,8 +90,8 @@ HTTP504; full molecular qualification and the pilot were NOT_RUN. The real-metad
 functional comparison tied12/12 versus12/12 using shared decision code, supporting
 the [narrow product continuation](docs/06_execution/B_POTENTIAL_DECISION_LRBC_20261106.md)
 without a superiority or live-agent claim. All B/C owned remote files returned
-and were reread before exact cleanup. Conservative cumulative charge before UI:
-9.5CPU-hours. Final outcomes and all source STOPs remain preserved.
+and were reread before exact cleanup. The pre-UI charge was9.5CPU-hours; the completed frontend continuation retains
+18.75CPU-hours cumulatively, including every failed attempt and utility reserve. Final outcomes and all source STOPs remain preserved.
 
 Earlier completed goal: [A3 population/observation qualification](docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md).
 Its original canary NO_GO, offline repair and

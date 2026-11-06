@@ -1,0 +1,16 @@
+{
+  "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service": {
+    "cgroup.controllers": "cpu memory pids",
+    "cgroup.subtree_control": "cpu memory pids",
+    "cpu.max": "max 100000",
+    "memory.max": "max",
+    "memory.swap.max": "max"
+  },
+  "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice": {
+    "cgroup.controllers": "cpu memory pids",
+    "cgroup.subtree_control": "memory pids",
+    "cpu.max": "max 100000",
+    "memory.max": "max",
+    "memory.swap.max": "max"
+  }
+}

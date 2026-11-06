@@ -1,3 +1,4 @@
+import { useI18n } from "../i18n";
 import { useState, type FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -41,6 +42,7 @@ export function validateScenario(s: ScenarioType): string | null {
   return null;
 }
 export default function ScenarioPage() {
+  const { t } = useI18n();
   const { run, datasets, policies, create, busy } = useApp();
   const nav = useNavigate();
   const [draft, setDraft] = useState<ScenarioType>(
@@ -55,7 +57,9 @@ export default function ScenarioPage() {
   async function submit(e: FormEvent) {
     e.preventDefault();
     const err = validateScenario(draft);
-    setError(err);
+    const match = err?.match(/^(\w+) must be an integer in \[([0-9]+), ([0-9]+)\]\.$/);
+    const fieldNames: Record<string, string> = { initial_count: "Initial labelled samples", batch_size: "Concurrent assay capacity", delay_steps: "Feedback delay · steps", assay_cost_units: "Cost per assay · units", delay_jitter: "Delay jitter", missing_percent: "Missing result rate · %" };
+    setError(match ? t("{field} must be an integer in [{min}, {max}].", { field: t(fieldNames[match[1]] ?? match[1]), min: match[2], max: match[3] }) : err);
     if (!err && (await create(draft, policy))) nav("/lab");
   }
   const fields: [keyof ScenarioType, string, number, number][] = [
@@ -84,8 +88,8 @@ export default function ScenarioPage() {
   return (
     <>
       <PageHeading
-        title={"Scenario builder"}
-        description={"Change the constraints. Keep the comparison fair."}
+        title={t("Scenario builder")}
+        description={t("Change the constraints. Keep the comparison fair.")}
       />
       <div className="scenario-layout">
         <form onSubmit={submit} noValidate className="surface scenario-form">
@@ -93,14 +97,14 @@ export default function ScenarioPage() {
             <div className="form-section-heading">
               <DatabaseMark />
               <div>
-                <h2>{"Research material"}</h2>
+                <h2>{t("Research material")}</h2>
                 <p>
-                  {"No download or API key required."}
+                  {t("No download or API key required.")}
                 </p>
               </div>
             </div>
             <label className="field-label" htmlFor="dataset">
-              {"Dataset"}
+              {t("Dataset")}
             </label>
             <select
               id="dataset"
@@ -117,8 +121,7 @@ export default function ScenarioPage() {
             >
               {datasets.map((d) => (
                 <option key={d.id} value={d.id}>
-                  {d.name} · {d.candidate_count.toLocaleString()} candidates
-                </option>
+                  {d.name} {t(" · ")}{d.candidate_count.toLocaleString()} {t("candidates")}</option>
               ))}
             </select>
             <div className="dataset-description">
@@ -128,8 +131,8 @@ export default function ScenarioPage() {
                 }
               >
                 {draft.dataset.startsWith("hiv")
-                  ? "HISTORICAL_PUBLIC_DATA"
-                  : "SYNTHETIC_ONLY"}
+                  ? t("HISTORICAL_PUBLIC_DATA")
+                  : t("SYNTHETIC_ONLY")}
               </Badge>
               <span>
                 {
@@ -143,16 +146,16 @@ export default function ScenarioPage() {
             <div className="form-section-heading">
               <SlidersHorizontal size={21} />
               <div>
-                <h2>{"Campaign conditions"}</h2>
+                <h2>{t("Campaign conditions")}</h2>
                 <p>
-                  {"Costs, capacity and time are scenario assumptions."}
+                  {t("Costs, capacity and time are scenario assumptions.")}
                 </p>
               </div>
             </div>
             <div className="form-grid">
               {fields.map(([key, en, min, max]) => (
                 <div className="field" key={key}>
-                  <label htmlFor={key}>{(en)}</label>
+                  <label htmlFor={key}>{t(en)}</label>
                   <input
                     id={key}
                     type="number"
@@ -173,7 +176,7 @@ export default function ScenarioPage() {
           </div>
           <div className="form-section">
             <label className="field-label" htmlFor="policy">
-              {"Selection policy"}
+              {t("Selection policy")}
             </label>
             <select
               id="policy"
@@ -182,28 +185,28 @@ export default function ScenarioPage() {
             >
               {policies.map((p) => (
                 <option key={p.id} value={p.id}>
-                  {policyNames[p.id]} · {p.status}
+                  {policyNames[p.id]} {t(" · ")}{p.status}
                 </option>
               ))}
             </select>
             {policy === "q_learning" || policy === "contextual_bandit" ? (
               <p className="field-note amber-text">
-                {"Trained on synthetic tasks. Unseen states use a labelled Greedy fallback; no validated pharmaceutical transfer."}
+                {t("Trained on synthetic tasks. Unseen states use a labelled Greedy fallback; no validated pharmaceutical transfer.")}
               </p>
             ) : (
               <p className="field-note">
-                {"Predictive policies use only previously revealed labels. One-class data triggers a labelled random fallback."}
+                {t("Predictive policies use only previously revealed labels. One-class data triggers a labelled random fallback.")}
               </p>
             )}
           </div>
           <details className="advanced-settings">
             <summary>
-              {"Advanced synthetic assumptions"}
+              {t("Advanced synthetic assumptions")}
             </summary>
             <div className="form-grid">
               <div className="field">
                 <label htmlFor="jitter">
-                  {"Additional delay jitter · steps"}
+                  {t("Additional delay jitter · steps")}
                 </label>
                 <input
                   id="jitter"
@@ -218,7 +221,7 @@ export default function ScenarioPage() {
               </div>
               <div className="field">
                 <label htmlFor="missing">
-                  {"Missing outcomes · %"}
+                  {t("Missing outcomes · %")}
                 </label>
                 <input
                   id="missing"
@@ -233,12 +236,12 @@ export default function ScenarioPage() {
               </div>
             </div>
             <p className="field-note">
-              {"Missing results consume cost. They are neither active hits nor inactive training labels."}
+              {t("Missing results consume cost. They are neither active hits nor inactive training labels.")}
             </p>
           </details>
           {error && (
             <div role="alert" className="error-message">
-              {error}
+              {t(error)}
             </div>
           )}
           <div className="form-footer">
@@ -252,30 +255,30 @@ export default function ScenarioPage() {
               }}
             >
               <RotateCcw size={15} />
-              {"Restore defaults"}
+              {t("Restore defaults")}
             </Button>
             <Button type="submit" disabled={Boolean(busy)}>
               {busy
-                ? "Creating…"
-                : "Create campaign"}
+                ? t("Creating…")
+                : t("Create campaign")}
               <ArrowRight size={16} />
             </Button>
           </div>
         </form>
         <aside className="scenario-review">
           <Badge className="badge-teal">
-            {"Before you begin"}
+            {t("Before you begin")}
           </Badge>
           <h2>
-            {"One scenario.\nA common starting point."}
+            {t("One scenario.\nA common starting point.")}
           </h2>
           <dl className="scenario-numbers">
             <div>
-              <dt>{"Available library"}</dt>
+              <dt>{t("Available library")}</dt>
               <dd>{draft.candidate_count.toLocaleString()}</dd>
             </div>
             <div>
-              <dt>{"Maximum new assays"}</dt>
+              <dt>{t("Maximum new assays")}</dt>
               <dd>
                 {Number.isFinite(draft.budget_units)
                   ? Math.min(
@@ -286,22 +289,22 @@ export default function ScenarioPage() {
               </dd>
             </div>
             <div>
-              <dt>{"Results become visible after"}</dt>
+              <dt>{t("Results become visible after")}</dt>
               <dd>
                 {draft.delay_steps}
                 <small>
                   {" "}
-                  steps{draft.delay_jitter ? ` + 0–${draft.delay_jitter}` : ""}
+                  {t("steps")}{draft.delay_jitter ? ` + 0–${draft.delay_jitter}` : ""}
                 </small>
               </dd>
             </div>
           </dl>
           <ul className="check-list">
             {[
-              "The same seed labels for every policy.",
-              "Existing seed labels are sunk cost and excluded from new hits.",
-              "Pending outcomes never train the predictor.",
-              "A new scenario creates an independent run.",
+              t("The same seed labels for every policy."),
+              t("Existing seed labels are sunk cost and excluded from new hits."),
+              t("Pending outcomes never train the predictor."),
+              t("A new scenario creates an independent run."),
             ].map((x) => (
               <li key={x}>
                 <CheckCircle2 size={17} />
@@ -310,8 +313,7 @@ export default function ScenarioPage() {
             ))}
           </ul>
           <p className="muted small">
-            The current run is saved locally after each accepted action. Keep a single-run JSON as a portable recovery copy.
-          </p>
+            {t("The current run is saved locally after each accepted action. Keep a single-run JSON as a portable recovery copy.")}</p>
         </aside>
       </div>
     </>

@@ -1,0 +1,22 @@
+
+> curaloop-research-web@0.3.0 test
+> vitest run --maxWorkers=1
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.12 [39m[90m/home/chaw/curaloop-rl/lrbc-ui-20261106-v1/source-v8/frontend[39m
+
+ [32m✓[39m src/app.test.tsx [2m([22m[2m18 tests[22m[2m)[22m[33m 6667[2mms[22m[39m
+     [33m[2m✓[22m[39m loads the real-response fixture and navigates through the actual route shell [33m 1539[2mms[22m[39m
+     [33m[2m✓[22m[39m restores Thai without changing a pending campaign or its API values [33m 560[2mms[22m[39m
+     [33m[2m✓[22m[39m sends canonical compound filters from a Thai interface [33m 550[2mms[22m[39m
+     [33m[2m✓[22m[39m preserves provenance, weak evaluation and controller fallback disclosures [33m 561[2mms[22m[39m
+     [33m[2m✓[22m[39m has a functional guided-presentation chapter control [33m 473[2mms[22m[39m
+     [33m[2m✓[22m[39m blocks old-campaign actions while a saved revision is recovering across navigation [33m 521[2mms[22m[39m
+     [33m[2m✓[22m[39m recovers an interrupted comparison without automatically running it again [33m 380[2mms[22m[39m
+ [32m✓[39m src/api.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+[2m      Tests [22m [1m[32m21 passed[39m[22m[90m (21)[39m
+[2m   Start at [22m 14:07:15
+[2m   Duration [22m 9.11s[2m (transform 711ms, setup 256ms, import 671ms, tests 6.68s, environment 1.15s)[22m
+

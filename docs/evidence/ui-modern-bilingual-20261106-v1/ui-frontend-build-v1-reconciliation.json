@@ -1,0 +1,14 @@
+{
+  "schema": "curaloop.ui.reconciliation.v1",
+  "attempt": "ui-frontend-build-v1",
+  "token": "e7be24ce-b32d-46a9-87bc-0e99f7037c2b",
+  "status": "FAILED_RECONCILED",
+  "reason": "Original collector could not corroborate CPU counters after systemd removed the empty cgroup. No original acceptance promoted to PASS.",
+  "aggregate_cpu_seconds": 25.533938,
+  "retained_cpu_seconds": 900,
+  "fresh_absence": {
+    "load_state": "not-found",
+    "cgroup_absent": true
+  },
+  "original_proof_sha256": "c28dad3736eb2a049322741a2c0bb8f9561114302c88dbbd539fd2f290cad8b7"
+}

@@ -1,3 +1,4 @@
+import { useI18n } from "../i18n";
 import { useEffect, useState } from "react";
 import {
   ChevronLeft,
@@ -16,6 +17,7 @@ import { EmptyState, PageHeading, SourceBadge } from "../components/shared";
 import type { Candidate, CandidatePage } from "../types";
 
 export default function Compounds() {
+  const { t } = useI18n();
   const { run, meta } = useApp();
   const [search, setSearch] = useState(""),
     [status, setStatus] = useState("all"),
@@ -73,8 +75,8 @@ export default function Compounds() {
   return (
     <>
       <PageHeading
-        title={"Compound explorer"}
-        description={"Public structures and descriptors. Assay labels stay private until revealed."}
+        title={t("Compound explorer")}
+        description={t("Public structures and descriptors. Assay labels stay private until revealed.")}
       >
         <SourceBadge />
       </PageHeading>
@@ -82,19 +84,19 @@ export default function Compounds() {
         <div className="search-field">
           <Search size={18} />
           <input
-            aria-label="Search compounds"
+            aria-label={t("Search compounds")}
             value={search}
             onChange={(e) => {
               setSearch(e.target.value);
               setPage(1);
             }}
-            placeholder={"Search a compound ID…"}
+            placeholder={t("Search a compound ID…")}
           />
         </div>
         <div className="filter-controls">
           <SlidersHorizontal size={16} />
           <select
-            aria-label="Compound status"
+            aria-label={t("Compound status")}
             value={status}
             onChange={(e) => {
               setStatus(e.target.value);
@@ -104,29 +106,29 @@ export default function Compounds() {
             {["all", "eligible", "seed", "pending", "delivered", "missing"].map(
               (s) => (
                 <option key={s} value={s}>
-                  {s === "all" ? "All statuses" : s}
+                  {s === "all" ? t("All statuses") : t(s)}
                 </option>
               ),
             )}
           </select>
           <select
-            aria-label="Sort compounds"
+            aria-label={t("Sort compounds")}
             value={sort}
             onChange={(e) => { setSort(e.target.value); setPage(1); }}
           >
-            <option value="id">Compound ID</option>
-            <option value="feature_count">Nonzero features ↓</option>
+            <option value="id">{t("Compound ID")}</option>
+            <option value="feature_count">{t("Nonzero features ↓")}</option>
           </select>
           <div className="view-toggle">
             <button
-              aria-label="Grid view"
+              aria-label={t("Grid view")}
               aria-pressed={!list}
               onClick={() => setList(false)}
             >
               <Grid2X2 size={16} />
             </button>
             <button
-              aria-label="List view"
+              aria-label={t("List view")}
               aria-pressed={list}
               onClick={() => setList(true)}
             >
@@ -138,29 +140,28 @@ export default function Compounds() {
       <div className="results-heading">
         <p>
           <strong>{result?.total ?? "—"}</strong>{" "}
-          {"matching compounds"}{" "}
-          <span>· {run.report.manifest.dataset.assay_id}</span>
+          {t("matching compounds")}{" "}
+          <span>{t("· ")}{run.report.manifest.dataset.assay_id}</span>
         </p>
         <span>
-          {"No hidden label is sent to this browser"}
+          {t("No hidden label is sent to this browser")}
         </span>
       </div>
       {error ? (
         <div className="error-message" role="alert">
           {error}
           <Button size="sm" onClick={() => setRetry((n) => n + 1)}>
-            Retry
-          </Button>
+            {t("Retry")}</Button>
         </div>
       ) : loading ? (
         <div className="loading-panel" role="status">
           <div className="spinner" />
-          {"Loading public candidates…"}
+          {t("Loading public candidates…")}
         </div>
       ) : !result?.items.length ? (
         <EmptyState
-          title={"No compounds found"}
-          description={"Try another compound ID or remove the status filter."}
+          title={t("No compounds found")}
+          description={t("Try another compound ID or remove the status filter.")}
           action={
             <Button
               variant="outline"
@@ -170,8 +171,7 @@ export default function Compounds() {
                 setPage(1);
               }}
             >
-              Clear filters
-            </Button>
+              {t("Clear filters")}</Button>
           }
         />
       ) : (
@@ -181,7 +181,6 @@ export default function Compounds() {
               className="compound-item"
               key={c.compound_id}
               onClick={() => setSelected(c)}
-              aria-label={`Inspect ${c.compound_id}`}
             >
               <div className="compound-item-top">
                 <strong className="small-mono">{c.compound_id}</strong>
@@ -194,31 +193,31 @@ export default function Compounds() {
                         : "badge-teal"
                   }
                 >
-                  {c.status}
+                  {t(c.status)}
                 </Badge>
               </div>
               {c.canonical_smiles && meta?.molecule_rendering ? (
                 <img
                   src={molecule(c)}
-                  alt={`RDKit 2D molecular structure ${c.compound_id}`}
+                  alt={t("RDKit 2D molecular structure {id}", { id: c.compound_id })}
                   loading="lazy"
                 />
               ) : (
                 <div className="numerical-candidate">
                   <strong>{c.feature_count}</strong>
                   <span>
-                    {"numerical descriptors"}
+                    {t("numerical descriptors")}
                     <br />
-                    {c.canonical_smiles ? "Structure renderer unavailable; public SMILES remains in details" : "No molecular structure in this synthetic fixture"}
+                    {c.canonical_smiles ? t("Structure renderer unavailable; public SMILES remains in details") : t("No molecular structure in this synthetic fixture")}
                   </span>
                 </div>
               )}
               <div className="compound-item-bottom">
                 <div>
-                  <span>{outcome(c)}</span>
+                  <span>{t(outcome(c))}</span>
                   <small>
-                    {c.feature_nonzero} / {c.feature_count}{" "}
-                    {"nonzero features"}
+                    {c.feature_nonzero} {t(" / ")}{c.feature_count}{" "}
+                    {t("nonzero features")}
                   </small>
                 </div>
                 <ChevronRight size={17} />
@@ -229,28 +228,26 @@ export default function Compounds() {
       )}
       <div className="pagination">
         <span>
-          {"Page"} {page} /{" "}
+          {t("Page")} {page} {t(" /")}{" "}
           {Math.max(1, Math.ceil((result?.total ?? 0) / 12))}
         </span>
         <div className="button-row">
           <Button
-            aria-label="Previous compound page"
             variant="outline"
             size="sm"
             disabled={page === 1 || loading}
             onClick={() => setPage((p) => p - 1)}
           >
             <ChevronLeft size={16} />
-            {"Previous"}
+            {t("Previous")}
           </Button>
           <Button
-            aria-label="Next compound page"
             variant="outline"
             size="sm"
             disabled={page * 12 >= (result?.total ?? 0) || loading}
             onClick={() => setPage((p) => p + 1)}
           >
-            {"Next"}
+            {t("Next")}
             <ChevronRight size={16} />
           </Button>
         </div>
@@ -260,8 +257,8 @@ export default function Compounds() {
         onOpenChange={(open) => {
           if (!open) setSelected(null);
         }}
-        title={selected?.compound_id ?? "Compound details"}
-        description={"Public structure and observed assay information only."}
+        title={selected?.compound_id ?? t("Compound details")}
+        description={t("Public structure and observed assay information only.")}
       >
         {selected && (
           <>
@@ -272,36 +269,35 @@ export default function Compounds() {
                 alt={`Structure of ${selected.compound_id}`}
               />
             ) : (
-              <p>No molecular rendering is available for this candidate.</p>
+              <p>{t("No molecular rendering is available for this candidate.")}</p>
             )}
             <div className="detail-outcome">
-              <Badge>{selected.status}</Badge>
-              <strong>{outcome(selected)}</strong>
+              <Badge>{t(selected.status)}</Badge>
+              <strong>{t(outcome(selected))}</strong>
             </div>
             <dl className="details-list">
               <div>
-                <dt>Canonical SMILES</dt>
+                <dt>{t("Canonical SMILES")}</dt>
                 <dd className="small-mono break-text">
                   {selected.canonical_smiles ??
-                    "Not applicable · synthetic numerical fixture"}
+                    t("Not applicable · synthetic numerical fixture")}
                 </dd>
               </div>
               <div>
-                <dt>Murcko scaffold</dt>
+                <dt>{t("Murcko scaffold")}</dt>
                 <dd className="small-mono break-text">
                   {selected.scaffold_id || "Acyclic / not applicable"}
                 </dd>
               </div>
               <div>
-                <dt>Public descriptors</dt>
+                <dt>{t("Public descriptors")}</dt>
                 <dd>
-                  {selected.feature_count} dimensions ·{" "}
-                  {selected.feature_nonzero} nonzero
-                </dd>
+                  {selected.feature_count} {t(" dimensions ·")}{" "}
+                  {selected.feature_nonzero} {t("nonzero")}</dd>
               </div>
               {selected.explanation && (
                 <div>
-                  <dt>Actual selection rationale</dt>
+                  <dt>{t("Actual selection rationale")}</dt>
                   <dd>{selected.explanation}</dd>
                 </div>
               )}

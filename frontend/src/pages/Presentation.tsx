@@ -1,3 +1,4 @@
+import { useI18n } from "../i18n";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -18,6 +19,7 @@ import {
 } from "../components/shared";
 
 export default function GuidedPresentation() {
+  const { t } = useI18n();
   const { run, act, busy } = useApp();
   const [step, setStep] = useState(0);
   if (!run) return null;
@@ -53,8 +55,8 @@ export default function GuidedPresentation() {
   return (
     <>
       <PageHeading
-        title={"Guided presentation"}
-        description={"A 5–7 minute walkthrough using the live campaign—no scripted success data."}
+        title={t("Guided presentation")}
+        description={t("A 5–7 minute walkthrough using the live campaign—no scripted success data.")}
       />
       <div className="presentation-origin">
         <SourceBadge /> <span>{run.report.manifest.dataset.name}</span>
@@ -69,7 +71,7 @@ export default function GuidedPresentation() {
             >
               <span>{i + 1}</span>
               <div>
-                <strong>{s.title}</strong>
+                <strong>{t(s.title)}</strong>
                 <small>{s.time}</small>
               </div>
             </button>
@@ -80,32 +82,30 @@ export default function GuidedPresentation() {
             <Presentation size={14} />
             {slides[step].time}
           </Badge>
-          <h2>{slides[step].title}</h2>
-          <p className="presentation-copy">{slides[step].text}</p>
+          <h2>{t(slides[step].title)}</h2>
+          <p className="presentation-copy">{t(slides[step].text)}</p>
           <Workflow run={run} compact />
           <div className="presentation-actions">
             <Button
-              aria-label="Presentation select batch"
               onClick={() => void act("select")}
               disabled={Boolean(busy) || !run.can_select}
             >
               <Play size={15} />
-              {"Select batch"}
+              {t("Select batch")}
             </Button>
             <Button
-              aria-label="Presentation advance time"
               variant="outline"
               onClick={() => void act("advance")}
               disabled={Boolean(busy) || !run.pending.length}
             >
               <Clock3 size={15} />
-              {"Advance +1"}
+              {t("Advance +1")}
             </Button>
             <Button asChild variant="ghost">
               <Link to={step === 4 ? "/benchmarks" : "/lab"}>
                 {step === 4
-                  ? "Open benchmark arena"
-                  : "Inspect full lab"}
+                  ? t("Open benchmark arena")
+                  : t("Inspect full lab")}
                 <ArrowRight size={15} />
               </Link>
             </Button>
@@ -117,17 +117,17 @@ export default function GuidedPresentation() {
               disabled={!step}
             >
               <ArrowLeft size={15} />
-              {"Back"}
+              {t("Back")}
             </Button>
             <span>
-              {step + 1} / {slides.length}
+              {step + 1} {t(" / ")}{slides.length}
             </span>
             <Button
               variant="outline"
               onClick={() => setStep((s) => s + 1)}
               disabled={step === slides.length - 1}
             >
-              {"Next chapter"}
+              {t("Next chapter")}
               <ArrowRight size={15} />
             </Button>
           </div>

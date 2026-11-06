@@ -1,5 +1,6 @@
 # Preserve upstream license text and machine-generated release output verbatim.
 frontend/dist/** -text -diff whitespace=-blank-at-eol,-blank-at-eof
+frontend/package-lock.json -text whitespace=cr-at-eol
 frontend/*LICENSE*.txt whitespace=-blank-at-eol,-blank-at-eof
 frontend/public/fonts/OFL.txt whitespace=-blank-at-eol,-blank-at-eof
 docs/evidence/web-v2/licenses/* whitespace=-blank-at-eol,-blank-at-eof
@@ -136,3 +137,12 @@ docs/evidence/lrbc-20261106-v1/** whitespace=cr-at-eol
 docs/evidence/lrbc-c-20261106-v1/** whitespace=cr-at-eol
 docs/evidence/ui-modern-bilingual-20261106-v1/** whitespace=cr-at-eol
 docs/05_product/metadata-portfolio-demo/** -text whitespace=cr-at-eol
+docs/05_product/metadata-workspace-v2/** -text whitespace=cr-at-eol
+src/curaloop_rd/resources/** -text whitespace=cr-at-eol
+research/ui_studio_v1/** -text whitespace=cr-at-eol
+docs/media/molecular-studio/** -text whitespace=cr-at-eol
+# Preserve upstream license/vendor bytes and exact machine test output.
+docs/05_product/metadata-workspace-v2/OFL.txt whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+docs/media/molecular-studio/assets/OFL.txt whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+docs/media/molecular-studio/assets/gsap.min.js whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+docs/evidence/ui-modern-bilingual-20261106-v1/build-source-v8/command-2.txt whitespace=cr-at-eol,-blank-at-eof

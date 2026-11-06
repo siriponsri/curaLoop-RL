@@ -1,0 +1,47 @@
+[
+  {
+    "check": "lint",
+    "argv": [
+      "lint",
+      "--json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "check": "validate",
+    "argv": [
+      "validate",
+      "--json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "check": "inspect",
+    "argv": [
+      "inspect",
+      "--json",
+      "--at",
+      "2.5,5.3,7.5,10.3,12.5,15.3,17.5"
+    ],
+    "exit_code": 0
+  },
+  {
+    "check": "render",
+    "argv": [
+      "render",
+      "--output",
+      "/home/chaw/curaloop-rl/lrbc-ui-20261106-v1/motion-walkthrough-v4/molecular-studio.mp4",
+      "--no-browser-gpu",
+      "--fps",
+      "24",
+      "--quality",
+      "standard",
+      "--workers",
+      "1",
+      "--low-memory-mode",
+      "--experimental-fast-capture=false",
+      "--no-page-side-compositing"
+    ],
+    "exit_code": 0
+  }
+]

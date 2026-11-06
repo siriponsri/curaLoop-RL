@@ -1,5 +1,33 @@
 # Agent instructions: CuraLoop-RL
 
+## Owner pause after Frontend Checkpoint, 6 November 2026
+
+Finish the already approved frontend checkpoint, complete return/reread/scoped
+remote cleanup, English documentation and normal main commit/push. Then STOP and
+wait for explicit owner resume before any further research work. This supersedes
+automatic continuation in the historical LR-BC instructions below. Do not reset
+clocks, reservations, source STOPs or frozen outcomes. Resume starts with the
+checkpoint and HANDOFF.md; elapsed time does not renew expired research authority.
+
+## Owner-approved Molecular Studio and palette, 6 November 2026
+
+The owner rejected the first flat redesign, selected direction A Molecular Studio
+from three rendered composition studies, rejected green/cyan/teal, and approved
+the new design for sustained implementation. Read
+docs/05_product/MOLECULAR_STUDIO_APPROVED_DESIGN_20261106.md. Graphite x Copper
+supersedes earlier teal brand-color preservation for PRODUCT UI. Keep the logo
+geometry/source asset and scientific atom colors; use scoped monochrome logo
+presentation. Both main app and C Workspace remain EN/TH. Finish actual connected
+behavior, browser/a11y/visual/UX checks, HyperFrames walkthrough, refreshed English
+PDF/manual and normal main delivery. Do not claim static studies are implemented.
+
+The owner approved aggregate one-core CPU quota per UI tree with starting leased
+affinity when hard cpuset delegation was unavailable. Read
+docs/06_execution/UI_AGGREGATE_CPU_AUTHORIZATION_20261106.md. Kernel quota/memory
+and absolute runtime checks remain required. Preserve all previous reservations,
+failed canaries/build/capture attempts and reconciliations. No privileges, host
+configuration or scientific source STOPs were changed. Parent remains sole writer.
+
 ## Active bilingual UI refinement, 6 November 2026
 
 The owner's latest no-slop-ui direction rejects the opened competitors as visual

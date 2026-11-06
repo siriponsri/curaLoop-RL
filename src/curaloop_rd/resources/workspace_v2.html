@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CuraLoop-RL · Evidence workspace</title>
+  <link rel="icon" href="data:,">
+  <style>__CSS__</style>
+</head>
+<body>
+  <a class="skip" href="#content">__SKIP__</a>
+  <header class="topbar">
+    <a class="brand" href="#content"><img src="__LOGO_DATA__" alt="CuraLoop-RL"></a>
+    <button id="mobile-nav-toggle" class="mobile-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="workspace-nav"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    <div class="topbar-context">__TITLE__</div>
+    <div class="language" role="group" aria-label="Language">
+      <button type="button" data-language="en" lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-language="th" lang="th" aria-pressed="false">ไทย</button>
+    </div>
+  </header>
+  <div class="layout">
+    <nav id="workspace-nav" aria-label="Workspace" data-open="false">
+      <a class="active" href="#evidence"><span aria-hidden="true">⌬</span>__EVIDENCE__</a>
+      <a href="#plan"><span aria-hidden="true">☷</span>__PLAN__</a>
+      <a href="#exports"><span aria-hidden="true">↗</span>__EXPORT__</a>
+      <p>__LOCAL__<br>__NO_DELIVERY__</p>
+    </nav>
+    <main id="content">
+      <div class="heading">
+        <div><h1>__TITLE__</h1><p>__SUBTITLE__</p></div>
+        <a class="primary" href="readiness-plan.json" download>__DOWNLOAD__ <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="record-meta"><span>__REPORT__ <code>__HASH_SHORT__</code></span><span>__REVISION__ __REV__</span><span>__METADATA__</span></div>
+      <section class="studio" id="evidence">
+        <div class="object">
+          <div class="object-heading"><strong>__FIELDS__</strong><span>__CACHED__</span></div>
+          <figure class="endpoint-viewport">
+            <div id="selected-field-name">__INITIAL_LABEL__</div>
+            <div id="selected-field-value" data-type="__INITIAL_TYPE__" data-field="__INITIAL_KEY__">__INITIAL_VALUE__</div>
+            <p id="selected-field-description">__INITIAL_HINT__</p>
+            <div class="evidence-trail"><code id="trail-key">__INITIAL_KEY__</code><span class="trail-line" aria-hidden="true"></span><code id="trail-source">__INITIAL_SOURCE__</code></div>
+            <figcaption>__METADATA_VALUE__</figcaption>
+          </figure>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Declared fields">
+            <table><thead><tr><th>__FIELD__</th><th>__VALUE__</th><th>__STATE__</th><th>__LOCATOR__</th></tr></thead><tbody>__ROWS__</tbody></table>
+          </div>
+          <p class="table-note">__SELECT_FIELD__</p>
+        </div>
+        <aside class="source-sidebar">
+          <h2>__SOURCE__</h2>
+          <div class="selected-locator"><span>__SELECTED_LOCATOR__</span><code id="selected-locator">__INITIAL_LOCATOR__</code></div>
+          __SOURCES__
+          <div class="notice"><strong>__NOT_RELEASED__</strong><p>__MOLECULAR__ · __REPLAY__ __UNMET__</p></div>
+        </aside>
+      </section>
+      <details class="source-question"><summary>__QUESTION__</summary><p lang="en">__QUESTION_TEXT__</p></details>
+      <section id="plan" class="plan-section">
+        <div><h2>__PLAN__</h2><p>__REVIEW__</p></div>
+        <ol>__ACTIONS__</ol>
+        <details><summary>__LIMITS__</summary><ul>__LIMIT_ROWS__</ul></details>
+      </section>
+      <section id="exports">
+        <h2>__FILES__</h2>
+        <div class="export-list"><a href="report.json" download>__JSON__ ↓</a><a href="report.md" download>__MD__ ↓</a><a href="preview.json" download>__PREVIEW__ ↓</a><a href="handoff-manifest.json" download>__MANIFEST__ ↓</a></div>
+        <p class="digest">__HASH__</p>
+      </section>
+      <footer>__ORIGINAL__</footer>
+    </main>
+  </div>
+  <script id="workspace-data" type="application/json">__CLAIMS_JSON__</script>
+  <script id="workspace-translations" type="application/json">__TRANSLATIONS__</script>
+  <script>__SCRIPT__</script>
+</body>
+</html>

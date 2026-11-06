@@ -1,3 +1,4 @@
+import { useI18n } from "../i18n";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -37,6 +38,7 @@ export function PageHeading({
   );
 }
 export function SourceBadge() {
+  const { t } = useI18n();
   const { run } = useApp();
   return (
     <Badge
@@ -48,48 +50,49 @@ export function SourceBadge() {
     >
       <span className="status-dot" />
       {run?.report.manifest.data_origin === "HISTORICAL_PUBLIC_DATA"
-        ? "Historical assay data"
-        : "Synthetic fixture"}
+        ? t("Historical assay data")
+        : t("Synthetic fixture")}
     </Badge>
   );
 }
 export function KpiStrip({ run }: { run: RunView }) {
+  const { t } = useI18n();
 
   const m = run.report.metrics;
   return (
     <div className="kpi-strip">
       <div>
-        <span>{"Confirmed new hits"}</span>
+        <span>{t("Confirmed new hits")}</span>
         <strong>{number(m.confirmed_hits)}</strong>
         <small>
-          {"Delivered only · excludes seed labels"}
+          {t("Delivered only · excludes seed labels")}
         </small>
       </div>
       <div>
-        <span>{"Assays delivered"}</span>
+        <span>{t("Assays delivered")}</span>
         <strong>
           {number(m.delivered_assays)}
-          <small>/ {run.report.requests.length}</small>
+          <small>{t("/ ")}{run.report.requests.length}</small>
         </strong>
         <small>
-          {"Missing outcomes counted separately"}
+          {t("Missing outcomes counted separately")}
         </small>
       </div>
       <div>
-        <span>{"Pending feedback"}</span>
+        <span>{t("Pending feedback")}</span>
         <strong>{number(m.pending_assays)}</strong>
         <small>
-          {"No label visible until due"}
+          {t("No label visible until due")}
         </small>
       </div>
       <div>
-        <span>{"Budget available"}</span>
+        <span>{t("Budget available")}</span>
         <strong>
           {number(m.remaining_units)}
-          <small> units</small>
+          <small> {t(" units")}</small>
         </strong>
         <small>
-          {"Simulated cost · never THB or USD"}
+          {t("Simulated cost · never THB or USD")}
         </small>
       </div>
     </div>
@@ -102,6 +105,7 @@ export function Workflow({
   run: RunView;
   compact?: boolean;
 }) {
+  const { t } = useI18n();
 
   const stages = [
     {
@@ -132,7 +136,7 @@ export function Workflow({
   return (
     <div
       className={"workflow " + (compact ? "workflow-compact" : "")}
-      aria-label="Live screening workflow"
+      aria-label={t("Live screening workflow")}
     >
       {stages.map((stage, i) => (
         <div className="workflow-segment" key={stage.label}>
@@ -145,7 +149,7 @@ export function Workflow({
           >
             <stage.icon size={compact ? 19 : 23} />
             <strong>{number(stage.count)}</strong>
-            <span>{stage.label}</span>
+            <span>{t(stage.label)}</span>
             {i === 3 && run.done && <Check size={15} className="flow-check" />}
           </Link>
           {i < stages.length - 1 && (
@@ -157,19 +161,18 @@ export function Workflow({
   );
 }
 export function ExportButtons({ id }: { id: string }) {
+  const { t } = useI18n();
   return (
     <div className="button-row">
       <Button asChild variant="outline" size="sm">
         <a href={runExport(id, "json")} download>
           <Download size={15} />
-          JSON
-        </a>
+          {t("JSON")}</a>
       </Button>
       <Button asChild variant="outline" size="sm">
         <a href={runExport(id, "csv")} download>
           <Download size={15} />
-          CSV
-        </a>
+          {t("CSV")}</a>
       </Button>
     </div>
   );

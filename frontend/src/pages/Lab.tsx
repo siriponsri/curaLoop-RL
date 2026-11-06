@@ -1,3 +1,4 @@
+import { useI18n } from "../i18n";
 import { useState } from "react";
 import {
   CheckCircle2,
@@ -24,6 +25,7 @@ import { number } from "../lib";
 import { policyNames } from "../types";
 
 export default function Lab() {
+  const { t } = useI18n();
   const { run, act, busy } = useApp();
   const [filter, setFilter] = useState("all"),
     [search, setSearch] = useState("");
@@ -43,8 +45,8 @@ export default function Lab() {
   return (
     <>
       <PageHeading
-        title={"Simulation lab"}
-        description={"Run the actual engine. Follow every decision and its consequences."}
+        title={t("Simulation lab")}
+        description={t("Review requests, advance time, and inspect delivered results.")}
       >
         <ExportButtons id={run.session_id} />
       </PageHeading>
@@ -52,81 +54,119 @@ export default function Lab() {
         <div>
           <SourceBadge />
           <Badge className="badge-amber">
-            Retrospective Screening Simulator
-          </Badge>
+            {t("Retrospective Screening Simulator")}</Badge>
           <span>
-            {"Not a Validated Digital Twin"}
+            {t("Not a Validated Digital Twin")}
           </span>
         </div>
         <span className="small-mono">
-          {policyNames[r.manifest.policy_id]} · seed {r.manifest.seed} · step{" "}
+          {policyNames[r.manifest.policy_id]} {t(" · seed ")}{r.manifest.seed} {t(" · step")}{" "}
           {m.step}
         </span>
       </div>
       <div className="lab-toolbar">
         <div className="button-row">
           <Button
-            aria-label="Select batch"
+            variant={run.can_select ? "default" : "outline"}
             onClick={() => void act("select")}
             disabled={Boolean(busy) || !run.can_select}
           >
             <Play size={16} />
             {busy === "select"
-              ? "Selecting…"
-              : "Select next batch"}
+              ? t("Selecting…")
+              : t("Select next batch")}
           </Button>
           <Button
-            aria-label="Advance time"
-            variant="outline"
+            variant={!run.can_select && run.pending.length > 0 ? "default" : "outline"}
             onClick={() => void act("advance")}
             disabled={Boolean(busy) || run.pending.length === 0}
           >
             <Clock3 size={16} />
-            {"Advance +1 step"}
+            {t("Advance +1 step")}
           </Button>
           <Button
-            aria-label="Finish campaign"
             variant="outline"
             onClick={() => void act("finish")}
             disabled={Boolean(busy) || run.done}
           >
             <FastForward size={16} />
             {busy === "finish"
-              ? "Running…"
-              : "Complete run"}
+              ? t("Running…")
+              : t("Complete run")}
           </Button>
         </div>
         <div className="button-row">
           <Button
-            aria-label="Reconcile replay"
             variant="ghost"
             size="sm"
             onClick={() => void act("replay")}
             disabled={Boolean(busy)}
           >
             <RefreshCcw size={15} />
-            {"Verify replay"}
+            {t("Verify replay")}
           </Button>
           <Button
-            aria-label="Reset campaign"
             variant="ghost"
             size="sm"
             onClick={() => void act("reset")}
             disabled={Boolean(busy)}
           >
             <RotateCcw size={15} />
-            {"Reset"}
+            {t("Reset")}
           </Button>
         </div>
       </div>
       <KpiStrip run={run} />
       <div className="lab-board">
+        <aside className="surface pending-surface">
+          <div className="section-heading">
+            <h2>{t("Feedback queue")}</h2>
+            <Badge>{run.pending.length}</Badge>
+          </div>
+          {run.pending.length ? (
+            run.pending.map((p) => (
+              <div className="queue-item" key={p.request_id}>
+                <div>
+                  <span className="small-mono">{p.compound_id}</span>
+                  <Badge className="badge-amber">{t("pending")}</Badge>
+                </div>
+                <p>
+                  <Clock3 size={13} />
+                  {t("Due at step")} {p.due_at_step}{" "}
+                  <span>
+                    {t("·")}{p.due_at_step - m.step} {t("remaining")}
+                  </span>
+                </p>
+              </div>
+            ))
+          ) : (
+            <EmptyState
+              title={
+                run.done
+                  ? t("Queue cleared")
+                  : t("No assays in flight")
+              }
+              description={
+                run.done
+                  ? t("Every accepted request has a delivered or missing outcome.")
+                  : t("Select a batch to reserve budget and schedule feedback.")
+              }
+            />
+          )}
+          <div className="queue-footer">
+            <CheckCircle2 size={15} />
+            <span>
+              {t("Missing outcomes")}{t(": ")}{m.missing_assays}
+              <br />
+              {t("Initial seed hits")}{t(": ")}{m.seed_hits} {t("(")}{t("excluded")}{t(")")}</span>
+          </div>
+        </aside>
         <section className="surface loop-surface">
           <div className="section-heading">
             <div>
-              <h2>{"The screening loop"}</h2>
+              <h2>{t("The screening loop")}</h2>
               <p>
-                {"Live counts from accepted requests and delivered events."}
+                {t("Live counts from accepted requests and delivered events.")}
               </p>
             </div>
             <Badge
@@ -139,24 +179,23 @@ export default function Lab() {
               }
             >
               {run.done
-                ? "Completed"
+                ? t("Completed")
                 : run.pending.length
-                  ? "Awaiting feedback"
-                  : "Ready to select"}
+                  ? t("Awaiting feedback")
+                  : t("Ready to select")}
             </Badge>
           </div>
-          <Workflow run={run} />
+          <details className="lab-workflow-details"><summary>{t("Screening workflow")}</summary><Workflow run={run} /></details>
           <div className="budget-ledger">
             <div className="ledger-heading">
-              <strong>{"Budget ledger"}</strong>
+              <strong>{t("Budget ledger")}</strong>
               <span>
-                {r.manifest.scenario_config.budget_units} simulated units
-              </span>
+                {r.manifest.scenario_config.budget_units} {t("simulated units")}</span>
             </div>
             <div
               className="ledger-track"
               role="img"
-              aria-label={`Spent ${m.spent_units}, reserved ${m.reserved_units}, remaining ${m.remaining_units}`}
+              aria-label={t("Spent {spent}, reserved {reserved}, remaining {remaining}", { spent: m.spent_units, reserved: m.reserved_units, remaining: m.remaining_units })}
             >
               <span
                 className="ledger-spent"
@@ -174,97 +213,52 @@ export default function Lab() {
             <div className="ledger-labels">
               <span>
                 <i className="legend-dot spent" />
-                {"Spent"} <b>{m.spent_units}</b>
+                {t("Spent")} <b>{m.spent_units}</b>
               </span>
               <span>
                 <i className="legend-dot reserved" />
-                {"Reserved"} <b>{m.reserved_units}</b>
+                {t("Reserved")} <b>{m.reserved_units}</b>
               </span>
               <span>
                 <i className="legend-dot available" />
-                {"Available"} <b>{m.remaining_units}</b>
+                {t("Available")} <b>{m.remaining_units}</b>
               </span>
             </div>
           </div>
           <div className="chart-heading">
-            <h3>{"Confirmed discoveries"}</h3>
+            <h3>{t("Confirmed discoveries")}</h3>
             <span className="muted small">
-              {"No pending or predicted positives"}
+              {t("No pending or predicted positives")}
             </span>
           </div>
-          <DiscoveryChart reports={[r]} />
+          {m.delivered_assays > 0 ? <DiscoveryChart reports={[r]} /> : <p className="chart-pending-note">{t("Confirmed discoveries appear after results are delivered.")}</p>}
         </section>
-        <aside className="surface pending-surface">
-          <div className="section-heading">
-            <h2>{"Feedback queue"}</h2>
-            <Badge>{run.pending.length}</Badge>
-          </div>
-          {run.pending.length ? (
-            run.pending.map((p) => (
-              <div className="queue-item" key={p.request_id}>
-                <div>
-                  <span className="small-mono">{p.compound_id}</span>
-                  <Badge className="badge-amber">pending</Badge>
-                </div>
-                <p>
-                  <Clock3 size={13} />
-                  {"Due at step"} {p.due_at_step}{" "}
-                  <span>
-                    · {p.due_at_step - m.step} {"remaining"}
-                  </span>
-                </p>
-              </div>
-            ))
-          ) : (
-            <EmptyState
-              title={
-                run.done
-                  ? "Queue cleared"
-                  : "No assays in flight"
-              }
-              description={
-                run.done
-                  ? "Every accepted request has a delivered or missing outcome."
-                  : "Select a batch to reserve budget and schedule feedback."
-              }
-            />
-          )}
-          <div className="queue-footer">
-            <CheckCircle2 size={15} />
-            <span>
-              {"Missing outcomes"}: {m.missing_assays}
-              <br />
-              {"Initial seed hits"}: {m.seed_hits} (
-              {"excluded"})
-            </span>
-          </div>
-        </aside>
       </div>
       <section className="surface decisions-section">
         <div className="section-heading">
           <div>
-            <h2>{"Policy decisions"}</h2>
+            <h2>{t("Policy decisions")}</h2>
             <p>
-              {"Actual model status, predicted probabilities and outcome visibility."}
+              {t("Actual model status, predicted probabilities and outcome visibility.")}
             </p>
           </div>
-          <span className="small-mono">{r.requests.length} requests</span>
+          <span className="small-mono">{r.requests.length} {t(" requests")}</span>
         </div>
         {r.requests.length ? (
           <div
             className="table-scroll"
             tabIndex={0}
             role="region"
-            aria-label={"Experiment decision table"}
+            aria-label={t("Experiment decision table")}
           >
             <table>
               <thead>
                 <tr>
-                  <th>{"Compound"}</th>
-                  <th>{"Observed status"}</th>
-                  <th>{"Due step"}</th>
-                  <th>P(active)</th>
-                  <th>{"Selection explanation"}</th>
+                  <th>{t("Compound")}</th>
+                  <th>{t("Observed status")}</th>
+                  <th>{t("Due step")}</th>
+                  <th>{t("P(active)")}</th>
+                  <th>{t("Selection explanation")}</th>
                 </tr>
               </thead>
               <tbody>
@@ -283,12 +277,12 @@ export default function Lab() {
                           }
                         >
                           {!outcomes.has(q.request_id)
-                            ? "Pending"
+                            ? t("Pending")
                             : outcomes.get(q.request_id)?.active === true
-                              ? "Observed active"
+                              ? t("Observed active")
                               : outcomes.get(q.request_id)?.active === false
-                                ? "Observed inactive"
-                                : "Missing outcome"}
+                                ? t("Observed inactive")
+                                : t("Missing outcome")}
                         </Badge>
                       </td>
                       <td>{q.due_at_step}</td>
@@ -298,7 +292,7 @@ export default function Lab() {
                           : number(q.predicted_probability, 3)}
                       </td>
                       <td className="explanation-cell">
-                        {q.explanation}
+                        {t("Original engine explanation (English)")}: {q.explanation}
                         <small>{q.model_status}</small>
                       </td>
                     </tr>
@@ -308,41 +302,41 @@ export default function Lab() {
           </div>
         ) : (
           <EmptyState
-            title={"Your next decision starts here"}
-            description={"Select the first batch. Scores only appear when a valid model can be fitted."}
+            title={t("Your next decision starts here")}
+            description={t("Select the first batch. Scores only appear when a valid model can be fitted.")}
           />
         )}
       </section>
       <section className="surface timeline-section">
         <div className="section-heading">
           <div>
-            <h2>{"Event timeline"}</h2>
+            <h2>{t("Event timeline")}</h2>
             <p>
-              {"Append-only scientific history. No future labels."}
+              {t("Append-only scientific history. No future labels.")}
             </p>
           </div>
-          <Badge>{r.events.length} events</Badge>
+          <Badge>{r.events.length} {t(" events")}</Badge>
         </div>
         <div className="filter-row">
           <div className="search-field">
             <Search size={16} />
             <input
-              aria-label="Search event compound"
-              placeholder={"Search compound ID…"}
+              aria-label={t("Search event compound")}
+              placeholder={t("Search compound ID…")}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
           <select
-            aria-label="Event type filter"
+            aria-label={t("Event type filter")}
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
           >
             <option value="all">
-              {"All event types"}
+              {t("All event types")}
             </option>
             {Array.from(new Set(r.events.map((e) => e.event_type))).map((x) => (
-              <option key={x}>{x}</option>
+              <option key={x} value={x}>{t(x)}</option>
             ))}
           </select>
         </div>
@@ -350,7 +344,7 @@ export default function Lab() {
           className="event-list"
           tabIndex={0}
           role="region"
-          aria-label={"Event timeline"}
+          aria-label={t("Event timeline")}
         >
           {events.slice(0, 100).map((e) => (
             <div className="event-row" key={e.event_id}>
@@ -360,29 +354,29 @@ export default function Lab() {
                   (e.event_type === "RESULT_DELIVERED" ? "event-delivered" : "")
                 }
               />
-              <span className="event-step">step {e.step}</span>
+              <span className="event-step">{t("step ")}{e.step}</span>
               <div>
-                <strong>{e.event_type.replaceAll("_", " ")}</strong>
+                <strong>{t(e.event_type)}</strong>
                 <span>
-                  {e.compound_id || "Campaign"}
+                  {e.compound_id || t("Campaign")}
                   {e.delivered_active !== null
-                    ? ` · ${e.delivered_active ? "active" : "inactive"} revealed`
+                    ? " · " + t("{outcome} revealed", { outcome: e.delivered_active ? t("active") : t("inactive") })
                     : ""}
                 </span>
               </div>
               <span className="event-cost">
-                {e.cost_units ? `${e.cost_units} units` : ""}
+                {e.cost_units ? t("{count} units", { count: e.cost_units }) : ""}
               </span>
             </div>
           ))}
           {!events.length && (
             <p className="muted">
-              {"No events match this filter."}
+              {t("No events match this filter.")}
             </p>
           )}
         </div>
         <p className="small muted">
-          {"Showing up to 100 recent matching events. Export retains the complete public ledger."}
+          {t("Showing up to 100 recent matching events. Export retains the complete public ledger.")}
         </p>
       </section>
     </>

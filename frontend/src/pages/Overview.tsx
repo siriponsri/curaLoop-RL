@@ -1,200 +1,104 @@
 import { useEffect, useState } from "react";
-import {
-  ArrowRight,
-  ArrowUpRight,
-  BookOpen,
-  Database,
-  GitBranch,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, RotateCcw, ZoomIn, ZoomOut } from "lucide-react";
 import { Link } from "react-router-dom";
 import { api } from "../api";
 import { useApp } from "../state";
+import { useI18n } from "../i18n";
 import { Button } from "../components/ui/button";
-import { Badge } from "../components/ui/badge";
-import { GoLink, KpiStrip, SourceBadge, Workflow } from "../components/shared";
+import { GoLink, SourceBadge, Workflow } from "../components/shared";
 import { RecordedBenchmarkChart } from "../components/charts";
-import { short } from "../lib";
-import type { Candidate } from "../types";
+import { policyNames, type Candidate } from "../types";
 
 export default function Overview() {
   const { run, evidence, meta } = useApp();
+  const { t } = useI18n();
   const [candidate, setCandidate] = useState<Candidate | null>(null);
   const [candidateError, setCandidateError] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [index, setIndex] = useState(0);
+  const [total, setTotal] = useState<number | null>(null);
+  const [zoom, setZoom] = useState(1);
+  const [imageError, setImageError] = useState(false);
   useEffect(() => {
     if (!run) return;
     let alive = true;
-    setCandidate(null);
-    setCandidateError(false);
-    api
-      .candidates(run.session_id, { page_size: 1 })
-      .then((r) => {
-        if (alive) setCandidate(r.items[0] ?? null);
-      })
-      .catch(() => { if (alive) setCandidateError(true); });
-    return () => {
-      alive = false;
-    };
-  }, [run?.session_id]);
+    setCandidate(null); setCandidateError(false); setLoading(true); setImageError(false);
+    api.candidates(run.session_id, { page_size: 1, page: index + 1, status: "eligible" })
+      .then((r) => { if (alive) { setCandidate(r.items[0] ?? null); setTotal(r.total); } })
+      .catch(() => { if (alive) setCandidateError(true); })
+      .finally(() => { if (alive) setLoading(false); });
+    return () => { alive = false; };
+  }, [run?.session_id, run?.revision, index]);
   if (!run) return null;
   const scenario = run.report.manifest.scenario_config;
-  const historical =
-    run.report.manifest.data_origin === "HISTORICAL_PUBLIC_DATA";
-  return (
-    <>
-      <div className="mission-hero">
-        <div className="mission-copy">
-          <div className="hero-badges">
-            <SourceBadge />
-            <Badge>Personal research portfolio</Badge>
-          </div>
-          <h1>
-            {"Every assay is a decision."}
-            <br />
-            <span>{"Make yours reproducible."}</span>
-          </h1>
-          <p>
-            {(`A library of ${scenario.candidate_count.toLocaleString()} candidates. A budget of ${scenario.budget_units} simulated cost units. Which compounds should we test first—and what changes when results arrive?`)}
-          </p>
-          <div className="hero-actions">
-            <Button asChild>
-              <Link to="/lab">
-                {"Enter simulation lab"}
-                <ArrowRight size={17} />
-              </Link>
-            </Button>
-            <Button asChild variant="ghost">
-              <Link to="/scenario">
-                {"Design a scenario"}
-                <ArrowUpRight size={16} />
-              </Link>
-            </Button>
-          </div>
-          <div className="hero-footnote">
-            <ShieldCheck size={15} />
-            {historical
-              ? "Historical labels. Simulated operations. No claims of drug efficacy."
-              : "Synthetic labels and operations. No biological efficacy meaning."}
-          </div>
+  const historical = run.report.manifest.data_origin === "HISTORICAL_PUBLIC_DATA";
+  const count = total ?? run.eligible_count;
+  const structure = Boolean(candidate?.canonical_smiles && meta?.molecule_rendering && !imageError);
+  function move(delta: number) {
+    setCandidate(null); setLoading(true); setCandidateError(false); setZoom(1);
+    setIndex(value => value + delta);
+  }
+  return <>
+    <div className="page-heading studio-heading">
+      <div><h1>{t(historical ? "HIV screening" : "Synthetic screening")}</h1>
+        <p>{t("Current campaign")} <span className="studio-heading-detail">· {policyNames[run.report.manifest.policy_id]} · {t("Random seed")} {run.report.manifest.seed}</span></p></div>
+      <Button asChild><Link to="/lab">{t("Open simulation lab")}<ArrowUpRight size={16} /></Link></Button>
+    </div>
+    <div className="molecular-studio">
+      <section className="studio-object" aria-label={t("Candidate preview")}>
+        <div className="studio-object-heading">
+          <strong className="small-mono">{candidate?.compound_id ?? t(loading ? "Loading…" : candidateError ? "Preview unavailable" : "No eligible candidates")}</strong><SourceBadge />
         </div>
-        <div className="hero-specimen">
-          <div className="specimen-header">
-            <span>
-              {"From the public candidate pool"}
-            </span>
-            <span className="small-mono">
-              {candidate?.compound_id ?? (candidateError ? "Preview unavailable" : "Loading…")}
-            </span>
-          </div>
-          {candidate?.canonical_smiles && meta?.molecule_rendering ? (
-            <img
-              className="specimen-image"
-              src={`/api/v1/runs/${run.session_id}/molecules/${candidate.compound_id}.svg`}
-              alt={`RDKit 2D structure of ${candidate.compound_id}`}
-            />
-          ) : (
-            <div className="descriptor-art">
-              <Database size={42} />
-              <strong>{candidate?.feature_count ?? "—"}</strong>
-              <span>public numerical features</span>
+        <div className="molecule-viewport" aria-busy={loading}>
+          {structure && candidate ? <>
+            <div className="molecule-tools" role="group" aria-label={t("Structure view controls")}>
+              <span>{t("2D structure")}</span>
+              <button type="button" className="icon-button" aria-label={t("Zoom in structure")} disabled={zoom >= 1.8} onClick={() => setZoom(value => Math.min(1.8, Number((value + .2).toFixed(1))))}><ZoomIn size={16} /></button>
+              <button type="button" className="icon-button" aria-label={t("Zoom out structure")} disabled={zoom <= 1} onClick={() => setZoom(value => Math.max(1, Number((value - .2).toFixed(1))))}><ZoomOut size={16} /></button>
+              <button type="button" className="icon-button" aria-label={t("Reset structure view")} disabled={zoom === 1} onClick={() => setZoom(1)}><RotateCcw size={15} /></button>
             </div>
-          )}
-          <div className="specimen-footer">
-            <div>
-              <span>{"Representation"}</span>
-              <strong>
-                {historical ? "Morgan fingerprint" : "Synthetic descriptors"}
-              </strong>
-            </div>
-            <Badge className="badge-neutral">
-              {candidate?.feature_count ?? "—"} features
-            </Badge>
-          </div>
-          <p className="specimen-note">
-            {candidateError ? "Candidate preview could not load. Open Compound explorer to retry the public data request." : (historical
-                ? "Structure is public. Its assay outcome stays hidden until requested and delivered."
-                : "Synthetic numerical descriptors only; no real molecular structure or biological assay.")}
-          </p>
+            <img className="studio-molecule" style={{ transform: `scale(${zoom})` }} src={`/api/v1/runs/${run.session_id}/molecules/${candidate.compound_id}.svg`} alt={t("RDKit 2D molecular structure {id}", { id: candidate.compound_id })} onError={() => setImageError(true)} />
+          </> : <div className="studio-descriptors">
+            <strong>{loading ? "—" : candidate?.feature_count ?? "—"}</strong>
+            <span>{t(loading ? "Loading public candidates…" : candidateError ? "Preview unavailable" : historical ? "Public descriptors" : "Synthetic descriptors")}</span>
+            {!loading && <p>{t(historical ? "Structure renderer unavailable; public SMILES remains in details" : "No molecular structure in this synthetic fixture")}</p>}
+          </div>}
+          <p className="molecule-caption">{t(historical ? "Public structure · Outcome unrevealed" : "Synthetic descriptors · Outcome unrevealed")}</p>
         </div>
-      </div>
-      <KpiStrip run={run} />
-      <section className="workflow-section">
-        <div className="section-heading">
-          <div>
-            <h2>
-              {"A closed loop, with an open audit trail"}
-            </h2>
-            <p>
-              {"Live campaign state, not an illustration of laboratory integration."}
-            </p>
-          </div>
-          <GoLink to="/lab">
-            {"Follow the campaign"}
-          </GoLink>
+        <div className="studio-object-pagination">
+          <button type="button" disabled={loading || index === 0} onClick={() => move(-1)}><ChevronLeft size={15} />{t("Previous compound")}</button>
+          <span>{candidate ? index + 1 : 0} / {count.toLocaleString("en-US")} {t("eligible")}</span>
+          <button type="button" disabled={loading || index + 1 >= count} onClick={() => move(1)}>{t("Next compound")}<ChevronRight size={15} /></button>
         </div>
-        <Workflow run={run} />
       </section>
-      <div className="overview-bottom">
-        <section className="surface">
-          <div className="section-heading">
-            <div>
-              <h2>
-                {"Evidence before ambition"}
-              </h2>
-              <p>
-                {"Recorded HIV benchmark · 10 paired seeds · B = 30"}
-              </p>
-            </div>
-            <Badge className="badge-neutral">v0.1 evidence</Badge>
-          </div>
-          {evidence && (
-            <RecordedBenchmarkChart rows={evidence.statistics.summary} />
-          )}
-          <div className="honesty-note">
-            <GitBranch size={17} />
-            <p>
-              {"The learned controllers matched Greedy because all 300/300 historical requests used their Greedy fallback. This is not successful learned transfer."}
-            </p>
-          </div>
-          <GoLink to="/evidence">
-            {"Read methods and limitations"}
-          </GoLink>
-        </section>
-        <section className="research-note">
-          <BookOpen size={23} />
-          <h2>
-            {"A research instrument.\nAn honest portfolio."}
-          </h2>
-          <p>
-            {(historical
-                ? "Explore policy trade-offs with real historical assay data. Inspect every decision, budget reservation and delivered result."
-                : "Explore policy trade-offs with synthetic fixtures. Inspect every decision, budget reservation and delivered result.")}
-          </p>
-          <dl>
-            <div>
-              <dt>Assay</dt>
-              <dd>
-                {run.report.manifest.data_origin === "HISTORICAL_PUBLIC_DATA"
-                  ? "NCI DTP · HIV"
-                  : "Synthetic binary"}
-              </dd>
-            </div>
-            <div>
-              <dt>Data rights</dt>
-              <dd>{run.report.manifest.dataset.terms_status}</dd>
-            </div>
-            <div>
-              <dt>Code revision</dt>
-              <dd className="small-mono">
-                {short(meta?.repo_git_sha ?? "—", 12)}
-              </dd>
-            </div>
-          </dl>
-          <GoLink to="/presentation">
-            {"Open the guided presentation"}
-          </GoLink>
-        </section>
-      </div>
-    </>
-  );
+      <aside className="studio-inspector">
+        <h2>{t("Candidate record")}</h2>
+        <dl className="studio-facts">
+          <div><dt>{t("Assay / target")}</dt><dd>{historical ? "NCI DTP · HIV" : t("Synthetic binary")}</dd></div>
+          <div><dt>{t("Representation")}</dt><dd>{t(historical ? "Morgan fingerprint" : "Synthetic descriptors")}</dd></div>
+          <div><dt>{t("Selection policy")}</dt><dd>{policyNames[run.report.manifest.policy_id]}</dd></div>
+        </dl>
+        <p className="studio-outcome-note">{t("Assay outcome stays hidden until requested and delivered.")}</p>
+        <div className="studio-budget"><span>{t("Budget available")}</span>
+          <div><strong>{run.report.metrics.remaining_units}</strong><small> / {scenario.budget_units} {t("simulated units")}</small></div>
+          <div className="studio-budget-track" role="img" aria-label={t("Budget available") + ": " + run.report.metrics.remaining_units}><span style={{ width: `${100 * run.report.metrics.remaining_units / Math.max(1, scenario.budget_units)}%` }} /></div>
+          <p>{t("Spent")} {run.report.metrics.spent_units} · {t("Reserved")} {run.report.metrics.reserved_units}</p>
+          <p>{t("Confirmed new hits")}: {run.report.metrics.confirmed_hits}</p>
+        </div>
+        <details className="studio-source-detail"><summary>{t("Campaign details")}</summary><dl>
+          <dt>{t("Dataset")}</dt><dd>{run.report.manifest.dataset.name}</dd>
+          <dt>{t("Session")}</dt><dd>{run.session_id}</dd>
+          {candidate?.canonical_smiles && <><dt>Canonical SMILES</dt><dd>{candidate.canonical_smiles}</dd></>}
+        </dl><GoLink to="/scenario">{t("Edit scenario")}</GoLink></details>
+      </aside>
+    </div>
+    <section className="studio-workflow" aria-label={t("Screening workflow")}><Workflow run={run} /></section>
+    <p className="studio-provenance">{t(historical ? "Historical labels. Simulated operations. No claims of drug efficacy." : "Synthetic labels and operations. No biological efficacy meaning.")}</p>
+    <details className="recorded-evidence">
+      <summary>{t("Recorded benchmark and limitations")}</summary><p className="muted">{t("Recorded HIV benchmark · 10 paired seeds · B = 30")}</p>
+      {evidence && <RecordedBenchmarkChart rows={evidence.statistics.summary} />}
+      <p className="honesty-note">{t("The learned controllers matched Greedy because all 300/300 historical requests used their Greedy fallback. This is not successful learned transfer.")}</p>
+      <GoLink to="/evidence">{t("Read methods and limitations")}</GoLink>
+    </details>
+  </>;
 }

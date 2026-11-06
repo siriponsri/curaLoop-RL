@@ -48,10 +48,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
     [error, setError] = useState<string | null>(null),
     [notice, setNotice] = useState<string | null>(null);
   const inFlight = useRef(false);
-  useEffect(() => {
-    document.documentElement.lang = "en";
-    removePreference("curaloop-language");
-  }, []);
   const acceptRun = useCallback((value: RunView) => {
     setRun(value);
     writePreference("curaloop-session", value.session_id);

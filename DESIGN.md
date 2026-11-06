@@ -1,4 +1,4 @@
-> Academic/business documentation update: [current reference](docs/05_product/PRODUCT_REQUIREMENTS.md) and [start here](START_HERE.md). Existing application instructions and attribution below are preserved. New study features are not installed by these documents.
+> Active owner-approved UI direction: [Molecular Studio, Graphite x Copper](docs/05_product/MOLECULAR_STUDIO_APPROVED_DESIGN_20261106.md). This replaces the historical teal palette below for the bilingual product UI. Preserve scientific values, standard molecular atom colors and source identities. The frontend checkpoint is complete; see docs/06_execution/FRONTEND_CHECKPOINT_20261106.md. Historical specifications below are retained for provenance.
 
 ---
 name: CuraLoop-RL

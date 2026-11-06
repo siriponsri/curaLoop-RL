@@ -1,3 +1,4 @@
+import { useI18n } from "../../i18n";
 // shadcn/ui composition over Radix Dialog. MIT notice retained at project root.
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { X } from "lucide-react";
@@ -15,6 +16,7 @@ export function Dialog({
   description?: string;
   children: ReactNode;
 }) {
+  const { t } = useI18n();
   const returnFocus = useRef<HTMLElement | null>(null);
   return (
     <DialogPrimitive.Root open={open} onOpenChange={onOpenChange}>
@@ -33,7 +35,7 @@ export function Dialog({
           <div className="dialog-heading">
             <DialogPrimitive.Title>{title}</DialogPrimitive.Title>
             <DialogPrimitive.Close
-              aria-label="Close details"
+              aria-label={t("Close details")}
               className="icon-button"
             >
               <X size={19} />

@@ -1,5 +1,13 @@
 # Goal: publishable evidence and a testable R&D product
 
+> **Owner checkpoint: pause after frontend delivery.** Molecular Studio for the
+> main app and additive C Workspace is complete in EN/TH. Read the
+> [frontend checkpoint](docs/06_execution/FRONTEND_CHECKPOINT_20261106.md) and
+> [HANDOFF.md](HANDOFF.md). Do not begin further research until owner resume.
+> Scientific readiness remains NOT_READY; final outcomes and source STOPs stay
+> preserved. Older “active UI” wording below records the earlier execution state.
+
+
 ## Current checkpoint, 6 November 2026
 
 The [LR-BC core](docs/06_execution/LRBC_CORE_CLOSEOUT_20261106.md) supports narrow

@@ -47,7 +47,7 @@ describe("runnable research UI", () => {
   it("loads the real-response fixture and navigates through the actual route shell", async () => {
     show();
     expect(
-      await screen.findByText("Every assay is a decision."),
+      await screen.findByRole("heading", { name: "Synthetic screening" }),
     ).toBeInTheDocument();
     await userEvent.click(
       screen.getByRole("link", { name: "Scenario builder" }),
@@ -57,16 +57,58 @@ describe("runnable research UI", () => {
     ).toBeInTheDocument();
     expect(screen.getByLabelText("Screening budget")).toHaveValue(6);
   });
-  it("renders English despite a legacy Thai preference and retains the scientific limitation", async () => {
+  it("restores Thai without changing a pending campaign or its API values", async () => {
     localStorage.setItem("curaloop-language", "th");
-    document.documentElement.lang = "th";
+    localStorage.setItem("curaloop-session", fixtures.pending.session_id);
+    vi.mocked(api.run).mockResolvedValue(fixtures.pending as RunView);
+    const action = vi.spyOn(api, "action");
     show("/lab");
+    await screen.findByRole("heading", { name: "ห้องจำลองการคัดกรอง" });
+    expect(document.documentElement.lang).toBe("th");
+    expect(localStorage.getItem("curaloop-language")).toBe("th");
+    expect(screen.getAllByText("กำลังรอผล").length).toBeGreaterThan(0);
+    await userEvent.click(screen.getByRole("button", { name: "EN" }));
     await screen.findByRole("heading", { name: "Simulation lab" });
     expect(document.documentElement.lang).toBe("en");
-    expect(localStorage.getItem("curaloop-language")).toBeNull();
-    expect(screen.queryByRole("button", { name: "TH" })).not.toBeInTheDocument();
-    expect(document.body.textContent).not.toMatch(/[\u0e00-\u0e7f]/);
+    expect(screen.getByText("Awaiting feedback")).toBeInTheDocument();
+    expect(api.create).not.toHaveBeenCalled();
+    expect(api.run).toHaveBeenCalledTimes(1);
+    expect(action).not.toHaveBeenCalled();
+    expect(localStorage.getItem("curaloop-session")).toBe(fixtures.pending.session_id);
     expect(screen.getByText("Not a Validated Digital Twin")).toBeInTheDocument();
+  });
+  it("keeps unsaved scenario input when switching language", async () => {
+    show("/scenario");
+    const budget = await screen.findByLabelText("Screening budget");
+    await userEvent.clear(budget);
+    await userEvent.type(budget, "17");
+    await userEvent.click(screen.getByRole("button", { name: "ไทย" }));
+    expect(screen.getByLabelText("งบคัดกรองจำลอง")).toHaveValue(17);
+    expect(api.create).toHaveBeenCalledTimes(1);
+  });
+  it("sends canonical compound filters from a Thai interface", async () => {
+    localStorage.setItem("curaloop-language", "th");
+    show("/compounds");
+    await userEvent.selectOptions(await screen.findByLabelText("สถานะสาร"), "pending");
+    await waitFor(() => expect(api.candidates).toHaveBeenCalledWith(expect.any(String), expect.objectContaining({ status: "pending" })));
+  });
+  it("browses actual eligible candidates without selecting assays or resetting on language change", async () => {
+    const candidate = { compound_id: "SYN-01", status: "eligible", canonical_smiles: null,
+      scaffold_id: null, feature_count: 8, feature_nonzero: 6, public_features_preview: [0.2],
+      revealed_active: null, predicted_probability: null, explanation: null };
+    vi.mocked(api.candidates).mockResolvedValueOnce({ items: [candidate], total: 2, page: 1, page_size: 1 })
+      .mockResolvedValueOnce({ items: [{ ...candidate, compound_id: "SYN-02" }], total: 2, page: 2, page_size: 1 });
+    const action = vi.spyOn(api, "action");
+    show();
+    await screen.findByText("SYN-01");
+    await userEvent.click(screen.getByRole("button", { name: "Next compound" }));
+    await screen.findByText("SYN-02");
+    expect(api.candidates).toHaveBeenLastCalledWith(expect.any(String), { page_size: 1, page: 2, status: "eligible" });
+    await userEvent.click(screen.getByRole("button", { name: "ไทย" }));
+    expect(screen.getByText("SYN-02")).toBeInTheDocument();
+    expect(api.candidates).toHaveBeenCalledTimes(2);
+    expect(api.create).toHaveBeenCalledTimes(1);
+    expect(action).not.toHaveBeenCalled();
   });
   it("validates the form before making an engine request", async () => {
     show("/scenario");
@@ -105,13 +147,13 @@ describe("runnable research UI", () => {
     vi.spyOn(api, "action").mockResolvedValue(fixtures.pending as RunView);
     show("/lab");
     await screen.findByRole("heading", { name: "Simulation lab" });
-    expect(screen.getByRole("button", { name: "Advance time" })).toBeDisabled();
-    await userEvent.click(screen.getByRole("button", { name: "Select batch" }));
+    expect(screen.getByRole("button", { name: "Advance +1 step" })).toBeDisabled();
+    await userEvent.click(screen.getByRole("button", { name: "Select next batch" }));
     await waitFor(() =>
       expect(api.action).toHaveBeenCalledWith(expect.anything(), "select"),
     );
     expect(await screen.findByText("Awaiting feedback")).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "Advance time" })).toBeEnabled();
+    expect(screen.getByRole("button", { name: "Advance +1 step" })).toBeEnabled();
     expect(
       screen.getAllByText("0", { selector: ".kpi-strip strong" }).length,
     ).toBeGreaterThan(0);
@@ -126,7 +168,7 @@ describe("runnable research UI", () => {
     );
     await userEvent.click(screen.getByRole("button", { name: "Reconnect" }));
     expect(
-      await screen.findByText("Every assay is a decision."),
+      await screen.findByRole("heading", { name: "Synthetic screening" }),
     ).toBeInTheDocument();
   });
   it("preserves provenance, weak evaluation and controller fallback disclosures", async () => {
@@ -160,7 +202,7 @@ describe("runnable research UI", () => {
     expect(await screen.findByText("Awaiting feedback")).toBeInTheDocument();
     expect(api.run).toHaveBeenCalledWith(fixtures.pending.session_id);
     expect(api.create).not.toHaveBeenCalled();
-    expect(screen.getByRole("button", { name: "Advance time" })).toBeEnabled();
+    expect(screen.getByRole("button", { name: "Advance +1 step" })).toBeEnabled();
   });
   it("keeps corrupt saved-state errors visible and recovers an explicit validated revision", async () => {
     localStorage.setItem("curaloop-session", "damaged");
@@ -181,7 +223,7 @@ describe("runnable research UI", () => {
     vi.spyOn(Storage.prototype, "setItem").mockImplementation(() => { throw new Error("Storage blocked"); });
     vi.spyOn(Storage.prototype, "removeItem").mockImplementation(() => { throw new Error("Storage blocked"); });
     show();
-    expect(await screen.findByText("Every assay is a decision.")).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Synthetic screening" })).toBeInTheDocument();
     expect(document.documentElement.lang).toBe("en");
   });
   it("blocks old-campaign actions while a saved revision is recovering across navigation", async () => {
@@ -198,14 +240,14 @@ describe("runnable research UI", () => {
     expect(api.recoverRevision).toHaveBeenCalledWith("damaged", 2);
     await userEvent.click(screen.getByRole("link", { name: "Simulation lab" }));
     await screen.findByRole("heading", { name: "Simulation lab" });
-    const select = screen.getByRole("button", { name: "Select batch" });
+    const select = screen.getByRole("button", { name: "Select next batch" });
     expect(select).toBeDisabled();
     await userEvent.click(select);
     expect(api.action).not.toHaveBeenCalled();
     await act(async () => { completeRecovery({ ...fixtures.pending, session_id: "recovered-session" } as RunView); });
     expect(await screen.findByText("Awaiting feedback")).toBeInTheDocument();
     expect(localStorage.getItem("curaloop-session")).toBe("recovered-session");
-    expect(screen.getByRole("button", { name: "Advance time" })).toBeEnabled();
+    expect(screen.getByRole("button", { name: "Advance +1 step" })).toBeEnabled();
     expect(api.action).not.toHaveBeenCalled();
   });
   it("reports a stale-action refresh failure without an unhandled rejection", async () => {
@@ -213,9 +255,9 @@ describe("runnable research UI", () => {
     vi.mocked(api.run).mockRejectedValue(new ApiError("Local server unavailable.", 0));
     show("/lab");
     await screen.findByRole("heading", { name: "Simulation lab" });
-    await userEvent.click(screen.getByRole("button", { name: "Select batch" }));
+    await userEvent.click(screen.getByRole("button", { name: "Select next batch" }));
     expect(await screen.findByRole("alert")).toHaveTextContent("Refresh also failed: Local server unavailable.");
-    expect(screen.getByRole("button", { name: "Select batch" })).toBeEnabled();
+    expect(screen.getByRole("button", { name: "Select next batch" })).toBeEnabled();
   });
   it("recovers an interrupted comparison without automatically running it again", async () => {
     localStorage.setItem("curaloop-comparison", "saved-job");
@@ -226,7 +268,7 @@ describe("runnable research UI", () => {
     show("/benchmarks");
     expect(await screen.findByText("Server stopped before this comparison completed.")).toBeInTheDocument();
     expect(api.compare).not.toHaveBeenCalled();
-    expect(screen.getByRole("button", { name: "Run comparison" })).toBeEnabled();
+    expect(screen.getByRole("button", { name: "Compare selected policies" })).toBeEnabled();
     expect(screen.getByText(/This comparison was interrupted/)).toBeInTheDocument();
   });
   it("retries a failed comparison status check without submitting duplicate work", async () => {

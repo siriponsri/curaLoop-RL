@@ -1,3 +1,4 @@
+import { useI18n } from "../i18n";
 import {
   CartesianGrid,
   Line,
@@ -20,6 +21,7 @@ import {
 } from "../types";
 
 export function DiscoveryChart({ reports }: { reports: RunReport[] }) {
+  const { t } = useI18n();
 
   const costs = [
     ...new Set(reports.flatMap((r) => r.curve.map((p) => p.spent_units))),
@@ -39,7 +41,7 @@ export function DiscoveryChart({ reports }: { reports: RunReport[] }) {
     <div
       className="scientific-chart"
       role="group"
-      aria-label="Confirmed hits versus simulated settled cost"
+      aria-label={t("Confirmed hits versus simulated settled cost")}
     >
       <ResponsiveContainer width="100%" height={290}>
         <LineChart
@@ -49,14 +51,14 @@ export function DiscoveryChart({ reports }: { reports: RunReport[] }) {
           <CartesianGrid
             strokeDasharray="3 5"
             vertical={false}
-            stroke="#e2e9e7"
+            stroke="#D9D5CF"
           />
           <XAxis
             dataKey="spent"
             tickLine={false}
             axisLine={false}
             label={{
-              value: "Settled simulated cost units",
+              value: t("Settled simulated cost units"),
               position: "insideBottom",
               offset: -14,
             }}
@@ -70,10 +72,10 @@ export function DiscoveryChart({ reports }: { reports: RunReport[] }) {
           <Tooltip
             contentStyle={{
               borderRadius: 10,
-              border: "1px solid #dce5e1",
+              border: "1px solid #D9D5CF",
               fontSize: 12,
             }}
-            labelFormatter={(v) => `Cost units: ${v}`}
+            labelFormatter={(v) => `${t("Cost units")}: ${v}`}
           />
           <Legend verticalAlign="top" height={34} />
           {reports.map((r, i) => (
@@ -95,12 +97,13 @@ export function DiscoveryChart({ reports }: { reports: RunReport[] }) {
   );
 }
 export function RecordedBenchmarkChart({ rows }: { rows: SummaryRow[] }) {
+  const { t } = useI18n();
 
   return (
     <div
       className="scientific-chart"
       role="group"
-      aria-label="Recorded mean hits and seed standard deviation"
+      aria-label={t("Recorded mean hits and seed standard deviation")}
     >
       <ResponsiveContainer width="100%" height={280}>
         <BarChart
@@ -120,7 +123,7 @@ export function RecordedBenchmarkChart({ rows }: { rows: SummaryRow[] }) {
             tickLine={false}
             axisLine={false}
             label={{
-              value: "New active hits · mean",
+              value: t("New active hits · mean"),
               position: "insideBottom",
               offset: -13,
             }}
@@ -136,8 +139,8 @@ export function RecordedBenchmarkChart({ rows }: { rows: SummaryRow[] }) {
           <Tooltip />
           <Bar
             dataKey="mean_hits"
-            name="Mean hits · recorded"
-            fill="#087f72"
+            name={t("Mean hits · recorded")}
+            fill="#A6492D"
             radius={[0, 4, 4, 0]}
             isAnimationActive={false}
           >
@@ -153,12 +156,13 @@ export function RecordedBenchmarkChart({ rows }: { rows: SummaryRow[] }) {
         </BarChart>
       </ResponsiveContainer>
       <p className="chart-method-note">
-        {"Mean ± seed SD; lower display bound clipped at zero. Exact SD is retained in the benchmark table."}
+        {t("Mean ± seed SD; lower display bound clipped at zero. Exact SD is retained in the benchmark table.")}
       </p>
     </div>
   );
 }
 export function ReturnChart({ returns }: { returns: number[] }) {
+  const { t } = useI18n();
   return (
     <div className="training-chart">
       <ResponsiveContainer width="100%" height={150}>
@@ -182,11 +186,12 @@ export function ReturnChart({ returns }: { returns: number[] }) {
             axisLine={false}
             tickLine={false}
           />
-          <Tooltip />
+          <Tooltip labelFormatter={value => t("Episode {count}", { count: String(value) })} />
           <Line
             type="monotone"
+            name={t("Training reward")}
             dataKey="reward"
-            stroke="#087f72"
+            stroke="#A6492D"
             strokeWidth={1.4}
             dot={false}
             isAnimationActive={false}
@@ -197,6 +202,7 @@ export function ReturnChart({ returns }: { returns: number[] }) {
   );
 }
 export function QueueChart({ reports }: { reports: RunReport[] }) {
+  const { t } = useI18n();
   const rows = reports.flatMap((r) =>
     r.curve.map((p) => ({
       step: p.step,
@@ -229,7 +235,7 @@ export function QueueChart({ reports }: { reports: RunReport[] }) {
             axisLine={false}
             tickLine={false}
           />
-          <Tooltip />
+          <Tooltip labelFormatter={value => t("Simulated step {count}", { count: String(value) })} />
           {policies.map((p) => (
             <Line
               dataKey={p}

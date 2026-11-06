@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "errorCount": 0,
+  "warningCount": 1,
+  "infoCount": 0,
+  "findings": [
+    {
+      "code": "duplicate_media_discovery_risk",
+      "severity": "warning",
+      "message": "Detected 2 matching img entries with the same source/start/duration.",
+      "fixHint": "Avoid duplicated media nodes that can be discovered twice during compilation.",
+      "snippet": "img src=assets/overview-en.png data-start= data-duration=",
+      "file": "/home/chaw/curaloop-rl/lrbc-ui-20261106-v1/motion-walkthrough-v4/index.html"
+    }
+  ],
+  "filesScanned": 1,
+  "_meta": {
+    "version": "0.9.19",
+    "updateAvailable": false
+  }
+}

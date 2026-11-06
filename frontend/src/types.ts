@@ -240,9 +240,9 @@ export const policyNames: Record<Policy, string> = {
   contextual_bandit: "Contextual bandit",
 };
 export const colors: Record<Policy, string> = {
-  random: "#687b8a",
-  greedy: "#087f72",
-  uncertainty: "#b66914",
-  q_learning: "#7958a5",
-  contextual_bandit: "#227cb3",
+  random: "#28282B",
+  greedy: "#A6492D",
+  uncertainty: "#8A641F",
+  q_learning: "#6E5A98",
+  contextual_bandit: "#3F6785",
 };

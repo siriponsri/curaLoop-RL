@@ -1,0 +1,14 @@
+{
+  "schema": "curaloop.ui.cgroup-result.v1",
+  "attempt": "ui-tree-canary-v1",
+  "status": "FAIL",
+  "caps_verified": false,
+  "unit": "curaloop-ui-tree-canary-v1.service",
+  "cpu": 68,
+  "aggregate_cpu_seconds": 0.019877,
+  "retained_cpu_seconds": 900,
+  "all_descendants_absent": true,
+  "payload_exit": null,
+  "error": "FileNotFoundError: [Errno 2] No such file or directory: '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/curaloop-ui-tree-canary-v1.service/cpuset.cpus.effective'",
+  "utc": "2026-11-06T12:21:13Z"
+}

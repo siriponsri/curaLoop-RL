@@ -1,0 +1,14 @@
+{
+  "schema": "curaloop.ui.reconciliation.v1",
+  "attempt": "ui-tree-canary-v2",
+  "token": "d66cd9ee-5b9f-4319-8141-d2810a51d90a",
+  "status": "FAILED_RECONCILED",
+  "reason": "Original collector required cpu.stat after systemd had removed the naturally exited cgroup. Original acceptance is not promoted to PASS.",
+  "aggregate_cpu_seconds": 0.109032,
+  "retained_cpu_seconds": 900,
+  "fresh_absence": {
+    "load_state": "not-found",
+    "cgroup_absent": true
+  },
+  "original_proof_sha256": "c7aee7a7799c32e7e48c4f18e9ba31e5e61f82947b644fcc02e4a81f2783d21c"
+}

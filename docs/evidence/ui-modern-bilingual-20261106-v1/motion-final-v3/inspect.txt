@@ -1,0 +1,121 @@
+'hyperframes inspect' is deprecated and will be removed in a future release. Use 'hyperframes check' instead.
+{
+  "schemaVersion": 1,
+  "duration": 20,
+  "samples": [
+    2.5,
+    5.3,
+    7.5,
+    10.3,
+    12.5,
+    15.3,
+    17.5
+  ],
+  "tolerance": 2,
+  "strict": false,
+  "collapseStatic": true,
+  "ok": true,
+  "errorCount": 0,
+  "warningCount": 0,
+  "infoCount": 3,
+  "issueCount": 3,
+  "totalIssueCount": 3,
+  "truncated": false,
+  "issues": [
+    {
+      "code": "text_occluded",
+      "severity": "info",
+      "time": 15.3,
+      "selector": "#s3 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > h1:nth-of-type(1)",
+      "containerSelector": "div.pair > figure:nth-of-type(2) > div:nth-of-type(1) > img:nth-of-type(1)",
+      "text": "Trace the source.",
+      "message": "Text is hidden beneath an opaque element.",
+      "rect": {
+        "left": 1432,
+        "top": 348.94,
+        "right": 1850.41,
+        "bottom": 426.94,
+        "width": 418.41,
+        "height": 78
+      },
+      "coveredFraction": 1,
+      "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+      "lifetime": {
+        "start": 0,
+        "end": 20
+      },
+      "firstSeen": 15.3,
+      "lastSeen": 15.3,
+      "occurrences": 1,
+      "heldMs": 0,
+      "times": [
+        15.3
+      ]
+    },
+    {
+      "code": "text_occluded",
+      "severity": "info",
+      "time": 15.3,
+      "selector": "#s3 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > p:nth-of-type(1)",
+      "containerSelector": "div.pair > figure:nth-of-type(2) > div:nth-of-type(1) > img:nth-of-type(1)",
+      "text": "Inspect declared fields, original locators and report identity.",
+      "message": "Text is hidden beneath an opaque element.",
+      "rect": {
+        "left": 1432,
+        "top": 451.3,
+        "right": 1818.2,
+        "bottom": 590.3,
+        "width": 386.2,
+        "height": 139
+      },
+      "coveredFraction": 1,
+      "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+      "lifetime": {
+        "start": 0,
+        "end": 20
+      },
+      "firstSeen": 15.3,
+      "lastSeen": 15.3,
+      "occurrences": 1,
+      "heldMs": 0,
+      "times": [
+        15.3
+      ]
+    },
+    {
+      "code": "text_occluded",
+      "severity": "info",
+      "time": 15.3,
+      "selector": "#s3 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > p:nth-of-type(2)",
+      "containerSelector": "div.pair > figure:nth-of-type(2) > div:nth-of-type(1) > img:nth-of-type(1)",
+      "text": "Cached metadata is not a molecular activity result or a released experiment.",
+      "message": "Text is hidden beneath an opaque element.",
+      "rect": {
+        "left": 1457,
+        "top": 616.8,
+        "right": 1789.03,
+        "bottom": 732.3,
+        "width": 332.03,
+        "height": 115.5
+      },
+      "coveredFraction": 1,
+      "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+      "lifetime": {
+        "start": 0,
+        "end": 20
+      },
+      "firstSeen": 15.3,
+      "lastSeen": 15.3,
+      "occurrences": 1,
+      "heldMs": 0,
+      "times": [
+        15.3
+      ]
+    }
+  ],
+  "_meta": {
+    "version": "0.9.19",
+    "updateAvailable": false,
+    "deprecated": true
+  }
+}

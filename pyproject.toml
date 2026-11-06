@@ -28,6 +28,7 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 curaloop = ["resources/*.json", "resources/*.gz"]
+curaloop_rd = ["resources/*.html", "resources/*.css", "resources/*.js", "resources/*.png"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

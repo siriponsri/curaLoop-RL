@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1920,height=1080">
+<script src="assets/gsap.min.js"></script>
+<style>
+@font-face{font-family:Cura;src:url(assets/NotoSansThai.ttf)}
+*{box-sizing:border-box}html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#F6F4EF;color:#28282B;font-family:Cura,sans-serif}
+#main{width:1920px;height:1080px;position:relative}.scene{position:absolute;inset:0;opacity:0}.scene:first-child{opacity:1}
+.scene-content{width:100%;height:100%;padding:46px 64px 40px;display:flex;flex-direction:column;gap:26px}
+header{display:flex;justify-content:space-between;align-items:center;font-size:26px;border-bottom:1px solid #D9D5CF;padding-bottom:20px}header b{font-size:30px}header span{color:#6A6661}
+.body{display:flex;gap:48px;flex:1;min-height:0;align-items:center}.screen{width:1320px;height:844px;border:1px solid #D9D5CF;overflow:hidden;background:white;border-radius:10px;flex-shrink:0}.screen img{width:100%;height:100%;object-fit:cover;object-position:top}
+.copy{flex:1}h1{font-size:52px;line-height:1.18;letter-spacing:-1.3px;margin:0 0 32px}p{font-size:30px;line-height:1.55;margin:0 0 26px;color:#6A6661}.note{border-left:3px solid #A6492D;padding-left:22px;font-size:25px;color:#A6492D}
+footer{font-size:24px;color:#6A6661;display:flex;justify-content:space-between}.pair{display:flex;gap:30px;flex:1;min-height:0}.pair figure{margin:0;flex:1;min-width:0;display:flex;flex-direction:column;gap:16px}.pair figcaption{font-size:30px;font-weight:600}.pair .screen{width:100%;height:680px}.pair img{object-fit:cover;object-position:top}.pair-title{font-size:48px;margin:0}
+</style></head><body><main id="main" data-composition-id="main" data-start="0" data-duration="20" data-width="1920" data-height="1080">
+<section class="scene" id="s1"><div class="scene-content"><header><b>CuraLoop-RL</b><span>Molecular Studio</span></header><div class="body"><div class="screen"><img src="assets/overview-en.png" alt="Actual English screening overview"></div><div class="copy"><h1>Inspect the candidate.</h1><p>Explore a real historical structure and its public record.</p><p class="note">Outcomes remain hidden until requested and delivered.</p></div></div><footer><span>Animated walkthrough from actual browser captures</span><span>01 / 04</span></footer></div></section>
+<section class="scene" id="s2"><div class="scene-content"><header><b>CuraLoop-RL</b><span>Simulation lab</span></header><div class="body"><div class="screen"><img src="assets/pending-en.png" alt="Actual pending queue"></div><div class="copy"><h1>Follow the queue.</h1><p>Requests reserve simulated budget. Advance time explicitly to receive feedback.</p><p class="note">Pending predictions are never counted as confirmed hits.</p></div></div><footer><span>Historical labels. Simulated cost and timing.</span><span>02 / 04</span></footer></div></section>
+<section class="scene" id="s3"><div class="scene-content"><header><b>CuraLoop-RL</b><span>Evidence workspace</span></header><div class="body"><div class="screen"><img src="assets/workspace-en.png" alt="Actual source-linked metadata workspace"></div><div class="copy"><h1>Trace the source.</h1><p>Inspect declared fields, original locators and report identity.</p><p class="note">Cached metadata is not a molecular activity result or a released experiment.</p></div></div><footer><span>Local report export. No external delivery.</span><span>03 / 04</span></footer></div></section>
+<section class="scene" id="s4"><div class="scene-content"><header><b>CuraLoop-RL</b><span>EN / TH</span></header><h1 class="pair-title">The same campaign. In either language.</h1><div class="pair"><figure><figcaption>English</figcaption><div class="screen"><img src="assets/overview-en.png" alt="Same campaign in English"></div></figure><figure><figcaption lang="th">ภาษาไทย</figcaption><div class="screen"><img src="assets/overview-th.png" alt="Same campaign in Thai"></div></figure></div><footer><span>Language changes preserve the underlying campaign state.</span><span>04 / 04</span></footer></div></section>
+</main><script>
+window.__timelines=window.__timelines||{};
+const tl=gsap.timeline({paused:true});
+tl.fromTo('#s1 .copy',{opacity:0,y:16},{opacity:1,y:0,duration:.55,ease:'power2.out'},.1);
+for(let i=2;i<=4;i++){const at=(i-1)*5;tl.to('#s'+(i-1),{opacity:0,duration:.45,ease:'power2.inOut'},at);tl.to('#s'+i,{opacity:1,duration:.45,ease:'power2.inOut'},at);tl.fromTo('#s'+i+' '+(i===4?'.pair-title':'.copy'),{opacity:0,y:16},{opacity:1,y:0,duration:.55,ease:'power2.out'},at+.15)}
+tl.to('#s4',{opacity:0,duration:.4},19.6);window.__timelines.main=tl;tl.seek(0);
+</script></body></html>
