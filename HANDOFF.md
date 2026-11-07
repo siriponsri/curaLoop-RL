@@ -1,4 +1,21 @@
-# Owner-resume handoff: Frontend Checkpoint
+# Owner-resume handoff: R0 Contribution & Data proposal
+
+## Latest scoped resume, 7 November 2026
+
+The owner resumed phase R0 to request a Contribution & Data proposal after
+choosing decisions at each phase boundary. Start with
+[the R0 proposal](docs/03_research/R0_CONTRIBUTION_DATA_PROPOSAL_20261107.md),
+[the closest-work ledger](docs/02_literature/R0_CLOSEST_WORK_20261107.md) and
+[the source manifest](research/manifests/r0_candidate_sources_20261107_v1.json).
+Status: READY_FOR_OWNER_CONTRIBUTION_DATA_DECISION. Method novelty is not
+established; a new cohort is not qualified. Literature and source/card metadata
+were inspected; no new activity rows, benchmark questions/answers, protected
+final outcomes, training or remote processing were started. Resolve the owner's
+direction before a new intake/qualification contract. No automatic next phase.
+The historical frontend handoff below remains evidence of the delivered product
+checkpoint. Its pause is superseded only within this scoped R0 investigation.
+
+## Historical Frontend Checkpoint handoff
 
 The owner requested a stop after frontend delivery. Finish normal main delivery,
 then wait for explicit owner resume. **Do not start new research from this file.**

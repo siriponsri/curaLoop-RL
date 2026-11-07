@@ -1,5 +1,19 @@
 # Agent instructions: CuraLoop-RL
 
+## Owner resumes phase R0 contribution/data proposal, 7 November 2026
+
+The owner explicitly resumed the new phase-by-phase R0 and requested a
+Contribution & Data proposal. This supersedes the frontend pause only for
+bounded literature/source-metadata investigation and an English decision brief.
+Read docs/03_research/R0_CONTRIBUTION_DATA_PROPOSAL_20261107.md. This new phase R0
+is distinct from the closed historical LR-BC R0. Stop for the owner's research
+direction/data-population decision; do not advance automatically to P1/R1.
+No new training, activity/gold intake, final outcomes, SSH processing, paid model
+service, stopped-source retry, live team write or submission is released by this
+proposal. Old budgets, clocks, reservations, source STOPs and protected identities
+remain unchanged. Candidate data access is not cohort qualification or rights
+clearance. Parent remains sole writer; normal English main delivery is authorized.
+
 ## Owner pause after Frontend Checkpoint, 6 November 2026
 
 Finish the already approved frontend checkpoint, complete return/reread/scoped
