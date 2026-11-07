@@ -46,6 +46,12 @@ Before local processing, verify DOI/source, size/remaining bytes, deadline and
 masking boundaries; no raw activity/results may enter agent context. Existing
 PDF boundary extraction is NOT_RUN on real publisher PDF after403. Raw masked
 internal passages remain private; public packet uses concise paraphrase only.
+Prepared local command: tools/r0r_owner_pdf_intake_v1.py FILE.pdf, triggered
+after owner notification. It checks the fixed filename/DOI, at most4MiB per file,
+remaining bytes/time/CPU, and reserves20CPU seconds per local source. It does not
+poll or retry. Two synthetic PDF-text boundary checks passed; real owner-PDF
+extraction remains NOT_RUN until files arrive. Update review/evidence additively
+after intake; do not overwrite an owner's reference review with the v1 draft.
 
 Private root: .local/r0r-chembl-20261107-v1; 123 files / 1013433 bytes completely
 reread at the latest v2 checkpoint. 48 resource receipts sum to 5.3125 partial

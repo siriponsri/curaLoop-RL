@@ -29,7 +29,7 @@ def save(path, payload):
     os.replace(temporary, path)
 
 class Guard(OSGuard):
-    def __init__(self, name, wall=60):
+    def __init__(self, name, wall=60, cpu_seconds=60):
         PRIVATE.mkdir(parents=True, exist_ok=True)
         self.receipt = PRIVATE / (name + '-resource.json')
         if self.receipt.exists():
@@ -38,13 +38,15 @@ class Guard(OSGuard):
         if remaining <= 0:
             raise RuntimeError('R0-R window exhausted')
         self.started, self.cpu = time.monotonic(), time.process_time()
-        self.wall_limit, self.cpu_limit = min(wall, remaining), 60
+        if not 0 < cpu_seconds <= 60:
+            raise ValueError('CPU limit outside the R0-R job envelope')
+        self.wall_limit, self.cpu_limit = min(wall, remaining), cpu_seconds
         self.ram_limit = 512 * 1024**2
         self.completed, self.lock = threading.Event(), threading.Lock()
         cpu = self._limit_process()
         entry = Path(sys.argv[0]).resolve()
         self.base = {'schema':'curaloop.r0r.resource.v1', 'pid':os.getpid(), 'start_utc':now(),
-                     'cpu_affinity':[cpu], 'cpu_limit_seconds':60,
+                     'cpu_affinity':[cpu], 'cpu_limit_seconds':cpu_seconds,
                      'memory_limit_bytes':self.ram_limit, 'wall_limit_seconds':self.wall_limit,
                      'deadline_utc':DEADLINE.isoformat(), 'descendants_allowed':False,
                      'executable':sys.executable, 'python':sys.version,

@@ -10,8 +10,12 @@ def extract_masked_pdf_methods(raw):
     import html
     with fitz.open(stream=raw,filetype='pdf') as document:
         text='\n'.join(page.get_text() for page in document)
-    start=re.search(r'(?im)^\s*(?:EXPERIMENTAL PROCEDURES|MATERIALS AND METHODS|EXPERIMENTAL SECTION)\s*$',text)
-    finish=re.search(r'(?im)^\s*(?:RESULTS(?: AND DISCUSSION)?|DISCUSSION|CONCLUSIONS?|ACKNOWLEDGMENTS?|ACKNOWLEDGEMENTS?|SUPPORTING INFORMATION|REFERENCES)\s*$',text[start.end():]) if start else None
+    return extract_masked_pdf_text(text)
+
+def extract_masked_pdf_text(text):
+    import html
+    start=re.search(r'(?im)^\s*(?:EXPERIMENTAL PROCEDURES|MATERIALS AND METHODS|EXPERIMENTAL SECTION)[.:]?\s*$',text)
+    finish=re.search(r'(?im)^\s*(?:RESULTS(?: AND DISCUSSION)?|DISCUSSION|CONCLUSIONS?|ACKNOWLEDGMENTS?|ACKNOWLEDGEMENTS?|SUPPORTING INFORMATION|REFERENCES)[.:]?\s*$',text[start.end():]) if start else None
     if not start or not finish:
         return {'status':'QUARANTINE_UNVERIFIED_PDF_SECTION_BOUNDARIES','paragraphs':[],
                 'unmasked_results_or_tables_emitted':False,'all_semantic_outcome_leakage_ruled_out':False}

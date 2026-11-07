@@ -45,6 +45,11 @@ A3 or LR-BC ledgers. No P1/R1 release is implied. Parent remains sole writer.
   Do not persist/emit unmasked full article bodies, tables, figures, results or
   activity values. Record transit bytes/exposure limitations. If a trustworthy
   section boundary cannot be determined, quarantine rather than infer methods.
+  Owner-supplied PDFs use operator-triggered local intake after notification,
+  not folder polling. Reserve 20 CPU seconds per file in addition to existing
+  charges, check the fixed DOI in front matter and the source-byte/size limits,
+  and mask before any agent view. Six local files plus the maximum 48 network
+  reservations and 600 utility seconds fit the unchanged 3600-second ceiling.
 
 ## Scientific question and analysis freeze
 
