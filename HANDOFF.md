@@ -76,7 +76,11 @@ model efficacy or publication readiness. The detailed evidence index is
 `docs/evidence/r0-design-review-20261107-v1/README.md`.
 No product runtime changed; application runtime suite NOT_RUN.
 
-Design checkpoint: recorded after the normal main commit.
+Design checkpoint: `384e3ccf57c433cd3ba6d815b67ca1441281a5eb`.
+This checkpoint was pushed to origin/main and verified against the remote ref
+on 7 November 2026; the worktree was clean. This handoff-only follow-up records
+that immutable checkpoint without changing the protocol, evidence, source scope,
+clocks or reservations. The final delivery HEAD is available from Git.
 Normal English main delivery is authorized. The following R0-DQ-R handoff is
 historical; its former one-hour review proposal has now been executed and closed.
 
