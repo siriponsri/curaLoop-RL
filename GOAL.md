@@ -1,5 +1,12 @@
 # Goal: publishable evidence and a testable R&D product
 
+> **7 November R0 readout:** The owner resumed research and approved ChEMBL37.
+> Bounded metadata execution is complete with scientific advance **REVISE**.
+> Read [the results](docs/03_research/R0_CHEMBL_READINESS_RESULTS_20261107.md)
+> and [HANDOFF.md](HANDOFF.md). No final outcomes or next phase were released.
+> A source-linked benchmark and method novelty remain unestablished. The
+> frontend pause and UI execution wording below are historical checkpoints.
+
 > **Owner checkpoint: pause after frontend delivery.** Molecular Studio for the
 > main app and additive C Workspace is complete in EN/TH. Read the
 > [frontend checkpoint](docs/06_execution/FRONTEND_CHECKPOINT_20261106.md) and

@@ -1,5 +1,11 @@
 # Evidence-led implementation plan
 
+> **7 November R0 readout complete:** structural ChEMBL37 metadata PASS,
+> scientific advance REVISE. The source ledger is closed. See
+> [the readout and proposed R0-R](docs/03_research/R0_CHEMBL_READINESS_RESULTS_20261107.md).
+> The owner decides whether to release a reference-feasibility revision; no
+> automatic next phase. Older pause/UI/roadmap entries below are historical.
+
 > **Owner checkpoint: pause after frontend delivery.** Molecular Studio for the
 > main app and additive C Workspace is complete in EN/TH. Read the
 > [frontend checkpoint](docs/06_execution/FRONTEND_CHECKPOINT_20261106.md) and

@@ -11,6 +11,11 @@ kept final outcomes closed and retained joint decisions before phase transitions
 The original proposal status above records its publication checkpoint. The
 current frontier is [the readiness plan](R0_CHEMBL_DATA_READINESS_PLAN_20261107.md).
 
+Execution update: the owner released the bounded R0 plan and explicitly switched
+the candidate to ChEMBL37. The completed [readout](R0_CHEMBL_READINESS_RESULTS_20261107.md)
+supersedes that planning frontier: metadata checks passed, scientific advance
+is REVISE, and source intake is closed. No next phase or final outcomes released.
+
 ## Objective and scope
 
 Recommend one falsifiable research direction that can support both a molecular

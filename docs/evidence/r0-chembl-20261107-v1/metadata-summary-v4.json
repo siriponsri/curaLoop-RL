@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "source_release": "ChEMBL_37",
+  "status": "PASS_BOUNDED_METADATA_NOT_SCIENTIFIC_GO",
+  "sample_type": "DETERMINISTIC_CONVENIENCE",
+  "assays": 50,
+  "assay_types": {
+    "B": 25,
+    "F": 25
+  },
+  "document_metadata": 12,
+  "targets": 22,
+  "target_components": 22,
+  "protein_classification_ids": 18,
+  "lineage_records_counted": 82,
+  "component_field_names": [
+    "accession",
+    "component_description",
+    "component_id",
+    "component_type",
+    "relationship",
+    "target_component_synonyms",
+    "target_component_xrefs"
+  ],
+  "classification_field_names": [
+    "class_level",
+    "parent_id",
+    "pref_name",
+    "protein_class_id",
+    "short_name"
+  ],
+  "missing_assay_fields": {
+    "description": 0,
+    "assay_organism": 0,
+    "assay_tax_id": 0,
+    "assay_cell_type": 26,
+    "assay_tissue": 43,
+    "assay_subcellular_fraction": 47,
+    "bao_format": 0,
+    "relationship_type": 0
+  },
+  "doi_present": 12,
+  "document_year_range": [
+    1989,
+    2009
+  ],
+  "document_titles_with_possible_outcome_or_condition_pattern": 0,
+  "descriptions_quarantined": 4,
+  "description_endpoint_mentions": {},
+  "descriptions_without_endpoint_pattern": 50,
+  "document_or_target_connected_components": 12,
+  "component_sizes": [
+    20,
+    8,
+    4,
+    3,
+    3,
+    3,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1
+  ],
+  "verified_independent_biological_families": null,
+  "observed_measurement_support": "NOT_READ_NOT_ESTABLISHED",
+  "natural_ambiguity_gold": "NOT_ADJUDICATED",
+  "text_screen_is_semantic_guarantee": false,
+  "activity_endpoint_requests": 0,
+  "final_outcome_access": false,
+  "method_gain": "NOT_TESTED",
+  "independent_review": "NOT_RUN",
+  "audit_revision": "v4-sealed",
+  "classification_level_counts": {
+    "1": 5,
+    "5": 9,
+    "6": 3,
+    "2": 8,
+    "4": 6,
+    "3": 6,
+    "0": 1
+  },
+  "classification_parent_ids_not_in_sample": 0,
+  "classification_ancestry_closed": true,
+  "target_types": {
+    "SINGLE PROTEIN": 22
+  },
+  "target_organisms": {
+    "Homo sapiens": 16,
+    "Human immunodeficiency virus 1": 1,
+    "Rattus norvegicus": 3,
+    "Cavia porcellus": 2
+  },
+  "service_status_before_after_equal": true,
+  "http_attempts": 24,
+  "successful_metadata_responses": 23,
+  "stopped_sources": [
+    "chembl35-license"
+  ],
+  "decoded_bytes": 531683,
+  "conservative_cpu_charge_seconds": 1740,
+  "resource_receipts": 27,
+  "raw_passages_in_agent_context": false,
+  "current_data_license_source": "ChEMBL37 README and LICENSE pinned separately",
+  "commercial_product_rights": "NOT_CLEARED_AS_A_BLANKET_CLAIM",
+  "scientific_phase_decision": "REVISE_BEFORE_NEXT_PHASE",
+  "protein_classification_ids_initial": 18,
+  "classification_nodes_with_ancestors": 38,
+  "classification_level_1_names": [
+    "Enzyme",
+    "Ion channel",
+    "Membrane receptor",
+    "Other membrane protein",
+    "Transcription factor"
+  ],
+  "source_reconstruction": {
+    "restored_exact_hash_snapshots": [
+      "c698757519f01ecb937b6458bdf32dad5a71dff6dd167af2d0490b911f5db0c4",
+      "1c303cc1c516099980f4bb5d06f140e1fdd686916c213a6ed68a248a49712d52",
+      "4245a2b758e6e637b0570419f9ffda6f570b5416d30d5986118ed3092d5e3241"
+    ],
+    "missing_executed_fetch_source_snapshots": []
+  },
+  "offline_guard_checks": {
+    "endpoint_examples": true,
+    "quantitative_outcome_flag": true,
+    "condition_also_flagged_conservatively": true,
+    "plain_method_not_flagged": true,
+    "categorical_outcome_flag": true,
+    "source_stops_retained": true,
+    "zero_activity_endpoints": true,
+    "request_cap": true,
+    "byte_cap": true,
+    "cpu_reservations_cap": true,
+    "source_snapshot_coverage": true
+  },
+  "certified_independent_family_count": null,
+  "whole_field_null_is_data_defect": false,
+  "feasibility_exposure": "All 50 assay/document identities are metadata-exposed; no final-role reassignment",
+  "receipt_cpu_seconds_sum_partial_measurement": 2.078125,
+  "receipt_cpu_sum_excludes_unmeasured_setup_utilities": true,
+  "phase_work_status": "READOUT_COMPLETE_SCIENTIFIC_GATE_REVISE",
+  "next_phase_released": false,
+  "snapshot_is_full_release_archive": false,
+  "biological_family_oracle": "NOT_ESTABLISHED"
+}

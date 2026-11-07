@@ -1,4 +1,42 @@
-# Owner-resume handoff: R0 ChEMBL data-readiness plan
+# Owner-review handoff: R0 readout with REVISE
+
+## Current R0 checkpoint, 7 November 2026
+
+The owner authorized the bounded R0 work through its readout and subsequently
+approved switching from historical ChEMBL35 to ChEMBL37 metadata. The execution
+is complete and source intake is CLOSED. Read
+[results/phase decision](docs/03_research/R0_CHEMBL_READINESS_RESULTS_20261107.md),
+[method formalization](docs/03_research/R0_METHOD_FORMALIZATION_20261107.md) and
+[sealed evidence](docs/evidence/r0-chembl-20261107-v1/README.md).
+
+Outcome: structural metadata PASS; scientific advance REVISE_BEFORE_NEXT_PHASE.
+50 assays (25B/25F), 12 documents/DOIs, 22 targets/components; 38 classification
+nodes including closed ancestry, 82 lineage records total. The twelve paper/
+target-connected groups are not twelve certified families. Readout type, measured
+support, protected identity admission and reference truth remain unestablished.
+All sample identities are metadata-exposed; no old final role is reassigned.
+
+24 attempts/23 responses; 531683 decoded bytes. Retain 1740/1800 conservative
+CPU seconds, including 300 utility seconds. The 27 receipts' 2.078125 process-CPU
+seconds are partial measurements, not the entire task cost. Absolute execution
+window 05:43:17Z-09:43:17Z on 7 November; no clock/budget reset.
+The historical35 LICENSE HTTP200/missing-type client STOP remains and was never
+retried. Separate owner-approved37 README/LICENSE/schema and API snapshots were
+verified. Source revisions and failed attempts are retained, not erased.
+
+Private root `.local/r0-chembl-20261107-v1/`: 76 files/737121 bytes were completely
+reread at seal; public index records hashes. No remote jobs, cleanup N/A. Raw
+response bodies/passages remain private; public structural IDs/derived metadata
+carry ChEMBL attribution/CC BY-SA notice. Four descriptions were quarantined as
+possible outcomes/conditions; a pattern is not a semantic guarantee. Final
+outcomes, activity endpoints, fitting, paid services and real team writes stayed
+closed. Independent scientific review NOT_RUN; assessment is parent self-review.
+
+Next owner decision: proposed R0-R reference feasibility, with new bounded
+activity-field projections/masked methods access and resources, or revise/stop.
+No R0-R/P1/R1 execution is released. Do not rerun the sealed intake or old jobs.
+Normal main delivery remains authorized; verify the exact Git state freshly.
+Prior proposal, plan and frontend checkpoints below remain historical evidence.
 
 ## Latest owner decision and plan, 7 November 2026
 

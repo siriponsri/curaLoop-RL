@@ -1,5 +1,39 @@
 # Agent instructions: CuraLoop-RL
 
+## R0 readout closed with REVISE, 7 November 2026
+
+Read docs/03_research/R0_CHEMBL_READINESS_RESULTS_20261107.md and
+docs/03_research/R0_METHOD_FORMALIZATION_20261107.md. The owner-approved switch
+to ChEMBL37 was executed: 50 assays/12 documents/22 targets, 82 target/component/
+classification records; 24 attempts, 531683 decoded bytes. Source intake is
+CLOSED. Retain 1740/1800 conservative CPU seconds and all STOPs; do not reclaim
+reservations. Bounded metadata work is complete; the scientific gate is REVISE,
+not a qualified benchmark, novel method, twelve-family or publication PASS.
+No activity endpoint/final outcomes/training/SSH/team writes occurred. All raw
+passages remain private; source metadata can contain possible outcomes and four
+descriptions were quarantined without displaying them. R0-R is only a proposed
+reference-feasibility revision requiring owner release of new access/resources.
+Do not run its projections/methods intake or advance P1/R1 automatically.
+
+## Owner releases bounded R0 execution, 7 November 2026
+
+Within this phase the owner explicitly selected ChEMBL 37 after reviewing the
+historical-35 access limitation. Current-release metadata snapshots may now be
+used as ChEMBL 37, with before/after status checks and immutable hashes. Do not
+mix 35 and 37 or read activity values. All existing caps/deadlines remain.
+
+The owner authorized continuing R0 to its phase readout. This releases the
+readiness plan's bounded work, not a new phase or unlimited compute/intake.
+Read docs/06_execution/R0_CHEMBL_EXECUTION_CONTRACT_20261107.md. Release time
+2026-11-07T05:43:17Z; deadline 09:43:17Z. New cap 1800 CPU seconds including
+300 seconds reserved for setup/validation/report utilities; one local worker,
+at most one CPU/1 GiB. Max50 assays/20 document metadata/100 lineage records,
+32 source attempts/16 MiB decoded/64 MiB new storage; no retries or unknown
+redirects. Verify historical-release metadata access before sample intake.
+No final outcomes, activity rows, training, SSH jobs, paid services or team writes.
+Material release/population/endpoint/rights/resource changes still need the owner.
+Finish all independent in-scope work and an honest R0 readout; no automatic P1/R1.
+
 ## Owner selects ChEMBL and requests the R0 readiness plan, 7 November 2026
 
 The owner approved the proposed contribution direction, selected ChEMBL as the

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "phase-r0-chembl-readiness-results-20261107-v1",
+  "base_commit": "0de9df4a6b772dcbb90ed291cb4c5d4d9fa1e4bf",
+  "phase_work_status": "READOUT_COMPLETE",
+  "scientific_advance": "REVISE_BEFORE_NEXT_PHASE",
+  "source_intake_status": "CLOSED",
+  "owner_approved_release_change": {"from": "ChEMBL 35 candidate", "to": "ChEMBL 37", "date": "2026-11-07"},
+  "results_document": "docs/03_research/R0_CHEMBL_READINESS_RESULTS_20261107.md",
+  "formalization_document": "docs/03_research/R0_METHOD_FORMALIZATION_20261107.md",
+  "evidence_summary": "docs/evidence/r0-chembl-20261107-v1/metadata-summary-v4.json",
+  "source_ledger": "docs/evidence/r0-chembl-20261107-v1/source-ledger-v1.json",
+  "private_artifact_index": "docs/evidence/r0-chembl-20261107-v1/private-artifact-index-v1.json",
+  "observed": {
+    "assays": 50, "binding": 25, "functional": 25,
+    "document_metadata": 12, "documents_with_doi": 12,
+    "targets": 22, "target_components": 22,
+    "classification_nodes_including_ancestors": 38, "lineage_records": 82,
+    "document_or_target_connected_components": 12,
+    "certified_independent_biological_families": null,
+    "descriptions_quarantined_by_pattern": 4,
+    "natural_ambiguity_reference": "NOT_ADJUDICATED",
+    "measured_panel_support": "NOT_READ_NOT_ESTABLISHED",
+    "protected_identity_cohort_admission": "NOT_RUN_NO_COHORT_ADMITTED"
+  },
+  "accounting": {
+    "attempts": 24, "responses": 23, "decoded_bytes": 531683,
+    "conservative_cpu_seconds_charged": 1740, "cpu_ceiling_seconds": 1800,
+    "utility_seconds_included": 300,
+    "resource_receipts": 27,
+    "partial_receipt_cpu_seconds_sum": 2.078125,
+    "partial_receipts_are_entire_task_cost": false,
+    "historical_budgets_reset": false
+  },
+  "boundaries": {
+    "activity_endpoint_requests": 0,
+    "raw_metadata_may_contain_possible_outcome_text": true,
+    "raw_source_passages_emitted_to_agent": false,
+    "final_outcome_access": false,
+    "training_runs": 0, "remote_jobs": 0, "paid_services": 0, "team_writes": 0,
+    "new_cohort_certified": false, "novel_method_established": false,
+    "journal_ready": false, "next_phase_released": false
+  },
+  "proposed_next": {
+    "id": "R0-R_reference_feasibility", "released": false,
+    "fixed_assays_for_reference_max": 12,
+    "metadata_exposed_assay_projection_scope_max": 50,
+    "assays_admitted_to_activity_projection_max": 12,
+    "projected_activity_records_per_assay_max": 20,
+    "projected_activity_records_total_max": 240,
+    "outcome_free_molecular_identity_records_max": 240,
+    "masked_methods_extracts_max": 12,
+    "source_attempts_max": 48, "decoded_bytes_max": 33554432,
+    "local_cpu_equivalents": 1, "memory_bytes": 1073741824,
+    "cpu_seconds_max": 3600, "elapsed_seconds_max": 28800,
+    "activity_values_allowed": false, "final_outcomes_allowed": false,
+    "new_activity_field_projection_authority_required": true,
+    "reference_reviewer_to_be_designated": true
+  },
+  "independent_review": "NOT_RUN"
+}
