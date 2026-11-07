@@ -85,7 +85,13 @@ or scientific HTTP retry was performed. Source/release/code bytes and every
 failed/unused reservation are retained. Parent is not an independent adjudicator.
 
 Git base: a2cd28e681e2d9fcb5f4e04a7ab4a563deaae87a.
-Scientific checkpoint: recorded in a follow-up after the normal main commit.
+Scientific checkpoint: `0a98b68c7f6fdf94dd671869e504e8e1845eebf7`.
+This checkpoint was pushed to origin/main and verified against the remote ref
+on 7 November 2026; the worktree was clean at that check. This handoff-only
+follow-up records that immutable checkpoint and changes no scientific code,
+evidence, counts, reservations or source access.
+Closed private ledger SHA256:
+`b81b8399af768e7079a552f0060ed242863cf88e46ce37e958bf53a2f47807b2`.
 Normal English main delivery/push is authorized; no force push or phase advance.
 The completed preceding phase details below are historical context.
 
