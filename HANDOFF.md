@@ -1,4 +1,44 @@
-# Owner-review handoff: R0-Design Review
+# Owner handoff: data inventory and independent Deep Research
+
+## Current task completed; independent research next
+
+The owner requested a detailed survey of existing data and a copy-ready prompt
+for a separate ChatGPT Deep Research chat. This metadata/document task is complete;
+it does not release the proposed R0-QC or another scientific budget/window.
+
+Deliverables:
+
+- [Detailed local data inventory](docs/03_research/LOCAL_DATA_INVENTORY_20261107.md)
+- [Complete English Deep Research brief](docs/02_literature/DEEP_RESEARCH_PROMPT_20261107.md)
+- [Scope, integrity and validation evidence](docs/evidence/local-data-inventory-20261107-v1/README.md)
+
+The scoped scan lists 22,309 matching data-like/document files and
+35,649,199,993 summed apparent bytes, including duplicate archives and outputs.
+These are not unique datasets or measured allocated disk space. Twenty-eight
+small files freshly match existing manifests: HIV replay, three Tox21 derivatives
+and 24 FS-Mol feature files. Large archive sizes are current; their cited complete
+digest receipts are historical. Existing authored cards/aggregate reports supplied
+the scientific counts, not a new raw-row enumeration.
+
+No dataset rows, arrays, activity values/presence flags, reserved final outcomes,
+raw DB tables, archive members or source PDF text were opened. No SSH, scientific
+HTTP, model run or new split was performed. All six inspected closed ledger hashes
+are unchanged. The new validation is a local metadata/document check; independent
+biological/reference review and product runtime testing are NOT_RUN.
+
+Next actor: owner. Attach the inventory and paste the full brief into Deep Research,
+then bring its report here for joint interpretation. The prompt asks for primary
+source verification, adversarial novelty review, a feasible dataset/reference
+design, one recommended plan and explicit unknowns. It does not authorize local
+processing, assay-row downloads, paid services, reviewer outreach or journal
+submission. Do not upload private raw archives or final outcomes for this pass.
+
+Inspection base: `1c849d38d7c6b07b20c16f38f2ad6f57251558ea` on main. Normal English
+main documentation delivery remains authorized; obtain the delivery commit from
+Git. Preserve all earlier source STOPs, exposure/protected roles, roots, clocks
+and ledger charges. Do not resume any completed phase from its unused resources.
+
+## Historical R0-Design Review handoff
 
 ## Completed review and next actor
 

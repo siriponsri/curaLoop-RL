@@ -1,0 +1,29 @@
+{
+  "status": "PASS_LOCAL_DATA_INVENTORY_AND_DEEP_RESEARCH_HANDOFF",
+  "checks": [
+    "complete_metadata_scan_with_declared_scope_and_exclusions",
+    "apparent_file_bytes_not_claimed_as_unique_data_or_disk_allocation",
+    "28_existing_small_file_digest_matches_and_fsmol_manifest_counts",
+    "large_archives_and_mfpcba_pdfs_current_size_only_no_fresh_hash_claim",
+    "all_six_old_ledger_hashes_unchanged",
+    "english_handoff_local_links_and_helper_syntax"
+  ],
+  "local_links_checked": 24,
+  "prompt_words": 2309,
+  "document_sha256": {
+    "docs\\03_research\\LOCAL_DATA_INVENTORY_20261107.md": "6c94d10f6fb8d5c2dd183f3e9489a0e133da3229234ab8c934e2de47184fb496",
+    "docs\\02_literature\\DEEP_RESEARCH_PROMPT_20261107.md": "471fa45f729b14a29b2999655363359ff82638d0385115bd6d215e6355613458"
+  },
+  "helper_sha256": {
+    "tools\\inventory_existing_data_v1.py": "dd9c2354f1572a6b545a00f8ee4f56c04d3b41edb59aceec24164e71f7fd1b1f",
+    "tools\\inventory_data_integrity_v1.py": "dbbead8676f7e43eeb007a5ef8818055b963e00ed1072682eac056986234d953",
+    "tools\\finalize_data_handoff_v1.py": "45e24f35fe51677287134e36f3dd35bbdead32471d8b9fa325ee6d00014e87de"
+  },
+  "raw_dataset_rows_or_labels_loaded": false,
+  "old_final_outcomes_opened": false,
+  "source_http_or_ssh": 0,
+  "new_scientific_budget_clock_split_or_model_run": false,
+  "independent_semantic_or_biology_review": "NOT_RUN",
+  "cpu_seconds": 0.03125,
+  "utc": "2026-11-07T15:36:24.995790+00:00"
+}

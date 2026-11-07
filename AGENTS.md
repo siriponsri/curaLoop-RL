@@ -1,5 +1,17 @@
 # Agent instructions: CuraLoop-RL
 
+## Owner requests local data inventory and Deep Research handoff, 7 November 2026
+
+Current task: inspect existing local file metadata and authored manifests/cards/
+receipts in detail, then prepare an English self-contained Deep Research prompt
+and a data inventory for the owner. This is a metadata/document handoff, not
+release of R0-QC or another research budget/clock. No SSH, source HTTP, raw DB/
+archive parsing, activity/label/presence arrays, old final outcomes, new cohort,
+split or model run. Do not silently resume any closed ledger. Raw rows stay
+private. Distinguish current file stat checks from historical digest receipts;
+do not count duplicated return archives as independent data. Parent sole writer;
+normal English main documentation delivery remains authorized.
+
 ## R0-Design Review complete; owner decision next, 7 November 2026
 
 Read docs/03_research/R0_DESIGN_REVIEW_PROTOCOL_20261107.md and

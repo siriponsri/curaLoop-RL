@@ -1,5 +1,14 @@
 # Start here
 
+> **Current: data inventory and independent Deep Research handoff ready.**
+> Attach the [local inventory](docs/03_research/LOCAL_DATA_INVENTORY_20261107.md)
+> to a new ChatGPT Deep Research chat and paste the
+> [complete research brief](docs/02_literature/DEEP_RESEARCH_PROMPT_20261107.md).
+> Raw archives and reserved outcomes are not needed for this research pass.
+> Bring the resulting report back for joint review before any new qualification,
+> protocol change or experiment. R0-QC remains NOT_RELEASED; previous ledgers
+> remain closed. The following review checkpoints are historical context.
+
 > **Latest: R0-Design Review complete; protocol ready for owner/domain review.**
 > Read the [protocol](docs/03_research/R0_DESIGN_REVIEW_PROTOCOL_20261107.md),
 > [decision packet](docs/06_execution/R0_DESIGN_REVIEW_DECISIONS_20261107.md)
