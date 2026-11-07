@@ -58,11 +58,17 @@ verified export receipt, which resides in the separate export-terminal capsule;
 no execution, budget, clock or scientific count changed. The pre-reconciliation
 closed ledger remains private. Full details and failures are in the results.
 
-Remaining authorized work at preparation of this handoff: final document/link/
-provenance review and normal main commit/push. Source base and starting main:
-`9eb7480b9c62dd05fcad18a3f622b87fa01a7a69`. Record the actual delivery checkpoint
-after committing; do not infer remote state from this preparation paragraph.
-Then stop for the owner. Recommended A is a new metadata/task-unit feasibility
+Scientific implementation/code/evidence checkpoint:
+`a3640e15aa88f379974fdcfc04664e0eea5f4c99`. Normal main push and remote readback
+verified that exact HEAD on origin/main with a clean worktree. This handoff
+record is a documentation followup to that verified checkpoint; on resume,
+check actual current HEAD/remote for the later documentation tip. Source base:
+`9eb7480b9c62dd05fcad18a3f622b87fa01a7a69`. Source/code/evidence are unchanged
+by this handoff followup. Document links, JSON, source syntax and staged byte
+identities passed; the full application runtime suite was NOT_RUN because no
+application runtime changed.
+
+Stop for the owner. Recommended A is a new metadata/task-unit feasibility
 package, proposed 4 additional CPU-hours/48 hours, not an automatic R1. Option B
 is a proposed 1-CPU-hour/8-hour local paper-methods review. No paid service,
 paper purchase, team write, source retry, final access or journal submission.
