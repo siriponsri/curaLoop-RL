@@ -1,5 +1,9 @@
 # R0-R reference review packet
 
+Historical S1-only checkpoint. The current packet is
+[version 2](R0R_REFERENCE_REVIEW_V2_20261107.md), incorporating all three
+owner-supplied articles. The earlier source counts below are point-in-time facts.
+
 Date: 7 November 2026. Status: **PENDING_OWNER_REVIEW; NOT INDEPENDENT GOLD**.
 No numerical activity values or protected final outcomes are included.
 

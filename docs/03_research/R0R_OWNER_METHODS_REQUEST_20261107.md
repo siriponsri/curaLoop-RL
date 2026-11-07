@@ -1,5 +1,12 @@
 # R0-R owner source request
 
+**Resolved for the owner's chosen subset, 7 November 2026.** Three main articles
+and two associated supplements were supplied and processed. The owner explicitly
+deferred CHEMBL1136971, CHEMBL1141686 and CHEMBL1156685 because they require
+purchase. No further downloads or purchases are requested. See
+[the results](R0R_OWNER_SUBSET_RESULTS_20261107.md). The six-source request below
+is retained as historical provenance and does not override that restriction.
+
 Six of the seven fixed source documents still lack an admitted methods extract.
 One publisher PDF returned HTTP403; the other five were not found as accessible
 open methods in the checked Europe PMC/OpenAlex locations. Listed repository

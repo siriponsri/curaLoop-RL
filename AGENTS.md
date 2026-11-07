@@ -1,5 +1,39 @@
 # Agent instructions: CuraLoop-RL
 
+## Owner-three-paper subset processed, 7 November 2026
+
+Read docs/03_research/R0R_OWNER_SUBSET_RESULTS_20261107.md and
+R0R_REFERENCE_REVIEW_V2_20261107.md in that directory. All three supplied main
+PDFs were DOI-verified and processed; two title-matched supplements yielded no
+admitted methods and remain quarantined. Other three documents are explicitly
+DEFERRED_BY_OWNER_NO_PURCHASE; do not request/purchase/replace them automatically.
+Document methods now cover4/7sources,9/12frozen cases,7/10admitted cases and26/86
+metadata records (20distinct molecules). This is document context, not exact
+assay mapping or independent gold. All17null units remain unresolved. Parent
+drafts await owner review; scientific gate REVISE, not journal/method GO.
+
+Status AWAITING_OWNER_INPUT; no unattended jobs. Retain3200/3600conservative CPU
+seconds,41HTTP attempts/5STOPs and13076188decoded/read bytes, original
+06:16:25Z-14:16:25Z7November window. One failed20-second local PDF job remains
+charged; a controlled warm-library local-processing repair succeeded on identical
+bytes, without retrying any HTTP STOP or increasing bounds. Final outcomes,
+activity values, training, SSH, paid services and next phase remain closed.
+Authoritative aggregate interim-summary-v6; source-ledger-v3, resource-receipts-v4
+and private-artifact-index-v4 in docs/evidence/r0r-chembl-20261107-v1. Earlier
+source counts/statuses below are historical. The owner participates in reference
+review and any next-phase decision; do not self-certify references as gold.
+
+## Owner supplies three R0-R papers, 7 November 2026
+
+The owner placed three of the six requested articles and explicitly instructed
+using only those three for now because the others require purchase. Resume the
+existing R0-R within its original deadline/caps; do not purchase or replace the
+other sources. Supplied main PDFs: CHEMBL1140224, CHEMBL1140235, CHEMBL1156448;
+the first two also have owner-supplied supplements. Treat supplements as related
+parts of the same articles, verify associations and keep uncertain links pending.
+Retain all twelve frozen cases, the three source-unavailable document roles and
+all previous STOPs. No activity values/final outcomes or next phase are released.
+
 ## R0-R review checkpoint awaits source files, 7 November 2026
 
 Read docs/03_research/R0R_INTERIM_RESULTS_20261107.md,

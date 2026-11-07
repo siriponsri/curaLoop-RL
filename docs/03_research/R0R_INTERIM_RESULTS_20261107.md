@@ -1,5 +1,10 @@
 # R0-R reference feasibility: interim results
 
+Historical checkpoint before owner-supplied PDFs. For the current state, read
+[three-article subset results](R0R_OWNER_SUBSET_RESULTS_20261107.md) and
+[reference review version 2](R0R_REFERENCE_REVIEW_V2_20261107.md). The supplied
+subset is processed; reference review remains pending, with no next phase.
+
 Date: 7 November 2026. Base: ff5d33509e972fd812298d5f99f9c68ed23126c6.
 Status: **REVIEW_READY_SOURCE_LIMITED; R0-R NOT COMPLETE; NEXT PHASE NOT RELEASED**.
 The current frontier requires source files and reference review, not another

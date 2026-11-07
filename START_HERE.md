@@ -1,6 +1,14 @@
 # Start here
 
-> **Owner checkpoint: pause after frontend delivery.** Molecular Studio for the
+> **Current checkpoint, 7 November: R0-R owner subset processed.** Read
+> [three-paper results](docs/03_research/R0R_OWNER_SUBSET_RESULTS_20261107.md),
+> [reference review v2](docs/03_research/R0R_REFERENCE_REVIEW_V2_20261107.md) and
+> [HANDOFF.md](HANDOFF.md). The owner deferred the three purchase-only papers.
+> All three supplied main articles are processed; scientific gate REVISE,
+> reference review pending, no automatic next phase or final outcomes. Earlier
+> pause/UI checkpoint wording below is historical and grants no new work.
+
+> **Historical checkpoint: pause after frontend delivery.** Molecular Studio for the
 > main app and additive C Workspace is complete in EN/TH. Read the
 > [frontend checkpoint](docs/06_execution/FRONTEND_CHECKPOINT_20261106.md) and
 > [HANDOFF.md](HANDOFF.md). Do not begin further research until owner resume.

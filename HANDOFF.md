@@ -1,6 +1,75 @@
-# Owner-source/review handoff: R0-R reference feasibility
+# Owner-review handoff: R0-R three-paper subset
 
-## Current R0-R checkpoint, 7 November 2026
+## Current owner-subset checkpoint, 7 November 2026
+
+The owner supplied three of six requested main PDFs and two related supplements,
+and explicitly instructed using only those three because the others require
+purchase. All three main articles have now been processed. Do not ask for the
+other three, purchase them, substitute papers or refill cases automatically.
+
+Read [subset results](docs/03_research/R0R_OWNER_SUBSET_RESULTS_20261107.md),
+[reference review v2](docs/03_research/R0R_REFERENCE_REVIEW_V2_20261107.md),
+[evidence](docs/evidence/r0r-chembl-20261107-v1/README.md) and
+[execution bounds](docs/06_execution/R0R_EXECUTION_CONTRACT_20261107.md).
+Status OWNER_SUBSET_PROCESSING_COMPLETE_REFERENCE_REVIEW_PENDING;
+scientific gate REVISE_PENDING_REFERENCE_REVIEW, journal NOT_READY.
+R0-R is not self-certified complete; no next phase is released.
+
+Coverage: four source documents including earlier S1; document methods for nine
+of twelve frozen cases. Only seven of ten admitted cases /26of86metadata records
+have that document coverage, representing20distinct molecules. Two projection
+STOPs stay rejected; three source-unavailable cases stay visible. Exact per-assay
+method mapping is unresolved and all17null-unit records are from unavailable
+CHEMBL1136971. Other deferred documents: CHEMBL1141686 and CHEMBL1156685.
+All80molecular checks and4723protected canonical identities remain historical
+authenticated protection evidence; no new structure or activity lookup occurred.
+
+Main PDFs CHEMBL1140224, CHEMBL1140235 and CHEMBL1156448 passed fixed DOI/hash
+checks and supplied16masked procedural blocks. The two supplements title-match
+their main papers but are not publisher-authenticated; neither provides an
+admitted biological-method passage/boundary. Do not call them extra papers.
+Owner full PDFs remain only in the ignored owner-methods input folder; parser
+full-text output is not persisted and no full passages/PDFs go to public Git.
+Numerical masking removes useful construct/protocol identifiers; native PDF
+reading order and semantic separation were not independently verified.
+
+One independent PDF job failed at its20-second CPU ceiling without masked
+output. It remains charged and in the ledger. The repaired reader imports the
+existing library once under a one-CPU/512MiB OS guard, then bounds each file
+phase at20CPU seconds/60wall seconds. A single controlled local repair processed
+the same CHEMBL1140235 bytes successfully; this was no HTTP STOP retry or budget
+increase. Both original failure and successful repair/code hashes are retained.
+
+Retain3200/3600conservativeCPU seconds,41/48HTTP attempts with5STOPs, and
+13076188/33554432decoded/read bytes. Original window06:16:25Z-14:16:25Z on
+7November2026 (ends21:16:25Bangkok). No clock reset, no active background
+workers/monitor, no SSH/GPU/package installation/paid service/team write.
+The400uncharged seconds are not a new grant; seven nominal HTTP slots cannot all
+fit their60-second reservations and do not authorize new calls at this checkpoint.
+
+Fourteen subset checks PASS; all76closedR0private hashes unchanged. At the subset
+checkpoint154private files/1133634bytes and all5owner PDFs were reread; partial
+enclosing-process CPU103.046875seconds excludes overlapping file-phase receipts.
+The final documentation audit adds its receipt and a later private index.
+Authoritative aggregate: interim-summary-v6, source-ledger-v3,
+resource-receipts-v4, private-artifact-index-v4. Older summaries/indexes are
+immutable point-in-time records, not current ledger hashes. Private input root:
+`.local/r0r-chembl-20261107-v1/`. Owner files:
+`research/raw_data/external-benchmarks/chembl-37-r0r/owner-methods/`.
+
+Next actor: owner reviews document notes and case-to-procedure mapping using
+AGREED/REVISE/UNRESOLVED, with source location/reason. Owner review is not
+automatically independent expert gold. If unmasked construct identifiers,
+results/tables or more activity rows are needed, propose the precise change
+before access. Then prepare a phase decision with contribution, population,
+endpoint, closest baselines, acceptance criteria and bounded resources. Do not
+start P1/R1, training/final evaluation or submission automatically.
+
+Delivery preparation starts from main351814ceb6fa8d07b5051aa53ec2da74b66c9f56.
+This handoff is included in the new main delivery; verify its actual resulting
+commit and push status from Git before resuming, not an assumed self hash.
+
+## Historical R0-R checkpoint before owner PDFs, 7 November 2026
 
 The owner explicitly approved the proposed R0-R revision. Read
 [interim results](docs/03_research/R0R_INTERIM_RESULTS_20261107.md),

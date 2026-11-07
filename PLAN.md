@@ -1,10 +1,11 @@
 # Evidence-led implementation plan
 
-> **Current R0-R frontier:** obtain the owner's source files and review the
-> [reference packet](docs/03_research/R0R_REFERENCE_REVIEW_20261107.md).
-> Ten cases/86readout metadata records and80identity checks are admitted;
-> only2cases have source methods for draft review. This is not phase completion
-> or scientific GO. Continue only within the original R0-R authority.
+> **Current R0-R frontier:** the owner's three-paper subset is processed. Review
+> [the twelve-case packet](docs/03_research/R0R_REFERENCE_REVIEW_V2_20261107.md).
+> Document methods cover9/12cases,7/10admitted cases and26/86metadata records;
+> exact mappings and17null units remain unresolved. Other three documents stay
+> deferred without purchase. Reference review and the next-phase decision belong
+> to the owner; no automatic P1/R1, model fitting or final evaluation.
 
 > **7 November R0 readout complete:** structural ChEMBL37 metadata PASS,
 > scientific advance REVISE. The source ledger is closed. See

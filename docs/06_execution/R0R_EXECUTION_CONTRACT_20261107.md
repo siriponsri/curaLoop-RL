@@ -1,5 +1,31 @@
 # R0-R reference-feasibility execution contract
 
+## Owner-provided subset and local-processing clarification
+
+On 7 November the owner supplied three main PDFs and two associated supplements
+and explicitly limited use to those three articles; the other three requested
+documents require purchase and remain deferred. No replacement, purchase or
+additional download is requested. Same original release/deadline, total CPU,
+memory, source-byte and storage ceilings apply; no new phase is released.
+
+One local PDF job exhausted its 20-second CPU ceiling during processing. Its
+receipt and reservation remain charged. The implementation was repaired by
+loading the existing PDF library once under an enclosing one-CPU/512-MiB/60-CPU-
+second OS guard, then applying a 20-second CPU/60-second wall monitor to each
+file. Startup is covered by the retained utility allocation. The unchanged
+supplied bytes were processed in one controlled local repair after checking the
+failure receipt/hash and absence of a prior masked output. This is routine local
+processing within the already approved scope, not a retry of a stopped HTTP
+source or an increased budget. No general retry permission is created.
+
+Supplement association is checked against the already exposed bibliographic
+title when a DOI is absent; uncertainty is retained and unverified method
+boundaries are quarantined. Neither supplement supplies an admitted reference.
+Current evidence/readout: [owner-subset results](../03_research/R0R_OWNER_SUBSET_RESULTS_20261107.md).
+The original release below remains authoritative for all other bounds.
+
+## Original release
+
 Owner approval: 7 November 2026, explicit approval of the proposed R0-R before
 considering another phase. Base: ff5d33509e972fd812298d5f99f9c68ed23126c6.
 Release: 2026-11-07T06:16:25Z (13:16:25 Asia/Bangkok).
