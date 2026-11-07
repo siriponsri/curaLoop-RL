@@ -1,0 +1,64 @@
+{
+  "id": "r0a1-chembl-20261107-v1",
+  "status": "CLOSED",
+  "owner_release": "Explicit approval of option A / R0-A1 at proposal c3a95b4",
+  "release_utc": "2026-11-07T08:17:48+00:00",
+  "deadline_utc": "2026-11-07T16:17:48+00:00",
+  "cpu_cap_seconds": 3600,
+  "utility_reserved_seconds": 600,
+  "worker_reserved_seconds": 360,
+  "source_read_bytes": 17910150,
+  "source_read_cap_bytes": 33554432,
+  "network_requests": 0,
+  "jobs": [
+    {
+      "name": "preflight-v1",
+      "reserved_cpu_seconds": 60,
+      "utility": false,
+      "status": "PASS",
+      "utc": "2026-11-07T08:20:37.614925+00:00"
+    },
+    {
+      "name": "pdf-identifiers-v1",
+      "reserved_cpu_seconds": 120,
+      "utility": false,
+      "status": "PASS",
+      "utc": "2026-11-07T08:21:33.473164+00:00"
+    },
+    {
+      "name": "metadata-parser-repair-v1",
+      "reserved_cpu_seconds": 60,
+      "utility": false,
+      "status": "PASS",
+      "utc": "2026-11-07T08:23:43.641497+00:00"
+    },
+    {
+      "name": "metadata-parser-repair-v2",
+      "reserved_cpu_seconds": 60,
+      "utility": false,
+      "status": "PASS",
+      "utc": "2026-11-07T08:24:31.312390+00:00"
+    },
+    {
+      "name": "support-analysis-v1",
+      "reserved_cpu_seconds": 60,
+      "utility": false,
+      "status": "PASS",
+      "utc": "2026-11-07T08:25:55.911303+00:00"
+    },
+    {
+      "name": "closeout-v1",
+      "reserved_cpu_seconds": 0,
+      "utility": true,
+      "status": "PASS",
+      "utc": "2026-11-07T08:30:20.883467+00:00"
+    }
+  ],
+  "no_automatic_next_phase": true,
+  "prior_r0r_charge_retained_seconds": 3200,
+  "auxiliary_read_allowance_bytes": 1048576,
+  "conservative_total_read_bytes": 18958726,
+  "completed_utc": "2026-11-07T08:30:29.586786+00:00",
+  "readout": "INFEASIBLE_IN_CURRENT_SUBSET",
+  "allowed_next": "Owner direction decision only; no automatic successor"
+}

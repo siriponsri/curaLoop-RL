@@ -1,5 +1,36 @@
 # Agent instructions: CuraLoop-RL
 
+## R0-A1 completed; owner direction decision, 7 November 2026
+
+Read docs/03_research/R0A1_FEASIBILITY_RESULTS_20261107.md and
+docs/06_execution/R0A1_NEXT_DECISION_20261107.md. The one approved audit is
+COMPLETE; INFEASIBLE_IN_CURRENT_SUBSET, overall scientific R0 REVISE. Complete
+allowed metadata already distinguishes relevant contexts. All three admitted
+same-target ghrelin cases refer to one molecule; no molecular-choice panel.
+No incremental eligibility change or independent gold established.12cases/86
+metadata records retained;17null units unresolved. No automatic extraction
+round, dataset expansion, P1/R1 or final access. Next actor owner selects a
+redesign proposal, explicit benchmark pivot or product-first proposal.
+
+R0-A1 ledger CLOSED,960/3600conservativeCPU seconds including600utilities;
+old R0-R3200seconds/STOPs unchanged. No HTTP/SSH/GPU/paid service, activity values,
+new molecules/training/final outcomes/team writes. No background jobs remain.
+One private root .local/r0a1-chembl-20261107-v1; never reset its clock/ledger.
+Latest evidence docs/evidence/r0a1-chembl-20261107-v1. Parent drafts not gold;
+parser-prefix corrections retained, no independent adjudication.
+
+## Owner releases R0-A1, 7 November 2026
+
+The owner selected A at proposal c3a95b4. Execute
+docs/06_execution/R0A1_EXECUTION_CONTRACT_20261107.md and its linked approved
+R0-A1 package. Release08:17:48Z; deadline16:17:48Z, oneCPU-hour including600utility
+seconds, local1CPU/1GiBmax. Fresh .local/r0a1-chembl-20261107-v1 only; old roots,
+ledgers/STOPs unchanged. Use existing inputs only; no HTTP/SSH/GPU/paid service,
+activity values/final outcomes or new phase. Identifier-only preservation is
+released, not unfiltered descriptions/protocol numbers/results. Supplements
+stay quarantined; other three papers deferred. One audit round then owner
+decision; parent drafts are not gold. Earlier NOT_RELEASED wording is historical.
+
 ## Owner-three-paper subset processed, 7 November 2026
 
 Current owner-decision proposal: docs/06_execution/R0R_OWNER_DECISION_OPTIONS_20261107.md.

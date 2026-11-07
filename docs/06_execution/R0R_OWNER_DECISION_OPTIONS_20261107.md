@@ -1,5 +1,11 @@
 # Owner decisions after the R0-R three-paper subset
 
+Execution update: the owner selected A and released R0-A1. Its bounded audit is
+now [complete](../03_research/R0A1_FEASIBILITY_RESULTS_20261107.md), with
+INFEASIBLE_IN_CURRENT_SUBSET and no phase GO. The NOT_RELEASED status below is
+the historical planning checkpoint. Current direction options are
+[here](R0A1_NEXT_DECISION_20261107.md); no successor is released.
+
 Date: 7 November 2026. Inspected main: `54eaed07b2a9dd38d01e1377060ebc06b5b227fb`.
 Status: **READY_FOR_OWNER_DECISION; PROPOSAL ONLY; R0-A1 NOT_RELEASED**.
 This document records options, not a new compute clock, data permission or phase

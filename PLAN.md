@@ -1,5 +1,13 @@
 # Evidence-led implementation plan
 
+> **Current checkpoint: R0-A1 complete.** The approved identifier-aware audit
+> returned INFEASIBLE_IN_CURRENT_SUBSET; scientific R0 remains REVISE. Read
+> [the results](docs/03_research/R0A1_FEASIBILITY_RESULTS_20261107.md) and
+> [owner direction options](docs/06_execution/R0A1_NEXT_DECISION_20261107.md).
+> Complete allowed metadata already distinguishes context; the admitted
+> same-target group has only one molecule. No next phase or extra extraction.
+> Earlier R0-R and proposal-status wording below is historical.
+
 > **Current R0-R frontier:** the owner's three-paper subset is processed. Review
 > [the twelve-case packet](docs/03_research/R0R_REFERENCE_REVIEW_V2_20261107.md).
 > Document methods cover9/12cases,7/10admitted cases and26/86metadata records;

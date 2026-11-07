@@ -1,5 +1,11 @@
 # Goal: publishable evidence and a testable R&D product
 
+> **Current R0-A1 readout:** audit COMPLETE, current twelve-case slice
+> INFEASIBLE for the proposed evidence/molecular-choice test. Scientific R0
+> remains REVISE. See [results](docs/03_research/R0A1_FEASIBILITY_RESULTS_20261107.md).
+> Owner direction decision precedes redesign/benchmark/product proposals and
+> any later phase. No final outcome or new research execution is released.
+
 > **7 November R0-R:** All three owner-supplied articles are processed; the other
 > three requested documents remain deferred without purchase. Read
 > [subset results](docs/03_research/R0R_OWNER_SUBSET_RESULTS_20261107.md) and

@@ -1,0 +1,576 @@
+{
+  "cases": [
+    {
+      "assay_id": "CHEMBL1000140",
+      "document_id": "CHEMBL1140235",
+      "target_id": "CHEMBL4153",
+      "metadata_context": {
+        "assay_chembl_id": "CHEMBL1000140",
+        "document_chembl_id": "CHEMBL1140235",
+        "target_chembl_id": "CHEMBL4153",
+        "assay_type": "B",
+        "bao_format": "BAO_0000249",
+        "assay_organism": "Cavia porcellus",
+        "assay_tissue": "Brain",
+        "assay_cell_type": null,
+        "assay_subcellular_fraction": "Membrane",
+        "description_features": {
+          "entities": [
+            "sigma 1"
+          ],
+          "entity_spans": [
+            {
+              "text": "sigma 1",
+              "start": 41,
+              "end": 48
+            }
+          ],
+          "span_coordinates": "NFKC-normalized original description",
+          "context_flags": [
+            "radioligand_binding"
+          ],
+          "admitted_clauses": 1,
+          "quarantined_clauses": 0,
+          "complete_description_emitted": false,
+          "unmatched_semantics": "UNRESOLVED"
+        },
+        "accepted_records": 0,
+        "review": "AUTHOR_DRAFT_NOT_GOLD"
+      },
+      "source_note": "S3",
+      "readout_units": [],
+      "admitted_record_count": 0,
+      "distinct_molecules": 0,
+      "reference_mapping_draft": "PARTIAL_METHOD_FAMILY_MATCH",
+      "reason": "Sigma-1 binding context has a document-method anchor, but original protocol is cited elsewhere and projection stays rejected",
+      "independent_adjudication": "NOT_RUN",
+      "post_source_eligibility_change": "NOT_ESTABLISHED",
+      "molecular_decision_gain": "NOT_TESTED"
+    },
+    {
+      "assay_id": "CHEMBL1001324",
+      "document_id": "CHEMBL1156448",
+      "target_id": "CHEMBL4616",
+      "metadata_context": {
+        "assay_chembl_id": "CHEMBL1001324",
+        "document_chembl_id": "CHEMBL1156448",
+        "target_chembl_id": "CHEMBL4616",
+        "assay_type": "F",
+        "bao_format": "BAO_0000219",
+        "assay_organism": "Homo sapiens",
+        "assay_tissue": null,
+        "assay_cell_type": "COS-7",
+        "assay_subcellular_fraction": null,
+        "description_features": {
+          "entities": [
+            "Asn305",
+            "COS7"
+          ],
+          "entity_spans": [
+            {
+              "text": "Asn305",
+              "start": 62,
+              "end": 68
+            },
+            {
+              "text": "COS7",
+              "start": 111,
+              "end": 115
+            }
+          ],
+          "span_coordinates": "NFKC-normalized original description",
+          "context_flags": [
+            "inositol_turnover",
+            "mutant_context",
+            "wild_type_context",
+            "constitutive_context",
+            "agonist_context",
+            "inverse_agonist_context"
+          ],
+          "admitted_clauses": 1,
+          "quarantined_clauses": 0,
+          "complete_description_emitted": false,
+          "unmatched_semantics": "UNRESOLVED"
+        },
+        "accepted_records": 0,
+        "review": "AUTHOR_DRAFT_NOT_GOLD"
+      },
+      "source_note": "S4",
+      "readout_units": [],
+      "admitted_record_count": 0,
+      "distinct_molecules": 0,
+      "reference_mapping_draft": "PARTIAL_METHOD_FAMILY_MATCH",
+      "reason": "COS-7/inositol context is already in metadata and source methods; residue-specific construct-to-procedure mapping remains unresolved",
+      "independent_adjudication": "NOT_RUN",
+      "post_source_eligibility_change": "NOT_ESTABLISHED",
+      "molecular_decision_gain": "NOT_TESTED"
+    },
+    {
+      "assay_id": "CHEMBL1000240",
+      "document_id": "CHEMBL1138492",
+      "target_id": "CHEMBL3582",
+      "metadata_context": {
+        "assay_chembl_id": "CHEMBL1000240",
+        "document_chembl_id": "CHEMBL1138492",
+        "target_chembl_id": "CHEMBL3582",
+        "assay_type": "B",
+        "bao_format": "BAO_0000357",
+        "assay_organism": "Homo sapiens",
+        "assay_tissue": null,
+        "assay_cell_type": null,
+        "assay_subcellular_fraction": null,
+        "description_features": {
+          "entities": [],
+          "entity_spans": [],
+          "span_coordinates": "NFKC-normalized original description",
+          "context_flags": [
+            "radioligand_binding",
+            "lipid_preparation"
+          ],
+          "admitted_clauses": 1,
+          "quarantined_clauses": 0,
+          "complete_description_emitted": false,
+          "unmatched_semantics": "UNRESOLVED"
+        },
+        "accepted_records": 4,
+        "review": "AUTHOR_DRAFT_NOT_GOLD"
+      },
+      "source_note": "S1",
+      "readout_units": [
+        "('Ki', 'nM')"
+      ],
+      "admitted_record_count": 4,
+      "distinct_molecules": 4,
+      "reference_mapping_draft": "PARTIAL_METHOD_FAMILY_MATCH",
+      "reason": "Prior S1 binding/lipid context retained; exact preparation unresolved and paired PKC target IDs differ",
+      "independent_adjudication": "NOT_RUN",
+      "post_source_eligibility_change": "NOT_ESTABLISHED",
+      "molecular_decision_gain": "NOT_TESTED"
+    },
+    {
+      "assay_id": "CHEMBL1000649",
+      "document_id": "CHEMBL1136971",
+      "target_id": "CHEMBL233",
+      "metadata_context": {
+        "assay_chembl_id": "CHEMBL1000649",
+        "document_chembl_id": "CHEMBL1136971",
+        "target_chembl_id": "CHEMBL233",
+        "assay_type": "F",
+        "bao_format": "BAO_0000219",
+        "assay_organism": "Homo sapiens",
+        "assay_tissue": null,
+        "assay_cell_type": null,
+        "assay_subcellular_fraction": null,
+        "description_features": {
+          "entities": [],
+          "entity_spans": [],
+          "span_coordinates": "NFKC-normalized original description",
+          "context_flags": [],
+          "admitted_clauses": 0,
+          "quarantined_clauses": 1,
+          "complete_description_emitted": false,
+          "unmatched_semantics": "UNRESOLVED"
+        },
+        "accepted_records": 20,
+        "review": "AUTHOR_DRAFT_NOT_GOLD"
+      },
+      "source_note": null,
+      "readout_units": [
+        "('IC50', 'nM')",
+        "('IC50', None)"
+      ],
+      "admitted_record_count": 20,
+      "distinct_molecules": 20,
+      "reference_mapping_draft": "SOURCE_UNAVAILABLE",
+      "reason": "Owner-deferred paper; no imputation or replacement",
+      "independent_adjudication": "NOT_RUN",
+      "post_source_eligibility_change": "NOT_ESTABLISHED",
+      "molecular_decision_gain": "NOT_TESTED"
+    },
+    {
+      "assay_id": "CHEMBL1000319",
+      "document_id": "CHEMBL1140224",
+      "target_id": "CHEMBL5480",
+      "metadata_context": {
+        "assay_chembl_id": "CHEMBL1000319",
+        "document_chembl_id": "CHEMBL1140224",
+        "target_chembl_id": "CHEMBL5480",
+        "assay_type": "B",
+        "bao_format": "BAO_0000219",
+        "assay_organism": "Homo sapiens",
+        "assay_tissue": null,
+        "assay_cell_type": "K562",
+        "assay_subcellular_fraction": null,
+        "description_features": {
+          "entities": [],
+          "entity_spans": [],
+          "span_coordinates": "NFKC-normalized original description",
+          "context_flags": [],
+          "admitted_clauses": 0,
+          "quarantined_clauses": 1,
+          "complete_description_emitted": false,
+          "unmatched_semantics": "UNRESOLVED"
+        },
+        "accepted_records": 6,
+        "review": "AUTHOR_DRAFT_NOT_GOLD"
+      },
+      "source_note": "S2",
+      "readout_units": [
+        "('Inhibition', '%')"
+      ],
+      "admitted_record_count": 6,
+      "distinct_molecules": 6,
+      "reference_mapping_draft": "PARTIAL_METHOD_FAMILY_MATCH",
+      "reason": "Structured metadata already names K562; multiple source cytotoxicity procedures use that target cell, exact effector/procedure remains unresolved",
+      "independent_adjudication": "NOT_RUN",
+      "post_source_eligibility_change": "NOT_ESTABLISHED",
+      "molecular_decision_gain": "NOT_TESTED"
+    },
+    {
+      "assay_id": "CHEMBL1001155",
+      "document_id": "CHEMBL1141686",
+      "target_id": "CHEMBL3979",
+      "metadata_context": {
+        "assay_chembl_id": "CHEMBL1001155",
+        "document_chembl_id": "CHEMBL1141686",
+        "target_chembl_id": "CHEMBL3979",
+        "assay_type": "F",
+        "bao_format": "BAO_0000219",
+        "assay_organism": "Homo sapiens",
+        "assay_tissue": null,
+        "assay_cell_type": null,
+        "assay_subcellular_fraction": null,
+        "description_features": {
+          "entities": [],
+          "entity_spans": [],
+          "span_coordinates": "NFKC-normalized original description",
+          "context_flags": [
+            "agonist_context"
+          ],
+          "admitted_clauses": 1,
+          "quarantined_clauses": 0,
+          "complete_description_emitted": false,
+          "unmatched_semantics": "UNRESOLVED"
+        },
+        "accepted_records": 20,
+        "review": "AUTHOR_DRAFT_NOT_GOLD"
+      },
+      "source_note": null,
+      "readout_units": [
+        "('EC50', 'nM')"
+      ],
+      "admitted_record_count": 20,
+      "distinct_molecules": 20,
+      "reference_mapping_draft": "SOURCE_UNAVAILABLE",
+      "reason": "Owner-deferred paper; no imputation or replacement",
+      "independent_adjudication": "NOT_RUN",
+      "post_source_eligibility_change": "NOT_ESTABLISHED",
+      "molecular_decision_gain": "NOT_TESTED"
+    },
+    {
+      "assay_id": "CHEMBL1000360",
+      "document_id": "CHEMBL1156685",
+      "target_id": "CHEMBL5491",
+      "metadata_context": {
+        "assay_chembl_id": "CHEMBL1000360",
+        "document_chembl_id": "CHEMBL1156685",
+        "target_chembl_id": "CHEMBL5491",
+        "assay_type": "B",
+        "bao_format": "BAO_0000357",
+        "assay_organism": "Homo sapiens",
+        "assay_tissue": null,
+        "assay_cell_type": null,
+        "assay_subcellular_fraction": null,
+        "description_features": {
+          "entities": [],
+          "entity_spans": [],
+          "span_coordinates": "NFKC-normalized original description",
+          "context_flags": [],
+          "admitted_clauses": 1,
+          "quarantined_clauses": 0,
+          "complete_description_emitted": false,
+          "unmatched_semantics": "UNRESOLVED"
+        },
+        "accepted_records": 20,
+        "review": "AUTHOR_DRAFT_NOT_GOLD"
+      },
+      "source_note": null,
+      "readout_units": [
+        "('IC50', 'nM')"
+      ],
+      "admitted_record_count": 20,
+      "distinct_molecules": 20,
+      "reference_mapping_draft": "SOURCE_UNAVAILABLE",
+      "reason": "Owner-deferred paper; no imputation or replacement",
+      "independent_adjudication": "NOT_RUN",
+      "post_source_eligibility_change": "NOT_ESTABLISHED",
+      "molecular_decision_gain": "NOT_TESTED"
+    },
+    {
+      "assay_id": "CHEMBL1001334",
+      "document_id": "CHEMBL1156448",
+      "target_id": "CHEMBL4616",
+      "metadata_context": {
+        "assay_chembl_id": "CHEMBL1001334",
+        "document_chembl_id": "CHEMBL1156448",
+        "target_chembl_id": "CHEMBL4616",
+        "assay_type": "F",
+        "bao_format": "BAO_0000219",
+        "assay_organism": "Homo sapiens",
+        "assay_tissue": null,
+        "assay_cell_type": "COS-7",
+        "assay_subcellular_fraction": null,
+        "description_features": {
+          "entities": [
+            "COS7",
+            "Ser174"
+          ],
+          "entity_spans": [
+            {
+              "text": "Ser174",
+              "start": 54,
+              "end": 60
+            },
+            {
+              "text": "COS7",
+              "start": 103,
+              "end": 107
+            }
+          ],
+          "span_coordinates": "NFKC-normalized original description",
+          "context_flags": [
+            "inositol_turnover",
+            "mutant_context",
+            "constitutive_context",
+            "agonist_context"
+          ],
+          "admitted_clauses": 1,
+          "quarantined_clauses": 0,
+          "complete_description_emitted": false,
+          "unmatched_semantics": "UNRESOLVED"
+        },
+        "accepted_records": 1,
+        "review": "AUTHOR_DRAFT_NOT_GOLD"
+      },
+      "source_note": "S4",
+      "readout_units": [
+        "('IC50', 'nM')"
+      ],
+      "admitted_record_count": 1,
+      "distinct_molecules": 1,
+      "reference_mapping_draft": "PARTIAL_METHOD_FAMILY_MATCH",
+      "reason": "COS-7/inositol context is already in metadata and source methods; residue-specific construct-to-procedure mapping remains unresolved",
+      "independent_adjudication": "NOT_RUN",
+      "post_source_eligibility_change": "NOT_ESTABLISHED",
+      "molecular_decision_gain": "NOT_TESTED"
+    },
+    {
+      "assay_id": "CHEMBL1000136",
+      "document_id": "CHEMBL1140235",
+      "target_id": "CHEMBL273",
+      "metadata_context": {
+        "assay_chembl_id": "CHEMBL1000136",
+        "document_chembl_id": "CHEMBL1140235",
+        "target_chembl_id": "CHEMBL273",
+        "assay_type": "B",
+        "bao_format": "BAO_0000249",
+        "assay_organism": "Rattus norvegicus",
+        "assay_tissue": "Hippocampus",
+        "assay_cell_type": null,
+        "assay_subcellular_fraction": null,
+        "description_features": {
+          "entities": [
+            "5HT1A"
+          ],
+          "entity_spans": [
+            {
+              "text": "5HT1A",
+              "start": 34,
+              "end": 39
+            }
+          ],
+          "span_coordinates": "NFKC-normalized original description",
+          "context_flags": [
+            "radioligand_binding"
+          ],
+          "admitted_clauses": 1,
+          "quarantined_clauses": 0,
+          "complete_description_emitted": false,
+          "unmatched_semantics": "UNRESOLVED"
+        },
+        "accepted_records": 9,
+        "review": "AUTHOR_DRAFT_NOT_GOLD"
+      },
+      "source_note": "S3",
+      "readout_units": [
+        "('Ki', 'nM')"
+      ],
+      "admitted_record_count": 9,
+      "distinct_molecules": 9,
+      "reference_mapping_draft": "UNRESOLVED",
+      "reason": "Metadata names 5HT1A; admitted methods name sigma subtypes and a separate growth assay, not an exact 5HT1A procedure",
+      "independent_adjudication": "NOT_RUN",
+      "post_source_eligibility_change": "NOT_ESTABLISHED",
+      "molecular_decision_gain": "NOT_TESTED"
+    },
+    {
+      "assay_id": "CHEMBL1001339",
+      "document_id": "CHEMBL1156448",
+      "target_id": "CHEMBL4616",
+      "metadata_context": {
+        "assay_chembl_id": "CHEMBL1001339",
+        "document_chembl_id": "CHEMBL1156448",
+        "target_chembl_id": "CHEMBL4616",
+        "assay_type": "F",
+        "bao_format": "BAO_0000219",
+        "assay_organism": "Homo sapiens",
+        "assay_tissue": null,
+        "assay_cell_type": "COS-7",
+        "assay_subcellular_fraction": null,
+        "description_features": {
+          "entities": [
+            "COS7",
+            "Phe220"
+          ],
+          "entity_spans": [
+            {
+              "text": "Phe220",
+              "start": 54,
+              "end": 60
+            },
+            {
+              "text": "COS7",
+              "start": 103,
+              "end": 107
+            }
+          ],
+          "span_coordinates": "NFKC-normalized original description",
+          "context_flags": [
+            "inositol_turnover",
+            "mutant_context",
+            "constitutive_context",
+            "agonist_context"
+          ],
+          "admitted_clauses": 1,
+          "quarantined_clauses": 0,
+          "complete_description_emitted": false,
+          "unmatched_semantics": "UNRESOLVED"
+        },
+        "accepted_records": 1,
+        "review": "AUTHOR_DRAFT_NOT_GOLD"
+      },
+      "source_note": "S4",
+      "readout_units": [
+        "('IC50', 'nM')"
+      ],
+      "admitted_record_count": 1,
+      "distinct_molecules": 1,
+      "reference_mapping_draft": "PARTIAL_METHOD_FAMILY_MATCH",
+      "reason": "COS-7/inositol context is already in metadata and source methods; residue-specific construct-to-procedure mapping remains unresolved",
+      "independent_adjudication": "NOT_RUN",
+      "post_source_eligibility_change": "NOT_ESTABLISHED",
+      "molecular_decision_gain": "NOT_TESTED"
+    },
+    {
+      "assay_id": "CHEMBL1000241",
+      "document_id": "CHEMBL1138492",
+      "target_id": "CHEMBL299",
+      "metadata_context": {
+        "assay_chembl_id": "CHEMBL1000241",
+        "document_chembl_id": "CHEMBL1138492",
+        "target_chembl_id": "CHEMBL299",
+        "assay_type": "B",
+        "bao_format": "BAO_0000249",
+        "assay_organism": "Homo sapiens",
+        "assay_tissue": null,
+        "assay_cell_type": null,
+        "assay_subcellular_fraction": null,
+        "description_features": {
+          "entities": [],
+          "entity_spans": [],
+          "span_coordinates": "NFKC-normalized original description",
+          "context_flags": [
+            "radioligand_binding",
+            "lipid_preparation"
+          ],
+          "admitted_clauses": 1,
+          "quarantined_clauses": 0,
+          "complete_description_emitted": false,
+          "unmatched_semantics": "UNRESOLVED"
+        },
+        "accepted_records": 4,
+        "review": "AUTHOR_DRAFT_NOT_GOLD"
+      },
+      "source_note": "S1",
+      "readout_units": [
+        "('Ki', 'nM')"
+      ],
+      "admitted_record_count": 4,
+      "distinct_molecules": 4,
+      "reference_mapping_draft": "PARTIAL_METHOD_FAMILY_MATCH",
+      "reason": "Prior S1 binding/lipid context retained; exact preparation unresolved and paired PKC target IDs differ",
+      "independent_adjudication": "NOT_RUN",
+      "post_source_eligibility_change": "NOT_ESTABLISHED",
+      "molecular_decision_gain": "NOT_TESTED"
+    },
+    {
+      "assay_id": "CHEMBL1001341",
+      "document_id": "CHEMBL1156448",
+      "target_id": "CHEMBL4616",
+      "metadata_context": {
+        "assay_chembl_id": "CHEMBL1001341",
+        "document_chembl_id": "CHEMBL1156448",
+        "target_chembl_id": "CHEMBL4616",
+        "assay_type": "F",
+        "bao_format": "BAO_0000219",
+        "assay_organism": "Homo sapiens",
+        "assay_tissue": null,
+        "assay_cell_type": "COS-7",
+        "assay_subcellular_fraction": null,
+        "description_features": {
+          "entities": [
+            "Arg283",
+            "COS7"
+          ],
+          "entity_spans": [
+            {
+              "text": "Arg283",
+              "start": 54,
+              "end": 60
+            },
+            {
+              "text": "COS7",
+              "start": 103,
+              "end": 107
+            }
+          ],
+          "span_coordinates": "NFKC-normalized original description",
+          "context_flags": [
+            "inositol_turnover",
+            "mutant_context",
+            "constitutive_context",
+            "agonist_context"
+          ],
+          "admitted_clauses": 1,
+          "quarantined_clauses": 0,
+          "complete_description_emitted": false,
+          "unmatched_semantics": "UNRESOLVED"
+        },
+        "accepted_records": 1,
+        "review": "AUTHOR_DRAFT_NOT_GOLD"
+      },
+      "source_note": "S4",
+      "readout_units": [
+        "('IC50', 'nM')"
+      ],
+      "admitted_record_count": 1,
+      "distinct_molecules": 1,
+      "reference_mapping_draft": "PARTIAL_METHOD_FAMILY_MATCH",
+      "reason": "COS-7/inositol context is already in metadata and source methods; residue-specific construct-to-procedure mapping remains unresolved",
+      "independent_adjudication": "NOT_RUN",
+      "post_source_eligibility_change": "NOT_ESTABLISHED",
+      "molecular_decision_gain": "NOT_TESTED"
+    }
+  ],
+  "reference_status": "AUTHOR_DRAFT_NOT_GOLD"
+}

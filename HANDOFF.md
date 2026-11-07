@@ -1,6 +1,51 @@
 # Owner-review handoff: R0-R three-paper subset
 
-## Current owner-subset checkpoint, 7 November 2026
+## Latest: completed R0-A1 and next owner decision
+
+The owner approved A at c3a95b4. The single identifier-aware feasibility audit
+is COMPLETE: INFEASIBLE_IN_CURRENT_SUBSET; overall scientific R0 REVISE.
+Read [results](docs/03_research/R0A1_FEASIBILITY_RESULTS_20261107.md),
+[next decision](docs/06_execution/R0A1_NEXT_DECISION_20261107.md),
+[contract](docs/06_execution/R0A1_EXECUTION_CONTRACT_20261107.md) and
+[evidence](docs/evidence/r0a1-chembl-20261107-v1/README.md).
+
+All12cases and86metadata records retained. Metadata already exposes COS-7,
+inositol context and distinct residue anchors. Three admitted ghrelin cases
+each have one record, all CHEMBL509976: one molecular alternative, not a choice
+panel.66mechanical pairs:60different target IDs,3same-target pairs with rejected
+projection,3same-target admitted pairs with context differences already in
+metadata. These are dependent diagnostics, not independent biological samples.
+No paper-only eligibility change or molecular utility is established. Eight
+partial method-family drafts/one unresolved/three unavailable; no independent
+gold or exact mapping adjudication.17null units unchanged.
+
+Core proposed novelty remains unestablished; this is a current-slice support
+failure, not a proof that the general joint-evidence hypothesis is false.
+Next owner choice: A task-first ChEMBL redesign proposal (recommended), B explicit
+benchmark/curation pivot proposal, or C product-first proposal. Those are
+proposal-direction choices only. No automatic new input, extraction round,
+P1/R1, model fitting, final outcomes, publication or team writes.
+
+R0-A1 private root .local/r0a1-chembl-20261107-v1; ledger CLOSED. Fresh release
+08:17:48Z7November, deadline16:17:48Z;960/3600CPU seconds reserved including
+600utilities; local1CPU/512MiB workers (1GiBapprovedmax), zero HTTP/SSH/GPU/
+paid service. No jobs/monitor remain. Old R0/R0-R bytes/charges/STOPs unchanged.
+Latest public readout-v1, case-matrix-v1, pairwise-controls-v1, source/processor
+audit, final-checks-v1, source-ledger-v1, resource-receipts-v1 and private-index-v1
+are in the evidence directory. Raw PDFs/full passages remain private.
+
+Initial regex prefixes in4metadata cases were corrected with stricter delimiter
+rules; v1/v2/v3projections and exact code versions remain retained. V3 keeps
+unambiguous full anchors and excludes unsupported partial notation. Full mutant
+identity is not inferred. Initial metadata projection preceded the identifier
+PDF extraction; repairs followed it. All analysis is exploratory author work.
+Independent scientific review NOT_RUN; application tests NOT_RUN (no UI/engine
+change). The final audit records actual source bytes, hashes, checks and CPU.
+
+Delivery begins from mainc3a95b427772cc27f50bcb7ce52be25fdb938fc4. This handoff
+ships with the new main delivery; check actual commit/push state before resume.
+
+## Historical owner-subset checkpoint, 7 November 2026
 
 Next ready decision: [R0-D6/D7 options and R0-A1 proposal](docs/06_execution/R0R_OWNER_DECISION_OPTIONS_20261107.md).
 The owner requested options; this is planning only. Proposed1CPU-hour/8hours,

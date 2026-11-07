@@ -1,5 +1,12 @@
 # Start here
 
+> **Latest: R0-A1 complete, owner direction needed.** Read
+> [the feasibility result](docs/03_research/R0A1_FEASIBILITY_RESULTS_20261107.md),
+> [options](docs/06_execution/R0A1_NEXT_DECISION_20261107.md) and
+> [HANDOFF.md](HANDOFF.md). The admitted same-target slice has one molecule;
+> no incremental decision value is established. R0 scientific REVISE; no next
+> phase, dataset expansion or final access. Older checkpoints below are history.
+
 > **Current checkpoint, 7 November: R0-R owner subset processed.** Read
 > [three-paper results](docs/03_research/R0R_OWNER_SUBSET_RESULTS_20261107.md),
 > [reference review v2](docs/03_research/R0R_REFERENCE_REVIEW_V2_20261107.md) and
