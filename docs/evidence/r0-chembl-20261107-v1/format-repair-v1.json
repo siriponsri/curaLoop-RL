@@ -1,0 +1,52 @@
+{
+  "status": "PASS_FORMAT_ONLY_REPAIR",
+  "original_delivery_commit": "bdad7ab",
+  "cause": "Windows CRLF in new public JSON artifacts; staged whitespace check returned nonzero before first commit",
+  "repair": "Normalize only new public evidence JSON to UTF-8 LF; preserve private source bytes and hashes",
+  "repairs": [
+    {
+      "path": "docs\\evidence\\r0-chembl-20261107-v1\\dispositions-v1.json",
+      "before_sha256": "7a90edb094375d3af30607c0120c61c3d0f17b3726664a021ad315d04872bf3b",
+      "after_sha256": "23b7711228be08bd8858cde01cb4fd3d24f66b4ac29f4725bcb04c467701e68d",
+      "parsed_json_changed": false
+    },
+    {
+      "path": "docs\\evidence\\r0-chembl-20261107-v1\\final-acceptance-v1.json",
+      "before_sha256": "485d69a26a5c3716287df1e0e7181e0b5d3d374779f1e518514da3d3e33389fd",
+      "after_sha256": "f77355f30f4b84582a8ba5438b92a8335a0c11a1e095794442e7138d13ce2b64",
+      "parsed_json_changed": false
+    },
+    {
+      "path": "docs\\evidence\\r0-chembl-20261107-v1\\metadata-summary-v4.json",
+      "before_sha256": "ff720db674f5088c9aa41816aab618971dcdce6f083cefad8395b3fff66e38e8",
+      "after_sha256": "c84c1735403e855e15c69dae00b0fbb656b68223d44a3eb72c56e8159702cbdd",
+      "parsed_json_changed": false
+    },
+    {
+      "path": "docs\\evidence\\r0-chembl-20261107-v1\\private-artifact-index-v1.json",
+      "before_sha256": "3cc30716c4527e5b4273717d231947445432008931aae775b2b9a557b238a00d",
+      "after_sha256": "19653c56472d76b491572820cf325fbfb5bef1a842a5ddb3800a4d6531e63ffb",
+      "parsed_json_changed": false
+    },
+    {
+      "path": "docs\\evidence\\r0-chembl-20261107-v1\\resource-receipts-v1.json",
+      "before_sha256": "f220816734a2bbaf90d720495a46826ddb046f3aa70e25322a1c078e3ec29f43",
+      "after_sha256": "d05f6d4d4108660ea3ab5a1da6347be3c2f6a13444cd1aa9acdf84b03fdb26df",
+      "parsed_json_changed": false
+    },
+    {
+      "path": "docs\\evidence\\r0-chembl-20261107-v1\\selection-v1.json",
+      "before_sha256": "d25ab45299c2d648c795a2b1df6c345fa79bb601c1f51d19ec2047709ffa1ecc",
+      "after_sha256": "436b8431cfdee073bbf09e6de9cfbb7f2c44b69e7e31f63ca68e17f4bb3f85d0",
+      "parsed_json_changed": false
+    },
+    {
+      "path": "docs\\evidence\\r0-chembl-20261107-v1\\source-ledger-v1.json",
+      "before_sha256": "4a9af3343ef171750b9cc782dd8859b7f2e7e641e0f678f1574a8335464b464f",
+      "after_sha256": "fe21351717592b9e76824a9b7a3548ef490de9077dae623cd83867c5355714f7",
+      "parsed_json_changed": false
+    }
+  ],
+  "source_calls_added": 0,
+  "scientific_values_changed": false
+}

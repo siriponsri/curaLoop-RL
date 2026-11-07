@@ -35,7 +35,7 @@ exports = {
     'resource-receipts-v1.json': {'receipts': receipts},
 }
 for name, payload in exports.items():
-    save(evidence / name, payload)
+    (evidence / name).write_bytes((json.dumps(payload, indent=2) + '\n').encode('utf-8'))
 index = []
 for path in sorted(PRIVATE.rglob('*')):
     if path.is_file():
@@ -46,11 +46,12 @@ assert sum(row['bytes'] for row in index) < 64 * 1024**2
 assert sum(row['bytes'] for row in index if row['path'].endswith('.html')) == ledger['decoded_bytes']
 for row in index:
     assert hashlib.sha256((ROOT / row['path']).read_bytes()).hexdigest() == row['sha256']
-save(evidence / 'private-artifact-index-v1.json', {'status':'PASS_FULL_LOCAL_REREAD',
+index_payload = {'status':'PASS_FULL_LOCAL_REREAD',
      'files': len(index), 'bytes': sum(row['bytes'] for row in index), 'artifacts': index,
      'raw_source_response_payloads_publicly_exported': False,
      'structural_ids_and_derived_metadata_exported': True,
-     'remote_jobs': 0, 'remote_cleanup': 'NOT_APPLICABLE'})
+     'remote_jobs': 0, 'remote_cleanup': 'NOT_APPLICABLE'}
+(evidence / 'private-artifact-index-v1.json').write_bytes((json.dumps(index_payload, indent=2) + '\n').encode('utf-8'))
 print(json.dumps({'status':'SEALED_WITH_REVISE_DECISION','attempts':len(ledger['attempts']),
                   'decoded_bytes':ledger['decoded_bytes'], 'resource_receipts':len(receipts),
                   'receipt_cpu_seconds_sum_partial_measurement':summary['receipt_cpu_seconds_sum_partial_measurement'],

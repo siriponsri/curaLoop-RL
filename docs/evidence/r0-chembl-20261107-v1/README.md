@@ -28,5 +28,12 @@ checks. V1 preceded explicit classification lookup; v2 preceded ancestry closure
 v3 included final source accounting but inherited an earlier receipt count.
 V4 reconciles the actual 27 receipts. Scientific conclusion remains REVISE.
 
+The initial delivery's staged whitespace check returned nonzero because the new
+public JSON used Windows CRLF. The check was not honored before that first
+commit. A follow-up normalizes only public JSON to LF, verifies parsed equality
+and rereads all private artifacts again. See format-repair-v1.json; no source
+bytes, scientific values, requests or reservations changed. Future public export
+code writes LF explicitly. Final whitespace and acceptance checks are rerun.
+
 Read the [results and phase decision](../../03_research/R0_CHEMBL_READINESS_RESULTS_20261107.md)
 and [formalization](../../03_research/R0_METHOD_FORMALIZATION_20261107.md).
