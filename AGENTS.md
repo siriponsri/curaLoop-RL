@@ -2,6 +2,12 @@
 
 ## Owner-three-paper subset processed, 7 November 2026
 
+Current owner-decision proposal: docs/06_execution/R0R_OWNER_DECISION_OPTIONS_20261107.md.
+R0-A1 identifier-only reference/decision-support feasibility is NOT_RELEASED.
+Do not unmask identifiers, start its proposed budget/clock or advance phases
+until the owner explicitly selects that concrete package. B/C are proposal-only
+alternatives, not unbounded research/product execution authority.
+
 Read docs/03_research/R0R_OWNER_SUBSET_RESULTS_20261107.md and
 R0R_REFERENCE_REVIEW_V2_20261107.md in that directory. All three supplied main
 PDFs were DOI-verified and processed; two title-matched supplements yielded no

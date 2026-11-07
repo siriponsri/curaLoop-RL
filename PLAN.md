@@ -7,6 +7,10 @@
 > deferred without purchase. Reference review and the next-phase decision belong
 > to the owner; no automatic P1/R1, model fitting or final evaluation.
 
+The [owner decision options and proposed R0-A1](docs/06_execution/R0R_OWNER_DECISION_OPTIONS_20261107.md)
+are ready for review. R0-A1 is NOT_RELEASED; its proposed identifier-only access
+and fresh resource ceiling are not permission to start processing.
+
 > **7 November R0 readout complete:** structural ChEMBL37 metadata PASS,
 > scientific advance REVISE. The source ledger is closed. See
 > [the readout and proposed R0-R](docs/03_research/R0_CHEMBL_READINESS_RESULTS_20261107.md).

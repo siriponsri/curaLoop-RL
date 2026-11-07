@@ -2,6 +2,12 @@
 
 ## Current owner-subset checkpoint, 7 November 2026
 
+Next ready decision: [R0-D6/D7 options and R0-A1 proposal](docs/06_execution/R0R_OWNER_DECISION_OPTIONS_20261107.md).
+The owner requested options; this is planning only. Proposed1CPU-hour/8hours,
+local1CPU/1GiB and identifier-only access have NOT been released. No new clock
+or processing root was created. R0-D8 reference-review route follows feasibility;
+the owner is not required to self-certify scientific mappings to unlock planning.
+
 The owner supplied three of six requested main PDFs and two related supplements,
 and explicitly instructed using only those three because the others require
 purchase. All three main articles have now been processed. Do not ask for the
