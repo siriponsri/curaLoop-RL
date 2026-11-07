@@ -146,3 +146,8 @@ docs/05_product/metadata-workspace-v2/OFL.txt whitespace=cr-at-eol,-blank-at-eol
 docs/media/molecular-studio/assets/OFL.txt whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 docs/media/molecular-studio/assets/gsap.min.js whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
 docs/evidence/ui-modern-bilingual-20261106-v1/build-source-v8/command-2.txt whitespace=cr-at-eol,-blank-at-eof
+
+# Retain R0-DQ audit source/release bytes across Windows/Linux checkouts.
+research/taskfirst_dq_v1/*.py -text whitespace=cr-at-eol
+research/manifests/chembl_taskfirst_dq_release_20261107_v1.json -text
+tools/r0dq_*.py -text whitespace=cr-at-eol

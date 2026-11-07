@@ -1,0 +1,109 @@
+{
+  "attempts": [
+    {
+      "name": "chembl37-published-checksums",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_37/checksums.txt",
+      "kind": "release_metadata",
+      "status": "PASS",
+      "utc": "2026-11-07T09:53:21.915256+00:00",
+      "http_status": 200,
+      "decoded_bytes": 790,
+      "sha256": "e949808982cc9f0d08fa16b42ebe75b4e04b511d8b96693c973890e6e024e62a",
+      "output_path": ".local\\chembl-taskfirst-dq-20261107-v1\\chembl37-published-checksums.bin"
+    },
+    {
+      "name": "chembl37-bulk-archive",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_37/chembl_37_sqlite.tar.gz",
+      "kind": "bulk_archive",
+      "status": "PASS_ARCHIVE_DIGEST",
+      "utc": "2026-11-07T09:55:36.235812+00:00",
+      "decoded_bytes": 5764252857,
+      "sha256": "33c203740555f96067710cdfc1c3c55d890660e5908ec5cbf5817492c290d281",
+      "http_status": 200,
+      "reconciled_utc": "2026-11-07T11:56:54.083707+00:00"
+    },
+    {
+      "name": "dq-bibliography-CHEMBL1154073",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.bmc.2009.05.038%22&format=json&resultType=lite&pageSize=2",
+      "kind": "bibliographic_metadata",
+      "status": "PASS_TRANSPORT",
+      "utc": "2026-11-07T11:08:49.565271+00:00",
+      "http_status": 200,
+      "decoded_bytes": 1233,
+      "sha256": "0f6aa6f146609a209bb9d024444a91cbf86ac891b5e0d004f6d6f55fa3f4d61a"
+    },
+    {
+      "name": "dq-bibliography-CHEMBL1821550",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.bmcl.2011.07.006%22&format=json&resultType=lite&pageSize=2",
+      "kind": "bibliographic_metadata",
+      "status": "PASS_TRANSPORT",
+      "utc": "2026-11-07T11:08:51.169383+00:00",
+      "http_status": 200,
+      "decoded_bytes": 1020,
+      "sha256": "3ae315a864777f6727881f5eb7d0887b2b20ffd3764bfd8f728b23e91531d730"
+    },
+    {
+      "name": "dq-bibliography-CHEMBL1145284",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1021%2Fjm049662f%22&format=json&resultType=lite&pageSize=2",
+      "kind": "bibliographic_metadata",
+      "status": "PASS_TRANSPORT",
+      "utc": "2026-11-07T11:08:52.954469+00:00",
+      "http_status": 200,
+      "decoded_bytes": 1164,
+      "sha256": "2f11dcebf5a7dcef98463d81be58bb898c763348895c52bdc47804359be9943a"
+    },
+    {
+      "name": "dq-bibliography-CHEMBL1155513",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.bmcl.2010.04.045%22&format=json&resultType=lite&pageSize=2",
+      "kind": "bibliographic_metadata",
+      "status": "PASS_TRANSPORT",
+      "utc": "2026-11-07T11:08:54.292311+00:00",
+      "http_status": 200,
+      "decoded_bytes": 998,
+      "sha256": "fee3a9b641e927e80a368a3a1ab8054cc80b95f9b153173aca87ef1eaec4c789"
+    },
+    {
+      "name": "dq-oa-location-CHEMBL1154073",
+      "url": "https://api.openalex.org/works/https://doi.org/10.1016/j.bmc.2009.05.038?select=id,doi,open_access,best_oa_location,locations",
+      "kind": "bibliographic_metadata",
+      "status": "PASS_TRANSPORT",
+      "utc": "2026-11-07T11:11:37.699833+00:00",
+      "http_status": 200,
+      "decoded_bytes": 4059,
+      "sha256": "6caed7cecf2934604580a7125a5222c78ef7cf5466eedb0ef0991bf4eadf4abd"
+    },
+    {
+      "name": "dq-oa-location-CHEMBL1821550",
+      "url": "https://api.openalex.org/works/https://doi.org/10.1016/j.bmcl.2011.07.006?select=id,doi,open_access,best_oa_location,locations",
+      "kind": "bibliographic_metadata",
+      "status": "PASS_TRANSPORT",
+      "utc": "2026-11-07T11:11:38.794415+00:00",
+      "http_status": 200,
+      "decoded_bytes": 1902,
+      "sha256": "411ae7e396fca0c638cb17efe7229cdbc35bb4e1c72022d9dc4ccdf976ca4a95"
+    },
+    {
+      "name": "dq-oa-location-CHEMBL1145284",
+      "url": "https://api.openalex.org/works/https://doi.org/10.1021/jm049662f?select=id,doi,open_access,best_oa_location,locations",
+      "kind": "bibliographic_metadata",
+      "status": "PASS_TRANSPORT",
+      "utc": "2026-11-07T11:11:39.855662+00:00",
+      "http_status": 200,
+      "decoded_bytes": 4220,
+      "sha256": "764c4ba26bd3d74adeeefea8616a93cdd4c53146ae83a543020b03d0a3eb9f5c"
+    },
+    {
+      "name": "dq-oa-location-CHEMBL1155513",
+      "url": "https://api.openalex.org/works/https://doi.org/10.1016/j.bmcl.2010.04.045?select=id,doi,open_access,best_oa_location,locations",
+      "kind": "bibliographic_metadata",
+      "status": "PASS_TRANSPORT",
+      "utc": "2026-11-07T11:11:40.617869+00:00",
+      "http_status": 200,
+      "decoded_bytes": 1902,
+      "sha256": "67319e0b945ea93990ab1ae8b570dcf503bfecc9bf7a98a5b3f9d544c5ec105c"
+    }
+  ],
+  "nonbulk_decoded_bytes": 17288,
+  "bulk_decoded_bytes": 5764252857,
+  "inherited_stops_unchanged": true
+}

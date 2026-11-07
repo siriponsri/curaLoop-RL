@@ -1,0 +1,91 @@
+{
+  "archive": {
+    "attempt_number": 1,
+    "bytes": 5764252857,
+    "content_length": 5764252857,
+    "content_type": "application/x-gzip",
+    "elapsed_seconds": 3224.875,
+    "http_status": 200,
+    "numeric_outcomes_emitted": false,
+    "path": "source/chembl_37_sqlite.tar.gz",
+    "published_algorithm": "sha256",
+    "published_digest": "33c203740555f96067710cdfc1c3c55d890660e5908ec5cbf5817492c290d281",
+    "sha256": "33c203740555f96067710cdfc1c3c55d890660e5908ec5cbf5817492c290d281",
+    "started_utc": "2026-11-07T09:55:38.917166+00:00",
+    "status": "PASS_ARCHIVE_DIGEST",
+    "url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_37/chembl_37_sqlite.tar.gz"
+  },
+  "database": {
+    "member": "chembl_37/chembl_37_sqlite/chembl_37.db",
+    "bytes": 30480314368,
+    "sha256": "4be13df3b68e25dcd0bff44bf094033b5aebe98f415acdc8c1cdf380e0c15142"
+  },
+  "archive_entries": [
+    {
+      "path": "chembl_37/chembl_37_sqlite",
+      "bytes": 0,
+      "kind": "directory"
+    },
+    {
+      "path": "chembl_37/chembl_37_sqlite/INSTALL_sqlite",
+      "bytes": 541,
+      "kind": "regular"
+    },
+    {
+      "path": "chembl_37/chembl_37_sqlite/chembl_37.db",
+      "bytes": 30480314368,
+      "kind": "regular"
+    }
+  ],
+  "environment": {
+    "rdkit_version": "2026.09.1",
+    "numpy_version": "2.3.5",
+    "sqlite_runtime": "3.45.1"
+  },
+  "terms": {
+    "status": "PUBLISHED_DIGEST_PINNED",
+    "archive_filename": "chembl_37_sqlite.tar.gz",
+    "archive_url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_37/chembl_37_sqlite.tar.gz",
+    "algorithm": "sha256",
+    "published_digest": "33c203740555f96067710cdfc1c3c55d890660e5908ec5cbf5817492c290d281",
+    "checksum_source_sha256": "e949808982cc9f0d08fa16b42ebe75b4e04b511d8b96693c973890e6e024e62a",
+    "exact_archive_bytes": "TO_BE_CHECKED_ON_SINGLE_GET",
+    "cached_metadata": [
+      {
+        "filename": "directory.html",
+        "sha256": "d42f9357a0e1839d3dbc937362768b1f0fb7e89bfdf58cdc6e0560aa6cb6fbcc",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_37/",
+        "reused_authenticated_cache": true
+      },
+      {
+        "filename": "README",
+        "sha256": "127e85ad43aefa88b5efdd168dbf6814114fdfcc529c23f76f83296a42b67fd3",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_37/README",
+        "reused_authenticated_cache": true
+      },
+      {
+        "filename": "LICENSE",
+        "sha256": "f0c22ca33207ad8a85129a71f1454fcf8f2f71c99e68da5da01538210fa3ffba",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_37/LICENSE",
+        "reused_authenticated_cache": true
+      },
+      {
+        "filename": "schema.html",
+        "sha256": "170021a58a6d8c09ca088eae5ee75c9b9d0b3b457c6428adf63986b9d765f9fb",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_37/chembl_37_schema_documentation.html",
+        "reused_authenticated_cache": true
+      }
+    ],
+    "database_terms": "CC-BY-SA-3.0 as supplied by official release LICENSE",
+    "calculated_proprietary_properties_used": false,
+    "commercial_use_clearance_claim": false
+  },
+  "additional_exposure": {
+    "sha256": "6d028d81793fcaa8105d47b25825deff0a64aa6ad273a4fb686162be224fc711",
+    "bytes": 483627,
+    "canonical_identity_count": 10151,
+    "nonfinal_feature_files_verified": 13
+  },
+  "original_4723_identity_protection_unchanged": true,
+  "raw_source_data_private": true
+}

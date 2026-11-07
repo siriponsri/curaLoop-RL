@@ -1,0 +1,812 @@
+{
+  "receipts": [
+    {
+      "name": "projection-fixtures-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "FAIL_RESOURCE_LIMIT",
+      "wall_seconds": 120.5,
+      "parent_cpu_seconds": 0.046875
+    },
+    {
+      "name": "projection-fixtures-v2",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 0.01600000006146729,
+      "parent_cpu_seconds": 0.015625
+    },
+    {
+      "name": "ssh-admission-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 1.7660000000614673,
+      "parent_cpu_seconds": 0.015625
+    },
+    {
+      "name": "remote-quota-canary-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 1.5,
+      "parent_cpu_seconds": 0.015625
+    },
+    {
+      "name": "source-metadata-v1",
+      "stage": "source",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 1.0,
+      "parent_cpu_seconds": 0.21875
+    },
+    {
+      "name": "remote-download-2026-11-07T0955361095050000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 1.7969999999040738,
+      "parent_cpu_seconds": 0.0625
+    },
+    {
+      "name": "download-archive-v1",
+      "stage": "source",
+      "retained_cpu_limit_seconds": 3600,
+      "status": "PASS",
+      "wall_seconds": 3231.2900350280106,
+      "aggregate_tree_cpu_seconds": 125.639168,
+      "exit_code": 0,
+      "resource_limit": null,
+      "stage_result": "PASS_ARCHIVE_DIGEST"
+    },
+    {
+      "name": "remote-poll-2026-11-07T0955515308160000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 1.812000000034459,
+      "parent_cpu_seconds": 0.046875
+    },
+    {
+      "name": "pinned-inputs-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 180,
+      "status": "PASS",
+      "wall_seconds": 55.813000000081956,
+      "parent_cpu_seconds": 7.265625
+    },
+    {
+      "name": "remote-poll-2026-11-07T1006481226030000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 1.1709999999729916,
+      "parent_cpu_seconds": 0.015625
+    },
+    {
+      "name": "input-transfer-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 8.469000000040978,
+      "parent_cpu_seconds": 0.015625
+    },
+    {
+      "name": "frame-rule-freeze-v1",
+      "stage": "frame",
+      "retained_cpu_limit_seconds": 30,
+      "status": "PASS",
+      "wall_seconds": 0.0779999999795109,
+      "parent_cpu_seconds": 0.015625
+    },
+    {
+      "name": "selection-fixtures-v1",
+      "stage": "frame",
+      "retained_cpu_limit_seconds": 30,
+      "status": "PASS",
+      "wall_seconds": 0.0470000000204891,
+      "parent_cpu_seconds": 0.015625
+    },
+    {
+      "name": "selection-fixtures-v2",
+      "stage": "frame",
+      "retained_cpu_limit_seconds": 30,
+      "status": "PASS",
+      "wall_seconds": 0.046999999904073775,
+      "parent_cpu_seconds": 0.03125
+    },
+    {
+      "name": "remote-poll-2026-11-07T1016083136970000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 1.140999999945052,
+      "parent_cpu_seconds": 0.03125
+    },
+    {
+      "name": "remote-poll-2026-11-07T1018357249250000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 1.1719999999040738,
+      "parent_cpu_seconds": 0.03125
+    },
+    {
+      "name": "remote-poll-2026-11-07T1022458510850000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 1.1570000000065193,
+      "parent_cpu_seconds": 0.03125
+    },
+    {
+      "name": "pipeline-fixtures-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 120,
+      "status": "FAIL",
+      "wall_seconds": 0.31299999996554106,
+      "parent_cpu_seconds": 0.03125
+    },
+    {
+      "name": "pipeline-fixtures-v2",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 120,
+      "status": "PASS",
+      "wall_seconds": 4.10999999998603,
+      "parent_cpu_seconds": 0.703125
+    },
+    {
+      "name": "remote-poll-2026-11-07T1027324284180000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 2.218999999924563,
+      "parent_cpu_seconds": 0.046875
+    },
+    {
+      "name": "context-fixtures-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 30,
+      "status": "PASS",
+      "wall_seconds": 0.6099999999860302,
+      "parent_cpu_seconds": 0.140625
+    },
+    {
+      "name": "remote-poll-2026-11-07T1033260217860000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 1.547000000020489,
+      "parent_cpu_seconds": 0.015625
+    },
+    {
+      "name": "remote-poll-2026-11-07T1035257889560000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 1.8130000000819564,
+      "parent_cpu_seconds": 0.015625
+    },
+    {
+      "name": "remote-poll-2026-11-07T1036211484000000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 0.8440000000409782,
+      "parent_cpu_seconds": 0.046875
+    },
+    {
+      "name": "remote-poll-2026-11-07T1037105523840000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 1.515999999945052,
+      "parent_cpu_seconds": 0.03125,
+      "aggregate_tree_cpu_seconds": 0.28125
+    },
+    {
+      "name": "remote-poll-2026-11-07T1038249374960000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 3.297000000020489,
+      "parent_cpu_seconds": 0.046875,
+      "aggregate_tree_cpu_seconds": 0.328125
+    },
+    {
+      "name": "remote-poll-2026-11-07T1039575847230000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 2.577999999979511,
+      "parent_cpu_seconds": 0.046875,
+      "aggregate_tree_cpu_seconds": 0.265625
+    },
+    {
+      "name": "remote-poll-2026-11-07T1041220465620000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 2.35999999998603,
+      "parent_cpu_seconds": 0.03125,
+      "aggregate_tree_cpu_seconds": 0.171875
+    },
+    {
+      "name": "additional-exposed-identities-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 180,
+      "status": "PASS",
+      "wall_seconds": 29.40700000000652,
+      "parent_cpu_seconds": 12.515625,
+      "aggregate_tree_cpu_seconds": 12.875
+    },
+    {
+      "name": "remote-poll-2026-11-07T1042589185100000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 0.8130000000819564,
+      "parent_cpu_seconds": 0.03125,
+      "aggregate_tree_cpu_seconds": 0.25
+    },
+    {
+      "name": "remote-poll-2026-11-07T1044248240530000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 6.422000000020489,
+      "parent_cpu_seconds": 0.046875,
+      "aggregate_tree_cpu_seconds": 0.296875
+    },
+    {
+      "name": "pipeline-fixtures-v3",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 120,
+      "status": "PASS",
+      "wall_seconds": 2.9540000000270084,
+      "parent_cpu_seconds": 0.375
+    },
+    {
+      "name": "remote-poll-2026-11-07T1046011405540000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 1.375,
+      "parent_cpu_seconds": 0.03125,
+      "aggregate_tree_cpu_seconds": 0.203125
+    },
+    {
+      "name": "remote-poll-2026-11-07T1048445189210000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 1.1560000000754371,
+      "parent_cpu_seconds": 0.046875,
+      "aggregate_tree_cpu_seconds": 0.3125
+    },
+    {
+      "name": "remote-poll-2026-11-07T1049379663750000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 5,
+      "status": "PASS",
+      "wall_seconds": 0.9379999999655411,
+      "parent_cpu_seconds": 0.03125,
+      "aggregate_tree_cpu_seconds": 0.25
+    },
+    {
+      "name": "stage-control-2026-11-07T1049525056760000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 4.0,
+      "parent_cpu_seconds": 0.09375,
+      "aggregate_tree_cpu_seconds": 0.4375
+    },
+    {
+      "name": "unpack-v1",
+      "stage": "source",
+      "retained_cpu_limit_seconds": 3600,
+      "status": "FAIL",
+      "wall_seconds": 2.0072736761067063,
+      "aggregate_tree_cpu_seconds": 1.869165,
+      "exit_code": 1,
+      "resource_limit": null,
+      "stage_result": "FAIL_EXTRACTION_OR_SCHEMA"
+    },
+    {
+      "name": "stage-control-2026-11-07T1050202219980000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 0.7349999999860302,
+      "parent_cpu_seconds": 0.03125,
+      "aggregate_tree_cpu_seconds": 0.265625
+    },
+    {
+      "name": "unpack-diagnosis-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 30,
+      "status": "PASS",
+      "wall_seconds": 1.922000000020489,
+      "parent_cpu_seconds": 0.046875,
+      "aggregate_tree_cpu_seconds": 0.234375
+    },
+    {
+      "name": "stage-control-2026-11-07T1051576684610000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 2.6570000000065193,
+      "parent_cpu_seconds": 0.078125,
+      "aggregate_tree_cpu_seconds": 0.46875
+    },
+    {
+      "name": "unpack-v2",
+      "stage": "source",
+      "retained_cpu_limit_seconds": 3000,
+      "status": "PASS",
+      "wall_seconds": 193.311522629112,
+      "aggregate_tree_cpu_seconds": 182.916047,
+      "exit_code": 0,
+      "resource_limit": null,
+      "stage_result": "PASS_VERIFIED_EXTRACTION_AND_SCHEMA"
+    },
+    {
+      "name": "stage-control-2026-11-07T1053185465300000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 1.375,
+      "parent_cpu_seconds": 0.046875,
+      "aggregate_tree_cpu_seconds": 0.265625
+    },
+    {
+      "name": "stage-control-2026-11-07T1054066552810000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 1.2040000000270084,
+      "parent_cpu_seconds": 0.03125,
+      "aggregate_tree_cpu_seconds": 0.203125
+    },
+    {
+      "name": "stage-control-2026-11-07T1055432433530000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 1.875,
+      "parent_cpu_seconds": 0.046875,
+      "aggregate_tree_cpu_seconds": 0.25
+    },
+    {
+      "name": "stage-control-2026-11-07T1055519211690000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 6.155999999959022,
+      "parent_cpu_seconds": 0.109375,
+      "aggregate_tree_cpu_seconds": 0.4375
+    },
+    {
+      "name": "frame-v1",
+      "stage": "frame",
+      "retained_cpu_limit_seconds": 5400,
+      "status": "PASS",
+      "wall_seconds": 0.20222415402531624,
+      "aggregate_tree_cpu_seconds": 0.10090500000000001,
+      "exit_code": 0,
+      "resource_limit": null,
+      "stage_result": "PASS_METADATA_FRAME_FROZEN",
+      "scientific_use": "REJECTED_EMPTY_SQLITE_ENUM_REPRESENTATION; superseded before values"
+    },
+    {
+      "name": "stage-control-2026-11-07T1056142964570000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 1.2189999999245629,
+      "parent_cpu_seconds": 0.03125,
+      "aggregate_tree_cpu_seconds": 0.265625
+    },
+    {
+      "name": "frame-representation-diagnosis-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 30,
+      "status": "PASS",
+      "wall_seconds": 1.5459999999729916,
+      "parent_cpu_seconds": 0.046875,
+      "aggregate_tree_cpu_seconds": 0.1875
+    },
+    {
+      "name": "pipeline-fixtures-v4",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 120,
+      "status": "PASS",
+      "wall_seconds": 0.7660000000614673,
+      "parent_cpu_seconds": 0.265625
+    },
+    {
+      "name": "stage-control-2026-11-07T1057391728970000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 2.875,
+      "parent_cpu_seconds": 0.078125,
+      "aggregate_tree_cpu_seconds": 0.53125
+    },
+    {
+      "name": "frame-v2",
+      "stage": "frame",
+      "retained_cpu_limit_seconds": 1500,
+      "status": "FAIL_STOPPED_QUERY_PLAN",
+      "stage_result": "CONTROLLER_STOPPED_METADATA_QUERY_PLAN",
+      "aggregate_tree_cpu_seconds": 341.240739
+    },
+    {
+      "name": "stage-control-2026-11-07T1059171611630000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 1.5310000000754371,
+      "parent_cpu_seconds": 0.078125,
+      "aggregate_tree_cpu_seconds": 0.28125
+    },
+    {
+      "name": "stage-control-2026-11-07T1101114311990000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 8.25,
+      "parent_cpu_seconds": 0.046875,
+      "aggregate_tree_cpu_seconds": 0.28125
+    },
+    {
+      "name": "metadata-query-plan-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 30,
+      "status": "PASS",
+      "wall_seconds": 1.0790000000270084,
+      "parent_cpu_seconds": 0.046875,
+      "aggregate_tree_cpu_seconds": 0.21875
+    },
+    {
+      "name": "stop-inefficient-frame-v2",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 30,
+      "status": "PASS",
+      "wall_seconds": 1.952999999979511,
+      "parent_cpu_seconds": 0.03125,
+      "aggregate_tree_cpu_seconds": 0.328125
+    },
+    {
+      "name": "pipeline-fixtures-v5",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 120,
+      "status": "PASS",
+      "wall_seconds": 2.062999999965541,
+      "parent_cpu_seconds": 0.453125
+    },
+    {
+      "name": "stage-control-2026-11-07T1104340422560000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 3.969000000040978,
+      "parent_cpu_seconds": 0.109375,
+      "aggregate_tree_cpu_seconds": 0.5625
+    },
+    {
+      "name": "frame-v3",
+      "stage": "frame",
+      "retained_cpu_limit_seconds": 210,
+      "status": "PASS",
+      "wall_seconds": 10.026778591098264,
+      "aggregate_tree_cpu_seconds": 8.884302,
+      "exit_code": 0,
+      "resource_limit": null,
+      "stage_result": "PASS_METADATA_FRAME_FROZEN"
+    },
+    {
+      "name": "stage-control-2026-11-07T1105175519470000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 1.327999999979511,
+      "parent_cpu_seconds": 0.03125,
+      "aggregate_tree_cpu_seconds": 0.21875
+    },
+    {
+      "name": "stage-control-2026-11-07T1106255821070000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 3.76500000001397,
+      "parent_cpu_seconds": 0.109375,
+      "aggregate_tree_cpu_seconds": 0.59375
+    },
+    {
+      "name": "support-v1",
+      "stage": "support",
+      "retained_cpu_limit_seconds": 3600,
+      "status": "PASS",
+      "wall_seconds": 3.2082012540195137,
+      "aggregate_tree_cpu_seconds": 2.573852,
+      "exit_code": 0,
+      "resource_limit": null,
+      "stage_result": "PASS_BOUNDED_SUPPORT_QUALIFICATION"
+    },
+    {
+      "name": "stage-control-2026-11-07T1108065977590000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 3.3429999999934807,
+      "parent_cpu_seconds": 0.09375,
+      "aggregate_tree_cpu_seconds": 0.34375
+    },
+    {
+      "name": "stage-control-2026-11-07T1108229540140000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 3.10999999998603,
+      "parent_cpu_seconds": 0.0625,
+      "aggregate_tree_cpu_seconds": 0.453125
+    },
+    {
+      "name": "context-v1",
+      "stage": "context",
+      "retained_cpu_limit_seconds": 180,
+      "status": "PASS",
+      "wall_seconds": 0.40333060501143336,
+      "aggregate_tree_cpu_seconds": 0.22880299999999998,
+      "exit_code": 0,
+      "resource_limit": null,
+      "stage_result": "PASS_DEVELOPMENT_METADATA_PACKET"
+    },
+    {
+      "name": "stage-control-2026-11-07T1108418609550000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 0.9059999999590218,
+      "parent_cpu_seconds": 0.0,
+      "aggregate_tree_cpu_seconds": 0.1875
+    },
+    {
+      "name": "development-methods-intake-v1",
+      "stage": "context",
+      "retained_cpu_limit_seconds": 600,
+      "status": "PASS",
+      "wall_seconds": 7.452999999979511,
+      "parent_cpu_seconds": 0.328125,
+      "aggregate_tree_cpu_seconds": 0.59375
+    },
+    {
+      "name": "stage-control-2026-11-07T1110519648190000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 3.280999999959022,
+      "parent_cpu_seconds": 0.078125,
+      "aggregate_tree_cpu_seconds": 0.515625
+    },
+    {
+      "name": "context-v2",
+      "stage": "context",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 0.20265542599372566,
+      "aggregate_tree_cpu_seconds": 0.19999299999999998,
+      "exit_code": 0,
+      "resource_limit": null,
+      "stage_result": "PASS_DEVELOPMENT_METADATA_PACKET"
+    },
+    {
+      "name": "stage-control-2026-11-07T1111341888920000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 0.5620000000344589,
+      "parent_cpu_seconds": 0.015625,
+      "aggregate_tree_cpu_seconds": 0.1875
+    },
+    {
+      "name": "development-oa-access-v2",
+      "stage": "context",
+      "retained_cpu_limit_seconds": 180,
+      "status": "PASS",
+      "wall_seconds": 4.436999999918044,
+      "parent_cpu_seconds": 0.390625,
+      "aggregate_tree_cpu_seconds": 0.671875
+    },
+    {
+      "name": "stage-control-2026-11-07T1112479191160000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 3.672000000020489,
+      "parent_cpu_seconds": 0.125,
+      "aggregate_tree_cpu_seconds": 0.4375
+    },
+    {
+      "name": "return-v1",
+      "stage": "closeout",
+      "retained_cpu_limit_seconds": 5400,
+      "status": "PASS",
+      "aggregate_tree_cpu_seconds": 543.423424,
+      "wall_seconds": 553.5654556390364,
+      "stage_result": "PASS_COMPLETE_PRIVATE_EXPORT",
+      "terminal_cgroup_cpu_seconds": 543.487565,
+      "receipt_source": "Verified private export-terminal capsule outside the task-root snapshot"
+    },
+    {
+      "name": "development-context-review-v1",
+      "stage": "context",
+      "retained_cpu_limit_seconds": 30,
+      "status": "PASS",
+      "wall_seconds": 0.2970000000204891,
+      "parent_cpu_seconds": 0.046875
+    },
+    {
+      "name": "stage-control-2026-11-07T1113592683570000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 1.7810000000754371,
+      "parent_cpu_seconds": 0.03125,
+      "aggregate_tree_cpu_seconds": 0.25
+    },
+    {
+      "name": "frozen-frame-readout-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 17.96799999999348,
+      "parent_cpu_seconds": 0.03125,
+      "aggregate_tree_cpu_seconds": 0.234375
+    },
+    {
+      "name": "stage-control-2026-11-07T1115332099570000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 7.218999999924563,
+      "parent_cpu_seconds": 0.03125,
+      "aggregate_tree_cpu_seconds": 0.265625
+    },
+    {
+      "name": "stage-control-2026-11-07T1121223885380000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 1.4849999999860302,
+      "parent_cpu_seconds": 0.0625,
+      "aggregate_tree_cpu_seconds": 0.390625
+    },
+    {
+      "name": "stage-control-2026-11-07T1121444230440000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 4.781000000075437,
+      "parent_cpu_seconds": 0.03125,
+      "aggregate_tree_cpu_seconds": 0.28125
+    },
+    {
+      "name": "stage-control-2026-11-07T1123048026340000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 10,
+      "status": "PASS",
+      "wall_seconds": 1.187999999965541,
+      "parent_cpu_seconds": 0.03125,
+      "aggregate_tree_cpu_seconds": 0.203125
+    },
+    {
+      "name": "return-fetch-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 600,
+      "status": "PASS",
+      "wall_seconds": 737.0,
+      "parent_cpu_seconds": 20.90625,
+      "aggregate_tree_cpu_seconds": 246.03125
+    },
+    {
+      "name": "return-stat-2026-11-07T1127090677510000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 2,
+      "status": "PASS",
+      "wall_seconds": 0.06299999996554106,
+      "parent_cpu_seconds": 0.03125
+    },
+    {
+      "name": "return-stat-2026-11-07T1128479270140000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 2,
+      "status": "PASS",
+      "wall_seconds": 0.09399999992456287,
+      "parent_cpu_seconds": 0.015625
+    },
+    {
+      "name": "return-stat-2026-11-07T1132139930330000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 2,
+      "status": "PASS",
+      "wall_seconds": 0.062000000034458935,
+      "parent_cpu_seconds": 0.03125
+    },
+    {
+      "name": "return-stat-2026-11-07T1135182973700000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 2,
+      "status": "PASS",
+      "wall_seconds": 0.125,
+      "parent_cpu_seconds": 0.0
+    },
+    {
+      "name": "complete-return-reread-v1",
+      "stage": "closeout",
+      "retained_cpu_limit_seconds": 1200,
+      "status": "PASS",
+      "wall_seconds": 701.579000000027,
+      "parent_cpu_seconds": 314.21875
+    },
+    {
+      "name": "reread-stat-2026-11-07T1144446205410000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 2,
+      "status": "PASS",
+      "wall_seconds": 0.10900000005494803,
+      "parent_cpu_seconds": 0.0
+    },
+    {
+      "name": "reread-stat-2026-11-07T1148158423670000",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 2,
+      "status": "PASS",
+      "wall_seconds": 0.1559999999590218,
+      "parent_cpu_seconds": 0.03125
+    },
+    {
+      "name": "return-cleanup-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 180,
+      "status": "PASS",
+      "wall_seconds": 176.09400000004098,
+      "parent_cpu_seconds": 18.828125,
+      "aggregate_tree_cpu_seconds": 19.125
+    },
+    {
+      "name": "remote-exact-cleanup-v1",
+      "stage": "closeout",
+      "retained_cpu_limit_seconds": 600,
+      "status": "PASS",
+      "parent_cpu_seconds": 127.900428092,
+      "stage_result": "PASS_EXACT_DELETE_AFTER_FULL_RETURN"
+    },
+    {
+      "name": "derived-artifact-acceptance-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 30,
+      "status": "PASS",
+      "wall_seconds": 0.5310000000754371,
+      "parent_cpu_seconds": 0.171875
+    },
+    {
+      "name": "phase-readout-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "PASS",
+      "wall_seconds": 3.812999999965541,
+      "parent_cpu_seconds": 0.203125
+    }
+  ],
+  "conservative_retained_seconds": 32910,
+  "early_receipts_without_tree_cpu_are_not_promoted_to_full_measured_cpu": true,
+  "reconciliation": {
+    "reason": "Collector initially looked for the export receipt inside task/jobs; export helper has its separate terminal capsule",
+    "utc": "2026-11-07T12:00:39.453783+00:00",
+    "new_processing_or_budget_reset": false,
+    "v1_retained": true
+  }
+}

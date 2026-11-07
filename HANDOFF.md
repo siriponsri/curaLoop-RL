@@ -1,4 +1,200 @@
-# Owner-review handoff: R0-R three-paper subset
+# Owner-review handoff: R0-DQ
+
+## Completed R0-DQ; owner decision is next
+
+The owner-released audit is **COMPLETE_AWAITING_OWNER_DECISION**, with scientific
+verdict **PILOT_ONLY_REVISE**. Authoritative public records are
+`docs/evidence/chembl-taskfirst-dq-20261107-v1/qualification-summary-v2.json`
+and `resource-receipts-v2.json`. Read
+[results](docs/03_research/R0DQ_QUALIFICATION_RESULTS_20261107.md) and
+[the concrete owner options](docs/06_execution/R0DQ_OWNER_DECISION_20261107.md).
+No next phase or proposed new budget is released.
+
+The full source archive and SQLite/schema checks passed. Final admitted frame:
+8 targets, 121 complete assay graphs, 8,231 topology records and 5,549 source
+molecule IDs. Two IDs matched protected canonical identities and were excluded
+before value queries. Two candidate panels pass 128/64/32 support, with 72 and
+64 shared auxiliary compounds. Both are Ki development diagnostics in one
+historically exposed typed/source group. Validation/final groups are absent.
+Construct/context truth, biological-family certification and independent
+reference gold remain unestablished; no model or molecular utility was run.
+
+Four source DOI/access checks in each of Europe PMC and OpenAlex provided no
+confirmed open methods route. Zero methods bodies were read. Metadata-visible
+tracer differences are not paper-only gains; null variant fields are not wild
+type. No incremental paper fact or independent clear-context control is credited.
+The broad data target failed without lowering floors or replacing candidates.
+
+Release: 2026-11-07T09:41:43Z; original deadline:
+2026-11-10T09:41:43Z. Ledger CLOSED at 2026-11-07T11:56:56Z, 18:56:56 Bangkok,
+after about 2 hours 15 minutes. Conservative retained budget is
+32,910/57,600 seconds (9.14/16 CPU-hours), including failures and utilities,
+not a claim of 9.14 hours of actual measured CPU use. All jobs are terminal.
+Ten scientific HTTP attempts, one bulk request and 17,288 nonbulk decoded bytes;
+no new source STOP/retry. All old clocks, roles, failures and STOPs are unchanged.
+
+All 1,777 current remote regular task files, totaling 36,533,325,290 bytes,
+were returned in the complete private archive and every entry was stream-hashed
+locally. Terminal export helpers/logs were separately returned and hash-checked.
+Archive: 11,070,386,037 bytes, SHA-256
+`981b4ff3d1c0180c70a7b21e11ecef3a24ad2b98011673097b6df0db7e87cefc`.
+The source DB was not expanded locally. Usable extracted code/input/derived
+evidence totals 14,687,964 bytes. Twelve real artifact invariants passed.
+
+Exact local retained archive:
+`C:\Users\User\Desktop\myProject\curaloop-rl\.local\chembl-taskfirst-dq-20261107-v1\remote-return\full-task-v1.tar.gz`.
+Manifest and export capsule: the adjacent `export-terminal` directory;
+usable files: adjacent `files` directory. Raw sources remain outside public Git.
+Private source values are plaintext at rest; the output/role contract is not
+cryptographic isolation from the host owner.
+
+After complete local verification, the exact task and export roots were deleted:
+`/home/chaw/curaloop-runs/chembl-taskfirst-dq-20261107-v1` and the same path plus
+`-export-v1`. Fresh absence passed. No owned background job remains. Never
+recreate these closed roots or replay their jobs.
+
+V1 closeout records are preserved. V2 only fixes the association of the already
+verified export receipt, which resides in the separate export-terminal capsule;
+no execution, budget, clock or scientific count changed. The pre-reconciliation
+closed ledger remains private. Full details and failures are in the results.
+
+Remaining authorized work at preparation of this handoff: final document/link/
+provenance review and normal main commit/push. Source base and starting main:
+`9eb7480b9c62dd05fcad18a3f622b87fa01a7a69`. Record the actual delivery checkpoint
+after committing; do not infer remote state from this preparation paragraph.
+Then stop for the owner. Recommended A is a new metadata/task-unit feasibility
+package, proposed 4 additional CPU-hours/48 hours, not an automatic R1. Option B
+is a proposed 1-CPU-hour/8-hour local paper-methods review. No paid service,
+paper purchase, team write, source retry, final access or journal submission.
+
+All following execution/checkpoint sections are historical snapshots; this
+completed state and the actual v2 evidence supersede their pending wording.
+
+## Active R0-DQ execution, 7 November 2026
+
+### Historical checkpoint: qualification finished; full return in progress
+
+The actual scientific readout is **PILOT_ONLY_REVISE**, not an R1 GO. Read
+[results](docs/03_research/R0DQ_QUALIFICATION_RESULTS_20261107.md),
+[data contract](docs/03_research/R0DQ_DATA_CONTRACT_20261107.md) and
+[owner options](docs/06_execution/R0DQ_OWNER_DECISION_20261107.md).
+The proposed next R0-DQ-R4CPU-hours/48hours package is NOT_RELEASED.
+
+Archive and SQLite/schema verification passed. The actual metadata frame is
+`jobs/frame-v3`:8targets/121assays in one development typed/source unit. All
+121assay topologies are complete:8,231records/5,549molecule IDs. Two known
+source molecule IDs matching protected canonical identities were excluded. Two frozen candidates pass finite
+128-compound panels, with72and64shared auxiliary compounds. Both are Ki,
+development only, with no validation/final groups. Context/construct truth and
+independent family/reference certification remain NOT_RUN.
+
+Four development documents have no confirmed open route in Europe PMC and
+OpenAlex access metadata; zero methods bodies were read. New scientific
+HTTPattempts total10(checksum+bulk+4DOI+4OAmetadata); no new source STOP/retry.
+`development-packet-v2.json` restores radiotracer isotope identifiers as inputs;
+the earlier packet and every prior failure remain. `context-review-v1.json`
+credits no incremental paper facts or independent clear controls.
+
+The reused taxonomy left10,008targets unmapped/ambiguous and merged87broad
+annotations into the surviving development group;980mapped targets failed the
+nominal reference/auxiliary catalog criteria. These are partial catalog
+diagnostics, not a complete mutually exclusive target flow. Caps were not
+binding. There is no basis to claim ChEMBL as a whole infeasible.
+
+Retained repairs: local fixture backup/transaction and import failures; remote
+unpack-v1import failure, repaired by authenticated existing inputs/cache
+invalidation in unpack-v2; empty frame-v1SQLite type spelling; explicitly stopped
+frame-v2inefficient query plan. Frame-v3uses the existing assay index, with the
+same eligibility/ranking rules. No post-value refill or floor reduction.
+The current constructor-shaped integration fixture is pipeline-fixtures-v5.
+
+All remote task files are frozen and export completed:1,777regular files,
+36,533,325,290uncompressed bytes. Export archive11,070,386,037bytes, SHA-256
+`981b4ff3d1c0180c70a7b21e11ecef3a24ad2b98011673097b6df0db7e87cefc`;
+manifest SHA-256
+`6f7affc05267dd564207765596c967a234e69f07645a61de7c0d4e09e54ff806`.
+The return export root is the task root plus `-export-v1`. Its owned service
+`curaloop-dq-return-v1-20261107.service` exited successfully and was stopped by
+the fetch controller. No scientific job remains active.
+
+Local `tools/r0dq_return_v1.py fetch` is actively transferring the full archive,
+with retained utility receipt `return-fetch-v1-resource.json`. Tool process
+session5062was running at this checkpoint. **Do not launch another fetch or
+overwrite the partial file.** Poll the existing process to terminal completion.
+After success, sequentially run `rtk proxy python tools/r0dq_return_v1.py verify`,
+then `cleanup`. Verification stream-hashes every archive entry locally; cleanup
+requires that proof, rechecks all remote file hashes and deletes only the checked
+task/export paths. No remote deletion has been authorized by a completed local
+verification yet. Preserve originals on any failure.
+
+After fresh absence, execute the prepared `r0dq_closeout_v1.py`, inspect actual
+G1-G5/resource/source evidence, finalize this handoff/results/AGENTS/README,
+validate links/JSON/changes, and complete normal English main commit/push.
+Check actual branch/HEAD; the starting main/origin was
+`9eb7480b9c62dd05fcad18a3f622b87fa01a7a69` (verify the exact existing Git SHA;
+the authoritative release manifest records the full base). No R0-DQ commit has
+yet been made at this checkpoint. Then stop for the owner. No new phase,
+source round, numerical utility, model fitting, paid service or submission.
+
+The operational details below describe earlier execution checkpoints. Where
+they say the archive is downloading or stages have not run, this section and
+actual private receipts supersede them.
+
+The owner explicitly released the proposal at `9eb7480` with 16 additional
+CPU-hours, 72 elapsed hours and at most two combined workers. Read
+[the active contract](docs/06_execution/R0DQ_EXECUTION_CONTRACT_20261107.md).
+The earlier planning-only sections below are historical. Release:
+`2026-11-07T09:41:43Z`; absolute deadline: `2026-11-10T09:41:43Z`.
+
+Fresh local root: `.local/chembl-taskfirst-dq-20261107-v1`.
+Fresh remote root: `/home/chaw/curaloop-runs/chembl-taskfirst-dq-20261107-v1`.
+Existing SSH profile `100.77.149.83` authenticates as `chaw` on `dr-train`;
+no key or host configuration was changed. A real systemd canary verified a
+one-core aggregate quota, CPU0 starting affinity, nice19, 4GiB RAM and no swap.
+Local utilities use a single allowed CPU and 256MiB, with 512MiB for the
+constructed RDKit integration fixture. No global dependency installation.
+
+The **single** official archive request is RUNNING in owned unit
+`curaloop-dq-download-20261107-v1.service`. Expected bytes: 5,764,252,857;
+published SHA-256:
+`33c203740555f96067710cdfc1c3c55d890660e5908ec5cbf5817492c290d281`.
+Do not retry, mirror, resume or issue another bulk request. Poll with
+`rtk proxy python tools/r0dq_remote_job_v1.py poll`, using the versioned local
+permit/invocation proof. Check the latest private status; this paragraph is a
+checkpoint, not a final archive-verification claim.
+
+Projection and source-lineage fixtures pass; the real frame/support stages
+have not run. A synthetic SQLite integration test validates the actual stage
+code, protected-identity exclusion before value queries, missingness handling
+and 128/64/32 support floors. Two local fixture failures are retained: the
+initial SQLite transaction/backup wall timeout and the initial unavailable
+global RDKit import. Their bounded repairs passed without a source retry.
+The working environment uses the existing compatible Windows package path
+for synthetic checks and authenticated offline Linux dependencies remotely.
+
+Proceed sequentially only after the archive digest is verified: private
+extraction/schema, metadata frame freeze, complete identity topology/candidate
+freeze, restricted support validation, then development-only context/source
+feasibility. Code is prepared in `tools/r0dq_*` and
+`research/taskfirst_dq_v1`; inspect actual receipts before starting each stage.
+All record-value queries must use the protection-cleared fixed allowlist and
+return only support booleans/counts. No potency, pChEMBL, ranking, model fitting
+or old final outcomes. Candidate biological-family/source units are not
+independently certified families or reference gold.
+
+Before cleanup, export every current remote regular task file, including both
+the source archive and SQLite DB. Fetch the complete private archive, stream
+decompress/hash every entry locally, retain usable code/evidence/derived files,
+then perform the exact verified task/export deletion and fresh absence check.
+Keep the full private archive locally; do not expand the full DB on C:.
+The prepared export/cleanup path requires terminal owned jobs and local
+verification. Any failed return preserves the remote originals.
+
+Finish with the R0-DQ G1-G5 readout, English evidence/documentation and normal
+main commit/push. Then STOP for the owner's phase decision. No automatic R1,
+new qualification round, endpoint expansion, paid service, team write or
+journal submission. Old clocks, roots, failures, source STOPs and charges stay
+unchanged. Parent remains sole writer; no independent reviewer is simulated.
 
 ## Latest: owner-selected task-first dataset/benchmark plan
 

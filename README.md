@@ -60,9 +60,17 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 ## Research and R&D pilot programme
 
-The **Molecular Studio frontend checkpoint is complete; research waits for owner
-resume.** Both the screening application and C Workspace now offer EN/TH,
+The **Molecular Studio frontend checkpoint is complete**. Both the screening application and C Workspace now offer EN/TH,
 Graphite x Copper styling, responsive source inspection and reduced motion.
+
+Latest research: [R0-DQ ChEMBL37 qualification](docs/03_research/R0DQ_QUALIFICATION_RESULTS_20261107.md)
+found two candidates with panels of 128 compounds, both in one development
+split unit. The proposed benchmark of 36 tasks in 18 groups and source/reference truth
+remain unqualified; the readout is **PILOT_ONLY_REVISE**. These are private
+research artifacts pending review, separate from the application's documented
+replay datasets. The owner decides the next phase.
+[Evidence](docs/evidence/chembl-taskfirst-dq-20261107-v1/README.md) ·
+[Next decision](docs/06_execution/R0DQ_OWNER_DECISION_20261107.md)
 
 [Checkpoint and limits](docs/06_execution/FRONTEND_CHECKPOINT_20261106.md) ·
 [English manual,12pages](docs/manual/CuraLoop-RL-Molecular-Studio-Manual-EN-v2.pdf) ·
@@ -85,7 +93,7 @@ native pipe checks and an eleven-response engineering client/server path passed.
 [Core guide](docs/05_product/METADATA_PORTFOLIO_GUIDE_V1.md) ·
 [C evidence](docs/evidence/lrbc-c-20261106-v1/README.md).
 
-Research remains **NOT_READY**. R1 stopped on the third source request after
+Research remains **NOT_READY**. Historical LR-BC R1 stopped on the third source request after
 HTTP504; full molecular qualification and the pilot were NOT_RUN. The real-metadata
 functional comparison tied12/12 versus12/12 using shared decision code, supporting
 the [narrow product continuation](docs/06_execution/B_POTENTIAL_DECISION_LRBC_20261106.md)

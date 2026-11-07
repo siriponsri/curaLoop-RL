@@ -1,5 +1,15 @@
 # Start here
 
+> **Latest: R0-DQ complete, owner decision next.** ChEMBL37 source/schema and
+> complete private return/reread/scoped cleanup passed. Two candidates have
+> panels of 128 compounds in one development unit; the broad benchmark and
+> source/reference truth remain unqualified. Read
+> [results](docs/03_research/R0DQ_QUALIFICATION_RESULTS_20261107.md),
+> [owner options](docs/06_execution/R0DQ_OWNER_DECISION_20261107.md) and
+> [HANDOFF.md](HANDOFF.md). The scientific verdict is PILOT_ONLY_REVISE.
+> No new phase or proposed budget is released. All following checkpoints are
+> historical snapshots, not current execution authority.
+
 > **Latest: review the ChEMBL task-first plan.** The owner approved plan
 > preparation after R0-A1. Read [the design](docs/03_research/CHEMBL_TASKFIRST_DATASET_BENCHMARK_PLAN_20261107.md),
 > [proposed scope/budget/gates](docs/06_execution/CHEMBL_TASKFIRST_DQ_PROPOSAL_20261107.md)

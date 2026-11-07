@@ -1,0 +1,370 @@
+{
+  "schema": "curaloop.r0dq.phase-readout.v1",
+  "phase_status": "COMPLETE_AWAITING_OWNER_DECISION",
+  "scientific_verdict": "PILOT_ONLY_REVISE",
+  "release_utc": "2026-11-07T09:41:43+00:00",
+  "deadline_utc": "2026-11-10T09:41:43+00:00",
+  "closed_utc": "2026-11-07T11:56:56.931021+00:00",
+  "source": {
+    "release": "ChEMBL_37",
+    "archive_bytes": 5764252857,
+    "archive_sha256": "33c203740555f96067710cdfc1c3c55d890660e5908ec5cbf5817492c290d281",
+    "member": "chembl_37/chembl_37_sqlite/chembl_37.db",
+    "bytes": 30480314368,
+    "sha256": "4be13df3b68e25dcd0bff44bf094033b5aebe98f415acdc8c1cdf380e0c15142"
+  },
+  "gates": {
+    "G1_source": "PASS_PINNED_ARCHIVE_SCHEMA_AND_ATTRIBUTION; commercial clearance not established",
+    "G2_protection": "PASS_IMPLEMENTED_KNOWN_IDENTITY_GATES; family/source certification pending",
+    "G3_structural": "FAIL_FULL_SCALE_TARGET; thresholds unchanged",
+    "G4_context": "NOT_ESTABLISHED; see source/access/projection limits",
+    "G5_integrity_return": "PASS_FULL_PRIVATE_RETURN_REREAD_AND_SCOPED_ABSENCE"
+  },
+  "frame": {
+    "status": "PASS_METADATA_FRAME_FROZEN",
+    "targets": 8,
+    "assays": 121,
+    "typed_families": 1,
+    "family_source_components": 1,
+    "component_roles": {
+      "development": 1
+    },
+    "frame_sha256": "55d502f601f81e1a19196f90c9b4001080b38c59f1271c197af070fffb767222",
+    "numeric_outcomes_emitted": false,
+    "wall_seconds": 8.653636687202379
+  },
+  "support": {
+    "status": "PASS_BOUNDED_SUPPORT_QUALIFICATION",
+    "topology_rows": 8231,
+    "complete_assays": 121,
+    "incomplete_assays": 0,
+    "molecule_ids": 5549,
+    "identity_dispositions": {
+      "ADMITTED_IDENTITY": 5547,
+      "EXCLUDE_PROTECTED_EXACT_IDENTITY": 2
+    },
+    "known_exposed_canonical_identity_count": 10151,
+    "row_pruning": {
+      "nonexact_or_unmapped_unit_rows": 295,
+      "protected_or_unresolved_structure_rows": 11
+    },
+    "frozen_candidates": 2,
+    "numeric_validity_rows_checked": 738,
+    "finite_support_rows": 738,
+    "finite_panel_candidates": 2,
+    "available_paired_group_roles": {
+      "development": 1
+    },
+    "reserved_bundles": 2,
+    "reserved_group_roles": {
+      "development": 1
+    },
+    "context_and_reference_certification": "NOT_RUN",
+    "biological_family_certification": "NOT_RUN",
+    "numeric_values_ranks_or_utility_emitted": false,
+    "wall_seconds": 2.8748842671047896
+  },
+  "context": {
+    "status": "COMPLETE_BOUNDED_DEVELOPMENT_SOURCE_INTAKE",
+    "development_bundles": 2,
+    "development_groups": 1,
+    "projected_sources": 0,
+    "activity_values_or_reference_gold_emitted": false,
+    "source_retries": 0,
+    "independent_domain_review": "NOT_RUN"
+  },
+  "context_review": {
+    "status": "PENDING_SOURCE_AND_DOMAIN_REVIEW; FULL_SCALE_TARGET_UNMET",
+    "candidate_decision_sensitive_groups": 0,
+    "clear_context_controls": 0,
+    "independent_gold_established": false,
+    "independent_biological_family_certification": "NOT_RUN",
+    "development_bundles_reviewed_at_metadata_level": 2,
+    "development_split_units": 1,
+    "full_methods_bodies_reviewed": 0,
+    "source_access_evidence": [
+      {
+        "document_chembl_id": "CHEMBL1154073",
+        "doi": "10.1016/j.bmc.2009.05.038",
+        "status": "NO_OPENALEX_OA_LOCATION",
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "locations": []
+      },
+      {
+        "document_chembl_id": "CHEMBL1821550",
+        "doi": "10.1016/j.bmcl.2011.07.006",
+        "status": "NO_OPENALEX_OA_LOCATION",
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "locations": []
+      },
+      {
+        "document_chembl_id": "CHEMBL1145284",
+        "doi": "10.1021/jm049662f",
+        "status": "NO_OPENALEX_OA_LOCATION",
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "locations": []
+      },
+      {
+        "document_chembl_id": "CHEMBL1155513",
+        "doi": "10.1016/j.bmcl.2010.04.045",
+        "status": "NO_OPENALEX_OA_LOCATION",
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "locations": []
+      }
+    ],
+    "bundles": [
+      {
+        "bundle_id": "bundle-a879acbcd25fd1a9dbd4",
+        "target_chembl_id": "CHEMBL256",
+        "reference_type": "Ki",
+        "reference_panel": 128,
+        "shared_union": 72,
+        "context_distinctness": "PENDING_SOURCE_REVIEW",
+        "reference_construct": "UNRESOLVED_NOT_ASSUMED_WILD_TYPE",
+        "incremental_paper_fact": "NOT_ESTABLISHED",
+        "decision_or_molecular_utility": "NOT_RUN"
+      },
+      {
+        "bundle_id": "bundle-11d6c051cb84a6088387",
+        "target_chembl_id": "CHEMBL264",
+        "reference_type": "Ki",
+        "reference_panel": 128,
+        "shared_union": 64,
+        "context_distinctness": "PENDING_SOURCE_REVIEW",
+        "reference_construct": "UNRESOLVED_NOT_ASSUMED_WILD_TYPE",
+        "incremental_paper_fact": "NOT_ESTABLISHED",
+        "decision_or_molecular_utility": "NOT_RUN"
+      }
+    ],
+    "metadata_visible_facts": [
+      "Adenosine A3 pair: one description identifies CHO cells and a NECA radiotracer; the other is a general human A3 binding description.",
+      "Histamine H3 pair: different named radiotracers are already explicit in ChEMBL descriptions. This is not an incremental paper-only fact.",
+      "All four variant fields are null and assay-parameter lists empty. Null does not certify wild type or complete construct equivalence."
+    ],
+    "radiotracer_identifier_projection_repair": "Known isotope identifiers retained in packet v2; earlier packet preserved, no HTTP retry",
+    "mask_omissions_credited_as_natural_uncertainty": false,
+    "no_oa_route_does_not_prove_universal_unavailability": true,
+    "no_source_access_is_not_negative_evidence_against_the_general_adaptive_evidence_hypothesis": true,
+    "reviewer": "parent implementation author only; not a domain or independent reference adjudicator",
+    "next_phase_authorized": false
+  },
+  "cpu_accounting": {
+    "cap_seconds": 57600,
+    "conservative_retained_seconds": 32910,
+    "utility_reserved_seconds": 3600,
+    "stage_reserved_seconds": {
+      "source": 10260,
+      "frame": 7200,
+      "support": 3600,
+      "context": 1050,
+      "closeout": 7200
+    },
+    "authorized_max_combined_cpu_workers": 2,
+    "measured_times_are_receipt_scoped_not_a_complete_host_profiler": true,
+    "failed_reservations_reclaimed": false
+  },
+  "http": {
+    "attempts": 10,
+    "cap": 96,
+    "bulk_attempts": 1,
+    "bulk_bytes": 5764252857,
+    "nonbulk_decoded_bytes": 17288,
+    "stopped_sources": [],
+    "automatic_retries": 0
+  },
+  "retained_worker_failures": [
+    {
+      "name": "projection-fixtures-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 60,
+      "status": "FAIL_RESOURCE_LIMIT",
+      "wall_seconds": 120.5,
+      "parent_cpu_seconds": 0.046875
+    },
+    {
+      "name": "pipeline-fixtures-v1",
+      "stage": "utility",
+      "retained_cpu_limit_seconds": 120,
+      "status": "FAIL",
+      "wall_seconds": 0.31299999996554106,
+      "parent_cpu_seconds": 0.03125
+    },
+    {
+      "name": "unpack-v1",
+      "stage": "source",
+      "retained_cpu_limit_seconds": 3600,
+      "status": "FAIL",
+      "wall_seconds": 2.0072736761067063,
+      "aggregate_tree_cpu_seconds": 1.869165,
+      "exit_code": 1,
+      "resource_limit": null,
+      "stage_result": "FAIL_EXTRACTION_OR_SCHEMA"
+    },
+    {
+      "name": "frame-v2",
+      "stage": "frame",
+      "retained_cpu_limit_seconds": 1500,
+      "status": "FAIL_STOPPED_QUERY_PLAN",
+      "stage_result": "CONTROLLER_STOPPED_METADATA_QUERY_PLAN",
+      "aggregate_tree_cpu_seconds": 341.240739
+    }
+  ],
+  "rejected_empty_frame_retained": true,
+  "old_final_outcomes_queried": false,
+  "planner_numeric_outcomes_exposed": false,
+  "utility_or_topk_computed": false,
+  "model_fitting": "NOT_RUN",
+  "biological_family_certification": "NOT_RUN",
+  "independent_reference_gold": "NOT_RUN",
+  "journal_readiness": "NOT_READY",
+  "automatic_next_phase": false,
+  "next_actor": "owner",
+  "complete_return": {
+    "status": "PASS_FULL_PRIVATE_RETURN_AND_STREAMED_LOCAL_REREAD",
+    "file_count": 1777,
+    "total_bytes": 36533325290,
+    "archive_bytes": 11070386037,
+    "archive_sha256": "981b4ff3d1c0180c70a7b21e11ecef3a24ad2b98011673097b6df0db7e87cefc",
+    "manifest_sha256": "6f7affc05267dd564207765596c967a234e69f07645a61de7c0d4e09e54ff806",
+    "extracted_code_evidence_derived_bytes": 14687964,
+    "all_regular_files_completely_hashed_locally": true,
+    "source_database_expanded_locally": false,
+    "private_source_values_projected_to_planner": false,
+    "utc": "2026-11-07T11:47:19.360104+00:00"
+  },
+  "fresh_remote_absence": {
+    "status": "PASS_FRESH_SCOPED_ABSENCE",
+    "paths": [
+      "/home/chaw/curaloop-runs/chembl-taskfirst-dq-20261107-v1",
+      "/home/chaw/curaloop-runs/chembl-taskfirst-dq-20261107-v1-export-v1"
+    ],
+    "utc": "2026-11-07T11:51:41.884774+00:00"
+  },
+  "frozen_frame_diagnostics": {
+    "attrition_counts_partial_release_catalog_diagnostics": {
+      "target_unmapped_or_ambiguous_family": 10008,
+      "target_no_nominal_reference_auxiliary_catalog": 980,
+      "assay_no_primary_doi": 9422,
+      "target_protected_family_or_accession": 42,
+      "assay_prior_or_protected": 37,
+      "target_multiple_components": 1
+    },
+    "catalog_candidate_targets": 8,
+    "selected_target_count": 8,
+    "selected_assay_count": 121,
+    "selected_targets": [
+      {
+        "tid": 252,
+        "chembl_id": "CHEMBL251",
+        "accession": "P29274",
+        "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+        "reference_capable_assays": 2,
+        "document_diversity": 34
+      },
+      {
+        "tid": 10280,
+        "chembl_id": "CHEMBL264",
+        "accession": "Q9Y5N1",
+        "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+        "reference_capable_assays": 1,
+        "document_diversity": 31
+      },
+      {
+        "tid": 10142,
+        "chembl_id": "CHEMBL259",
+        "accession": "P32245",
+        "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+        "reference_capable_assays": 1,
+        "document_diversity": 23
+      },
+      {
+        "tid": 280,
+        "chembl_id": "CHEMBL256",
+        "accession": "P0DMS8",
+        "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+        "reference_capable_assays": 1,
+        "document_diversity": 23
+      },
+      {
+        "tid": 278,
+        "chembl_id": "CHEMBL255",
+        "accession": "P29275",
+        "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+        "reference_capable_assays": 1,
+        "document_diversity": 21
+      },
+      {
+        "tid": 176,
+        "chembl_id": "CHEMBL2001",
+        "accession": "Q9H244",
+        "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+        "reference_capable_assays": 1,
+        "document_diversity": 11
+      },
+      {
+        "tid": 11003,
+        "chembl_id": "CHEMBL4644",
+        "accession": "P41968",
+        "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+        "reference_capable_assays": 1,
+        "document_diversity": 4
+      },
+      {
+        "tid": 11006,
+        "chembl_id": "CHEMBL4608",
+        "accession": "P33032",
+        "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+        "reference_capable_assays": 1,
+        "document_diversity": 2
+      }
+    ],
+    "family_grouping": [
+      {
+        "family_id": "typed-ancestry-52211aa39e1b3526ca3b",
+        "broad_names_merged_count": 87,
+        "prior_role": "development",
+        "biological_family_certification": "NOT_RUN"
+      }
+    ],
+    "incidental_exposure_reconciliation": [
+      {
+        "chembl_id": "CHEMBL8809",
+        "entity_types": [
+          "molecule_dictionary"
+        ],
+        "resolved": true
+      }
+    ],
+    "new_query_executed": false,
+    "numeric_values_read": false
+  },
+  "scaffold_similarity_audit": "NOT_APPLICABLE_TO_EMPTY_VALIDATION_AND_FINAL_ROLES; no chemical-OOD claim",
+  "resource_reconciliation": {
+    "reason": "Collector initially looked for the export receipt inside task/jobs; export helper has its separate terminal capsule",
+    "utc": "2026-11-07T12:00:39.453783+00:00",
+    "new_processing_or_budget_reset": false,
+    "v1_retained": true
+  },
+  "authoritative_resource_receipts": "resource-receipts-v2.json",
+  "scientific_readout_or_closed_clock_changed": false
+}

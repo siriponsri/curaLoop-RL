@@ -1,5 +1,13 @@
 # Goal: publishable evidence and a testable R&D product
 
+> **Latest R0-DQ readout: PILOT_ONLY_REVISE.** Two real support candidates with
+> panels of128compounds were found in one development split unit. Validation/
+> final groups, source methods, independent references and a tested joint method
+> remain unestablished. See [results](docs/03_research/R0DQ_QUALIFICATION_RESULTS_20261107.md)
+> and [owner decision](docs/06_execution/R0DQ_OWNER_DECISION_20261107.md).
+> Complete return/reread/scoped absence passed and the ledger is CLOSED. The owner decides any
+> next phase. Earlier checkpoint markers below are historical.
+
 > **Current planning frontier:** the owner selected a task-first ChEMBL redesign
 > for the existing joint evidence/molecular-decision question. The
 > [new plan](docs/03_research/CHEMBL_TASKFIRST_DATASET_BENCHMARK_PLAN_20261107.md)

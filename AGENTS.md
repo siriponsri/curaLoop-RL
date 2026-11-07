@@ -1,5 +1,43 @@
 # Agent instructions: CuraLoop-RL
 
+## R0-DQ complete; stop for owner decision, 7 November 2026
+
+Read docs/03_research/R0DQ_QUALIFICATION_RESULTS_20261107.md and
+docs/06_execution/R0DQ_OWNER_DECISION_20261107.md. R0-DQ is COMPLETE with
+PILOT_ONLY_REVISE: 8 targets/121 complete assays, 2 support candidates with
+128-compound panels in one development unit; validation/final groups absent.
+No source methods, independent references, family certification or method
+efficacy established. No R1 or automatic additional qualification round.
+
+Authoritative evidence: docs/evidence/chembl-taskfirst-dq-20261107-v1,
+qualification-summary-v2.json and resource-receipts-v2.json. Earlier v1 records
+remain; v2 repairs only the export-terminal receipt association, without reruns,
+changed scientific counts, clocks or reservations. Known protected identities
+and every old source STOP/ledger remain preserved. No magnitudes/ranks/utility,
+old final outcomes or model fitting were released to the planner.
+
+Ledger CLOSED at 2026-11-07T11:56:56Z, 32,910 conservative seconds retained of
+57,600, including utilities and failures. All 1,777 remote regular task files
+returned and stream-hashed locally before exact cleanup; both owned task/export
+paths freshly absent. Complete private archive remains locally; no active jobs.
+Never recreate those closed roots. Normal English main delivery remains
+authorized. Then wait for the owner; unused budget is not another phase grant.
+Proposed A R0-DQ-R (4 additional CPU-hours/48 hours) and B paper review
+(1 CPU-hour/8 hours) are NOT_RELEASED. Parent remains sole writer.
+
+## Owner releases R0-DQ, 7 November 2026
+
+The owner explicitly approved R0-DQ at9eb7480:16additionalCPU-hours/72hours,
+max2combinedCPUworkers, archive receipt and restricted qualification with values
+closed from the planner, owner decision before next phase. Read
+docs/06_execution/R0DQ_EXECUTION_CONTRACT_20261107.md. Release09:41:43Z7Nov,
+deadline09:41:43Z10Nov (16:41:43Bangkok). Fresh .local/chembl-taskfirst-dq-20261107-v1
+only; all old clocks/roots/ledgers/STOPs unchanged. Remote1CPU/4GiB, local1CPU/
+1GiBmax; enforce resource/storage/byte limits and complete private return before
+scoped remote cleanup. No training/paid service/GPU/planner values/final outcomes
+or automatic phase advance. Earlier NOT_RELEASED text is historical. Parent sole
+writer; normal English main delivery remains authorized.
+
 ## Owner selects task-first ChEMBL plan preparation, 7 November 2026
 
 The owner selected A after R0-A1 and authorized preparation of a new dataset/

@@ -1,5 +1,13 @@
 # Evidence-led implementation plan
 
+> **Latest: R0-DQ qualification readout available.** The fixed ChEMBL37 archive
+> and schema passed verification. Two candidates have panels of128compounds,
+> both in one development split unit; the36-task/18-group target and source
+> references remain unqualified. Read [results](docs/03_research/R0DQ_QUALIFICATION_RESULTS_20261107.md)
+> and [owner options](docs/06_execution/R0DQ_OWNER_DECISION_20261107.md).
+> Full private return/reread and scoped absence passed; the phase ledger is CLOSED. No R1 or new
+> R0-DQ-R package is released. Earlier checkpoint markers below are historical.
+
 > **Latest: owner-selected ChEMBL redesign plan ready.** Read
 > [dataset/benchmark design](docs/03_research/CHEMBL_TASKFIRST_DATASET_BENCHMARK_PLAN_20261107.md)
 > and [R0-DQ scope/resources](docs/06_execution/CHEMBL_TASKFIRST_DQ_PROPOSAL_20261107.md).
