@@ -1,6 +1,15 @@
 # Start here
 
-> **Current: data inventory and independent Deep Research handoff ready.**
+> **Current: owner-approved Deep Research direction adopted.**
+> Read the [adoption record](docs/03_research/DEEP_RESEARCH_ADOPTION_20261108.md)
+> and [concrete small pilot](docs/06_execution/R0_QP_PILOT_SCOPE_20261108.md).
+> ChEMBL-first benchmark qualification is the approved direction. The report
+> omits a fresh budget/window and does not fully specify numeric-presence access;
+> the 32-target / 3 CPU-hour / 24-hour count-only proposal awaits scope confirmation.
+> No source-row queries, SSH, new final split or training have started.
+> The older 500-target census remains unreleased. Previous checkpoints follow.
+
+> **Previous: data inventory and independent Deep Research handoff ready.**
 > Attach the [local inventory](docs/03_research/LOCAL_DATA_INVENTORY_20261107.md)
 > to a new ChatGPT Deep Research chat and paste the
 > [complete research brief](docs/02_literature/DEEP_RESEARCH_PROMPT_20261107.md).

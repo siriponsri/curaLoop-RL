@@ -1,5 +1,21 @@
 # Agent instructions: CuraLoop-RL
 
+## Deep Research direction approved; confirm missing pilot scope, 8 November 2026
+
+The owner approved the direction in Downloads/deep-research-report.md. Adopt
+the benchmark-methodological contribution and ChEMBL-first small qualification
+pilot, not a large census/RL/final run. Read
+docs/03_research/DEEP_RESEARCH_ADOPTION_20261108.md and
+docs/06_execution/R0_QP_PILOT_SCOPE_20261108.md. The report specifies no new
+CPU-hour/time grant and leaves numeric-presence validity access ambiguous.
+The concrete 32-target / 3 CPU-hour / 24-hour / max 2 worker count-only scope awaits
+owner confirmation. It is not the old 500-target R0-QC. No scientific clock, root,
+SSH, source archive/DB/row/presence query, split or model run is released yet.
+All old ledgers/STOPs/roles/protected outcomes stay unchanged and closed.
+Parent sole writer; normal English main adoption/proposal delivery authorized.
+The exact report remains private; its chat citation handles and full-methods
+claims are not automatically verified. Earlier markers below are historical.
+
 ## Owner requests local data inventory and Deep Research handoff, 7 November 2026
 
 Current task: inspect existing local file metadata and authored manifests/cards/

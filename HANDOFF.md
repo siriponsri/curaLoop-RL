@@ -1,4 +1,33 @@
-# Owner handoff: data inventory and independent Deep Research
+# Owner handoff: approved Deep Research direction and concrete pilot scope
+
+## Current: direction adopted; missing execution scope ready for confirmation
+
+On 8 November 2026 the owner approved the direction in the supplied Deep
+Research report. The scientific contribution becomes a context-aware budgeted
+decision benchmark/evaluation protocol; ChEMBL 37 is primary and RL is optional.
+Read [adoption and verification limits](docs/03_research/DEEP_RESEARCH_ADOPTION_20261108.md),
+[the concrete pilot](docs/06_execution/R0_QP_PILOT_SCOPE_20261108.md) and
+[adoption evidence](docs/evidence/deep-research-adoption-20261108-v1/README.md).
+
+The report omits a new numeric compute/time grant and calls the pilot metadata-only
+while requiring measured-support/validity counts. Direction approval is retained.
+Next actor owner confirms the missing scope: proposed **32 targets / 3 CPU-hours /
+24 hours / at most two combined workers**, local 1 CPU / 1 GiB + dr-train
+1 CPU-equivalent / 4 GiB, with trusted aggregate-only numeric-validity checks after protection.
+Values/per-record validity masks, final outcomes and model fitting stay closed.
+No broad 500-target census, new final role, paper intake or automatic pivot.
+
+Current status READY_FOR_OWNER_SCOPE_CONFIRMATION, not pilot execution COMPLETE
+or a qualified benchmark. No new scientific ledger/clock, SSH, raw DB/archive or
+activity/presence query was created. Old ledger hashes remain unchanged. The
+exact 49,921-byte report is preserved privately with its digest; unsupported chat
+citations and inaccessible methods are labeled, not promoted to verified facts.
+Normal English main delivery is authorized; this task is based on
+`6fc382b3cf3257b54e0003137222c63ae0cd92f9`.
+The delivery HEAD is available from Git. All earlier phase roots, reservations,
+STOPs and protected/exposed identities remain unchanged.
+
+## Historical inventory and Deep Research preparation handoff
 
 ## Current task completed; independent research next
 

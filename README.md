@@ -63,11 +63,17 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 The **Molecular Studio frontend checkpoint is complete**. Both the screening application and C Workspace now offer EN/TH,
 Graphite x Copper styling, responsive source inspection and reduced motion.
 
+The owner has approved the [Deep Research direction](docs/03_research/DEEP_RESEARCH_ADOPTION_20261108.md):
+a context-aware budgeted decision benchmark, with ChEMBL 37 as the primary source
+and RL optional. The [small pilot scope](docs/06_execution/R0_QP_PILOT_SCOPE_20261108.md)
+specifies the missing resource/access details for confirmation; no new
+qualification run, final access or training has started.
+
 The [local data inventory](docs/03_research/LOCAL_DATA_INVENTORY_20261107.md) and
 [independent Deep Research brief](docs/02_literature/DEEP_RESEARCH_PROMPT_20261107.md)
 are ready for the owner's external research chat. Several real datasets exist
 locally; the newer evidence/molecular-decision benchmark remains unqualified.
-No new qualification or experiment starts while that research is being reviewed.
+They remain the asset/reference basis for the approved direction and pilot proposal.
 
 Latest research: the [R0-Design Review protocol](docs/03_research/R0_DESIGN_REVIEW_PROTOCOL_20261107.md)
 is ready for owner/domain review. It retains the joint evidence/molecular-decision
