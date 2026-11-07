@@ -156,3 +156,11 @@ tools/r0dq_*.py -text whitespace=cr-at-eol
 research/taskfirst_dqr_v1/*.py -text whitespace=cr-at-eol
 research/manifests/chembl_taskfirst_dqr_release_20261107_v1.json -text
 tools/r0dqr_*.py -text whitespace=cr-at-eol
+
+# Preserve local design-review protocol, release and executed helper identities.
+tools/r0design_*.py -text whitespace=cr-at-eol
+research/configs/r0_design_review_protocol_20261107_v1.json -text
+research/manifests/r0_design_review_release_20261107_v1.json -text
+docs/03_research/R0_DESIGN_REVIEW_PROTOCOL_20261107.md -text
+docs/06_execution/R0_DESIGN_REVIEW*.md -text
+docs/06_execution/R0_SUPPORT_CENSUS_PROPOSAL_20261107.md -text

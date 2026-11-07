@@ -1,4 +1,86 @@
-# Owner-review handoff: R0-DQ-R
+# Owner-review handoff: R0-Design Review
+
+## Completed review and next actor
+
+Phase **COMPLETE_AWAITING_OWNER_DECISION**; design status
+**READY_FOR_OWNER_AND_DOMAIN_REVIEW**; scientific R0 remains **REVISE**.
+Read [the canonical protocol](docs/03_research/R0_DESIGN_REVIEW_PROTOCOL_20261107.md),
+[owner decisions](docs/06_execution/R0_DESIGN_REVIEW_DECISIONS_20261107.md),
+[the unreleased census proposal](docs/06_execution/R0_SUPPORT_CENSUS_PROPOSAL_20261107.md)
+and `docs/evidence/r0-design-review-20261107-v1/phase-readout-v1.json`.
+
+Next actor: owner. Recommended A is to approve the proposed protocol and release
+R0-QC at **3 CPU-hours / 24 hours / max two combined workers**, metadata/structure
+only with a fresh local/dr-train grant, no scientific HTTP, values or methods.
+This is NOT_RELEASED. B arranges independent reviewer/source availability first;
+C requests an explicit alternative protocol. No new qualification or R1 starts
+from unused review resources or the old long-run instructions.
+
+## What changed and what remains unproved
+
+- One primary research contribution is proposed: decide whether to resolve a
+  shared context fact, measure a supported molecular cell, recommend or abstain,
+  tested on reference-endpoint discovery with a fixed predictor. Novelty and
+  benefit are NOT_ESTABLISHED. Cached literature is not a fresh systematic review.
+- Retain Ki/Kd separately, IC50 auxiliary, 128/64/32 floors and 36 bundles in
+  18 isolation units with 4/2/12 role targets. These are not observed qualified
+  counts or a power guarantee. Top-ten recovery and resource axes are prospective.
+- Replace equal coarse-class quotas and 20-assay draws with a global nominal
+  support census, fixed reference-capable intent, complete whole-target graphs
+  and exact auxiliary search or UNKNOWN. No real graph or split was rebuilt.
+- Propose reviewed protein-level family certificates and separate isolation
+  closure. Preserve the old 87-label exposure constraint; do not adopt the
+  diagnostic 254-component graph. Source-key namespace and domain relevance
+  need evidence; unknowns cannot clear old protection or final admission.
+- Existing four mixed-role components contain 85 old frame targets: 78 tagged
+  development, six final and one validation. Those are prior graph/provenance
+  labels, not a new certified split. Retain role records and quarantine new
+  conflicts. CHEMBL8809 aliases and all DQR identity/source carry-forward are
+  required inputs before later final clearance.
+- All baselines get complete permitted metadata and existing cached facts.
+  Keep a competent upfront baseline and adapted decision-region/multifidelity
+  controls. A free full-context optimum can emulate an adaptive policy; no
+  advantage may be manufactured by hiding free information or inventing lab costs.
+- Two qualified independent reviewers are required for family/procedure/reference
+  certificates. No people are nominated/booked, no outreach/payment was made,
+  and parent/LLM drafts are not gold. Source access, numerical qualification,
+  method implementation and final evaluation remain separately unreleased.
+
+## Exact review resource and access boundary
+
+Base: `a53210024a43239ad46f52f7a7d0770f055de2f9`.
+Release **2026-11-07T14:29:34Z** (21:29:34 Bangkok), original deadline
+**2026-11-07T22:29:34Z** (8 November 05:29:34 Bangkok).
+Closed **2026-11-07T14:53:10.407475+00:00**. Retained **1,320 / 3,600 CPU seconds**,
+including 900 utility seconds; this is a conservative reservation, not measured
+runtime. Three guarded jobs are terminal PASS. One local CPU, default 256 MiB,
+hard maximum 1 GiB; no subagents or remote worker.
+
+Private root:
+`C:\Users\User\Desktop\myProject\curaloop-rl\.local\r0-design-review-20261107-v1`.
+Closed ledger SHA256: `ca4930bcfa85ec28af56c6c0001d3729b71fad6a3d7f289c9fc53c67192620c0`.
+Protocol SHA256: `5dcdf7ce908e5c29c136b8af0ca659b30b5e8f6e2140a98317a9ccbecbfd2f49`.
+No SSH/scientific HTTP, raw source DB/archive, new activity records/values/
+presence flags, old final outcomes, training, real-outcome simulation, split
+adoption or scientific source request occurred. No new remote root exists for
+this review. Prior remote-absence proofs are historical; no new host probe was
+performed. Existing old input/ledger hashes are unchanged; never recreate their
+closed roots or reset their clocks/stops/reservations.
+
+## Acceptance and delivery
+
+Eight protocol/synthetic checks passed, including seven rejected unsafe
+mutations and a synthetic counterexample to incomplete top-eight auxiliary
+search. These validate contract logic, not biology, semantic reference truth,
+model efficacy or publication readiness. The detailed evidence index is
+`docs/evidence/r0-design-review-20261107-v1/README.md`.
+No product runtime changed; application runtime suite NOT_RUN.
+
+Design checkpoint: recorded after the normal main commit.
+Normal English main delivery is authorized. The following R0-DQ-R handoff is
+historical; its former one-hour review proposal has now been executed and closed.
+
+## Historical R0-DQ-R handoff
 
 ## Completed checkpoint and next actor
 

@@ -1,5 +1,15 @@
 # Start here
 
+> **Latest: R0-Design Review complete; protocol ready for owner/domain review.**
+> Read the [protocol](docs/03_research/R0_DESIGN_REVIEW_PROTOCOL_20261107.md),
+> [decision packet](docs/06_execution/R0_DESIGN_REVIEW_DECISIONS_20261107.md)
+> and [proposed R0-QC census](docs/06_execution/R0_SUPPORT_CENSUS_PROPOSAL_20261107.md).
+> The review retained the joint molecular-decision question and 128/64/32 floors;
+> it proposes source/family isolation and support-first construction repairs.
+> No new data, split, source request or outcome was opened. Scientific R0 is
+> REVISE; R0-QC's proposed 3 CPU-hours/24 hours is NOT_RELEASED. Owner decision
+> precedes any new qualification or R1. Earlier checkpoints below are history.
+
 > **Latest: R0-DQ-R complete; scientific REVISE.** The ChEMBL37 metadata
 > inventory covers 11,055 targets. A fixed 200-target/1,254-assay frame yields one
 > nominal development pair; zero newly certified families, source-verified pools

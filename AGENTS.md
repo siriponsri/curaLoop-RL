@@ -1,5 +1,36 @@
 # Agent instructions: CuraLoop-RL
 
+## R0-Design Review complete; owner decision next, 7 November 2026
+
+Read docs/03_research/R0_DESIGN_REVIEW_PROTOCOL_20261107.md and
+docs/06_execution/R0_DESIGN_REVIEW_DECISIONS_20261107.md. Design ready for owner/
+domain review; scientific R0 REVISE. No new dataset, source query, split or model
+result. Proposed R0-QC 3 CPU-hours/24 hours/max2workers is NOT_RELEASED.
+One reviewed family rule, immutable legacy exposure/source closure, support-first
+census and fair same-predictor controls are proposals, not certified results.
+
+Local review ledger CLOSED at 2026-11-07T14:53:10.407475+00:00, retaining 1,320 / 3,600 seconds
+including 900 utilities; three guarded jobs terminal PASS. No HTTP/SSH, raw source
+DB/archive, new activity/value/presence rows or old final outcomes were opened.
+Preserve all old clocks/ledgers/STOPs/protected roles and closed roots. Two
+independent domain reviewers and source/reference certificates remain pending.
+Next actor owner; no new grant, qualification or R1 from unused resources.
+Parent sole writer. Normal English main delivery authorized. Earlier markers
+below are historical and do not release new execution.
+
+## Owner releases local R0-Design Review, 7 November 2026
+
+Owner selected option A at a532100: 1 additional CPU-hour / 8 elapsed hours,
+one local CPU / 1 GiB maximum. Read docs/06_execution/R0_DESIGN_REVIEW_CONTRACT_20261107.md.
+Release 14:29:34Z, deadline 22:29:34Z on 7 November (8 November 05:29:34 Bangkok).
+Fresh .local/r0-design-review-20261107-v1 only. Existing returned artifacts and
+cached written reviews only; no SSH/scientific HTTP, raw source DB/archive,
+new activity records/values/presence flags, old final outcomes, training or new
+qualification/split adoption. Preserve all old ledgers/clocks/STOPs/lineages.
+Deliver one reviewable protocol and proposed next qualification budget, then
+owner decision; no automatic R1. Parent sole writer, normal English main
+delivery authorized. Earlier completed/release markers below are historical.
+
 ## R0-DQ-R complete; wait for owner decision, 7 November 2026
 
 Read docs/03_research/R0DQR_TAXONOMY_TASK_FEASIBILITY_20261107.md,

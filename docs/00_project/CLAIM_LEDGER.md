@@ -65,6 +65,11 @@ Use this ledger to reconcile the manuscript, README, presentation, pilot report 
 | C57 | R0-DQ-R remote code, data and evidence are preserved before cleanup | VERIFIED_COMPLETE_RETURN_AND_FRESH_ABSENCE | [Return](../evidence/chembl-taskfirst-dqr-20261107-v1/complete-return-verified-v1.json): 1,689 regular files / 36,549,056,841 source bytes fully streamed/hash-verified locally, then exact task/export cleanup; 12,300 conservative seconds retained, no R1 or journal GO |
 | C58 | The R0-DQ-R metadata role labels define a cleared final split | NOT_ESTABLISHED_ALL_FINAL_USE_WITHHELD | [Exposure audit](../evidence/chembl-taskfirst-dqr-20261107-v1/exposure-quarantine-audit-v1.json): four shared-source components with mixed role labels, one unresolved planning canonical join; old inputs/provenance retained, no frame refill or new final task released |
 
+
+| C59 | R0-Design Review supplies a coherent molecular-decision protocol | READY_FOR_OWNER_AND_DOMAIN_REVIEW_ONLY | [Protocol](../03_research/R0_DESIGN_REVIEW_PROTOCOL_20261107.md) and eight contract/synthetic checks; no new cohort, biology certificate, independent reference or method result |
+| C60 | The support-first census repairs the old selection limitations in a new run | PROPOSED_NOT_RELEASED | [R0-QC scope](../06_execution/R0_SUPPORT_CENSUS_PROPOSAL_20261107.md): 3 CPU-hours/24 hours/max two combined workers; existing archive, ID/structure projection only, zero scientific HTTP/values/methods, no automatic qualification or R1 |
+| C61 | Adaptive evidence improves discovery beyond a competent upfront policy | HYPOTHESIS_UNTESTED | [Comparison contract](../03_research/R0_DESIGN_REVIEW_PROTOCOL_20261107.md): same predictor, full permitted metadata/cache and matched resource frontier; zero-cost full context is an information ceiling, not a deprived baseline |
+
 ## Language rules
 
 Use “historical assay active” for replay outcomes, “predicted score” for model output, “simulated cost/time” for scenario units and “proposed” for unimplemented functionality. “Confirmed hit” always needs a context: it means delivered assay-label evidence inside a particular replay, not validated therapeutic efficacy. Name a chemical or target population whenever reporting generalization.

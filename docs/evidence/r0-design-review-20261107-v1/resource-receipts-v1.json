@@ -1,0 +1,67 @@
+{
+  "receipts": [
+    {
+      "name": "existing-artifact-review-v1",
+      "stage": "review",
+      "schema": "curaloop.r0-design-review.resource.v1",
+      "pid": 92368,
+      "start_utc": "2026-11-07T14:38:41.261985+00:00",
+      "cpu_affinity": [
+        11
+      ],
+      "cpu_limit_seconds": 180,
+      "wall_limit_seconds": 300,
+      "memory_limit_bytes": 268435456,
+      "descendants_allowed": false,
+      "deadline_utc": "2026-11-07T22:29:34+00:00",
+      "entry_source_sha256": "6204b86071fbc6cfb447cfc28876c0b3852bc061836de668cb2f6e72b0ce65b5",
+      "guard_source_sha256": "50781ee56b4ede122fddb3a7aecf31d15233c1059b679e89f9f8139839156e9c",
+      "status": "PASS",
+      "wall_seconds": 0.2969999999040738,
+      "cpu_seconds": 0.078125
+    },
+    {
+      "name": "protocol-consistency-validation-v1",
+      "stage": "validation",
+      "schema": "curaloop.r0-design-review.resource.v1",
+      "pid": 92456,
+      "start_utc": "2026-11-07T14:48:51.205305+00:00",
+      "cpu_affinity": [
+        11
+      ],
+      "cpu_limit_seconds": 180,
+      "wall_limit_seconds": 240,
+      "memory_limit_bytes": 268435456,
+      "descendants_allowed": false,
+      "deadline_utc": "2026-11-07T22:29:34+00:00",
+      "entry_source_sha256": "b6f52d37e59b50c9e4e448e01bc66ba5b2f46cb2cf619f522f0dec33915df887",
+      "guard_source_sha256": "50781ee56b4ede122fddb3a7aecf31d15233c1059b679e89f9f8139839156e9c",
+      "status": "PASS",
+      "wall_seconds": 0.35900000005494803,
+      "cpu_seconds": 0.078125
+    },
+    {
+      "name": "design-review-closeout-v1",
+      "stage": "review",
+      "schema": "curaloop.r0-design-review.resource.v1",
+      "pid": 91940,
+      "start_utc": "2026-11-07T14:53:09.651732+00:00",
+      "cpu_affinity": [
+        11
+      ],
+      "cpu_limit_seconds": 60,
+      "wall_limit_seconds": 120,
+      "memory_limit_bytes": 268435456,
+      "descendants_allowed": false,
+      "deadline_utc": "2026-11-07T22:29:34+00:00",
+      "entry_source_sha256": "772cd434446b266a29f2e6c534f031e24c135c57548f6afd74369b86e4f4247b",
+      "guard_source_sha256": "50781ee56b4ede122fddb3a7aecf31d15233c1059b679e89f9f8139839156e9c",
+      "status": "PASS",
+      "wall_seconds": 0.625,
+      "cpu_seconds": 0.046875
+    }
+  ],
+  "all_jobs_terminal": true,
+  "conservative_retained_seconds": 1320,
+  "normal_delivery_within_original_utility_reserve": true
+}

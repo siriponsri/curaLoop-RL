@@ -1,0 +1,171 @@
+{
+  "schema": "curaloop.r0-design-review.readout.v1",
+  "phase_status": "COMPLETE_AWAITING_OWNER_DECISION",
+  "design_status": "READY_FOR_OWNER_AND_DOMAIN_REVIEW",
+  "scientific_status": "REVISE",
+  "release_utc": "2026-11-07T14:29:34+00:00",
+  "deadline_utc": "2026-11-07T22:29:34+00:00",
+  "closed_utc": "2026-11-07T14:53:10.407475+00:00",
+  "base_commit": "a53210024a43239ad46f52f7a7d0770f055de2f9",
+  "documents_sha256": {
+    "docs/03_research/R0_DESIGN_REVIEW_PROTOCOL_20261107.md": "011ee2141440880dcb735a2a73e181683e47a6e5eb42257c14a69314927d0464",
+    "docs/06_execution/R0_DESIGN_REVIEW_DECISIONS_20261107.md": "3633102128e75a8c924b049ce2689cb8a2fd7932cff8178112ef55dc3ed10ca8",
+    "docs/06_execution/R0_SUPPORT_CENSUS_PROPOSAL_20261107.md": "e6262e8a4b788fce36cfb350159b4e5567aeaebae94c5795590b7a4123b12b54",
+    "docs/06_execution/R0_DESIGN_REVIEW_CONTRACT_20261107.md": "33383b5a255b757c708e99af45c7f8ae602fd2a680e7598587da3ad86e4bdb39"
+  },
+  "protocol_sha256": "5dcdf7ce908e5c29c136b8af0ca659b30b5e8f6e2140a98317a9ccbecbfd2f49",
+  "design_diagnostic": {
+    "status": "PASS_EXISTING_ARTIFACT_DESIGN_DIAGNOSTIC",
+    "base_commit": "a53210024a43239ad46f52f7a7d0770f055de2f9",
+    "frozen_targets": 200,
+    "frozen_assays": 1254,
+    "selected_priority_targets": 11,
+    "selected_reference_capable_assays": 7,
+    "nominal_candidates": 1,
+    "mixed_source_components": 4,
+    "mixed_source_component_target_count": 85,
+    "mixed_source_targets_by_original_frame_role": {
+      "development": 78,
+      "final": 6,
+      "validation": 1
+    },
+    "unresolved_planning_aliases": [
+      "CHEMBL8809"
+    ],
+    "repairs_for_new_protocol": [
+      "Global outcome-free support census before a bounded target intent frame; remove equal functional-class quotas and20-assay prefix sampling.",
+      "Complete whole-target assay graphs and auxiliary-search completeness states; cap exhaustion is UNKNOWN, never evidence of zero support.",
+      "Apply historical planning/canonical exposure and family/source closure before any proposed evaluation role; preserve old role provenance.",
+      "Require independent family/procedure source review; no class-label certificate or default WT.",
+      "Keep128/64/32 and36/18/4-2-12 as targets; do not change them based on favorable outcomes."
+    ],
+    "existing_candidate_or_role_labels_rewritten": false,
+    "new_cohort_or_split_created": false,
+    "new_source_queries_activity_records_or_outcomes": 0,
+    "source_http": 0,
+    "ssh": 0,
+    "literature_scope": "Cached7November review only; no fresh paper/version/novelty verification",
+    "independent_domain_review": "NOT_RUN",
+    "utc": "2026-11-07T14:38:41.534385+00:00"
+  },
+  "acceptance": {
+    "protocol_specified": "PASS",
+    "known_failures_assigned": "PASS",
+    "artifact_and_synthetic_constraints": "PASS",
+    "independent_domain_review": "NOT_RUN",
+    "method_novelty": "NOT_ESTABLISHED",
+    "qualified_benchmark": "NOT_RUN",
+    "journal_readiness": "NOT_READY"
+  },
+  "remaining_decisions": [
+    {
+      "id": "OWNER_PROTOCOL",
+      "owner": "project owner",
+      "status": "PENDING",
+      "resolution": "Approve or revise this precise claim, family/exposure policy and support-first sampling proposal"
+    },
+    {
+      "id": "DOMAIN_REVIEW",
+      "owner": "two qualified reviewers nominated by owner",
+      "status": "NOT_CONFIRMED",
+      "resolution": "Review protein-family/construct/procedure certificates independently; parent drafts are not gold"
+    },
+    {
+      "id": "QC_RELEASE",
+      "owner": "project owner",
+      "status": "NOT_RELEASED",
+      "resolution": "Explicit new budget and metadata-only SSH permission for R0-QC; no automatic next phase"
+    },
+    {
+      "id": "REFERENCE_INTAKE",
+      "owner": "project owner and domain reviewers",
+      "status": "NOT_RELEASED",
+      "resolution": "Approve exact lawful source snapshots/methods scope after census; do not retry historical STOPs"
+    },
+    {
+      "id": "NUMERICAL_QUALIFICATION",
+      "owner": "project owner",
+      "status": "NOT_RELEASED",
+      "resolution": "Separate approval for a restricted validator after frozen candidates and protection review; no planner magnitudes"
+    },
+    {
+      "id": "METHOD_AND_FINAL",
+      "owner": "project owner",
+      "status": "NOT_RELEASED",
+      "resolution": "Implementation, baselines, precision planning and final evaluation require later checkpoints"
+    }
+  ],
+  "next_proposal": {
+    "name": "R0-QC support-first census",
+    "status": "NOT_RELEASED",
+    "cpu_cap_seconds": 10800,
+    "elapsed_hours": 24,
+    "max_combined_cpu_workers": 2,
+    "remote_cpu_equivalent": 1,
+    "remote_memory_max_bytes": 4294967296,
+    "local_cpu_equivalent": 1,
+    "local_memory_max_bytes": 1073741824,
+    "allocation_seconds": {
+      "source_reuse_full_return": 7200,
+      "census_and_audit": 1800,
+      "utilities": 1800
+    },
+    "catalog_target_cap": 11055,
+    "intent_target_cap": 500,
+    "assay_cap": 12000,
+    "topology_row_cap": 3000000,
+    "canonical_identity_cap_including_planning_resolution": 150000,
+    "candidate_bundle_cap": 120,
+    "new_bulk_http": 0,
+    "source_http": 0,
+    "methods_bodies": 0,
+    "activity_value_and_presence_queries": 0,
+    "allowed_activity_projection": [
+      "activity_id",
+      "assay_id",
+      "molregno",
+      "doc_id",
+      "standard_type",
+      "standard_relation",
+      "standard_units"
+    ],
+    "allowed_structure_projection": [
+      "molregno",
+      "chembl_id",
+      "canonical_smiles"
+    ],
+    "raw_assay_parameter_values": false,
+    "old_final_outcomes": false,
+    "new_family_or_reference_gold_certification": false,
+    "qualified_final_task_release": false,
+    "new_remote_root_created_now": false,
+    "source_switch_or_stopped_source_retry": false,
+    "full_return_and_local_reread_before_exact_cleanup": true,
+    "owner_checkpoint_after_census": true,
+    "start_utc": null,
+    "deadline_utc": null
+  },
+  "cpu_accounting": {
+    "cap_seconds": 3600,
+    "retained_seconds": 1320,
+    "retained_cpu_hours": 0.36666666666666664,
+    "utility_reserved_seconds": 900,
+    "stage_reserved_seconds": {
+      "review": 240,
+      "validation": 180
+    },
+    "unused_or_failed_reservations_reclaimed": false,
+    "receipt_scoped_cpu_not_complete_host_profiler": true
+  },
+  "activity_or_final_outcomes_opened": false,
+  "new_source_records": 0,
+  "source_http_requests": 0,
+  "ssh_connections": 0,
+  "new_split_or_real_cohort_constructed": false,
+  "model_fitting": "NOT_RUN",
+  "remote_root_created": false,
+  "literature_freshness": "CACHED_REVIEW_ONLY_NO_NEW_VERIFICATION",
+  "independent_review_claim": false,
+  "next_actor": "owner",
+  "automatic_next_phase": false
+}
