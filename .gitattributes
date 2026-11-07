@@ -151,3 +151,8 @@ docs/evidence/ui-modern-bilingual-20261106-v1/build-source-v8/command-2.txt whit
 research/taskfirst_dq_v1/*.py -text whitespace=cr-at-eol
 research/manifests/chembl_taskfirst_dq_release_20261107_v1.json -text
 tools/r0dq_*.py -text whitespace=cr-at-eol
+
+# Preserve R0-DQ-R source/release bytes independently of Windows checkout EOL.
+research/taskfirst_dqr_v1/*.py -text whitespace=cr-at-eol
+research/manifests/chembl_taskfirst_dqr_release_20261107_v1.json -text
+tools/r0dqr_*.py -text whitespace=cr-at-eol

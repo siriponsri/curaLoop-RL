@@ -1,5 +1,15 @@
 # Evidence-led implementation plan
 
+> **Latest: R0-DQ-R complete; scientific REVISE.** The ChEMBL37 metadata
+> inventory covers 11,055 targets. A fixed 200-target/1,254-assay frame yields one
+> nominal development pair; zero newly certified families, source-verified pools
+> or qualified final tasks. No numerical activities/presence flags were queried.
+> Read [results](docs/03_research/R0DQR_TAXONOMY_TASK_FEASIBILITY_20261107.md),
+> [owner options](docs/06_execution/R0DQR_OWNER_DECISION_20261107.md) and
+> [HANDOFF.md](HANDOFF.md). Full private return/reread and scoped absence passed.
+> The phase ledger is CLOSED. No R1 or proposed next budget is released.
+> All following checkpoint markers are historical snapshots.
+
 > **Latest: R0-DQ qualification readout available.** The fixed ChEMBL37 archive
 > and schema passed verification. Two candidates have panels of128compounds,
 > both in one development split unit; the36-task/18-group target and source

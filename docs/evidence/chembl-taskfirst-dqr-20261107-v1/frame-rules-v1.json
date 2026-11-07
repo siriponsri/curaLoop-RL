@@ -1,0 +1,51 @@
+{
+  "schema": "curaloop.r0dqr.rules.v1",
+  "salt": "CuraLoop-ChEMBL37-TaskFirst-DQR-v1-20261107",
+  "source": "ChEMBL_37",
+  "database_single_protein_spelling": "SINGLE PROTEIN",
+  "target_gate": "One non-homologue accession; target/component taxon concordant; direct D confidence9 B/F assays; primary DOI",
+  "inventory_limit": 11055,
+  "max_targets": 200,
+  "max_assays": 4000,
+  "max_assays_per_target": 20,
+  "max_candidates": 120,
+  "max_topology_rows": 2000000,
+  "max_canonical_molecule_ids": 100000,
+  "reference_types": [
+    "Ki",
+    "Kd"
+  ],
+  "auxiliary_types": [
+    "Ki",
+    "Kd",
+    "IC50"
+  ],
+  "nominal_relation": "=",
+  "nominal_units": [
+    "M",
+    "mM",
+    "uM",
+    "\u03bcM",
+    "nM",
+    "pM",
+    "fM"
+  ],
+  "reference_panel_floor": 128,
+  "shared_union_floor": 64,
+  "shared_per_auxiliary_floor": 32,
+  "taxonomy": "Inventory all ChEMBL classification depths; exact inherited accession crosswalk retained. Class nodes are diagnostic functional strata, not biological-family certificates.",
+  "sampling_stratum": "Fixed second node from root (or only annotated node) for outcome-free coverage balance; no choice of granularity by resulting task yield",
+  "target_priority": "Within stratum prefer >=128 nominal Ki/Kd molecule IDs and >=2 paper-linked assays, then fixed hash; round-robin strata up to200",
+  "assay_priority": "Round-robin source DOI buckets by fixed hash; at most20 per target; do not count incomplete support graphs",
+  "pooling": "Only propose same-target/type/organism and complete matching permitted context signatures. Same target, document or assay_group alone never establishes procedure equivalence.",
+  "pool_status": "All multi-assay pools pending source/construct concordance; unknown fields/omitted parameters block accepted pooling",
+  "construct": "Null variant is unknown. No default wild type.",
+  "sensitivity": "Report single-assay and strict context-signature nominal support separately; unrestricted target/type aggregation is an explicitly noneligible upper bound",
+  "roles": "Preserve all inherited protected/exposed lineage and task roles. Unknown biological-family mapping is quarantined for final; diagnostic class counts never become certified family counts.",
+  "source_review": "At most12development documents,24access-metadata/12methods attempts; freeze candidates before source interpretations; retain source availability bias",
+  "numeric_activity_or_presence_queries": false,
+  "old_final_outcomes": false,
+  "model_fitting": false,
+  "automatic_next_phase": false,
+  "post_failure_frame_refill": false
+}

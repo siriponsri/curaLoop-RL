@@ -1,0 +1,223 @@
+{
+  "schema": "curaloop.r0dqr.taxonomy-readout.v1",
+  "inventory_targets": 11055,
+  "counts": {
+    "ADMITTED_METADATA_FEASIBILITY": 10763,
+    "unmapped_inherited_family": 10008,
+    "mapped_inherited_family": 1044,
+    "QUARANTINE_TAXON_CONFLICT": 229,
+    "EXCLUDE_PROTECTED_LINEAGE": 42,
+    "QUARANTINE_HOMOLOGUE": 18,
+    "QUARANTINE_MULTIPLE_OR_MISSING_COMPONENT": 3
+  },
+  "class_nodes_by_path_depth": {
+    "0": 1,
+    "1": 15,
+    "2": 36,
+    "3": 98,
+    "4": 222,
+    "5": 339,
+    "6": 99
+  },
+  "classification_nodes": 905,
+  "catalog_targets_with_nominal_assays": 6780,
+  "selected_targets": 200,
+  "selected_assays": 1254,
+  "selected_priority_targets": 11,
+  "reference_capable_selected_assays_before_canonical_pruning": 7,
+  "selected_targets_by_stratum": [
+    {
+      "class_id": 836,
+      "label": "Epigenetic regulator",
+      "targets": 14
+    },
+    {
+      "class_id": 8,
+      "label": "Other cytosolic protein",
+      "targets": 14
+    },
+    {
+      "class_id": 7,
+      "label": "Other membrane protein",
+      "targets": 13
+    },
+    {
+      "class_id": 9,
+      "label": "Surface antigen",
+      "targets": 14
+    },
+    {
+      "class_id": 3,
+      "label": "Secreted protein",
+      "targets": 14
+    },
+    {
+      "class_id": 11,
+      "label": "Membrane receptor",
+      "targets": 14
+    },
+    {
+      "class_id": 1006,
+      "label": "Transporter",
+      "targets": 13
+    },
+    {
+      "class_id": 5,
+      "label": "Other nuclear protein",
+      "targets": 13
+    },
+    {
+      "class_id": 1,
+      "label": "Enzyme",
+      "targets": 13
+    },
+    {
+      "class_id": 4,
+      "label": "Structural protein",
+      "targets": 13
+    },
+    {
+      "class_id": 12,
+      "label": "Transcription factor",
+      "targets": 13
+    },
+    {
+      "class_id": 601,
+      "label": "Unclassified protein",
+      "targets": 13
+    },
+    {
+      "class_id": 1005,
+      "label": "Ion channel",
+      "targets": 13
+    },
+    {
+      "class_id": 2,
+      "label": "Adhesion",
+      "targets": 13
+    },
+    {
+      "class_id": 825,
+      "label": "Auxiliary transport protein",
+      "targets": 13
+    }
+  ],
+  "selected_targets_by_inherited_role": {
+    "development": 186,
+    "validation": 4,
+    "final": 10
+  },
+  "selected_targets_without_inherited_mapping": 161,
+  "candidate_bundles": 1,
+  "candidate_pool": 1,
+  "candidate_records": [
+    {
+      "bundle_id": "bundle-a520ff55d25923f01477",
+      "tid": 101395,
+      "target_chembl_id": "CHEMBL5966",
+      "accession": "P55899",
+      "family_id": null,
+      "role": "development",
+      "final_status": "QUARANTINE_UNCERTIFIED_BIOLOGICAL_MAPPING",
+      "sampling_stratum": 601,
+      "reference": {
+        "unit_id": "552585:Kd",
+        "assay_ids": [
+          552585
+        ],
+        "type": "Kd",
+        "kind": "single_assay",
+        "tid": 101395
+      },
+      "auxiliary": [
+        {
+          "unit_id": "552584:IC50",
+          "assay_ids": [
+            552584
+          ],
+          "type": "IC50",
+          "kind": "single_assay",
+          "tid": 101395
+        }
+      ],
+      "nominal_reference_compounds": 149,
+      "panel_shared_union": 115,
+      "panel_shared_per_auxiliary": {
+        "552584:IC50": 115
+      },
+      "numerical_support": "NOT_QUERIED",
+      "procedure_reference_gold": "NOT_ESTABLISHED"
+    }
+  ],
+  "pooling_diagnostics": {
+    "pending_signature_pools": [
+      {
+        "unit_id": "pending-pool-38461da4caef6ff79578",
+        "assay_ids": [
+          578543,
+          578547,
+          578549,
+          578551,
+          578553,
+          578555,
+          578558,
+          578560
+        ],
+        "type": "Kd",
+        "kind": "same_projected_metadata_signature_PENDING_SOURCE",
+        "tid": 101528,
+        "procedure_equivalence": "NOT_ESTABLISHED",
+        "construct_concordance": "UNKNOWN",
+        "eligible_pool": false,
+        "nominal_compounds": 2
+      },
+      {
+        "unit_id": "pending-pool-60b8ca3e7f43cd742b92",
+        "assay_ids": [
+          578544,
+          578548,
+          578550,
+          578552,
+          578554,
+          578556,
+          578557,
+          578559
+        ],
+        "type": "Kd",
+        "kind": "same_projected_metadata_signature_PENDING_SOURCE",
+        "tid": 101528,
+        "procedure_equivalence": "NOT_ESTABLISHED",
+        "construct_concordance": "UNKNOWN",
+        "eligible_pool": false,
+        "nominal_compounds": 3
+      },
+      {
+        "unit_id": "pending-pool-a8773c27636580e2cb6c",
+        "assay_ids": [
+          302172,
+          302173
+        ],
+        "type": "Kd",
+        "kind": "same_projected_metadata_signature_PENDING_SOURCE",
+        "tid": 12179,
+        "procedure_equivalence": "NOT_ESTABLISHED",
+        "construct_concordance": "UNKNOWN",
+        "eligible_pool": false,
+        "nominal_compounds": 4
+      }
+    ],
+    "accepted_source_verified_pools": 0,
+    "strict_complete_context_pools": 0,
+    "unrestricted_target_type_128_upper_bound_units": 12,
+    "unrestricted_upper_bound_is_ineligible": true,
+    "null_variant_is_wild_type": false
+  },
+  "certified_new_biological_families": 0,
+  "limitations": [
+    "Balanced coarse functional strata are coverage diagnostics, not a yield-optimal or exhaustive benchmark search.",
+    "Only20assays per target and deterministic DOI balancing; do not infer universal ChEMBL infeasibility from this frame.",
+    "Raw numeric activity and nonmissingness were never queried; nominal topology does not certify finite positive support.",
+    "Masked or null context cannot prove procedural equivalence; same-target/source pools are ineligible.",
+    "Taxonomy granularity and molecular scaffold/analogue leakage remain unadjudicated."
+  ]
+}

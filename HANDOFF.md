@@ -1,4 +1,93 @@
-# Owner-review handoff: R0-DQ
+# Owner-review handoff: R0-DQ-R
+
+## Completed checkpoint and next actor
+
+Phase **COMPLETE_AWAITING_OWNER_DECISION**; scientific verdict **REVISE**.
+Read [the full readout](docs/03_research/R0DQR_TAXONOMY_TASK_FEASIBILITY_20261107.md),
+[decision options](docs/06_execution/R0DQR_OWNER_DECISION_20261107.md) and
+the authoritative `docs/evidence/chembl-taskfirst-dqr-20261107-v1/phase-summary-v1.json`.
+Next actor: owner. No more intake, numerical qualification, family-rule change,
+training or R1 is released. Recommended proposal A is design review using only
+returned artifacts, with a proposed new 1 CPU-hour / 8 hours / local 1 CPU grant.
+It has NOT started. Unused resources are not another phase authorization.
+
+Release 12:32:14Z, 7 November 2026; original absolute deadline 12:32:14Z, 9 November
+(19:32:14 Bangkok). Closed 2026-11-07T14:00:29.418935+00:00. Retained conservative charge
+12,300 / 14,400 seconds, including 1,800 utility seconds; actual CPU times have
+receipt-specific scopes and are not a complete host profiler. Maximum two
+combined CPU workers: one remote 1 CPU-equivalent / 4 GiB, one local 1 CPU / 1 GiB maximum.
+Old clocks, charges, source STOPs and protected/exposed roles remain unchanged.
+
+## Scientific acceptance gaps
+
+- Inventory 11,055 targets, 905 class nodes, 15 diagnostic functional strata;
+  10,008 single-component targets lack an unambiguous inherited family mapping;
+  three additional targets have unresolved components. Class labels are not
+  independently certified biological families.
+- Frozen 200 targets / 1,254 complete assays, 16,862 topology rows / 12,873 molecule IDs.
+  Seventeen source molecule IDs matching protected canonical identities were
+  excluded; three source molecule IDs with unresolved structures quarantined.
+- One nominal FcRn development pair: target CHEMBL5966 / P55899,
+  reference CHEMBL956457 / 552585 Kd, auxiliary CHEMBL956456 / 552584 IC50.
+  Panel 128, shared 115. Unknown family mapping quarantined for final; numerical
+  validity, construct truth and independent reference remain NOT_RUN.
+- Source CHEMBL1150419, DOI 10.1016/j.bmc.2008.05.004: two successful access
+  metadata checks, no confirmed OA route, zero methods bodies/paper-only facts.
+  Metadata already distinguishes SPR / pH 6 and IgG-binding ELISA. Null variant is
+  not WT. No source-verified reference pool, 12 final families or 36/18 cohort.
+- The inherited 259-label graph has 6 family and 79 homologous-superfamily bridges.
+  All recorded types produce 139 components / largest 87 labels; family-type-only
+  sensitivity produces 254 / largest 2. This was NOT adopted as a scientific split;
+  the existing exposed/protected components stay intact.
+- Final exposure audit: four shared-source components have mixed frame-role
+  labels. All 35 old-document-exposed assays are development metadata. Incidental
+  planning molecule CHEMBL8809 has no exact current source-ID match, but its
+  canonical aliases remain unresolved in the returned derivations. The frozen
+  metadata worker has not propagated every old-document/planning/source join
+  into a certified split. D2 is REVISE; all proposed final use is withheld. No new
+  source query, candidate replacement or frame refill repaired that gap.
+- The fixed balanced functional-stratum draw is not exhaustive or yield-optimal.
+  It selected 11 priority targets / seven nominal 128-ID reference assays. Do not
+  claim that ChEMBL as a whole is infeasible, or that paper evidence cannot help.
+
+## Exact private artifacts and remote closure
+
+Local root: `C:\Users\User\Desktop\myProject\curaloop-rl\.local\chembl-taskfirst-dqr-20261107-v1`.
+Complete return: `remote-return/full-task-v1.tar.gz`, 11,071,998,021 bytes,
+SHA256 `ed1d27411f280fba174ad2cd06fd44207cb5a7359a7eecd6ee82d3495534d38a`.
+Manifest SHA256 `0fc9383baf46990a138be23a661f363bdc7da871e8a02583b125973c139048dd`.
+Every one of 1,689 remote regular task files / 36,549,056,841 source bytes
+was streamed and hash-verified locally. Source DB/archive and all remote
+code/dependencies/derived data are retained inside the complete return. Usable
+small code/evidence/inputs are under `remote-return/files`; do not expand the DB
+on C: without a new storage decision. No raw source archive/DB is public Git.
+The terminal export capsule was also returned and checked separately; the
+regular-file count above refers to the task snapshot, not task plus export.
+
+Owned remote paths were exactly checked, deleted only after complete return,
+and freshly confirmed absent:
+`/home/chaw/curaloop-runs/chembl-taskfirst-dqr-20261107-v1`
+and `/home/chaw/curaloop-runs/chembl-taskfirst-dqr-20261107-v1-export-v1`.
+Never recreate those closed roots. No active owned jobs remain. Checked SSH
+identity/config/known_hosts were preserved; no new keys or privilege changes.
+The earlier R0-DQ roots remain closed and absent.
+
+## Validation and delivery
+
+Privacy fixtures deny numerical activities, nonmissingness, comments, writes,
+attach and unsafe functions; own-DOI/methods masking tested synthetically.
+Fourteen actual-artifact/synthetic checks passed without source value access;
+the separate append-only exposure audit retains the unresolved D2 constraints.
+No application runtime change; full application suite NOT_RUN.
+Early pre-execution admission-generation syntax and read-command/search errors
+remain in the failure record inside the retained utility envelope. No worker
+or scientific HTTP retry was performed. Source/release/code bytes and every
+failed/unused reservation are retained. Parent is not an independent adjudicator.
+
+Git base: a2cd28e681e2d9fcb5f4e04a7ab4a563deaae87a.
+Scientific checkpoint: recorded in a follow-up after the normal main commit.
+Normal English main delivery/push is authorized; no force push or phase advance.
+The completed preceding phase details below are historical context.
 
 ## Completed R0-DQ; owner decision is next
 
@@ -101,7 +190,7 @@ HTTPattempts total10(checksum+bulk+4DOI+4OAmetadata); no new source STOP/retry.
 the earlier packet and every prior failure remain. `context-review-v1.json`
 credits no incremental paper facts or independent clear controls.
 
-The reused taxonomy left10,008targets unmapped/ambiguous and merged87broad
+The reused taxonomy left10,008 targets unmapped/ambiguous and merged87broad
 annotations into the surviving development group;980mapped targets failed the
 nominal reference/auxiliary catalog criteria. These are partial catalog
 diagnostics, not a complete mutually exclusive target flow. Caps were not

@@ -1,0 +1,23 @@
+{
+  "status": "PASS_SYNTHETIC_BOUNDARY_FIXTURES",
+  "denied_queries": [
+    "SELECT standard_value FROM activities",
+    "SELECT standard_value IS NOT NULL FROM activities",
+    "SELECT pchembl_value FROM activities",
+    "SELECT activity_comment FROM activities",
+    "UPDATE activities SET activity_id=2",
+    "ATTACH DATABASE \":memory:\" AS x",
+    "CREATE TABLE x(a)",
+    "SELECT random()",
+    "PRAGMA journal_mode=WAL"
+  ],
+  "context": {
+    "status": "PASS_PROCEDURAL_PROJECTION_FIXTURES",
+    "checks": 6,
+    "real_sources_validated": false
+  },
+  "own_doi_only": true,
+  "rules_sha256": "ca8d7a7c30dd7de3b208f26dbee07e98996805d85403dd7a75a28d8cf6f1cba3",
+  "real_source_values_queried": 0,
+  "synthetic_fixtures_are_not_source_validation": true
+}

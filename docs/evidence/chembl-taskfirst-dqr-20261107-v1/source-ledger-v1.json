@@ -1,0 +1,68 @@
+{
+  "attempts": [
+    {
+      "name": "dqr-bibliography-CHEMBL1150419",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.bmc.2008.05.004%22&format=json&resultType=lite&pageSize=2",
+      "kind": "metadata",
+      "status": "PASS_TRANSPORT",
+      "utc": "2026-11-07T13:16:38.509643+00:00",
+      "http_status": 200,
+      "decoded_bytes": 953,
+      "sha256": "8fa2ec0eca04f895d3c49f88fb0cbd52eac5c71bb5a9a7923925b0ae8b226150"
+    },
+    {
+      "name": "dqr-oa-CHEMBL1150419",
+      "url": "https://api.openalex.org/works/https://doi.org/10.1016/j.bmc.2008.05.004?select=id,doi,open_access,best_oa_location,locations",
+      "kind": "metadata",
+      "status": "PASS_TRANSPORT",
+      "utc": "2026-11-07T13:16:39.593105+00:00",
+      "http_status": 200,
+      "decoded_bytes": 1883,
+      "sha256": "d48c31f89f8f0e89baed4df6b205dd00a74792af5f6c9cf08a892b66e10dc49b"
+    }
+  ],
+  "bulk_attempts": 0,
+  "decoded_nonbulk_bytes": 2836,
+  "inherited_stopped_urls": {
+    "urls": [
+      "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_35/LICENSE",
+      "https://ricerca.uniba.it/handle/11586/133028",
+      "https://ricerca.uniba.it/handle/11586/133161",
+      "https://www.ebi.ac.uk/chembl/api/data/activity.json?assay_chembl_id=CHEMBL1000140&only=activity_id%2Cassay_chembl_id%2Cdocument_chembl_id%2Cmolecule_chembl_id%2Cstandard_type%2Cstandard_units&limit=20&order_by=activity_id",
+      "https://www.ebi.ac.uk/chembl/api/data/activity.json?assay_chembl_id=CHEMBL1001324&only=activity_id%2Cassay_chembl_id%2Cdocument_chembl_id%2Cmolecule_chembl_id%2Cstandard_type%2Cstandard_units&limit=20&order_by=activity_id",
+      "https://www.jbc.org/article/S0021925820874535/pdf"
+    ],
+    "all_older_provider_and_source_stops_remain": true
+  },
+  "old_ledger_pins": {
+    "records": [
+      {
+        "path": ".local/r0-chembl-20261107-v1/ledger.json",
+        "sha256": "4a9af3343ef171750b9cc782dd8859b7f2e7e641e0f678f1574a8335464b464f",
+        "stopped_sources": [
+          "chembl35-license"
+        ],
+        "status": "CLOSED"
+      },
+      {
+        "path": ".local/r0r-chembl-20261107-v1/ledger.json",
+        "sha256": "e7c56b72cce526330274a1b013652241adca3e114d4c0a8b0743abc84b1a0b25",
+        "stopped_sources": [
+          "projection-CHEMBL1000140",
+          "projection-CHEMBL1001324",
+          "methods-CHEMBL1156448",
+          "repository-page-11586-133028",
+          "repository-page-11586-133161"
+        ],
+        "status": "AWAITING_OWNER_INPUT"
+      },
+      {
+        "path": ".local/chembl-taskfirst-dq-20261107-v1/ledger.json",
+        "sha256": "dbbbf53d27cf29fbd7d3b7aeabeb4bfb56773987d26c6cda8de864d04262ad07",
+        "stopped_sources": [],
+        "status": "CLOSED"
+      }
+    ],
+    "all_stops_retained": true
+  }
+}

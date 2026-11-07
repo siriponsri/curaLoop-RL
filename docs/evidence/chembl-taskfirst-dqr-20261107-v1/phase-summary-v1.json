@@ -1,0 +1,358 @@
+{
+  "schema": "curaloop.r0dqr.phase-readout.v1",
+  "phase_status": "COMPLETE_AWAITING_OWNER_DECISION",
+  "scientific_verdict": "REVISE",
+  "release_utc": "2026-11-07T12:32:14+00:00",
+  "deadline_utc": "2026-11-09T12:32:14+00:00",
+  "closed_utc": "2026-11-07T14:00:29.418935+00:00",
+  "gates": {
+    "D1": "REVIEW_REQUIRED_TRACEABLE_CROSSWALK_NOT_FAMILY_CERTIFICATION",
+    "D2": "REVISE_SHARED_SOURCE_AND_PLANNING_IDENTITY_JOINS_NO_FINAL_RELEASE",
+    "D3": "FAIL_36_BUNDLES_18_UNITS_4_2_12_ROLE_TARGET",
+    "D4": "NOT_ESTABLISHED_NO_METHODS_BODIES_OR_INCREMENTAL_FACTS",
+    "D5": "PASS_BOUNDARIES_FULL_RETURN_REREAD_SCOPED_ABSENCE"
+  },
+  "taxonomy": {
+    "status": "PASS_TAXONOMY_INVENTORY",
+    "targets": 11055,
+    "classification_nodes": 905,
+    "target_counts": {
+      "ADMITTED_METADATA_FEASIBILITY": 10763,
+      "unmapped_inherited_family": 10008,
+      "mapped_inherited_family": 1044,
+      "QUARANTINE_TAXON_CONFLICT": 229,
+      "EXCLUDE_PROTECTED_LINEAGE": 42,
+      "QUARANTINE_HOMOLOGUE": 18,
+      "QUARANTINE_MULTIPLE_OR_MISSING_COMPONENT": 3
+    },
+    "diagnostic_strata": 15,
+    "new_biological_family_certificates": 0,
+    "numeric_activity_queries": 0,
+    "wall_seconds": 0.6682899070437998
+  },
+  "nominal_support": {
+    "status": "PASS_BOUNDED_NOMINAL_FEASIBILITY",
+    "targets": 200,
+    "assays": 1254,
+    "complete_assays": 1254,
+    "topology_rows": 16862,
+    "molecule_ids": 12873,
+    "incomplete_assays": 0,
+    "diagnostic_strata": 15,
+    "known_inherited_family_ids": 15,
+    "candidate_pool": 1,
+    "frozen_candidates": 1,
+    "single_assay_candidates": 1,
+    "pending_pool_candidates": 0,
+    "accepted_source_verified_pools": 0,
+    "candidate_roles": {
+      "development": 1
+    },
+    "candidate_targets": 1,
+    "candidate_diagnostic_strata": 1,
+    "certified_biological_families": 0,
+    "source_activity_numeric_or_presence_queries": 0,
+    "identity_dispositions": {
+      "ADMITTED_IDENTITY": 12853,
+      "EXCLUDE_PROTECTED_EXACT_IDENTITY": 17,
+      "QUARANTINE_UNRESOLVED": 3
+    },
+    "row_pruning": {
+      "protected_or_unresolved": 32,
+      "relation_or_unit": 4190,
+      "known_exposure_outside_development": 64
+    },
+    "wall_seconds": 21.531757225980982
+  },
+  "source_feasibility": {
+    "status": "COMPLETE_FROZEN_SOURCE_FEASIBILITY",
+    "projected_sources": 0,
+    "independent_reference_gold": "NOT_RUN",
+    "numerical_activity_queries": 0,
+    "source_retries": 0,
+    "raw_articles_retained": false,
+    "doi_scope": "frozen development frame only; no substitute papers"
+  },
+  "exposure_lineage_audit": {
+    "status": "PASS_APPEND_ONLY_EXPOSURE_AUDIT_NO_FINAL_RELEASE",
+    "frozen_frame_sha256": "e4cc3339d8e320fd64f70d39b9fd1229b00ef1f8884afbebbe702f121f56b2e2",
+    "candidate_freeze_sha256": "c9e836fc880ce71aebe6140216c2d6ed5573e4051e05ad3d3c5f6cd3d5b719b9",
+    "planning_identity_reconciliation": [
+      {
+        "chembl_id": "CHEMBL8809",
+        "prior_entity_reconciliation": [
+          {
+            "chembl_id": "CHEMBL8809",
+            "entity_types": [
+              "molecule_dictionary"
+            ],
+            "resolved": true
+          }
+        ],
+        "current_source_id_matches": 0,
+        "canonical_hashes_in_returned_derivations": [],
+        "canonical_alias_coverage": "UNKNOWN_NO_NEW_SOURCE_QUERY",
+        "final_use": "WITHHELD_PENDING_FULL_RECONCILIATION"
+      }
+    ],
+    "old_exposed_document_assays": 35,
+    "old_exposed_document_assays_by_frame_role": {
+      "development": 35
+    },
+    "shared_source_components_with_mixed_frame_roles": [
+      {
+        "target_ids": [
+          102672,
+          105440
+        ],
+        "inherited_frame_roles": [
+          "development",
+          "final"
+        ],
+        "status": "QUARANTINE_SHARED_SOURCE_ROLE_REVIEW"
+      },
+      {
+        "target_ids": [
+          13077,
+          12020
+        ],
+        "inherited_frame_roles": [
+          "development",
+          "validation"
+        ],
+        "status": "QUARANTINE_SHARED_SOURCE_ROLE_REVIEW"
+      },
+      {
+        "target_ids": [
+          100437,
+          100794,
+          122333,
+          123075,
+          122320,
+          117968,
+          123257,
+          105450,
+          116779,
+          118077,
+          20057,
+          117250,
+          109618,
+          122324,
+          105203,
+          122891,
+          122413,
+          18022,
+          103626,
+          11775,
+          115264,
+          11268,
+          12642,
+          121382,
+          123110,
+          10189,
+          103722,
+          123248,
+          108367,
+          117987,
+          121743,
+          120668,
+          108054,
+          123049,
+          100301,
+          11786,
+          119006,
+          119054,
+          122357,
+          122887,
+          109116,
+          11694,
+          104400,
+          122710,
+          122286,
+          20132,
+          103624,
+          122714,
+          117492,
+          103673,
+          118251,
+          122377,
+          117993,
+          105217,
+          103060,
+          10804,
+          123108,
+          104103,
+          122816,
+          119314,
+          105605,
+          121320,
+          103771,
+          117925,
+          10122,
+          109826,
+          103663,
+          10703,
+          116464,
+          121712,
+          11797,
+          12179,
+          100438,
+          11843,
+          123240,
+          12021,
+          122225
+        ],
+        "inherited_frame_roles": [
+          "development",
+          "final"
+        ],
+        "status": "QUARANTINE_SHARED_SOURCE_ROLE_REVIEW"
+      },
+      {
+        "target_ids": [
+          101096,
+          329,
+          101147,
+          102847
+        ],
+        "inherited_frame_roles": [
+          "development",
+          "final"
+        ],
+        "status": "QUARANTINE_SHARED_SOURCE_ROLE_REVIEW"
+      }
+    ],
+    "frozen_candidate_roles": {
+      "development": 1
+    },
+    "new_final_tasks_released": 0,
+    "all_proposed_final_tasks_withheld": true,
+    "construction_limit": "The frozen worker retains historical inputs but does not yet propagate every old document/planning-identity and shared-source join into a certified final split. This audit does not retroactively repair or refill that frame.",
+    "before_any_future_qualification": [
+      "Resolve the incidental planning molecule canonical aliases under an approved metadata-only source query.",
+      "Propagate old document exposure and shared-source/assay-group links before any split or candidate qualification; preserve original role labels as provenance.",
+      "Independently adjudicate biological family and procedure mappings; unknown joins block final use."
+    ],
+    "new_activity_values_presence_flags_or_source_queries": 0,
+    "new_candidates_or_refill": false,
+    "independent_family_certification": false
+  },
+  "source": {
+    "status": "PASS_VERIFIED_EXTRACTION_AND_SCHEMA",
+    "database": {
+      "member": "chembl_37/chembl_37_sqlite/chembl_37.db",
+      "bytes": 30480314368,
+      "sha256": "4be13df3b68e25dcd0bff44bf094033b5aebe98f415acdc8c1cdf380e0c15142"
+    },
+    "archive_entries": [
+      {
+        "path": "chembl_37/chembl_37_sqlite",
+        "bytes": 0,
+        "kind": "directory"
+      },
+      {
+        "path": "chembl_37/chembl_37_sqlite/INSTALL_sqlite",
+        "bytes": 541,
+        "kind": "regular"
+      },
+      {
+        "path": "chembl_37/chembl_37_sqlite/chembl_37.db",
+        "bytes": 30480314368,
+        "kind": "regular"
+      }
+    ],
+    "rdkit_version": "2026.09.1",
+    "numpy_version": "2.3.5",
+    "sqlite_runtime": "3.45.1",
+    "source_value_queries": 0,
+    "numeric_outcomes_emitted": false,
+    "wall_seconds": 184.0136274569668
+  },
+  "returned_artifact_sha256": {
+    "jobs/inventory-v1/taxonomy-inventory.json": "8229bd1f90852b107af62fcdccf495601772e772b00d047ba39106e3131d54ba",
+    "jobs/nominal-v1/frame-frozen.json": "e4cc3339d8e320fd64f70d39b9fd1229b00ef1f8884afbebbe702f121f56b2e2",
+    "jobs/nominal-v1/topology-outcome-free.json": "243d0380ad085cbf4605d36f3274c3a52b4fbe0a57db7cc74ebf266490e77bc8",
+    "jobs/nominal-v1/identity-dispositions.json": "b3124ec80418a15d4a7628dbfcb8b9b2e4b434a1245f6a5044e88b12714d3cef",
+    "jobs/nominal-v1/candidates-frozen.json": "c9e836fc880ce71aebe6140216c2d6ed5573e4051e05ad3d3c5f6cd3d5b719b9",
+    "jobs/context-v1/source-intent-frozen.json": "4d4975512de7e7610f3d02d164562ffc4b01420a8db4de6327911feb028de9af",
+    "jobs/context-v1/development-packet.json": "5ad3df09ff990b997750ad67510a8cc65958841982a353b36ca8fd689750b489"
+  },
+  "cpu_accounting": {
+    "cap_seconds": 14400,
+    "conservative_retained_seconds": 12300,
+    "conservative_retained_cpu_hours": 3.4166666666666665,
+    "stage_reserved_seconds": {
+      "source_return": 6900,
+      "metadata": 2700,
+      "context": 900
+    },
+    "utility_reserved_seconds": 1800,
+    "utility_job_sublimits_seconds": 1420,
+    "failed_or_unused_reservations_reclaimed": false,
+    "measurements_are_receipt_scoped_not_complete_host_profiler": true,
+    "authorized_combined_cpu_workers": 2
+  },
+  "http": {
+    "metadata_attempts": 2,
+    "methods_attempts": 0,
+    "decoded_nonbulk_bytes": 2836,
+    "bulk_attempts": 0,
+    "retries": 0,
+    "stopped_sources": []
+  },
+  "early_setup_errors": [
+    {
+      "status": "RETAINED_PRE_EXECUTION_SETUP_SYNTAX_ERROR",
+      "source_snapshot_sha256": "45a095062adc76f3f3847e1378259670f1f005aa34794e7b38f91d0b76f129cb",
+      "scientific_requests": 0,
+      "worker_launched": false,
+      "charge": "inside retained utility envelope; no refund"
+    },
+    {
+      "status": "RETAINED_READ_COMMAND_ROUTING_ERROR",
+      "operation": "RTK cannot execute a PowerShell cmdlet as an external binary; corrected with Python file read",
+      "scientific_requests": 0,
+      "source_or_credentials_read": false,
+      "charge": "inside retained utility envelope"
+    },
+    {
+      "status": "RETAINED_READ_ONLY_SEARCH_PATH_ERROR",
+      "operation": "A literal Windows wildcard path was rejected before search; corrected with explicit file discovery",
+      "scientific_requests": 0,
+      "worker_launched": false,
+      "charge": "inside retained utility envelope"
+    }
+  ],
+  "runtime_worker_failures": [],
+  "numerical_activity_or_presence_queries": 0,
+  "old_final_outcomes_opened": false,
+  "new_final_tasks_qualified": 0,
+  "model_fitting": "NOT_RUN",
+  "independent_reference_gold": "NOT_RUN",
+  "biological_family_certification": "NOT_RUN",
+  "journal_readiness": "NOT_READY",
+  "commercial_clearance": "NOT_ESTABLISHED_BY_THIS_AUDIT",
+  "complete_return": {
+    "status": "PASS_FULL_PRIVATE_RETURN_AND_STREAMED_LOCAL_REREAD",
+    "file_count": 1689,
+    "total_bytes": 36549056841,
+    "archive_bytes": 11071998021,
+    "archive_sha256": "ed1d27411f280fba174ad2cd06fd44207cb5a7359a7eecd6ee82d3495534d38a",
+    "manifest_sha256": "0fc9383baf46990a138be23a661f363bdc7da871e8a02583b125973c139048dd",
+    "extracted_code_evidence_derived_bytes": 30034290,
+    "all_regular_files_completely_hashed_locally": true,
+    "source_database_expanded_locally": false,
+    "private_source_values_projected_to_planner": false,
+    "utc": "2026-11-07T13:53:52.767208+00:00"
+  },
+  "fresh_remote_absence": {
+    "status": "PASS_FRESH_SCOPED_ABSENCE",
+    "paths": [
+      "/home/chaw/curaloop-runs/chembl-taskfirst-dqr-20261107-v1",
+      "/home/chaw/curaloop-runs/chembl-taskfirst-dqr-20261107-v1-export-v1"
+    ],
+    "utc": "2026-11-07T13:57:26.924262+00:00"
+  },
+  "next_actor": "owner",
+  "automatic_next_phase": false
+}

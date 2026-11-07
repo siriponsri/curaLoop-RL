@@ -1,0 +1,59 @@
+{
+  "source": {
+    "status": "PASS_VERIFIED_EXTRACTION_AND_SCHEMA",
+    "database": {
+      "member": "chembl_37/chembl_37_sqlite/chembl_37.db",
+      "bytes": 30480314368,
+      "sha256": "4be13df3b68e25dcd0bff44bf094033b5aebe98f415acdc8c1cdf380e0c15142"
+    },
+    "archive_entries": [
+      {
+        "path": "chembl_37/chembl_37_sqlite",
+        "bytes": 0,
+        "kind": "directory"
+      },
+      {
+        "path": "chembl_37/chembl_37_sqlite/INSTALL_sqlite",
+        "bytes": 541,
+        "kind": "regular"
+      },
+      {
+        "path": "chembl_37/chembl_37_sqlite/chembl_37.db",
+        "bytes": 30480314368,
+        "kind": "regular"
+      }
+    ],
+    "rdkit_version": "2026.09.1",
+    "numpy_version": "2.3.5",
+    "sqlite_runtime": "3.45.1",
+    "source_value_queries": 0,
+    "numeric_outcomes_emitted": false,
+    "wall_seconds": 184.0136274569668
+  },
+  "input_transport": {
+    "status": "PASS_OPAQUE_INPUT_TRANSPORT_PENDING_REMOTE_HASH",
+    "files": [
+      {
+        "local": "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.local\\chembl-taskfirst-dq-20261107-v1\\vendor-inputs-v1.tar.gz",
+        "remote": "vendor-inputs-v1.tar.gz",
+        "bytes": 53641692,
+        "sha256": "651dfa3ff22c0f6e1dbd047b25511deeab1af88fa6caa6f1666d2cb59faa0b41"
+      },
+      {
+        "local": "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.local\\chembl-taskfirst-dqr-20261107-v1\\dqr-inputs-v1.tar.gz",
+        "remote": "dqr-inputs-v1.tar.gz",
+        "bytes": 820565,
+        "sha256": "fb936aeda6e45b03c049b2d5e1d250b8e1f407f10fbb6f86f518c8ada4f20a3c"
+      }
+    ],
+    "prior_protected_canonical_identities": 4723,
+    "additional_known_exposed_identities": 10151,
+    "new_carried_identity_hashes": 5549,
+    "activity_values_or_presence_flags_included": false
+  },
+  "all_input_hashes_verified_remotely": true,
+  "transport_receipt_is_preverification_snapshot": true,
+  "new_package_installs": 0,
+  "ssh_profile_or_known_hosts_changed": false,
+  "opaque_source_bytes_are_not_planner_outcomes": true
+}

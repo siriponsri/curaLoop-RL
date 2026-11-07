@@ -63,14 +63,16 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 The **Molecular Studio frontend checkpoint is complete**. Both the screening application and C Workspace now offer EN/TH,
 Graphite x Copper styling, responsive source inspection and reduced motion.
 
-Latest research: [R0-DQ ChEMBL37 qualification](docs/03_research/R0DQ_QUALIFICATION_RESULTS_20261107.md)
-found two candidates with panels of 128 compounds, both in one development
-split unit. The proposed benchmark of 36 tasks in 18 groups and source/reference truth
-remain unqualified; the readout is **PILOT_ONLY_REVISE**. These are private
-research artifacts pending review, separate from the application's documented
-replay datasets. The owner decides the next phase.
-[Evidence](docs/evidence/chembl-taskfirst-dq-20261107-v1/README.md) ·
-[Next decision](docs/06_execution/R0DQ_OWNER_DECISION_20261107.md)
+Latest research: [R0-DQ-R taxonomy/task feasibility](docs/03_research/R0DQR_TAXONOMY_TASK_FEASIBILITY_20261107.md)
+inventoried 11,055 ChEMBL37 targets and froze 200 targets / 1,254 assays. One nominal
+development pair meets ID-count floors; numerical support was not queried.
+Biological families, source-verified pooling and the 36-task / 18-unit benchmark
+remain unqualified. Scientific verdict: **REVISE**. These private audit
+artifacts are separate from the application's documented replay datasets.
+Source-role separation is unresolved; all proposed final use is withheld.
+The owner decides the next phase.
+[Evidence](docs/evidence/chembl-taskfirst-dqr-20261107-v1/README.md) ·
+[Next decision](docs/06_execution/R0DQR_OWNER_DECISION_20261107.md)
 
 [Checkpoint and limits](docs/06_execution/FRONTEND_CHECKPOINT_20261106.md) ·
 [English manual,12pages](docs/manual/CuraLoop-RL-Molecular-Studio-Manual-EN-v2.pdf) ·

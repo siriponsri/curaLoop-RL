@@ -1,5 +1,47 @@
 # Agent instructions: CuraLoop-RL
 
+## R0-DQ-R complete; wait for owner decision, 7 November 2026
+
+Read docs/03_research/R0DQR_TAXONOMY_TASK_FEASIBILITY_20261107.md,
+docs/06_execution/R0DQR_OWNER_DECISION_20261107.md and HANDOFF.md.
+Metadata inventory 11,055 targets; frozen 200 targets / 1,254 assays; one nominal
+development pair, no certified new family, accepted pool or qualified final task.
+Four mixed-role shared-source components and one unresolved planning canonical
+join keep D2 at REVISE. All proposed final use is withheld; do not reuse the
+metadata role labels as a certified split. Read exposure-quarantine-audit-v1.json
+in docs/evidence/chembl-taskfirst-dqr-20261107-v1 before any later proposal.
+Scientific REVISE; no numerical activity/presence queries or old final outcomes.
+No R1, more intake, new family rule or proposed next budget is released.
+
+Ledger CLOSED at 2026-11-07T14:00:29.418935+00:00; 12,300 of 14,400 conservative CPU seconds
+retained, including 1,800 utilities. All 1,689 remote regular task files were fully
+returned/hash-reread before exact task/export cleanup and fresh absence. No
+active owned jobs remain. Never recreate the closed DQR or older roots. All
+old protected/exposed lineages, roles, STOPs, clocks and charges stay unchanged.
+Recommendations are proposal-only; next actor owner. Parent sole writer;
+normal English main delivery authorized. Earlier release text below is history.
+
+## Owner releases R0-DQ-R option A, 7 November 2026
+
+Owner explicitly selected A at a2cd28e: 4 additional CPU-hours/48 hours,
+max2combined CPU workers, existing pinned archive reuse and metadata/structure/
+masked-methods feasibility only. Read docs/06_execution/R0DQ_OWNER_DECISION_20261107.md
+option A and docs/06_execution/R0DQR_EXECUTION_CONTRACT_20261107.md. Fresh release
+2026-11-07T12:32:14Z, deadline2026-11-09T12:32:14Z (19:32:14 Bangkok).
+Fresh .local/chembl-taskfirst-dqr-20261107-v1 and matching owned remote root only;
+all old roots/ledgers/clocks/STOPs stay closed and unchanged.
+
+Source/return2CPU-hours, metadata1hour, context0.5hour, utilities0.5hour are ceilings.
+Remote1CPU-equivalent/4GiB, local 1 CPU / 1 GiB maximum; use existing checked SSH profile,
+kernel quota/memory proof and full return/reread before scoped cleanup.
+No new bulk HTTP, numerical activity/presence flag queries, old final outcomes,
+model fitting, GPU/paid service or team write. Do not pool assays by target,
+paper or ASSAY_GROUP alone; unknown construct/procedure equivalence stays pending.
+Taxonomy inventories/diagnostic strata are not independently certified families.
+Preserve every protected/exposed lineage and old task role; unknown final mapping
+is quarantined. End with owner review, not automatic R1 or another intake round.
+Parent remains sole writer; normal English main delivery authorized.
+
 ## R0-DQ complete; stop for owner decision, 7 November 2026
 
 Read docs/03_research/R0DQ_QUALIFICATION_RESULTS_20261107.md and
@@ -28,7 +70,7 @@ Proposed A R0-DQ-R (4 additional CPU-hours/48 hours) and B paper review
 ## Owner releases R0-DQ, 7 November 2026
 
 The owner explicitly approved R0-DQ at9eb7480:16additionalCPU-hours/72hours,
-max2combinedCPUworkers, archive receipt and restricted qualification with values
+max2combined CPU workers, archive receipt and restricted qualification with values
 closed from the planner, owner decision before next phase. Read
 docs/06_execution/R0DQ_EXECUTION_CONTRACT_20261107.md. Release09:41:43Z7Nov,
 deadline09:41:43Z10Nov (16:41:43Bangkok). Fresh .local/chembl-taskfirst-dq-20261107-v1

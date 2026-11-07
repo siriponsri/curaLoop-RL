@@ -1,0 +1,368 @@
+{
+  "receipts": [
+    {
+      "name": "ssh-admission-v1",
+      "stage": "utility",
+      "cpu_limit_seconds": 60,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.0625,
+      "wall_seconds": 2.015999999945052,
+      "aggregate_tree_cpu_seconds": 0.28125
+    },
+    {
+      "name": "remote-quota-canary-v1",
+      "stage": "utility",
+      "cpu_limit_seconds": 60,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.046875,
+      "wall_seconds": 1.202999999979511,
+      "aggregate_tree_cpu_seconds": 0.265625
+    },
+    {
+      "name": "source-archive-reuse-v1",
+      "stage": "source_return",
+      "cpu_limit_seconds": 900,
+      "status": "PASS",
+      "parent_cpu_seconds": 146.15625,
+      "wall_seconds": 271.75
+    },
+    {
+      "name": "authenticated-inputs-v1",
+      "stage": "utility",
+      "cpu_limit_seconds": 90,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.28125,
+      "wall_seconds": 7.062000000034459,
+      "aggregate_tree_cpu_seconds": 1.28125
+    },
+    {
+      "name": "source-archive-transport-v1",
+      "stage": "utility",
+      "cpu_limit_seconds": 180,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.5,
+      "wall_seconds": 353.9220000000205,
+      "aggregate_tree_cpu_seconds": 80.265625
+    },
+    {
+      "name": "rules-and-privacy-fixtures-v1",
+      "stage": "utility",
+      "cpu_limit_seconds": 30,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.0625,
+      "wall_seconds": 0.1410000000614673
+    },
+    {
+      "name": "stage-control-2026-11-07T1310127882530000",
+      "stage": "utility",
+      "cpu_limit_seconds": 60,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.15625,
+      "wall_seconds": 4.35999999998603,
+      "aggregate_tree_cpu_seconds": 0.53125
+    },
+    {
+      "name": "prepare-v1",
+      "stage": "source_return",
+      "cpu_limit_seconds": 600,
+      "status": "PASS",
+      "aggregate_tree_cpu_seconds": 172.615036,
+      "wall_seconds": 184.09391808509827,
+      "stage_result": "PASS_VERIFIED_EXTRACTION_AND_SCHEMA"
+    },
+    {
+      "name": "stage-control-2026-11-07T1312226081100000",
+      "stage": "utility",
+      "cpu_limit_seconds": 10,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.015625,
+      "wall_seconds": 1.140999999945052,
+      "aggregate_tree_cpu_seconds": 0.125
+    },
+    {
+      "name": "stage-control-2026-11-07T1312534954960000",
+      "stage": "utility",
+      "cpu_limit_seconds": 10,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.015625,
+      "wall_seconds": 0.9529999999795109,
+      "aggregate_tree_cpu_seconds": 0.125
+    },
+    {
+      "name": "stage-control-2026-11-07T1313412055230000",
+      "stage": "utility",
+      "cpu_limit_seconds": 10,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.046875,
+      "wall_seconds": 1.234000000054948,
+      "aggregate_tree_cpu_seconds": 0.28125
+    },
+    {
+      "name": "stage-control-2026-11-07T1313490089340000",
+      "stage": "utility",
+      "cpu_limit_seconds": 60,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.0625,
+      "wall_seconds": 2.5459999999729916,
+      "aggregate_tree_cpu_seconds": 0.40625
+    },
+    {
+      "name": "inventory-v1",
+      "stage": "metadata",
+      "cpu_limit_seconds": 600,
+      "status": "PASS",
+      "aggregate_tree_cpu_seconds": 0.713156,
+      "wall_seconds": 0.8029369090218097,
+      "stage_result": "PASS_TAXONOMY_INVENTORY"
+    },
+    {
+      "name": "stage-control-2026-11-07T1314060373750000",
+      "stage": "utility",
+      "cpu_limit_seconds": 10,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.015625,
+      "wall_seconds": 0.6720000000204891,
+      "aggregate_tree_cpu_seconds": 0.171875
+    },
+    {
+      "name": "stage-control-2026-11-07T1314222370790000",
+      "stage": "utility",
+      "cpu_limit_seconds": 60,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.109375,
+      "wall_seconds": 2.1089999999385327,
+      "aggregate_tree_cpu_seconds": 0.453125
+    },
+    {
+      "name": "nominal-v1",
+      "stage": "metadata",
+      "cpu_limit_seconds": 1800,
+      "status": "PASS",
+      "aggregate_tree_cpu_seconds": 19.508276000000002,
+      "wall_seconds": 22.25752029987052,
+      "stage_result": "PASS_BOUNDED_NOMINAL_FEASIBILITY"
+    },
+    {
+      "name": "small-return-inventory-v1",
+      "stage": "utility",
+      "cpu_limit_seconds": 30,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.078125,
+      "wall_seconds": 2.702999999979511,
+      "aggregate_tree_cpu_seconds": 0.4375
+    },
+    {
+      "name": "stage-control-2026-11-07T1315002980010000",
+      "stage": "utility",
+      "cpu_limit_seconds": 10,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.03125,
+      "wall_seconds": 0.7190000000409782,
+      "aggregate_tree_cpu_seconds": 0.203125
+    },
+    {
+      "name": "small-return-nominal-v1",
+      "stage": "utility",
+      "cpu_limit_seconds": 30,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.0625,
+      "wall_seconds": 0.7809999999590218,
+      "aggregate_tree_cpu_seconds": 0.265625
+    },
+    {
+      "name": "stage-control-2026-11-07T1315189375170000",
+      "stage": "utility",
+      "cpu_limit_seconds": 60,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.078125,
+      "wall_seconds": 2.077999999979511,
+      "aggregate_tree_cpu_seconds": 0.421875
+    },
+    {
+      "name": "context-v1",
+      "stage": "context",
+      "cpu_limit_seconds": 300,
+      "status": "PASS",
+      "aggregate_tree_cpu_seconds": 0.174363,
+      "wall_seconds": 0.20252061914652586,
+      "stage_result": "PASS_DEVELOPMENT_SOURCE_PACKET"
+    },
+    {
+      "name": "stage-control-2026-11-07T1315366555360000",
+      "stage": "utility",
+      "cpu_limit_seconds": 10,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.015625,
+      "wall_seconds": 0.6560000000754371,
+      "aggregate_tree_cpu_seconds": 0.171875
+    },
+    {
+      "name": "small-return-context-v1",
+      "stage": "utility",
+      "cpu_limit_seconds": 30,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.015625,
+      "wall_seconds": 0.5790000000270084,
+      "aggregate_tree_cpu_seconds": 0.1875
+    },
+    {
+      "name": "development-methods-intake-v1",
+      "stage": "context",
+      "cpu_limit_seconds": 600,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.171875,
+      "wall_seconds": 2.656000000075437,
+      "aggregate_tree_cpu_seconds": 0.296875
+    },
+    {
+      "name": "stage-control-2026-11-07T1317356274960000",
+      "stage": "utility",
+      "cpu_limit_seconds": 60,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.0625,
+      "wall_seconds": 3.25,
+      "aggregate_tree_cpu_seconds": 0.34375
+    },
+    {
+      "name": "return-v1",
+      "stage": "source_return",
+      "cpu_limit_seconds": 3600,
+      "status": "PASS",
+      "aggregate_tree_cpu_seconds": 535.477272,
+      "wall_seconds": 545.2454467008356,
+      "stage_result": "PASS_COMPLETE_PRIVATE_EXPORT"
+    },
+    {
+      "name": "returned-metadata-analysis-v1",
+      "stage": "metadata",
+      "cpu_limit_seconds": 120,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.203125,
+      "wall_seconds": 0.2809999999590218
+    },
+    {
+      "name": "stage-control-2026-11-07T1318347245200000",
+      "stage": "utility",
+      "cpu_limit_seconds": 10,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.0625,
+      "wall_seconds": 0.625,
+      "aggregate_tree_cpu_seconds": 0.234375
+    },
+    {
+      "name": "stage-control-2026-11-07T1319295919580000",
+      "stage": "utility",
+      "cpu_limit_seconds": 10,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.015625,
+      "wall_seconds": 1.202999999979511,
+      "aggregate_tree_cpu_seconds": 0.140625
+    },
+    {
+      "name": "stage-control-2026-11-07T1321288210940000",
+      "stage": "utility",
+      "cpu_limit_seconds": 10,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.046875,
+      "wall_seconds": 1.75,
+      "aggregate_tree_cpu_seconds": 0.25
+    },
+    {
+      "name": "stage-control-2026-11-07T1323062426020000",
+      "stage": "utility",
+      "cpu_limit_seconds": 10,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.046875,
+      "wall_seconds": 1.109000000054948,
+      "aggregate_tree_cpu_seconds": 0.265625
+    },
+    {
+      "name": "stage-control-2026-11-07T1324085268560000",
+      "stage": "utility",
+      "cpu_limit_seconds": 10,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.015625,
+      "wall_seconds": 2.2030000000959262,
+      "aggregate_tree_cpu_seconds": 0.265625
+    },
+    {
+      "name": "stage-control-2026-11-07T1325435623770000",
+      "stage": "utility",
+      "cpu_limit_seconds": 10,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.015625,
+      "wall_seconds": 1.6570000000065193,
+      "aggregate_tree_cpu_seconds": 0.1875
+    },
+    {
+      "name": "stage-control-2026-11-07T1326443742390000",
+      "stage": "utility",
+      "cpu_limit_seconds": 10,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.0625,
+      "wall_seconds": 2.047000000020489,
+      "aggregate_tree_cpu_seconds": 0.28125
+    },
+    {
+      "name": "return-fetch-v1",
+      "stage": "utility",
+      "cpu_limit_seconds": 300,
+      "status": "PASS",
+      "parent_cpu_seconds": 14.84375,
+      "wall_seconds": 928.015999999945,
+      "aggregate_tree_cpu_seconds": 219.296875
+    },
+    {
+      "name": "complete-return-reread-v1",
+      "stage": "source_return",
+      "cpu_limit_seconds": 1200,
+      "status": "PASS",
+      "parent_cpu_seconds": 249.84375,
+      "wall_seconds": 657.188000000082
+    },
+    {
+      "name": "returned-artifact-acceptance-v1",
+      "stage": "metadata",
+      "cpu_limit_seconds": 120,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.578125,
+      "wall_seconds": 3.265999999945052
+    },
+    {
+      "name": "return-cleanup-v1",
+      "stage": "utility",
+      "cpu_limit_seconds": 120,
+      "status": "PASS",
+      "parent_cpu_seconds": 17.125,
+      "wall_seconds": 169.68700000003446,
+      "aggregate_tree_cpu_seconds": 17.5
+    },
+    {
+      "name": "remote-exact-cleanup-v1",
+      "stage": "source_return",
+      "cpu_limit_seconds": 600,
+      "status": "PASS",
+      "parent_cpu_seconds": 128.171847111,
+      "stage_result": "PASS_EXACT_DELETE_AFTER_FULL_RETURN"
+    },
+    {
+      "name": "frozen-frame-exposure-audit-v1",
+      "stage": "metadata",
+      "cpu_limit_seconds": 60,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.109375,
+      "wall_seconds": 5.907000000006519
+    },
+    {
+      "name": "phase-closeout-v1",
+      "stage": "utility",
+      "cpu_limit_seconds": 60,
+      "status": "PASS",
+      "parent_cpu_seconds": 0.015625,
+      "wall_seconds": 0.4690000000409782
+    }
+  ],
+  "all_phase_jobs_terminal": true,
+  "conservative_retained_seconds": 12300,
+  "scope": "receipt-scoped parent/tree CPU; overlapping controls are not added as a complete measured host total"
+}
