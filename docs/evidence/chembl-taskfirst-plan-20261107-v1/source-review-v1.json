@@ -1,0 +1,125 @@
+{
+  "status": "PRIMARY_DOCUMENTATION_AND_CACHE_REVIEW_ONLY",
+  "date": "2026-11-07",
+  "cached_official_metadata": [
+    {
+      "path": ".local\\r0-chembl-20261107-v1\\008-chembl37-directory.html",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_37/",
+      "bytes": 5432,
+      "sha256": "d42f9357a0e1839d3dbc937362768b1f0fb7e89bfdf58cdc6e0560aa6cb6fbcc",
+      "scope": "Existing authenticated official metadata; no new download"
+    },
+    {
+      "path": ".local\\r0-chembl-20261107-v1\\009-chembl37-readme.html",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_37/README",
+      "bytes": 3616,
+      "sha256": "127e85ad43aefa88b5efdd168dbf6814114fdfcc529c23f76f83296a42b67fd3",
+      "scope": "Existing authenticated official metadata; no new download"
+    },
+    {
+      "path": ".local\\r0-chembl-20261107-v1\\010-chembl37-license.html",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_37/LICENSE",
+      "bytes": 21142,
+      "sha256": "f0c22ca33207ad8a85129a71f1454fcf8f2f71c99e68da5da01538210fa3ffba",
+      "scope": "Existing authenticated official metadata; no new download"
+    },
+    {
+      "path": ".local\\r0-chembl-20261107-v1\\011-chembl37-schema.html",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_37/chembl_37_schema_documentation.html",
+      "bytes": 96496,
+      "sha256": "170021a58a6d8c09ca088eae5ee75c9b9d0b3b457c6428adf63986b9d765f9fb",
+      "scope": "Existing authenticated official metadata; no new download"
+    }
+  ],
+  "cached_schema_field_presence": {
+    "ASSAY_GROUP": true,
+    "VARIANT_ID": true,
+    "VARIANT_SEQUENCES": true,
+    "ASSAY_PARAMETERS": true,
+    "ASSAY_CELL_TYPE": true,
+    "STANDARD_RELATION": true,
+    "POTENTIAL_DUPLICATE": true
+  },
+  "sources": [
+    {
+      "url": "https://chembl.gitbook.io/chembl-interface-documentation/downloads",
+      "scope": "Current official release37/DOI/SQLite format documentation",
+      "status": "READ"
+    },
+    {
+      "url": "https://chembl.gitbook.io/chembl-interface-documentation/about",
+      "scope": "Current data licensing page",
+      "status": "READ"
+    },
+    {
+      "url": "https://chembl.gitbook.io/chembl-interface-documentation/frequently-asked-questions/chembl-data-questions",
+      "scope": "Primary search-returned documentation on units, confidence, duplicates and validity; illustrative values are not task rows",
+      "status": "PRIMARY_TEXT_RETURNED"
+    },
+    {
+      "url": "https://chembl.gitbook.io/chembl-data-deposition-guide/file-structure/field-names-and-data-types-minimal-data-submission/assay.tsv",
+      "scope": "Primary search-returned assay-instance/description guidance",
+      "status": "PRIMARY_TEXT_RETURNED"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s10822-015-9860-5",
+      "doi": "10.1007/s10822-015-9860-5",
+      "scope": "2015 curation paper abstract",
+      "status": "READ_ABSTRACT"
+    },
+    {
+      "url": "https://academic.oup.com/nar/article/52/D1/D1180/7337608",
+      "doi": "10.1093/nar/gkad1004",
+      "scope": "Publisher identity/title/authors returned; later targeted body retrieval failed",
+      "status": "IDENTITY_ONLY_BODY_NOT_REVIEWED"
+    },
+    {
+      "url": "https://academic.oup.com/nar/article/54/D1/D10/8322703",
+      "scope": "Primary search excerpt about ASSAY_GROUP; later body retrieval failed; schema presence separately checked from cache",
+      "status": "PRIMARY_EXCERPT_ONLY"
+    },
+    {
+      "url": "https://link.springer.com/journal/10822/aims-and-scope",
+      "scope": "Current retrospective-validation/novel-method scope",
+      "status": "READ"
+    }
+  ],
+  "retrieval_failures": [
+    {
+      "url": "https://academic.oup.com/nar/article/52/D1/D1180/7337608",
+      "operation": "find Abstract",
+      "error": "HTTP500 redirected publisher minimal body inaccessible; non-retryable",
+      "retried_after_failure": false
+    },
+    {
+      "url": "https://academic.oup.com/nar/article/54/D1/D10/8322703",
+      "operation": "find ASSAY_GROUP",
+      "error": "HTTP500 redirected publisher minimal body inaccessible; non-retryable",
+      "retried_after_failure": false
+    }
+  ],
+  "storage_snapshot": {
+    "drive": "C",
+    "free_bytes": 60749815808,
+    "date": "2026-11-07",
+    "is_admission_reservation": false,
+    "remote_checked": false
+  },
+  "archive_status": "NOT_ACQUIRED_EXACT_SIZE_DIGEST_UNPACKED_LAYOUT_UNKNOWN",
+  "new_dataset_rows_read": 0,
+  "new_activity_values_read": 0,
+  "new_protocol_numbers_unmasked": false,
+  "new_remote_jobs": 0,
+  "old_ledgers_changed": false,
+  "independent_scientific_review": "NOT_RUN",
+  "activity_value_claim_scope": "No new project assay-row outcomes fetched. Generic official-document examples and the incidental unrelated snippet are review exposure, never admitted final tasks.",
+  "incidental_search_exposures": [
+    {
+      "id": "CHEMBL8809",
+      "entity_type": "UNRESOLVED",
+      "source": "https://www.reddit.com/r/bioinformatics/comments/1e8dinr/",
+      "exposure": "Unrelated discovery snippet linked identifier with numeric bioactivity discussion; no values imported",
+      "final_admission": "EXCLUDED_PENDING_IDENTITY_AND_PROVENANCE_RECONCILIATION"
+    }
+  ]
+}

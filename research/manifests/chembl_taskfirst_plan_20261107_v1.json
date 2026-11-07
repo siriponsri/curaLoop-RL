@@ -1,0 +1,322 @@
+{
+  "schema": "curaloop.taskfirst.dataset-plan.v1",
+  "status": "DESIGN_READY_FOR_OWNER_REVIEW",
+  "date": "2026-11-07",
+  "base_commit": "5199760dab0c98fe597d840ae67181dc1aba856e",
+  "authorization": {
+    "plan_preparation": "OWNER_APPROVED",
+    "execution_authorized": false,
+    "archive_acquisition_authorized": false,
+    "numeric_support_validation_authorized": false,
+    "protocol_number_access_authorized": false,
+    "release_utc": null,
+    "deadline_utc": null,
+    "automatic_next_phase": false
+  },
+  "source": {
+    "release": "ChEMBL_37",
+    "release_doi": "10.6019/CHEMBL.database.37",
+    "archive_filename": "chembl_37_sqlite.tar.gz",
+    "source_url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_37/chembl_37_sqlite.tar.gz",
+    "rounded_cached_listing_size": "5.4G",
+    "exact_bytes": null,
+    "provider_checksum": null,
+    "provider_checksum_algorithm": null,
+    "local_sha256": null,
+    "archive_acquired": false,
+    "database_license": "CC-BY-SA-3.0",
+    "paper_rights": "SEPARATE_ITEMIZED_REVIEW",
+    "future_owner_copy_path": "research/raw_data/external-benchmarks/chembl-37-taskfirst/source/chembl_37_sqlite.tar.gz"
+  },
+  "task_design": {
+    "reference_compounds": 128,
+    "min_auxiliary_contexts": 1,
+    "max_auxiliary_contexts": 3,
+    "min_shared_compounds_union": 64,
+    "min_shared_compounds_per_auxiliary": 32,
+    "min_context_fact_affected_edges": 32,
+    "exact_supported_cells_only": true,
+    "missing_as_inactive": false,
+    "reference_tracks": [
+      "Ki",
+      "Kd"
+    ],
+    "raw_endpoint_pooling": false,
+    "other_reference_tracks_require_owner_decision": true,
+    "primary_relation": "=",
+    "positive_finite_reference_values": true,
+    "reference_choice": "Hash-based outcome-blind panel after all protection/role pruning",
+    "replicate_primary_rule": "Lowest admissible activity ID per canonical compound/assay; all replicates retained privately",
+    "primary_target_gate": {
+      "type": "SINGLE_PROTEIN",
+      "relationship": "DIRECT",
+      "confidence_score": 9,
+      "accession_organism_reconciled": true,
+      "null_variant_implies_wildtype": false,
+      "reference_construct_explicit": true
+    },
+    "action_compounds_restricted_to_reference_panel": true
+  },
+  "full_benchmark_targets": {
+    "qualified_groups_now": 0,
+    "qualified_bundles_now": 0,
+    "biological_group_certification": "NOT_RUN",
+    "groups_total": 18,
+    "bundles_total": 36,
+    "bundles_per_group": 2,
+    "roles": {
+      "development": {
+        "groups": 4,
+        "bundles": 8
+      },
+      "validation": {
+        "groups": 2,
+        "bundles": 4
+      },
+      "reserved_final": {
+        "groups": 12,
+        "bundles": 24
+      }
+    },
+    "counts_are_power_calculation": false,
+    "family_document_connected_units": true,
+    "cross_role_exact_molecule_priority": [
+      "reserved_final",
+      "validation",
+      "development"
+    ],
+    "chemical_ood_claim": false
+  },
+  "candidate_frame_caps": {
+    "targets": 100,
+    "assays": 2000,
+    "bundles": 120,
+    "support_rows": 1000000,
+    "canonical_molecules": 100000,
+    "truncated_support_eligible": false,
+    "post_frame_refill_allowed": false,
+    "candidate_selection_uses_id_topology_not_values": true
+  },
+  "proposed_primary_endpoint": {
+    "status": "PROPOSED_NOT_FINAL_EXPERIMENT_PROTOCOL",
+    "name": "Reference-top10 recovery among delivered reference measurements",
+    "top_k": 10,
+    "direction": "Ascending reference molar Ki or Kd; deterministic source-ID ties",
+    "utility": "size(delivered_reference_compounds intersect reference_top10) / 10",
+    "top10_computed_during_qualification": false,
+    "measurement_budgets": [
+      16,
+      32,
+      64
+    ],
+    "primary_measurement_budget": 32,
+    "evidence_action_budgets": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "initial_delivered_outcomes": 0,
+    "known_hit_seeding": false,
+    "clinical_hit_claim": false,
+    "minimum_meaningful_effect_threshold": null,
+    "report_effects_and_grouped_uncertainty": true
+  },
+  "comparison_controls": [
+    "complete_metadata_strong_acquisition",
+    "full_upfront_evidence_same_predictor",
+    "fixed_random_evidence_same_predictor",
+    "adapted_decision_region",
+    "adapted_multifidelity_search",
+    "random_greedy_appropriate_structural_control",
+    "zero_cost_full_context_diagnostic_ceiling"
+  ],
+  "next_phase_proposal": {
+    "name": "R0-DQ",
+    "status": "NOT_RELEASED",
+    "cpu_hours_increment_cap": 16,
+    "elapsed_hours_cap": 72,
+    "max_combined_cpu_workers": 2,
+    "remote_worker": {
+      "workers": 1,
+      "cpu_equivalent": 1,
+      "memory_gib": 4,
+      "enforced_aggregate_quota_and_starting_affinity": true
+    },
+    "local_worker": {
+      "workers": 1,
+      "cpu_equivalent": 1,
+      "memory_gib": 1
+    },
+    "gpu": false,
+    "new_paid_services": false,
+    "model_training": false,
+    "external_team_writes": false,
+    "cpu_allocations_hours": {
+      "source_verification": 3,
+      "frame_protection": 2,
+      "identity_support_graph": 5,
+      "development_context_feasibility": 3,
+      "checks_return_cleanup": 2,
+      "utilities": 1
+    },
+    "http_attempt_caps": {
+      "bulk_archive": 1,
+      "release_metadata": 7,
+      "source_access_family_metadata": 56,
+      "methods": 32
+    },
+    "http_total_cap": 96,
+    "automatic_retries": 0,
+    "nonbulk_decoded_mib_cap": 512,
+    "metadata_mib_per_file": 2,
+    "methods_mib_per_file": 8,
+    "archive_gib_cap": 8,
+    "unpacked_database_gib_cap": 32,
+    "development_bundles_reviewed": 8,
+    "primary_documents_cap": 24,
+    "min_candidate_context_factors": 2,
+    "min_groups_with_context_factors": 2,
+    "min_clear_controls": 2,
+    "human_reviews_performed": false,
+    "human_review_hours_estimate_pilot": [
+      8,
+      16
+    ],
+    "human_review_is_cpu_budget": false
+  },
+  "storage_proposal": {
+    "local_parts_gib": {
+      "source_archive": 8,
+      "full_return_archive": 16,
+      "extracted_evidence_code_derived": 4
+    },
+    "local_task_gib_cap": 28,
+    "local_os_reserve_gib": 10,
+    "local_min_free_gib": 38,
+    "remote_parts_gib": {
+      "source_archive": 8,
+      "database": 32,
+      "intermediates": 8,
+      "export_archive": 16
+    },
+    "remote_task_gib_cap": 64,
+    "remote_os_reserve_gib": 16,
+    "remote_min_free_gib": 80,
+    "full_regular_file_return_including_database": true,
+    "local_streamed_hash_reread_before_remote_cleanup": true,
+    "remote_live_admission_performed": false
+  },
+  "record_contracts": {
+    "task_bundle_required": [
+      "task_id",
+      "source_release",
+      "target_id",
+      "organism",
+      "reference_assay_id",
+      "reference_type",
+      "compound_ids",
+      "auxiliary_assay_ids",
+      "support_mask_hash",
+      "context_factor_ids",
+      "source_document_ids",
+      "split_unit_id",
+      "role",
+      "exposure_status",
+      "disposition"
+    ],
+    "support_cell_required": [
+      "source_release",
+      "activity_id",
+      "assay_id",
+      "canonical_molecule_id",
+      "endpoint_type",
+      "standard_unit",
+      "relation",
+      "eligibility_status",
+      "lineage_id"
+    ],
+    "context_fact_required": [
+      "fact_id",
+      "affected_assay_ids",
+      "affected_edges",
+      "metadata_only_status",
+      "source_location",
+      "candidate_interpretations",
+      "draft_resolution",
+      "reviewer_role",
+      "adjudication_status",
+      "downstream_decision",
+      "exposure_status"
+    ],
+    "private_outcome_fields_not_exported": [
+      "standard_value",
+      "pchembl_value",
+      "activity_comment",
+      "result_classes",
+      "effect_sizes",
+      "reference_top10_rank"
+    ],
+    "null_reasons": [
+      "NOT_REPORTED",
+      "NOT_MAPPED",
+      "INACCESSIBLE",
+      "CONFLICTING",
+      "NOT_REVIEWED",
+      "INCOMPLETE_SUPPORT"
+    ],
+    "dispositions": [
+      "CANDIDATE",
+      "ADMIT_PROVISIONAL",
+      "QUARANTINE",
+      "REJECT"
+    ],
+    "raw_records_overwritten": false,
+    "identity_key": "source release + entity type + stable ID",
+    "conflicting_payload_rule": "New conflict record; never overwrite prior source"
+  },
+  "gates": [
+    "G1_SOURCE_RIGHTS",
+    "G2_PROTECTION",
+    "G3_STRUCTURAL_SCOPE",
+    "G4_DEVELOPMENT_RELEVANCE",
+    "G5_INTEGRITY_RETURN"
+  ],
+  "possible_verdicts": [
+    "PASS_FOR_REFERENCE_REVIEW",
+    "PILOT_ONLY_REVISE",
+    "STOP_CURRENT_ADAPTIVE_EVIDENCE_ROUTE",
+    "PENDING_DOMAIN_REVIEW",
+    "FAIL_INTEGRITY",
+    "STOP_SOURCE",
+    "RIGHTS_REVIEW"
+  ],
+  "historical_protection": {
+    "registry_sha256": "e81838e46c0b77c1d2bbd462fe988d04a86812a766a0c6f832466196a4da8a05",
+    "documented_canonical_identities": 4723,
+    "old_final_outcomes_opened_by_plan": false,
+    "old_ledgers_reset": false,
+    "old_stops_retried": false,
+    "additional_planning_exposed_ids": [
+      {
+        "id": "CHEMBL8809",
+        "entity_type": "UNRESOLVED",
+        "source": "https://www.reddit.com/r/bioinformatics/comments/1e8dinr/",
+        "exposure": "Unrelated discovery snippet linked identifier with numeric bioactivity discussion; no values imported",
+        "final_admission": "EXCLUDED_PENDING_IDENTITY_AND_PROVENANCE_RECONCILIATION"
+      }
+    ]
+  },
+  "delivery": {
+    "plan": "docs/03_research/CHEMBL_TASKFIRST_DATASET_BENCHMARK_PLAN_20261107.md",
+    "execution_proposal": "docs/06_execution/CHEMBL_TASKFIRST_DQ_PROPOSAL_20261107.md",
+    "independent_scientific_review": "NOT_RUN",
+    "validated_against_acquired_sqlite": false,
+    "rollback": "Withdraw new candidate proposal; retain source/exposure/failure history and prior checkpoints"
+  },
+  "freeze_sequence": [
+    "Target/assay frame and eligibility rules before any numerical outcomes/source interpretation",
+    "Outcome-free full ID topology; overlap-based candidate bundle selection and candidate-ID freeze",
+    "Restricted finite/nonmissing support and source feasibility; eligible cohort freeze before policy utility"
+  ]
+}

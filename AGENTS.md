@@ -1,5 +1,18 @@
 # Agent instructions: CuraLoop-RL
 
+## Owner selects task-first ChEMBL plan preparation, 7 November 2026
+
+The owner selected A after R0-A1 and authorized preparation of a new dataset/
+benchmark plan, with scope/budget/pass criteria reviewed before the next phase.
+Read docs/03_research/CHEMBL_TASKFIRST_DATASET_BENCHMARK_PLAN_20261107.md and
+docs/06_execution/CHEMBL_TASKFIRST_DQ_PROPOSAL_20261107.md. PLAN_READY only;
+R0-DQ intake/compute/SSH/protocol-number access are NOT_RELEASED. No new clock,
+processing root, bulk archive, activity-value check or final outcome access.
+The proposed16CPU-hours/72hours/2combinedworkers are ceilings for owner review,
+not current authority. Proposed36bundles/18groups and12final biological groups
+are targets, not qualified counts. Original data/claims/STOPs/ledgers stay closed.
+Normal English main plan delivery/push authorized; parent sole writer.
+
 ## R0-A1 completed; owner direction decision, 7 November 2026
 
 Read docs/03_research/R0A1_FEASIBILITY_RESULTS_20261107.md and

@@ -1,5 +1,13 @@
 # Evidence-led implementation plan
 
+> **Latest: owner-selected ChEMBL redesign plan ready.** Read
+> [dataset/benchmark design](docs/03_research/CHEMBL_TASKFIRST_DATASET_BENCHMARK_PLAN_20261107.md)
+> and [R0-DQ scope/resources](docs/06_execution/CHEMBL_TASKFIRST_DQ_PROPOSAL_20261107.md).
+> Task-first proposal:36bundles/18candidate groups,128reference compounds per
+> bundle and complete auxiliary support. R0-DQ16CPU-hours/72hours is NOT_RELEASED;
+> no new archive, numerical validation, SSH processing or phase clock. The owner
+> reviews permissions, budgets and gates before execution. R0 scientific REVISE.
+
 > **Current checkpoint: R0-A1 complete.** The approved identifier-aware audit
 > returned INFEASIBLE_IN_CURRENT_SUBSET; scientific R0 remains REVISE. Read
 > [the results](docs/03_research/R0A1_FEASIBILITY_RESULTS_20261107.md) and

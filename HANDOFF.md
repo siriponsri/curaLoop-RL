@@ -1,5 +1,48 @@
 # Owner-review handoff: R0-R three-paper subset
 
+## Latest: owner-selected task-first dataset/benchmark plan
+
+Owner instruction: prepare direction A with ChEMBL as the core, preserving the
+joint evidence/molecular-decision question; present scope, budget and pass criteria
+before the next phase. Planning delivery is complete. Read
+[design](docs/03_research/CHEMBL_TASKFIRST_DATASET_BENCHMARK_PLAN_20261107.md),
+[R0-DQ proposal](docs/06_execution/CHEMBL_TASKFIRST_DQ_PROPOSAL_20261107.md),
+[manifest](research/manifests/chembl_taskfirst_plan_20261107_v1.json) and
+[planning evidence](docs/evidence/chembl-taskfirst-plan-20261107-v1/README.md).
+
+Proposed full design36bundles/18conservative family-source split units:8dev/
+4validation/24final bundles across4/2/12group targets.128canonical reference
+compounds,64shared compounds,32shared per auxiliary,1-3auxiliary contexts.
+Primary Ki/Kd tracks kept separate; proposed reference-top10recovery under fixed
+cell-reveal/evidence budgets, not therapeutic hits. All counts/metrics are
+proposals; qualified counts and actual outcomes remain unknown.
+
+R0-DQ proposed16additionalCPU-hours/72hours, max2workers:remote1CPU/4GiB and
+local1CPU/1GiB. No execution, SSH check or clock has started. Next approval must
+explicitly cover the private ChEMBL37 archive containing outcomes at rest,
+restricted numeric-support validation with no values/ranks exposed, and methods-
+input protocol numbers with results masked. Existing final records excluded
+before logical value queries. Candidate-frame/source/support limits are in the
+proposal; no current grant for those accesses. Old roots/ledgers/STOPs preserved.
+
+Storage plan avoids extracting the returned DB locally. Remote64GiBtaskcap/
+80GiBfree admission; local28GiBtaskcap/38GiBfree admission. Plan-time local free
+56.6GiB is not a launch reservation. Full returned archive must contain every
+regular task file including the DB; stream-decompress/hash each locally before
+exact remote task/export cleanup. No weaker return or privilege/config change.
+
+All gates supported means PASS_FOR_REFERENCE_REVIEW only; independent human
+reference/family review, model/pilot/final work remain later owner checkpoints.
+No natural decision relevance beyond complete metadata -> stop/revise the route,
+not another automatic sample. No paid service, outreach, team write or submission.
+Planning sources verified: official docs and cached release metadata. Archive
+exact size/checksum/unpacked layout NOT_VERIFIED; publisher body fetch failures
+retained; no new cohort or activity rows. Parent-only review, not independent gold.
+
+Delivery begins at5199760dab0c98fe597d840ae67181dc1aba856e. Check actual current
+main commit/remote state on resume. Await owner decision on the concrete R0-DQ
+package; do not treat approval of plan preparation as approval to run it.
+
 ## Latest: completed R0-A1 and next owner decision
 
 The owner approved A at c3a95b4. The single identifier-aware feasibility audit

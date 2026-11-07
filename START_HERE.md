@@ -1,5 +1,11 @@
 # Start here
 
+> **Latest: review the ChEMBL task-first plan.** The owner approved plan
+> preparation after R0-A1. Read [the design](docs/03_research/CHEMBL_TASKFIRST_DATASET_BENCHMARK_PLAN_20261107.md),
+> [proposed scope/budget/gates](docs/06_execution/CHEMBL_TASKFIRST_DQ_PROPOSAL_20261107.md)
+> and [HANDOFF.md](HANDOFF.md). No next-phase execution or new dataset download
+> has started. Older checkpoint wording below is historical.
+
 > **Latest: R0-A1 complete, owner direction needed.** Read
 > [the feasibility result](docs/03_research/R0A1_FEASIBILITY_RESULTS_20261107.md),
 > [options](docs/06_execution/R0A1_NEXT_DECISION_20261107.md) and

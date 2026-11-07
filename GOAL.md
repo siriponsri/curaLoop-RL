@@ -1,5 +1,12 @@
 # Goal: publishable evidence and a testable R&D product
 
+> **Current planning frontier:** the owner selected a task-first ChEMBL redesign
+> for the existing joint evidence/molecular-decision question. The
+> [new plan](docs/03_research/CHEMBL_TASKFIRST_DATASET_BENCHMARK_PLAN_20261107.md)
+> is ready for review; data acquisition and next-phase execution are not released.
+> Proposed counts are not a qualified benchmark, scientific GO or publication
+> readiness. Keep old final outcomes and ledgers closed.
+
 > **Current R0-A1 readout:** audit COMPLETE, current twelve-case slice
 > INFEASIBLE for the proposed evidence/molecular-choice test. Scientific R0
 > remains REVISE. See [results](docs/03_research/R0A1_FEASIBILITY_RESULTS_20261107.md).
