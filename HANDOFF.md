@@ -1,4 +1,68 @@
-# Owner-review handoff: R0 readout with REVISE
+# Owner-source/review handoff: R0-R reference feasibility
+
+## Current R0-R checkpoint, 7 November 2026
+
+The owner explicitly approved the proposed R0-R revision. Read
+[interim results](docs/03_research/R0R_INTERIM_RESULTS_20261107.md),
+[reference review](docs/03_research/R0R_REFERENCE_REVIEW_20261107.md),
+[source requests](docs/03_research/R0R_OWNER_METHODS_REQUEST_20261107.md),
+[execution contract](docs/06_execution/R0R_EXECUTION_CONTRACT_20261107.md) and
+[evidence](docs/evidence/r0r-chembl-20261107-v1/README.md).
+Status: AWAITING_OWNER_SOURCES_AND_REFERENCE_REVIEW. R0-R NOT_COMPLETE;
+no P1/R1 or another phase is released. No processes/monitor run in background.
+
+Source authority window:06:16:25Z-14:16:25Z7November2026, ending21:16:25Bangkok.
+One local worker,1CPU/max1GiB; source jobs used512MiB. No SSH/GPU/paid service,
+global dependency change, model training, final outcome or real team write.
+Retain 3060/3600 conservative CPU seconds (600 utility + 41×60 worker reservations),
+41/48 HTTP attempts and 1110060/33554432 decoded bytes. Do not reclaim failed charges,
+pause the clock or reset the closed R0/LR-BC ledgers. Remaining allowance is not
+a fresh grant; verify time/resources before continuation.
+
+Protection:24 label-free feature files/4723canonical structures and the frozen
+family registry authenticated;13/50assays quarantined for unresolved lineage.
+Selected12 from37eligible, balanced6B/6F across7papers/3frozen components.
+Ten projected cases yielded86metadata rows. Pinned RDKit2026.09.1 checked80
+structures, with zero exact protected matches. This is not chemical OOD or
+12independent biological families. Accepted projections contain no activity
+value/comment/class fields;17IC50records have null standard units.
+
+Two schema-rejected projections stay STOP without retry/replacement; the service
+adds safe originaltype/unit aliases. Client now admits only those aliases.
+The generic interpreter lacked RDKit; existing project .venv pinned version
+worked. No package installation occurred. V2 summary corrects a v1defaultdict
+counting error from12to10accepted cases; raw evidence/case denominator unchanged.
+
+Only1paper's masked methods currently supports2draft references. Their target IDs
+differ, so typed metadata already prevents unqualified same-target pooling.
+Do not promote context enrichment to a demonstrated molecular decision gain.
+Owner review pending; parent draft is not independent gold. Six methods sources
+remain missing: one publisherOA URL returned403, five had no admitted open
+methods in checked locations. No paywall/access-control bypass or case replacement.
+
+Ask the owner to place legitimate PDFs using the source-request filenames in
+research/raw_data/external-benchmarks/chembl-37-r0r/owner-methods and notify us.
+Before local processing, verify DOI/source, size/remaining bytes, deadline and
+masking boundaries; no raw activity/results may enter agent context. Existing
+PDF boundary extraction is NOT_RUN on real publisher PDF after403. Raw masked
+internal passages remain private; public packet uses concise paraphrase only.
+
+Private root: .local/r0r-chembl-20261107-v1; 123 files / 1013433 bytes completely
+reread at the latest v2 checkpoint. 48 resource receipts sum to 5.3125 partial
+measured process CPU seconds, not entire task cost. Prior R0's 76 private hashes
+remain unchanged. Four listed public repository handles were resolved; two pages
+yielded no admitted attachment metadata and two returned403. No new methods source
+was admitted. The XML-mask module hash at its first call was not captured. A
+controlled repeat of that successful source now captures the module hash, verifies
+the DOI, and matches the original input/output hashes exactly. This is source
+repeatability, not independent scientific adjudication. All STOPs remain.
+Authoritative evidence: interim-summary-v4, source-ledger-v2, resource-receipts-v2
+and private-artifact-index-v2. Earlier v1 snapshots document intermediate states.
+
+Next actor: owner provides source files and reviews the two draft reference cases.
+Scientific gates remain open. Resume within this same budget/window when inputs
+arrive; if expired, report that and obtain a new bounded release. Normal main
+delivery remains authorized; inspect Git freshly. Historical checkpoints below.
 
 ## Current R0 checkpoint, 7 November 2026
 

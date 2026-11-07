@@ -1,5 +1,11 @@
 # Goal: publishable evidence and a testable R&D product
 
+> **7 November R0-R:** Owner-approved reference feasibility is now awaiting
+> six source documents and reference review. Read
+> [the interim results](docs/03_research/R0R_INTERIM_RESULTS_20261107.md).
+> R0-R is incomplete; no final outcomes, model fitting or next phase released.
+> The original R0-R clock/budget continue; older readouts below remain historical.
+
 > **7 November R0 readout:** The owner resumed research and approved ChEMBL37.
 > Bounded metadata execution is complete with scientific advance **REVISE**.
 > Read [the results](docs/03_research/R0_CHEMBL_READINESS_RESULTS_20261107.md)

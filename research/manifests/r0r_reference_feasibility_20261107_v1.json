@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "r0r-reference-feasibility-20261107-v1",
+  "base_commit": "ff5d33509e972fd812298d5f99f9c68ed23126c6",
+  "status": "AWAITING_OWNER_SOURCES_AND_REFERENCE_REVIEW",
+  "phase_complete": false,
+  "next_phase_released": false,
+  "owner_approval": "Explicit approval of the proposed R0-R before considering the next phase",
+  "release_utc": "2026-11-07T06:16:25Z",
+  "deadline_utc": "2026-11-07T14:16:25Z",
+  "clock_paused_or_reset": false,
+  "results_document": "docs/03_research/R0R_INTERIM_RESULTS_20261107.md",
+  "reference_packet": "docs/03_research/R0R_REFERENCE_REVIEW_20261107.md",
+  "source_request": "docs/03_research/R0R_OWNER_METHODS_REQUEST_20261107.md",
+  "evidence_summary": "docs/evidence/r0r-chembl-20261107-v1/interim-summary-v4.json",
+  "private_artifact_index": "docs/evidence/r0r-chembl-20261107-v1/private-artifact-index-v2.json",
+  "observed": {
+    "selected_assays": 12, "selected_papers": 7,
+    "accepted_projection_cases": 10, "rejected_projection_cases": 2,
+    "accepted_readout_metadata_records": 86, "molecule_identities_checked": 80,
+    "protected_exact_matches": 0,
+    "methods_sources_available": 1, "cases_with_draft_source_reference": 2,
+    "source_documents_needed": 6, "null_standard_unit_records": 17,
+    "verified_molecular_decision_gain": "NOT_ESTABLISHED",
+    "independent_gold": "NOT_ESTABLISHED"
+  },
+  "accounting": {
+    "requests": 41, "request_cap": 48, "decoded_bytes": 1110060,
+    "decoded_byte_cap": 33554432,
+    "conservative_cpu_charge_seconds": 3060, "cpu_cap_seconds": 3600,
+    "utility_charge_included_seconds": 600,
+    "resource_receipts": 48,
+    "partial_receipt_cpu_seconds_sum": 5.3125,
+    "partial_receipt_sum_is_total_task_cost": false,
+    "private_files_reread": 123, "private_bytes_reread": 1013433,
+    "prior_r0_artifact_hashes_unchanged": true
+  },
+  "boundaries": {
+    "numeric_activity_fields_requested": false,
+    "numeric_activity_fields_in_accepted_projections": false,
+    "unmasked_activity_values_emitted_to_agent": false,
+    "article_transit_may_contain_values_before_trusted_masking": true,
+    "unmasked_full_articles_retained": false,
+    "protected_final_outcomes_accessed": false,
+    "training_runs": 0, "remote_jobs": 0, "paid_services": 0, "team_writes": 0
+  },
+  "reference_review": "PENDING_OWNER_REVIEW",
+  "next_actor": "Owner: source files and review of the two draft reference cases",
+  "independent_scientific_review": "NOT_RUN"
+}

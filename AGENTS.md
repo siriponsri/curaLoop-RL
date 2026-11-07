@@ -1,5 +1,45 @@
 # Agent instructions: CuraLoop-RL
 
+## R0-R review checkpoint awaits source files, 7 November 2026
+
+Read docs/03_research/R0R_INTERIM_RESULTS_20261107.md,
+docs/03_research/R0R_REFERENCE_REVIEW_20261107.md and
+docs/03_research/R0R_OWNER_METHODS_REQUEST_20261107.md. R0-R is NOT COMPLETE;
+no next phase released. Intake status AWAITING_OWNER_INPUT, not a clock reset.
+The original deadline remains14:16:25Z/21:16:25Bangkok on7November.
+Retain 41 requests / 1110060 bytes / 3060 of 3600 conservative CPU seconds. There are
+7 HTTP attempts and 540 conservative CPU seconds uncharged; utilities remain
+within the retained600-second allocation, not a new grant.12cases frozen;
+10projections admitted/86records/80molecules, all exact protected matches absent
+under pinned policy. Two rejected cases are not retried/replaced. One masked
+methods source supports draft review of2cases;6source documents still needed.
+Owner-download target: research/raw_data/external-benchmarks/chembl-37-r0r/owner-methods.
+Additional independent public-repository metadata checks yielded no admitted
+methods; two repository records returned403. A controlled repeat of the successful
+S1 methods source captured the mask-module hash and verified identical input/
+masked-output hashes plus DOI. No STOP was retried. Latest evidence is v4 summary,
+v2 source ledger/private index; v1 snapshots remain historical checkpoints.
+No numerical activity value fields were requested/emitted to agent context.
+Unfiltered article streams are trusted-parser transit only, not retained full
+articles. Owner reference review is pending; no independent gold or molecular
+decision gain established. Resume local source processing only after owner input,
+within unchanged authority and caps. Old source STOPs/final outcomes stay closed.
+
+## Owner releases R0-R reference feasibility, 7 November 2026
+
+The owner approved the concrete R0-R proposal before considering a next phase.
+Read docs/06_execution/R0R_EXECUTION_CONTRACT_20261107.md. Fresh R0-R release
+2026-11-07T06:16:25Z; absolute deadline14:16:25Z; 3600 CPU seconds including
+600 utility seconds; one local worker, max1CPU/1GiB. Fresh .local/r0r-chembl-20261107-v1
+only. Max48 requests/32MiB decoded; up to12 assays from the existing50, max20
+projected activity records per assay/240 total, max240 outcome-free molecular
+identity records and12 masked methods extracts. Never request activity values,
+comments/classes, protected final outcomes or benchmark gold. Apply existing
+label-free identity/lineage protection first; quarantine unresolved matches.
+Prepare source-linked reference candidates for owner review, not self-certified
+gold. No training/SSH/GPU/paid services/team writes or automatic P1/R1. Old ledgers
+and STOPs stay closed and charged; this is a distinct authorized R0 revision.
+
 ## R0 readout closed with REVISE, 7 November 2026
 
 Read docs/03_research/R0_CHEMBL_READINESS_RESULTS_20261107.md and
