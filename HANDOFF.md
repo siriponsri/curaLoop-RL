@@ -1,4 +1,19 @@
-# Owner-resume handoff: R0 Contribution & Data proposal
+# Owner-resume handoff: R0 ChEMBL data-readiness plan
+
+## Latest owner decision and plan, 7 November 2026
+
+The owner approved the contribution direction, selected ChEMBL as the primary
+source and requested the readiness plan within R0. R0-D1 is resolved for that
+direction only. Read [the readiness plan](docs/03_research/R0_CHEMBL_DATA_READINESS_PLAN_20261107.md)
+and [its structured contract](research/manifests/r0_chembl_readiness_plan_20261107_v1.json).
+Status: PLAN_READY_FOR_REVIEW; metadata sample intake NOT_RUN. Exact release,
+usable cohort, endpoint, natural ambiguity and intended-use rights remain open.
+The official FAQ confirms the API serves the current release and cannot extract
+older releases. ChEMBL 35 therefore requires a verified historical metadata route;
+current API data must not be relabeled as 35. The proposed bounds are not new
+execution authority. No final outcomes, training or SSH jobs; no automatic phase
+advance. The owner participates before the next phase and any material redesign.
+Previous proposal and frontend records below are historical checkpoints.
 
 ## Latest scoped resume, 7 November 2026
 

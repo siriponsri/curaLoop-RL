@@ -5,6 +5,12 @@ Date: 7 November 2026. Base: main at
 Status: **READY_FOR_OWNER_CONTRIBUTION_DATA_DECISION**.
 Scientific method: **NOT_ESTABLISHED**. New data cohort: **NOT_QUALIFIED**.
 
+Owner decision, 7 November 2026: contribution direction APPROVED; ChEMBL selected
+as the primary source. The owner requested the next readiness plan within R0,
+kept final outcomes closed and retained joint decisions before phase transitions.
+The original proposal status above records its publication checkpoint. The
+current frontier is [the readiness plan](R0_CHEMBL_DATA_READINESS_PLAN_20261107.md).
+
 ## Objective and scope
 
 Recommend one falsifiable research direction that can support both a molecular
@@ -185,8 +191,8 @@ This brief prepares those decisions; it does not close R0 scientifically.
 
 | ID | Owner | Decision / dependency | Present status |
 | --- | --- | --- | --- |
-| R0-D1 | Project owner | Adopt the recommended shared-context decision problem and ChEMBL candidate, accepting a new conditional measured-panel estimand | OPEN; next decision |
-| R0-D2 | Lead engineer, then owner | After D1, define bounded metadata-only qualification: proposed first slice up to 50 assay records and 20 document metadata records, no activity values or protected benchmark rows | DRAFT; service, byte/request, time and CPU caps not yet released |
+| R0-D1 | Project owner | Adopt the recommended shared-context decision problem and ChEMBL primary source; final measured-panel population still requires qualification | DIRECTION_APPROVED on 7 November 2026; no cohort/endpoint approval implied |
+| R0-D2 | Lead engineer, then owner | After D1, define bounded metadata-only qualification: proposed first slice up to 50 assay records and 20 document metadata records, no activity values or protected benchmark rows | PLAN_READY_FOR_REVIEW; see linked readiness plan; execution caps remain proposed |
 | R0-D3 | Lead engineer, then owner | Data schema, raw/source mappings, access/rights and natural ambiguity feasibility; D2 first | NOT_RUN |
 | R0-D4 | Owner | Approve any material population/endpoint change, bounded outcome qualification and independent reference review | NOT_RELEASED |
 | R0-D5 | Owner | Choose GO, revise or stop R0; separately authorize P1/R1 | NOT_RELEASED |
@@ -216,6 +222,7 @@ appropriate retrospective validation of novel computational strategies while
 prioritizing experimental validation. A connector alone does not meet that bar.
 Subscription publication cost choice does not change the scientific standard.
 
-Next actor: project owner resolves R0-D1. The lead engineer then prepares the
-concrete bounded qualification contract within R0. Do not run old LR-BC jobs,
-renew old clocks, open frozen outcomes or advance phases automatically.
+Current handoff: R0-D1 is resolved for direction and the bounded qualification
+plan is prepared. Its metadata intake is not yet run. Review the new plan before
+releasing its execution; do not run old LR-BC jobs, renew old clocks, open frozen
+outcomes or advance phases automatically.

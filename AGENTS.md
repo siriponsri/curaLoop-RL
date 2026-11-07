@@ -1,5 +1,18 @@
 # Agent instructions: CuraLoop-RL
 
+## Owner selects ChEMBL and requests the R0 readiness plan, 7 November 2026
+
+The owner approved the proposed contribution direction, selected ChEMBL as the
+primary source, and requested a concrete data-readiness plan within R0. Read
+docs/03_research/R0_CHEMBL_DATA_READINESS_PLAN_20261107.md and
+research/manifests/r0_chembl_readiness_plan_20261107_v1.json. R0-D1 is resolved
+for direction only. Dataset qualification, exact release/bytes, rights, endpoint
+and method novelty remain unestablished. Preparing the plan is authorized;
+its proposed intake/compute limits are not a fresh execution grant. Do not
+silently treat current-release API responses as ChEMBL 35. No final outcomes
+or automatic next phase; the owner participates before any phase transition.
+Preserve all historical source STOPs, exclusions, clocks and reservations.
+
 ## Owner resumes phase R0 contribution/data proposal, 7 November 2026
 
 The owner explicitly resumed the new phase-by-phase R0 and requested a
