@@ -1,5 +1,22 @@
 # Agent instructions: CuraLoop-RL
 
+## Owner conditionally approves M3 -> P1 -> J1 long run, 9 November 2026
+
+Owner explicitly selected option A in
+docs/06_execution/CONDITIONAL_LONG_RUN_M3_P1_J1_20261109.md; read the pinned record
+research/manifests/conditional_m3_p1_j1_owner_approval_20261109_v1.json. Only after
+M2 closes PROMISING_DEVELOPMENT_SIGNAL with full return/reread/exact cleanup/audit
+PASS, start a fresh 96 CPU-hour /120 elapsed-hour release, max local1/512MiB plus
+dr-train3 each1CPU-equivalent/4GiB. Do not reset or borrow old clocks/ledgers.
+Conditional final16-assay access requires a frozen protocol and passed readiness/
+calibration; no protected payload access now. Then continue M3 investigation,
+P1offline R&D prototype and J1manuscript/reproduction draft without another routine
+confirmation. Stop for material cohort/dependence/endpoint/rights/budget changes.
+No new dataset intake, paid API/GPU, live team writes/deployment or actual journal
+submission. If M2 is not promising, close/report and do not activate this grant.
+This explicit conditional decision supersedes the earlier routine owner checkpoint
+before M3 only within these conditions. Parent remains sole writer.
+
 ## Verified M2 continuation status, 9 November 2026
 
 Read docs/06_execution/M2_INTERIM_OWNER_REPORT_20261109.md. Technical/training/

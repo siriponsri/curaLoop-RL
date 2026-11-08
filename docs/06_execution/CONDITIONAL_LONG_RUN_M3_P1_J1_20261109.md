@@ -1,7 +1,14 @@
 # Conditional long run: protected evaluation, offline integration and manuscript draft
 
-**PROPOSED; new budget and protected-data release not yet specified by the owner.**
-The owner authorized a long run if M2 passes. This proposal makes its resource,
+**OWNER APPROVED OPTION A, 9 November; CONDITIONAL, NOT STARTED.**
+The owner selected A after reviewing this plan. The
+[approval record](../../research/manifests/conditional_m3_p1_j1_owner_approval_20261109_v1.json)
+pins the fresh allowance and the protected-data gate. Its clock remains unstarted
+until M2 closes with PROMISING_DEVELOPMENT_SIGNAL and its complete audit/return/
+cleanup passes. The choices below are retained as the reviewed decision record.
+
+**Original proposal boundary:**
+The owner authorized a long run if M2 passes. This plan makes its resource,
 data and delivery boundary explicit. Current M2 continues under its existing
 cumulative 48 CPU-hour ceiling and 12 November deadline. No new task root, grant,
 final-payload access, paid service or M3 experiment is started by this document.

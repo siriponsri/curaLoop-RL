@@ -1,5 +1,14 @@
 # Handoff: costed M2 development study in progress
 
+Owner selected conditional long-run option A on 9 November: after M2 closes
+PROMISING_DEVELOPMENT_SIGNAL with verified return/cleanup/audit, start a fresh
+96 CPU-hour/120-hour grant through M3 -> P1offline -> J1draft. Read the
+[approved plan](docs/06_execution/CONDITIONAL_LONG_RUN_M3_P1_J1_20261109.md) and
+[approval record](research/manifests/conditional_m3_p1_j1_owner_approval_20261109_v1.json).
+No new clock/root or final-payload access yet; readiness/protocol/calibration
+gates and material-change owner stops still bind. An active goal tracks this
+conditional objective. If M2 is not promising, do not activate the new allowance.
+
 ## Current release: M2 development execution
 
 Latest owner status: [9 November interim report](docs/06_execution/M2_INTERIM_OWNER_REPORT_20261109.md).
