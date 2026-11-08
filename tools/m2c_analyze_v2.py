@@ -211,13 +211,13 @@ def main():
             'Correlated training branches and five seed vectors do not add independent biological replication.']}
         new(PUBLIC/'aggregate-results-v1.json',result)
         with (PUBLIC/'discovery-curves-v1.csv').open('x',encoding='utf-8',newline='') as f:
-            writer=csv.writer(f);writer.writerow(['predictor','regime','arm','assigned_query_budget','mean_new_positives','conditional_seed_lower_95','conditional_seed_upper_95'])
+            writer=csv.writer(f,lineterminator='\n');writer.writerow(['predictor','regime','arm','assigned_query_budget','mean_new_positives','conditional_seed_lower_95','conditional_seed_upper_95'])
             for curve in curves:
                 for k in range(33):writer.writerow([curve['predictor'],curve['regime'],curve['arm'],k,curve['mean_new_positives'][k],curve['conditional_seed_lower_95'][k],curve['conditional_seed_upper_95'][k]])
         with (PUBLIC/'main-summary-v1.csv').open('x',encoding='utf-8',newline='') as f:
             fields=['predictor','regime','arm','campaigns','new_positives','new_deliveries','total_observed','scientific_cpu_seconds','whole_process_cpu_seconds','whole_process_wall_seconds',
               'H_over_B','auc_discovery_over_assigned_B','brier_delivered','logloss_delivered','interrupted_campaigns','full_B_campaigns','fallbacks']
-            writer=csv.DictWriter(f,fieldnames=fields,extrasaction='ignore');writer.writeheader();writer.writerows(summaries)
+            writer=csv.DictWriter(f,fieldnames=fields,extrasaction='ignore',lineterminator='\n');writer.writeheader();writer.writerows(summaries)
         new(job/'result.json',{'status':'PASS_COMPLETE_MATRIX_ANALYSIS','method_decision':decision,'verified_units':audit['verified_units'],'aggregate_curve_series':len(curves)})
         guard.finish('PASS');print(json.dumps({'status':'PASS_COMPLETE_MATRIX_ANALYSIS','decision':decision,'primary_contrasts':p,'history':history}))
     except BaseException as e:

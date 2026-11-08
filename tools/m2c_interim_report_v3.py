@@ -41,7 +41,7 @@ def main():
       'retained_not_dispatched_failed_unit_attempts':6,'scientific_effect_verdict':'NOT_AVAILABLE_INCOMPLETE_PAIRED_MATRIX',
       'final_outcomes_opened':False,'m3_released':False,'deadline_utc':ledger['deadline_utc']}
     target=ROOT/'docs/evidence/m2-costed-20261108-v2/interim-status-20261109.json'
-    target.write_text(json.dumps(snapshot,indent=2)+'\n',encoding='utf-8')
+    target.write_text(json.dumps(snapshot,indent=2)+'\n',encoding='utf-8',newline='\n')
     main_done=counts['main']+counts['ablation'];remaining=2100-main_done
     text=f'''# M2 interim owner report
 
@@ -115,7 +115,7 @@ cleanup, English main delivery and the owner decision before M3.
 See the [execution record](M2_COSTED_EXECUTION_NOTES_20261108.md) and
 [machine-readable interim snapshot](../evidence/m2-costed-20261108-v2/interim-status-20261109.json).
 '''
-    (ROOT/'docs/06_execution/M2_INTERIM_OWNER_REPORT_20261109.md').write_text(text,encoding='utf-8')
+    (ROOT/'docs/06_execution/M2_INTERIM_OWNER_REPORT_20261109.md').write_text(text,encoding='utf-8',newline='\n')
     print(json.dumps(snapshot))
 
 

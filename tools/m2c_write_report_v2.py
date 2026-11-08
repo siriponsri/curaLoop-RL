@@ -141,9 +141,9 @@ def main():
     status.update(status='COMPLETE_FOR_OWNER_REVIEW',method_efficacy=decision,biological_units_completed=4164,
       fresh_successful_units=4248,retained_not_dispatched_attempts=cpu['retained_not_dispatched_attempts'],cumulative_charged_seconds=cpu['cumulative_charged_seconds'],
       report=str(report.relative_to(ROOT)).replace('\\','/'),next_actor='owner decides before M3; release closed and exact remote roots absent')
-    (ROOT/'research/configs/m2_costed_status_20261108_v2.json').write_text(json.dumps(status,indent=2)+'\n',encoding='utf-8')
+    (ROOT/'research/configs/m2_costed_status_20261108_v2.json').write_text(json.dumps(status,indent=2)+'\n',encoding='utf-8',newline='\n')
     result.update(status='COMPLETE_FOR_OWNER_REVIEW',technical_closeout='PASS',remote_exact_cleanup='PASS')
-    (PUBLIC/'aggregate-results-v1.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n',encoding='utf-8')
+    (PUBLIC/'aggregate-results-v1.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps({'status':'PASS_ENGLISH_REPORT_RENDER','method_decision':decision,'report':str(report)}))
 
 
