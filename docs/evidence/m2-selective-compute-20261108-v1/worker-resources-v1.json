@@ -1,0 +1,235 @@
+{
+  "status": "RECORDED_GUARDED_WORKERS",
+  "resources": {
+    "bootstrap-v1": {
+      "schema": "curaloop.m2.resources.v1",
+      "attempt": "bootstrap-v1",
+      "host": "dr-train",
+      "status": "PASS",
+      "cpu_seconds": 4.42587574,
+      "wall_seconds": 4.380489829927683,
+      "reservation_seconds": 120,
+      "affinity": [
+        69
+      ]
+    },
+    "bundle-synthetic-v1": {
+      "schema": "curaloop.m2.resources.v1",
+      "attempt": "bundle-synthetic-v1",
+      "token": "42aab2fbd341d04dec89520a",
+      "host": "local",
+      "bundle_sha256": "42aab2fbd341d04dec89520a",
+      "pid": 19812,
+      "start_utc": "2026-11-08T08:23:36.566075+00:00",
+      "deadline_utc": "2026-11-12T08:17:29Z",
+      "cpu_affinity": [
+        0
+      ],
+      "guard_cpu_seconds": 120,
+      "memory_limit_bytes": 536870912,
+      "child_policy": "WINDOWS_JOB_ACTIVE_PROCESS_LIMIT_ONE_NO_BREAKAWAY",
+      "whole_process_cpu_includes_startup": true,
+      "python_optimization": 0,
+      "guard_source_sha256": "615fc5da36b4267e869e178498432aaf10b2c8226aa51c8efd7f277de0ebf3cb",
+      "release_utc": "2026-11-08T08:17:29Z",
+      "reservation_seconds": 120,
+      "status": "PASS",
+      "cpu_seconds": 9.140625,
+      "wall_seconds": 74.375,
+      "actual_cpu_affinity": [
+        0
+      ]
+    },
+    "calibration-000": {
+      "schema": "curaloop.m2.resources.v1",
+      "attempt": "calibration-000",
+      "token": "42b51172fccda767138a4406",
+      "host": "dr-train",
+      "bundle_sha256": "42b51172fccda767138a4406",
+      "pid": 15974,
+      "start_utc": "2026-11-08T08:27:56.316326+00:00",
+      "deadline_utc": "2026-11-12T08:17:29Z",
+      "cpu_affinity": [
+        69
+      ],
+      "guard_cpu_seconds": 30.5,
+      "memory_limit_bytes": 4294967296,
+      "child_policy": "SECCOMP_DENY_PROCESS_CREATION_ALLOW_THREADS",
+      "whole_process_cpu_includes_startup": true,
+      "python_optimization": 0,
+      "guard_source_sha256": "615fc5da36b4267e869e178498432aaf10b2c8226aa51c8efd7f277de0ebf3cb",
+      "release_utc": "2026-11-08T08:17:29Z",
+      "reservation_seconds": 31,
+      "status": "FAIL_RESOURCE_LIMIT",
+      "cpu_seconds": 26.73849397,
+      "wall_seconds": 26.694940130226314,
+      "actual_cpu_affinity": [
+        69
+      ]
+    },
+    "calibration-000-r1": {
+      "schema": "curaloop.m2.resources.v1",
+      "attempt": "calibration-000-r1",
+      "token": "7ae546e4d2ad1a95bf8c621d",
+      "host": "dr-train",
+      "bundle_sha256": "7ae546e4d2ad1a95bf8c621d",
+      "pid": 31739,
+      "start_utc": "2026-11-08T08:30:27.560535+00:00",
+      "deadline_utc": "2026-11-12T08:17:29Z",
+      "cpu_affinity": [
+        69
+      ],
+      "guard_cpu_seconds": 30.5,
+      "memory_limit_bytes": 4294967296,
+      "child_policy": "SECCOMP_DENY_PROCESS_CREATION_ALLOW_THREADS",
+      "whole_process_cpu_includes_startup": true,
+      "python_optimization": 0,
+      "guard_source_sha256": "615fc5da36b4267e869e178498432aaf10b2c8226aa51c8efd7f277de0ebf3cb",
+      "release_utc": "2026-11-08T08:17:29Z",
+      "reservation_seconds": 31,
+      "status": "FAIL_RESOURCE_LIMIT",
+      "cpu_seconds": 26.913984235,
+      "wall_seconds": 26.87475343514234,
+      "actual_cpu_affinity": [
+        69
+      ]
+    },
+    "constructed-checks-v1": {
+      "schema": "curaloop.m2.resources.v1",
+      "attempt": "constructed-checks-v1",
+      "token": "a695d236563747b61f4a1cf1",
+      "host": "dr-train",
+      "bundle_sha256": "a695d236563747b61f4a1cf1",
+      "pid": 14190,
+      "start_utc": "2026-11-08T08:27:37.392448+00:00",
+      "deadline_utc": "2026-11-12T08:17:29Z",
+      "cpu_affinity": [
+        69
+      ],
+      "guard_cpu_seconds": 59,
+      "memory_limit_bytes": 4294967296,
+      "child_policy": "SECCOMP_DENY_PROCESS_CREATION_ALLOW_THREADS",
+      "whole_process_cpu_includes_startup": true,
+      "python_optimization": 0,
+      "guard_source_sha256": "615fc5da36b4267e869e178498432aaf10b2c8226aa51c8efd7f277de0ebf3cb",
+      "release_utc": "2026-11-08T08:17:29Z",
+      "reservation_seconds": 60,
+      "status": "PASS",
+      "cpu_seconds": 3.170394904,
+      "wall_seconds": 3.1142340060323477,
+      "actual_cpu_affinity": [
+        69
+      ]
+    },
+    "outcome-blind-admission-v1": {
+      "schema": "curaloop.m2.resources.v1",
+      "attempt": "outcome-blind-admission-v1",
+      "token": "bde4a194e30bceb4ca6e7e29",
+      "host": "local",
+      "bundle_sha256": "bde4a194e30bceb4ca6e7e29",
+      "pid": 10188,
+      "start_utc": "2026-11-08T08:20:38.967013+00:00",
+      "deadline_utc": "2026-11-12T08:17:29Z",
+      "cpu_affinity": [
+        0
+      ],
+      "guard_cpu_seconds": 60,
+      "memory_limit_bytes": 536870912,
+      "child_policy": "WINDOWS_JOB_ACTIVE_PROCESS_LIMIT_ONE_NO_BREAKAWAY",
+      "whole_process_cpu_includes_startup": true,
+      "python_optimization": 0,
+      "guard_source_sha256": "615fc5da36b4267e869e178498432aaf10b2c8226aa51c8efd7f277de0ebf3cb",
+      "release_utc": "2026-11-08T08:17:29Z",
+      "reservation_seconds": 60,
+      "status": "PASS",
+      "cpu_seconds": 0.15625,
+      "wall_seconds": 0.4059999999990396,
+      "actual_cpu_affinity": [
+        0
+      ]
+    },
+    "receive-v1": {
+      "schema": "curaloop.m2.resources.v1",
+      "attempt": "receive-v1",
+      "host": "dr-train",
+      "status": "PASS",
+      "cpu_seconds": 0.835812233,
+      "wall_seconds": 32.92351891892031,
+      "reservation_seconds": 120,
+      "affinity": [
+        69
+      ]
+    },
+    "remote-exact-cleanup-v1": {
+      "status": "PASS",
+      "root": "/home/chaw/curaloop-tasks/m2-selective-compute-20261108-v1",
+      "export": "/home/chaw/curaloop-tasks/m2-selective-compute-20261108-v1-export-v1",
+      "kernel": {
+        "cpu.max": "100000 100000",
+        "memory.max": "4294967296",
+        "memory.swap.max": "0"
+      },
+      "actual_cpu_affinity": [
+        69
+      ],
+      "cpu_seconds": 1.4493186089999999,
+      "attempt": "remote-exact-cleanup-v1",
+      "host": "dr-train",
+      "resource_status": "PASS",
+      "utc": "2026-11-08T08:56:44.112371+00:00"
+    },
+    "return-export-v1": {
+      "schema": "curaloop.m2.resources.v1",
+      "attempt": "return-export-v1",
+      "host": "dr-train",
+      "status": "PASS",
+      "cpu_seconds": 6.369683311,
+      "wall_seconds": 6.323196508921683,
+      "reservation_seconds": 600,
+      "actual_cpu_affinity": [
+        69
+      ]
+    },
+    "return-verify-v1": {
+      "schema": "curaloop.m2.resources.v1",
+      "attempt": "return-verify-v1",
+      "token": "aa88e563403e5ca2d37f3e24",
+      "host": "local",
+      "bundle_sha256": "aa88e563403e5ca2d37f3e24",
+      "pid": 13616,
+      "start_utc": "2026-11-08T08:55:12.916903+00:00",
+      "deadline_utc": "2026-11-12T08:17:29Z",
+      "cpu_affinity": [
+        0
+      ],
+      "guard_cpu_seconds": 300,
+      "memory_limit_bytes": 536870912,
+      "child_policy": "WINDOWS_JOB_ACTIVE_PROCESS_LIMIT_ONE_NO_BREAKAWAY",
+      "whole_process_cpu_includes_startup": true,
+      "python_optimization": 0,
+      "guard_source_sha256": "615fc5da36b4267e869e178498432aaf10b2c8226aa51c8efd7f277de0ebf3cb",
+      "release_utc": "2026-11-08T08:17:29Z",
+      "reservation_seconds": 300,
+      "status": "PASS",
+      "cpu_seconds": 15.328125,
+      "wall_seconds": 75.93700000000172,
+      "actual_cpu_affinity": [
+        0
+      ]
+    },
+    "timer-repair-install-v2": {
+      "schema": "curaloop.m2.resources.v1",
+      "attempt": "timer-repair-install-v2",
+      "host": "dr-train",
+      "status": "PASS",
+      "cpu_seconds": 0.05001907,
+      "wall_seconds": 0.00156636000610888,
+      "reservation_seconds": 30,
+      "affinity": [
+        69
+      ]
+    }
+  },
+  "excludes_current_closeout_final_receipt": true,
+  "utility_cpu_measured": false
+}

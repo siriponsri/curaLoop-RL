@@ -1,6 +1,51 @@
-# Handoff: four-screen product delivery and paused research
+# Handoff: M2 resource checkpoint and retained product
 
-## Current checkpoint: M2 contribution approved; experiment plan pending
+## Current execution checkpoint: M2 incomplete at CPU admission
+
+Owner approved the complete M2 plan at `9e78f391e8e90398fe86097622753b38bfc1d744`.
+Release: 08:17:29Z 8 November; deadline: 08:17:29Z 12 November; fresh ceiling
+48 CPU-hours / 96 hours / max four combined workers. Parent sole writer. Read
+[preflight results](docs/03_research/M2_PREFLIGHT_RESULTS_20261108.md),
+[owner decision](docs/06_execution/M2_RESOURCE_OWNER_CHECKPOINT_20261108.md),
+[current status](research/configs/m2_status_20261108_v1.json) and
+[evidence](docs/evidence/m2-selective-compute-20261108-v1/README.md).
+
+Six-pool outcome-blind admission passed: 1,285 rows, 1,107 canonical structures,
+four annotation components, zero canonical overlap across components; all six
+training pools remain 129-303 rows. Expected opaque input and feature hashes and
+metadata-only protected identities passed before any label decoding. Twelve
+constructed predictor/planner checks passed on dr-train. Remote quota, memory,
+swap and starting-core proof recorded; no config/key/privilege changes.
+
+One unique synthetic RF planning configuration was attempted twice. First
+inference was invalidated for signal/process-time granularity and retained.
+One timer-only repair, with unchanged predictor/planner/data/seed, verified an
+incomplete-campaign CPU lower bound of 24.087672592 seconds, giving a required
+cap lower bound 30.10959074 > the plan's 30-second ceiling. This triggers the
+predeclared feasibility stop. Full baseline time is unknown; the 48-hour total
+was not exhausted. Learned gate, biological labels, continuations, control tuning,
+main comparison, ablations and M3 remain NOT_RUN/NOT_RELEASED. No efficacy verdict.
+
+Private root: `.local/m2-selective-compute-20261108-v1`. Remote owned root:
+`/home/chaw/curaloop-tasks/m2-selective-compute-20261108-v1`, exact export suffix
+`-export-v1`. Complete return passed: 3,490 regular files / 272,278,929 source
+bytes, plus seven exact export files, locally authenticated and reread before
+deletion. Exact task/export cleanup and fresh absence passed. Read the linked
+evidence receipts before any action; never recreate these old paths. Original SCP transport
+was slow; its interrupted partial and receipt are retained, and binary SSH resume
+preserves the authenticated archive before full local extraction/hash reread.
+No biological input payload was sent to the server.
+
+Next actor owner: proposed synthetic-only profiling amendment, at most one
+CPU-hour from an explicitly reallocated admission bucket, no increase above the
+cumulative 48-hour total, up to eight hours and never past the original deadline.
+Twelve synthetic G1/P RF campaigns with a larger per-unit guard would measure
+real costs and produce a revised M2 matrix for review. Not approved or started;
+do not change the baseline, data, effect endpoint or open final outcomes.
+This is the same M2 phase; the old failed M1 remains unchanged. Normal English
+main delivery is authorized. Verify actual commit/push with Git.
+
+## Retained planning checkpoint: contribution approved, plan not yet released
 
 On 8 November 2026 the owner approved predictor-aware selective computation as
 the M2 contribution and requested a concrete experiment plan before starting.
@@ -34,7 +79,7 @@ inconclusive and unsupported results all close M2 with a report. No automatic M3
 product integration, paid service, commercial claim or journal submission.
 English main planning delivery is authorized. Verify actual commit/push with Git.
 
-## Latest discussion deliverable: proposed M2 contribution
+## Retained discussion deliverable: proposed M2 contribution
 
 The owner requested paper reading and a contribution proposal after the product
 delivery. The [M2 proposal](docs/03_research/M2_CONTRIBUTION_PROPOSAL_20261108.md)

@@ -1,5 +1,11 @@
 # Proposed M2 contribution: predictor-aware selective computation
 
+**Execution update:** the owner subsequently approved the full M2 plan. Its
+[preflight](M2_PREFLIGHT_RESULTS_20261108.md) passed data/constructed checks but
+stopped at synthetic CPU admission. A [resource amendment](../06_execution/M2_RESOURCE_OWNER_CHECKPOINT_20261108.md)
+awaits the owner; molecular utility and learned-gate fitting remain NOT_RUN.
+The dated planning/adoption records below are historical.
+
 **Subsequent owner decision, 8 November 2026:** contribution direction APPROVED.
 The [detailed M2 experiment plan](../06_execution/M2_EXPERIMENT_PLAN_20261108.md)
 now awaits approval of scope and a fresh grant before execution. This dated

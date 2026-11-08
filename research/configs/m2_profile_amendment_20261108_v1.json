@@ -1,0 +1,86 @@
+{
+  "schema": "curaloop.m2.profile_amendment.v1",
+  "date": "2026-11-08",
+  "status": "PROPOSED_NOT_RELEASED",
+  "execution_enabled": false,
+  "owner_approval_received": false,
+  "experiment_document": "docs/06_execution/M2_RESOURCE_OWNER_CHECKPOINT_20261108.md",
+  "same_research_phase": "M2",
+  "new_method_revision": false,
+  "biological_labels_authorized": false,
+  "final_outcomes_authorized": false,
+  "total_cumulative_cpu_cap_seconds_unchanged": 172800,
+  "total_elapsed_deadline_utc_unchanged": "2026-11-12T08:17:29Z",
+  "proposed_stage_cap_deltas_seconds": {
+    "synthetic_admission": 3600,
+    "main_comparison": -3600
+  },
+  "profile_cpu_cap_seconds_including_utilities": 3600,
+  "elapsed_hours_from_approval_max": 8,
+  "release_utc": null,
+  "deadline_utc": null,
+  "workers": {
+    "dr_train": 1,
+    "local_orchestration": 1,
+    "remote_cpu_equivalent": 1,
+    "remote_memory_mib": 4096,
+    "local_memory_mib": 512
+  },
+  "scientific_unit_cpu_seconds_max": 180,
+  "whole_process_unit_cpu_seconds_max": 185,
+  "scientific_unit_wall_seconds_max": 240,
+  "synthetic_grid": {
+    "predictor": [
+      "rf"
+    ],
+    "n": [
+      303
+    ],
+    "initial_labels": [
+      0,
+      16
+    ],
+    "new_queries": [
+      32
+    ],
+    "policies": [
+      "G1",
+      "P"
+    ],
+    "repeats": [
+      0,
+      1,
+      2
+    ]
+  },
+  "intended_units": 12,
+  "max_technical_retries": 2,
+  "max_attempts": 14,
+  "cpu_reservations_seconds": {
+    "intended_campaigns": 2220,
+    "technical_retries": 370,
+    "setup_transport": 240,
+    "return_verification_cleanup": 360,
+    "analysis_delivery": 410
+  },
+  "unchanged": [
+    "six-pool data scope",
+    "RF 64 trees/depth 6/min leaf 2/sqrt/bootstrap/one thread",
+    "matched hypothetical planner",
+    "biological endpoints",
+    "old scientific findings",
+    "protected roles and outcomes"
+  ],
+  "root_proposed": ".local/m2-cpu-profile-20261108-v1",
+  "remote_root_proposed": "/home/chaw/curaloop-tasks/m2-cpu-profile-20261108-v1",
+  "roots_created": false,
+  "stop_rules": [
+    "any profile reaches its declared CPU limit",
+    "a stage reservation cannot fit its cap",
+    "original total deadline or eight-hour subdeadline reached",
+    "resource enforcement or source identity fails"
+  ],
+  "deliverable": "Completed/censored synthetic baseline timings, measured startup/fit/score/plan costs and revised costed molecular M2 matrix for owner consideration",
+  "automatic_biological_campaign_release": false,
+  "automatic_m3": false
+}

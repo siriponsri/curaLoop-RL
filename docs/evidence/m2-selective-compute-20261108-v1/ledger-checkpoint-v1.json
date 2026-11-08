@@ -1,0 +1,175 @@
+{
+  "schema": "curaloop.m2.ledger.v1",
+  "status": "CLOSED_OWNER_RESOURCE_CHECKPOINT",
+  "release_utc": "2026-11-08T08:17:29Z",
+  "deadline_utc": "2026-11-12T08:17:29Z",
+  "cpu_cap_seconds": 172800,
+  "bucket_caps_seconds": {
+    "implementation_guards_setup": 14400,
+    "synthetic_admission": 3600,
+    "training_prefixes_branches_gate": 39600,
+    "control_tuning": 18000,
+    "main_comparison": 61200,
+    "ablation_transfer": 16200,
+    "analysis_return_cleanup_delivery_retry": 19800
+  },
+  "bucket_reserved_seconds": {
+    "implementation_guards_setup": 1710,
+    "synthetic_admission": 62,
+    "training_prefixes_branches_gate": 0,
+    "control_tuning": 0,
+    "main_comparison": 0,
+    "ablation_transfer": 0,
+    "analysis_return_cleanup_delivery_retry": 2340
+  },
+  "jobs": [
+    {
+      "job": "setup-utilities-envelope",
+      "bucket": "implementation_guards_setup",
+      "host": "local",
+      "reservation_seconds": 1200,
+      "state": "CHARGED_UTILITIES_ENVELOPE",
+      "scope": "serial lightweight inspection, admission/orchestration; no unguarded ML or payload decode"
+    },
+    {
+      "job": "outcome-blind-admission-v1",
+      "bucket": "implementation_guards_setup",
+      "host": "local",
+      "cpu": 0,
+      "reservation_seconds": 60,
+      "state": "PASS",
+      "reported_cpu_seconds": 0.15625,
+      "resource_sha256": "725cef08fa573e8ec2ebd083ebc0e08ce5bfb8b645d868e265b08e18980ff2d4"
+    },
+    {
+      "job": "bundle-synthetic-v1",
+      "bucket": "implementation_guards_setup",
+      "host": "local",
+      "cpu": 0,
+      "reservation_seconds": 120,
+      "state": "PASS",
+      "reported_cpu_seconds": 9.140625,
+      "resource_sha256": "c7608affaef4eeda6165f221b9a7cc4dbe3b09ba439b15e7ef0574233fbbaf9b"
+    },
+    {
+      "job": "receive-v1",
+      "bucket": "implementation_guards_setup",
+      "host": "dr-train",
+      "cpu": 69,
+      "reservation_seconds": 120,
+      "state": "PASS",
+      "reported_cpu_seconds": 0.835812233,
+      "resource_sha256": "ca4bb31ae3a91d2aeaca5e835c2b74f3dd1ef52511ea4d2c3ce872541c3d186d"
+    },
+    {
+      "job": "bootstrap-v1",
+      "bucket": "implementation_guards_setup",
+      "host": "dr-train",
+      "cpu": 69,
+      "reservation_seconds": 120,
+      "state": "PASS",
+      "reported_cpu_seconds": 4.42587574,
+      "resource_sha256": "cf6425aaeff362cace88b7adf0171f95c1be840d906b5e1d72ed07b5d5c93d36"
+    },
+    {
+      "job": "constructed-checks-v1",
+      "bucket": "implementation_guards_setup",
+      "host": "dr-train",
+      "cpu": 69,
+      "reservation_seconds": 60,
+      "state": "PASS",
+      "reported_cpu_seconds": 3.170394904,
+      "resource_sha256": "b349b07e13fc70bb9ebaadcc1067eb37d5ebb5cb6b6582a896da47d5b7bd6491"
+    },
+    {
+      "job": "calibration-000",
+      "bucket": "synthetic_admission",
+      "host": "dr-train",
+      "cpu": 69,
+      "reservation_seconds": 31,
+      "state": "FAIL_RESOURCE_LIMIT",
+      "reported_cpu_seconds": 26.73849397,
+      "resource_sha256": "c2c315fd9ca4861e2c9cebc6d0b423f43141295667ab6f70353a41c2ead21e68"
+    },
+    {
+      "job": "timer-repair-install-v2",
+      "bucket": "implementation_guards_setup",
+      "host": "dr-train",
+      "cpu": 69,
+      "reservation_seconds": 30,
+      "state": "PASS",
+      "reported_cpu_seconds": 0.05001907,
+      "resource_sha256": "ef6970b9da46bde24fcc1dca15adccd0c2bb0f2150bdd9b76abcf242e984a6a9"
+    },
+    {
+      "job": "calibration-000-r1",
+      "bucket": "synthetic_admission",
+      "host": "dr-train",
+      "cpu": 69,
+      "reservation_seconds": 31,
+      "state": "FAIL_RESOURCE_LIMIT",
+      "reported_cpu_seconds": 26.913984235,
+      "resource_sha256": "d556ba698464b7e6f38408adef876fe86697263c54c0f5dbc94003bef60362ae"
+    },
+    {
+      "job": "return-export-v1",
+      "bucket": "analysis_return_cleanup_delivery_retry",
+      "host": "dr-train",
+      "cpu": 69,
+      "reservation_seconds": 600,
+      "state": "PASS",
+      "reported_cpu_seconds": 6.369683311,
+      "resource_sha256": "236c389996ae88d678626fde2871c8a0c165d32d6fd6b588c4dc468642312497"
+    },
+    {
+      "job": "return-delivery-utilities-envelope",
+      "bucket": "analysis_return_cleanup_delivery_retry",
+      "reservation_seconds": 1200,
+      "scope": "serial transfer control, metadata inspection, reports and Git delivery; no ML or biological-label decode",
+      "host": "local",
+      "state": "CHARGED_UTILITIES_ENVELOPE"
+    },
+    {
+      "job": "return-verify-v1",
+      "bucket": "analysis_return_cleanup_delivery_retry",
+      "host": "local",
+      "cpu": 0,
+      "reservation_seconds": 300,
+      "state": "PASS",
+      "reported_cpu_seconds": 15.328125,
+      "resource_sha256": "6a6e9a56e61f16e0318dea4c9542dc656b9f0eac4d6dec165b10246c60bad645"
+    },
+    {
+      "job": "remote-exact-cleanup-v1",
+      "bucket": "analysis_return_cleanup_delivery_retry",
+      "host": "dr-train",
+      "cpu": 69,
+      "reservation_seconds": 120,
+      "state": "PASS",
+      "reported_cpu_seconds": 1.4493186089999999,
+      "resource_sha256": "31dc25c998127a3ac60553417a41809dfe847e93678f7931dcdf7faf6f08be5e"
+    },
+    {
+      "job": "closeout-validation-v1",
+      "bucket": "analysis_return_cleanup_delivery_retry",
+      "host": "local",
+      "cpu": 0,
+      "reservation_seconds": 120,
+      "state": "PASS",
+      "reported_cpu_seconds": 0.109375,
+      "resource_sha256": "eb546636ab839b9dba69231994f36c2ba8e21ad9f844f566ee862ef844d2fe39"
+    }
+  ],
+  "scientific_units_attempted": 2,
+  "final_outcomes_opened": false,
+  "m3_released": false,
+  "closed_utc": "2026-11-08T08:57:18.813824+00:00",
+  "next_actor": "OWNER_AMENDMENT_REQUIRED",
+  "m2_scientific_status": "INCOMPLETE_RESOURCE_FIT",
+  "scientific_release_open": false,
+  "biological_campaigns": 0,
+  "guarded_worker_cpu_seconds": 94.687957072,
+  "total_cpu_measured": false,
+  "resource_limit_attempts": 2,
+  "invalid_timer_inferences": 1
+}

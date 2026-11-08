@@ -1,0 +1,71 @@
+{
+  "schema": "curaloop.m2.preflight_summary.v1",
+  "status": "INCOMPLETE_AT_RESOURCE_CHECKPOINT",
+  "data_admission": "PASS",
+  "constructed_checks": 12,
+  "synthetic_unique_configurations_attempted": 1,
+  "synthetic_attempts": 2,
+  "synthetic_campaigns_completed": 0,
+  "remaining_unique_calibration_configs_not_run": 95,
+  "biological_label_payloads_decoded": 0,
+  "biological_campaigns": 0,
+  "gate_fits": 0,
+  "counterfactual_training_branches": 0,
+  "original_attempt": {
+    "status": "STOP_RESOURCE_FIT",
+    "spec": {
+      "predictor": "rf",
+      "n": 303,
+      "n0": 16,
+      "budget": 32,
+      "policy": "P",
+      "repeat": 0
+    },
+    "scientific_cpu_seconds_lower_bound": 23.997707119,
+    "calibrated_cap_lower_bound": 29.99713389875,
+    "proposed_cap_seconds": 30,
+    "biological_outcomes_accessed": false
+  },
+  "original_inference_valid": false,
+  "invalidity_annotation": {
+    "status": "INVALID_ADMISSION_INFERENCE_TIMER_GRANULARITY",
+    "original_result_sha256": "88fcd9b07bb35606d2a5fde0352c4cf0df9dbb219f0af92d9d7444573fc07459",
+    "reason": "Signal delivery occurred at 23.9977 process seconds, so multiplying by 1.25 did not establish cap >30. Original attempt and its full reservation retained.",
+    "scientific_design_changed": false,
+    "repair": "Verify actual process-time lower bound >24.05 before stop; no predictor, data, seed or endpoint change."
+  },
+  "verified_attempt": {
+    "status": "STOP_RESOURCE_FIT",
+    "spec": {
+      "predictor": "rf",
+      "n": 303,
+      "n0": 16,
+      "budget": 32,
+      "policy": "P",
+      "repeat": 0
+    },
+    "scientific_cpu_seconds_lower_bound": 24.087672592,
+    "calibrated_cap_lower_bound": 30.10959074,
+    "proposed_cap_seconds": 30,
+    "exact_completed_campaign_time": null,
+    "timer_revision": "v2_verified_process_time_lower_bound",
+    "biological_outcomes_accessed": false
+  },
+  "required_cap_seconds": 30,
+  "full_baseline_cpu_seconds": null,
+  "startup_assumption_seconds": 1,
+  "observed_whole_process_minus_scientific_lower_bound_seconds": 2.8263116430000004,
+  "startup_assumption_supported": false,
+  "aggregate_attempt_reservation_seconds": 31,
+  "protected_final_opened": false,
+  "m3_released": false,
+  "method_efficacy": "NOT_RUN",
+  "publication_readiness": "NOT_ESTABLISHED",
+  "scientific_order_sha256": "354d0782399ca9be66a3315a03056b0818dfeff379eb96b3d4d16b1d9b82de49",
+  "executed_scientific_code_sha256": {
+    "research/m2_v1/models.py": "7a7403e5906dc0b74883f9d2eb35b50a438f13273d82cd2c9ddb25430ba722dc",
+    "research/m2_v1/calibration.py": "9c61d0d4e0dda2ab66bfb6272a8c1d92e02c58b0709a5da4d42ecdfcd536b095",
+    "research/m2_v1/checks.py": "6f8d22447e28a3ce084b314ddfa089d5382277fe04fe5f5928f6fccc60ecbd03",
+    "research/m2_v1/calibration_v2.py": "d1ccf940883ff6b0247384d2ecc426b94521902444f58e24a34eca8bc4a3c51a"
+  }
+}

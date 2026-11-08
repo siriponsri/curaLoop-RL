@@ -70,15 +70,18 @@ planning timing calls. It ended **NO-GO for the method transition**; novelty and
 molecular benefit remain unestablished. Conditional M2 was not run.
 
 The owner approved the [M2 contribution direction](docs/03_research/M2_CONTRIBUTION_PROPOSAL_20261108.md):
-learn when to reuse a predictor, update it or invoke nonmyopic planning. The
-[detailed experiment plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md) proposes
-six existing FS-Mol development pools, two predictors and eight matched arms,
-with a fresh 48 CPU-hour / 96-hour grant. **Execution awaits owner approval**;
-the failed M1 verdict, closed budgets and final-outcome protections remain intact.
+learn when to reuse a predictor, update it or invoke nonmyopic planning, and
+released its [48 CPU-hour / 96-hour experiment plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md).
+The [executed preflight](docs/03_research/M2_PREFLIGHT_RESULTS_20261108.md) passed
+six-pool data admission and 12 constructed checks, then reached a per-campaign
+CPU admission stop on synthetic planning. **Molecular evaluation remains NOT_RUN**;
+the [resource amendment](docs/06_execution/M2_RESOURCE_OWNER_CHECKPOINT_20261108.md)
+awaits the owner. Final outcomes and the old failed M1 verdict remain unchanged.
 
 The earlier baseline-relative rollout remains isolated historical research code.
-The approved selective-computation direction is not yet implemented or evaluated,
-and is not a production policy. Toy checks do not establish drug discovery,
+Only predictor/planner preflight components are implemented for the new direction;
+the learned gate is not trained or evaluated and is not a production policy.
+Toy checks do not establish drug discovery,
 real-world safety, speedup or publication readiness.
 
 Read [GOAL](GOAL.md), [PLAN](PLAN.md), [START_HERE](START_HERE.md) and

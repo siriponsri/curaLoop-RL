@@ -1,5 +1,45 @@
 # Agent instructions: CuraLoop-RL
 
+## M2 stops at owner resource checkpoint, 8 November 2026
+
+Read docs/03_research/M2_PREFLIGHT_RESULTS_20261108.md,
+docs/06_execution/M2_RESOURCE_OWNER_CHECKPOINT_20261108.md and
+research/configs/m2_status_20261108_v1.json. Owner released M2, but a required
+synthetic baseline's verified calibrated CPU-cap lower bound is 30.10959074
+seconds, above the plan's 30-second admission bound. Stop dependent molecular
+work. Six-pool outcome-blind admission PASS and 12 constructed checks PASS;
+one synthetic configuration/two attempts, zero complete calibration campaigns,
+zero biological-label decode, gate fit or molecular campaign. Initial timing
+inference invalidated and retained; one timer-only repair, scientific design
+unchanged. No method-efficacy verdict, M3 or final access. Only complete private
+return, verification, exact owned cleanup, checkpoint audit and English main
+delivery remain authorized in this run. Before any resume, inspect its closed
+ledger and fresh absence proof; do not recreate the old task root or reuse any
+closed allowance automatically. Proposed one-hour synthetic profiling amendment
+requires owner approval. No new mechanism/dataset/baseline weakening. Parent
+sole writer; earlier release/planning markers below are historical.
+
+## Owner releases M2 selective-computation study, 8 November 2026
+
+The owner approved the complete M2 plan at 9e78f39: fresh 48 CPU-hours / 96
+elapsed hours / at most four combined workers (local one CPU / 512 MiB and
+dr-train up to three workers each one CPU-equivalent / 4 GiB). Read
+docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md and
+research/manifests/m2_release_20261108_v1.json. Release 08:17:29Z 8 November;
+deadline 08:17:29Z 12 November. Fresh .local/m2-selective-compute-20261108-v1
+only; preserve every old clock, ledger, STOP, role and frozen result. Parent sole
+writer. Six allowlisted exposed FS-Mol development pools only, with explicit
+development-label/counterfactual authority after identity/protection checks.
+Outcome-blind training-mask and synthetic CPU/resource gates precede molecular
+campaigns. Stop dependent work on a substantive feasibility change; retain
+failed/negative evidence. Maximum 4,260 intended units / 4,400 attempts subject
+to stage/total ceilings. All timed molecular comparisons on admitted dr-train;
+existing chaw profile only, no key/config/privilege changes. Verify full private
+return before exact owned remote cleanup. No final feature/label/presence decode,
+old validation use, new intake, paid/GPU, live team write or journal submission.
+Close M2 with report and owner checkpoint; M3 never automatic. Normal English
+main code/aggregate-evidence delivery is authorized. Earlier markers are history.
+
 ## Current owner request: approved M2 contribution, experiment planning only
 
 On 8 November 2026 the owner approved predictor-aware selective computation as
