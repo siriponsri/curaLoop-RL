@@ -1,5 +1,5 @@
 """Reconcile the complete fixed cohort and report conditional paired evidence."""
-import collections,hashlib,itertools,json,math,random,statistics,sys
+import collections,csv,hashlib,itertools,json,math,random,statistics,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from research.m2_costed_v2.guard import CostedGuard,new
@@ -98,9 +98,12 @@ def main():
                 cumulative=[0];h=0
                 for t in trace:h+=t['delivered_label'];cumulative.append(h)
                 cumulative.extend([h]*(args['budget']+1-len(cumulative)))
+                r['discovery_curve']=cumulative
                 r['auc_discovery_over_assigned_B']=sum(cumulative[1:])/args['budget']
                 r['H_over_B']=r['new_positives']/args['budget']
                 r['brier_delivered']=avg((t['prequential_prediction']-t['delivered_label'])**2 for t in trace) if trace else None
+                r['logloss_delivered']=avg(-(t['delivered_label']*math.log(min(1-1e-6,max(1e-6,t['prequential_prediction'])))+
+                  (1-t['delivered_label'])*math.log(1-min(1-1e-6,max(1e-6,t['prequential_prediction'])))) for t in trace) if trace else None
                 rows.append(r)
         assert dict(counts)==matrix['counts']
         target_values=collections.defaultdict(list)
@@ -124,12 +127,15 @@ def main():
             assert artifact['heldout_component']not in artifact['training_components'] and len(artifact['training_components'])==3
             heldout_tasks={f['task_id'] for f in projection['files'] if f['component']==artifact['heldout_component']}
             assert not heldout_tasks.intersection(artifact['training_tasks'])
-        summaries=[];contrasts=[]
+        import numpy as np
+        bootstrap_rng=random.Random(20261108)
+        bootstrap_indices=np.asarray([[bootstrap_rng.randrange(5) for _ in SEEDS] for _ in range(10000)],dtype=int)
+        summaries=[];contrasts=[];curves=[]
         for predictor,regime in itertools.product(('rf','neighbor'),('cheap','high')):
             sub=[r for r in rows if r['handler']=='main' and r['spec']['predictor']==predictor and r['spec']['regime']==regime]
             for arm in ARMS:
                 selected=[r for r in sub if r['arm']==arm];stats={}
-                for field in('new_positives','new_deliveries','total_observed','scientific_cpu_seconds','whole_process_cpu_seconds','whole_process_wall_seconds','H_over_B','auc_discovery_over_assigned_B','brier_delivered'):
+                for field in('new_positives','new_deliveries','total_observed','scientific_cpu_seconds','whole_process_cpu_seconds','whole_process_wall_seconds','H_over_B','auc_discovery_over_assigned_B','brier_delivered','logloss_delivered'):
                     stats[field]=balanced(selected,field)[0]
                 stats.update(predictor=predictor,regime=regime,arm=arm,campaigns=len(selected),
                   interrupted_campaigns=sum(r['interruptions']>0 for r in selected),
@@ -137,6 +143,17 @@ def main():
                   operation_counts={op:sum(r['operations'][op] for r in selected) for op in('REUSE','UPDATE','PLAN')},
                   fallbacks=sum(r['feasibility_fallbacks'] for r in selected))
                 summaries.append(stats)
+                seed_curves=[]
+                for seed in SEEDS:
+                    seed_rows=[v for v in selected if v['spec']['seed']==seed]
+                    seed_curves.append([balanced([dict(v,value=v['discovery_curve'][k]) for v in seed_rows],'value')[0] for k in range(33)])
+                array=np.asarray(seed_curves,dtype=float);boot=array[bootstrap_indices].mean(axis=1)
+                limits=np.quantile(boot,[.025,.975],axis=0,method='linear');mean=array.mean(axis=0)
+                assert abs(mean[-1]-stats['new_positives'])<1e-12
+                curves.append({'predictor':predictor,'regime':regime,'arm':arm,'assigned_B':32,
+                  'query_budget':list(range(33)),'mean_new_positives':mean.tolist(),
+                  'conditional_seed_lower_95':limits[0].tolist(),'conditional_seed_upper_95':limits[1].tolist(),
+                  'shared_seed_vectors':array.tolist(),'uncertainty_scope':'same 10,000 joint seed-index bootstrap; fixed cohort'})
             for baseline in('G1','T','E'):contrasts.append(dict(contrast(sub,'L',baseline,SEEDS),predictor=predictor,regime=regime))
         primary=[r for r in rows if r['handler']=='main' and r['spec']['predictor']=='rf' and r['spec']['regime']=='cheap']
         ablations=[r for r in rows if r['handler']=='ablation'];ablation_contrasts=[contrast(primary+ablations,'L',arm,SEEDS) for arm in('no_history','no_UPDATE','no_PLAN')]
@@ -164,7 +181,10 @@ def main():
           'method_decision':decision,'technical_matrix_audit':'PASS','counts':dict(counts),'audit':dict(audit),
           'six_development_assays':6,'annotation_components':4,'task_rows':1285,'source_role':'exposed development',
           'primary_endpoint':'new FS-Mol assay-relative binary positives at assigned B32/Ccheap; initial positives excluded',
-          'main_summaries':summaries,'paired_contrasts':contrasts,'rf_ablation_contrasts':ablation_contrasts,'rf_B16_transfer_contrasts':transfer,
+          'main_summaries':summaries,'discovery_curves':curves,'paired_contrasts':contrasts,'rf_ablation_contrasts':ablation_contrasts,'rf_B16_transfer_contrasts':transfer,
+          'secondary_metric_definitions':{'auc_discovery_over_assigned_B':'sum H(k) for k=1..B divided by assigned B; count units; carry last count after CPU stop',
+            'prequential_errors':'campaign-mean errors on delivered labels, then same component balancing; selected observations, not pool calibration; probabilities clipped at 1e-6 for log loss',
+            'whole_process_times':'process CPU/wall include startup/reporting; exclude pre-dispatch queue waiting; project elapsed separately recorded in release/close timestamps'},
           'training_state_support':{'states':artifacts['states'],'eligible_states':artifacts['eligible_states'],'gate_artifacts':len(artifacts['artifacts'])},
           'descriptive_training_target_distribution':target_summary,
           'whole_process_minus_incremental_science_cpu_range_seconds':[min(overheads),max(overheads)],
@@ -179,7 +199,16 @@ def main():
             'Balanced assay-relative labels do not represent HTS prevalence, clinical benefit or lab savings.',
             'CPU-specific calibrated regimes; selection-biased delivered-observation diagnostics.',
             'Correlated training branches and five seed vectors do not add independent biological replication.']}
-        new(PUBLIC/'aggregate-results-v1.json',result);new(job/'result.json',{'status':'PASS_COMPLETE_MATRIX_ANALYSIS','method_decision':decision,'verified_units':audit['verified_units']})
+        new(PUBLIC/'aggregate-results-v1.json',result)
+        with (PUBLIC/'discovery-curves-v1.csv').open('x',encoding='utf-8',newline='') as f:
+            writer=csv.writer(f);writer.writerow(['predictor','regime','arm','assigned_query_budget','mean_new_positives','conditional_seed_lower_95','conditional_seed_upper_95'])
+            for curve in curves:
+                for k in range(33):writer.writerow([curve['predictor'],curve['regime'],curve['arm'],k,curve['mean_new_positives'][k],curve['conditional_seed_lower_95'][k],curve['conditional_seed_upper_95'][k]])
+        with (PUBLIC/'main-summary-v1.csv').open('x',encoding='utf-8',newline='') as f:
+            fields=['predictor','regime','arm','campaigns','new_positives','new_deliveries','total_observed','scientific_cpu_seconds','whole_process_cpu_seconds','whole_process_wall_seconds',
+              'H_over_B','auc_discovery_over_assigned_B','brier_delivered','logloss_delivered','interrupted_campaigns','full_B_campaigns','fallbacks']
+            writer=csv.DictWriter(f,fieldnames=fields,extrasaction='ignore');writer.writeheader();writer.writerows(summaries)
+        new(job/'result.json',{'status':'PASS_COMPLETE_MATRIX_ANALYSIS','method_decision':decision,'verified_units':audit['verified_units'],'aggregate_curve_series':len(curves)})
         guard.finish('PASS');print(json.dumps({'status':'PASS_COMPLETE_MATRIX_ANALYSIS','decision':decision,'primary_contrasts':p,'history':history}))
     except BaseException as e:
         new(job/'failure.json',{'type':type(e).__name__,'message':str(e)[:300]});guard.finish('FAIL');raise

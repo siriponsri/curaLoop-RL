@@ -32,6 +32,7 @@ def main():
       'RF, assigned B=32 and Ccheap. Seeds and n0 are equally weighted within each assay, assays equally within component, and the four components equally. '+
       'Intervals below are 95% conditional seed-variability intervals on this fixed cohort, from 10,000 jointly resampled seed vectors. '+
       'They are not population-wide biological-family confidence intervals.', '',
+      '![Absolute RF discovery and paired primary contrasts](../evidence/m2-costed-20261108-v2/primary-discovery-v1.png)', '',
       table(['Contrast','Mean change in new positives','Conditional 95% interval','Positive components'],
         [[r['contrast'],number(r['mean_delta_new_positives']),interval(r),str(r['positive_components'])+'/4'] for r in primary]),
       '', table(['Annotation component']+[r['contrast'] for r in primary]+['L minus no-history'],
@@ -53,6 +54,12 @@ def main():
               [[r['arm'],number(r['new_positives']),number(r['new_deliveries']),number(r['total_observed']),number(r['scientific_cpu_seconds']),number(r['whole_process_cpu_seconds']),number(r['whole_process_wall_seconds']),r['full_B_campaigns'],r['interrupted_campaigns']] for r in rows])]
     lines+=['','### Paired effects across all regimes','',table(['Predictor','C regime','Contrast','Mean change','Conditional 95% interval'],
       [[r['predictor'],r['regime'],r['contrast'],number(r['mean_delta_new_positives']),interval(r)] for r in result['paired_contrasts']]),
+      '', '### Discovery curves','',
+      'All curves use the assigned query budget. CPU-exhausted campaigns retain their last delivered count; no extra labels are acquired. Bands use the same conditional seed-vector bootstrap.', '',
+      '![RF cheap discovery curves: R, G1, Gk and U versus L](../evidence/m2-costed-20261108-v2/rf-cheap-discovery-curves-1-v1.png)', '',
+      '![RF cheap discovery curves: P, T and E versus L](../evidence/m2-costed-20261108-v2/rf-cheap-discovery-curves-2-v1.png)', '',
+      'The [aggregate curve table](../evidence/m2-costed-20261108-v2/discovery-curves-v1.csv) includes all eight policies, both predictors and both CPU regimes. Vector SVG/PDF exports accompany the previews.',
+      '', 'The [complete summary table](../evidence/m2-costed-20261108-v2/main-summary-v1.csv) also reports H/B, the discrete mean of H(k) across assigned budgets, and delivered-observation Brier/log loss. These errors are selection-biased diagnostics, not pool calibration. Process wall time includes startup/reporting but excludes queue waiting.',
       '', '## Attribution and B=16 transfer','',
       'RF history/action ablations use the same cheap budgets and five seeds. Their jobs were interleaved with the main jobs on the same paired core '+
       'before any outer evaluation. B=16 transfer uses the first three evaluation seeds, both n0/C regimes and frozen B=32 gates/controls; no retuning.', '',

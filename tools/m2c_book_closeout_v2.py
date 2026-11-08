@@ -11,6 +11,7 @@ choices={'return-export-v1':('dr-train','return_export',300,600),
  'return-verify-v1':('local','return_verify',300,1800),
  'remote-exact-cleanup-v1':('dr-train','remote_cleanup',60,120),
  'analysis-v1':('local','analysis',120,300),
+ 'figures-v1':('local','figure_render',180,600),
  'closeout-audit-v1':('local','closeout_audit',180,600)}
 assert json.loads((TASK/'pipeline-status.json').read_text())['status']=='PASS_COMPLETE_FIXED_M2_MATRIX'
 host,handler,reservation,wall=choices[name]

@@ -53,6 +53,11 @@ def main():
         transport=json.loads((TASK/'transport-constructed-checks-v1.json').read_text());assert transport['status']=='PASS_CONSTRUCTED_TRANSPORT_CHECKS'
         new(PUBLIC/'constructed-checks-v1.json',{'engine':json.loads((TASK/'jobs/engine-checks-03/result.json').read_text()),
           'analysis':json.loads((TASK/'jobs/analysis-constructed-checks/result.json').read_text()),'transport':transport})
+        figures=json.loads((TASK/'figure-programmatic-qa-v1.json').read_text())
+        manual=json.loads((TASK/'figure-manual-review-v1.json').read_text());assert manual['status']=='PASS_FINAL_SIZE_AND_GRAYSCALE_REVIEW'
+        assert all(r['passed'] for r in figures['preflight'])
+        new(PUBLIC/'figure-qa-v1.json',{'status':'PASS_STRUCTURAL_AND_FINAL_RENDER_REVIEW','source_values_sha256':figures['source_values_sha256'],
+          'figure_count':3,'export_count':len(figures['outputs']),'text_bounds':figures['text_bounds'],'manual_review':manual})
         new(job/'result.json',{'status':'PASS_COMPLETE_M2_CLOSEOUT_AUDIT','method_decision':results['method_decision'],
           'biological_units':4164,'all_scientific_sources_pinned':True,'final_outcomes_opened':False,'m3_released':False})
         guard.finish('PASS');print(json.dumps({'status':'PASS_COMPLETE_M2_CLOSEOUT_AUDIT','cumulative_charged_cpu_hours':cpu['cumulative_charged_cpu_hours']}))
