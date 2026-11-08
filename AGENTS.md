@@ -1,5 +1,19 @@
 # Agent instructions: CuraLoop-RL
 
+## Current owner request: paper-grounded M2 contribution proposal
+
+On 8 November 2026 the owner requested paper reading and a contribution proposal
+for M2. This authorizes primary-literature access and English proposal delivery,
+not scientific execution. Read docs/03_research/M2_CONTRIBUTION_PROPOSAL_20261108.md
+and docs/02_literature/M2_READING_RECEIPT_20261108.json. Predictor-aware selective
+computation is PROPOSED_NOT_RELEASED; no new mechanism is implemented or certified
+novel. Old M1 NO-GO/M2 NOT_RUN and all closed budgets/final protections persist.
+An amended M2 entry scope, development-label/counterfactual-supervision authority,
+exact controls/workload and fresh CPU/time ceiling require owner approval before
+fitting or campaigns. Do not treat this document as adopting the proposal or
+resuming the old conditional release. Parent sole writer; normal English main
+documentation delivery remains authorized. Earlier scope markers are retained.
+
 ## Current owner request: literature downloads and four product screens
 
 On 8 November 2026 the owner identified docs/02_literature/literature_manifest.json

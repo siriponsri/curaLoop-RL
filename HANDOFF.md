@@ -1,5 +1,23 @@
 # Handoff: four-screen product delivery and paused research
 
+## Latest discussion deliverable: proposed M2 contribution
+
+The owner requested paper reading and a contribution proposal after the product
+delivery. The [M2 proposal](docs/03_research/M2_CONTRIBUTION_PROPOSAL_20261108.md)
+recommends testing a predictor-aware strategy that chooses whether to reuse,
+update or plan under separate assay and computation budgets. Generic RL, policy
+selection and metareasoning are acknowledged prior art; specific incremental
+benefit and novelty remain unestablished. Six local PDFs were freshly hash-matched
+and selected primary passages read; additional online methods and counterevidence
+are scoped in the [reading receipt](docs/02_literature/M2_READING_RECEIPT_20261108.json).
+
+Status: READY_FOR_OWNER_REVIEW_NOT_RELEASED. No new method, fit, assay campaign,
+data-role/split change, SSH or protected outcome access. Old M1/M2 status and
+ledgers remain unchanged. Owner decides whether to adopt the computational-strategy
+contribution and amended M2 entry criterion; a fresh detailed execution contract
+and budget must then be approved before any experimental work. This is not
+another executed M1 revision and does not release M3 or a benchmark publication.
+
 ## Latest owner-requested product and literature delivery, 8 November 2026
 
 Repository: `C:\Users\User\Desktop\myProject\curaloop-rl`, branch main.

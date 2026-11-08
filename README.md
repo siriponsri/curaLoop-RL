@@ -69,6 +69,11 @@ executed a small exposed-data predictor adapter, 17 constructed checks and 36
 planning timing calls. It ended **NO-GO for the method transition**; novelty and
 molecular benefit remain unestablished. Conditional M2 was not run.
 
+The owner-requested [M2 contribution proposal](docs/03_research/M2_CONTRIBUTION_PROPOSAL_20261108.md)
+now describes a literature-grounded selective-computation strategy and its
+required comparisons. It is **proposed, not released**; it does not change the
+failed M1 verdict or reopen any budget/final outcomes.
+
 The candidate compares completed baseline-relative planning alternatives under
 model ambiguity and computation limits. It is isolated research code, not a new
 production screening policy or learned RL controller. Toy checks do not establish

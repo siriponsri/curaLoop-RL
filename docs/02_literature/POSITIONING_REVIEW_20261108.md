@@ -177,3 +177,13 @@ is currently no customer or measured workflow advantage established here.
    harmful results. Keep protected outcomes and the closed LR-M12 budget closed.
 
 No new M1/M2 goal, dataset expansion or experiment is launched by this review.
+
+## Owner-requested contribution follow-up
+
+The [M2 contribution proposal](../03_research/M2_CONTRIBUTION_PROPOSAL_20261108.md)
+adds selected fresh local PDF reading and primary-method checks against MF-ENS,
+GP-Hedge, Learning Active Learning, BMPS and other close work. It proposes a
+specific reuse/update/plan strategy with matched controls. This supersedes the
+unresolved path request above as a next-action description: the reading room is
+located and 25 copies are verified; R03/R05/R05-SI/R26 still need access help.
+The new proposal is not adopted or released and does not certify novelty.
