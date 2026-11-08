@@ -155,6 +155,14 @@ def main():
                   'conditional_seed_lower_95':limits[0].tolist(),'conditional_seed_upper_95':limits[1].tolist(),
                   'shared_seed_vectors':array.tolist(),'uncertainty_scope':'same 10,000 joint seed-index bootstrap; fixed cohort'})
             for baseline in('G1','T','E'):contrasts.append(dict(contrast(sub,'L',baseline,SEEDS),predictor=predictor,regime=regime))
+        frontier=[]
+        for predictor in('rf','neighbor'):
+            points=[r for r in summaries if r['predictor']==predictor]
+            for point in points:
+                dominated=any(other['scientific_cpu_seconds']<=point['scientific_cpu_seconds'] and other['new_positives']>=point['new_positives'] and
+                  (other['scientific_cpu_seconds']<point['scientific_cpu_seconds'] or other['new_positives']>point['new_positives']) for other in points)
+                frontier.append({'predictor':predictor,'regime':point['regime'],'arm':point['arm'],
+                  'scientific_cpu_seconds':point['scientific_cpu_seconds'],'new_positives':point['new_positives'],'nondominated_mean_point':not dominated})
         primary=[r for r in rows if r['handler']=='main' and r['spec']['predictor']=='rf' and r['spec']['regime']=='cheap']
         ablations=[r for r in rows if r['handler']=='ablation'];ablation_contrasts=[contrast(primary+ablations,'L',arm,SEEDS) for arm in('no_history','no_UPDATE','no_PLAN')]
         transfer=[]
@@ -182,9 +190,11 @@ def main():
           'six_development_assays':6,'annotation_components':4,'task_rows':1285,'source_role':'exposed development',
           'primary_endpoint':'new FS-Mol assay-relative binary positives at assigned B32/Ccheap; initial positives excluded',
           'main_summaries':summaries,'discovery_curves':curves,'paired_contrasts':contrasts,'rf_ablation_contrasts':ablation_contrasts,'rf_B16_transfer_contrasts':transfer,
+          'descriptive_compute_discovery_frontier':frontier,
           'secondary_metric_definitions':{'auc_discovery_over_assigned_B':'sum H(k) for k=1..B divided by assigned B; count units; carry last count after CPU stop',
             'prequential_errors':'campaign-mean errors on delivered labels, then same component balancing; selected observations, not pool calibration; probabilities clipped at 1e-6 for log loss',
             'whole_process_times':'process CPU/wall include startup/reporting; exclude pre-dispatch queue waiting; project elapsed separately recorded in release/close timestamps'},
+          'frontier_scope':'descriptive nondominance of the 16 mean CPU/H operating points per predictor; not statistical dominance or a population frontier',
           'training_state_support':{'states':artifacts['states'],'eligible_states':artifacts['eligible_states'],'gate_artifacts':len(artifacts['artifacts'])},
           'descriptive_training_target_distribution':target_summary,
           'whole_process_minus_incremental_science_cpu_range_seconds':[min(overheads),max(overheads)],

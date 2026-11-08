@@ -16,6 +16,7 @@ def main():
     primary=[r for r in result['paired_contrasts'] if r['predictor']=='rf' and r['regime']=='cheap']
     history=result['rf_ablation_contrasts'][0];scope=json.loads((ROOT/'research/manifests/m2_data_scope_20261108_v1.json').read_text())
     labels={g['id']:g['label'] for g in scope['groups']};decision=result['method_decision']
+    caps=json.loads((PUBLIC/'technical-admission-v1.json').read_text())['caps']
     lines=['# Costed M2 development results','',f'**COMPLETE_FOR_OWNER_REVIEW — {decision}.** Technical closeout: **PASS**.',
       '', 'The fixed development study is complete. The owner must decide before M3. Final outcomes remain closed. '+
       'Completion is a research result, including mixed or negative findings; it is not publication readiness or a production-policy release.',
@@ -28,6 +29,9 @@ def main():
       'No final feature, label or presence payload, old validation pool, new assay or download was used.',
       '', 'Labels are assay-relative potency-derived binary classifications. Newly delivered positives exclude initial observations. '+
       'They are not validated therapeutic hits, realistic HTS prevalence, clinical outcomes or monetary savings.',
+      '', '### Frozen computation limits','',
+      'Caps below were derived without molecular outcomes: 1.25 times the maximum complete matched synthetic reference across both pool sizes and three repeats. They differ by predictor/n0/B; comparisons are paired within each context. Machine-readable evidence retains full precision. No high regime collapsed.', '',
+      table(['Predictor','Initial n0','New-label B','Ccheap (CPU-s)','Cplan (CPU-s)'],[[key.split(':')[0],key.split(':')[1],key.split(':')[2],f"{value['cheap']:.6g}",f"{value['high']:.6g}"] for key,value in caps.items()]),
       '', '## Primary result','',
       'RF, assigned B=32 and Ccheap. Seeds and n0 are equally weighted within each assay, assays equally within component, and the four components equally. '+
       'Intervals below are 95% conditional seed-variability intervals on this fixed cohort, from 10,000 jointly resampled seed vectors. '+
@@ -54,6 +58,9 @@ def main():
               [[r['arm'],number(r['new_positives']),number(r['new_deliveries']),number(r['total_observed']),number(r['scientific_cpu_seconds']),number(r['whole_process_cpu_seconds']),number(r['whole_process_wall_seconds']),r['full_B_campaigns'],r['interrupted_campaigns']] for r in rows])]
     lines+=['','### Paired effects across all regimes','',table(['Predictor','C regime','Contrast','Mean change','Conditional 95% interval'],
       [[r['predictor'],r['regime'],r['contrast'],number(r['mean_delta_new_positives']),interval(r)] for r in result['paired_contrasts']]),
+      '', '### Descriptive compute/discovery frontier','',
+      'Nondominance below compares mean scientific CPU and mean discovery across the 16 cheap/high operating points within each predictor. This is a descriptive mean-point frontier, not statistical dominance; all dominated points remain in the full tables.', '',
+      table(['Predictor','C regime','Arm','Science CPU (s)','New positives'],[[r['predictor'],r['regime'],r['arm'],number(r['scientific_cpu_seconds']),number(r['new_positives'])] for r in result['descriptive_compute_discovery_frontier'] if r['nondominated_mean_point']]),
       '', '### Discovery curves','',
       'All curves use the assigned query budget. CPU-exhausted campaigns retain their last delivered count; no extra labels are acquired. Bands use the same conditional seed-vector bootstrap.', '',
       '![RF cheap discovery curves: R, G1, Gk and U versus L](../evidence/m2-costed-20261108-v2/rf-cheap-discovery-curves-1-v1.png)', '',

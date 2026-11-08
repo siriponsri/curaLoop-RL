@@ -1,5 +1,20 @@
 # Agent instructions: CuraLoop-RL
 
+## Verified M2 continuation status, 9 November 2026
+
+Read docs/06_execution/M2_INTERIM_OWNER_REPORT_20261109.md. Technical/training/
+tuning gates passed; main evaluation is incomplete. A local controller was
+freshly confirmed absent despite a stale RUNNING receipt. Recovering its three
+real successful remote receipts retained 210 main/ablation units; no scientific
+retry was needed. Its full 2,000-second orchestration reservation is retained;
+another 2,000 seconds was booked inside the existing engineering cap, without
+changing stage/cumulative limits or the original deadline. Hidden controller
+tools/m2c_durable_pipeline_v3.py resumes only the original frozen spec hashes,
+then transfer. Check its exact PID, heartbeat and private logs before acting;
+do not launch duplicates. All old receipts stay unchanged. Same scientific
+source/pools/controls/seeds, final outcomes closed, owner decision before M3.
+Parent sole writer; earlier release records below remain applicable as history.
+
 ## Owner releases costed M2 continuation, 8 November 2026
 
 The owner explicitly approved M2_COSTED_CONTINUATION_PROPOSAL_20261108 at

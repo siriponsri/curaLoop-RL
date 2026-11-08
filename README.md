@@ -82,6 +82,8 @@ The owner released it; all 96 synthetic technical contexts passed and the
 development-only study is in progress. Read the
 [current execution record](docs/06_execution/M2_COSTED_EXECUTION_NOTES_20261108.md).
 **M2 efficacy is not yet established**; final outcomes remain closed.
+The [9 November interim owner report](docs/06_execution/M2_INTERIM_OWNER_REPORT_20261109.md)
+separates verified completion, local-controller recovery and remaining evaluation.
 
 The earlier baseline-relative rollout remains isolated historical research code.
 The current controller is a research implementation under grouped development

@@ -4,17 +4,18 @@ import json
 import os
 import threading
 import time
-from datetime import datetime,timezone
+from datetime import datetime,timezone,timedelta
 from pathlib import Path
 
 
 class OrchestrationGuard:
-    def __init__(self,receipt,cpu_seconds,deadline_utc):
+    def __init__(self,receipt,cpu_seconds,deadline_utc,wall_seconds=None):
         assert os.name=='nt'
         from ctypes import wintypes as w
         self.path=Path(receipt);assert not self.path.exists()
-        self.limit=cpu_seconds;self.deadline=datetime.fromisoformat(deadline_utc.replace('Z','+00:00'))
-        self.done=threading.Event();self.started=time.monotonic()
+        self.limit=cpu_seconds;self.project_deadline=datetime.fromisoformat(deadline_utc.replace('Z','+00:00'))
+        self.deadline=min(self.project_deadline,datetime.now(timezone.utc)+timedelta(seconds=wall_seconds)) if wall_seconds else self.project_deadline
+        self.done=threading.Event();self.started=time.monotonic();self.write_lock=threading.Lock()
         k=ctypes.WinDLL('kernel32',use_last_error=True);self.kernel=k
         class Basic(ctypes.Structure):
             _fields_=[('process_time',ctypes.c_int64),('job_time',ctypes.c_int64),('flags',w.DWORD),
@@ -48,16 +49,23 @@ class OrchestrationGuard:
         return {'aggregate_cpu_seconds':(a.user+a.kernel)/10_000_000,'processes':a.total_processes,'active_processes':a.active_processes}
 
     def write(self,status):
-        value={'status':status,'mechanism':'WINDOWS_JOB_CPU0_AGGREGATE_512MIB_WITH_CLI_CHILDREN',
-               'reserved_envelope_cpu_seconds':self.limit,'deadline_utc':self.deadline.isoformat(),
-               'wall_seconds':time.monotonic()-self.started,**self.accounting()}
-        tmp=self.path.with_suffix('.tmp');tmp.write_text(json.dumps(value,indent=2)+'\n',encoding='utf-8');os.replace(tmp,self.path)
+        with self.write_lock:
+            if status=='RUNNING' and self.done.is_set():return
+            value={'status':status,'mechanism':'WINDOWS_JOB_CPU0_AGGREGATE_512MIB_WITH_CLI_CHILDREN',
+                   'pid':os.getpid(),'heartbeat_utc':datetime.now(timezone.utc).isoformat(),
+                   'reserved_envelope_cpu_seconds':self.limit,'deadline_utc':self.deadline.isoformat(),
+                   'project_deadline_utc':self.project_deadline.isoformat(),
+                   'wall_seconds':time.monotonic()-self.started,**self.accounting()}
+            tmp=self.path.with_suffix('.tmp');tmp.write_text(json.dumps(value,indent=2)+'\n',encoding='utf-8');os.replace(tmp,self.path)
 
     def watch(self):
+        next_heartbeat=time.monotonic()+30
         while not self.done.wait(.25):
             if self.accounting()['aggregate_cpu_seconds']>=self.limit-.5 or datetime.now(timezone.utc)>=self.deadline:
                 try:self.write('FAIL_ORCHESTRATION_RESOURCE_LIMIT')
                 finally:os._exit(124)
+            if time.monotonic()>=next_heartbeat:
+                self.write('RUNNING');next_heartbeat=time.monotonic()+30
 
     def finish(self,status='PASS'):
         self.done.set();self.write(status)

@@ -2,6 +2,14 @@
 
 ## Current release: M2 development execution
 
+Latest owner status: [9 November interim report](docs/06_execution/M2_INTERIM_OWNER_REPORT_20261109.md).
+The previous local controller exited without a final receipt; three completed
+remote units were recovered, retaining 210 main/ablation units before resuming.
+Use the PID-recorded hidden `m2c_durable_pipeline_v3.py` controller and its private
+`durable-v3-stdout.log`, `durable-v3-stderr.log` and 30-second heartbeat. Verify
+process existence and heartbeat age; a historical RUNNING marker is insufficient.
+No model/seed/protocol change or repeated completed scientific unit is authorized.
+
 The owner approved the costed continuation at `37c0fe9`, keeping cumulative
 48 CPU-hours and the original deadline 12 November 2026, 08:17:29 UTC. Read
 [execution notes](docs/06_execution/M2_COSTED_EXECUTION_NOTES_20261108.md) and

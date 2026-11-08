@@ -100,3 +100,25 @@ exclusive job creation provides a second safeguard against duplicate dispatch.
 Five constructed transport fixtures run before outer evaluation, without network
 calls, to test success, safe identical retry, authentication refusal, partial
 output refusal and the three-connection limit.
+
+## Reconciled local-controller interruption, 9 November
+
+The owner requested status while 207 main/ablation receipts were locally settled.
+Fresh inspection found no local controller process. Three remote jobs had real
+PASS receipts and inactive units; these were recovered and settled, retaining
+210 completed units. The exact cause of the controller's exit is not established.
+Its initial RUNNING file was not treated as proof of continuing computation.
+
+The interrupted orchestration's full 2,000-second reservation remains charged;
+its final CPU counter is unavailable and is explicitly recorded as a lower bound,
+not fabricated. A replacement 2,000-second envelope uses the original engineering
+allocation. No completed scientific unit is repeated and no scientific-attempt
+retry is added by this recovery. A hidden, PID-recorded controller resumes the
+1,890 remaining main/ablation units from their original spec-file SHA256 pins,
+followed by the original B=16 transfer. It has aggregate CPU/core/memory limits,
+an earlier 25,000-second wall stop and the unchanged project deadline.
+
+Thirty-second resource heartbeats and independent process readback were added.
+Process existence, refreshed heartbeat and advancing completion logs were verified
+after the launching shell exited. Interrupted timing is retained as an execution
+limitation; seed intervals do not quantify every source of timing variation.

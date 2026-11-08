@@ -1,6 +1,8 @@
 # Start here
 
 **Current: costed M2 development study in progress; final outcomes remain closed.**
+See the [verified 9 November interim report](docs/06_execution/M2_INTERIM_OWNER_REPORT_20261109.md)
+for completed stages, the recovered local interruption, reserved CPU and remaining work.
 The owner selected a method paper using existing datasets and approved
 predictor-aware selective computation: choose whether to reuse, update or plan.
 The approved [M2 plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md) uses six
