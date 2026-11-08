@@ -11,7 +11,9 @@ Read [product checkpoint](docs/05_product/FOUR_SCREEN_DASHBOARD_CHECKPOINT_20261
 [actual gallery](docs/evidence/four-screen-dashboard-20261108-v1/README.md) and
 [English six-page guide](docs/manual/CuraLoop-RL-Dashboard-Guide-EN-v3.pdf).
 Frontend tests 23/23, lint, type/build and actual browser/production wiring checks
-passed. Source and built assets are delivered together. Parent wrote the code;
+passed. Implementation checkpoint: `d881d5f51116f406fca439c39fd4e7bf9a2cc84a`.
+Literature-download checkpoint: `fbcf6b8`.
+Source and built assets are delivered together. Parent wrote the code;
 two isolated reviewers only inspected the UI and returned findings.
 
 The owner also identified the literature manifest and requested its papers.
