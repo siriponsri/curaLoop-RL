@@ -1,0 +1,72 @@
+{
+  "status": "PASS_LR_M12_DELIVERY_CHECKS",
+  "utc": "2026-11-08T06:02:28.963377+00:00",
+  "starting_checkpoint": "cf1f58fc592e07c63a0101ae3c69813815ebba60",
+  "verified_content_checkpoint": "d864dff30cc2fdd5582002960e2eb00780a12bf7",
+  "m1_gate": "NO_GO_METHOD_DISTINCTION_UNRESOLVED",
+  "m2": "NOT_RUN",
+  "chapters": 10,
+  "existing_local_document_links": 184,
+  "document_sha256": {
+    "AGENTS.md": "a5492f537fe31e515f6400d9844178bf4c8a9a8936f30cf97e3d183560d6395b",
+    "GOAL.md": "9ebae0c75c32238a1d0b661fb0c630201fd24ee1cd4ed673f17d5143d59a9003",
+    "HANDOFF.md": "3413d15f574825d8787c2c2654df68325084c76a3ab0465ef8c1cdbd5c87b8bb",
+    "PLAN.md": "971c36d3b489114f15caf5b20e09917e471c53823fe8bd396d94cca6638c3f24",
+    "README.md": "9a079432a4b7cca234eec1084bebc75421fde4fa8a9e9e3d9ef1f46e3c8824cf",
+    "START_HERE.md": "9b0a0715590f391f131b6ae7200e03e5571b2965f23c0a11a6fa705c4c65bf03",
+    "docs/00_project/CLAIM_LEDGER.md": "d14778b8f9958033e7534084c3c1e6355e523c1db904d64830922cfe6ba5b4dd",
+    "docs/01_paper/00_title_abstract_keywords.md": "615e0801f3fa5ef241bbb9726dbf94822c1de628e2debc9397826120467fb47d",
+    "docs/01_paper/04_proposed_study.md": "73bb0578dd7f899c123ffbacd56002335828fa54d246b320484eaa059595105d",
+    "docs/01_paper/06_discussion.md": "cc360d869132ab98cf3440bfb1a519c7570321401fcf8c3f633c63ae90334366",
+    "docs/01_paper/08_conclusion.md": "387b0882c4a0b5f4716b2d2d5672bfb0982994fd49b97462f026dce389a06c05",
+    "docs/01_paper/MANUSCRIPT.md": "93ca1aadfaed25b4d5149c754039b0f221dce8d1ae72d98f5fd48deda91812bc",
+    "docs/02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md": "6634b4d17c488e32742ae89cdd1001cbb7a5bc85ec4ffde107d58f07e73cbc98",
+    "docs/03_research/LR_M12_M1_RESULTS_20261108.md": "6207eb5afad81b67d4be1eb26f6943970396041beb06b457e2f9f00033b6df74",
+    "docs/03_research/METHOD_FIRST_DESIGN_20261108.md": "7785bee220857835310ac8577b250a245f53c4e8c115c5ba6c9cb8134506d3e3",
+    "docs/06_execution/LR_M12_EXECUTION_CONTRACT_20261108.md": "1e8be10747e6cfe9aad6205517d99e5cfb779a82c29edd98cc6ffb71257f097b",
+    "docs/06_execution/LR_M12_OWNER_CHECKPOINT_20261108.md": "4f722d5026419ffe8b34f2e39254202276076a22ad0f4a1f96f657f3aa75df26",
+    "docs/evidence/lr-m12-20261108-v1/README.md": "420f8f3a1d1605d15383c740f3fab94f2954604477e750ef02b1def78c50d981"
+  },
+  "new_code_sha256": {
+    "research/lr_m12_v1/__init__.py": "57659e8e0eda7399d1b749679600d4f7081b266499d10d522bf4e5268128c539",
+    "research/lr_m12_v1/acquisition.py": "ec7bfd1850f489cf66b7e592f726cf02e6497961e2e549e7fa40c26ade4c2423",
+    "research/lr_m12_v1/bundling.py": "7d77cbd501d9e990d1c8f4f5742d966103d841b51988b9a5443e1db0eee679e4",
+    "research/lr_m12_v1/checks.py": "64ed7bd2f2b10a2e49ab04ac62ffac44b549b6653688b145a9de8d374494e5d5",
+    "research/lr_m12_v1/diagnostics.py": "a3311b5ac740f6af5f4d5b5233e12ecbfc24521d30f52edf22907320265d7264",
+    "research/lr_m12_v1/guard.py": "fd9b1ae1cd4e7e031638ee1068c630cc59ae506f12363820708c24f09917981b",
+    "research/lr_m12_v1/predictor.py": "4d857bc3c02f0a6c5375084f238a00b52e91f31dc40105d3bb7115572d8546d7",
+    "research/lr_m12_v1/worker.py": "71b4879f6048e2ad5f08e78b3a2f1d9b37e6cfc81b13a375e7215ff2aee0afb9",
+    "tools/lrm12_admin_v1.py": "b289e1be2d000115959d966519217e7e911faf2f9174b669a689f049f3f4ddbd",
+    "tools/lrm12_closeout_v1.py": "e5eb8951d71203728e7e479d1c7454f36fae473ea35643e23f9b1d555346161a",
+    "tools/lrm12_delivery_v1.py": "17ec50667b21d7173a66ed2fb4ea15a16ccbe6e00b28dba1cf0b1e2e1f7e1fc8",
+    "tools/lrm12_return_v1.py": "b82b5b622d7482f125bf4558c9dcab5eb303d28bb8e1a6c74958658f28810897"
+  },
+  "unchanged_historical_records": [
+    {
+      "path": "docs/01_paper/05_results.md",
+      "git_blob": "f75040c85eab63c8b534640e6045fab2eca7502f"
+    },
+    {
+      "path": "docs/01_paper/09_declarations.md",
+      "git_blob": "6279bb0e16cce141eab7daa036e20ba2e9c0ecce"
+    },
+    {
+      "path": "research/configs/method_first_status_20261108_v1.json",
+      "git_blob": "184aee14cbd2d053b4c3b608b8fbacbaf09997e6"
+    },
+    {
+      "path": "research/configs/lr_m12_proposal_20261108_v1.json",
+      "git_blob": "f26993092c445f271e27624c1935e56a4b108591"
+    },
+    {
+      "path": "docs/06_execution/LR_M12_PROPOSAL_20261108.md",
+      "git_blob": "fd0bbc61ee06f54f86e12f3a924543a417bf52ee"
+    }
+  ],
+  "retained_seconds": 7320,
+  "active_owned_jobs": 0,
+  "independent_semantic_scientific_review": "NOT_RUN",
+  "application_runtime_browser_build": "NOT_RUN_NO_PRODUCT_RUNTIME_CHANGE",
+  "git_whitespace_check": "PASS_WITH_PRESERVED_WINDOWS_RECEIPT_EOL",
+  "passed_checks_are_not_scientific_go": true
+}
