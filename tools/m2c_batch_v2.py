@@ -77,7 +77,8 @@ child1=resource.getrusage(resource.RUSAGE_CHILDREN)
 print(json.dumps({'results':rows,'orchestration_cpu_seconds':time.process_time()-before+child1.ru_utime+child1.ru_stime-child0.ru_utime-child0.ru_stime,
  'orchestration_affinity':sorted(os.sched_getaffinity(0))}))
 '''.replace('__SCRIPTS__',repr([base64.b64encode(s.encode()).decode() for s in scripts]))
-    out=ssh_script(code,timeout=200)
+    permits=[json.loads((TASK/'jobs'/name/'permit.json').read_text()) for name in names]
+    out=ssh_script(code,timeout=max(p['wall_seconds'] for p in permits)+45)
     with (TASK/'batch-orchestration.jsonl').open('a',encoding='utf-8',newline='\n') as f:f.write(json.dumps(out)+'\n')
     for name,result in zip(names,out['results']):
         assert result['unit'].endswith(name)

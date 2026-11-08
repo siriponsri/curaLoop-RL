@@ -28,7 +28,7 @@ def local_cpu():
 
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=['begin','reserve','settle','status','admit'])
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=['begin','reserve','settle','status','admit','close'])
     p.add_argument('value',nargs='?');a=p.parse_args()
     if a.action=='begin':
         release=json.loads((ROOT/'research/manifests/m2_costed_release_20261108_v2.json').read_text())
@@ -94,6 +94,17 @@ def main():
             assert result['biological_labels_decoded'] is False
             ledger.update(technical_admission='PASS',status='ACTIVE_DEVELOPMENT',admission_result_sha256=sha(TASK/'technical-admission-result.json'))
             out={'technical_admission':'PASS','development_labels_conditionally_released':True}
+        elif a.action=='close':
+            assert ledger['status']=='ACTIVE_DEVELOPMENT' and not any(j['state']=='RESERVED' for j in ledger['jobs'])
+            proof=json.loads((TASK/'jobs/closeout-audit-v1/result.json').read_text())
+            assert proof['status']=='PASS_COMPLETE_M2_CLOSEOUT_AUDIT'
+            assert json.loads((TASK/'jobs/closeout-audit-v1/resource.json').read_text())['status']=='PASS'
+            assert json.loads((ROOT/'docs/evidence/m2-costed-20261108-v2/fresh-absence-v1.json').read_text())['status']=='PASS_FRESH_EXACT_ABSENCE'
+            assert not ledger['final_outcomes_opened'] and not ledger['m3_released']
+            ledger.update(status='CLOSED_COMPLETE_FOR_OWNER_REVIEW',closed_utc=datetime.now(timezone.utc).isoformat(),
+                          method_decision=proof['method_decision'],scientific_release_open=False)
+            out={'status':ledger['status'],'method_decision':ledger['method_decision'],
+              'cumulative_charged_seconds':ledger['prior_retained_seconds']+sum(ledger['bucket_reserved_seconds'].values()),'m3_released':False}
         else:out=ledger
         if a.action!='status':
             tmp=TASK/'ledger.next.json';tmp.write_text(json.dumps(ledger,indent=2)+'\n',encoding='utf-8');os.replace(tmp,TASK/'ledger.json')

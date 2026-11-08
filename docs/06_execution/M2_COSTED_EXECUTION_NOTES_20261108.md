@@ -38,6 +38,12 @@ Implementation details fixed before evaluation:
 - Per-assay seed: first four SHA256 bytes of `m2:task:seed`, modulo 2,147,483,647.
 - Same initial CPU slot for paired arms and all branches of a prefix; stage order
   is SHA256 of `order:job`, fixed before labels. At most three remote workers.
+  Before any outer evaluation, the main and RF ablation jobs were interleaved by
+  SHA256 of `interleaved-order:job`, retaining their exact frozen identities,
+  seed/core assignments and separate stage budgets. This outcome-blind execution
+  ordering refinement reduces time-of-day confounding in the history ablation.
+  The main execution freeze records the complete 2,100-job order; the later
+  ablation pipeline step only verifies completion and dispatches no duplicate.
 - Scientific CPU reserves `min(0.05, max(0.002, 0.01*C))` seconds for stopping and
   recording; the assigned cap is unchanged. Dense features, public graph,
   inference, fits, planning and fallback work consume C. Eager library imports,

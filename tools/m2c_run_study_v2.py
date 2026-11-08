@@ -19,7 +19,12 @@ def main():
         matrix=json.loads((TASK/'execution-matrix-v1.json').read_text());code=json.loads((TASK/'code-stage-03.json').read_text())
         predecessor={'branch':'prefix','tuning':'branch','main':'tuning','ablation':'main','transfer':'ablation'}.get(stage)
         if predecessor:assert json.loads((TASK/(predecessor+'-summary.json')).read_text())['status']=='PASS_COMPLETE_STAGE'
-        selected=[e for e in matrix['entries'] if e['handler']==stage]
+        selected=[e for e in matrix['entries'] if e['handler']in(('main','ablation') if stage=='main' else (stage,))]
+        if stage=='ablation' and (TASK/'ablation-summary.json').exists():
+            assert json.loads((TASK/'ablation-summary.json').read_text())['interleaved_with_main']is True
+            assert all(json.loads((TASK/'jobs'/e['job']/'resource.json').read_text())['status']=='PASS' for e in selected)
+            guard.finish('PASS');print(json.dumps({'stage':'ablation','status':'ALREADY_COMPLETED_INTERLEAVED_WITH_MAIN','units':len(selected)}));return
+        if stage=='main':selected.sort(key=lambda e:hashlib.sha256(('interleaved-order:'+e['job']).encode()).digest())
         gates=json.loads((TASK/'jobs/fit-gates/result.json').read_text())['artifacts'] if stage in('main','ablation','transfer') else None
         controls=json.loads((TASK/'jobs/fit-controls/result.json').read_text())['artifacts'] if gates else None
         queues={cpu:[] for cpu in(69,70,71)}
@@ -34,7 +39,7 @@ def main():
                     index=controls[key][args['policy']]['selected_configuration']
                     args['parameter']=([2,4,8] if args['policy']=='Gk' else [[2,.02],[4,.05],[8,.10]])[index]
             reservation=20 if stage=='prefix' else math.ceil(args['cap'])+5
-            spec=dict(job=entry['job'],host='dr-train',cpu=entry['cpu'],handler=stage,bucket=BUCKET[stage],
+            spec=dict(job=entry['job'],host='dr-train',cpu=entry['cpu'],handler=entry['handler'],bucket=BUCKET[entry['handler']],
                 reservation_seconds=reservation,wall_seconds=max(60,3*reservation),memory_bytes=4294967296,task_root=REMOTE,
                 code_directory=code['code_directory'],code_pins=code['code_pins'],arguments=args,execution_unit=True,
                 development_admission='PASS',final_outcomes_opened=False)
@@ -59,7 +64,9 @@ def main():
                 completed+=1
             print(json.dumps({'stage':stage,'complete':completed,'total':len(selected),'elapsed_seconds':round(time.monotonic()-started,1),'failures':failures}),flush=True)
             if failures:raise RuntimeError('RETAINED_UNIT_FAILURE:'+','.join(failures))
-        new(TASK/(stage+'-summary.json'),{'status':'PASS_COMPLETE_STAGE','stage':stage,'units':completed,'outcome_inspection_for_selection':False})
+        new(TASK/(stage+'-summary.json'),{'status':'PASS_COMPLETE_STAGE','stage':stage,'units':1920 if stage=='main' else completed,'outcome_inspection_for_selection':False})
+        if stage=='main':new(TASK/'ablation-summary.json',{'status':'PASS_COMPLETE_STAGE','stage':'ablation','units':180,
+          'interleaved_with_main':True,'outcome_inspection_for_selection':False})
         guard.finish('PASS')
     except BaseException:
         guard.finish('FAIL_ORCHESTRATION_OR_UNIT');raise

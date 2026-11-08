@@ -117,6 +117,12 @@ def main():
         # Do not invent a practical-effect or confirmatory significance threshold.
         decision='PROMISING_DEVELOPMENT_SIGNAL' if potential else 'INCONCLUSIVE'
         if all(v['mean_delta_new_positives']<=0 for v in contrasts) and history['mean_delta_new_positives']<=0:decision='NOT_SUPPORTED_IN_THIS_STUDY'
+        paired={(r['task_id'],r['spec']['n0'],r['spec']['seed'],r['arm']):r for r in primary}
+        contexts=sorted({k[:3] for k in paired})
+        exact_equal=all(paired[c+('L',)]['new_positives']==paired[c+(arm,)]['new_positives'] for c in contexts for arm in('G1','T','E'))
+        cheaper=all(balanced([r for r in primary if r['arm']=='L'],'scientific_cpu_seconds')[0]<
+          balanced([r for r in primary if r['arm']==arm],'scientific_cpu_seconds')[0] for arm in('G1','T','E'))
+        if not potential and exact_equal and cheaper:decision='EFFICIENCY_SIGNAL_ONLY'
         ledger=json.loads((TASK/'ledger.json').read_text())
         training_cpu=sum(j.get('reported_cpu_seconds',0) for j in ledger['jobs'] if j.get('bucket')in('training_prefixes_branches_gate','control_tuning'))
         result={'schema':'curaloop.m2_costed.aggregate_results.v2','status':'COMPLETE_MATRIX_AWAITING_CLEANUP_AND_DELIVERY',
@@ -125,8 +131,10 @@ def main():
           'primary_endpoint':'new FS-Mol assay-relative binary positives at assigned B32/Ccheap; initial positives excluded',
           'main_summaries':summaries,'paired_contrasts':contrasts,'rf_ablation_contrasts':ablation_contrasts,'rf_B16_transfer_contrasts':transfer,
           'training_state_support':{'states':artifacts['states'],'eligible_states':artifacts['eligible_states'],'gate_artifacts':len(artifacts['artifacts'])},
-          'offline_training_and_tuning_actual_cpu_seconds':training_cpu,
-          'offline_amortized_cpu_seconds_per_campaign':{str(n):training_cpu/n for n in(1,10,100)},
+          'offline_training_and_tuning_verified_worker_cpu_seconds':training_cpu,
+          'offline_training_and_tuning_charged_stage_seconds':sum(ledger['bucket_reserved_seconds'][b] for b in('training_prefixes_branches_gate','control_tuning')),
+          'offline_worker_cpu_amortization_lower_bound_seconds_per_campaign':{str(n):training_cpu/n for n in(1,10,100)},
+          'offline_cost_scope':'verified worker CPU includes startup; shared orchestration/setup/return overhead is additional and included in project reservation accounting',
           'final_outcomes_opened':False,'automatic_m3':False,'publication_ready':False,
           'limitations':['Four dependent annotation components; not biological-family population inference.',
             'Previously exposed development cohort; no independent final evidence.',
