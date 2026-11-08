@@ -1,5 +1,11 @@
 # Proposed M2 contribution: predictor-aware selective computation
 
+**Subsequent owner decision, 8 November 2026:** contribution direction APPROVED.
+The [detailed M2 experiment plan](../06_execution/M2_EXPERIMENT_PLAN_20261108.md)
+now awaits approval of scope and a fresh grant before execution. This dated
+proposal is retained below; its original not-yet-adopted wording is historical.
+No M2 result or change to the failed M1 verdict is implied.
+
 8 November 2026, Asia/Bangkok. **READY_FOR_OWNER_REVIEW; NOT_RELEASED.**
 Starting checkpoint: `77341494ef3141a48402c94b31f141e10045bbf4`.
 This is a literature-grounded proposal, not a new method implementation, an M2

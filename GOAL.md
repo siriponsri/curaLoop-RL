@@ -6,14 +6,20 @@ Creating/publishing a benchmark is not the selected destination. RL is optional.
 
 ## Current research question
 
-Can computation-bounded acquisition under predictive-model ambiguity improve
-cumulative historical assay discovery over a strong matched predictor/Greedy
-policy on a common measurement/compute frontier?
+Can a predictor-aware controller choose when to reuse, update or plan from
+observable screening history, improving delivered assay-positive discovery under
+separate assay/CPU limits over strong fixed and adaptive operation controls?
 
-The [method design](docs/03_research/METHOD_FIRST_DESIGN_20261108.md) specifies a
-small baseline-relative rollout reference. The [closest-work review](docs/02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md)
-finds strong prior-art overlap. Method design and constructed implementation are
-complete for review. The subsequent [LR-M12 M1 investigation](docs/03_research/LR_M12_M1_RESULTS_20261108.md)
+The owner approved this [M2 contribution direction](docs/03_research/M2_CONTRIBUTION_PROPOSAL_20261108.md)
+on 8 November. The [experiment plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md)
+is ready for owner consideration, **not execution**: six existing FS-Mol
+development assays, grouped separation, two predictors and eight matched policies;
+48 new CPU-hours / 96 hours / max four workers proposed. General metareasoning and
+acquisition portfolios remain prior art; incremental utility is unestablished.
+
+The earlier [method design](docs/03_research/METHOD_FIRST_DESIGN_20261108.md) and
+[closest-work review](docs/02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md)
+are historical. The [LR-M12 M1 investigation](docs/03_research/LR_M12_M1_RESULTS_20261108.md)
 executed a small exposed-data predictor adapter and two revisions, but ended
 **NO_GO_METHOD_DISTINCTION_UNRESOLVED**. M2 was withheld because its gate failed;
 algorithmic novelty and molecular benefit are not established.
@@ -21,8 +27,8 @@ No new theorem or real-world safety guarantee is claimed.
 
 ## What success requires
 
-1. A substantive distinction from established active-search and safe policy-
-   improvement methods, or an explicit finding that this candidate is insufficient.
+1. An identifiable contribution beyond established active-search, metareasoning
+   and acquisition portfolios, or an explicit finding that this strategy is insufficient.
 2. A useful molecular decision/compute tradeoff beyond strong controls with the
    same predictor, update rules, metadata and cache opportunities.
 3. Existing-data evaluation with pinned semantics, exposure/protection and
@@ -50,8 +56,9 @@ hours and at most four local/dr-train workers. This release is now CLOSED at
 the M1 owner checkpoint, retaining 2 h 02 min including delivery reservations.
 All owned remote files were returned and verified before exact cleanup. Only
 the admitted exposed development pools were decoded; final outcomes remain closed.
-Normal English main delivery is authorized. A new mechanism/phase needs the
-owner's next decision; no unused allowance, paid service, live team write,
+Normal English main delivery is authorized. Contribution approval does not
+release the proposed M2 experiments; the detailed plan and fresh grant await
+the owner's next decision. No unused allowance, paid service, live team write,
 protected evaluation or submission is automatically released.
 
 Publication budget remains USD 300; venue fit/fees and human declarations require

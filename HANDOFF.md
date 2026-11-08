@@ -1,5 +1,39 @@
 # Handoff: four-screen product delivery and paused research
 
+## Current checkpoint: M2 contribution approved; experiment plan pending
+
+On 8 November 2026 the owner approved predictor-aware selective computation as
+the M2 contribution and requested a concrete experiment plan before starting.
+Read [M2 experiment plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md),
+[disabled configuration](research/configs/m2_experiment_plan_20261108_v1.json)
+and [metadata-only data scope](research/manifests/m2_data_scope_20261108_v1.json).
+Starting planning checkpoint: `e0e80c900f340daeed2f1bca7194e66ab9f46f44`.
+
+Requested fresh grant: 48 CPU-hours / 96 elapsed hours / max four combined workers,
+local one for independent engineering/analysis and dr-train up to three for all
+timed molecular comparisons. Six existing exposed FS-Mol development pools only,
+1,285 task rows / four annotation components; proposed outcome-blind training-only
+canonical purge and four grouped holdouts. Two predictors, eight matched arms,
+4,260 intended units / 4,400 attempts maximum including correlated training
+branches and synthetic admission. No new data or final payloads. This is an upper
+reservation, not measured runtime or independent replication count.
+
+Status: CONTRIBUTION_APPROVED_EXPERIMENT_NOT_RELEASED. No scientific root/clock,
+model code, fitting, campaign, SSH or development/final payload decode was performed
+for planning. Expected historical input hashes come from authored metadata; fresh
+input admission remains future work. Original failed M1, scientific status JSON,
+closed ledgers and protected roles remain unchanged. The prior proposal below is
+historical; adoption of its direction is now complete.
+
+Next actor: owner approves/amends the complete plan, scoped development-label/
+counterfactual access and fresh resource grant. Only then freeze implementation,
+admit protected boundaries/resources, test training-mask coverage and synthetic
+CPU caps before molecular work. A feasibility change stops dependent work for
+review; no implicit fallback to more data or a weaker baseline. Promising,
+inconclusive and unsupported results all close M2 with a report. No automatic M3,
+product integration, paid service, commercial claim or journal submission.
+English main planning delivery is authorized. Verify actual commit/push with Git.
+
 ## Latest discussion deliverable: proposed M2 contribution
 
 The owner requested paper reading and a contribution proposal after the product

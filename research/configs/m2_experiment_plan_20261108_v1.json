@@ -1,0 +1,304 @@
+{
+  "schema": "curaloop.m2.experiment_plan.v1",
+  "date": "2026-11-08",
+  "status": "CONTRIBUTION_APPROVED_EXPERIMENT_NOT_RELEASED",
+  "scientific_release_open": false,
+  "execution_enabled": false,
+  "final_outcomes_open": false,
+  "release_utc": null,
+  "deadline_utc": null,
+  "plan_document": "docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md",
+  "data_scope": "research/manifests/m2_data_scope_20261108_v1.json",
+  "historical_m1_verdict": "NO_GO_METHOD_DISTINCTION_UNRESOLVED",
+  "proposed_authority": [
+    "fresh implementation and constructed checks",
+    "six allowlisted development-label pools, masked counterfactual supervision and grouped evaluation",
+    "existing dr-train profile only after admission",
+    "verified full return then exact owned remote cleanup",
+    "English main code and aggregate evidence delivery"
+  ],
+  "next_owner_action": "approve or amend entire M2 scope and fresh grant before execution",
+  "budget": {
+    "cpu_seconds": 172800,
+    "elapsed_hours": 96,
+    "max_combined_workers": 4,
+    "local": {
+      "workers": 1,
+      "cpu_equivalent_per_worker": 1,
+      "memory_mib": 512
+    },
+    "dr_train": {
+      "workers": 3,
+      "cpu_equivalent_per_worker": 1,
+      "memory_mib": 4096
+    },
+    "scientific_cpu_seconds_per_unit_max": 30,
+    "aggregate_cpu_seconds_per_attempt_max": 31,
+    "wall_seconds_per_attempt_max": 120,
+    "intended_units_max": 4260,
+    "attempts_max": 4400,
+    "paid_budget_usd": 0,
+    "gpu": false,
+    "unused_historical_allowance_reusable": false
+  },
+  "stage_cpu_hours": {
+    "implementation_guards_setup": 4,
+    "synthetic_admission": 1,
+    "training_prefixes_branches_gate": 11,
+    "control_tuning": 5,
+    "main_comparison": 17,
+    "ablation_transfer": 4.5,
+    "analysis_return_cleanup_delivery_retry": 5.5
+  },
+  "placement": {
+    "timed_molecular_comparisons": "dr-train only, paired within worker with randomized order",
+    "local": "independent engineering, constructed checks, analysis",
+    "local_root_proposed": ".local/m2-selective-compute-20261108-v1",
+    "remote_root_proposed": "/home/chaw/curaloop-tasks/m2-selective-compute-20261108-v1",
+    "roots_created_by_plan": false,
+    "ssh_used_by_plan": false
+  },
+  "simulator": {
+    "assay_budget": 32,
+    "initial_labels": [
+      0,
+      16
+    ],
+    "batch_size": 1,
+    "delay": 0,
+    "missing_rate": 0,
+    "unit_assay_cost": 1,
+    "initial_hits_counted": false
+  },
+  "folds": {
+    "count": 4,
+    "unit": "annotation component",
+    "scaler_gate_and_control_selection": "training components only",
+    "global_cross_component_canonical_purge": "meta-training only",
+    "minimum_masked_rows": 48
+  },
+  "predictors": {
+    "rf": {
+      "n_estimators": 64,
+      "max_depth": 6,
+      "min_samples_leaf": 2,
+      "max_features": "sqrt",
+      "bootstrap": true,
+      "class_weight": null,
+      "n_jobs": 1
+    },
+    "neighbor": {
+      "metric": "Tanimoto",
+      "k": 16,
+      "prior_alpha": 1,
+      "prior_beta": 1
+    }
+  },
+  "operations": [
+    "REUSE",
+    "UPDATE",
+    "PLAN"
+  ],
+  "arms": [
+    "R",
+    "G1",
+    "Gk",
+    "U",
+    "P",
+    "T",
+    "E",
+    "L"
+  ],
+  "primary_contrasts": [
+    "L-G1",
+    "L-T",
+    "L-E"
+  ],
+  "gate": {
+    "model": "two Ridge regressors",
+    "alpha": 1,
+    "cost_ewma_new_weight": 0.5,
+    "hyperparameter_search": false,
+    "target": "paired realized terminal hits relative to REUSE after forced operation and common G1 continuation",
+    "fixed_during_outer_evaluation": true,
+    "features_require_planner": false
+  },
+  "tuning": {
+    "greedy_update_periods": [
+      2,
+      4,
+      8
+    ],
+    "threshold_pairs": [
+      [
+        2,
+        0.02
+      ],
+      [
+        4,
+        0.05
+      ],
+      [
+        8,
+        0.1
+      ]
+    ],
+    "exp3_gamma": 0.1,
+    "selection": "component-balanced H/B, equal n0/C weights, then lower CPU, then fixed order",
+    "outer_outcome_selection": false
+  },
+  "seeds": {
+    "training": {
+      "greedy": 101,
+      "mixed": 211
+    },
+    "tuning": [
+      301,
+      401
+    ],
+    "evaluation": [
+      1009,
+      2027,
+      3041,
+      4051,
+      5059
+    ],
+    "transfer": [
+      1009,
+      2027,
+      3041
+    ]
+  },
+  "training": {
+    "prefix_new_labels": 32,
+    "snapshot_after_deliveries": [
+      0,
+      8,
+      16,
+      24
+    ],
+    "behavior_traces": 2,
+    "forced_operations": 3,
+    "cpu_regimes": 2,
+    "training_outcomes_from_heldout_component": false
+  },
+  "cpu_regimes": {
+    "calibration": "synthetic labels only",
+    "pool_sizes": [
+      128,
+      303
+    ],
+    "budgets": [
+      16,
+      32
+    ],
+    "repeats": 3,
+    "cheap_factor": 1.25,
+    "plan_factor": 1.25,
+    "collapse_when_plan_to_cheap_ratio_below": 1.5,
+    "collapse_retains": "primary Ccheap; omit Cplan comparisons",
+    "stop_if_cap_above_seconds": 30
+  },
+  "workload": [
+    {
+      "stage": "synthetic_calibration",
+      "factors": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        3
+      ],
+      "units": 96,
+      "synthetic": true
+    },
+    {
+      "stage": "training_prefixes",
+      "factors": [
+        2,
+        6,
+        2,
+        2
+      ],
+      "units": 48
+    },
+    {
+      "stage": "forced_continuations",
+      "factors": [
+        2,
+        96,
+        3,
+        2
+      ],
+      "units": 1152
+    },
+    {
+      "stage": "control_tuning",
+      "factors": [
+        2,
+        6,
+        2,
+        2,
+        2,
+        6
+      ],
+      "units": 576
+    },
+    {
+      "stage": "main_comparison",
+      "factors": [
+        2,
+        6,
+        2,
+        2,
+        5,
+        8
+      ],
+      "units": 1920
+    },
+    {
+      "stage": "rf_ablations",
+      "factors": [
+        6,
+        2,
+        1,
+        5,
+        3
+      ],
+      "units": 180
+    },
+    {
+      "stage": "rf_budget_transfer",
+      "factors": [
+        6,
+        2,
+        2,
+        3,
+        4
+      ],
+      "units": 288
+    }
+  ],
+  "analysis": {
+    "primary": "component-balanced newly delivered positives at B32/Ccheap",
+    "initial_hits_excluded": true,
+    "primary_components": 4,
+    "equal_component_weight": true,
+    "seed_bootstrap_repeats": 10000,
+    "interval_scope": "conditional seed variability on fixed cohort; not family-population inference",
+    "minimum_meaningful_effect": null,
+    "noninferiority_margin": null,
+    "p_value_gate": false
+  },
+  "criteria": {
+    "technical": "complete registered or predeclared collapsed matrix; no information/resource violations; matched controls and verified return",
+    "promising": "RF Ccheap mean L-G1, L-T, L-E all positive; L-G1 positive in at least 3/4 components; full L mean better than no-history; no accounting/information artifact",
+    "efficiency_only": "equal recorded hits with less CPU; not noninferiority",
+    "inconclusive": "weak/mixed effects, support gaps, incomplete matrix or feasibility stop",
+    "not_supported": "no incremental utility over threshold/adaptive controls, constant/fallback gate or overhead without gain/history contribution"
+  },
+  "automatic_m3_release": false,
+  "public_compound_level_data": false
+}
+

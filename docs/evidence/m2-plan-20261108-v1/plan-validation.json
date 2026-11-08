@@ -1,0 +1,119 @@
+{
+  "schema": "curaloop.m2.planning_validation.v1",
+  "date": "2026-11-08",
+  "scope": "Static metadata, identity-pin comparison, arithmetic and local-link checks only. Not a scientific run, resource admission, or fresh raw-input verification.",
+  "status": "PASS_PLANNING_CHECKS",
+  "checks": [
+    {
+      "check": "exact six task allowlist matches admitted metadata",
+      "status": "PASS"
+    },
+    {
+      "check": "CHEMBL1614225 expected identities and row count",
+      "status": "PASS"
+    },
+    {
+      "check": "CHEMBL1614225 component identity",
+      "status": "PASS"
+    },
+    {
+      "check": "CHEMBL1738549 expected identities and row count",
+      "status": "PASS"
+    },
+    {
+      "check": "CHEMBL1738549 component identity",
+      "status": "PASS"
+    },
+    {
+      "check": "CHEMBL1738553 expected identities and row count",
+      "status": "PASS"
+    },
+    {
+      "check": "CHEMBL1738553 component identity",
+      "status": "PASS"
+    },
+    {
+      "check": "CHEMBL1737942 expected identities and row count",
+      "status": "PASS"
+    },
+    {
+      "check": "CHEMBL1737942 component identity",
+      "status": "PASS"
+    },
+    {
+      "check": "CHEMBL3705420 expected identities and row count",
+      "status": "PASS"
+    },
+    {
+      "check": "CHEMBL3705420 component identity",
+      "status": "PASS"
+    },
+    {
+      "check": "CHEMBL2219098 expected identities and row count",
+      "status": "PASS"
+    },
+    {
+      "check": "CHEMBL2219098 component identity",
+      "status": "PASS"
+    },
+    {
+      "check": "row and component arithmetic",
+      "status": "PASS"
+    },
+    {
+      "check": "protection pin matches metadata",
+      "status": "PASS"
+    },
+    {
+      "check": "historical feature-manifest pin matches receipt",
+      "status": "PASS"
+    },
+    {
+      "check": "all workload products",
+      "status": "PASS"
+    },
+    {
+      "check": "total intended and attempt reserve",
+      "status": "PASS"
+    },
+    {
+      "check": "fresh stage and total budget",
+      "status": "PASS"
+    },
+    {
+      "check": "unit reservation fits overall cap",
+      "status": "PASS"
+    },
+    {
+      "check": "seeds disjoint",
+      "status": "PASS"
+    },
+    {
+      "check": "no execution release or final opening",
+      "status": "PASS"
+    },
+    {
+      "check": "no scientific root created",
+      "status": "PASS"
+    },
+    {
+      "check": "local plan links resolve",
+      "status": "PASS"
+    }
+  ],
+  "missing_links": [],
+  "planning_inputs_sha256": {
+    "research/configs/m2_experiment_plan_20261108_v1.json": "89bc3a81fe4b72cd70c6a54f75ebe0f44c5da6b29f3abf31b9d302c335d2617f",
+    "research/manifests/m2_data_scope_20261108_v1.json": "c72624c3a363f1593f4d816dfd8e198c08cfea70b615d63979666561c2f16f74",
+    "docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md": "e4fcb7e9379487a4af08e3af6d384f84547e6e32aaec67c112ef69b35d44ef17",
+    ".local/lr-m12-20261108-v1/inputs/manifest-v1.json": "a84287dbef01a2e46c7587ee8d3ac64a739ee164016e4733674c7a7b9677218b",
+    "docs/evidence/plan-a-20261105-v1/feature-cohort-v2-result.json": "5b2f0596f385d9f2e495a768cd98159d71663c0486911145597cde215341f609"
+  },
+  "intended_unit_reservation_cpu_hours": 36.68333333333333,
+  "max_attempt_reservation_cpu_hours": 37.888888888888886,
+  "model_fits_run": 0,
+  "campaigns_run": 0,
+  "input_payloads_decoded": 0,
+  "ssh_sessions": 0,
+  "final_outcomes_opened": false
+}

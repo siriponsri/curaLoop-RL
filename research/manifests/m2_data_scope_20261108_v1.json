@@ -1,0 +1,133 @@
+{
+  "schema": "curaloop.m2.data_scope.v1",
+  "status": "PROPOSED_NOT_RELEASED",
+  "date": "2026-11-08",
+  "contribution_approved": true,
+  "execution_authorized": false,
+  "final_outcomes_open": false,
+  "source": {
+    "dataset": "FS-Mol",
+    "paper_url": "https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/hash/8d3bba7425e7c98c50f52ca1b52d3735-Abstract-round2.html",
+    "upstream_commit": "92aa95daba3f43863227e65be85a07b4a2ee754f",
+    "provenance": "ChEMBL 27 source; later annotation provenance retained separately",
+    "expected_archive_sha256": "528a9c4e8d74c4287acda79536eecbf91418d6d0ac2c55918b270d78c2333ebc",
+    "archive_access_requested": false
+  },
+  "receipt_paths": [
+    "docs/evidence/plan-a-20261105-v1/feature-cohort-v2-result.json",
+    "docs/03_research/LOCAL_DATA_INVENTORY_20261107.md",
+    "docs/03_research/FSMOL_DATASET_CARD_V2.md",
+    ".local/lr-m12-20261108-v1/inputs/manifest-v1.json"
+  ],
+  "identities_status": "EXPECTED_FROM_HISTORICAL_METADATA; FRESH_INPUT_HASH_ADMISSION_PENDING_RELEASE",
+  "expected_protection_metadata_sha256": "a189e3064b28e09e0099db0dd81ee80b08475ccf39b134bdec37ccd341789520",
+  "expected_feature_manifest_sha256": "66ddda3ae98fe317f8c26e0fe6443ac40f0522a84b7e8d683eeec9012a726006",
+  "access_requested_after_approval": [
+    "six allowlisted prepared development inputs and feature sidecars",
+    "development labels for masked training, counterfactual continuations and outer development evaluation",
+    "metadata-only protection checks before label decoding"
+  ],
+  "excluded": [
+    "old validation payloads",
+    "all final features, labels and presence masks",
+    "raw archive enumeration",
+    "new source assays or downloads",
+    "commercial rights inference",
+    "public compound-level redistribution"
+  ],
+  "task_rows": 1285,
+  "unique_canonical_structures_historical": 1107,
+  "annotation_components": 4,
+  "groups": [
+    {
+      "id": "typed-ancestry-3d78be158d61c2c9cfd8",
+      "label": "globin annotation component",
+      "assays": [
+        "CHEMBL1614225"
+      ]
+    },
+    {
+      "id": "typed-ancestry-341ed92ba201e1cfedfc",
+      "label": "MIT/TFE annotation component",
+      "assays": [
+        "CHEMBL1738549",
+        "CHEMBL1738553"
+      ]
+    },
+    {
+      "id": "typed-ancestry-3bdd4e9dd09027c116b1",
+      "label": "TNF annotation component",
+      "assays": [
+        "CHEMBL1737942"
+      ]
+    },
+    {
+      "id": "typed-ancestry-52211aa39e1b3526ca3b",
+      "label": "quarantined broad annotation component",
+      "assays": [
+        "CHEMBL3705420",
+        "CHEMBL2219098"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "CHEMBL1614225",
+      "role": "historically_exposed_development",
+      "rows": 168,
+      "expected_feature_sha256": "9f591fc4bbca6d29c57e10a9f11c0d7a1d1ecbf1e2513996700d55196c4a73e1",
+      "expected_input_sha256": "401489ebb1ec2a62eb3ea65d9a238d8c10b10fd9e771597368ec56847cff9780",
+      "private_input_path": ".local/lr-m12-20261108-v1/inputs/development/CHEMBL1614225.json"
+    },
+    {
+      "task_id": "CHEMBL1738549",
+      "role": "historically_exposed_development",
+      "rows": 303,
+      "expected_feature_sha256": "adfea9ae77ec8aecbc9d35d21f2189eebd51a757121be84fbac1372475345b39",
+      "expected_input_sha256": "22ff4ef6d917a8eac225cbadbaac5f12b60c158393a4925ebc8a029f4fe67cb2",
+      "private_input_path": ".local/lr-m12-20261108-v1/inputs/development/CHEMBL1738549.json"
+    },
+    {
+      "task_id": "CHEMBL1738553",
+      "role": "historically_exposed_development",
+      "rows": 248,
+      "expected_feature_sha256": "632d3018438411b70bdbfc9d369014c341fc6d815a54937a754692e011d8acf4",
+      "expected_input_sha256": "49ac1b2b50c5b6ac03b3d056ea77025587d5c73bbe3b71903baa65b15f43ff38",
+      "private_input_path": ".local/lr-m12-20261108-v1/inputs/development/CHEMBL1738553.json"
+    },
+    {
+      "task_id": "CHEMBL1737942",
+      "role": "historically_exposed_development",
+      "rows": 270,
+      "expected_feature_sha256": "90e1237dee299f61146ab6bd74d2897490a2d02c4d2431b2c4510738f32f0723",
+      "expected_input_sha256": "b92f962479a74ab00f3fb4adc00fccd73bbf4c9688efc77917b329c8085fe7d1",
+      "private_input_path": ".local/lr-m12-20261108-v1/inputs/development/CHEMBL1737942.json"
+    },
+    {
+      "task_id": "CHEMBL3705420",
+      "role": "historically_exposed_development",
+      "rows": 167,
+      "expected_feature_sha256": "2449d3416695508427c6bbde8d4f22edad849b6dee2bc937727a928b78003943",
+      "expected_input_sha256": "9f47e7c3b987d321bcfb4f7717da7f7dea916c035526b6989138ad3d81e77f3b",
+      "private_input_path": ".local/lr-m12-20261108-v1/inputs/development/CHEMBL3705420.json"
+    },
+    {
+      "task_id": "CHEMBL2219098",
+      "role": "historically_exposed_development",
+      "rows": 129,
+      "expected_feature_sha256": "2747d4136ad2cfd482f61372a304f17ade0650ce3dc60ed32839f3f26e65fab3",
+      "expected_input_sha256": "22efb01faef62dbc0c9144b3039684af585f2f44eb363b53daa41a5b79bac922",
+      "private_input_path": ".local/lr-m12-20261108-v1/inputs/development/CHEMBL2219098.json"
+    }
+  ],
+  "derivation": {
+    "folds": 4,
+    "holdout_unit": "whole annotation component",
+    "training_mask": "remove all canonical structures present in more than one of the four components; outcomes not used",
+    "minimum_training_pool_rows": 48,
+    "evaluation_pools_unchanged": true,
+    "source_bytes_and_roles_unchanged": true,
+    "labels_decoded_this_planning_delivery": false
+  }
+}
+

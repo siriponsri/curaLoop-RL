@@ -1,5 +1,22 @@
 # Agent instructions: CuraLoop-RL
 
+## Current owner request: approved M2 contribution, experiment planning only
+
+On 8 November 2026 the owner approved predictor-aware selective computation as
+the M2 contribution and requested a concrete experiment plan for review before
+starting. Read docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md,
+research/configs/m2_experiment_plan_20261108_v1.json and
+research/manifests/m2_data_scope_20261108_v1.json. Contribution APPROVED;
+experiment NOT_RELEASED. Proposed fresh grant: 48 CPU-hours / 96 elapsed hours /
+max four combined workers, not yet authorized or started. Six existing exposed
+FS-Mol development pools only; proposed label/counterfactual access and derived
+training mask require approval of this plan. No fitting, campaign, scientific
+clock/root, SSH, source/label/final payload access or M3 release in this task.
+Normal English main planning delivery is authorized; parent sole writer. Old M1
+NO-GO and closed scientific status/config/ledgers remain historical facts. The
+new plan is disabled and does not reopen LR-M12. Next actor owner. Earlier scope
+markers below are retained as dated history, not current adoption status.
+
 ## Current owner request: paper-grounded M2 contribution proposal
 
 On 8 November 2026 the owner requested paper reading and a contribution proposal
