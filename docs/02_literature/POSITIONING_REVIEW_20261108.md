@@ -32,21 +32,28 @@ Local reading covered the 28-record `literature_manifest.json`,
 `METRIC_AND_INITIALIZATION_CONCORDANCE.md`, and the retained M0/M1 reports.
 These documents were read as prior analyses, not substituted for paper methods.
 
-**Local PDF-original access remains unresolved.** The current
+**Initial access check, before the owner's download request:** the current
 `docs/02_literature` and `papers` folders contain registers, citations and review
 documents. No R01-R28 original PDFs were found in them or the inspected research
 PDF locations. The historical register describes copies held outside the public
 payload; it does not prove those copies are available in this checkout. The owner
-has been asked for the intended literature-folder path. Do not claim all 28 PDFs
+subsequently identified the manifest and requested fresh downloads. Do not claim all 28 PDFs
 or 731 pages were reread. Dataset/masked-method PDFs elsewhere in the project
 were not opened to fill this gap.
+
+The subsequent [download receipt](LITERATURE_DOWNLOAD_STATUS_20261108.md) supersedes
+that initial access inventory: 25 main PDFs are now locally available, exact-hash
+verified, totaling 666 pages. Three main papers and one supplement remain blocked.
+Availability is not a claim that all those pages were read.
 
 Fresh source access was uneven: selected raw MolPAL, adaptive-acquisition, BMPS,
 ALF and two 2026 preprints were read through alphaXiv; ANS, Query Matters,
 ChemCrow and PaperQA2 had accessible primary HTML. ENS's primary record was
 refreshed and its detailed M1 review retained. GLARE's official abstract and PDF
-opening were accessible, but later full-method requests timed out; one stalled
-owned local download was stopped. BayBE's publisher request returned 403; current
+opening were initially accessible, but later full-method requests timed out; one stalled
+owned local download was stopped. A subsequent bounded native download recovered
+the exact registered GLARE PDF (26 pages; SHA matches the register). Its Sections
+3.2-4.2, Algorithms 1-2 and Appendix B.3-B.4 were then read locally. BayBE's publisher request returned 403; current
 publisher-indexed text and the official paper repository were inspected, with
 the earlier local full-text review retained separately. No access control was
 bypassed and unavailable text is not classified as newly read full text.
@@ -60,7 +67,7 @@ bypassed and unavailable text is not classified as newly read full text.
 | [ENS](https://proceedings.mlr.press/v70/jiang17d.html), ICML 2017; current record plus retained M1 objective/method reading | Remaining-budget-aware cumulative-positive discovery and an efficient approximation | Planning beyond Greedy and budget awareness already exist. The M1 horizon-four rollout is not an ENS reproduction or full-remaining-budget method. |
 | [ANS](https://arxiv.org/html/2405.15031v1), 2024 preprint; Sections 3-5 and experimental table | Imitation of ENS using synthetic training, transferring a cheaper nonmyopic policy to real tasks; measured targets/time frontier | Cheap or learned nonmyopic decisions are not an untouched gap. Starts contain a known positive and negative; compare uniform/zero-hit starts separately. Count offline training and preprocessing when making resource claims. |
 | R28: [Adaptive Acquisition](https://arxiv.org/abs/1906.11471), IJCAI 2019; raw method pages, state/action/reward and evaluation passages | Reinforcement feedback learns an acquisition policy from a heuristic-filtered candidate set | An adaptive controller choosing acquisitions is established. Vision prediction-oriented AL is adjacent evidence, not an objective-matched molecular hit-search baseline. |
-| R07: [GLARE](https://papers.neurips.cc/paper_files/paper/2025/hash/57ac7ccded0eaaec4ad6f05612289b79-Abstract-Conference.html), NeurIPS 2025; official abstract/opening only in this pass | Reinforced molecular active selection and learned balancing of chemical criteria | Broad RL-based molecular acquisition claims are occupied. Its initialization, exact policy action and complete compute accounting need the full paper before defining an exact reproduction. No headline EF number is transplanted. |
+| R07: [GLARE](https://papers.neurips.cc/paper_files/paper/2025/hash/57ac7ccded0eaaec4ad6f05612289b79-Abstract-Conference.html), NeurIPS 2025; verified local PDF, Sections 3.2-4.2 and Appendix B.3-B.4 | Grouped molecule selection with a learned select/exclude policy; GRPO training on labeled observations with an uncertainty-modified reward | This is directly relevant molecular RL acquisition, not merely a vision analogue. The experiments use LIT-PCBA ALDH1/PKM2/VDR and Enamine subsets; EF and top-ranked recovery differ from CuraLoop's delayed delivered-hit endpoint. Appendix B.4 explicitly reports batch-size/time tradeoffs. Novelty cannot rest on RL acquisition or a generic time/discovery plot. Initialization and full matched compute accounting still require reproduction-specific audit. |
 | [BMPS](https://arxiv.org/abs/1711.06892v3), UAI 2018; raw metalevel-MDP and application/overhead passages | Select/stop computations using expected decision utility minus computation cost | "When to think versus act" is established metareasoning. A molecular adaptation must identify a useful difference and include controller overhead; generic compute gating cannot be the entire novelty argument. |
 | [Robust baseline regret](https://arxiv.org/abs/1607.03842), 2016; retained M1 Section 3/equation 2 reduction | Within-model return difference, worst-case improvement and zero-valued baseline | Keep the M1 reduction. Relabeling its min-over-model score as a new acquisition principle would be unsupported. MDP guarantees do not transfer to an uncalibrated finite GP forecast. |
 | R26: [BayBE](https://doi.org/10.1039/D5DD00050E), Digital Discovery 2025; indexed publisher text, [official paper repository](https://github.com/emdgroup/baybe-paper), retained earlier full-text review | Modular experimental planning, chemical encodings, asynchronous workflows, serialization and practical extensions | Integration with an existing planner deserves consideration. New connectors or local report export alone are not a demonstrated method advance or a cleared commercial advantage. Current full-paper refresh is incomplete. |
