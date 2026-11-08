@@ -62,6 +62,7 @@ def main():
       table(['Predictor','C regime','Arm','REUSE','UPDATE','PLAN','Feasibility fallbacks'],
         [[r['predictor'],r['regime'],r['arm']]+[r['operation_counts'][op] for op in('REUSE','UPDATE','PLAN')]+[r['fallbacks']]
          for r in result['main_summaries'] if r['arm']in('G1','T','E','L')]),
+      '', 'Operation counts identify requested operations, not all internal forest fits. Common initial fits and cold-start uniform choices are additional charged work; PLAN at one remaining assay degenerates to cheap selection.',
       '', f"Gate supervision retained {result['training_state_support']['eligible_states']} eligible state/C combinations out of {result['training_state_support']['states']}; "+
       f"{result['audit'].get('infeasible_branches',0)} branches retained an already-exhausted prefix and invoked no continuation. "+
       'Each training state has three forced-operation continuations followed by common G1. Targets are realized terminal-hit differences, '+

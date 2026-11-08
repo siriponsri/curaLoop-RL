@@ -56,6 +56,10 @@ Implementation details fixed before evaluation:
   is retained with the executed code rather than changed during the study.
 - Prefix work is charged once to the project and subtracted from every paired
   branch's assigned C. Correlated branches are not independent replications.
+- Operation counts identify requested REUSE/UPDATE/PLAN calls. Common initial
+  fits and cold-start uniform choices are additional charged work, and PLAN at
+  one remaining assay degenerates to cheap selection. These counts are not a
+  count of all internal forest fits or nonmyopic hypothesis evaluations.
 - Local stage coordinators have separate 500 CPU-second aggregate Windows Job
   limits within the already charged 3,600-second orchestration envelope. They
   perform no unguarded ML or label decoding.

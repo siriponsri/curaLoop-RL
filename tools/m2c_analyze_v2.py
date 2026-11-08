@@ -47,6 +47,8 @@ def main():
             assert json.loads((TASK/(stage+'-summary.json')).read_text())['status']=='PASS_COMPLETE_STAGE'
         returned=json.loads((TASK/'remote-return/verified-v1.json').read_text());assert returned['status']=='PASS_COMPLETE_PRIVATE_RETURN_AND_LOCAL_REREAD'
         matrix=json.loads((TASK/'execution-matrix-v1.json').read_text());projection=json.loads((TASK/'development-projection-manifest.json').read_text())
+        gate_artifacts=json.loads((TASK/'jobs/fit-gates/result.json').read_text())
+        control_artifacts=json.loads((TASK/'jobs/fit-controls/result.json').read_text())['artifacts']
         files=TASK/'remote-return/files';rows=[];counts=collections.Counter();audit=collections.Counter();overheads=[]
         originals={}
         for f in projection['files']:
@@ -58,6 +60,15 @@ def main():
             assert sha(local/'result.json')==sha(files/'jobs'/e['job']/'result.json')
             assert not r['cpu_violation'];counts[e['handler']]+=1
             args=r['spec'];source=originals[r['task_id']];records=source['records']
+            assert args['training']==(e['handler']in('prefix','branch','tuning'))
+            if args['policy']=='L':
+                variant='no_history' if args.get('variant')=='no_history' else 'full'
+                assert args['gate']==gate_artifacts['artifacts'][args['predictor']+':'+r['component']+':'+variant]
+                assert args['gate']['heldout_component']==r['component']
+            if args['policy']in('Gk','T') and e['handler']!='tuning':
+                index=control_artifacts[args['predictor']+':'+r['component']][args['policy']]['selected_configuration']
+                expected=([2,4,8] if args['policy']=='Gk' else [[2,.02],[4,.05],[8,.10]])[index]
+                assert args['parameter']==expected
             if args['training']:records=[v for v in records if v['candidate_id'] in set(source['training_candidate_ids'])]
             trace=json.loads((files/'jobs'/e['job']/'trace-private.json').read_text())
             assert len(trace)==r['new_deliveries']<=args['budget']
@@ -66,6 +77,7 @@ def main():
             for t in trace:
                 assert int(records[t['candidate_index']]['active'])==t['delivered_label']
                 if r['status']!='PASS_INFEASIBLE_PREFIX':assert t['scientific_cpu_seconds']<=args['cap']
+                assert t['requested_operation']not in args.get('restricted',[])
             if e['handler']!='branch' or r['branch_eligible']:assert r['scientific_cpu_seconds']<=args['cap']
             if e['handler']=='branch' and not r['branch_eligible']:
                 assert r['status']=='PASS_INFEASIBLE_PREFIX' and r['continuation_invoked']is False;audit['infeasible_branches']+=1
