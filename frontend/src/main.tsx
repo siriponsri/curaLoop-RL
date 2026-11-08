@@ -5,6 +5,7 @@ import { AppProvider } from "./state";
 import "./styles.css";
 import "./modern.css";
 import "./studio.css";
+import "./dashboard.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter>

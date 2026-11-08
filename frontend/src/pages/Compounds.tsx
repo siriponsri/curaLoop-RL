@@ -23,7 +23,7 @@ export default function Compounds() {
     [status, setStatus] = useState("all"),
     [sort, setSort] = useState("id"),
     [page, setPage] = useState(1),
-    [list, setList] = useState(false),
+    [list, setList] = useState(true),
     [result, setResult] = useState<CandidatePage | null>(null),
     [selected, setSelected] = useState<Candidate | null>(null),
     [loading, setLoading] = useState(true),
@@ -147,6 +147,7 @@ export default function Compounds() {
           {t("No hidden label is sent to this browser")}
         </span>
       </div>
+      {list && <p id="compound-table-hint" className="table-scroll-hint">{t("Swipe horizontally to view status, outcomes and selection history. Open a compound ID for details.")}</p>}
       {error ? (
         <div className="error-message" role="alert">
           {error}
@@ -174,8 +175,20 @@ export default function Compounds() {
               {t("Clear filters")}</Button>
           }
         />
+      ) : list ? (
+        <div className="surface table-scroll compound-table" role="region" aria-label={t("Compound library table")} aria-describedby="compound-table-hint" tabIndex={0}>
+          <table><thead><tr><th>{t("Compound")}</th><th>{t("2D structure")}</th><th>{t("Observed status")}</th><th>{t("Assay outcome")}</th><th>{t("Public descriptors")}</th><th>{t("Selection history")}</th></tr></thead>
+          <tbody>{result.items.map(c => <tr key={c.compound_id}>
+            <td><button className="compound-record-link" onClick={() => setSelected(c)}>{c.compound_id}<ChevronRight size={14} /></button></td>
+            <td>{c.canonical_smiles && meta?.molecule_rendering ? <img src={molecule(c)} alt={t("RDKit 2D molecular structure {id}", { id: c.compound_id })} loading="lazy" /> : <span className="small muted">{t("Numerical fixture")}</span>}</td>
+            <td><Badge className={c.status === "pending" ? "badge-amber" : "badge-neutral"}>{t(c.status)}</Badge></td>
+            <td><span className="outcome-cell">{t(outcome(c))}</span></td>
+            <td>{c.feature_nonzero} / {c.feature_count}</td>
+            <td>{run.report.requests.filter(q => q.compound_id === c.compound_id).length} {t("accepted requests")}</td>
+          </tr>)}</tbody></table>
+        </div>
       ) : (
-        <div className={list ? "compound-list" : "compound-grid"}>
+        <div className="compound-grid">
           {result.items.map((c) => (
             <button
               className="compound-item"
@@ -266,7 +279,7 @@ export default function Compounds() {
               <img
                 className="dialog-molecule"
                 src={molecule(selected)}
-                alt={`Structure of ${selected.compound_id}`}
+                alt={t("RDKit 2D molecular structure {id}", { id: selected.compound_id })}
               />
             ) : (
               <p>{t("No molecular rendering is available for this candidate.")}</p>
@@ -302,6 +315,13 @@ export default function Compounds() {
                 </div>
               )}
             </dl>
+            <section className="compound-history"><h3>{t("Selection history")}</h3>
+              {run.report.requests.filter(q => q.compound_id === selected.compound_id).map(q => {
+                const delivered = run.report.delivered_results.find(x => x.request_id === q.request_id);
+                return <div key={q.request_id}><strong>{t("Selected at step {step}", { step: q.scheduled_at_step })}</strong><p>{t("Due at step")} {q.due_at_step} · {q.cost_units} {t("simulated units")}</p><p>{delivered ? t(delivered.active === null ? "Missing outcome" : delivered.active ? "Observed active" : "Observed inactive") : t("Unrevealed")}</p><p className="small muted">{t("Original engine explanation (English)")}: {q.explanation}</p></div>;
+              })}
+              {!run.report.requests.some(q => q.compound_id === selected.compound_id) && <p className="muted">{t("No accepted request for this compound. Initial observations are not new selections.")}</p>}
+            </section>
           </>
         )}
       </Dialog>

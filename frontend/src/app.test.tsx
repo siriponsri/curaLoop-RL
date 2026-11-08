@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { act, cleanup, render, screen, waitFor } from "@testing-library/react";
+import { act, cleanup, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import App from "./App";
@@ -44,10 +44,33 @@ function show(path = "/") {
 }
 
 describe("runnable research UI", () => {
+  it("inspects simulator stages without advancing the engine or asserting a fit", async () => {
+    vi.mocked(api.create).mockResolvedValue(fixtures.pending as RunView);
+    const action = vi.spyOn(api, "action");
+    show("/lab");
+    const stage = await screen.findByRole("button", { name: /Model update/ });
+    await userEvent.click(stage);
+    expect(stage).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByText(/Observed labels become available/)).toBeInTheDocument();
+    expect(screen.getByText("Last selection model status")).toBeInTheDocument();
+    expect(action).not.toHaveBeenCalled();
+  });
+  it("keeps pending assay outcomes hidden in the table and compound record", async () => {
+    vi.mocked(api.candidates).mockResolvedValue({ items: [{ compound_id: "PENDING-01", status: "pending", canonical_smiles: null, scaffold_id: null, feature_count: 8, feature_nonzero: 3, public_features_preview: [], revealed_active: true, predicted_probability: .9, explanation: null }], total: 1, page: 1, page_size: 12 });
+    show("/compounds");
+    const table = await screen.findByRole("region", { name: "Compound library table" });
+    expect(within(table).getByText("Unrevealed")).toBeInTheDocument();
+    expect(within(table).queryByText("Observed active")).not.toBeInTheDocument();
+    await userEvent.click(within(table).getByRole("button", { name: "PENDING-01" }));
+    const dialog = screen.getByRole("dialog");
+    expect(within(dialog).getByText("Unrevealed")).toBeInTheDocument();
+    expect(within(dialog).queryByText("Observed active")).not.toBeInTheDocument();
+    expect(within(dialog).getByRole("heading", { name: "Selection history" })).toBeInTheDocument();
+  });
   it("loads the real-response fixture and navigates through the actual route shell", async () => {
     show();
     expect(
-      await screen.findByRole("heading", { name: "Synthetic screening" }),
+      await screen.findByRole("heading", { name: "Discovery overview" }),
     ).toBeInTheDocument();
     await userEvent.click(
       screen.getByRole("link", { name: "Scenario builder" }),
@@ -63,12 +86,12 @@ describe("runnable research UI", () => {
     vi.mocked(api.run).mockResolvedValue(fixtures.pending as RunView);
     const action = vi.spyOn(api, "action");
     show("/lab");
-    await screen.findByRole("heading", { name: "ห้องจำลองการคัดกรอง" });
+    await screen.findByRole("heading", { name: "ห้องจำลอง Digital Twin" });
     expect(document.documentElement.lang).toBe("th");
     expect(localStorage.getItem("curaloop-language")).toBe("th");
     expect(screen.getAllByText("กำลังรอผล").length).toBeGreaterThan(0);
     await userEvent.click(screen.getByRole("button", { name: "EN" }));
-    await screen.findByRole("heading", { name: "Simulation lab" });
+    await screen.findByRole("heading", { name: "Digital Twin Simulation Lab" });
     expect(document.documentElement.lang).toBe("en");
     expect(screen.getByText("Awaiting feedback")).toBeInTheDocument();
     expect(api.create).not.toHaveBeenCalled();
@@ -140,13 +163,13 @@ describe("runnable research UI", () => {
     );
     expect(vi.mocked(api.create).mock.calls[1][0].candidate_count).toBe(240);
     expect(
-      await screen.findByRole("heading", { name: "Simulation lab" }),
+      await screen.findByRole("heading", { name: "Digital Twin Simulation Lab" }),
     ).toBeInTheDocument();
   });
   it("turns a real action response into a pending state, with no fake hits", async () => {
     vi.spyOn(api, "action").mockResolvedValue(fixtures.pending as RunView);
     show("/lab");
-    await screen.findByRole("heading", { name: "Simulation lab" });
+    await screen.findByRole("heading", { name: "Digital Twin Simulation Lab" });
     expect(screen.getByRole("button", { name: "Advance +1 step" })).toBeDisabled();
     await userEvent.click(screen.getByRole("button", { name: "Select next batch" }));
     await waitFor(() =>
@@ -168,7 +191,7 @@ describe("runnable research UI", () => {
     );
     await userEvent.click(screen.getByRole("button", { name: "Reconnect" }));
     expect(
-      await screen.findByRole("heading", { name: "Synthetic screening" }),
+      await screen.findByRole("heading", { name: "Discovery overview" }),
     ).toBeInTheDocument();
   });
   it("preserves provenance, weak evaluation and controller fallback disclosures", async () => {
@@ -223,7 +246,7 @@ describe("runnable research UI", () => {
     vi.spyOn(Storage.prototype, "setItem").mockImplementation(() => { throw new Error("Storage blocked"); });
     vi.spyOn(Storage.prototype, "removeItem").mockImplementation(() => { throw new Error("Storage blocked"); });
     show();
-    expect(await screen.findByRole("heading", { name: "Synthetic screening" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Discovery overview" })).toBeInTheDocument();
     expect(document.documentElement.lang).toBe("en");
   });
   it("blocks old-campaign actions while a saved revision is recovering across navigation", async () => {
@@ -239,7 +262,7 @@ describe("runnable research UI", () => {
     await userEvent.click(await screen.findByRole("button", { name: "Recover selected revision" }));
     expect(api.recoverRevision).toHaveBeenCalledWith("damaged", 2);
     await userEvent.click(screen.getByRole("link", { name: "Simulation lab" }));
-    await screen.findByRole("heading", { name: "Simulation lab" });
+    await screen.findByRole("heading", { name: "Digital Twin Simulation Lab" });
     const select = screen.getByRole("button", { name: "Select next batch" });
     expect(select).toBeDisabled();
     await userEvent.click(select);
@@ -254,7 +277,7 @@ describe("runnable research UI", () => {
     vi.spyOn(api, "action").mockRejectedValue(new ApiError("Stale action rejected.", 409));
     vi.mocked(api.run).mockRejectedValue(new ApiError("Local server unavailable.", 0));
     show("/lab");
-    await screen.findByRole("heading", { name: "Simulation lab" });
+    await screen.findByRole("heading", { name: "Digital Twin Simulation Lab" });
     await userEvent.click(screen.getByRole("button", { name: "Select next batch" }));
     expect(await screen.findByRole("alert")).toHaveTextContent("Refresh also failed: Local server unavailable.");
     expect(screen.getByRole("button", { name: "Select next batch" })).toBeEnabled();

@@ -6,8 +6,8 @@
 </p>
 
 <p align="center">
-  <a href="docs/manual/CuraLoop-RL-Molecular-Studio-Manual-EN-v2.pdf"><strong>English user manual (PDF)</strong></a> &nbsp;·&nbsp;
-  <a href="docs/media/molecular-studio-walkthrough.mp4">20-second walkthrough</a> &nbsp;·&nbsp;
+  <a href="docs/manual/CuraLoop-RL-Dashboard-Guide-EN-v3.pdf"><strong>English user manual (PDF)</strong></a> &nbsp;·&nbsp;
+  <a href="docs/evidence/four-screen-dashboard-20261108-v1/README.md">EN/TH screen gallery</a> &nbsp;·&nbsp;
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
   <a href="#architecture">Architecture</a> &nbsp;·&nbsp;
   <a href="START_HERE.md">Research programme</a> &nbsp;·&nbsp;
@@ -27,7 +27,7 @@ It includes a frozen MoleculeNet HIV replay dataset, clearly labelled synthetic
 fixtures, five selection policies and independent matched comparisons. The
 scientific engine runs in Python; the interface presents its actual state.
 
-![Actual CuraLoop-RL workbench with historical assay data](docs/evidence/ui-modern-bilingual-20261106-v1/browser-final-v7/01-overview-en.png)
+![Actual CuraLoop-RL Discovery Overview with historical assay data](docs/evidence/four-screen-dashboard-20261108-v1/01-overview-desktop-en.png)
 
 *Captured from the running English application. This is a retrospective research
 simulator; historical assay labels are distinct from simulated cost and timing.*
@@ -49,11 +49,11 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 | Workspace | What you can do |
 | --- | --- |
-| **Molecular Studio / Overview** | Inspect an eligible historical structure, page candidates, zoom and read the actual campaign record. |
-| **Compound explorer** | Search, filter, sort and inspect public descriptors and genuine historical molecular structures. |
+| **Discovery Overview** | Read actual compound, budget, delivered-assay and hit counts; inspect public chemistry and discovery curves. |
+| **Digital Twin Simulation Lab** | Use the explicitly labeled Retrospective Simulator; inspect selection, queue, delivery and model-data stages. |
+| **Benchmark Arena** | Compare Random, Greedy, active-learning and RL implementations; distinguish single-seed efficiency from recorded ten-seed variation and fallback. |
+| **Compound Explorer** | Search a structure table or grid; inspect public descriptors, outcome visibility and selection history. |
 | **Scenario builder** | Configure dataset, seed, policy, budget, capacity, delay, jitter and missingness. |
-| **Simulation lab** | Select batches, advance time, finish, replay or reset; inspect outcomes, explanations and the budget ledger. |
-| **Benchmark arena** | Execute matched independent policies, inspect actual fallback usage and reopen saved comparisons. |
 | **Research evidence** | Inspect provenance and limitations; export, resume and recover saved campaigns or revisions. |
 | **Guided presentation** | Explain the screening loop in 5-7 minutes using the same live campaign. |
 | **C Workspace** | Trace cached declared fields to their original sources, review readiness and export local files in EN/TH. |
@@ -82,15 +82,22 @@ release is closed after verified full return and exact remote cleanup; final
 outcomes remain closed. See the [owner checkpoint](docs/06_execution/LR_M12_OWNER_CHECKPOINT_20261108.md)
 before a new mechanism or phase.
 
-The Molecular Studio frontend checkpoint is complete in EN/TH with Graphite x
-Copper styling, source inspection and reduced motion. The C Workspace exposes
+The four-screen dashboard uses the [shadcn Dashboard](https://ui.shadcn.com/blocks/dashboard)
+as a design reference, reusing the existing app and real Python engine. It supports
+EN/TH, Graphite x Copper styling, public 2D chemistry and reduced motion. Read the
+[frontend checkpoint](docs/05_product/FOUR_SCREEN_DASHBOARD_CHECKPOINT_20261108.md)
+for actual checks and limits. The C Workspace exposes
 cached declared metadata and local reports; live autonomous R&D efficacy,
 external-team delivery and customer value are unvalidated.
 
-[English manual](docs/manual/CuraLoop-RL-Molecular-Studio-Manual-EN-v2.pdf) ·
-[Walkthrough](docs/media/molecular-studio-walkthrough.mp4) ·
+[English manual](docs/manual/CuraLoop-RL-Dashboard-Guide-EN-v3.pdf) ·
+[Previous Molecular Studio walkthrough](docs/media/molecular-studio-walkthrough.mp4) ·
 [C Workspace HTML](docs/05_product/metadata-workspace-v2/workspace.html) ·
 [Core guide](docs/05_product/METADATA_PORTFOLIO_GUIDE_V1.md)
+
+The [literature positioning review](docs/02_literature/POSITIONING_REVIEW_20261108.md)
+and [current download status](docs/02_literature/LITERATURE_DOWNLOAD_STATUS_20261108.md)
+separate papers actually inspected from 25 newly verified private reading copies.
 
 Historical negative results remain visible: [Goal4](docs/03_research/GOAL4_RESULTS_V1.md)
 found slower screening in its matched check, and [4R1](docs/03_research/GOAL4R1_RESULTS_V1.md)

@@ -23,6 +23,7 @@ import {
 import { DiscoveryChart } from "../components/charts";
 import { number } from "../lib";
 import { policyNames } from "../types";
+import { SimulationFlow } from "../components/simulation-flow";
 
 export default function Lab() {
   const { t } = useI18n();
@@ -42,11 +43,16 @@ export default function Lab() {
     .slice()
     .reverse();
   const outcomes = new Map(r.delivered_results.map((x) => [x.request_id, x]));
+  const scenario = r.manifest.scenario_config;
+  const nextCount = Math.min(run.eligible_count, Math.max(0, scenario.batch_size - run.pending.length), Math.floor(m.remaining_units / scenario.assay_cost_units));
+  const latestStep = r.delivered_results.reduce((step, result) => Math.max(step, result.delivered_at_step), -1);
+  const latestResults = r.delivered_results.filter(result => result.delivered_at_step === latestStep);
   return (
     <>
       <PageHeading
-        title={t("Simulation lab")}
-        description={t("Review requests, advance time, and inspect delivered results.")}
+        eyebrow={t("Retrospective Simulator")}
+        title={t("Digital Twin Simulation Lab")}
+        description={t("Interactive retrospective replay. No live laboratory or validated digital twin.")}
       >
         <ExportButtons id={run.session_id} />
       </PageHeading>
@@ -116,7 +122,10 @@ export default function Lab() {
           </Button>
         </div>
       </div>
+      {run.can_select && <p className="selection-preview small muted">{t("Up to {count} compounds · reserve up to {cost} simulated units", { count: nextCount, cost: nextCount * scenario.assay_cost_units })}</p>}
+      <SimulationFlow run={run} />
       <KpiStrip run={run} />
+      {latestResults.length > 0 && <p className="delivery-receipt" role="status">{t("Latest delivery at step {step}: {active} active · {inactive} inactive · {missing} missing", { step: latestStep, active: latestResults.filter(result => result.active === true).length, inactive: latestResults.filter(result => result.active === false).length, missing: latestResults.filter(result => result.active === null).length })}</p>}
       <div className="lab-board">
         <aside className="surface pending-surface">
           <div className="section-heading">

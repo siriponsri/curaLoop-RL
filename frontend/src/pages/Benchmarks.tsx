@@ -21,6 +21,7 @@ export default function Benchmarks() {
       "random",
       "greedy",
       "uncertainty",
+      "q_learning",
     ]),
     [job, setJob] = useState<Job | null>(null),
     [jobId, setJobId] = useState<string | null>(() => readPreference("curaloop-comparison")),
@@ -104,10 +105,69 @@ export default function Benchmarks() {
         title={t("Benchmark arena")}
         description={t("Matched conditions. Independent campaigns. Evidence you can export.")}
       />
+      <div className="arena-context"><span className="eyebrow">{t("Four strategy families")}</span><div className="arena-families"><span>01 {t("Random")}</span><span>02 {t("Greedy")}</span><span>03 {t("Active Learning")}</span><span>04 {t("Reinforcement Learning")}</span></div><p>{t("Compare discovery yield and simulated cost. Learned controllers may use a disclosed Greedy fallback.")}</p></div>
       <div className="presentation-origin">
         <SourceBadge />
       </div>
-      <section className="surface comparison-history">
+      {evidence && (
+        <section className="surface recorded-benchmark">
+          <div className="section-heading">
+            <div>
+              <h2>
+                  {t("Recorded HIV research benchmark")}
+              </h2>
+              <p>
+                  {t("Historical MoleculeNet HIV · v0.1 · 50 executed campaigns · 10 paired seeds · not a new execution by opening this page")}
+              </p>
+            </div>
+            <BarChart3 size={23} />
+          </div>
+          <div className="scenario-chips recorded-scenario"><span>{t("Recorded budget")}<b>{evidence.scenario.budget_units}</b> {t("simulated units")}</span><span>{t("capacity")}<b>{evidence.scenario.batch_size}</b></span><span>{t("delay")}<b>{evidence.scenario.delay_steps}</b> {t("steps")}</span></div>
+          <RecordedBenchmarkChart rows={evidence.statistics.summary} />
+          <div
+            className="table-scroll"
+            tabIndex={0}
+            role="region"
+            aria-label={t("Benchmark data table")}
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th>{t("Policy")}</th>
+                  <th>{t("Seeds")}</th>
+                  <th>{t("Mean new hits")}</th>
+                  <th>{t("SD across seeds")}</th>
+                  <th>{t("Range")}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {evidence.statistics.summary.map((r) => (
+                  <tr key={r.policy}>
+                    <td>{policyNames[r.policy]}</td>
+                    <td>{r.n_seeds}</td>
+                    <td>{r.mean_hits}</td>
+                    <td>{number(r.sd_hits, 2)}</td>
+                    <td>
+                      {r.min_hits}{t("–")}{r.max_hits}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="field-note">
+            {t("Error bars show seed standard deviation, not a confidence interval across biological targets.")}
+          </p>
+          <div className="honesty-note amber-note">
+            <ShieldCheck size={18} />
+            <p>
+              {evidence.controller_historical_fallback}{t(".")}{" "}
+              {t("No RL superiority or useful pharmaceutical transfer has been established.")}
+            </p>
+          </div>
+        </section>
+      )}
+      <details className="surface comparison-history"><summary>{t("Saved comparisons")}</summary>
         <div className="section-heading"><div><h2>{t("Saved comparisons")}</h2><p>{t("Completed results survive restart. Interrupted jobs are recorded honestly and are never rerun automatically.")}</p></div><Button variant="outline" size="sm" onClick={() => setHistoryVersion(value => value + 1)}>{t("Refresh comparison history")}</Button></div>
         {historyError && <p className="error-message" role="alert">{t("Original diagnostic")}: {historyError}</p>}
         <label htmlFor="saved-comparison">{t("Open a saved comparison")}</label>
@@ -115,7 +175,7 @@ export default function Benchmarks() {
           <option value="">{t("Choose a comparison")}</option>
           {history.map(item => <option key={item.job_id} value={item.job_id}>{item.scenario.dataset.startsWith("hiv") ? t("Historical HIV") : t("Synthetic fixture")} {t(" · seed ")}{item.scenario.seed} {t(" · budget ")}{item.scenario.budget_units} {t(" · ")}{t(item.status)} {t(" · ")}{item.job_id.slice(0, 8)}</option>)}
         </select>
-      </section>
+      </details>
       <div className="surface benchmark-config">
         <div className="section-heading">
           <div>
@@ -237,6 +297,7 @@ export default function Benchmarks() {
               ))}
             </div>
           </div>
+          <div className="comparison-measures"><span>{t("Active hits")}</span><span>{t("Cost efficiency: hits per simulated cost unit")}</span><span>{t("Single seed: variance unavailable")}</span></div>
           <DiscoveryChart reports={job.reports} />
           <div
             className="table-scroll"
@@ -250,7 +311,7 @@ export default function Benchmarks() {
                   <th>{t("Policy")}</th>
                   <th>{t("New hits")}</th>
                   <th>{t("Delivered")}</th>
-                  <th>{t("Spent units")}</th>
+                  <th>{t("Spent units")}</th><th>{t("Hits / cost unit")}</th>
                   <th>{t("Sim. steps")}</th>
                   <th>{t("Hit rate")}</th>
                   <th>{t("Controller fallback")}</th>
@@ -271,7 +332,7 @@ export default function Benchmarks() {
                       <strong>{r.metrics.confirmed_hits}</strong>
                     </td>
                     <td>{r.metrics.delivered_assays}</td>
-                    <td>{r.metrics.spent_units}</td>
+                    <td>{r.metrics.spent_units}</td><td>{r.metrics.spent_units > 0 ? number(r.metrics.confirmed_hits / r.metrics.spent_units, 3) : "—"}</td>
                     <td>{r.metrics.step}</td>
                     <td>
                       {r.metrics.hit_rate === null
@@ -301,63 +362,6 @@ export default function Benchmarks() {
             </summary>
             <QueueChart reports={job.reports} />
           </details>
-        </section>
-      )}
-      {evidence && (
-        <section className="surface recorded-benchmark">
-          <div className="section-heading">
-            <div>
-              <h2>
-                  {t("Recorded HIV research benchmark")}
-              </h2>
-              <p>
-                  {t("Historical MoleculeNet HIV · v0.1 · 50 executed campaigns · 10 paired seeds · not a new execution by opening this page")}
-              </p>
-            </div>
-            <BarChart3 size={23} />
-          </div>
-          <RecordedBenchmarkChart rows={evidence.statistics.summary} />
-          <div
-            className="table-scroll"
-            tabIndex={0}
-            role="region"
-            aria-label={t("Benchmark data table")}
-          >
-            <table>
-              <thead>
-                <tr>
-                  <th>{t("Policy")}</th>
-                  <th>{t("Seeds")}</th>
-                  <th>{t("Mean new hits")}</th>
-                  <th>{t("SD across seeds")}</th>
-                  <th>{t("Range")}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {evidence.statistics.summary.map((r) => (
-                  <tr key={r.policy}>
-                    <td>{policyNames[r.policy]}</td>
-                    <td>{r.n_seeds}</td>
-                    <td>{r.mean_hits}</td>
-                    <td>{number(r.sd_hits, 2)}</td>
-                    <td>
-                      {r.min_hits}{t("–")}{r.max_hits}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="field-note">
-            {t("Error bars show seed standard deviation, not a confidence interval across biological targets.")}
-          </p>
-          <div className="honesty-note amber-note">
-            <ShieldCheck size={18} />
-            <p>
-              {evidence.controller_historical_fallback}{t(".")}{" "}
-              {t("No RL superiority or useful pharmaceutical transfer has been established.")}
-            </p>
-          </div>
         </section>
       )}
     </>

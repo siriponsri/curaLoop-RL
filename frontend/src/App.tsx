@@ -30,7 +30,9 @@ const Evidence = lazy(() => import("./pages/Evidence"));
 const GuidedPresentation = lazy(() => import("./pages/Presentation"));
 
 const pages = [
-  { path: "/", en: "Overview", icon: LayoutDashboard },
+  { path: "/", en: "Discovery overview", icon: LayoutDashboard },
+  { path: "/lab", en: "Simulation lab", icon: FlaskConical },
+  { path: "/benchmarks", en: "Benchmark arena", icon: BarChart3 },
   {
     path: "/compounds",
     en: "Compound explorer",
@@ -40,12 +42,6 @@ const pages = [
     path: "/scenario",
     en: "Scenario builder",
     icon: Settings2,
-  },
-  { path: "/lab", en: "Simulation lab", icon: FlaskConical },
-  {
-    path: "/benchmarks",
-    en: "Benchmark arena",
-    icon: BarChart3,
   },
   {
     path: "/evidence",
@@ -80,9 +76,10 @@ function Workspace() {
         <nav className="main-nav" aria-label={t("Main navigation")}>
           {pages.map((p, i) => (
             <div key={p.path}>
-              {i === 5 && <div className="nav-divider" />}
+              {i === 4 && <div className="nav-divider" />}
               <NavLink
                 to={p.path}
+                aria-label={t(p.en)}
                 end={p.path === "/"}
                 onClick={() => setMobile(false)}
                 className={({ isActive }) =>
@@ -106,7 +103,7 @@ function Workspace() {
     );
   }
   return (
-    <div className="app-shell">
+    <div className="app-shell dashboard-shell">
       <a href="#main-content" className="skip-link">
         {t("Skip to content")}</a>
       <aside className="sidebar">{navigation()}</aside>

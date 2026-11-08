@@ -1,5 +1,21 @@
 # Agent instructions: CuraLoop-RL
 
+## Current owner request: literature downloads and four product screens
+
+On 8 November 2026 the owner identified docs/02_literature/literature_manifest.json
+and requested its papers be downloaded and read for positioning. Public/author
+reading copies only, version and PDF checks, outside public Git; no purchases or
+access-control bypass. Preserve the historical register and closed research ledgers.
+The owner also explicitly selected shadcn Dashboard as the main design reference
+and requested Discovery Overview, Digital Twin Simulation Lab, Benchmark Arena
+and Compound Explorer using actual existing Python-engine outputs. Reuse existing
+components/engine, preserve hidden outcomes and EN/TH. Label the lab Retrospective
+Simulator; disclose RL fallback and actual uncertainty denominators. No imported
+authentication/demo data, new controller training, M2/final study, SSH, paid service,
+live team integration or deployment. Existing Graphite/Copper brand steering remains.
+Normal English main delivery is authorized. Earlier LR-M12 scientific closure stays
+in force; this product request is not a research-phase resume.
+
 ## LR-M12 closed at M1 owner checkpoint, 8 November 2026
 
 Read HANDOFF.md, docs/03_research/LR_M12_M1_RESULTS_20261108.md,

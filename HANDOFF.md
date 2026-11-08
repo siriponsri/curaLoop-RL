@@ -1,6 +1,37 @@
-# Handoff: LR-M12 M1 negative transition checkpoint
+# Handoff: four-screen product delivery and paused research
 
-## Current checkpoint, 8 November 2026
+## Latest owner-requested product and literature delivery, 8 November 2026
+
+Repository: `C:\Users\User\Desktop\myProject\curaloop-rl`, branch main.
+The owner requested shadcn Dashboard as the main reference for Discovery Overview,
+Digital Twin Simulation Lab, Benchmark Arena and Compound Explorer, using actual
+existing Python-engine state. These screens are delivered in EN/TH, with the
+approved Graphite/Copper palette, public 2D chemistry and hidden pending labels.
+Read [product checkpoint](docs/05_product/FOUR_SCREEN_DASHBOARD_CHECKPOINT_20261108.md),
+[actual gallery](docs/evidence/four-screen-dashboard-20261108-v1/README.md) and
+[English six-page guide](docs/manual/CuraLoop-RL-Dashboard-Guide-EN-v3.pdf).
+Frontend tests 23/23, lint, type/build and actual browser/production wiring checks
+passed. Source and built assets are delivered together. Parent wrote the code;
+two isolated reviewers only inspected the UI and returned findings.
+
+The owner also identified the literature manifest and requested its papers.
+25 main PDFs (107,553,115 bytes, 666 pages) were freshly downloaded, reopened and
+exact-hash verified, outside public Git. Three main papers and one supplement
+remain unavailable. Entry: `C:\Users\User\Documents\ChatGPT\Drug Discovery\literature\OPEN-READING-ROOM.html`.
+Read [download status](docs/02_literature/LITERATURE_DOWNLOAD_STATUS_20261108.md)
+for the four exact filenames/sources and
+[positioning review](docs/02_literature/POSITIONING_REVIEW_20261108.md) for actual
+reading scope. Download availability is not a claim of full-text reading of every page.
+
+No scientific phase was resumed. LR-M12 remains closed, M1 NO-GO, M2 NOT_RUN,
+M3 NOT_RELEASED, final outcomes closed. No SSH, new training or external service
+write was used. Disposable product QA storage is
+`.local/product-four-screens-20261108-v1/qa.sqlite3`; do not confuse its historical
+HIV interface checks with a new research study. Next research actor remains owner.
+Normal main delivery is authorized; current commit/push is verifiable with Git.
+The retained scientific handoff below remains authoritative for that closed run.
+
+## Retained LR-M12 scientific checkpoint, 8 November 2026
 
 Repository: `C:\Users\User\Desktop\myProject\curaloop-rl`, branch main.
 Starting checkpoint: `cf1f58fc592e07c63a0101ae3c69813815ebba60`.

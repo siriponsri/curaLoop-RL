@@ -22,14 +22,17 @@ export function PageHeading({
   title,
   description,
   children,
+  eyebrow,
 }: {
   title: string;
   description: string;
   children?: React.ReactNode;
+  eyebrow?: string;
 }) {
   return (
     <div className="page-heading">
       <div>
+        {eyebrow && <span className="eyebrow scope-eyebrow">{eyebrow}</span>}
         <h1>{title}</h1>
         <p>{description}</p>
       </div>
