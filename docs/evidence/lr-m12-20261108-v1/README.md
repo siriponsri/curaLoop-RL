@@ -31,3 +31,9 @@ Read [the report](../../03_research/LR_M12_M1_RESULTS_20261108.md) for scope,
 reductions, forecast approximations, all-Greedy failure and interpretation.
 No molecular policy advantage, independent review, calibrated real-world safety,
 new product integration or publication readiness follows from these receipts.
+
+Versioned delivery-validation receipts in this directory pin their creation
+versions. The final receipt names the verified committed content checkpoint;
+earlier source/document hashes remain historical creation records. CRLF in the
+two copied Windows receipts is preserved, with the repository whitespace rule
+declaring that line-ending format explicitly.

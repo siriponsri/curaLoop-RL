@@ -31,6 +31,7 @@ def main():
     args = parser.parse_args()
     target = PUBLIC / f'delivery-validation-v{args.revision}.json'
     assert not target.exists()
+    git('diff', '--check', BASE)
     status = json.loads((ROOT / 'research/configs/lr_m12_status_20261108_v1.json').read_text())
     assert status['m1_status'] == 'COMPLETE_INVESTIGATION_NO_GO'
     assert status['m2_status'] == 'NOT_RUN_GATE_NOT_PASSED' and not status['scientific_release_open']
@@ -116,6 +117,7 @@ def main():
               'retained_seconds': 7320, 'active_owned_jobs': 0,
               'independent_semantic_scientific_review': 'NOT_RUN',
               'application_runtime_browser_build': 'NOT_RUN_NO_PRODUCT_RUNTIME_CHANGE',
+              'git_whitespace_check': 'PASS_WITH_PRESERVED_WINDOWS_RECEIPT_EOL',
               'passed_checks_are_not_scientific_go': True}
     with target.open('x', encoding='utf-8', newline='\n') as f:
         json.dump(result, f, indent=2)
