@@ -77,13 +77,15 @@ six-pool data admission and 12 constructed checks, then reached a per-campaign
 CPU admission stop on synthetic planning. The approved
 [CPU profiling amendment completed all 12 RF campaigns](docs/03_research/M2_CPU_PROFILE_RESULTS_20261108.md).
 The [costed continuation](docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md)
-retains two predictors/eight arms/five seeds within a conditional cumulative 48-hour
-bound and awaits owner approval. **Molecular evaluation remains NOT_RUN**; final
-outcomes and the old failed M1 verdict remain unchanged.
+retains two predictors/eight arms/five seeds within the cumulative 48-hour bound.
+The owner released it; all 96 synthetic technical contexts passed and the
+development-only study is in progress. Read the
+[current execution record](docs/06_execution/M2_COSTED_EXECUTION_NOTES_20261108.md).
+**M2 efficacy is not yet established**; final outcomes remain closed.
 
 The earlier baseline-relative rollout remains isolated historical research code.
-Only predictor/planner preflight components are implemented for the new direction;
-the learned gate is not trained or evaluated and is not a production policy.
+The current controller is a research implementation under grouped development
+evaluation and is not a production policy.
 Toy checks do not establish drug discovery,
 real-world safety, speedup or publication readiness.
 

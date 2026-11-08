@@ -18,10 +18,12 @@ The [first preflight](docs/03_research/M2_PREFLIGHT_RESULTS_20261108.md) stopped
 at its per-campaign CPU admission bound. The owner then approved synthetic-only
 profiling; [all 12 RF campaigns completed](docs/03_research/M2_CPU_PROFILE_RESULTS_20261108.md).
 The [costed continuation](docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md)
-preserves the full scientific matrix within a conditional cumulative 48-hour cap
-and awaits owner review before biological labels. Molecular evaluation and learned
-gate fitting remain NOT_RUN. General metareasoning and portfolios remain prior art;
-incremental utility is unestablished.
+preserves the full scientific matrix within the cumulative 48-hour cap and is
+owner-approved. All 96 synthetic contexts and fresh six-pool admission passed;
+development execution is in progress. See the
+[execution record](docs/06_execution/M2_COSTED_EXECUTION_NOTES_20261108.md).
+General metareasoning and portfolios remain prior art; incremental utility is
+unestablished until the fixed evaluation and audit complete.
 
 The earlier [method design](docs/03_research/METHOD_FIRST_DESIGN_20261108.md) and
 [closest-work review](docs/02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md)

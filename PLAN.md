@@ -5,14 +5,14 @@ Current decision: **8 November 2026**. Canonical design:
 in direction; [detailed experiment plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md)
 was subsequently approved. Its synthetic-only amendment completed 12 profiles.
 The [costed continuation](docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md)
-now requires an owner decision before biological computation.
+is owner-approved; technical admission passed and development execution is in progress.
 The paper should contribute a method; existing datasets support evaluation.
 
 | Phase | Work and acceptance evidence | Current state |
 | --- | --- | --- |
 | M0: method design and correction | Closest-work matrix, precise objective, pseudocode, constructed implementation/checks; reconcile old benchmark-first guidance | COMPLETE_FOR_OWNER_REVIEW; novelty HOLD |
 | M1: novelty and scalable predictor adapter | Reduction audit, delivered-information GP adapter, two revisions and shared-cache timing diagnostics on exposed pools | COMPLETE_INVESTIGATION_NO_GO; 17 constructed checks and 36 timing calls; method distinction/calibration insufficient |
-| M2: development evaluation | Six-pool admission and constructed checks passed; subsequent 12 RF CPU profiles completed; full two-predictor/eight-arm costed continuation proposed within cumulative 48 hours | PROFILE_COMPLETE; owner review of continuation; gate/molecular evaluation NOT_RUN |
+| M2: development evaluation | All 96 synthetic contexts and fresh six-pool admission passed; two predictors/eight arms/five seeds under cumulative 48 hours | IN_PROGRESS; efficacy pending complete matrix and audit |
 | M3: protected evaluation | Freeze allowed population, dependence, roles, protocol, intervals and budget before outcomes | NOT_RELEASED |
 | P1: plugin method integration | Typed evidence/plan/report boundary, ordinary-tool control, factual/source/abstention/effort assessment | Existing metadata tools retained; new method integration NOT_RUN |
 | J1: manuscript and reproduction | Method-supported claims, figures, reproducible evidence, human/venue review | Design draft only; submission NOT_RELEASED |
@@ -25,13 +25,14 @@ benefit. Generic switching and metareasoning are prior art. The approved study
 tests incremental discovery/CPU value against fixed, threshold and adaptive
 controls. Its original [planning specification](research/configs/m2_experiment_plan_20261108_v1.json)
 is retained unchanged; the [release](research/manifests/m2_release_20261108_v1.json)
-and [current status](research/configs/m2_status_20261108_v1.json) distinguish
+and [current status](research/configs/m2_costed_status_20261108_v2.json) distinguish
 authority from execution. A verified synthetic cap lower bound exceeds its
 per-campaign admission bound. A subsequent approved profiling amendment completed
 all 12 RF campaigns with the same predictor/planner. Its measured startup and
 computation costs support different prospective process reservations. The full
-scientific matrix remains unexecuted; neighbor and 84 calibration contexts remain
-unchecked. The total grant was not exhausted and method utility has not been tested.
+scientific matrix is now in progress after all 84 remaining technical contexts
+passed. Read the [execution record](docs/06_execution/M2_COSTED_EXECUTION_NOTES_20261108.md).
+The owner decides before M3 regardless of the method result.
 
 The earlier candidate was computation-bounded baseline-relative rollout under
 predictive ambiguity. Its robust objective and fallback have close prior art.
@@ -50,8 +51,8 @@ pools (1,285 rows / four annotation components). Fresh outcome-blind admission
 passed with no cross-component canonical overlap and all training rows retained. Existing
 validation/final payloads and new HIV/Tox21/ChEMBL/MF-PCBA intake are excluded.
 The proposed global cross-component canonical mask applies to meta-training only;
-evaluation pools and historical roles remain unchanged. It requests new scoped
-development-label/counterfactual authority, not a dataset publication.
+evaluation pools and historical roles remain unchanged. Scoped development-label
+and counterfactual authority was released after technical admission.
 
 QP32 and QC500 remain deferred/unreleased. The previous QP confirmation question
 is superseded by the owner's method-first decision. No numerical validity grant,

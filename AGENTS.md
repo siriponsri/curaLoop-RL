@@ -1,5 +1,26 @@
 # Agent instructions: CuraLoop-RL
 
+## Owner releases costed M2 continuation, 8 November 2026
+
+The owner explicitly approved M2_COSTED_CONTINUATION_PROPOSAL_20261108 at
+37c0fe9, including scoped development-label access only after the 84 remaining
+technical contexts pass. Read research/manifests/m2_costed_release_20261108_v2.json
+and research/configs/m2_costed_continuation_20261108_v2.json. Fresh root
+.local/m2-costed-20261108-v2 and matching /home/chaw/curaloop-tasks root only.
+Release 09:59:47Z 8 November; absolute original deadline 08:17:29Z 12 November.
+Previous retained 6,922 seconds; remaining grant max 164,250 seconds, cumulative
+max 172,800. At most local one CPU / 512 MiB and three dr-train workers each one
+CPU-equivalent / 4 GiB, four combined. Same six pools, predictor/planner, folds,
+eight arms and five seeds; no labels before outcome-blind technical admission.
+Max 4,248 intended remaining units / 4,386 attempts; stage ceilings also bind.
+No silent baseline/predictor/data/endpoint changes. Final features/labels/presence,
+old validation, new intake, paid/GPU and M3 remain excluded. Existing chaw SSH
+profile only; fresh resource/kernel proof, complete private return/reread before
+exact owned cleanup. Preserve every old ledger/root/status and source-model pins.
+Close M2 with report, including negative/inconclusive results, for owner decision
+before M3. Parent sole writer; English main code/aggregate evidence delivery
+authorized. Earlier scope markers below are historical, not current release status.
+
 ## M2 profiling completed; costed continuation requires owner review
 
 Read docs/03_research/M2_CPU_PROFILE_RESULTS_20261108.md and

@@ -1,6 +1,34 @@
-# Handoff: completed M2 CPU profiling and pending molecular continuation
+# Handoff: costed M2 development study in progress
 
-## Current checkpoint: all 12 synthetic profiles complete
+## Current release: M2 development execution
+
+The owner approved the costed continuation at `37c0fe9`, keeping cumulative
+48 CPU-hours and the original deadline 12 November 2026, 08:17:29 UTC. Read
+[execution notes](docs/06_execution/M2_COSTED_EXECUTION_NOTES_20261108.md) and
+[release manifest](research/manifests/m2_costed_release_20261108_v2.json).
+Technical admission passed all 96 unique synthetic contexts. Eleven constructed
+engine checks and fresh six-pool identity/protection admission passed before
+the six development-label files were decoded. All 48 training prefixes completed.
+The remaining fixed study is in progress; scientific efficacy is not yet known.
+
+Private current root: `.local/m2-costed-20261108-v2`. Owned remote root:
+`/home/chaw/curaloop-tasks/m2-costed-20261108-v2`, currently present. Do not run
+another coordinator or recreate any job. Inspect its live ledger, stage summaries,
+`pipeline-status.json`, active process/session state and resource receipts first.
+`tools/m2c_finish_study_pipeline_v2.py` is the bounded sequential continuation
+through gate fitting, control tuning, main comparison, ablations and transfer;
+it stops on any failure. It may still be waiting for the existing branch runner.
+Projection `code-engine-03` is immutable on the remote host.
+
+Next actor agent: finish only the fixed M2 matrix, complete private return and
+independent reread, audit paired evidence, delete only the exact owned task/export
+after verification, and deliver an English aggregate report/main push. Report
+negative or incomplete evidence without silently expanding work. Final outcomes,
+old validation, new intake and M3 remain closed. The owner decides before M3.
+All older ledgers/status/model pins remain unchanged. The sections below are
+historical checkpoints, not instructions to restart closed work.
+
+## Historical checkpoint: all 12 synthetic profiles complete
 
 The owner approved the bounded profiling amendment at base
 `6dbb20b7eb2ada42bc602012e9c02dafc3d3e789`. Fresh release 09:05:46Z and deadline

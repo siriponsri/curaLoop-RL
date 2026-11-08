@@ -1,6 +1,6 @@
 # Start here
 
-**Current: M2 synthetic CPU profiling complete; molecular continuation awaits owner review.**
+**Current: costed M2 development study in progress; final outcomes remain closed.**
 The owner selected a method paper using existing datasets and approved
 predictor-aware selective computation: choose whether to reuse, update or plan.
 The approved [M2 plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md) uses six
@@ -9,8 +9,10 @@ existing FS-Mol development assays, eight matched arms and 48 fresh CPU-hours /
 but a synthetic planning CPU bound exceeded its per-campaign admission limit.
 The approved [profiling amendment completed 12 RF campaigns](docs/03_research/M2_CPU_PROFILE_RESULTS_20261108.md).
 The [costed full-matrix continuation](docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md)
-awaits owner approval before biological work. No biological labels or final outcomes
-were opened in these M2 preflight/profiling runs.
+is owner-approved. All 96 synthetic contexts and fresh six-pool admission passed;
+the scoped development study is running. Read the
+[execution record](docs/06_execution/M2_COSTED_EXECUTION_NOTES_20261108.md).
+No final outcomes were opened.
 The earlier [M1 NO-GO](docs/03_research/LR_M12_M1_RESULTS_20261108.md) is retained;
 it is not retroactively changed by this new contribution direction.
 
