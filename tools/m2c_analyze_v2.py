@@ -47,7 +47,7 @@ def main():
             assert json.loads((TASK/(stage+'-summary.json')).read_text())['status']=='PASS_COMPLETE_STAGE'
         returned=json.loads((TASK/'remote-return/verified-v1.json').read_text());assert returned['status']=='PASS_COMPLETE_PRIVATE_RETURN_AND_LOCAL_REREAD'
         matrix=json.loads((TASK/'execution-matrix-v1.json').read_text());projection=json.loads((TASK/'development-projection-manifest.json').read_text())
-        files=TASK/'remote-return/files';rows=[];counts=collections.Counter();audit=collections.Counter();trace_metrics={}
+        files=TASK/'remote-return/files';rows=[];counts=collections.Counter();audit=collections.Counter();overheads=[]
         originals={}
         for f in projection['files']:
             path=TASK/f['path'];assert sha(path)==f['sha256']
@@ -71,6 +71,10 @@ def main():
                 assert r['status']=='PASS_INFEASIBLE_PREFIX' and r['continuation_invoked']is False;audit['infeasible_branches']+=1
             assert resource['cpu_affinity']==[e['cpu']] and resource['memory_limit_bytes']==4294967296
             assert resource['cpu_seconds']<=resource['reservation_seconds'];audit['verified_units']+=1
+            incremental=r['scientific_cpu_seconds']-r.get('prefix_cpu_seconds',0)
+            overhead=resource['cpu_seconds']-max(0,incremental)
+            assert 0<=overhead<=5.,'STARTUP_REPORTING_ALLOWANCE_EXCEEDED'
+            overheads.append(overhead)
             if e['handler']in('main','ablation','transfer'):
                 arm=args.get('variant',args['policy']);r['arm']=arm;r['handler']=e['handler']
                 cumulative=[0];h=0
@@ -131,6 +135,7 @@ def main():
           'primary_endpoint':'new FS-Mol assay-relative binary positives at assigned B32/Ccheap; initial positives excluded',
           'main_summaries':summaries,'paired_contrasts':contrasts,'rf_ablation_contrasts':ablation_contrasts,'rf_B16_transfer_contrasts':transfer,
           'training_state_support':{'states':artifacts['states'],'eligible_states':artifacts['eligible_states'],'gate_artifacts':len(artifacts['artifacts'])},
+          'whole_process_minus_incremental_science_cpu_range_seconds':[min(overheads),max(overheads)],
           'offline_training_and_tuning_verified_worker_cpu_seconds':training_cpu,
           'offline_training_and_tuning_charged_stage_seconds':sum(ledger['bucket_reserved_seconds'][b] for b in('training_prefixes_branches_gate','control_tuning')),
           'offline_worker_cpu_amortization_lower_bound_seconds_per_campaign':{str(n):training_cpu/n for n in(1,10,100)},
