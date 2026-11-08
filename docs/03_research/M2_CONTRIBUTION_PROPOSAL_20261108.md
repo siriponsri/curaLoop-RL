@@ -1,5 +1,11 @@
 # Proposed M2 contribution: predictor-aware selective computation
 
+**Latest checkpoint:** the approved profiling amendment completed all
+[12 RF synthetic campaigns](M2_CPU_PROFILE_RESULTS_20261108.md). A
+[costed continuation](../06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md)
+retains the full scientific matrix within a conditional cumulative 48-hour bound
+and awaits owner review before biological labels. Molecular utility remains NOT_RUN.
+
 **Execution update:** the owner subsequently approved the full M2 plan. Its
 [preflight](M2_PREFLIGHT_RESULTS_20261108.md) passed data/constructed checks but
 stopped at synthetic CPU admission. A [resource amendment](../06_execution/M2_RESOURCE_OWNER_CHECKPOINT_20261108.md)

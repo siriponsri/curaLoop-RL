@@ -1,21 +1,23 @@
 # Start here
 
-**Current: M2 incomplete at its resource-admission checkpoint.**
+**Current: M2 synthetic CPU profiling complete; molecular continuation awaits owner review.**
 The owner selected a method paper using existing datasets and approved
 predictor-aware selective computation: choose whether to reuse, update or plan.
 The approved [M2 plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md) uses six
 existing FS-Mol development assays, eight matched arms and 48 fresh CPU-hours /
 96 hours / max four workers. [Data and constructed checks passed](docs/03_research/M2_PREFLIGHT_RESULTS_20261108.md),
 but a synthetic planning CPU bound exceeded its per-campaign admission limit.
-[Owner amendment](docs/06_execution/M2_RESOURCE_OWNER_CHECKPOINT_20261108.md)
-is required before further work. No biological labels or final outcomes were opened.
+The approved [profiling amendment completed 12 RF campaigns](docs/03_research/M2_CPU_PROFILE_RESULTS_20261108.md).
+The [costed full-matrix continuation](docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md)
+awaits owner approval before biological work. No biological labels or final outcomes
+were opened in these M2 preflight/profiling runs.
 The earlier [M1 NO-GO](docs/03_research/LR_M12_M1_RESULTS_20261108.md) is retained;
 it is not retroactively changed by this new contribution direction.
 
 ## Read in this order
 
 1. [Goal](GOAL.md) and [plan](PLAN.md): current destination and phase boundaries.
-2. [Approved contribution](docs/03_research/M2_CONTRIBUTION_PROPOSAL_20261108.md), [original experiment plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md) and [current owner checkpoint](docs/06_execution/M2_RESOURCE_OWNER_CHECKPOINT_20261108.md): data, controls, resources and the measured feasibility stop.
+2. [Approved contribution](docs/03_research/M2_CONTRIBUTION_PROPOSAL_20261108.md), [original experiment plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md) and [current costed continuation](docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md): data, controls, measured costs and remaining decision.
 3. [M2 reading receipt](docs/02_literature/M2_READING_RECEIPT_20261108.json): primary passages actually inspected; closest-work matrix is in the contribution proposal.
 4. [M1 report](docs/03_research/LR_M12_M1_RESULTS_20261108.md): retained negative investigation; earlier [constructed evidence](docs/evidence/method-first-20261108-v1/README.md) remains engineering evidence only.
 5. [Data inventory](docs/03_research/LOCAL_DATA_INVENTORY_20261107.md) and [claim ledger](docs/00_project/CLAIM_LEDGER.md): existing assets and evidence limits.

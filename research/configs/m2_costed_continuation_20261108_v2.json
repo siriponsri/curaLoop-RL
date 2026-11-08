@@ -1,0 +1,217 @@
+{
+  "schema": "curaloop.m2.costed_continuation.v2",
+  "date": "2026-11-08",
+  "status": "PROPOSED_NOT_RELEASED",
+  "execution_enabled": false,
+  "owner_approval_received": false,
+  "biological_campaign_release_open": false,
+  "final_outcomes_open": false,
+  "automatic_m3": false,
+  "original_plan": "docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md",
+  "revised_plan": "docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md",
+  "timing_evidence": "docs/evidence/m2-cpu-profile-20261108-v1/timing-summary-v1.json",
+  "cumulative_cpu_cap_seconds": 172800,
+  "cumulative_deadline_utc": "2026-11-12T08:17:29Z",
+  "prior_m2_retained_seconds": 4112,
+  "current_profile_allowance_upper_seconds": 3600,
+  "max_combined_workers": 4,
+  "local_workers": 1,
+  "remote_workers": 3,
+  "local_memory_mib": 512,
+  "remote_memory_mib": 4096,
+  "science_caps_for_admission_seconds": {
+    "cheap_all_predictors": 5,
+    "rf_Cplan": 65,
+    "neighbor_Cplan": 25,
+    "prefix_generation": 15
+  },
+  "process_reservation_max_seconds": {
+    "cheap": 10,
+    "rf_high": 70,
+    "neighbor_high": 30,
+    "prefix": 20
+  },
+  "startup_reporting_reservation_seconds": 5,
+  "original_calibration_remaining": 84,
+  "admission_rule": "Finish remaining synthetic calibration before any biological-label decode; Ccheap/Cplan = 1.25 * full matched reference maxima per predictor/n0/B over both N and repeats. Stop if derived caps exceed 5/65/25; never truncate the always-plan reference or force a cap to favor the gate.",
+  "neighbor_caps_measured": false,
+  "intended_units_remaining": 4248,
+  "attempts_remaining_max": 4386,
+  "technical_retry_allowance_remaining": 138,
+  "workload": [
+    {
+      "stage": "remaining_synthetic",
+      "cells": [
+        {
+          "kind": "rf_greedy",
+          "units": 18,
+          "cpu_per_unit": 10
+        },
+        {
+          "kind": "rf_plan",
+          "units": 18,
+          "cpu_per_unit": 70
+        },
+        {
+          "kind": "neighbor_greedy",
+          "units": 24,
+          "cpu_per_unit": 10
+        },
+        {
+          "kind": "neighbor_plan",
+          "units": 24,
+          "cpu_per_unit": 30
+        }
+      ],
+      "units": 84,
+      "cpu_seconds": 2400
+    },
+    {
+      "stage": "prefixes",
+      "cells": [
+        {
+          "kind": "both_predictors",
+          "units": 48,
+          "cpu_per_unit": 20
+        }
+      ],
+      "units": 48,
+      "cpu_seconds": 960
+    },
+    {
+      "stage": "forced_continuations",
+      "cells": [
+        {
+          "kind": "rf_cheap",
+          "units": 288,
+          "cpu_per_unit": 10
+        },
+        {
+          "kind": "rf_high",
+          "units": 288,
+          "cpu_per_unit": 70
+        },
+        {
+          "kind": "neighbor_cheap",
+          "units": 288,
+          "cpu_per_unit": 10
+        },
+        {
+          "kind": "neighbor_high",
+          "units": 288,
+          "cpu_per_unit": 30
+        }
+      ],
+      "units": 1152,
+      "cpu_seconds": 34560
+    },
+    {
+      "stage": "control_tuning",
+      "cells": [
+        {
+          "kind": "rf_cheap",
+          "units": 144,
+          "cpu_per_unit": 10
+        },
+        {
+          "kind": "rf_high",
+          "units": 144,
+          "cpu_per_unit": 70
+        },
+        {
+          "kind": "neighbor_cheap",
+          "units": 144,
+          "cpu_per_unit": 10
+        },
+        {
+          "kind": "neighbor_high",
+          "units": 144,
+          "cpu_per_unit": 30
+        }
+      ],
+      "units": 576,
+      "cpu_seconds": 17280
+    },
+    {
+      "stage": "main_comparison",
+      "cells": [
+        {
+          "kind": "rf_cheap",
+          "units": 480,
+          "cpu_per_unit": 10
+        },
+        {
+          "kind": "rf_high",
+          "units": 480,
+          "cpu_per_unit": 70
+        },
+        {
+          "kind": "neighbor_cheap",
+          "units": 480,
+          "cpu_per_unit": 10
+        },
+        {
+          "kind": "neighbor_high",
+          "units": 480,
+          "cpu_per_unit": 30
+        }
+      ],
+      "units": 1920,
+      "cpu_seconds": 57600
+    },
+    {
+      "stage": "rf_ablations",
+      "cells": [
+        {
+          "kind": "rf_cheap",
+          "units": 180,
+          "cpu_per_unit": 10
+        }
+      ],
+      "units": 180,
+      "cpu_seconds": 1800
+    },
+    {
+      "stage": "rf_transfer",
+      "cells": [
+        {
+          "kind": "rf_cheap",
+          "units": 144,
+          "cpu_per_unit": 10
+        },
+        {
+          "kind": "rf_high",
+          "units": 144,
+          "cpu_per_unit": 70
+        }
+      ],
+      "units": 288,
+      "cpu_seconds": 11520
+    }
+  ],
+  "remaining_stage_cpu_seconds": {
+    "engineering_guards": 12690,
+    "synthetic_calibration_and_utilities": 2700,
+    "training_prefixes_branches_gate": 39600,
+    "control_tuning": 18000,
+    "main_comparison": 57600,
+    "ablation_transfer": 16200,
+    "analysis_return_cleanup_retry_delivery": 17460
+  },
+  "retry_reserve_cpu_seconds": 9660,
+  "retry_reserve_included_in_analysis": true,
+  "remaining_grant_upper_seconds": 164250,
+  "cumulative_upper_seconds": 171962,
+  "headroom_against_48_hours_seconds": 838,
+  "unchanged": [
+    "six exposed FS-Mol development assays; original source bytes and roles",
+    "four annotation-component holdouts and training-only structure mask",
+    "two predictor strata; eight matched policy arms",
+    "B32, initial 0/16, five paired evaluation seeds",
+    "all target branches, controls and ablations",
+    "primary L-G1/L-T/L-E and exploratory potential criteria",
+    "no final feature/label/presence or old validation use",
+    "owner checkpoint before M3"
+  ],
+  "next_owner_action": "Approve or amend the costed M2 continuation, including resource envelopes and scoped six-pool development-label/counterfactual access; no biological execution occurs in this profiling release."
+}

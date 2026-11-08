@@ -1,6 +1,45 @@
-# Handoff: M2 resource checkpoint and retained product
+# Handoff: completed M2 CPU profiling and pending molecular continuation
 
-## Current execution checkpoint: M2 incomplete at CPU admission
+## Current checkpoint: all 12 synthetic profiles complete
+
+The owner approved the bounded profiling amendment at base
+`6dbb20b7eb2ada42bc602012e9c02dafc3d3e789`. Fresh release 09:05:46Z and deadline
+17:05:46Z 8 November. Max one CPU-hour includes setup, failures, return, cleanup
+and delivery, within the unchanged cumulative 48-hour M2 ceiling. One remote
+CPU-equivalent / 4 GiB and local orchestration/checks one CPU / 512 MiB. Parent
+sole writer, English main delivery authorized. This is a substep of M2, not a
+new research phase or another M1 mechanism revision.
+
+Read [timing results](docs/03_research/M2_CPU_PROFILE_RESULTS_20261108.md),
+[evidence](docs/evidence/m2-cpu-profile-20261108-v1/README.md),
+[revised costed proposal](docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md)
+and [disabled continuation specification](research/configs/m2_costed_continuation_20261108_v2.json).
+Twelve RF N303/B32 campaigns all completed 32 queries, no retries or censoring.
+G1 2.59-2.91 scientific CPU-seconds; P 42.69-46.91; startup 2.70-2.79. Five
+instrumentation checks passed; original predictor/planner source is unchanged.
+No biological labels/records, gate fit, molecular study or final access occurred.
+
+All scoped profile files were returned: 1,955 regular files / 173,744,009 source
+bytes plus seven exact export files, authenticated and independently reread
+locally before deletion. Exact owned task/export cleanup and fresh absence
+passed. Private root `.local/m2-cpu-profile-20261108-v1` retains complete sources,
+runtime files, permits, traces and receipts. Remote roots
+`/home/chaw/curaloop-tasks/m2-cpu-profile-20261108-v1` and its `-export-v1` suffix
+are absent; never recreate them. The previous M2 task/export roots also remain
+closed, and old ledgers/status/model pins are unchanged.
+
+Next actor owner: review the complete costed M2 continuation, retaining six
+development assays/two predictors/eight arms/five seeds and all branches/ablations.
+Remaining 4,248 intended units have a conditional cumulative bound 171,962 <=
+172,800 seconds, including the entire profiling allowance. Eighty-four remaining
+synthetic contexts must establish cheap<=5s, RF-high<=65s and neighbor-high<=25s
+before biological labels; neighbor runtime is still unmeasured. No baseline
+truncation, predictor removal, source/role change or new data is preapproved.
+Continuation is PROPOSED_NOT_RELEASED and has not started. M2 scientific efficacy
+remains NOT_RUN; M3 always returns to the owner. Verify exact main commit/push
+with Git; no active owned task remains after the closeout receipts.
+
+## Retained first M2 execution checkpoint: incomplete at CPU admission
 
 Owner approved the complete M2 plan at `9e78f391e8e90398fe86097622753b38bfc1d744`.
 Release: 08:17:29Z 8 November; deadline: 08:17:29Z 12 November; fresh ceiling

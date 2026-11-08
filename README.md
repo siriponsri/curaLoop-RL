@@ -74,9 +74,12 @@ learn when to reuse a predictor, update it or invoke nonmyopic planning, and
 released its [48 CPU-hour / 96-hour experiment plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md).
 The [executed preflight](docs/03_research/M2_PREFLIGHT_RESULTS_20261108.md) passed
 six-pool data admission and 12 constructed checks, then reached a per-campaign
-CPU admission stop on synthetic planning. **Molecular evaluation remains NOT_RUN**;
-the [resource amendment](docs/06_execution/M2_RESOURCE_OWNER_CHECKPOINT_20261108.md)
-awaits the owner. Final outcomes and the old failed M1 verdict remain unchanged.
+CPU admission stop on synthetic planning. The approved
+[CPU profiling amendment completed all 12 RF campaigns](docs/03_research/M2_CPU_PROFILE_RESULTS_20261108.md).
+The [costed continuation](docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md)
+retains two predictors/eight arms/five seeds within a conditional cumulative 48-hour
+bound and awaits owner approval. **Molecular evaluation remains NOT_RUN**; final
+outcomes and the old failed M1 verdict remain unchanged.
 
 The earlier baseline-relative rollout remains isolated historical research code.
 Only predictor/planner preflight components are implemented for the new direction;

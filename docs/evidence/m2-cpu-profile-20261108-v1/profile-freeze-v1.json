@@ -1,0 +1,166 @@
+{
+  "status": "FROZEN_BEFORE_PROFILES",
+  "source_archive_sha256": "36fe72e295913b8abdd5376e74a65ff97825888d69447d2ccda2abc676aa3ca7",
+  "code_pins": {
+    "research/__init__.py": "59b219c66ae7b7f5028fc1750bb63bbacc6cf547f59f680e7d9ba1934ec7fe6d",
+    "research/longrun_v1/__init__.py": "4142fb488486295883bf4ff1c61884386945d31ffa61079cd9924713d04285f5",
+    "research/longrun_v1/guard.py": "615fc5da36b4267e869e178498432aaf10b2c8226aa51c8efd7f277de0ebf3cb",
+    "research/m2_v1/__init__.py": "603faff31b367e15fe204a2880475a0d568f40a4a8ebcf215512198d790b4150",
+    "research/m2_v1/models.py": "7a7403e5906dc0b74883f9d2eb35b50a438f13273d82cd2c9ddb25430ba722dc",
+    "research/m2_profile_v1/bundle.py": "bf0bc75a69d5502e0e61f7c2f67b385c6e309061264f1e1cd9544e7e81daeaeb",
+    "research/m2_profile_v1/checks.py": "5c537e23e9017de38b0860823ea8380978de8617746f2c36227a932760e42fb0",
+    "research/m2_profile_v1/guard.py": "ba7d5d2c7c1f51c5c1803aac6bb603dd7489a442f420c85460a3fb7cddb0dcf8",
+    "research/m2_profile_v1/worker.py": "032cd5851086b412b9c8309734f5b857b436de6642ba13a51df10097569e19a8",
+    "research/m2_profile_v1/__init__.py": "a31395bcd41a9e054a4ed614ed57d2232522f90165ac94a00b4cd86155695955"
+  },
+  "synthetic_only": true,
+  "seed_recipe": "synthetic_pool original; order=5000+repeat; RF=7300+repeat",
+  "pairing": "same repeat/n0 at same worker, alternating G1/P order",
+  "order": [
+    {
+      "job": "profile-r0-i0-g1",
+      "spec": "profile-r0-i0-g1-spec.json",
+      "arguments": {
+        "predictor": "rf",
+        "n": 303,
+        "n0": 0,
+        "budget": 32,
+        "policy": "G1",
+        "repeat": 0
+      }
+    },
+    {
+      "job": "profile-r0-i0-p",
+      "spec": "profile-r0-i0-p-spec.json",
+      "arguments": {
+        "predictor": "rf",
+        "n": 303,
+        "n0": 0,
+        "budget": 32,
+        "policy": "P",
+        "repeat": 0
+      }
+    },
+    {
+      "job": "profile-r0-i16-p",
+      "spec": "profile-r0-i16-p-spec.json",
+      "arguments": {
+        "predictor": "rf",
+        "n": 303,
+        "n0": 16,
+        "budget": 32,
+        "policy": "P",
+        "repeat": 0
+      }
+    },
+    {
+      "job": "profile-r0-i16-g1",
+      "spec": "profile-r0-i16-g1-spec.json",
+      "arguments": {
+        "predictor": "rf",
+        "n": 303,
+        "n0": 16,
+        "budget": 32,
+        "policy": "G1",
+        "repeat": 0
+      }
+    },
+    {
+      "job": "profile-r1-i0-p",
+      "spec": "profile-r1-i0-p-spec.json",
+      "arguments": {
+        "predictor": "rf",
+        "n": 303,
+        "n0": 0,
+        "budget": 32,
+        "policy": "P",
+        "repeat": 1
+      }
+    },
+    {
+      "job": "profile-r1-i0-g1",
+      "spec": "profile-r1-i0-g1-spec.json",
+      "arguments": {
+        "predictor": "rf",
+        "n": 303,
+        "n0": 0,
+        "budget": 32,
+        "policy": "G1",
+        "repeat": 1
+      }
+    },
+    {
+      "job": "profile-r1-i16-g1",
+      "spec": "profile-r1-i16-g1-spec.json",
+      "arguments": {
+        "predictor": "rf",
+        "n": 303,
+        "n0": 16,
+        "budget": 32,
+        "policy": "G1",
+        "repeat": 1
+      }
+    },
+    {
+      "job": "profile-r1-i16-p",
+      "spec": "profile-r1-i16-p-spec.json",
+      "arguments": {
+        "predictor": "rf",
+        "n": 303,
+        "n0": 16,
+        "budget": 32,
+        "policy": "P",
+        "repeat": 1
+      }
+    },
+    {
+      "job": "profile-r2-i0-g1",
+      "spec": "profile-r2-i0-g1-spec.json",
+      "arguments": {
+        "predictor": "rf",
+        "n": 303,
+        "n0": 0,
+        "budget": 32,
+        "policy": "G1",
+        "repeat": 2
+      }
+    },
+    {
+      "job": "profile-r2-i0-p",
+      "spec": "profile-r2-i0-p-spec.json",
+      "arguments": {
+        "predictor": "rf",
+        "n": 303,
+        "n0": 0,
+        "budget": 32,
+        "policy": "P",
+        "repeat": 2
+      }
+    },
+    {
+      "job": "profile-r2-i16-p",
+      "spec": "profile-r2-i16-p-spec.json",
+      "arguments": {
+        "predictor": "rf",
+        "n": 303,
+        "n0": 16,
+        "budget": 32,
+        "policy": "P",
+        "repeat": 2
+      }
+    },
+    {
+      "job": "profile-r2-i16-g1",
+      "spec": "profile-r2-i16-g1-spec.json",
+      "arguments": {
+        "predictor": "rf",
+        "n": 303,
+        "n0": 16,
+        "budget": 32,
+        "policy": "G1",
+        "repeat": 2
+      }
+    }
+  ],
+  "instrumentation": "fit/predict wrappers; original method arguments/returns; all overhead charged; nested times not additive"
+}

@@ -1,0 +1,229 @@
+{
+  "schema": "curaloop.m2_profile.ledger.v1",
+  "status": "CLOSED_COMPLETE_FOR_OWNER_REVIEW",
+  "release_utc": "2026-11-08T09:05:46Z",
+  "deadline_utc": "2026-11-08T17:05:46Z",
+  "cpu_cap_seconds": 3600,
+  "cumulative_previous_seconds": 4112,
+  "cumulative_cap_seconds": 172800,
+  "bucket_caps_seconds": {
+    "intended_campaigns": 2220,
+    "technical_retries": 370,
+    "setup_transport": 240,
+    "return_verification_cleanup": 360,
+    "analysis_delivery": 410
+  },
+  "bucket_reserved_seconds": {
+    "intended_campaigns": 2220,
+    "technical_retries": 0,
+    "setup_transport": 130,
+    "return_verification_cleanup": 300,
+    "analysis_delivery": 160
+  },
+  "attempted_profiles": 12,
+  "jobs": [
+    {
+      "job": "setup-orchestration",
+      "state": "CHARGED_UTILITIES_ENVELOPE",
+      "host": "local",
+      "reservation_seconds": 20
+    },
+    {
+      "job": "delivery-orchestration",
+      "state": "CHARGED_UTILITIES_ENVELOPE",
+      "host": "local",
+      "reservation_seconds": 100
+    },
+    {
+      "job": "bundle-v1",
+      "bucket": "setup_transport",
+      "host": "local",
+      "state": "PASS",
+      "reservation_seconds": 40,
+      "reported_cpu_seconds": 4.078125,
+      "resource_sha256": "ce2ccc58a01fbd27330e3d811d9d3ec66d316175a67e62087628c0ab042b0609"
+    },
+    {
+      "job": "bootstrap-v1",
+      "bucket": "setup_transport",
+      "host": "dr-train",
+      "state": "PASS",
+      "reservation_seconds": 40,
+      "reported_cpu_seconds": 4.004934836,
+      "resource_sha256": "6ab254781254b997add94fcc88c0aa1ad08bd01cb653261d49321b9ebe269d33"
+    },
+    {
+      "job": "checks-v1",
+      "bucket": "setup_transport",
+      "host": "dr-train",
+      "state": "PASS",
+      "reservation_seconds": 30,
+      "reported_cpu_seconds": 2.910956359,
+      "resource_sha256": "d45595189d1a7d0028f4cda3e339bfeb49c541cdd20e5e7ad5479cbeef1dedbd"
+    },
+    {
+      "job": "profile-r0-i0-g1",
+      "bucket": "intended_campaigns",
+      "host": "dr-train",
+      "state": "PASS",
+      "reservation_seconds": 185,
+      "reported_cpu_seconds": 5.361275636,
+      "resource_sha256": "12e4b9d073c4e0d6d712c7f33f224e4d6958b05ae2dd3e67391b031aec6c4147"
+    },
+    {
+      "job": "profile-r0-i0-p",
+      "bucket": "intended_campaigns",
+      "host": "dr-train",
+      "state": "PASS",
+      "reservation_seconds": 185,
+      "reported_cpu_seconds": 45.616462945,
+      "resource_sha256": "b43b95d89b02d577c7483b5ac3d427b81f7eaaf5ea5d806c1c58cf38039e07f3"
+    },
+    {
+      "job": "profile-r0-i16-p",
+      "bucket": "intended_campaigns",
+      "host": "dr-train",
+      "state": "PASS",
+      "reservation_seconds": 185,
+      "reported_cpu_seconds": 49.270962362,
+      "resource_sha256": "1cac16f65543a45353082a02fd04bd183cedebac6598c2ac4fc011f5714b0ebd"
+    },
+    {
+      "job": "profile-r0-i16-g1",
+      "bucket": "intended_campaigns",
+      "host": "dr-train",
+      "state": "PASS",
+      "reservation_seconds": 185,
+      "reported_cpu_seconds": 5.628904212,
+      "resource_sha256": "b20b9208ed7c91da67f9899edb69e900ce21b21bbf23fc171814049ef5a2a873"
+    },
+    {
+      "job": "profile-r1-i0-p",
+      "bucket": "intended_campaigns",
+      "host": "dr-train",
+      "state": "PASS",
+      "reservation_seconds": 185,
+      "reported_cpu_seconds": 46.952131164,
+      "resource_sha256": "4a1e8c266d292b788d353bea2a684c1d33412c78dae8d678ea0ba5023f7713af"
+    },
+    {
+      "job": "profile-r1-i0-g1",
+      "bucket": "intended_campaigns",
+      "host": "dr-train",
+      "state": "PASS",
+      "reservation_seconds": 185,
+      "reported_cpu_seconds": 5.334216654,
+      "resource_sha256": "53bbbb46e31515caee1b01e8f34535ccc7f1a1735cf438385d59cf68f48f5e05"
+    },
+    {
+      "job": "profile-r1-i16-g1",
+      "bucket": "intended_campaigns",
+      "host": "dr-train",
+      "state": "PASS",
+      "reservation_seconds": 185,
+      "reported_cpu_seconds": 5.603245813,
+      "resource_sha256": "9ca150c1ac1b32fda2f1b65e07e0bc39c503fd64ae111e3f6f97ed7f30b513ab"
+    },
+    {
+      "job": "profile-r1-i16-p",
+      "bucket": "intended_campaigns",
+      "host": "dr-train",
+      "state": "PASS",
+      "reservation_seconds": 185,
+      "reported_cpu_seconds": 49.477887561,
+      "resource_sha256": "43a802c4fecdf2b66771efe8aaf0d54b5c45c56e7eef6e49487370947debea89"
+    },
+    {
+      "job": "profile-r2-i0-g1",
+      "bucket": "intended_campaigns",
+      "host": "dr-train",
+      "state": "PASS",
+      "reservation_seconds": 185,
+      "reported_cpu_seconds": 5.379048929,
+      "resource_sha256": "91a55f4716091029c7eb64c843562a1c5712e705246a4fe2b6f2c1db927c0eb1"
+    },
+    {
+      "job": "profile-r2-i0-p",
+      "bucket": "intended_campaigns",
+      "host": "dr-train",
+      "state": "PASS",
+      "reservation_seconds": 185,
+      "reported_cpu_seconds": 45.480458979,
+      "resource_sha256": "e9f580dcb55e453736067cdf09b5936382af7cd3b70b109d942491785061e074"
+    },
+    {
+      "job": "profile-r2-i16-p",
+      "bucket": "intended_campaigns",
+      "host": "dr-train",
+      "state": "PASS",
+      "reservation_seconds": 185,
+      "reported_cpu_seconds": 49.648732988,
+      "resource_sha256": "6f3539e07efa08c3a19e8ebfe903676dd68051272625549537c1ba39ece030c6"
+    },
+    {
+      "job": "profile-r2-i16-g1",
+      "bucket": "intended_campaigns",
+      "host": "dr-train",
+      "state": "PASS",
+      "reservation_seconds": 185,
+      "reported_cpu_seconds": 5.60343086,
+      "resource_sha256": "7a0cad859590392939cb777c812e892165ec52b19d95f63cfeeb42ac639971a7"
+    },
+    {
+      "job": "return-export-v1",
+      "bucket": "return_verification_cleanup",
+      "host": "dr-train",
+      "state": "PASS",
+      "reservation_seconds": 90,
+      "reported_cpu_seconds": 3.588169159,
+      "resource_sha256": "80d5a9c76d90e3b11e78d802893d9c012e74a367439bea78879d73a7573b55d6"
+    },
+    {
+      "job": "transfer-orchestration",
+      "bucket": "return_verification_cleanup",
+      "reservation_seconds": 60,
+      "scope": "bounded binary SSH return transfer and metadata control; no ML/data analysis",
+      "host": "local",
+      "state": "CHARGED_UTILITIES_ENVELOPE"
+    },
+    {
+      "job": "return-verify-v1",
+      "bucket": "return_verification_cleanup",
+      "host": "local",
+      "state": "PASS",
+      "reservation_seconds": 90,
+      "reported_cpu_seconds": 7.984375,
+      "resource_sha256": "d817ab385d595f4134eba2a600da1aad2e9c72dcd5a65b2869add25e885cadd6"
+    },
+    {
+      "job": "remote-exact-cleanup-v1",
+      "bucket": "return_verification_cleanup",
+      "host": "dr-train",
+      "state": "PASS",
+      "reservation_seconds": 60,
+      "reported_cpu_seconds": 0.8085199540000001,
+      "resource_sha256": "1ae40cd5ea41be627b3d423e610f9c6981745909440bb6f4b8b8a62152e41638"
+    },
+    {
+      "job": "closeout-v1",
+      "bucket": "analysis_delivery",
+      "host": "local",
+      "state": "PASS",
+      "reservation_seconds": 60,
+      "reported_cpu_seconds": 0.15625,
+      "resource_sha256": "64bb94e5fb40f1a8f1db58e8264ceef90c63e2dc219a6b93fb58365aa4bdb24e"
+    }
+  ],
+  "biological_data_opened": false,
+  "final_outcomes_opened": false,
+  "closed_utc": "2026-11-08T09:40:52.259820+00:00",
+  "profiles_complete": 12,
+  "profiles_censored": 0,
+  "technical_retries": 0,
+  "biological_campaigns": 0,
+  "scientific_release_open": false,
+  "next_actor": "OWNER_REVIEW_COSTED_M2_CONTINUATION",
+  "measured_guarded_worker_cpu_seconds": 342.888088411,
+  "total_cpu_measured": false,
+  "cumulative_retained_seconds": 6922
+}

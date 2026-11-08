@@ -14,11 +14,13 @@ The owner approved this [M2 contribution direction](docs/03_research/M2_CONTRIBU
 and its [experiment plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md)
 on 8 November: six existing FS-Mol development assays, grouped separation, two
 predictors/eight policies, 48 fresh CPU-hours / 96 hours / max four workers.
-The [executed preflight](docs/03_research/M2_PREFLIGHT_RESULTS_20261108.md) passed
-data and constructed checks but stopped at the per-campaign CPU admission bound.
-Molecular evaluation and learned-gate fitting remain NOT_RUN. Read the
-[resource checkpoint](docs/06_execution/M2_RESOURCE_OWNER_CHECKPOINT_20261108.md)
-before further work. General metareasoning and portfolios remain prior art;
+The [first preflight](docs/03_research/M2_PREFLIGHT_RESULTS_20261108.md) stopped
+at its per-campaign CPU admission bound. The owner then approved synthetic-only
+profiling; [all 12 RF campaigns completed](docs/03_research/M2_CPU_PROFILE_RESULTS_20261108.md).
+The [costed continuation](docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md)
+preserves the full scientific matrix within a conditional cumulative 48-hour cap
+and awaits owner review before biological labels. Molecular evaluation and learned
+gate fitting remain NOT_RUN. General metareasoning and portfolios remain prior art;
 incremental utility is unestablished.
 
 The earlier [method design](docs/03_research/METHOD_FIRST_DESIGN_20261108.md) and
@@ -63,7 +65,8 @@ the admitted exposed development pools were decoded; final outcomes remain close
 The subsequent M2 release stopped at its resource-fit checkpoint before biological
 labels or molecular campaigns. Its scoped return/cleanup and accounting are
 documented in the new checkpoint. Normal English main delivery is authorized;
-an admission-bound/bucket amendment awaits the owner's next decision. No unused
+the completed profiling amendment now supports a costed M2 continuation awaiting
+the owner's next decision before biological campaigns. No unused
 allowance, paid service, live team write,
 protected evaluation or submission is automatically released.
 

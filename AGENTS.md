@@ -1,5 +1,45 @@
 # Agent instructions: CuraLoop-RL
 
+## M2 profiling completed; costed continuation requires owner review
+
+Read docs/03_research/M2_CPU_PROFILE_RESULTS_20261108.md and
+docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md. All 12 approved
+synthetic RF profiles completed, no retries/censoring: Greedy 2.59-2.91 CPU-seconds,
+planning 42.69-46.91, startup 2.70-2.79. Five instrumentation checks passed and
+the original predictor/planner source is unchanged. No biological label/record,
+gate fit, molecular campaign or final access. Only full private return, reread,
+exact owned profile task/export cleanup and English main delivery remain in this
+release. Close its one-hour ledger before handoff; never recreate old roots or
+reuse closed allowance automatically. The revised 4,248-unit remaining matrix
+keeps six assays/two predictors/eight arms/five seeds and is PROPOSED_NOT_RELEASED.
+Its conditional cumulative bound 171,962 seconds fits 172,800; 84 remaining
+synthetic contexts, including neighbor runtime, must pass the proposed resource
+envelopes before biological labels. No silent cap/truncation/predictor change.
+Next actor owner approves/amends that complete continuation before biological
+work; M3 remains closed. Parent sole writer; earlier markers below are history.
+
+## Owner releases M2 synthetic CPU profiling amendment, 8 November 2026
+
+The owner approved the bounded amendment at 6dbb20b. Read
+research/configs/m2_profile_amendment_20261108_v1.json and
+research/manifests/m2_profile_release_20261108_v1.json. Fresh profile root only:
+.local/m2-cpu-profile-20261108-v1 and matching /home/chaw/curaloop-tasks root.
+Release 09:05:46Z; deadline 17:05:46Z 8 November, also bounded by the original
+M2 deadline. Maximum 3,600 CPU-seconds including setup, failures, return, cleanup
+and delivery, taken from the approved +1-hour admission / -1-hour main allocation;
+cumulative M2 ceiling stays 172,800 seconds. Old M2 retained 4,112 seconds and
+all old ledgers/roots stay closed and unchanged. Exactly 12 synthetic RF G1/P
+campaigns at N303/B32/n0{0,16}/repeats{0,1,2}, max 14 attempts including two
+technical retries, max 180 scientific + five startup CPU-seconds, 240s wall.
+One dr-train worker / one CPU-equivalent / 4 GiB; local orchestration or checks
+one CPU / 512 MiB. Preserve predictor/planner/source seeds. Existing chaw profile
+only; actual resource proof before profiles. No biological labels/records, data
+intake, final features/labels/presence, gate training, paid/GPU or M3 access.
+Stop on stated caps. Verify complete return before exact owned cleanup, then
+report timings and a revised costed M2 matrix for owner review before biological
+campaigns. Parent sole writer; English main delivery authorized. Earlier scope
+markers below are historical and not permission to resume molecular work.
+
 ## M2 stops at owner resource checkpoint, 8 November 2026
 
 Read docs/03_research/M2_PREFLIGHT_RESULTS_20261108.md,
