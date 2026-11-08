@@ -16,6 +16,9 @@ def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 def main():
     stage=sys.argv[1];guard=OrchestrationGuard(TASK/(stage+'-orchestration-resource.json'),500,'2026-11-12T08:17:29Z')
     try:
+        if stage=='main':
+            from tools.m2c_transport_checks_v2 import checks
+            checks(TASK)
         matrix=json.loads((TASK/'execution-matrix-v1.json').read_text());code=json.loads((TASK/'code-stage-03.json').read_text())
         predecessor={'branch':'prefix','tuning':'branch','main':'tuning','ablation':'main','transfer':'ablation'}.get(stage)
         if predecessor:assert json.loads((TASK/(predecessor+'-summary.json')).read_text())['status']=='PASS_COMPLETE_STAGE'

@@ -33,8 +33,8 @@ def main():
         assert [j['job'] for j in ledger['jobs'] if j['state']=='RESERVED']==['closeout-audit-v1']
         assert not ledger['final_outcomes_opened'] and not ledger['m3_released']
         counts=collections.Counter(j['state'] for j in ledger['jobs']);execution=[j for j in ledger['jobs'] if j.get('execution_unit')]
-        assert len(execution)==ledger['attempted_units']==4251
-        assert sum(j['state']=='FAIL' for j in execution)==3
+        retained_failures=sum(j['state']=='FAIL' for j in execution)
+        assert len(execution)==ledger['attempted_units']==4248+retained_failures and retained_failures==6
         assert sum(j['state']=='PASS' for j in execution)==4248
         cpu={'status':'PASS_CUMULATIVE_RESERVATION_ACCOUNTING','prior_retained_seconds':ledger['prior_retained_seconds'],
           'fresh_charged_seconds':reserved,'cumulative_charged_seconds':reserved+ledger['prior_retained_seconds'],
@@ -42,7 +42,7 @@ def main():
           'cumulative_cap_seconds':172800,'unused_against_original_ceiling_seconds':172800-reserved-ledger['prior_retained_seconds'],
           'bucket_caps_seconds':ledger['bucket_caps_seconds'],'bucket_charged_seconds':ledger['bucket_reserved_seconds'],
           'attempted_units_this_release':len(execution),'successful_units_this_release':4248,
-          'retained_not_dispatched_attempts':3,'unique_synthetic_contexts_including_previous_profile':96,
+          'retained_not_dispatched_attempts':retained_failures,'unique_synthetic_contexts_including_previous_profile':96,
           'biological_units':4164,'accounting_basis':'conservative reservations retained in full; not total-host measured consumption',
           'deadline_utc':ledger['deadline_utc'],'final_outcomes_opened':False,'m3_released':False}
         new(PUBLIC/'cpu-accounting-v1.json',cpu)
@@ -50,8 +50,9 @@ def main():
           'previous_complete_preservation_audit_sha256':previous_audit_sha,
           'previous_complete_preservation_sources_rechecked':len(older['records']),
           'six_original_development_source_hashes_unchanged':True,'executed_scientific_code_matches_projection_03':True})
+        transport=json.loads((TASK/'transport-constructed-checks-v1.json').read_text());assert transport['status']=='PASS_CONSTRUCTED_TRANSPORT_CHECKS'
         new(PUBLIC/'constructed-checks-v1.json',{'engine':json.loads((TASK/'jobs/engine-checks-03/result.json').read_text()),
-          'analysis':json.loads((TASK/'jobs/analysis-constructed-checks/result.json').read_text())})
+          'analysis':json.loads((TASK/'jobs/analysis-constructed-checks/result.json').read_text()),'transport':transport})
         new(job/'result.json',{'status':'PASS_COMPLETE_M2_CLOSEOUT_AUDIT','method_decision':results['method_decision'],
           'biological_units':4164,'all_scientific_sources_pinned':True,'final_outcomes_opened':False,'m3_released':False})
         guard.finish('PASS');print(json.dumps({'status':'PASS_COMPLETE_M2_CLOSEOUT_AUDIT','cumulative_charged_cpu_hours':cpu['cumulative_charged_cpu_hours']}))

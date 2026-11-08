@@ -2,9 +2,11 @@
 import base64
 import contextlib
 import io
+import hashlib
 import json
 import subprocess
 import sys
+from datetime import datetime,timezone
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
@@ -25,10 +27,19 @@ def admin_call(action,value):
 
 def ssh_script(source,timeout=200):
     profile=json.loads((TASK/'ssh-profile.json').read_text())['selected_profile']
-    r=subprocess.run(['rtk','proxy','ssh','-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes',
-        '-o','ConnectTimeout=10','-o','ConnectionAttempts=1',profile,'python3 -B -'],input=source.encode(),capture_output=True,timeout=timeout)
-    assert r.returncode==0,r.stderr.decode(errors='replace')[-1000:]
-    return json.loads(r.stdout)
+    for attempt in range(3):
+        r=subprocess.run(['rtk','proxy','ssh','-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes',
+            '-o','ConnectTimeout=10','-o','ConnectionAttempts=1',profile,'python3 -B -'],input=source.encode(),capture_output=True,timeout=timeout)
+        if r.returncode==0:return json.loads(r.stdout)
+        error=r.stderr.decode(errors='replace')
+        # A TCP connect timeout proves no SSH session/remote command began. Never
+        # retry authenticated channel failure, unknown completion or partial output.
+        safe=(r.returncode==255 and not r.stdout and 'ssh: connect to host ' in error and 'port 22: Connection timed out' in error)
+        with (TASK/'ssh-transport-errors.jsonl').open('a',encoding='utf-8',newline='\n') as f:
+            f.write(json.dumps({'utc':datetime.now(timezone.utc).isoformat(),'source_sha256':hashlib.sha256(source.encode()).hexdigest(),
+              'connection_attempt':attempt+1,'exit_code':r.returncode,'error':error[-1000:],
+              'no_ssh_session_established':safe,'same_payload_retry':safe and attempt<2})+'\n')
+        assert safe and attempt<2,error[-1000:]
 
 
 def collect(names):

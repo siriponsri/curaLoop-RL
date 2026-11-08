@@ -49,8 +49,8 @@ def main():
     for predictor in('rf','neighbor'):
         for regime in('cheap','high'):
             rows=[r for r in result['main_summaries'] if r['predictor']==predictor and r['regime']==regime]
-            lines+=['',f'### {predictor.upper()} / {regime}','',table(['Arm','Mean new positives','Mean delivered','Mean science CPU (s)','Full B / 60','Interrupted / 60'],
-              [[r['arm'],number(r['new_positives']),number(r['new_deliveries']),number(r['scientific_cpu_seconds']),r['full_B_campaigns'],r['interrupted_campaigns']] for r in rows])]
+            lines+=['',f'### {predictor.upper()} / {regime}','',table(['Arm','Mean new positives','New delivered','Total observed','Science CPU (s)','Process CPU (s)','Process wall (s)','Full B / 60','Interrupted / 60'],
+              [[r['arm'],number(r['new_positives']),number(r['new_deliveries']),number(r['total_observed']),number(r['scientific_cpu_seconds']),number(r['whole_process_cpu_seconds']),number(r['whole_process_wall_seconds']),r['full_B_campaigns'],r['interrupted_campaigns']] for r in rows])]
     lines+=['','### Paired effects across all regimes','',table(['Predictor','C regime','Contrast','Mean change','Conditional 95% interval'],
       [[r['predictor'],r['regime'],r['contrast'],number(r['mean_delta_new_positives']),interval(r)] for r in result['paired_contrasts']]),
       '', '## Attribution and B=16 transfer','',
@@ -67,11 +67,15 @@ def main():
       f"{result['audit'].get('infeasible_branches',0)} branches retained an already-exhausted prefix and invoked no continuation. "+
       'Each training state has three forced-operation continuations followed by common G1. Targets are realized terminal-hit differences, '+
       'not optimal values or independent biological observations. Gates/scalers and control selection exclude the entire held-out component.',
+      '',table(['Predictor','C regime','Forced operation','Positive targets','Zero targets','Negative targets','Mean target'],
+        [[r['predictor'],r['regime'],r['forced_operation'],r['positive'],r['zero'],r['negative'],number(r['mean_terminal_hit_difference'])] for r in result['descriptive_training_target_distribution']]),
       '', '## Execution and cost','',table(['Stage','Completed units'],[[k,v] for k,v in result['counts'].items()]),
       '', 'All 96 unique synthetic contexts passed, including 12 preceding RF profiles and 84 in this continuation. '+
-      'The fresh release completed 4,248 intended units and retained three additional not-dispatched technical failures, each retried with unchanged parameters. '+
+      f"The fresh release completed 4,248 intended units and retained {cpu['retained_not_dispatched_attempts']} additional not-dispatched technical failures, each retried with unchanged parameters. "+
       'The first local calibration coordinator hit its CPU envelope; switching to in-process booking and batched transport resolved that overhead. '+
-      'Eleven distinct constructed engine checks and three constructed analysis checks passed. Repeated check executions are not additional distinct checks.',
+      'A later SSH connect timeout stopped tuning after 174 completed units; fresh exact job/unit absence preceded three identical-context retries. '+
+      'The stopped attempts and the original orchestration charge remain retained; a new 2,000-second local orchestration envelope uses the remaining engineering allocation. '+
+      'Eleven distinct constructed engine checks, three analysis checks and five transport checks passed. Repeated executions are not additional distinct checks.',
       '',table(['Budget stage','Charged reservation (CPU-s)','Stage ceiling (CPU-s)'],[[k,v,cpu['bucket_caps_seconds'][k]] for k,v in cpu['bucket_charged_seconds'].items()]),
       '',f"Cumulative conservative charge: **{number(cpu['cumulative_charged_cpu_hours'])} CPU-hours of 48**, including {cpu['prior_retained_seconds']} retained seconds from earlier M2 steps. "+
       'Failed attempts and utility reservations remain charged in full. This is conservative reservation accounting, not measured total-host CPU consumption. '+
@@ -121,7 +125,7 @@ def main():
             ['Prioritize product workflow','Prepare a separate product evaluation proposal','Live integrations, customer claims, paid services and production deployment']])+'\n')
     status=json.loads((ROOT/'research/configs/m2_costed_status_20261108_v2.json').read_text())
     status.update(status='COMPLETE_FOR_OWNER_REVIEW',method_efficacy=decision,biological_units_completed=4164,
-      fresh_successful_units=4248,retained_not_dispatched_attempts=3,cumulative_charged_seconds=cpu['cumulative_charged_seconds'],
+      fresh_successful_units=4248,retained_not_dispatched_attempts=cpu['retained_not_dispatched_attempts'],cumulative_charged_seconds=cpu['cumulative_charged_seconds'],
       report=str(report.relative_to(ROOT)).replace('\\','/'),next_actor='owner decides before M3; release closed and exact remote roots absent')
     (ROOT/'research/configs/m2_costed_status_20261108_v2.json').write_text(json.dumps(status,indent=2)+'\n',encoding='utf-8')
     result.update(status='COMPLETE_FOR_OWNER_REVIEW',technical_closeout='PASS',remote_exact_cleanup='PASS')

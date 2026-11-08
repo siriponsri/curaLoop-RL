@@ -49,15 +49,17 @@ def main():
         matrix=json.loads((TASK/'execution-matrix-v1.json').read_text());projection=json.loads((TASK/'development-projection-manifest.json').read_text())
         gate_artifacts=json.loads((TASK/'jobs/fit-gates/result.json').read_text())
         control_artifacts=json.loads((TASK/'jobs/fit-controls/result.json').read_text())['artifacts']
-        files=TASK/'remote-return/files';rows=[];counts=collections.Counter();audit=collections.Counter();overheads=[]
+        resolution=json.loads((TASK/'execution-retry-resolution-v1.json').read_text())['mapping'] if (TASK/'execution-retry-resolution-v1.json').exists() else {}
+        files=TASK/'remote-return/files';rows=[];counts=collections.Counter();audit=collections.Counter();overheads=[];branches=collections.defaultdict(dict)
         originals={}
         for f in projection['files']:
             path=TASK/f['path'];assert sha(path)==f['sha256']
             originals[f['task_id']]=json.loads(path.read_text())
         for e in matrix['entries']:
-            local=TASK/'jobs'/e['job'];r=json.loads((local/'result.json').read_text());resource=json.loads((local/'resource.json').read_text())
+            actual_job=resolution.get(e['job'],e['job'])
+            local=TASK/'jobs'/actual_job;r=json.loads((local/'result.json').read_text());resource=json.loads((local/'resource.json').read_text())
             assert r['status'].startswith('PASS') and resource['status']=='PASS'
-            assert sha(local/'result.json')==sha(files/'jobs'/e['job']/'result.json')
+            assert sha(local/'result.json')==sha(files/'jobs'/actual_job/'result.json')
             assert not r['cpu_violation'];counts[e['handler']]+=1
             args=r['spec'];source=originals[r['task_id']];records=source['records']
             assert args['training']==(e['handler']in('prefix','branch','tuning'))
@@ -70,7 +72,8 @@ def main():
                 expected=([2,4,8] if args['policy']=='Gk' else [[2,.02],[4,.05],[8,.10]])[index]
                 assert args['parameter']==expected
             if args['training']:records=[v for v in records if v['candidate_id'] in set(source['training_candidate_ids'])]
-            trace=json.loads((files/'jobs'/e['job']/'trace-private.json').read_text())
+            assert all(args[k]==v for k,v in e['arguments'].items()),'FROZEN_UNIT_ARGUMENT_CHANGED'
+            trace=json.loads((files/'jobs'/actual_job/'trace-private.json').read_text())
             assert len(trace)==r['new_deliveries']<=args['budget']
             assert r['new_positives']==sum(t['delivered_label'] for t in trace)
             assert len({t['candidate_index'] for t in trace})==len(trace)
@@ -81,6 +84,7 @@ def main():
             if e['handler']!='branch' or r['branch_eligible']:assert r['scientific_cpu_seconds']<=args['cap']
             if e['handler']=='branch' and not r['branch_eligible']:
                 assert r['status']=='PASS_INFEASIBLE_PREFIX' and r['continuation_invoked']is False;audit['infeasible_branches']+=1
+            if e['handler']=='branch':branches[(args['prefix_job'],args['snapshot'],args['regime'])][args['forced']]=r
             assert resource['cpu_affinity']==[e['cpu']] and resource['memory_limit_bytes']==4294967296
             assert resource['cpu_seconds']<=resource['reservation_seconds'];audit['verified_units']+=1
             incremental=r['scientific_cpu_seconds']-r.get('prefix_cpu_seconds',0)
@@ -89,6 +93,8 @@ def main():
             overheads.append(overhead)
             if e['handler']in('main','ablation','transfer'):
                 arm=args.get('variant',args['policy']);r['arm']=arm;r['handler']=e['handler']
+                r['total_observed']=r['initial_observations']+r['new_deliveries']
+                r['whole_process_cpu_seconds']=resource['cpu_seconds'];r['whole_process_wall_seconds']=resource['wall_seconds']
                 cumulative=[0];h=0
                 for t in trace:h+=t['delivered_label'];cumulative.append(h)
                 cumulative.extend([h]*(args['budget']+1-len(cumulative)))
@@ -97,6 +103,16 @@ def main():
                 r['brier_delivered']=avg((t['prequential_prediction']-t['delivered_label'])**2 for t in trace) if trace else None
                 rows.append(r)
         assert dict(counts)==matrix['counts']
+        target_values=collections.defaultdict(list)
+        for group in branches.values():
+            assert set(group)=={'REUSE','UPDATE','PLAN'}
+            base=group['REUSE']
+            if all(r['branch_eligible'] for r in group.values()):
+                for operation in('UPDATE','PLAN'):
+                    target_values[(base['spec']['predictor'],base['spec']['regime'],operation)].append(group[operation]['new_positives']-base['new_positives'])
+        target_summary=[{'predictor':key[0],'regime':key[1],'forced_operation':key[2],'states':len(v),
+          'positive':sum(x>0 for x in v),'zero':sum(x==0 for x in v),'negative':sum(x<0 for x in v),
+          'mean_terminal_hit_difference':avg(v),'range':[min(v),max(v)]} for key,v in sorted(target_values.items())]
         # Confirm all paired contexts have one physical initial CPU slot.
         cores=collections.defaultdict(set)
         for e in matrix['entries']:
@@ -113,7 +129,7 @@ def main():
             sub=[r for r in rows if r['handler']=='main' and r['spec']['predictor']==predictor and r['spec']['regime']==regime]
             for arm in ARMS:
                 selected=[r for r in sub if r['arm']==arm];stats={}
-                for field in('new_positives','new_deliveries','scientific_cpu_seconds','H_over_B','auc_discovery_over_assigned_B','brier_delivered'):
+                for field in('new_positives','new_deliveries','total_observed','scientific_cpu_seconds','whole_process_cpu_seconds','whole_process_wall_seconds','H_over_B','auc_discovery_over_assigned_B','brier_delivered'):
                     stats[field]=balanced(selected,field)[0]
                 stats.update(predictor=predictor,regime=regime,arm=arm,campaigns=len(selected),
                   interrupted_campaigns=sum(r['interruptions']>0 for r in selected),
@@ -140,16 +156,21 @@ def main():
           balanced([r for r in primary if r['arm']==arm],'scientific_cpu_seconds')[0] for arm in('G1','T','E'))
         if not potential and exact_equal and cheaper:decision='EFFICIENCY_SIGNAL_ONLY'
         ledger=json.loads((TASK/'ledger.json').read_text())
-        training_cpu=sum(j.get('reported_cpu_seconds',0) for j in ledger['jobs'] if j.get('bucket')in('training_prefixes_branches_gate','control_tuning'))
+        training_names={resolution.get(e['job'],e['job']) for e in matrix['entries'] if e['handler']in('prefix','branch','tuning')}|{'fit-gates','fit-controls'}
+        training_cpu=sum(j.get('reported_cpu_seconds',0) for j in ledger['jobs'] if j['job']in training_names)
+        retry_training_names={resolution[e['job']] for e in matrix['entries'] if e['handler']in('prefix','branch','tuning') and e['job']in resolution}
+        retry_training_charge=sum(j['reservation_seconds'] for j in ledger['jobs'] if j['job']in retry_training_names)
         result={'schema':'curaloop.m2_costed.aggregate_results.v2','status':'COMPLETE_MATRIX_AWAITING_CLEANUP_AND_DELIVERY',
           'method_decision':decision,'technical_matrix_audit':'PASS','counts':dict(counts),'audit':dict(audit),
           'six_development_assays':6,'annotation_components':4,'task_rows':1285,'source_role':'exposed development',
           'primary_endpoint':'new FS-Mol assay-relative binary positives at assigned B32/Ccheap; initial positives excluded',
           'main_summaries':summaries,'paired_contrasts':contrasts,'rf_ablation_contrasts':ablation_contrasts,'rf_B16_transfer_contrasts':transfer,
           'training_state_support':{'states':artifacts['states'],'eligible_states':artifacts['eligible_states'],'gate_artifacts':len(artifacts['artifacts'])},
+          'descriptive_training_target_distribution':target_summary,
           'whole_process_minus_incremental_science_cpu_range_seconds':[min(overheads),max(overheads)],
           'offline_training_and_tuning_verified_worker_cpu_seconds':training_cpu,
-          'offline_training_and_tuning_charged_stage_seconds':sum(ledger['bucket_reserved_seconds'][b] for b in('training_prefixes_branches_gate','control_tuning')),
+          'offline_training_and_tuning_charged_stage_seconds':sum(ledger['bucket_reserved_seconds'][b] for b in('training_prefixes_branches_gate','control_tuning'))+retry_training_charge,
+          'offline_training_and_tuning_retry_charge_seconds':retry_training_charge,
           'offline_worker_cpu_amortization_lower_bound_seconds_per_campaign':{str(n):training_cpu/n for n in(1,10,100)},
           'offline_cost_scope':'verified worker CPU includes startup; shared orchestration/setup/return overhead is additional and included in project reservation accounting',
           'final_outcomes_opened':False,'automatic_m3':False,'publication_ready':False,

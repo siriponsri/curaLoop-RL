@@ -68,3 +68,35 @@ Source-model hashes, original ledgers, earlier NO-GO findings, source roles and
 all prior closed roots remain unchanged. The final report must reconcile actual
 completed units, failed/censored units, reserved CPU, full private return and
 exact owned-root cleanup before describing M2 as complete.
+
+## Retained SSH interruption during control tuning
+
+After 174 successful tuning units, the next three booked units could not connect
+to port 22. A fresh read-only recovery probe immediately succeeded and verified
+that all three exact remote job directories and systemd units were absent. Their
+failed attempts remain charged (62 + 9 + 6 CPU-seconds); the same contexts were
+booked with `-r1` identifiers from the existing technical-retry reserve, preserving
+all arguments, seeds, input hashes, caps, code pins and paired cores. The first
+174 results and the stopped pipeline/resource receipts remain unchanged.
+
+`execution-retry-resolution-v1.json` privately records the three replacements.
+The control fitter receives an authenticated derived matrix that changes only
+those identifiers. The outcome analysis independently resolves their actual
+receipts and compares every frozen scientific argument. No gate retraining,
+new configuration, outer-outcome inspection or label-scope change was introduced.
+
+The original 3,600-second orchestration charge remains retained in full. A new
+2,000-second aggregate local orchestration envelope was booked within the
+remaining engineering allocation, still under the original stage and cumulative
+48-hour ceilings. The deadline is unchanged. Six not-dispatched failed unit
+attempts are now retained across calibration and tuning, with six same-context
+retries; no failed worker execution has been replaced by a favorable seed.
+
+For later stages, transport can retry an identical payload at most three times
+only when OpenSSH reports a TCP connection timeout and has returned no output.
+Authentication errors, channel loss and ambiguous completion stop the pipeline.
+Each connection error is retained. Such a pre-session retry starts no worker;
+exclusive job creation provides a second safeguard against duplicate dispatch.
+Five constructed transport fixtures run before outer evaluation, without network
+calls, to test success, safe identical retry, authentication refusal, partial
+output refusal and the three-connection limit.
