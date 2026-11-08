@@ -1,5 +1,10 @@
 # Method-first research design and executable mechanism reference
 
+**M0 design record. Current follow-up: [LR-M12 M1](LR_M12_M1_RESULTS_20261108.md)
+completed with NO-GO for the method transition. A small exposed-data adapter now
+executes, but M2 did not pass its release gate and was not run.** The constructed
+reference and limits below remain the original M0 scope.
+
 **Owner-approved destination: a methods paper with an R&D plugin. Existing
 datasets are evaluation instruments, not the intended publication contribution.**
 Date: 8 November 2026, Asia/Bangkok. Base: `1950b74d12f33eb08dc0b8a0fabf0ec0dbb7ad7a`.

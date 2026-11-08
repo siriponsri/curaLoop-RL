@@ -64,7 +64,10 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 The [method design](docs/03_research/METHOD_FIRST_DESIGN_20261108.md) includes
 an executable small predictive-scenario rollout reference and constructed checks.
 Its [closest-work review](docs/02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md)
-records strong prior-art overlap: novelty and molecular benefit remain unestablished.
+records strong prior-art overlap. The [LR-M12 M1 investigation](docs/03_research/LR_M12_M1_RESULTS_20261108.md)
+executed a small exposed-data predictor adapter, 17 constructed checks and 36
+planning timing calls. It ended **NO-GO for the method transition**; novelty and
+molecular benefit remain unestablished. Conditional M2 was not run.
 
 The candidate compares completed baseline-relative planning alternatives under
 model ambiguity and computation limits. It is isolated research code, not a new
@@ -74,8 +77,10 @@ drug discovery, real-world safety, speedup or publication readiness.
 Read [GOAL](GOAL.md), [PLAN](PLAN.md), [START_HERE](START_HERE.md) and
 [constructed evidence](docs/evidence/method-first-20261108-v1/README.md).
 The [data inventory](docs/03_research/LOCAL_DATA_INVENTORY_20261107.md) remains
-available. QP32/QC500 and benchmark-publication fallbacks are deferred; no source
-query, new scientific data/compute grant, final access or training has started.
+available. QP32/QC500 and benchmark-publication fallbacks are deferred. The LR-M12
+release is closed after verified full return and exact remote cleanup; final
+outcomes remain closed. See the [owner checkpoint](docs/06_execution/LR_M12_OWNER_CHECKPOINT_20261108.md)
+before a new mechanism or phase.
 
 The Molecular Studio frontend checkpoint is complete in EN/TH with Graphite x
 Copper styling, source inspection and reduced motion. The C Workspace exposes

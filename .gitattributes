@@ -190,3 +190,11 @@ docs/evidence/method-first-20261108-v1/** whitespace=cr-at-eol
 # Proposed long-run scope remains reviewable independently of execution release.
 docs/06_execution/LR_M12_PROPOSAL_20261108.md -text
 research/configs/lr_m12_proposal_20261108_v1.json -text
+
+# Preserve the actual LR-M12 executed code/config and delivery receipt bytes.
+research/lr_m12_v1/*.py -text
+research/configs/lr_m12_*.json -text
+research/manifests/lr_m12_*.json -text
+tools/lrm12_*.py -text
+docs/03_research/LR_M12_M1_RESULTS_20261108.md -text
+docs/06_execution/LR_M12_*20261108.md -text

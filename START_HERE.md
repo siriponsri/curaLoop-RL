@@ -1,9 +1,10 @@
 # Start here
 
-**Current: method-first design and constructed reference complete for review.**
+**Current: LR-M12 M1 complete with NO-GO; conditional M2 was not run.**
 The owner selected a method paper using existing benchmarks, with an R&D plugin
-as its product route. Novelty is HOLD because closely related robust planning
-already exists. The new reference has constructed checks, not molecular results.
+as its product route. The predictor adapter executes on small exposed pools, but
+the method distinction remains insufficient. Read the [M1 report](docs/03_research/LR_M12_M1_RESULTS_20261108.md)
+and [owner decision options](docs/06_execution/LR_M12_OWNER_CHECKPOINT_20261108.md).
 
 ## Read in this order
 
@@ -24,14 +25,16 @@ does not change the application engine, current UI/CLI policies or live MCP tool
 
 ## Scope and status
 
-QP32/QC500 are deferred, not awaiting execution confirmation. No old clock,
-source STOP, protected role or final outcome is reopened. This task does not
-release a new scientific data/compute phase. No dataset-publication fallback,
+QP32/QC500 are deferred, not awaiting execution confirmation. LR-M12's approved
+24 CPU-hour / 72-hour release closed at M1 after 17 constructed checks and 36
+timing calls, with no molecular campaign. Remote files were returned/hash-reread
+before exact cleanup. No old clock, source STOP, protected role or final outcome
+was reopened. The next phase requires the owner. No dataset-publication fallback,
 paid service, live team write or journal submission is automatic.
 
 Read the historical [full-text amendment](docs/02_literature/FULL_TEXT_REVIEW_ADDENDUM.md),
 [version discrepancies](docs/02_literature/VERSION_DISCREPANCIES.md) and
 [baseline specification](docs/03_research/BASELINE_SPECIFICATION.md) before a new
 data/comparator adaptation. Their existing findings remain; the current design
-is the planning frontier. COMPLETE design, PASS tests and novelty HOLD have
+is retained as historical context. COMPLETE investigation, PASS checks and NO-GO have
 different meanings. None is publication or real-world efficacy evidence.

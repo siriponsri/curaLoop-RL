@@ -13,7 +13,10 @@ policy on a common measurement/compute frontier?
 The [method design](docs/03_research/METHOD_FIRST_DESIGN_20261108.md) specifies a
 small baseline-relative rollout reference. The [closest-work review](docs/02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md)
 finds strong prior-art overlap. Method design and constructed implementation are
-complete for review; algorithmic novelty and molecular benefit are not established.
+complete for review. The subsequent [LR-M12 M1 investigation](docs/03_research/LR_M12_M1_RESULTS_20261108.md)
+executed a small exposed-data predictor adapter and two revisions, but ended
+**NO_GO_METHOD_DISTINCTION_UNRESOLVED**. M2 was withheld because its gate failed;
+algorithmic novelty and molecular benefit are not established.
 No new theorem or real-world safety guarantee is claimed.
 
 ## What success requires
@@ -42,11 +45,14 @@ benchmark-construction programme. No automatic benchmark-publication fallback.
 
 ## Authority and completion
 
-The owner authorized method design, focused public research, reversible local
-implementation/checks, old-document reconciliation and normal English main
-delivery. No new scientific dataset/compute grant, SSH, raw-label access, model
-campaign, final evaluation, paid service, live team write or submission follows.
-Before a later data/compute phase, agree its scope and budget with the owner.
+The owner authorized LR-M12 M1 then conditional M2 with 24 new CPU-hours / 72
+hours and at most four local/dr-train workers. This release is now CLOSED at
+the M1 owner checkpoint, retaining 2 h 02 min including delivery reservations.
+All owned remote files were returned and verified before exact cleanup. Only
+the admitted exposed development pools were decoded; final outcomes remain closed.
+Normal English main delivery is authorized. A new mechanism/phase needs the
+owner's next decision; no unused allowance, paid service, live team write,
+protected evaluation or submission is automatically released.
 
 Publication budget remains USD 300; venue fit/fees and human declarations require
 fresh submission-time review. Clinical efficacy, actual lab savings and customer

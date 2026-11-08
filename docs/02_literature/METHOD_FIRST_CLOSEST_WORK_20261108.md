@@ -1,5 +1,11 @@
 # Focused method-first review and novelty challenge
 
+**M0 review record.** The [executed M1 follow-up](../03_research/LR_M12_M1_RESULTS_20261108.md)
+adds a formal robust-regret reduction, selected full-method MCTS-SPIBB inspection
+and rollout-confidence allocation prior art. It concludes insufficient method
+distinction; conditional M2 was not run. Inspection scopes in the table below
+describe the earlier M0 review, not the expanded M1 reading.
+
 Date: 8 November 2026, Asia/Bangkok. Bounded public primary-source review;
 not a systematic review or a claim that every 2026 method was covered. No
 assay-source endpoint, project row, private PDF or protected outcome was accessed.

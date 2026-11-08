@@ -1,0 +1,152 @@
+{
+  "schema": "curaloop.lr_m12.resources_summary.v1",
+  "jobs": [
+    {
+      "job": "local-canary-v1",
+      "host": "local",
+      "cpu": 0,
+      "reserved_seconds": 30,
+      "reported_cpu_seconds": 0.078125,
+      "reported_wall_seconds": 0.014999999999417923,
+      "resource_sha256": "4debce83585ea157b687f370356d07c4f47ad3c1329e17d59dc7f7d5d7bb6acd",
+      "status": "PASS"
+    },
+    {
+      "job": "prepare-inputs-v1",
+      "host": "local",
+      "cpu": 0,
+      "reserved_seconds": 120,
+      "reported_cpu_seconds": 0.171875,
+      "reported_wall_seconds": 0.43800000000192085,
+      "resource_sha256": "56adb9499d33d0502281efaada2384c52600c74ebb4b7d85616c242088491220",
+      "status": "PASS"
+    },
+    {
+      "job": "build-bundle-v1",
+      "host": "local",
+      "cpu": 0,
+      "reserved_seconds": 450,
+      "reported_cpu_seconds": 6.765625,
+      "reported_wall_seconds": 51.53099999999904,
+      "resource_sha256": "d8e97d8ea97876da83f921ffa6968504e7adc5c14b41d32e2cd85fe3dfe0927f",
+      "status": "PASS"
+    },
+    {
+      "job": "receive-v1",
+      "host": "dr-train",
+      "cpu": 69,
+      "reserved_seconds": 180,
+      "reported_cpu_seconds": 0.645809795,
+      "reported_wall_seconds": 3.876309290062636,
+      "resource_sha256": "a1e51c193a139b4dabb9d3ca89ae3da3c8fd92596d4465d6280f47c0a6ab688b",
+      "status": "PASS"
+    },
+    {
+      "job": "bootstrap-v1",
+      "host": "dr-train",
+      "cpu": 69,
+      "reserved_seconds": 240,
+      "reported_cpu_seconds": 3.489069267,
+      "reported_wall_seconds": 3.44288009009324,
+      "resource_sha256": "91172fe63c61e279bbf554edc6134e726926a35ec55baea4f3b2f4266bd6e754",
+      "status": "PASS"
+    },
+    {
+      "job": "remote-canary-v1",
+      "host": "dr-train",
+      "cpu": 69,
+      "reserved_seconds": 60,
+      "reported_cpu_seconds": 0.288298534,
+      "reported_wall_seconds": 0.2519167249556631,
+      "resource_sha256": "e8cbb89fa9387be1764b085563207ed7697d0368b2db20ecab1b49f79b08ec8d",
+      "status": "PASS"
+    },
+    {
+      "job": "receive-code-v2",
+      "host": "dr-train",
+      "cpu": 69,
+      "reserved_seconds": 60,
+      "reported_cpu_seconds": 0.046141359,
+      "reported_wall_seconds": 0.00113460305146873,
+      "resource_sha256": "6e1e48baee35a6131cb501194d730634402372fc5ab2707cdee40140af31c7f7",
+      "status": "PASS"
+    },
+    {
+      "job": "bootstrap-code-v2",
+      "host": "dr-train",
+      "cpu": 69,
+      "reserved_seconds": 60,
+      "reported_cpu_seconds": 0.071432212,
+      "reported_wall_seconds": 0.016379775013774633,
+      "resource_sha256": "8abce4db8a8cb17e31e029aa26d9f0c6806c546eef65d7bd4979a36061266525",
+      "status": "PASS"
+    },
+    {
+      "job": "m1-checks-v2",
+      "host": "dr-train",
+      "cpu": 69,
+      "reserved_seconds": 300,
+      "reported_cpu_seconds": 1.164310354,
+      "reported_wall_seconds": 1.109905521152541,
+      "resource_sha256": "04c66fb00a88f8820ab4cc09c9b5b99358f2dc691fb42e1f65fd13df34b10d9c",
+      "status": "PASS"
+    },
+    {
+      "job": "m1-adapter-chembl1738549-v2",
+      "host": "dr-train",
+      "cpu": 70,
+      "reserved_seconds": 600,
+      "reported_cpu_seconds": 1.502273138,
+      "reported_wall_seconds": 1.4399230850394815,
+      "resource_sha256": "4ef0ff5f4827aecff3dc7617df9395304fbe7c855f1740d1cf59e33f27c8dd63",
+      "status": "PASS"
+    },
+    {
+      "job": "m1-adapter-chembl2219098-v2",
+      "host": "dr-train",
+      "cpu": 71,
+      "reserved_seconds": 600,
+      "reported_cpu_seconds": 1.482051219,
+      "reported_wall_seconds": 1.4283021048177034,
+      "resource_sha256": "20d4d3b35f2d2f319fa5cc0bb3680d557badd6d26f89642361be1c2c39125265",
+      "status": "PASS"
+    },
+    {
+      "job": "return-export-v1",
+      "host": "dr-train",
+      "cpu": 69,
+      "reserved_seconds": 600,
+      "reported_cpu_seconds": 5.179011088,
+      "reported_wall_seconds": 5.128357542911544,
+      "resource_sha256": "3158fda518b160966140c7a3917141478016cdf64319819f46023bfb05f92e11",
+      "status": "PASS"
+    },
+    {
+      "job": "return-verify-v1",
+      "host": "local",
+      "cpu": 0,
+      "reserved_seconds": 300,
+      "reported_cpu_seconds": 10.5,
+      "reported_wall_seconds": 55.03199999999924,
+      "resource_sha256": "33d1d72a8bcf17906555423c19ae693b9b70618d3468a949bcb3393023e21f8d",
+      "status": "PASS"
+    },
+    {
+      "job": "remote-exact-cleanup-v1",
+      "host": "dr-train",
+      "cpu": 69,
+      "reserved_seconds": 120,
+      "reported_cpu_seconds": 1.195041877,
+      "reported_wall_seconds": null,
+      "resource_sha256": "3c22582f70ed799d68fc981e8928182dea3f49730568a22d15e5fc279d0eac79",
+      "status": "PASS"
+    }
+  ],
+  "cpu_cap_seconds": 86400,
+  "retained_reservation_seconds": 7320,
+  "reported_job_cpu_seconds": 32.579063843,
+  "utilities_delivery_seconds_reserved": 3600,
+  "job_cpu_excludes_controller_transport_and_delivery_cpu": true,
+  "active_owned_jobs": 0,
+  "no_reservation_refunds": true
+}

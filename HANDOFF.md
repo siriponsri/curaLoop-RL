@@ -1,4 +1,98 @@
-# Handoff: method-first design and constructed reference
+# Handoff: LR-M12 M1 negative transition checkpoint
+
+## Current checkpoint, 8 November 2026
+
+Repository: `C:\Users\User\Desktop\myProject\curaloop-rl`, branch main.
+Starting checkpoint: `cf1f58fc592e07c63a0101ae3c69813815ebba60`.
+Parent sole writer; no delegated agents. Owner released M1 followed by M2 only
+on a passing gate, 24 fresh CPU-hours / 72 elapsed hours / maximum four combined
+local and dr-train workers. Final outcomes remained closed.
+
+**M1 COMPLETE_INVESTIGATION_NO_GO. M2 NOT_RUN_GATE_NOT_PASSED. M3 NOT_RELEASED.**
+Read [results](docs/03_research/LR_M12_M1_RESULTS_20261108.md),
+[owner options](docs/06_execution/LR_M12_OWNER_CHECKPOINT_20261108.md),
+[evidence](docs/evidence/lr-m12-20261108-v1/README.md) and
+[current status](research/configs/lr_m12_status_20261108_v1.json).
+The roadmap remains M0/M1/M2/M3/P1/J1. LR-M12 completed one additional phase's
+investigation, not two successful phases. Do not start a third revision, more
+datasets/samples or a benchmark paper from the unused allowance.
+
+## Exact executed scope
+
+- Six old exposed development pools / 1,285 task rows admitted only after hash,
+  feature-identity and protected canonical/assay/group checks. No complete raw
+  assay intake, old validation decoding, final feature/label/presence decoding
+  or new split. Binary assay-relative labels retain their original semantics.
+- Largest/smallest pool selected without outcome-based replacement. Two tasks,
+  nested pool sizes 32/64/128, initial counts 0/16, one fixed seed: 12 adapter
+  cases and 36 one-decision timing calls. No molecular outcome-delivery campaign.
+- `research/lr_m12_v1/`: typed feature/predictor boundary, preserved logistic GP
+  adapter with three fixed contexts / 128 function particles, shared-cache
+  nominal and two robust revisions, guarded diagnostics and 17 constructed checks.
+- R1 is a robust baseline-regret adaptation. R2 confidence screening has close
+  precedents, returned Greedy in 12/12 cases and hit its pair cap. Initial16 Brier
+  mean 0.268634, worse than constant 0.5 in five of six dependent cases. This is
+  a diagnostic limitation, not a new campaign effect or population inference.
+- Scientific gate failed on distinction/credible benefit. Full M2 control suite,
+  campaign allocation/effects, independent novelty review, calibration/GP
+  approximation certificate, M3, new-method P1 and submission remain NOT_RUN.
+
+## Frozen code and evidence
+
+Design: `research/configs/lr_m12_m1_design_20261108_v1.json`, SHA256
+`8afa96b583e5f27f6c512df8d87779d909701988459d40755d86f512b9902367`.
+Exact executed source pins: `docs/evidence/lr-m12-20261108-v1/m1-freeze-v2.json`.
+Scientific source remains equal to these pins. The additive code-v1/code-v2
+deployments and per-job source snapshots are preserved; no old scientific source
+or frozen configuration was edited. The old M0 status file is historical; the
+LR-M12 status file above governs this checkpoint.
+
+Private root: `.local/lr-m12-20261108-v1/`. Entry points: `ledger.json`,
+`jobs/`, `inputs/manifest-v1.json`, `remote-return/verified-v1.json` and
+`remote-return/files/diagnostics/`. Public evidence contains aggregates and hashes;
+do not add raw input rows or private traces to Git.
+
+## Closed resources and remote cleanup
+
+Release: 2026-11-08T05:10:46Z. Original hard deadline:
+2026-11-11T05:10:46Z (11 November 12:10:46 Bangkok).
+Closed: 2026-11-08T05:53:08.444024Z (8 November 12:53:08 Bangkok).
+Retained reservation: 7,320 / 86,400 seconds, including 3,600 utilities/delivery;
+no refunds. Fourteen terminal PASS jobs; no active owned worker. Reported job CPU
+32.579 seconds excludes controller/transport/delivery and is not total actual CPU.
+
+Local memory admission used 512 MiB, one CPU. Remote jobs had one-core aggregate
+quota / 4 GiB / zero swap / single BLAS thread, using the existing chaw IP profile
+only. No key/config/privilege change, GPU or paid service. Two independent assay
+jobs ran in parallel, on CPUs 70/71. Maximum worker count was a ceiling.
+
+All 2,424 regular task files / 231,827,380 bytes and seven terminal export files
+were returned, extracted and hash-reread. Full private archive:
+`.local/lr-m12-20261108-v1/remote-return/export/full-task-v1.tar.gz`,
+117,028,968 bytes, SHA256
+`53a0ea3c896425228cdf21ab0a3d0f66659120e711c1bc664d0b478e2f64afb1`.
+Exact `/home/chaw/curaloop-tasks/lr-m12-20261108-v1` and its `-export-v1`
+sibling were deleted only afterward and freshly checked absent. Do not recreate
+them. All six prior ledger hashes remain unchanged; no old budget was resumed.
+
+## Delivery and next actor
+
+The English report, roadmap, entrypoints, claim ledger and assembled manuscript
+are reconciled. Historical results/declarations remain byte-identical. New source
+lint, executed guards/checks, frozen pins, preservation, links, chapter assembly
+and Git delivery are verified separately; no product runtime changed, so app
+tests/browser/build were not rerun. Source/test PASS is not scientific GO.
+
+Next actor: owner. Recommended decision is retire this candidate and authorize
+a bounded contribution review before another molecular fit. A separate product
+planning checkpoint is available; neither is automatically released. No M3,
+team write, deployment, journal action or new publication objective is authorized.
+Normal main commit/push is standing-authorized. The delivery validation receipt
+pins the committed checkpoint; final branch/remote equality is verified after push.
+
+## Historical M0 handoff below, superseded for execution authority
+
+# Historical handoff: method-first design and constructed reference
 
 Date: 8 November 2026, Asia/Bangkok. Base:
 `1950b74d12f33eb08dc0b8a0fabf0ec0dbb7ad7a` on main. Parent sole writer.

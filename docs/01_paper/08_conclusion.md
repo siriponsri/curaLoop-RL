@@ -22,7 +22,10 @@ adaptive advantage.
 The current method-first design adds an exact constructed rollout reference and
 explicit novelty challenge. Its objective substantially overlaps established
 robust policy improvement; no molecular improvement or new algorithm is claimed.
-The next discriminating question is whether a substantive efficient active-search
-method remains after matched prior-art adaptation and predictor/cache controls.
-Existing benchmarks will evaluate that method; benchmark publication is not the
-owner-selected destination. New real-data/final work remains unreleased.
+LR-M12 M1 subsequently executed a small-pool predictor adapter and two revisions,
+but did not establish that substantive distinction. The confidence variant
+retained Greedy throughout its 12 diagnostic cases; full M2 comparisons were
+withheld. The next decision is whether to retire this candidate and select a
+different mechanism. Existing benchmarks remain evaluation instruments;
+benchmark publication is not the owner-selected destination. Final outcomes
+remain closed and the manuscript is not submission-ready.

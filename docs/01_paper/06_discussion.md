@@ -1,5 +1,20 @@
 # Discussion
 
+## Current method checkpoint
+
+LR-M12 M1 adds small-pool execution evidence, not a molecular superiority result.
+The robust objective reduces to established baseline regret; confidence-based
+rollout allocation has close precedents. Its confidence variant retained Greedy
+in all 12 diagnostic cases under the frozen pair cap. Query prediction after
+16 initial labels was worse than a constant 0.5 forecast in five of six nested
+cases. These limited diagnostics support revising the mechanism and uncertainty
+account, rather than asserting a new algorithm or expanding data to obtain a
+favorable result. M2 was withheld by its prerequisite gate. The
+[full M1 report](../03_research/LR_M12_M1_RESULTS_20261108.md) separates engineering
+feasibility, prior-art assessment and unresolved molecular benefit.
+
+## Preserved historical studies
+
 The pilot shows that a local screening workflow can retain an inspectable relationship between a decision, the knowledge available when it was made and the outcome delivered later. This is useful infrastructure for experiments and explanation. It does not resolve whether the selection policy is biologically useful or whether the simulated operations represent a particular laboratory.
 
 The clearest scientific observation is a transfer limitation: the two synthetic-trained tables were never used directly on the recorded HIV states. A trained checkpoint is therefore insufficient evidence that learned decisions occurred. Reporting fallback use is essential to avoid attributing baseline performance to a controller that did not operate as intended.

@@ -1,0 +1,216 @@
+{
+  "schema": "curaloop.lr_m12.m1_summary.v1",
+  "m1_gate": "NO_GO_METHOD_DISTINCTION_UNRESOLVED",
+  "m1_investigation": "COMPLETE",
+  "m2_status": "NOT_RUN_GATE_NOT_PASSED",
+  "m2_campaigns": 0,
+  "m3_status": "NOT_RELEASED",
+  "admitted_development_tasks": 6,
+  "admitted_task_rows": 1285,
+  "diagnostic_tasks": 2,
+  "diagnostic_cases": 12,
+  "timing_calls": 36,
+  "pool_sizes": [
+    32,
+    64,
+    128
+  ],
+  "initial_counts": [
+    0,
+    16
+  ],
+  "seeds": [
+    101
+  ],
+  "constructed_checks": 17,
+  "constructed_checks_status": "PASS",
+  "fit_wall_ms_min": 2.5831670500338078,
+  "fit_wall_ms_max": 26.2777388561517,
+  "gp_fit_fallbacks": 0,
+  "gp_context_fits": 36,
+  "initial16_brier": {
+    "cases": 6,
+    "mean": 0.2686340354316076,
+    "min": 0.24923102760668792,
+    "max": 0.3002684585663704,
+    "worse_than_constant_half": 5
+  },
+  "calibration_or_gp_approximation_error_certified": false,
+  "variants": {
+    "nominal": {
+      "calls": 12,
+      "deviations_from_greedy": 10,
+      "interrupted_calls": 0,
+      "wall_ms_min": 6.224441807717085,
+      "wall_ms_median": 8.765471400693059,
+      "wall_ms_max": 13.730162056162953,
+      "paired_traces_min": 336,
+      "paired_traces_max": 336,
+      "score_is_realized_molecular_gain": false
+    },
+    "point_min": {
+      "calls": 12,
+      "deviations_from_greedy": 2,
+      "interrupted_calls": 0,
+      "wall_ms_min": 6.2268259935081005,
+      "wall_ms_median": 8.677543024532497,
+      "wall_ms_max": 13.200782937929034,
+      "paired_traces_min": 336,
+      "paired_traces_max": 336,
+      "score_is_realized_molecular_gain": false
+    },
+    "confidence_min": {
+      "calls": 12,
+      "deviations_from_greedy": 0,
+      "interrupted_calls": 12,
+      "wall_ms_min": 11.091731023043394,
+      "wall_ms_median": 13.57846858445555,
+      "wall_ms_max": 18.25551688671112,
+      "paired_traces_min": 1024,
+      "paired_traces_max": 1024,
+      "score_is_realized_molecular_gain": false
+    }
+  },
+  "independent_novelty_review": "NOT_RUN",
+  "reserved_final_feature_label_or_presence_decode": false,
+  "old_exposed_validation_decode": false,
+  "new_split_or_source_intake": false,
+  "case_metrics": [
+    {
+      "task_id": "CHEMBL1738549",
+      "pool_size": 32,
+      "initial_count": 0,
+      "seed": 101,
+      "fit_wall_seconds": 0.0025831670500338078,
+      "fit_cpu_seconds": 0.0020000300000000415,
+      "query_rows": 32,
+      "brier": 0.25,
+      "log_loss": 0.6931471805599454
+    },
+    {
+      "task_id": "CHEMBL1738549",
+      "pool_size": 32,
+      "initial_count": 16,
+      "seed": 101,
+      "fit_wall_seconds": 0.008225119905546308,
+      "fit_cpu_seconds": 0.009002229999999889,
+      "query_rows": 16,
+      "brier": 0.2665785751207913,
+      "log_loss": 0.7265725709296936
+    },
+    {
+      "task_id": "CHEMBL1738549",
+      "pool_size": 64,
+      "initial_count": 0,
+      "seed": 101,
+      "fit_wall_seconds": 0.0063691819086670876,
+      "fit_cpu_seconds": 0.005999802000000054,
+      "query_rows": 64,
+      "brier": 0.25,
+      "log_loss": 0.6931471805599454
+    },
+    {
+      "task_id": "CHEMBL1738549",
+      "pool_size": 64,
+      "initial_count": 16,
+      "seed": 101,
+      "fit_wall_seconds": 0.011205670889467001,
+      "fit_cpu_seconds": 0.011001328000000088,
+      "query_rows": 48,
+      "brier": 0.24923102760668792,
+      "log_loss": 0.6914369012788198
+    },
+    {
+      "task_id": "CHEMBL1738549",
+      "pool_size": 128,
+      "initial_count": 0,
+      "seed": 101,
+      "fit_wall_seconds": 0.02206055889837444,
+      "fit_cpu_seconds": 0.022000518000000024,
+      "query_rows": 128,
+      "brier": 0.25,
+      "log_loss": 0.6931471805599454
+    },
+    {
+      "task_id": "CHEMBL1738549",
+      "pool_size": 128,
+      "initial_count": 16,
+      "seed": 101,
+      "fit_wall_seconds": 0.02607661602087319,
+      "fit_cpu_seconds": 0.026001531999999994,
+      "query_rows": 112,
+      "brier": 0.2502134617470361,
+      "log_loss": 0.6934815912563116
+    },
+    {
+      "task_id": "CHEMBL2219098",
+      "pool_size": 32,
+      "initial_count": 0,
+      "seed": 101,
+      "fit_wall_seconds": 0.0026589601766318083,
+      "fit_cpu_seconds": 0.002001254999999924,
+      "query_rows": 32,
+      "brier": 0.25,
+      "log_loss": 0.6931471805599454
+    },
+    {
+      "task_id": "CHEMBL2219098",
+      "pool_size": 32,
+      "initial_count": 16,
+      "seed": 101,
+      "fit_wall_seconds": 0.00783137883991003,
+      "fit_cpu_seconds": 0.007997346999999877,
+      "query_rows": 16,
+      "brier": 0.26224719022813797,
+      "log_loss": 0.7182564652489666
+    },
+    {
+      "task_id": "CHEMBL2219098",
+      "pool_size": 64,
+      "initial_count": 0,
+      "seed": 101,
+      "fit_wall_seconds": 0.006228450918570161,
+      "fit_cpu_seconds": 0.005997575000000088,
+      "query_rows": 64,
+      "brier": 0.25,
+      "log_loss": 0.6931471805599452
+    },
+    {
+      "task_id": "CHEMBL2219098",
+      "pool_size": 64,
+      "initial_count": 16,
+      "seed": 101,
+      "fit_wall_seconds": 0.011749220080673695,
+      "fit_cpu_seconds": 0.012001058999999925,
+      "query_rows": 48,
+      "brier": 0.3002684585663704,
+      "log_loss": 0.8094920298396094
+    },
+    {
+      "task_id": "CHEMBL2219098",
+      "pool_size": 128,
+      "initial_count": 0,
+      "seed": 101,
+      "fit_wall_seconds": 0.02194972988218069,
+      "fit_cpu_seconds": 0.022001684999999993,
+      "query_rows": 128,
+      "brier": 0.25,
+      "log_loss": 0.6931471805599454
+    },
+    {
+      "task_id": "CHEMBL2219098",
+      "pool_size": 128,
+      "initial_count": 16,
+      "seed": 101,
+      "fit_wall_seconds": 0.0262777388561517,
+      "fit_cpu_seconds": 0.02700104400000014,
+      "query_rows": 112,
+      "brier": 0.2832654993206218,
+      "log_loss": 0.7623458936102335
+    }
+  ],
+  "diagnostic_file_sha256": {
+    "m1-adapter-chembl1738549-v2.json": "d532b3105ac34e77179c6ead20d7ed263949f6cd0f6b1d05d3be5027ce6d50f4",
+    "m1-adapter-chembl2219098-v2.json": "432ed3d3e544d63b14e71e39085d53f2c03b7fb66fbb19f033148b40b555abf8"
+  }
+}

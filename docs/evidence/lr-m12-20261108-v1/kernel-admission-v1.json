@@ -1,0 +1,80 @@
+{
+  "status": "PASS_DECLARED_KERNEL_LIMITS",
+  "jobs": [
+    {
+      "job": "local-canary-v1",
+      "proof": {
+        "mechanism": "WINDOWS_JOB_ACTIVE_PROCESS_LIMIT_ONE_NO_BREAKAWAY",
+        "affinity": [
+          0
+        ],
+        "memory_bytes": 536870912,
+        "process_cpu_seconds": 30
+      }
+    },
+    {
+      "job": "remote-canary-v1",
+      "proof": {
+        "mechanism": "CGROUP_V2_AGGREGATE_CPU_MEMORY_SWAP",
+        "cgroup": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/curaloop-lrm12-20261108-v1-remote-canary-v1.service",
+        "cpu_max": [
+          100000,
+          100000
+        ],
+        "memory_max": 4294967296,
+        "memory_swap_max": 0,
+        "starting_affinity": [
+          69
+        ]
+      }
+    },
+    {
+      "job": "m1-checks-v2",
+      "proof": {
+        "mechanism": "CGROUP_V2_AGGREGATE_CPU_MEMORY_SWAP",
+        "cgroup": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/curaloop-lrm12-20261108-v2-m1-checks-v2.service",
+        "cpu_max": [
+          100000,
+          100000
+        ],
+        "memory_max": 4294967296,
+        "memory_swap_max": 0,
+        "starting_affinity": [
+          69
+        ]
+      }
+    },
+    {
+      "job": "m1-adapter-chembl1738549-v2",
+      "proof": {
+        "mechanism": "CGROUP_V2_AGGREGATE_CPU_MEMORY_SWAP",
+        "cgroup": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/curaloop-lrm12-20261108-v2-m1-adapter-chembl1738549-v2.service",
+        "cpu_max": [
+          100000,
+          100000
+        ],
+        "memory_max": 4294967296,
+        "memory_swap_max": 0,
+        "starting_affinity": [
+          70
+        ]
+      }
+    },
+    {
+      "job": "m1-adapter-chembl2219098-v2",
+      "proof": {
+        "mechanism": "CGROUP_V2_AGGREGATE_CPU_MEMORY_SWAP",
+        "cgroup": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/curaloop-lrm12-20261108-v2-m1-adapter-chembl2219098-v2.service",
+        "cpu_max": [
+          100000,
+          100000
+        ],
+        "memory_max": 4294967296,
+        "memory_swap_max": 0,
+        "starting_affinity": [
+          71
+        ]
+      }
+    }
+  ]
+}

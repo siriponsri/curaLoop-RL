@@ -1,9 +1,12 @@
 # Proposed study: method evaluation on existing assay tasks
 
-**NOT_FROZEN / NOT_RUN.** This chapter replaces the old mandatory pending-aware
-final-study plan. The current [design](../03_research/METHOD_FIRST_DESIGN_20261108.md)
-and [scope](../06_execution/METHOD_FIRST_CHECKPOINT_20261108.md) govern the next
-decision. No new data/compute phase or final access is released.
+**M1 COMPLETE WITH NO-GO; M2 NOT_FROZEN / NOT_RUN.** This chapter replaces the old
+mandatory pending-aware final-study plan. The [M1 report](../03_research/LR_M12_M1_RESULTS_20261108.md)
+records an executed small-pool adapter and failed method-distinction gate.
+The conditional release is closed. The comparisons below are a prospective
+contract for a later defensible candidate, not an automatic continuation.
+The [owner checkpoint](../06_execution/LR_M12_OWNER_CHECKPOINT_20261108.md)
+governs the next decision; final access is not released.
 
 First establish a substantive method distinction beyond robust baseline regret,
 ordinary rollout and generic caching. Then test a credible scalable adapter from
@@ -32,5 +35,5 @@ falsification control. If it explains all benefit, reject the method distinction
 No automatic benchmark/curation publication pivot follows.
 
 The next bounded phase requires its own scope, dataset access and resource/window
-decision. Final outcomes, real lab/clinical utility, product integration and journal
-submission remain outside this unexecuted study chapter.
+decision. Final outcomes, real lab/clinical utility, new-method product integration
+and journal submission remain outside this prospective M2/final study.

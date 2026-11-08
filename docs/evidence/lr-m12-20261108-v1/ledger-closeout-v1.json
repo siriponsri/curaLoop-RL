@@ -1,0 +1,183 @@
+{
+  "schema": "curaloop.lr_m12.ledger.v1",
+  "status": "CLOSED_OWNER_CHECKPOINT",
+  "release_utc": "2026-11-08T05:10:46Z",
+  "deadline_utc": "2026-11-11T05:10:46Z",
+  "cpu_cap_seconds": 86400,
+  "bucket_caps_seconds": {
+    "m1": 28800,
+    "m2_main": 36000,
+    "m2_ablations_reproduction": 10800,
+    "source_environment_return_cleanup": 7200,
+    "utilities_delivery": 3600
+  },
+  "bucket_reserved_seconds": {
+    "m1": 1500,
+    "m2_main": 0,
+    "m2_ablations_reproduction": 0,
+    "source_environment_return_cleanup": 2220,
+    "utilities_delivery": 3600
+  },
+  "jobs": [
+    {
+      "job": "local-canary-v1",
+      "bucket": "source_environment_return_cleanup",
+      "host": "local",
+      "cpu": 0,
+      "reservation_seconds": 30,
+      "state": "PASS",
+      "permit_sha256": "48d795087e467d222615ac2a292903b59b919b3a4f1bde4c4ee895c98f8322d7",
+      "resource_sha256": "4debce83585ea157b687f370356d07c4f47ad3c1329e17d59dc7f7d5d7bb6acd",
+      "reported_cpu_seconds": 0.078125
+    },
+    {
+      "job": "prepare-inputs-v1",
+      "bucket": "source_environment_return_cleanup",
+      "host": "local",
+      "cpu": 0,
+      "reservation_seconds": 120,
+      "state": "PASS",
+      "permit_sha256": "0b3a61a50f1b55c0b16de378f0f5f0ed932de4af7c161c2fdc0e52deaa67acc4",
+      "resource_sha256": "56adb9499d33d0502281efaada2384c52600c74ebb4b7d85616c242088491220",
+      "reported_cpu_seconds": 0.171875
+    },
+    {
+      "job": "build-bundle-v1",
+      "bucket": "source_environment_return_cleanup",
+      "host": "local",
+      "cpu": 0,
+      "reservation_seconds": 450,
+      "state": "PASS",
+      "permit_sha256": "f87ad9d5216ee80375afaad84e60cfe9c697d105e5c8e9da17fffa9d0d94ee4d",
+      "resource_sha256": "d8e97d8ea97876da83f921ffa6968504e7adc5c14b41d32e2cd85fe3dfe0927f",
+      "reported_cpu_seconds": 6.765625
+    },
+    {
+      "job": "receive-v1",
+      "bucket": "source_environment_return_cleanup",
+      "host": "dr-train",
+      "cpu": 69,
+      "reservation_seconds": 180,
+      "state": "PASS",
+      "permit_sha256": "f0c64b932246131da1ae59c37669173135c70ca42af1c0444e74d6c2a936fd0d",
+      "resource_sha256": "a1e51c193a139b4dabb9d3ca89ae3da3c8fd92596d4465d6280f47c0a6ab688b",
+      "reported_cpu_seconds": 0.645809795
+    },
+    {
+      "job": "bootstrap-v1",
+      "bucket": "source_environment_return_cleanup",
+      "host": "dr-train",
+      "cpu": 69,
+      "reservation_seconds": 240,
+      "state": "PASS",
+      "permit_sha256": "0c782e33555296032f38525875e78ca49ff2de6e1cde4ba56e831e7315fc4061",
+      "resource_sha256": "91172fe63c61e279bbf554edc6134e726926a35ec55baea4f3b2f4266bd6e754",
+      "reported_cpu_seconds": 3.489069267
+    },
+    {
+      "job": "remote-canary-v1",
+      "bucket": "source_environment_return_cleanup",
+      "host": "dr-train",
+      "cpu": 69,
+      "reservation_seconds": 60,
+      "state": "PASS",
+      "permit_sha256": "eb4c8f25265b073e0bcfe45419e2c8dbfc5360809673f3cc982efb8bf4797ae3",
+      "resource_sha256": "e8cbb89fa9387be1764b085563207ed7697d0368b2db20ecab1b49f79b08ec8d",
+      "reported_cpu_seconds": 0.288298534
+    },
+    {
+      "job": "receive-code-v2",
+      "bucket": "source_environment_return_cleanup",
+      "host": "dr-train",
+      "cpu": 69,
+      "reservation_seconds": 60,
+      "state": "PASS",
+      "permit_sha256": "1824db3017b0f97a075371f489a99d60cfc2fe712e6b57c266c6ee1423c6094f",
+      "resource_sha256": "6e1e48baee35a6131cb501194d730634402372fc5ab2707cdee40140af31c7f7",
+      "reported_cpu_seconds": 0.046141359
+    },
+    {
+      "job": "bootstrap-code-v2",
+      "bucket": "source_environment_return_cleanup",
+      "host": "dr-train",
+      "cpu": 69,
+      "reservation_seconds": 60,
+      "state": "PASS",
+      "permit_sha256": "00b354036449fbcf6edd8ce37a261245a11cda344ba00b28e32d2b74a584be2e",
+      "resource_sha256": "8abce4db8a8cb17e31e029aa26d9f0c6806c546eef65d7bd4979a36061266525",
+      "reported_cpu_seconds": 0.071432212
+    },
+    {
+      "job": "m1-checks-v2",
+      "bucket": "m1",
+      "host": "dr-train",
+      "cpu": 69,
+      "reservation_seconds": 300,
+      "state": "PASS",
+      "permit_sha256": "f52f37a614ac7aaff3cdb77d5faf503b430dba798dc9126e31444229151d1e1c",
+      "resource_sha256": "04c66fb00a88f8820ab4cc09c9b5b99358f2dc691fb42e1f65fd13df34b10d9c",
+      "reported_cpu_seconds": 1.164310354
+    },
+    {
+      "job": "m1-adapter-chembl1738549-v2",
+      "bucket": "m1",
+      "host": "dr-train",
+      "cpu": 70,
+      "reservation_seconds": 600,
+      "state": "PASS",
+      "permit_sha256": "e7e75f79abf37d3f28b9c78c058e3d21321dc12998bdc6bd91c2842ab434709e",
+      "resource_sha256": "4ef0ff5f4827aecff3dc7617df9395304fbe7c855f1740d1cf59e33f27c8dd63",
+      "reported_cpu_seconds": 1.502273138
+    },
+    {
+      "job": "m1-adapter-chembl2219098-v2",
+      "bucket": "m1",
+      "host": "dr-train",
+      "cpu": 71,
+      "reservation_seconds": 600,
+      "state": "PASS",
+      "permit_sha256": "c34c0afbf4abaabb1b7f1ca8a6a7f89c7faa144e5449cee90bd2af3ced2ef564",
+      "resource_sha256": "20d4d3b35f2d2f319fa5cc0bb3680d557badd6d26f89642361be1c2c39125265",
+      "reported_cpu_seconds": 1.482051219
+    },
+    {
+      "job": "return-export-v1",
+      "bucket": "source_environment_return_cleanup",
+      "host": "dr-train",
+      "cpu": 69,
+      "reservation_seconds": 600,
+      "state": "PASS",
+      "permit_sha256": "cde6567cb613dfb72ed0269f08820ebfdc3f4ea9ca32bae164c0d0293719c091",
+      "resource_sha256": "3158fda518b160966140c7a3917141478016cdf64319819f46023bfb05f92e11",
+      "reported_cpu_seconds": 5.179011088
+    },
+    {
+      "job": "return-verify-v1",
+      "bucket": "source_environment_return_cleanup",
+      "host": "local",
+      "cpu": 0,
+      "reservation_seconds": 300,
+      "state": "PASS",
+      "permit_sha256": "0c36cb43291dbfaf3e69dcbaed95753ac875641c64dff14692625f11f0b46708",
+      "resource_sha256": "33d1d72a8bcf17906555423c19ae693b9b70618d3468a949bcb3393023e21f8d",
+      "reported_cpu_seconds": 10.5
+    },
+    {
+      "job": "remote-exact-cleanup-v1",
+      "bucket": "source_environment_return_cleanup",
+      "host": "dr-train",
+      "cpu": 69,
+      "reservation_seconds": 120,
+      "state": "PASS",
+      "permit_sha256": "82a83e22ec27549ca060fce510ee5e98eedffe000a7ab1c39d81d5370ccac178",
+      "resource_sha256": "3c22582f70ed799d68fc981e8928182dea3f49730568a22d15e5fc279d0eac79",
+      "reported_cpu_seconds": 1.195041877
+    }
+  ],
+  "attempted_campaigns": 0,
+  "m1_gate": "NO_GO_METHOD_DISTINCTION_UNRESOLVED",
+  "m2_release": false,
+  "old_ledgers_reset": false,
+  "closed_utc": "2026-11-08T05:53:08.444024+00:00",
+  "close_reason": "M1 novelty/credible-benefit gate not passed; conditional M2 withheld"
+}

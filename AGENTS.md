@@ -1,5 +1,41 @@
 # Agent instructions: CuraLoop-RL
 
+## LR-M12 closed at M1 owner checkpoint, 8 November 2026
+
+Read HANDOFF.md, docs/03_research/LR_M12_M1_RESULTS_20261108.md,
+docs/06_execution/LR_M12_OWNER_CHECKPOINT_20261108.md and
+research/configs/lr_m12_status_20261108_v1.json. M1 investigation COMPLETE with
+NO_GO_METHOD_DISTINCTION_UNRESOLVED. Conditional M2 NOT_RUN, M3 NOT_RELEASED.
+Fresh ledger CLOSED at 05:53:08Z, retaining 7,320 / 86,400 seconds including
+3,600 utilities/delivery; all 14 jobs terminal PASS. Full private return of 2,424
+task regular files plus seven export files verified before exact task/export
+cleanup and fresh absence. No active owned job remains. Six old ledgers unchanged.
+Do not recreate the root, reuse unused allowance, add a third method revision,
+open final data, switch to a benchmark publication or resume another phase.
+Next actor owner; only normal English checkpoint delivery/corrections remain
+authorized. Parent sole writer. Earlier release markers below are historical.
+
+## Owner releases LR-M12 M1 then conditional M2, 8 November 2026
+
+The owner explicitly approved the proposal at cf1f58f: fresh 24 CPU-hours / 72 hours,
+max 4 combined workers, local 1 CPU / 1 GiB + up to 3 dr-train workers each
+1 CPU-equivalent / 4 GiB, exposed proposed development pools only; final outcomes closed. Read
+docs/06_execution/LR_M12_EXECUTION_CONTRACT_20261108.md and
+research/manifests/lr_m12_release_20261108_v1.json. Release05:10:46Z8November;
+deadline05:10:46Z11November (12:10:46Bangkok). Fresh .local/lr-m12-20261108-v1
+only; all old ledgers/STOPs/roles/frozen records remain closed and unchanged.
+Reserve every bounded attempt, including failures/setup/return/delivery; no old
+budget borrowing. Parent sole writer. Existing chaw SSH profile only, live
+resource/kernel admission before remote work; no config/key/privilege changes.
+M1max2method revisions. M2 only after substantive provisional method distinction,
+credible scalable adapter/guards, matched controls and resource-fit gate. If
+uncertain/failed, report M1 and consult before dependent M2, no automatic
+benchmark-paper pivot. M2max840intended/900attempted subjectCPU/timecaps. Protected
+final feature/label/presence decode, potency/bulk intake, new split, paid/GPU,
+live team writes/deploy and journal action remain excluded. Complete private
+return/reread before exact owned remote cleanup. English main delivery authorized;
+owner decision before M3. Earlier planning-only markers below are historical.
+
 ## Current owner-approved method-first task, 8 November 2026
 
 The owner rejects benchmark publication as the primary contribution and approves

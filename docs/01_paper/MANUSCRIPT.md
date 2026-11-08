@@ -1,18 +1,18 @@
-# Working manuscript: method design and historical evidence
+# Working manuscript: method design, M1 negative checkpoint and historical evidence
 
-**METHOD_FIRST_DESIGN_DRAFT; NOVELTY_HOLD; NOT_SUBMISSION_READY.**
-The owner requests a method contribution evaluated on existing benchmarks.
-The constructed reference is an adaptation, not a molecular result or a proven
-novel algorithm. Historical methods/results/limitations remain in Chapters 3/5/7
-under their original scopes. Current prospective study is Chapter 4.
+**METHOD_FIRST_M1_NEGATIVE_CHECKPOINT; NOT_SUBMISSION_READY.**
+The owner requests a method contribution evaluated on existing datasets.
+LR-M12 M1 executed a small-pool adapter but failed its method-distinction gate;
+conditional M2 was not run. Final outcomes remain closed. Historical results
+and declarations retain their original scopes and bytes.
 
-This file is assembled from the numbered chapters; edit those chapters and
+This file is assembled from the ten numbered chapters; edit those chapters and
 rebuild before publication. No final study or journal submission has occurred.
 
 ## Title, design abstract and contribution
 
-**METHOD_FIRST_DESIGN_DRAFT; NOVELTY_HOLD; NOT_SUBMISSION_READY.** The current
-candidate has a constructed reference, not molecular efficacy evidence. Historical
+**METHOD_FIRST_M1_NEGATIVE_CHECKPOINT; NOT_SUBMISSION_READY.** The current
+candidate has an executed small-pool adapter, but no molecular efficacy evidence. Historical
 studies remain separate; neither benchmark publication nor software features
 substitute for the requested method contribution.
 
@@ -39,16 +39,22 @@ prior art; a substantive distinction remains to be demonstrated. Existing HIV,
 Tox21 and FS-Mol resources are intended for later controlled evaluation with
 matched predictors, cache access, measurement budgets and computation accounting.
 Historical unfavorable planning results are retained as counterevidence. A
-scalable predictive-scenario adapter and real-data method comparison remain
-unexecuted. The product direction is an auditable R&D evidence/plan/report plugin,
+subsequent LR-M12 M1 investigation executed a delivered-information GP adapter,
+17 constructed checks and 36 planning timing calls in 12 cases on two previously
+exposed FS-Mol assays. Both method revisions retained strong prior-art overlap;
+the confidence variant selected Greedy in all cases under its paired-trace cap.
+This failed the transition gate, so M2 molecular comparisons were not run.
+Predictive calibration and independent novelty review remain unresolved.
+The product direction is an auditable R&D evidence/plan/report plugin,
 whose workflow value requires separate evaluation.
 
 ### Intended contribution and present evidence
 
 The intended contribution is a defensible acquisition method evaluated on
 existing benchmarks. Current evidence is an executable mechanism adaptation and
-focused novelty challenge, not a new benchmark, proven new algorithm or finished
-results paper. See [design](../03_research/METHOD_FIRST_DESIGN_20261108.md) and
+focused novelty challenge, followed by a negative M1 gate, not a new benchmark,
+proven new algorithm or finished results paper. See [M1 report](../03_research/LR_M12_M1_RESULTS_20261108.md),
+[design](../03_research/METHOD_FIRST_DESIGN_20261108.md) and
 [closest work](../02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md).
 
 ### Keywords
@@ -234,10 +240,13 @@ threshold. No final allocation or outcome access is created by this preparation.
 
 ## Proposed study: method evaluation on existing assay tasks
 
-**NOT_FROZEN / NOT_RUN.** This chapter replaces the old mandatory pending-aware
-final-study plan. The current [design](../03_research/METHOD_FIRST_DESIGN_20261108.md)
-and [scope](../06_execution/METHOD_FIRST_CHECKPOINT_20261108.md) govern the next
-decision. No new data/compute phase or final access is released.
+**M1 COMPLETE WITH NO-GO; M2 NOT_FROZEN / NOT_RUN.** This chapter replaces the old
+mandatory pending-aware final-study plan. The [M1 report](../03_research/LR_M12_M1_RESULTS_20261108.md)
+records an executed small-pool adapter and failed method-distinction gate.
+The conditional release is closed. The comparisons below are a prospective
+contract for a later defensible candidate, not an automatic continuation.
+The [owner checkpoint](../06_execution/LR_M12_OWNER_CHECKPOINT_20261108.md)
+governs the next decision; final access is not released.
 
 First establish a substantive method distinction beyond robust baseline regret,
 ordinary rollout and generic caching. Then test a credible scalable adapter from
@@ -266,8 +275,8 @@ falsification control. If it explains all benefit, reject the method distinction
 No automatic benchmark/curation publication pivot follows.
 
 The next bounded phase requires its own scope, dataset access and resource/window
-decision. Final outcomes, real lab/clinical utility, product integration and journal
-submission remain outside this unexecuted study chapter.
+decision. Final outcomes, real lab/clinical utility, new-method product integration
+and journal submission remain outside this prospective M2/final study.
 
 ## Results: historical pilot and executed development studies
 
@@ -406,6 +415,21 @@ interval, favorable task replacement or simulated revenue fills these gaps.
 
 ## Discussion
 
+### Current method checkpoint
+
+LR-M12 M1 adds small-pool execution evidence, not a molecular superiority result.
+The robust objective reduces to established baseline regret; confidence-based
+rollout allocation has close precedents. Its confidence variant retained Greedy
+in all 12 diagnostic cases under the frozen pair cap. Query prediction after
+16 initial labels was worse than a constant 0.5 forecast in five of six nested
+cases. These limited diagnostics support revising the mechanism and uncertainty
+account, rather than asserting a new algorithm or expanding data to obtain a
+favorable result. M2 was withheld by its prerequisite gate. The
+[full M1 report](../03_research/LR_M12_M1_RESULTS_20261108.md) separates engineering
+feasibility, prior-art assessment and unresolved molecular benefit.
+
+### Preserved historical studies
+
 The pilot shows that a local screening workflow can retain an inspectable relationship between a decision, the knowledge available when it was made and the outcome delivered later. This is useful infrastructure for experiments and explanation. It does not resolve whether the selection policy is biologically useful or whether the simulated operations represent a particular laboratory.
 
 The clearest scientific observation is a transfer limitation: the two synthetic-trained tables were never used directly on the recorded HIV states. A trained checkpoint is therefore insufficient evidence that learned decisions occurred. Reporting fallback use is essential to avoid attributing baseline performance to a controller that did not operate as intended.
@@ -492,10 +516,13 @@ adaptive advantage.
 The current method-first design adds an exact constructed rollout reference and
 explicit novelty challenge. Its objective substantially overlaps established
 robust policy improvement; no molecular improvement or new algorithm is claimed.
-The next discriminating question is whether a substantive efficient active-search
-method remains after matched prior-art adaptation and predictor/cache controls.
-Existing benchmarks will evaluate that method; benchmark publication is not the
-owner-selected destination. New real-data/final work remains unreleased.
+LR-M12 M1 subsequently executed a small-pool predictor adapter and two revisions,
+but did not establish that substantive distinction. The confidence variant
+retained Greedy throughout its 12 diagnostic cases; full M2 comparisons were
+withheld. The next decision is whether to retire this candidate and select a
+different mechanism. Existing benchmarks remain evaluation instruments;
+benchmark publication is not the owner-selected destination. Final outcomes
+remain closed and the manuscript is not submission-ready.
 
 ## Declarations and author review
 
