@@ -1,5 +1,11 @@
 # Related work
 
+The current method-first review is
+[the focused primary-source matrix](../02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md).
+It records strong robust-improvement/rollout overlap and novelty HOLD. The
+historical molecular/asynchronous/software review below remains background,
+not proof of a new method gap or a fresh reproduction.
+
 The review connects molecular acquisition, learned policies, asynchronous optimization and scientific software. Its complete synthesis is in [Critical review](../02_literature/CRITICAL_REVIEW.md); the [full-text amendment](../02_literature/FULL_TEXT_REVIEW_ADDENDUM.md) identifies newly inspected versions and page-level evidence. This section is a manuscript bridge, not a second independent review.
 
 ## Molecular acquisition and low-data controls

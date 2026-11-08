@@ -10,7 +10,7 @@ Generalization remains unresolved. The HIV seeds explore initialization within o
 
 The commercial implication is correspondingly limited. An auditable replay can help a team assess a decision workflow, but a retrospective advantage does not equal actual laboratory savings. A customer pilot should measure reproducibility, analyst effort and decision relevance before making claims about discovery outcomes. The installed local boundary may be attractive to some buyers, but that preference remains a hypothesis until customer evidence exists.
 
-The paper route should follow the strongest supported result. Useful regime-specific findings can support a benchmark study even if a learned controller fails. A software contribution requires demonstrable utility and comparison with existing frameworks. A methods claim requires additional evidence that the proposed method, rather than a different predictor or favorable initialization, creates the improvement.
+The paper route should follow the strongest supported result. The owner-selected route requires a method contribution; failure does not automatically authorize a benchmark/curation paper. A software contribution requires demonstrable utility and comparison with existing frameworks. A methods claim requires additional evidence that the proposed method, rather than a different predictor or favorable initialization, creates the improvement.
 
 ## Consequences of the additional full texts
 

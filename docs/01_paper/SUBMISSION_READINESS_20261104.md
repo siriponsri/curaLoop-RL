@@ -1,5 +1,10 @@
 # Submission readiness
 
+> **Current override, 8 November 2026:** the owner selected a method paper
+> evaluated on existing benchmarks. [Method novelty remains HOLD](../02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md).
+> Historical venue/fee guidance below requires fresh submission-time checking;
+> software or benchmark publication is not an automatic fallback. No submission.
+
 4 November 2026. **Prepared for author review; NOT_READY_TO_SUBMIT.** No article,
 editorial inquiry or payment has been sent. The owner supplied a USD 300 fee
 limit and author contact details; these are not funding/conflict declarations.

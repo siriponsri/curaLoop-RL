@@ -1,82 +1,95 @@
-# Working manuscript
+# Working manuscript: method design and historical evidence
 
-**Executed development studies plus proposed final study.** This English working draft reports the preserved HIV pilot, 108 NCATS development runs, 108 fresh-environment scientific reproductions and 54 Gaussian amendment runs. The independent-family final evaluation remains NOT_FROZEN / NOT_RUN. It is not a submission-ready final-study report. R05 source-specific details refer to the inspected ChemRxiv v3.
+**METHOD_FIRST_DESIGN_DRAFT; NOVELTY_HOLD; NOT_SUBMISSION_READY.**
+The owner requests a method contribution evaluated on existing benchmarks.
+The constructed reference is an adaptation, not a molecular result or a proven
+novel algorithm. Historical methods/results/limitations remain in Chapters 3/5/7
+under their original scopes. Current prospective study is Chapter 4.
 
-This file is assembled from the numbered chapters; edit those chapters and rebuild before publication.
+This file is assembled from the numbered chapters; edit those chapters and
+rebuild before publication. No final study or journal submission has occurred.
 
+## Title, design abstract and contribution
 
-## Title, abstract and keywords
+**METHOD_FIRST_DESIGN_DRAFT; NOVELTY_HOLD; NOT_SUBMISSION_READY.** The current
+candidate has a constructed reference, not molecular efficacy evidence. Historical
+studies remain separate; neither benchmark publication nor software features
+substitute for the requested method contribution.
 
-**Manuscript state: WORKING_DRAFT_WITH_EXECUTED_DEVELOPMENT_STUDIES.** The
-historical HIV pilot, NCATS development campaigns, fresh-environment reproduction
-and Gaussian amendment are available. The broader held-out-family study remains
-unfrozen and unexecuted. This is not a submission-ready final-study report.
+### Conditional working title
 
-### Current working title
+CuraLoop: Computation-Bounded Molecular Active Search under Predictive-Model Ambiguity
 
-CuraLoop: An Auditable Molecular Screening Workbench with Reproducible Development Studies under Delayed Feedback
+The title is a research direction, not a finding of a new or superior algorithm.
 
-### Candidate final-study title
+### Design abstract
 
-When Does Pending-Aware Selection Help? A Reproducible Study of Molecular Screening under Delayed Feedback and Resource Constraints
+Molecular active search must allocate measurements and planning computation
+while its predictive model remains uncertain. We propose to investigate a
+baseline-relative rollout controller that evaluates deviations from a common
+Greedy policy across declared predictive models, retains only completed favorable
+comparisons and returns the baseline when further planning is unsupported or
+interrupted. A small exact reference implements shared Greedy continuation traces
+and distinguishes robust from mixture-expected scores. Constructed checks expose
+both useful nonmyopic behavior and conservative fallback, and include a failure
+when the true outcome lies outside the declared model set. These checks do not
+establish molecular performance, calibration, real-world safety or algorithmic
+novelty. Robust baseline improvement and nonmyopic active search are established
+prior art; a substantive distinction remains to be demonstrated. Existing HIV,
+Tox21 and FS-Mol resources are intended for later controlled evaluation with
+matched predictors, cache access, measurement budgets and computation accounting.
+Historical unfavorable planning results are retained as counterevidence. A
+scalable predictive-scenario adapter and real-data method comparison remain
+unexecuted. The product direction is an auditable R&D evidence/plan/report plugin,
+whose workflow value requires separate evaluation.
 
-The final-study title is conditional on completing the independent-family study;
-it does not imply that a benefit has been demonstrated.
+### Intended contribution and present evidence
 
-### Abstract
-
-Molecular screening combines candidate selection with limited resources and
-delayed assay feedback. CuraLoop-RL separates public candidate information from
-unrevealed historical labels and records accepted requests, pending commitments
-and delivered outcomes in an auditable ledger. Its preserved 1,200-compound HIV
-pilot shows a transfer limitation: two synthetic-trained controllers each used
-Greedy fallback for all 300 requests. We then executed a frozen 108-run CPU
-development study on three correlated NCATS Tox21 endpoints, using six fixed
-controls, three paired initialization seeds and two simulated-duration conditions.
-Under heterogeneous duration, a pending-similarity penalty tied retrained Greedy
-in eight of nine pairs and lost two delivered active labels in one pair; all
-nine common-delay pairs had identical public event histories. A clean virtual
-environment and separate checkout reproduced all 108 scientific artifacts on the
-same host. A separately frozen 54-run Gaussian-surrogate amendment tied its
-matched pending-blind comparator in all nine heterogeneous pairs despite five
-changed histories. These bounded development results neither establish an
-independent-target population effect nor demonstrate equivalence or learned
-transfer. Outcome-sealed source/structure audits and hypothetical hierarchical
-precision/resource simulations prepare a broader family-level estimation study,
-whose rights, endpoint, task-role and analysis gates remain open. The workbench
-supports reproducible retrospective research; prospective assay utility,
-laboratory savings and operational Digital Twin fidelity remain unvalidated.
-
-### Scientific contribution statement
-
-The implemented contribution is an inspectable local replay workflow with tested
-information/accounting boundaries, versioned development controls and retained
-null/unfavorable comparisons. Same-implementer fresh-environment reproduction
-supports reproducibility of those campaigns. Independent-family generalization,
-practical utility and successful learned adaptation remain research questions.
+The intended contribution is a defensible acquisition method evaluated on
+existing benchmarks. Current evidence is an executable mechanism adaptation and
+focused novelty challenge, not a new benchmark, proven new algorithm or finished
+results paper. See [design](../03_research/METHOD_FIRST_DESIGN_20261108.md) and
+[closest work](../02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md).
 
 ### Keywords
 
-Molecular screening; active learning; delayed feedback; asynchronous acquisition;
-reproducibility; research software.
+Molecular active search; predictive-model ambiguity; rollout; computation budget;
+baseline-relative decision making; reproducibility.
 
 ## Introduction
 
-Screening decisions determine which compounds receive scarce experimental attention. A predictive model may rank a large pool, but the next useful measurement also depends on what has already been tested, which experiments remain pending and which results can arrive before the decision horizon. The scientific question is therefore broader than discrimination on a static test set: it concerns the sequence of information acquisition under explicit resource constraints.
+The current research objective is a method for molecular active search evaluated
+on existing assay tasks. Candidate selection consumes a measurement budget, while
+lookahead consumes computation and depends on a predictive model that can be
+wrong. A useful method must improve a discovery/compute tradeoff over strong
+matched controls and explain which mechanism creates that improvement.
 
-Public molecular benchmarks provide a basis for retrospective evaluation. MoleculeNet and TDC organize datasets and task definitions (R01-R02), while active-learning studies examine how models and acquisition choices guide exploration (R04-R05, R27). Learned acquisition and RL-driven screening have existing precedents (R07, R28). Parallel and delayed optimization also have substantial prior art (R10-R13). These developments require a precise contribution beyond introducing an iterative loop or naming a controller RL.
+The [current design](../03_research/METHOD_FIRST_DESIGN_20261108.md) examines
+baseline-relative predictive-scenario rollout. The [primary-source review](../02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md)
+finds close overlap with established robust policy improvement and nonmyopic
+active search. The exact constructed reference is therefore a mechanism candidate
+and adaptation, not an established novel algorithm. Generic caching and an agent
+wrapper are insufficient novelty claims.
 
-Retrospective replay is useful because it allows a policy to be evaluated using historical labels that remain hidden until requested. However, replay quality depends on the information boundary, initialization, task sampling, event semantics and endpoint definitions. A hidden label can leak through preprocessing or simulation assumptions even when it is absent from the nominal model input. A repeated random seed changes initialization variability but does not establish generalization across biological targets.
+Historical work supplies useful counterevidence: complete controller fallback,
+null/unfavorable pending-aware comparisons and later gains substantially explained
+by a stronger predictor. Those results remain recorded, not relabeled as evidence
+for the new method. The unchanged historical methods/results chapters below
+describe their own populations and protocols.
 
-CuraLoop-RL provides a local workbench in which selection, pending work, delivery and accounting are recorded as public events. The current implementation combines fingerprint-based prediction, fixed acquisition policies and frozen synthetic-trained controllers. It supports historical and synthetic scenarios, independent matched comparisons and recoverable exports. These capabilities support reproducibility and inspection; their software correctness is separate from biological or operational validity.
-
-The historical HIV pilot reveals an important limitation. Both learned controllers used Greedy fallback for every recorded request. Their equality with Greedy therefore cannot be interpreted as successful RL transfer. The result motivates a study in which actual learned decisions, relevant state coverage and held-out biological tasks are explicitly evaluated. The existing pilot is retained because it identifies a methodological failure that a polished interface might otherwise obscure.
-
-This research programme asks when pending-aware acquisition changes confirmed historical hit discovery under a fixed simulated deadline and limited capacity. The comparison separates policy information from predictor quality and assesses whether heterogeneous durations create a decision problem that a common delay alone does not. It also asks whether adaptation transfers to tasks not used in controller development.
-
-The present manuscript describes the implemented workbench, preserved HIV pilot and newly executed NCATS development studies. The 108-run fixed-control pilot and separate 54-run Gaussian amendment retain null and unfavorable pending-aware comparisons; a fresh environment and separate local checkout reproduce the original scientific artifacts. These three correlated development endpoints do not constitute an independent-family final study. Source/structure audits and hypothetical hierarchical sensitivity calculations prepare that broader estimation design while preserving its open rights, endpoint and split gates. The evidence can support a bounded software/development contribution; no adaptive advantage is predetermined by the project name.
+New real-data comparisons require a credible predictive-scenario adapter, matched
+predictor/update/cache access, explicit measurement/compute accounting and preserved
+exposure/protected outcomes. A new benchmark publication is not the selected
+fallback. The R&D plugin is a separate application path whose factual and workflow
+benefit must be assessed independently.
 
 ## Related work
+
+The current method-first review is
+[the focused primary-source matrix](../02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md).
+It records strong robust-improvement/rollout overlap and novelty HOLD. The
+historical molecular/asynchronous/software review below remains background,
+not proof of a new method gap or a fresh reproduction.
 
 The review connects molecular acquisition, learned policies, asynchronous optimization and scientific software. Its complete synthesis is in [Critical review](../02_literature/CRITICAL_REVIEW.md); the [full-text amendment](../02_literature/FULL_TEXT_REVIEW_ADDENDUM.md) identifies newly inspected versions and page-level evidence. This section is a manuscript bridge, not a second independent review.
 
@@ -101,6 +114,11 @@ Uncertainty and RL evaluation sources motivate precise score definitions, matche
 All 28 reference records now have an identified PDF; one supplement is attached to R05. R05 was reviewed as ChemRxiv v3, and its associated journal full text was not compared. The VDR description discrepancy and preprint MI minimization direction remain explicit reproduction/import questions. References resolve through [the register](../02_literature/REFERENCES.md) and `references.bib`. The targeted, AI-assisted review requires an exact-version and nearest-work refresh before submission.
 
 ## Materials and methods: historical and development studies
+
+Current constructed reference: [method design and pseudocode](../03_research/METHOD_FIRST_DESIGN_20261108.md).
+It uses synthetic predictive worlds only and has no molecular dataset adapter.
+The historical/development methods below retain their original scope and do
+not describe a new method experiment.
 
 ### Dataset and initialization
 
@@ -214,39 +232,42 @@ number of independent families. The owner's current direction is 12+ families
 and effect estimates with uncertainty, without a confirmatory material-effect
 threshold. No final allocation or outcome access is created by this preparation.
 
-## Proposed final study: pending-aware screening
+## Proposed study: method evaluation on existing assay tasks
 
-**Final-study status: NOT_FROZEN / NOT_RUN.** The [research protocol](../03_research/PROTOCOL.md), [candidate audit](../03_research/CANDIDATE_ASSAY_AUDIT_V1.md) and [estimation sensitivity](../03_research/DESIGN_SENSITIVITY_V1.md) distinguish this future independent-family study from the completed NCATS development campaigns reported in Chapter 5. No final compound outcome values were inspected during preparation.
+**NOT_FROZEN / NOT_RUN.** This chapter replaces the old mandatory pending-aware
+final-study plan. The current [design](../03_research/METHOD_FIRST_DESIGN_20261108.md)
+and [scope](../06_execution/METHOD_FIRST_CHECKPOINT_20261108.md) govern the next
+decision. No new data/compute phase or final access is released.
 
-The primary study compares pending-aware and matched pending-blind acquisition on multiple eligible biological tasks under a fixed simulated deadline. Conditions vary duration heterogeneity and capacity while matching the candidate pool, initial knowledge, predictor and operational random realization. The primary endpoint is newly delivered active assay labels by the deadline. Time/budget discovery curves, active scaffold coverage, failure rates and computational overhead are secondary endpoints.
+First establish a substantive method distinction beyond robust baseline regret,
+ordinary rollout and generic caching. Then test a credible scalable adapter from
+delivered labels/features to common predictive scenarios. Exposed HIV/Tox21 can
+support engineering checks; FS-Mol is the preferred existing binary-task route,
+subject to actual source/exposure/protection and dependence checks. Continuous
+Ki/Kd and new cross-assay panels are not prerequisites for this candidate.
 
-Task families are separated into controller development, validation and final evaluation. The engineering pilot is used to identify defects and estimate resources, not to establish the final generalization claim. The owner selected 12+ biological families and effect estimates with uncertainty, without a confirmatory material-effect threshold. Exact roles, eligibility, primary contrast, family weighting, interval procedure, repeats, failure/stopping rules and a numeric CPU cap must be frozen before final outcome access. Missingness is introduced as a separate sensitivity condition with a declared mechanism.
+Compare strong frozen/retrained Greedy, Random, nearest-hit, diversity/uncertainty,
+objective-matched ENS-style and robust baseline-relative adaptations, ordinary
+mixture rollout, matched caches and bounded-compute variants. Keep the predictor,
+representation, initial knowledge, update rules and permitted metadata equal.
+Do not credit a new predictor to the controller or deny baselines caching.
 
-The baseline set includes Random, retrained Greedy, frozen-model Greedy, nearest-delivered-hit similarity, structural diversity, uncertainty with an explicit model, a simple exploration mixture and an asynchronous acquisition method matched to multi-hit retrieval. The final strong fixed policy is selected on development tasks only. A learned controller is evaluated only after its decisions can be audited. All fallback and infeasible-action counts remain visible. A method that always falls back is not treated as evidence for learned transfer.
+Primary outcomes are newly delivered historical assay actives versus measurement
+budget, accompanied by measured policy CPU/wall time, memory, predictor calls,
+fallback/deviation share and failure denominators. A state-expansion reduction is
+not a measured speedup. Use uniform initial sampling and retain zero-hit starts;
+report conditional-known-hit sensitivity separately. Seeds do not enlarge the
+biological population. Freeze uncertainty/dependence handling before final access.
 
-The current estimation proposal averages paired repeats within tasks and tasks within families, then weights families equally, with uncertainty that respects that hierarchy. It requires adjudicated families and cannot infer independent units from a convenient group count. Ablations remove pending and deadline information and separate predictor changes from policy changes. Tiny enumerated scenarios first establish that scheduling choices can affect the endpoint. Uniform-delay invariance is checked explicitly.
+Required ablations remove model ambiguity, robust gating, rollout, cache reuse
+and computation limits separately. Include model misspecification and conservative
+all-Greedy failure. A shared cached established adaptation is the strongest
+falsification control. If it explains all benefit, reject the method distinction.
+No automatic benchmark/curation publication pivot follows.
 
-If the study finds no useful adaptive gain, the paper will report that result and identify the tested regimes. If the simulator cannot express a relevant decision tradeoff, the implementation must change before evaluating policies. If too few eligible tasks remain, the population and conclusion will be narrowed rather than inflated through extra seeds.
-
-### Initialization, metrics and objective amendments
-
-Primary starts are uniformly sampled without inspecting activity; zero-active starts remain eligible. A conditional-known-hit sensitivity follows a different initial-information distribution and is reported separately. The task registry preserves assay ID, functional phenotype, source release and eligibility attrition. LIT-PCBA's target ascertainment and unresolved description conflicts must be addressed before freezing tasks.
-
-Report exact enrichment definitions and predictor-update cost. The simulator's assay clock and measured policy compute are separate unless a compute-aware scenario is explicitly defined. Best-observed-value EI is not automatically suitable for accumulating additional Boolean actives. [Baseline specification](../03_research/BASELINE_SPECIFICATION.md) and [metric concordance](../02_literature/METRIC_AND_INITIALIZATION_CONCORDANCE.md) govern the design. Six inexpensive controls and the Gaussian adapter have development execution evidence; a calibrated Bernoulli model, fixed mixture, within-batch conditioning and learned transfer remain open. These documents do not freeze a final comparison catalogue.
-
-
-### Eligibility dependencies
-
-Twenty completed/reused panel feature audits span 17 provisional planning
-groups, including 14 human-annotated groups; quarantining mixed-endpoint CYP2C9
-leaves 13. These are not certified independent families. Three additional panel
-structure audits stopped at the prespecified payload cap. The earlier source
-census and bounded gene search offer additional candidates, but exact file
-rights, endpoint semantics, full-pool/cross-group chemical overlap and source
-dependence remain unresolved. No final-ready task or validation/final role has
-been assigned. Further attrition must be reported rather than repaired by
-opening outcomes or relabelling related tasks. Development HIV/AhR/PPAR-gamma/
-p53 resources cannot become untouched final holdouts.
+The next bounded phase requires its own scope, dataset access and resource/window
+decision. Final outcomes, real lab/clinical utility, product integration and journal
+submission remain outside this unexecuted study chapter.
 
 ## Results: historical pilot and executed development studies
 
@@ -395,7 +416,7 @@ Generalization remains unresolved. The HIV seeds explore initialization within o
 
 The commercial implication is correspondingly limited. An auditable replay can help a team assess a decision workflow, but a retrospective advantage does not equal actual laboratory savings. A customer pilot should measure reproducibility, analyst effort and decision relevance before making claims about discovery outcomes. The installed local boundary may be attractive to some buyers, but that preference remains a hypothesis until customer evidence exists.
 
-The paper route should follow the strongest supported result. Useful regime-specific findings can support a benchmark study even if a learned controller fails. A software contribution requires demonstrable utility and comparison with existing frameworks. A methods claim requires additional evidence that the proposed method, rather than a different predictor or favorable initialization, creates the improvement.
+The paper route should follow the strongest supported result. The owner-selected route requires a method contribution; failure does not automatically authorize a benchmark/curation paper. A software contribution requires demonstrable utility and comparison with existing frameworks. A methods claim requires additional evidence that the proposed method, rather than a different predictor or favorable initialization, creates the improvement.
 
 ### Consequences of the additional full texts
 
@@ -467,6 +488,14 @@ practical laboratory utility and commercial benefit remain unestablished. The
 next scientific step is source/endpoint/dependence closure and a frozen analysis,
 not a claim that implementation complexity or publication preparation proves an
 adaptive advantage.
+
+The current method-first design adds an exact constructed rollout reference and
+explicit novelty challenge. Its objective substantially overlaps established
+robust policy improvement; no molecular improvement or new algorithm is claimed.
+The next discriminating question is whether a substantive efficient active-search
+method remains after matched prior-art adaptation and predictor/cache controls.
+Existing benchmarks will evaluate that method; benchmark publication is not the
+owner-selected destination. New real-data/final work remains unreleased.
 
 ## Declarations and author review
 

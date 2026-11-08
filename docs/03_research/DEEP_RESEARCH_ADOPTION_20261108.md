@@ -1,5 +1,11 @@
 # Owner-approved Deep Research direction: adoption and limits
 
+> **Superseded publication direction, 8 November 2026.** The owner now selects
+> a [method-first paper](METHOD_FIRST_DESIGN_20261108.md) using existing benchmarks.
+> The benchmark-first contribution and pending QP recommendation below are
+> historical. Source/readiness facts remain. Earlier creation-time hashes refer
+> to commit `1950b74`; this editorial notice is not new scientific evidence.
+
 Date: **8 November 2026, Asia/Bangkok**. Inspection base:
 `6fc382b3cf3257b54e0003137222c63ae0cd92f9`.
 

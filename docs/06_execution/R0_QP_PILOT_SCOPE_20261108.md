@@ -1,5 +1,12 @@
 # R0-QP: small ChEMBL 37 support-qualification pilot
 
+> **DEFERRED_METHOD_FIRST_NOT_RELEASED, 8 November 2026.** This proposal
+> is historical and no longer the next approval request. The owner selected
+> [method-first design](../03_research/METHOD_FIRST_DESIGN_20261108.md). No budget,
+> numeric-presence permission, root or clock is released. Original proposal
+> configuration/evidence remains; creation-time document hashes resolve against
+> the original Git checkpoint, not this later editorial notice.
+
 **Direction approved; execution scope awaiting owner confirmation.**
 Date: 8 November 2026, Asia/Bangkok. This is a new pilot proposal, not the old
 R0-QC census, a release manifest or permission to reopen a closed ledger.

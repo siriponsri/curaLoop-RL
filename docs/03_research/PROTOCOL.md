@@ -1,5 +1,9 @@
 # Research protocol v1.1: constrained molecular screening
 
+> **Current planning override, 8 November 2026:** use the [method-first design](METHOD_FIRST_DESIGN_20261108.md). The older question/roadmap below is historical. Preserve frozen
+> scientific evidence and safeguards; it does not release QP/QC, a benchmark-
+> publication fallback, new data/compute or final outcomes.
+
 Goal 1 subsequently selects [a higher-upside planning-method target](CONTRIBUTION_AND_VALIDATION_V1.md),
 with joint assay selection/dispatch/wait and explicit action-value computation.
 Its new mechanism, theory and transfer tests need a separate implementation and

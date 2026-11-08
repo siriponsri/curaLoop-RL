@@ -1,5 +1,9 @@
 # Codex continuation prompt
 
+> **Current planning override, 8 November 2026:** use the [method-first design](../docs/03_research/METHOD_FIRST_DESIGN_20261108.md). The older question/roadmap below is historical. Preserve frozen
+> scientific evidence and safeguards; it does not release QP/QC, a benchmark-
+> publication fallback, new data/compute or final outcomes.
+
 You are continuing CuraLoop-RL in the existing GitHub-backed checkout `siriponsri/curaLoop-RL`. Read the root AGENTS.md and documentation map. Confirm the repository root, origin, current branch and owner changes. Preserve Git ancestry and the functioning localhost POC.
 
 The owner wants an academically credible computational study and a commercially testable R&D pilot product. Confirmed scope: public data first, solo starting point, English active repository content, local CPU-first execution. The owner has requested this package and intends to apply it to main. Do not assume authorization for paid compute, customer communications, journal submission, deployment or confidential company data. Ask only for a concrete missing decision while continuing independent work.

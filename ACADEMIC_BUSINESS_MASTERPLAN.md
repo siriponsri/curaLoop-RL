@@ -1,5 +1,9 @@
 # CuraLoop-RL: academic and business master plan
 
+> **Current planning override, 8 November 2026:** use the [method-first design](docs/03_research/METHOD_FIRST_DESIGN_20261108.md). The older question/roadmap below is historical. Preserve frozen
+> scientific evidence and safeguards; it does not release QP/QC, a benchmark-
+> publication fallback, new data/compute or final outcomes.
+
 **Prepared:** 4 November 2026, Asia/Bangkok. **Source checkpoint:** `2d287a170b39b0c07d02631ca027c2ba535c0df9`. **Owner choices:** public-data-first computational research; R&D-team pilot as the initial business route; solo starting point; English active repository documentation.
 
 ## 1. The outcome to pursue

@@ -60,147 +60,39 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 ## Research and R&D pilot programme
 
-The **Molecular Studio frontend checkpoint is complete**. Both the screening application and C Workspace now offer EN/TH,
-Graphite x Copper styling, responsive source inspection and reduced motion.
+**Current direction: a method paper using existing datasets, with a useful R&D plugin.**
+The [method design](docs/03_research/METHOD_FIRST_DESIGN_20261108.md) includes
+an executable small predictive-scenario rollout reference and constructed checks.
+Its [closest-work review](docs/02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md)
+records strong prior-art overlap: novelty and molecular benefit remain unestablished.
 
-The owner has approved the [Deep Research direction](docs/03_research/DEEP_RESEARCH_ADOPTION_20261108.md):
-a context-aware budgeted decision benchmark, with ChEMBL 37 as the primary source
-and RL optional. The [small pilot scope](docs/06_execution/R0_QP_PILOT_SCOPE_20261108.md)
-specifies the missing resource/access details for confirmation; no new
-qualification run, final access or training has started.
+The candidate compares completed baseline-relative planning alternatives under
+model ambiguity and computation limits. It is isolated research code, not a new
+production screening policy or learned RL controller. Toy checks do not establish
+drug discovery, real-world safety, speedup or publication readiness.
 
-The [local data inventory](docs/03_research/LOCAL_DATA_INVENTORY_20261107.md) and
-[independent Deep Research brief](docs/02_literature/DEEP_RESEARCH_PROMPT_20261107.md)
-are ready for the owner's external research chat. Several real datasets exist
-locally; the newer evidence/molecular-decision benchmark remains unqualified.
-They remain the asset/reference basis for the approved direction and pilot proposal.
+Read [GOAL](GOAL.md), [PLAN](PLAN.md), [START_HERE](START_HERE.md) and
+[constructed evidence](docs/evidence/method-first-20261108-v1/README.md).
+The [data inventory](docs/03_research/LOCAL_DATA_INVENTORY_20261107.md) remains
+available. QP32/QC500 and benchmark-publication fallbacks are deferred; no source
+query, new scientific data/compute grant, final access or training has started.
 
-Latest research: the [R0-Design Review protocol](docs/03_research/R0_DESIGN_REVIEW_PROTOCOL_20261107.md)
-is ready for owner/domain review. It retains the joint evidence/molecular-decision
-question and support floors, and proposes family/source isolation plus a
-support-first census. The proposed 3 CPU-hours/24-hour R0-QC run is **NOT_RELEASED**.
-No new cohort, source intake, model result or final outcome was produced.
-The last empirical [R0-DQ-R readout](docs/03_research/R0DQR_TAXONOMY_TASK_FEASIBILITY_20261107.md)
-remains **REVISE**, with one nominal development pair and no qualified final task.
-[Review evidence](docs/evidence/r0-design-review-20261107-v1/README.md) ·
-[Owner decision](docs/06_execution/R0_DESIGN_REVIEW_DECISIONS_20261107.md)
+The Molecular Studio frontend checkpoint is complete in EN/TH with Graphite x
+Copper styling, source inspection and reduced motion. The C Workspace exposes
+cached declared metadata and local reports; live autonomous R&D efficacy,
+external-team delivery and customer value are unvalidated.
 
-[Checkpoint and limits](docs/06_execution/FRONTEND_CHECKPOINT_20261106.md) ·
-[English manual,12pages](docs/manual/CuraLoop-RL-Molecular-Studio-Manual-EN-v2.pdf) ·
+[English manual](docs/manual/CuraLoop-RL-Molecular-Studio-Manual-EN-v2.pdf) ·
 [Walkthrough](docs/media/molecular-studio-walkthrough.mp4) ·
-[Acceptance evidence](docs/evidence/ui-modern-bilingual-20261106-v1/README.md)
+[C Workspace HTML](docs/05_product/metadata-workspace-v2/workspace.html) ·
+[Core guide](docs/05_product/METADATA_PORTFOLIO_GUIDE_V1.md)
 
-![The source-linked C Workspace](docs/evidence/ui-modern-bilingual-20261106-v1/browser-final-v7/08-workspace-en.png)
-
-The additive [C Workspace HTML](docs/05_product/metadata-workspace-v2/workspace.html)
-opens from a local checkout or downloaded export. GitHub displays its source;
-download/open it to use the interactive view. Field selection follows the
-original source locator. Local export does not deliver to an external team tool.
-The [frozen v1 core guide](docs/05_product/METADATA_PORTFOLIO_GUIDE_V1.md) remains
-available; the new view preserves its report identity and original artifact bytes.
-
-The [LR-BC core checkpoint](docs/06_execution/LRBC_CORE_CLOSEOUT_20261106.md)
-delivers four typed metadata tools, cited readiness/gap reports, portable local
-exports and a tested MCP stdio surface. Two ten-case C acceptance runs, four
-native pipe checks and an eleven-response engineering client/server path passed.
-[Core guide](docs/05_product/METADATA_PORTFOLIO_GUIDE_V1.md) ·
-[C evidence](docs/evidence/lrbc-c-20261106-v1/README.md).
-
-Research remains **NOT_READY**. Historical LR-BC R1 stopped on the third source request after
-HTTP504; full molecular qualification and the pilot were NOT_RUN. The real-metadata
-functional comparison tied12/12 versus12/12 using shared decision code, supporting
-the [narrow product continuation](docs/06_execution/B_POTENTIAL_DECISION_LRBC_20261106.md)
-without a superiority or live-agent claim. All B/C owned remote files returned
-and were reread before exact cleanup. The pre-UI charge was9.5CPU-hours; the completed frontend continuation retains
-18.75CPU-hours cumulatively, including every failed attempt and utility reserve. Final outcomes and all source STOPs remain preserved.
-
-Earlier completed goal: [A3 population/observation qualification](docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md).
-Its original canary NO_GO, offline repair and
-[verified closeout](docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md) remain unchanged.
-
-Earlier completed goal: [Goal 4R2-A2 readiness](docs/03_research/GOAL4R2A2_READINESS_V1.md)
-retrieved descriptions for all 105 MF-PCBA AIDs, with version/revision metadata
-matching the publication, and passed ten engineering contract checks on dr-train.
-Historical activity equivalence and scientific cohort eligibility remain open.
-The [MolDesignBench assessment](docs/03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md)
-finds an output mismatch with the current plan/report workflow and a
-noncommercial dataset restriction. Full return and scoped remote cleanup are
-[verified](docs/06_execution/GOAL4R2A2_CLOSEOUT_20261106.md). Scientific pilot
-advancement remains NO_GO; live integration and benchmark evaluation remain unrun.
-
-Earlier: [Goal 4R2-A](docs/03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md)
-delivers an [offline evidence-to-plan/report prototype](docs/05_product/OFFLINE_RD_WORKFLOW_V1.md)
-with 20 passing engineering checks. MF-PCBA publication metadata now covers
-60 stage pairs and 105 AID version tuples. Scientific cohort eligibility and a
-novel method remain unestablished. The [verified closeout](docs/06_execution/GOAL4R2A_CLOSEOUT_20261106.md)
-and [proposed dataset/benchmark expansion](docs/06_execution/GOAL4R2A_EXPANSION_PROPOSAL_20261106.md)
-separate completed work from the next decision. Live agent/MCP/team integration
-has not been evaluated.
-
-Earlier: [Goal 4R1 results](docs/03_research/GOAL4R1_RESULTS_V1.md) separate
-predictor gains from planning gains. The direct Tanimoto GP improves familiar-
-condition Greedy discovery on the development panel; incremental planning value
-remains unestablished. The bounded challenge and verified remote cleanup are
-[complete](docs/06_execution/GOAL4R1_CLOSEOUT_20261105.md). Final outcomes stay reserved.
-
-The reviewed [predictor/decision-value proposal](docs/03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md)
-led to the completed 4R1 diagnosis above. An
-[agentic R&D plugin](docs/04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md)
-for live paper/database search and team delivery remains proposed; its offline
-subset is described above. The
-[related-work review](docs/02_literature/REDESIGN_DEEP_REVIEW_20261105.md)
-records prior art and open questions. Live plugin integration and broader
-method benefits remain unvalidated.
-
-Earlier: [Plan A, Goals 3–4](docs/06_execution/PLAN_A_CLOSEOUT_20261105.md)
-completed a paper-backed FS-Mol cohort and a frozen development/validation challenge.
-The candidate screening method was slower in matched timing checks; broader
-discovery benefit remains unestablished. Read the [results and limits](docs/03_research/GOAL4_RESULTS_V1.md).
-Final outcomes remain reserved for a later decision.
-
-Earlier: [Goal 2 real-data planning challenge](docs/03_research/GOAL_02_RESULTS_V1.md)
-completed **180 Tox21 development runs on dr-train**. The new bound preserved
-rollout decisions but increased policy computation; nearest-hit found more
-assay actives on this panel. This is an implemented prototype with a retained
-negative result, not an established new method. See the
-[paper-backed dataset and FS-Mol download record](docs/03_research/GOAL_02_DATASET_ACQUISITION_V1.md).
-
-Reviewed v2 adds a [master plan](ACADEMIC_BUSINESS_MASTERPLAN.md),
-[literature review](docs/02_literature/CRITICAL_REVIEW.md),
-[proposed study protocol](docs/03_research/PROTOCOL.md) and
-[R&D pilot offer](docs/04_business/PILOT_OFFER.md).
-The research asks when pending work, capacity and a simulated deadline change
-delivered-hit discovery. Multi-target performance, controller transfer and
-customer value require new evidence; the current HIV pilot remains historical.
-
-Read [START_HERE](START_HERE.md) for the document order and
-[the documentation map](docs/README.md) for the complete programme.
-The versioned research reference remains separate from the application engine;
-new research configuration files are not inputs to the existing UI or CLI.
-
-The local [NCATS development pilot](docs/03_research/NCATS_DEVELOPMENT_RESULTS_V1.md)
-now records **108 completed runs** across AhR, PPAR-gamma and p53, with six fixed
-controls and three seeds. Pending-penalty selection added no deadline hits in
-this bounded pilot and lost two hits in one paired run. These are correlated
-development endpoints, not untouched final tests or therapeutic-efficacy evidence.
-
-A [fresh-environment reproduction](docs/03_research/NCATS_REPRODUCTION_V1.md)
-matched all 108 scientific traces. A separate frozen
-[54-run Gaussian comparator](docs/03_research/NCATS_GAUSSIAN_RESULTS_V1.md)
-also found no extra deadline hits from pending conditioning in this allocation.
-
-The latest [candidate audit](docs/03_research/CANDIDATE_ASSAY_AUDIT_V1.md) and
-[design sensitivity report](docs/03_research/DESIGN_SENSITIVITY_V1.md) prepare a
-broader 12+ family estimation study. They retain metadata/feature audits,
-failures and hypothetical uncertainty/resource scenarios. Final task rights,
-endpoint mappings and roles remain open; no final compound outcomes were read.
-
-The English [working manuscript](docs/01_paper/MANUSCRIPT.md) now includes the
-measured development evidence. A source-checked
-[journal shortlist](docs/01_paper/JOURNAL_TARGETS_20261104.md) and
-[submission review package](docs/01_paper/submission/README.md) respect the
-owner's US$300 publication-fee limit. The manuscript is awaiting author,
-scientific and venue review; no journal submission or acceptance is claimed.
+Historical negative results remain visible: [Goal4](docs/03_research/GOAL4_RESULTS_V1.md)
+found slower screening in its matched check, and [4R1](docs/03_research/GOAL4R1_RESULTS_V1.md)
+did not establish incremental planner value beyond the stronger predictor.
+Old final outcomes and all closed ledgers/source STOPs remain preserved.
+The [working manuscript](docs/01_paper/MANUSCRIPT.md) is a design draft with
+separately retained historical studies; no submission or acceptance is claimed.
 
 ## Quick start
 

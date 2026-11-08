@@ -1,0 +1,22 @@
+{
+  "checks": [
+    {
+      "command": "rtk proxy python -m pytest tests/research/test_method_first_v1.py -q --junitxml=docs/evidence/method-first-20261108-v1/mechanism-tests-v3.xml",
+      "exit_code": 0,
+      "result": "20 passed in 0.12s"
+    },
+    {
+      "command": "rtk proxy python -m ruff check research/method_first_v1 tests/research/test_method_first_v1.py tools/check_method_first_v1.py",
+      "exit_code": 0,
+      "result": "All checks passed"
+    },
+    {
+      "command": "rtk proxy python tools/check_method_first_v1.py --revision 2 --test-revision 3",
+      "exit_code": 0,
+      "result": "local links, chapter assembly, old ledgers/scientific records and constructed case checks PASS"
+    }
+  ],
+  "application_runtime_suite": "NOT_RUN",
+  "molecular_experiment": "NOT_RUN",
+  "independent_reviewer": "NOT_RUN"
+}

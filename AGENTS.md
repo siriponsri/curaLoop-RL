@@ -1,5 +1,22 @@
 # Agent instructions: CuraLoop-RL
 
+## Current owner-approved method-first task, 8 November 2026
+
+The owner rejects benchmark publication as the primary contribution and approves
+method-first design plus correction of old material. Read GOAL.md, PLAN.md,
+docs/03_research/METHOD_FIRST_DESIGN_20261108.md and
+docs/06_execution/METHOD_FIRST_CHECKPOINT_20261108.md. Authorized: focused public
+primary research, reversible local constructed implementation/checks and English
+main delivery. No new scientific budget/clock, data/row/presence access, SSH,
+model campaign, split or final outcome. Parent sole writer. Old QP32/QC500 and
+the QP confirmation request are DEFERRED_METHOD_FIRST_NOT_RELEASED, not current
+owner decisions. Old configuration/evidence bytes remain historical; the current
+method-first status configuration overrides planning status. Preserve all old
+ledgers/STOPs/roles/frozen scientific records. Candidate mechanism checks pass;
+novelty HOLD_PRIOR_ART_OVERLAP and real-data adapter/benefit NOT_RUN. Do not claim
+a new algorithm or automatically pivot to a benchmark paper. All markers below
+are historical context, not execution authority.
+
 ## Deep Research direction approved; confirm missing pilot scope, 8 November 2026
 
 The owner approved the direction in Downloads/deep-research-report.md. Adopt

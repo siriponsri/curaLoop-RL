@@ -1,5 +1,10 @@
 # Materials and methods: historical and development studies
 
+Current constructed reference: [method design and pseudocode](../03_research/METHOD_FIRST_DESIGN_20261108.md).
+It uses synthetic predictive worlds only and has no molecular dataset adapter.
+The historical/development methods below retain their original scope and do
+not describe a new method experiment.
+
 ## Dataset and initialization
 
 The pilot uses the frozen `curaloop-hiv-1.0.0` derivative described in the resource manifest. The downloaded DeepChem HIV source contained 41,127 rows; seven invalid SMILES were removed under the documented preparation procedure. A label-blind random sample of 1,200 valid rows was retained. Canonical SMILES, Morgan radius-2 fingerprints with 1,024 bits and nonchiral Murcko scaffold identifiers were derived with RDKit. Historical CA/CM labels were mapped to active and CI to inactive.

@@ -1,108 +1,48 @@
-# Evidence-led implementation plan
+# Method-first plan
 
-> **Latest: R0-Design Review complete; protocol ready for owner/domain review.**
-> Read the [protocol](docs/03_research/R0_DESIGN_REVIEW_PROTOCOL_20261107.md),
-> [decision packet](docs/06_execution/R0_DESIGN_REVIEW_DECISIONS_20261107.md)
-> and [proposed R0-QC census](docs/06_execution/R0_SUPPORT_CENSUS_PROPOSAL_20261107.md).
-> The review retained the joint molecular-decision question and 128/64/32 floors;
-> it proposes source/family isolation and support-first construction repairs.
-> No new data, split, source request or outcome was opened. Scientific R0 is
-> REVISE; R0-QC's proposed 3 CPU-hours/24 hours is NOT_RELEASED. Owner decision
-> precedes any new qualification or R1. Earlier checkpoints below are history.
+Current decision: **8 November 2026**. Canonical design:
+[METHOD_FIRST_DESIGN](docs/03_research/METHOD_FIRST_DESIGN_20261108.md).
+The paper should contribute a method; existing datasets support evaluation.
 
-> **Latest: R0-DQ-R complete; scientific REVISE.** The ChEMBL37 metadata
-> inventory covers 11,055 targets. A fixed 200-target/1,254-assay frame yields one
-> nominal development pair; zero newly certified families, source-verified pools
-> or qualified final tasks. No numerical activities/presence flags were queried.
-> Read [results](docs/03_research/R0DQR_TAXONOMY_TASK_FEASIBILITY_20261107.md),
-> [owner options](docs/06_execution/R0DQR_OWNER_DECISION_20261107.md) and
-> [HANDOFF.md](HANDOFF.md). Full private return/reread and scoped absence passed.
-> The phase ledger is CLOSED. No R1 or proposed next budget is released.
-> All following checkpoint markers are historical snapshots.
-
-> **Latest: R0-DQ qualification readout available.** The fixed ChEMBL37 archive
-> and schema passed verification. Two candidates have panels of128compounds,
-> both in one development split unit; the36-task/18-group target and source
-> references remain unqualified. Read [results](docs/03_research/R0DQ_QUALIFICATION_RESULTS_20261107.md)
-> and [owner options](docs/06_execution/R0DQ_OWNER_DECISION_20261107.md).
-> Full private return/reread and scoped absence passed; the phase ledger is CLOSED. No R1 or new
-> R0-DQ-R package is released. Earlier checkpoint markers below are historical.
-
-> **Latest: owner-selected ChEMBL redesign plan ready.** Read
-> [dataset/benchmark design](docs/03_research/CHEMBL_TASKFIRST_DATASET_BENCHMARK_PLAN_20261107.md)
-> and [R0-DQ scope/resources](docs/06_execution/CHEMBL_TASKFIRST_DQ_PROPOSAL_20261107.md).
-> Task-first proposal:36bundles/18candidate groups,128reference compounds per
-> bundle and complete auxiliary support. R0-DQ16CPU-hours/72hours is NOT_RELEASED;
-> no new archive, numerical validation, SSH processing or phase clock. The owner
-> reviews permissions, budgets and gates before execution. R0 scientific REVISE.
-
-> **Current checkpoint: R0-A1 complete.** The approved identifier-aware audit
-> returned INFEASIBLE_IN_CURRENT_SUBSET; scientific R0 remains REVISE. Read
-> [the results](docs/03_research/R0A1_FEASIBILITY_RESULTS_20261107.md) and
-> [owner direction options](docs/06_execution/R0A1_NEXT_DECISION_20261107.md).
-> Complete allowed metadata already distinguishes context; the admitted
-> same-target group has only one molecule. No next phase or extra extraction.
-> Earlier R0-R and proposal-status wording below is historical.
-
-> **Current R0-R frontier:** the owner's three-paper subset is processed. Review
-> [the twelve-case packet](docs/03_research/R0R_REFERENCE_REVIEW_V2_20261107.md).
-> Document methods cover9/12cases,7/10admitted cases and26/86metadata records;
-> exact mappings and17null units remain unresolved. Other three documents stay
-> deferred without purchase. Reference review and the next-phase decision belong
-> to the owner; no automatic P1/R1, model fitting or final evaluation.
-
-The [owner decision options and proposed R0-A1](docs/06_execution/R0R_OWNER_DECISION_OPTIONS_20261107.md)
-are ready for review. R0-A1 is NOT_RELEASED; its proposed identifier-only access
-and fresh resource ceiling are not permission to start processing.
-
-> **7 November R0 readout complete:** structural ChEMBL37 metadata PASS,
-> scientific advance REVISE. The source ledger is closed. See
-> [the readout and proposed R0-R](docs/03_research/R0_CHEMBL_READINESS_RESULTS_20261107.md).
-> The owner decides whether to release a reference-feasibility revision; no
-> automatic next phase. Older pause/UI/roadmap entries below are historical.
-
-> **Owner checkpoint: pause after frontend delivery.** Molecular Studio for the
-> main app and additive C Workspace is complete in EN/TH. Read the
-> [frontend checkpoint](docs/06_execution/FRONTEND_CHECKPOINT_20261106.md) and
-> [HANDOFF.md](HANDOFF.md). Do not begin further research until owner resume.
-> Scientific readiness remains NOT_READY; final outcomes and source STOPs stay
-> preserved. Older “active UI” wording below records the earlier execution state.
-
-
-## Current bounded execution checkpoint
-
-[LR-BC core work](docs/06_execution/LRBC_CORE_CLOSEOUT_20261106.md) is complete,
-with molecular research NOT_READY and a narrowly supported metadata/report core.
-The [bilingual UI amendment](docs/06_execution/UI_REDESIGN_EXECUTION_20261106.md)
-is active under the unchanged C clock/budget. Preserve all prior source STOPs,
-failed attempts and final outcomes. The roadmap below does not release a new
-scientific study, paid service or external destination write.
-
-This plan supersedes the completed English/local-persistence delivery plan while retaining its evidence. Milestones advance when their outputs are inspectable. Long-term roadmap milestones do not imply an open-ended execution window.
-
-| Milestone | Work | Exit evidence |
+| Phase | Work and acceptance evidence | Current state |
 | --- | --- | --- |
-| M0: preserve and inspect | Verify source identity, protected bytes, current fallback behavior and documentation map | Source manifest, current-state audit and clean restoration point |
-| M1: lock the question | Audit closest prior art; choose the primary endpoint and baseline family | Versioned protocol and novelty decision |
-| M2: establish data | Build a licensed multi-task registry; canonicalize, audit duplicates and select targets before outcomes | Data/split manifests, exclusions and task roles |
-| M3: expose scheduling choices | Add pending-aware observations, event-time transitions and optional deadlines as versioned scientific changes | Small analytically checkable scenarios and scheduler tests |
-| M4: establish baselines | Implement static, diverse, uncertainty and asynchronous acquisition methods using the same predictor | Matched-budget/compute checks and public traces |
-| M5: test adaptive control | Replace all-fallback transfer with an explicitly trained controller or document inability to transfer | Held-out-target usage, performance and training-cost reports |
-| M6: run a development pilot | Execute 3-5 development targets under a small scenario grid | Failure analysis and locked final design |
-| M7: execute final study | Run the frozen held-out evaluation, ablations and uncertainty analysis | Complete machine-readable outputs and regenerated figures |
-| M8: assess buyer fit | Conduct authorized R&D discovery and negotiate a bounded pilot | Actual interview/pilot decisions; hypotheses retired or revised |
-| M9: assemble release | Build manuscript, supplements, archive and customer evaluation materials | Reproduction receipt, claim reconciliation and submission decision |
+| M0: method design and correction | Closest-work matrix, precise objective, pseudocode, constructed implementation/checks; reconcile old benchmark-first guidance | COMPLETE_FOR_OWNER_REVIEW; novelty HOLD |
+| M1: novelty and scalable predictor adapter | Reduction audit against robust baseline regret/ENS; credible predictive scenarios from delivered information; matched-cache comparison on exposed data | NOT_RUN; scope/resource grant needed before data/compute work |
+| M2: development evaluation | Strong matched predictor/controls, discovery/compute frontier, fallback and failure analysis; retain unfavorable results | NOT_RUN |
+| M3: protected evaluation | Freeze allowed population, dependence, roles, protocol, intervals and budget before outcomes | NOT_RELEASED |
+| P1: plugin method integration | Typed evidence/plan/report boundary, ordinary-tool control, factual/source/abstention/effort assessment | Existing metadata tools retained; new method integration NOT_RUN |
+| J1: manuscript and reproduction | Method-supported claims, figures, reproducible evidence, human/venue review | Design draft only; submission NOT_RELEASED |
 
-## Dependency rules
+## Current candidate and decision gate
 
-Literature, baseline implementation and business discovery materials can progress together. Final scientific evaluation follows data and protocol freezing. Customer claims follow customer evidence. The paper can report useful null results; do not redesign the final test after seeing them. Model improvements and schedule changes receive new experiment IDs and preserve prior runs.
+The candidate is computation-bounded baseline-relative rollout under predictive
+ambiguity. Its robust objective and fallback have close prior art. The exact
+constructed reference is an adaptation for inspection, not a finished novel
+algorithm. Generic memoization or a positive toy is insufficient for a method paper.
+If a matched established robust adaptation explains its behavior/tradeoff, reject
+the claimed method distinction and return to the owner. Do not silently pivot
+to a benchmark/curation paper.
 
-## Historical first implementation sequence
+## Existing data use
 
-Start with issues ENG-01 through ENG-05 in the implementation backlog: protected-state audit, data registry, scheduler specification, delay-invariance check and one strong baseline. These steps resolve whether the proposed research question is observable in the simulator. Avoid expanding UI scope before that question is testable.
+Use exposed HIV/Tox21 only for later engineering/development checks. FS-Mol is
+the preferred existing binary-task evaluation route, conditional on preserved
+label semantics and exposure/protection. It does not need to become a new dataset
+publication. ChEMBL/QP/QC and MF-PCBA intake are optional later decisions, not
+prerequisites for the current mechanism.
 
-Use [research protocol](docs/03_research/PROTOCOL.md), [backlog](docs/06_execution/BACKLOG.md), [Codex prompt](prompts/CODEX_RESEARCH_BUSINESS.md) and [verification](docs/05_product/VERIFICATION.md). Log a completed action once, link its evidence and name the next unresolved dependency. A request for owner input must identify the decision and its consequence; it must not substitute for ordinary implementation work.
+QP32 and QC500 remain deferred/unreleased. The previous QP confirmation question
+is superseded by the owner's method-first decision. No numerical validity grant,
+source intake, new cohort or molecular experiment is inferred from this plan.
 
-## Version-2 protocol dependencies
+## Execution boundaries
 
-Before data freeze, close relevant entries in `docs/02_literature/VERSION_DISCREPANCIES.md`. Before baseline freeze, implement the selector/update/one-class contracts in `docs/03_research/BASELINE_SPECIFICATION.md`. Pilot uniform and conditional-known-hit starts separately, measure fit/inference runtime and recalculate total run allocation. Assess a local backend adapter before expanding independent optimization infrastructure. All remain future execution tasks.
+This task completes M0 only, including bounded local constructed checks and normal
+main delivery. All prior scientific clocks/ledgers are closed. No unused resource
+is borrowed, no SSH or final outcome is opened, and no new experimental grant is
+created. M1 onward needs the owner's next bounded data/compute decision. Routine
+corrections within this approved design task do not require another permission.
+
+Historical protocols/results remain linked from the [claim ledger](docs/00_project/CLAIM_LEDGER.md).
+The prior roadmap is preserved in Git at checkpoint
+`1950b74d12f33eb08dc0b8a0fabf0ec0dbb7ad7a`; it is not current execution authority.

@@ -1,5 +1,12 @@
 # R0-QC proposal: support-first census before further qualification
 
+> **DEFERRED_METHOD_FIRST_NOT_RELEASED, 8 November 2026.** This proposal
+> is historical and no longer the next approval request. The owner selected
+> [method-first design](../03_research/METHOD_FIRST_DESIGN_20261108.md). No budget,
+> numeric-presence permission, root or clock is released. Original proposal
+> configuration/evidence remains; creation-time document hashes resolve against
+> the original Git checkpoint, not this later editorial notice.
+
 **NOT_RELEASED. No new clock, remote root, data query or execution starts from
 this document.** The owner is reviewing the [R0-Design protocol](../03_research/R0_DESIGN_REVIEW_PROTOCOL_20261107.md).
 This next proposal changes the bounded sampling scope, not the 128/64/32 floors,

@@ -1,0 +1,85 @@
+{
+  "scope": "CONSTRUCTED_PREDICTIVE_MODELS_ONLY_NOT_MOLECULAR_EVIDENCE",
+  "positive": {
+    "action": 1,
+    "baseline_action": 0,
+    "objective": "robust",
+    "reason": "COMPLETED_POSITIVE_ROLLOUT",
+    "selection_gain": 0.2,
+    "lower_gain_in_declared_models": 0.2,
+    "evaluated_alternatives": 2,
+    "state_evaluations": 7,
+    "cache_hits": 0,
+    "interrupted": false
+  },
+  "ambiguous_robust": {
+    "action": 0,
+    "baseline_action": 0,
+    "objective": "robust",
+    "reason": "GREEDY_BY_IDENTITY",
+    "selection_gain": 0.0,
+    "lower_gain_in_declared_models": 0.0,
+    "evaluated_alternatives": 2,
+    "state_evaluations": 7,
+    "cache_hits": 0,
+    "interrupted": false
+  },
+  "ambiguous_nominal": {
+    "action": 2,
+    "baseline_action": 0,
+    "objective": "mixture",
+    "reason": "COMPLETED_POSITIVE_ROLLOUT",
+    "selection_gain": 0.1,
+    "lower_gain_in_declared_models": null,
+    "evaluated_alternatives": 2,
+    "state_evaluations": 7,
+    "cache_hits": 0,
+    "interrupted": false
+  },
+  "cached": {
+    "action": 0,
+    "baseline_action": 0,
+    "objective": "robust",
+    "reason": "GREEDY_BY_IDENTITY",
+    "selection_gain": 0.0,
+    "lower_gain_in_declared_models": 0.0,
+    "evaluated_alternatives": 2,
+    "state_evaluations": 15,
+    "cache_hits": 2,
+    "interrupted": false
+  },
+  "uncached": {
+    "action": 0,
+    "baseline_action": 0,
+    "objective": "robust",
+    "reason": "GREEDY_BY_IDENTITY",
+    "selection_gain": 0.0,
+    "lower_gain_in_declared_models": 0.0,
+    "evaluated_alternatives": 2,
+    "state_evaluations": 17,
+    "cache_hits": 0,
+    "interrupted": false
+  },
+  "zero_computation_states": {
+    "action": 0,
+    "baseline_action": 0,
+    "objective": "robust",
+    "reason": "GREEDY_BY_IDENTITY",
+    "selection_gain": 0.0,
+    "lower_gain_in_declared_models": 0.0,
+    "evaluated_alternatives": 0,
+    "state_evaluations": 0,
+    "cache_hits": 0,
+    "interrupted": true
+  },
+  "misspecified_true_world_counterexample": {
+    "outside_model_world": [
+      1,
+      0,
+      0
+    ],
+    "baseline_realized_hits": 1,
+    "selected_deviation_then_greedy_realized_hits": 0,
+    "meaning": "Positive model-conditional gain does not establish real-world safety"
+  }
+}

@@ -1,15 +1,26 @@
 # Introduction
 
-Screening decisions determine which compounds receive scarce experimental attention. A predictive model may rank a large pool, but the next useful measurement also depends on what has already been tested, which experiments remain pending and which results can arrive before the decision horizon. The scientific question is therefore broader than discrimination on a static test set: it concerns the sequence of information acquisition under explicit resource constraints.
+The current research objective is a method for molecular active search evaluated
+on existing assay tasks. Candidate selection consumes a measurement budget, while
+lookahead consumes computation and depends on a predictive model that can be
+wrong. A useful method must improve a discovery/compute tradeoff over strong
+matched controls and explain which mechanism creates that improvement.
 
-Public molecular benchmarks provide a basis for retrospective evaluation. MoleculeNet and TDC organize datasets and task definitions (R01-R02), while active-learning studies examine how models and acquisition choices guide exploration (R04-R05, R27). Learned acquisition and RL-driven screening have existing precedents (R07, R28). Parallel and delayed optimization also have substantial prior art (R10-R13). These developments require a precise contribution beyond introducing an iterative loop or naming a controller RL.
+The [current design](../03_research/METHOD_FIRST_DESIGN_20261108.md) examines
+baseline-relative predictive-scenario rollout. The [primary-source review](../02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md)
+finds close overlap with established robust policy improvement and nonmyopic
+active search. The exact constructed reference is therefore a mechanism candidate
+and adaptation, not an established novel algorithm. Generic caching and an agent
+wrapper are insufficient novelty claims.
 
-Retrospective replay is useful because it allows a policy to be evaluated using historical labels that remain hidden until requested. However, replay quality depends on the information boundary, initialization, task sampling, event semantics and endpoint definitions. A hidden label can leak through preprocessing or simulation assumptions even when it is absent from the nominal model input. A repeated random seed changes initialization variability but does not establish generalization across biological targets.
+Historical work supplies useful counterevidence: complete controller fallback,
+null/unfavorable pending-aware comparisons and later gains substantially explained
+by a stronger predictor. Those results remain recorded, not relabeled as evidence
+for the new method. The unchanged historical methods/results chapters below
+describe their own populations and protocols.
 
-CuraLoop-RL provides a local workbench in which selection, pending work, delivery and accounting are recorded as public events. The current implementation combines fingerprint-based prediction, fixed acquisition policies and frozen synthetic-trained controllers. It supports historical and synthetic scenarios, independent matched comparisons and recoverable exports. These capabilities support reproducibility and inspection; their software correctness is separate from biological or operational validity.
-
-The historical HIV pilot reveals an important limitation. Both learned controllers used Greedy fallback for every recorded request. Their equality with Greedy therefore cannot be interpreted as successful RL transfer. The result motivates a study in which actual learned decisions, relevant state coverage and held-out biological tasks are explicitly evaluated. The existing pilot is retained because it identifies a methodological failure that a polished interface might otherwise obscure.
-
-This research programme asks when pending-aware acquisition changes confirmed historical hit discovery under a fixed simulated deadline and limited capacity. The comparison separates policy information from predictor quality and assesses whether heterogeneous durations create a decision problem that a common delay alone does not. It also asks whether adaptation transfers to tasks not used in controller development.
-
-The present manuscript describes the implemented workbench, preserved HIV pilot and newly executed NCATS development studies. The 108-run fixed-control pilot and separate 54-run Gaussian amendment retain null and unfavorable pending-aware comparisons; a fresh environment and separate local checkout reproduce the original scientific artifacts. These three correlated development endpoints do not constitute an independent-family final study. Source/structure audits and hypothetical hierarchical sensitivity calculations prepare that broader estimation design while preserving its open rights, endpoint and split gates. The evidence can support a bounded software/development contribution; no adaptive advantage is predetermined by the project name.
+New real-data comparisons require a credible predictive-scenario adapter, matched
+predictor/update/cache access, explicit measurement/compute accounting and preserved
+exposure/protected outcomes. A new benchmark publication is not the selected
+fallback. The R&D plugin is a separate application path whose factual and workflow
+benefit must be assessed independently.

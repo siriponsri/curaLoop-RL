@@ -18,3 +18,11 @@ practical laboratory utility and commercial benefit remain unestablished. The
 next scientific step is source/endpoint/dependence closure and a frozen analysis,
 not a claim that implementation complexity or publication preparation proves an
 adaptive advantage.
+
+The current method-first design adds an exact constructed rollout reference and
+explicit novelty challenge. Its objective substantially overlaps established
+robust policy improvement; no molecular improvement or new algorithm is claimed.
+The next discriminating question is whether a substantive efficient active-search
+method remains after matched prior-art adaptation and predictor/cache controls.
+Existing benchmarks will evaluate that method; benchmark publication is not the
+owner-selected destination. New real-data/final work remains unreleased.

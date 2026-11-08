@@ -1,54 +1,46 @@
-# Title, abstract and keywords
+# Title, design abstract and contribution
 
-**Manuscript state: WORKING_DRAFT_WITH_EXECUTED_DEVELOPMENT_STUDIES.** The
-historical HIV pilot, NCATS development campaigns, fresh-environment reproduction
-and Gaussian amendment are available. The broader held-out-family study remains
-unfrozen and unexecuted. This is not a submission-ready final-study report.
+**METHOD_FIRST_DESIGN_DRAFT; NOVELTY_HOLD; NOT_SUBMISSION_READY.** The current
+candidate has a constructed reference, not molecular efficacy evidence. Historical
+studies remain separate; neither benchmark publication nor software features
+substitute for the requested method contribution.
 
-## Current working title
+## Conditional working title
 
-CuraLoop: An Auditable Molecular Screening Workbench with Reproducible Development Studies under Delayed Feedback
+CuraLoop: Computation-Bounded Molecular Active Search under Predictive-Model Ambiguity
 
-## Candidate final-study title
+The title is a research direction, not a finding of a new or superior algorithm.
 
-When Does Pending-Aware Selection Help? A Reproducible Study of Molecular Screening under Delayed Feedback and Resource Constraints
+## Design abstract
 
-The final-study title is conditional on completing the independent-family study;
-it does not imply that a benefit has been demonstrated.
+Molecular active search must allocate measurements and planning computation
+while its predictive model remains uncertain. We propose to investigate a
+baseline-relative rollout controller that evaluates deviations from a common
+Greedy policy across declared predictive models, retains only completed favorable
+comparisons and returns the baseline when further planning is unsupported or
+interrupted. A small exact reference implements shared Greedy continuation traces
+and distinguishes robust from mixture-expected scores. Constructed checks expose
+both useful nonmyopic behavior and conservative fallback, and include a failure
+when the true outcome lies outside the declared model set. These checks do not
+establish molecular performance, calibration, real-world safety or algorithmic
+novelty. Robust baseline improvement and nonmyopic active search are established
+prior art; a substantive distinction remains to be demonstrated. Existing HIV,
+Tox21 and FS-Mol resources are intended for later controlled evaluation with
+matched predictors, cache access, measurement budgets and computation accounting.
+Historical unfavorable planning results are retained as counterevidence. A
+scalable predictive-scenario adapter and real-data method comparison remain
+unexecuted. The product direction is an auditable R&D evidence/plan/report plugin,
+whose workflow value requires separate evaluation.
 
-## Abstract
+## Intended contribution and present evidence
 
-Molecular screening combines candidate selection with limited resources and
-delayed assay feedback. CuraLoop-RL separates public candidate information from
-unrevealed historical labels and records accepted requests, pending commitments
-and delivered outcomes in an auditable ledger. Its preserved 1,200-compound HIV
-pilot shows a transfer limitation: two synthetic-trained controllers each used
-Greedy fallback for all 300 requests. We then executed a frozen 108-run CPU
-development study on three correlated NCATS Tox21 endpoints, using six fixed
-controls, three paired initialization seeds and two simulated-duration conditions.
-Under heterogeneous duration, a pending-similarity penalty tied retrained Greedy
-in eight of nine pairs and lost two delivered active labels in one pair; all
-nine common-delay pairs had identical public event histories. A clean virtual
-environment and separate checkout reproduced all 108 scientific artifacts on the
-same host. A separately frozen 54-run Gaussian-surrogate amendment tied its
-matched pending-blind comparator in all nine heterogeneous pairs despite five
-changed histories. These bounded development results neither establish an
-independent-target population effect nor demonstrate equivalence or learned
-transfer. Outcome-sealed source/structure audits and hypothetical hierarchical
-precision/resource simulations prepare a broader family-level estimation study,
-whose rights, endpoint, task-role and analysis gates remain open. The workbench
-supports reproducible retrospective research; prospective assay utility,
-laboratory savings and operational Digital Twin fidelity remain unvalidated.
-
-## Scientific contribution statement
-
-The implemented contribution is an inspectable local replay workflow with tested
-information/accounting boundaries, versioned development controls and retained
-null/unfavorable comparisons. Same-implementer fresh-environment reproduction
-supports reproducibility of those campaigns. Independent-family generalization,
-practical utility and successful learned adaptation remain research questions.
+The intended contribution is a defensible acquisition method evaluated on
+existing benchmarks. Current evidence is an executable mechanism adaptation and
+focused novelty challenge, not a new benchmark, proven new algorithm or finished
+results paper. See [design](../03_research/METHOD_FIRST_DESIGN_20261108.md) and
+[closest work](../02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md).
 
 ## Keywords
 
-Molecular screening; active learning; delayed feedback; asynchronous acquisition;
-reproducibility; research software.
+Molecular active search; predictive-model ambiguity; rollout; computation budget;
+baseline-relative decision making; reproducibility.

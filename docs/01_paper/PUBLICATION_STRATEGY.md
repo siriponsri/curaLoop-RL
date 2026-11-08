@@ -1,5 +1,10 @@
 # Publication strategy and readiness
 
+> **Current override, 8 November 2026:** the owner selected a method paper
+> evaluated on existing benchmarks. [Method novelty remains HOLD](../02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md).
+> Historical venue/fee guidance below requires fresh submission-time checking;
+> software or benchmark publication is not an automatic fallback. No submission.
+
 The owner supplied publication identity and a USD 300 fee ceiling on 4 November
 2026. Separate journal agents checked current primary guidance and a third
 agent reviewed the integrated recommendation. The

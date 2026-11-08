@@ -1,5 +1,10 @@
 # Cover letter draft
 
+> **HISTORICAL_UNSENT_DRAFT; SUPERSEDED_METHOD_FRAMING, 8 November 2026.**
+> Do not send or treat the software-workflow contribution below as the selected
+> paper. Rebuild this draft after method evidence and human/venue review.
+> [Current design](../../03_research/METHOD_FIRST_DESIGN_20261108.md).
+
 **UNSENT; NOT_READY_TO_SEND.** Conditional target: Journal of Computer-Aided
 Molecular Design. Synchronize the title with the human-reviewed manuscript.
 This draft does not certify originality, concurrent-submission status, author

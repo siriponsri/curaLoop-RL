@@ -1,5 +1,9 @@
 # Baseline specification and objective matching
 
+> **Current planning override, 8 November 2026:** use the [method-first design](METHOD_FIRST_DESIGN_20261108.md). The older question/roadmap below is historical. Preserve frozen
+> scientific evidence and safeguards; it does not release QP/QC, a benchmark-
+> publication fallback, new data/compute or final outcomes.
+
 Goal 1 proposes a new planning-method research programme; see
 [the thesis/validation decision](CONTRIBUTION_AND_VALIDATION_V1.md) and its
 [closest-work review](../02_literature/GOAL_01_CLOSEST_WORK_20261104.md). Future
