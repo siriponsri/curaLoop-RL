@@ -1,5 +1,31 @@
 # Goal: a defensible method and a useful R&D plugin
 
+**Next proposal: [LR-D23](docs/06_execution/LONG_RUN_D2_D3_PROPOSAL_20261109.md).**
+Fresh24 CPU-hours /72 hours /max4 workers would close D2 and conditional D3
+development around one residual UPDATE/REUSE mechanism. Owner approval remains
+required before its clock/training starts. The current owner instruction releases
+normal main delivery of completed D0/D1 work and this proposal, not LR-D23 execution.
+
+**Current: D1 COMPLETE_FOR_OWNER_REVIEW, 9 November.**
+[Results](docs/03_research/D1_OPERATION_HEADROOM_RESULTS_20261109.md) show limited
+context-dependent UPDATE headroom and measured cheap-control tradeoffs, without
+a new method superiority claim. Fresh120 controls/12 synthetic contexts PASS;
+1.25/4 retained CPU-hours, complete return and exact remote cleanup. Owner reviews
+[the checkpoint](docs/06_execution/D1_OWNER_CHECKPOINT_20261109.md) before D2.
+Final16 and conditional96h remain closed; M2 remains INCONCLUSIVE.
+
+**D1 released, 9 November:** owner approved the pinned diagnostic plan at a fresh
+4 CPU-hours / 24 hours / one worker. Start with authenticated existing paired
+evidence, preserving its original population. [Release](research/manifests/d1_release_20261109_v1.json).
+No final16 access, old-account reopening, conditional96h activation or automatic D2/M3.
+
+**Local D0 adaptation, 9 November:** inspect the real computation choices before
+another method study. [Audit](docs/03_research/M2_D0_OPERATION_AUDIT_20261109.md)
+and [D0-D3 plan](docs/06_execution/M2_DIAGNOSTIC_PLAN_20261109.md) add outcome-free
+instrumentation and constructed checks. D1 biological diagnostics require a fresh
+owner release; final16 and the conditional96-hour grant remain closed. The
+historical M2 result below is not relabelled by this engineering work.
+
 **Current checkpoint, 9 November 2026: M2 COMPLETE / INCONCLUSIVE.**
 The project still seeks a useful method evaluated on existing datasets and a
 source-grounded R&D workflow. A new benchmark publication is not the destination.

@@ -60,6 +60,14 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 ## Research and R&D pilot programme
 
+**9 November 2026:** [D1 diagnostics are complete](docs/03_research/D1_OPERATION_HEADROOM_RESULTS_20261109.md).
+Refresh decisions show limited contextual value; a new method advantage remains
+unestablished. [LR-D23](docs/06_execution/LONG_RUN_D2_D3_PROPOSAL_20261109.md)
+proposes one residual controller and development robustness within a fresh
+24 CPU-hour /72-hour ceiling. It awaits owner approval; final outcomes stay sealed.
+See the [owner checkpoint](docs/06_execution/D1_OWNER_CHECKPOINT_20261109.md)
+and [evidence](docs/evidence/d1-operation-headroom-20261109-v1/README.md).
+
 **M2 complete / INCONCLUSIVE, 9 November 2026.** CuraLoop's method-first study
 evaluated learned REUSE/UPDATE/PLAN allocation on six exposed FS-Mol assays,
 four annotation components, two predictors and eight matched arms. All 4,164

@@ -1,0 +1,3668 @@
+{
+  "schema": "curaloop.d1.reuse_results.v1",
+  "status": "PASS_COMPLETE_REUSE_ANALYSIS",
+  "scope": "original masked training pools; original calibrated caps; not new seed71003/full pools",
+  "new_independent_replications": 0,
+  "states": 24,
+  "components": 4,
+  "paired_contexts": 48,
+  "branch_units_reused": 144,
+  "main_controls_reused": 180,
+  "paired": {
+    "cheap": {
+      "UPDATE-REUSE": {
+        "assigned_hit_effect": {
+          "mean": 0.375,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 0.25,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+            "typed-ancestry-341ed92ba201e1cfedfc": 1.0,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+          },
+          "positive_components": 3,
+          "rows": 24
+        },
+        "supported_hit_effect": {
+          "mean": 0.375,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 0.25,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+            "typed-ancestry-341ed92ba201e1cfedfc": 1.0,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+          },
+          "positive_components": 3,
+          "rows": 24
+        },
+        "assigned_cpu_effect_seconds": {
+          "mean": 0.10670374946874996,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 0.12482445000000031,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0.07362291474999971,
+            "typed-ancestry-341ed92ba201e1cfedfc": 0.15752357849999998,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0.07084405462499982
+          },
+          "positive_components": 4,
+          "rows": 24
+        },
+        "assigned_deliveries_effect": {
+          "mean": 0,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+            "typed-ancestry-341ed92ba201e1cfedfc": 0,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0
+          },
+          "positive_components": 0,
+          "rows": 24
+        },
+        "assigned_whole_process_cpu_effect_seconds": {
+          "mean": 0.16582896862500018,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 0.1986625580000001,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0.06985865850000006,
+            "typed-ancestry-341ed92ba201e1cfedfc": 0.31101068975000024,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0.08378396825000034
+          },
+          "positive_components": 4,
+          "rows": 24
+        },
+        "supported_states": 24,
+        "assigned_states": 24,
+        "action_changes": 19,
+        "unsupported_reasons": {},
+        "positive_zero_negative": [
+          7,
+          14,
+          3
+        ]
+      },
+      "PLAN-UPDATE": {
+        "assigned_hit_effect": {
+          "mean": 0.3125,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 1.25,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0.5,
+            "typed-ancestry-341ed92ba201e1cfedfc": -1.25,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0.75
+          },
+          "positive_components": 3,
+          "rows": 24
+        },
+        "supported_hit_effect": {
+          "mean": 0.3125,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 1.25,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0.5,
+            "typed-ancestry-341ed92ba201e1cfedfc": -1.25,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0.75
+          },
+          "positive_components": 3,
+          "rows": 24
+        },
+        "assigned_cpu_effect_seconds": {
+          "mean": 1.2223842587500002,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 1.3090051207500002,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 1.1669606325000004,
+            "typed-ancestry-341ed92ba201e1cfedfc": 1.222323512,
+            "typed-ancestry-52211aa39e1b3526ca3b": 1.1912477697500004
+          },
+          "positive_components": 4,
+          "rows": 24
+        },
+        "assigned_deliveries_effect": {
+          "mean": 0,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+            "typed-ancestry-341ed92ba201e1cfedfc": 0,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0
+          },
+          "positive_components": 0,
+          "rows": 24
+        },
+        "assigned_whole_process_cpu_effect_seconds": {
+          "mean": 1.174278303,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 1.2697360917499998,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 1.1543785579999999,
+            "typed-ancestry-341ed92ba201e1cfedfc": 1.056266026125,
+            "typed-ancestry-52211aa39e1b3526ca3b": 1.2167325361249999
+          },
+          "positive_components": 4,
+          "rows": 24
+        },
+        "supported_states": 24,
+        "assigned_states": 24,
+        "action_changes": 22,
+        "unsupported_reasons": {},
+        "positive_zero_negative": [
+          6,
+          9,
+          9
+        ]
+      },
+      "PLAN-REUSE": {
+        "assigned_hit_effect": {
+          "mean": 0.6875,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 1.5,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0.5,
+            "typed-ancestry-341ed92ba201e1cfedfc": -0.25,
+            "typed-ancestry-52211aa39e1b3526ca3b": 1.0
+          },
+          "positive_components": 3,
+          "rows": 24
+        },
+        "supported_hit_effect": {
+          "mean": 0.6875,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 1.5,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0.5,
+            "typed-ancestry-341ed92ba201e1cfedfc": -0.25,
+            "typed-ancestry-52211aa39e1b3526ca3b": 1.0
+          },
+          "positive_components": 3,
+          "rows": 24
+        },
+        "assigned_cpu_effect_seconds": {
+          "mean": 1.3290880082187502,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 1.4338295707500004,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 1.2405835472500002,
+            "typed-ancestry-341ed92ba201e1cfedfc": 1.3798470905,
+            "typed-ancestry-52211aa39e1b3526ca3b": 1.2620918243750001
+          },
+          "positive_components": 4,
+          "rows": 24
+        },
+        "assigned_deliveries_effect": {
+          "mean": 0,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+            "typed-ancestry-341ed92ba201e1cfedfc": 0,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0
+          },
+          "positive_components": 0,
+          "rows": 24
+        },
+        "assigned_whole_process_cpu_effect_seconds": {
+          "mean": 1.340107271625,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 1.46839864975,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 1.2242372165,
+            "typed-ancestry-341ed92ba201e1cfedfc": 1.3672767158750003,
+            "typed-ancestry-52211aa39e1b3526ca3b": 1.3005165043750002
+          },
+          "positive_components": 4,
+          "rows": 24
+        },
+        "supported_states": 24,
+        "assigned_states": 24,
+        "action_changes": 23,
+        "unsupported_reasons": {},
+        "positive_zero_negative": [
+          10,
+          8,
+          6
+        ]
+      }
+    },
+    "high": {
+      "UPDATE-REUSE": {
+        "assigned_hit_effect": {
+          "mean": 0.375,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 0.25,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+            "typed-ancestry-341ed92ba201e1cfedfc": 1.0,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+          },
+          "positive_components": 3,
+          "rows": 24
+        },
+        "supported_hit_effect": {
+          "mean": 0.375,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 0.25,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+            "typed-ancestry-341ed92ba201e1cfedfc": 1.0,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+          },
+          "positive_components": 3,
+          "rows": 24
+        },
+        "assigned_cpu_effect_seconds": {
+          "mean": 0.10186229243750006,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 0.09706658000000001,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0.12626360500000033,
+            "typed-ancestry-341ed92ba201e1cfedfc": 0.09740902500000004,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0.08670995974999984
+          },
+          "positive_components": 4,
+          "rows": 24
+        },
+        "assigned_deliveries_effect": {
+          "mean": 0,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+            "typed-ancestry-341ed92ba201e1cfedfc": 0,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0
+          },
+          "positive_components": 0,
+          "rows": 24
+        },
+        "assigned_whole_process_cpu_effect_seconds": {
+          "mean": 0.06309000740624998,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 0.04178019175000003,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0.08576150550000006,
+            "typed-ancestry-341ed92ba201e1cfedfc": 0.08085627049999988,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0.04396206187499996
+          },
+          "positive_components": 4,
+          "rows": 24
+        },
+        "supported_states": 24,
+        "assigned_states": 24,
+        "action_changes": 19,
+        "unsupported_reasons": {},
+        "positive_zero_negative": [
+          7,
+          14,
+          3
+        ]
+      },
+      "PLAN-UPDATE": {
+        "assigned_hit_effect": {
+          "mean": 0.4375,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 1.5,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 1.25,
+            "typed-ancestry-341ed92ba201e1cfedfc": -1.25,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+          },
+          "positive_components": 3,
+          "rows": 24
+        },
+        "supported_hit_effect": {
+          "mean": 0.4375,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 1.5,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 1.25,
+            "typed-ancestry-341ed92ba201e1cfedfc": -1.25,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+          },
+          "positive_components": 3,
+          "rows": 24
+        },
+        "assigned_cpu_effect_seconds": {
+          "mean": 1.4074250719062502,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 1.4450679147500003,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 1.3812302392500002,
+            "typed-ancestry-341ed92ba201e1cfedfc": 1.4363668516250003,
+            "typed-ancestry-52211aa39e1b3526ca3b": 1.367035282
+          },
+          "positive_components": 4,
+          "rows": 24
+        },
+        "assigned_deliveries_effect": {
+          "mean": 0,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+            "typed-ancestry-341ed92ba201e1cfedfc": 0,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0
+          },
+          "positive_components": 0,
+          "rows": 24
+        },
+        "assigned_whole_process_cpu_effect_seconds": {
+          "mean": 1.42089118065625,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 1.4673626855000002,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 1.3932652049999998,
+            "typed-ancestry-341ed92ba201e1cfedfc": 1.4244664400000002,
+            "typed-ancestry-52211aa39e1b3526ca3b": 1.3984703921250001
+          },
+          "positive_components": 4,
+          "rows": 24
+        },
+        "supported_states": 24,
+        "assigned_states": 24,
+        "action_changes": 22,
+        "unsupported_reasons": {},
+        "positive_zero_negative": [
+          6,
+          10,
+          8
+        ]
+      },
+      "PLAN-REUSE": {
+        "assigned_hit_effect": {
+          "mean": 0.8125,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 1.75,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 1.25,
+            "typed-ancestry-341ed92ba201e1cfedfc": -0.25,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0.5
+          },
+          "positive_components": 3,
+          "rows": 24
+        },
+        "supported_hit_effect": {
+          "mean": 0.8125,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 1.75,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 1.25,
+            "typed-ancestry-341ed92ba201e1cfedfc": -0.25,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0.5
+          },
+          "positive_components": 3,
+          "rows": 24
+        },
+        "assigned_cpu_effect_seconds": {
+          "mean": 1.50928736434375,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 1.5421344947500004,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 1.5074938442500003,
+            "typed-ancestry-341ed92ba201e1cfedfc": 1.533775876625,
+            "typed-ancestry-52211aa39e1b3526ca3b": 1.4537452417499999
+          },
+          "positive_components": 4,
+          "rows": 24
+        },
+        "assigned_deliveries_effect": {
+          "mean": 0,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+            "typed-ancestry-341ed92ba201e1cfedfc": 0,
+            "typed-ancestry-52211aa39e1b3526ca3b": 0
+          },
+          "positive_components": 0,
+          "rows": 24
+        },
+        "assigned_whole_process_cpu_effect_seconds": {
+          "mean": 1.4839811880625,
+          "components": {
+            "typed-ancestry-3d78be158d61c2c9cfd8": 1.5091428772500002,
+            "typed-ancestry-3bdd4e9dd09027c116b1": 1.4790267105,
+            "typed-ancestry-341ed92ba201e1cfedfc": 1.5053227105,
+            "typed-ancestry-52211aa39e1b3526ca3b": 1.442432454
+          },
+          "positive_components": 4,
+          "rows": 24
+        },
+        "supported_states": 24,
+        "assigned_states": 24,
+        "action_changes": 23,
+        "unsupported_reasons": {},
+        "positive_zero_negative": [
+          10,
+          7,
+          7
+        ]
+      }
+    }
+  },
+  "context_bins": [
+    {
+      "variable": "stale_labels",
+      "bin": "<4",
+      "summary": {
+        "cheap": {
+          "UPDATE-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.21875,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.125
+              },
+              "positive_components": 1,
+              "rows": 16
+            },
+            "supported_hit_effect": {
+              "mean": 0.21875,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.125
+              },
+              "positive_components": 1,
+              "rows": 16
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 0.08719796856249995,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.08797383500000033,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.07362291474999971,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.11255386449999993,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.07464125999999982
+              },
+              "positive_components": 4,
+              "rows": 16
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 16
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 0.09551371065625008,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.11842678249999983,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.06985865850000006,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.1591451317500001,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.034624269875000335
+              },
+              "positive_components": 4,
+              "rows": 16
+            },
+            "supported_states": 16,
+            "assigned_states": 16,
+            "action_changes": 12,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              3,
+              11,
+              2
+            ]
+          },
+          "PLAN-UPDATE": {
+            "assigned_hit_effect": {
+              "mean": 0.09375,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": -0.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.375
+              },
+              "positive_components": 2,
+              "rows": 16
+            },
+            "supported_hit_effect": {
+              "mean": 0.09375,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": -0.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.375
+              },
+              "positive_components": 2,
+              "rows": 16
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.2727364955312503,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4474858595000004,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.1669606325000004,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.3574583020000004,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.1190411881250002
+              },
+              "positive_components": 4,
+              "rows": 16
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 16
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.2581721404375,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4010600555,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.1543785579999999,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.3004186642500002,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.176831284
+              },
+              "positive_components": 4,
+              "rows": 16
+            },
+            "supported_states": 16,
+            "assigned_states": 16,
+            "action_changes": 15,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              3,
+              7,
+              6
+            ]
+          },
+          "PLAN-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.3125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+              },
+              "positive_components": 3,
+              "rows": 16
+            },
+            "supported_hit_effect": {
+              "mean": 0.3125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+              },
+              "positive_components": 3,
+              "rows": 16
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.3599344640937503,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5354596945000007,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.2405835472500002,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4700121665,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.1936824481250001
+              },
+              "positive_components": 4,
+              "rows": 16
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 16
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.3536858510937502,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5194868379999997,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.2242372165,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4595637960000003,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.2114555538750003
+              },
+              "positive_components": 4,
+              "rows": 16
+            },
+            "supported_states": 16,
+            "assigned_states": 16,
+            "action_changes": 15,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              4,
+              8,
+              4
+            ]
+          }
+        },
+        "high": {
+          "UPDATE-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.21875,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.125
+              },
+              "positive_components": 1,
+              "rows": 16
+            },
+            "supported_hit_effect": {
+              "mean": 0.21875,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.125
+              },
+              "positive_components": 1,
+              "rows": 16
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 0.09412883071874992,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.08615751250000003,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.12626360500000033,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.0844507462499996,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.0796434591249997
+              },
+              "positive_components": 4,
+              "rows": 16
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 16
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 0.07444633853125002,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.03729185099999999,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.08576150550000006,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.11940809250000006,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.05532390512499996
+              },
+              "positive_components": 4,
+              "rows": 16
+            },
+            "supported_states": 16,
+            "assigned_states": 16,
+            "action_changes": 12,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              3,
+              11,
+              2
+            ]
+          },
+          "PLAN-UPDATE": {
+            "assigned_hit_effect": {
+              "mean": 0.09375,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.25,
+                "typed-ancestry-341ed92ba201e1cfedfc": -0.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.375
+              },
+              "positive_components": 1,
+              "rows": 16
+            },
+            "supported_hit_effect": {
+              "mean": 0.09375,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.25,
+                "typed-ancestry-341ed92ba201e1cfedfc": -0.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.375
+              },
+              "positive_components": 1,
+              "rows": 16
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.3946993195625002,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4105441060000004,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.3812302392500002,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.453221821,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.3338011120000002
+              },
+              "positive_components": 4,
+              "rows": 16
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 16
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.40891511809375,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5038844445000001,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.3932652049999998,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4238446055,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.3146662173750001
+              },
+              "positive_components": 4,
+              "rows": 16
+            },
+            "supported_states": 16,
+            "assigned_states": 16,
+            "action_changes": 15,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              3,
+              8,
+              5
+            ]
+          },
+          "PLAN-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.3125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.25,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.5
+              },
+              "positive_components": 2,
+              "rows": 16
+            },
+            "supported_hit_effect": {
+              "mean": 0.3125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.25,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.5
+              },
+              "positive_components": 2,
+              "rows": 16
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.4888281502812502,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4967016185000004,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.5074938442500003,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.5376725672499998,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.4134445711249999
+              },
+              "positive_components": 4,
+              "rows": 16
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 16
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.483361456625,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5411762955000001,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.4790267105,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.543252698,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.3699901225
+              },
+              "positive_components": 4,
+              "rows": 16
+            },
+            "supported_states": 16,
+            "assigned_states": 16,
+            "action_changes": 15,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              4,
+              7,
+              5
+            ]
+          }
+        }
+      }
+    },
+    {
+      "variable": "stale_labels",
+      "bin": ">=4",
+      "summary": {
+        "cheap": {
+          "UPDATE-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 1.1666666666666667,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 2
+              },
+              "positive_components": 3,
+              "rows": 8
+            },
+            "supported_hit_effect": {
+              "mean": 1.1666666666666667,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 2
+              },
+              "positive_components": 3,
+              "rows": 8
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 0.14219744683333335,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.16167506500000028,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.20249329250000003,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.06242398299999974
+              },
+              "positive_components": 3,
+              "rows": 8
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 8
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 0.3019223034166669,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.2788983335000004,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.46287624775000036,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.16399232900000005
+              },
+              "positive_components": 3,
+              "rows": 8
+            },
+            "supported_states": 8,
+            "assigned_states": 8,
+            "action_changes": 7,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              4,
+              3,
+              1
+            ]
+          },
+          "PLAN-UPDATE": {
+            "assigned_hit_effect": {
+              "mean": 0.16666666666666666,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 2.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": -2.0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 1,
+              "rows": 8
+            },
+            "supported_hit_effect": {
+              "mean": 0.16666666666666666,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 2.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": -2.0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 1,
+              "rows": 8
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.2364101573333335,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.170524382,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.0871887219999996,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.4515173680000006
+              },
+              "positive_components": 3,
+              "rows": 8
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 8
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.128272775,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.1384121279999997,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.812113388,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.434292809
+              },
+              "positive_components": 3,
+              "rows": 8
+            },
+            "supported_states": 8,
+            "assigned_states": 8,
+            "action_changes": 7,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              3,
+              2,
+              3
+            ]
+          },
+          "PLAN-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 1.3333333333333333,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 3,
+                "typed-ancestry-341ed92ba201e1cfedfc": -1,
+                "typed-ancestry-52211aa39e1b3526ca3b": 2
+              },
+              "positive_components": 2,
+              "rows": 8
+            },
+            "supported_hit_effect": {
+              "mean": 1.3333333333333333,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 3,
+                "typed-ancestry-341ed92ba201e1cfedfc": -1,
+                "typed-ancestry-52211aa39e1b3526ca3b": 2
+              },
+              "positive_components": 2,
+              "rows": 8
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.3786076041666668,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.3321994470000003,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.2896820144999999,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.5139413510000004
+              },
+              "positive_components": 3,
+              "rows": 8
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 8
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.4301950784166668,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4173104615,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.2749896357500003,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.598285138
+              },
+              "positive_components": 3,
+              "rows": 8
+            },
+            "supported_states": 8,
+            "assigned_states": 8,
+            "action_changes": 8,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              6,
+              0,
+              2
+            ]
+          }
+        },
+        "high": {
+          "UPDATE-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 1.1666666666666667,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 2
+              },
+              "positive_components": 3,
+              "rows": 8
+            },
+            "supported_hit_effect": {
+              "mean": 1.1666666666666667,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 2
+              },
+              "positive_components": 3,
+              "rows": 8
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 0.09675459825000025,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.1079756475,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.11036730375000048,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.07192084350000028
+              },
+              "positive_components": 3,
+              "rows": 8
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 8
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 0.033393009499999904,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.04626853250000007,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.0423044484999997,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.011606047499999939
+              },
+              "positive_components": 3,
+              "rows": 8
+            },
+            "supported_states": 8,
+            "assigned_states": 8,
+            "action_changes": 7,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              4,
+              3,
+              1
+            ]
+          },
+          "PLAN-UPDATE": {
+            "assigned_hit_effect": {
+              "mean": 0.3333333333333333,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 3,
+                "typed-ancestry-341ed92ba201e1cfedfc": -2,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 1,
+              "rows": 8
+            },
+            "supported_hit_effect": {
+              "mean": 0.3333333333333333,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 3,
+                "typed-ancestry-341ed92ba201e1cfedfc": -2,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 1,
+              "rows": 8
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.4371674349166665,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4795917235000002,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4195118822500001,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.4123986989999995
+              },
+              "positive_components": 3,
+              "rows": 8
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 8
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.4621218063333334,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4308409265000002,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4250882745000002,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.5304362179999997
+              },
+              "positive_components": 3,
+              "rows": 8
+            },
+            "supported_states": 8,
+            "assigned_states": 8,
+            "action_changes": 7,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              3,
+              2,
+              3
+            ]
+          },
+          "PLAN-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 1.5,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 3.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": -1.0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 2
+              },
+              "positive_components": 2,
+              "rows": 8
+            },
+            "supported_hit_effect": {
+              "mean": 1.5,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 3.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": -1.0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 2
+              },
+              "positive_components": 2,
+              "rows": 8
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.5339220331666668,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5875673710000002,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.5298791860000005,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.4843195424999998
+              },
+              "positive_components": 3,
+              "rows": 8
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 8
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.4955148158333333,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4771094590000002,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.467392723,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.5420422654999997
+              },
+              "positive_components": 3,
+              "rows": 8
+            },
+            "supported_states": 8,
+            "assigned_states": 8,
+            "action_changes": 8,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              6,
+              0,
+              2
+            ]
+          }
+        }
+      }
+    },
+    {
+      "variable": "remaining_assays",
+      "bin": "16",
+      "summary": {
+        "cheap": {
+          "UPDATE-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.25,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": -1,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1
+              },
+              "positive_components": 2,
+              "rows": 12
+            },
+            "supported_hit_effect": {
+              "mean": 0.25,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": -1,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1
+              },
+              "positive_components": 2,
+              "rows": 12
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 0.08902145343749981,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.08797383500000033,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.06205304199999939,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.11255386449999993,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.0935050722499996
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 12
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 0.12980525293750012,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.11842678249999983,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.07667804250000021,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.1591451317500001,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.1649710550000003
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "supported_states": 12,
+            "assigned_states": 12,
+            "action_changes": 9,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              3,
+              8,
+              1
+            ]
+          },
+          "PLAN-UPDATE": {
+            "assigned_hit_effect": {
+              "mean": 0.0625,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1,
+                "typed-ancestry-341ed92ba201e1cfedfc": -0.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.25
+              },
+              "positive_components": 1,
+              "rows": 12
+            },
+            "supported_hit_effect": {
+              "mean": 0.0625,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1,
+                "typed-ancestry-341ed92ba201e1cfedfc": -0.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.25
+              },
+              "positive_components": 1,
+              "rows": 12
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.3703757981875007,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4474858595000004,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.3322286175000007,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.3574583020000004,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.3443304137500007
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 12
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.347977362375,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4010600555,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.3391901759999998,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.3004186642500002,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.3512405537499999
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "supported_states": 12,
+            "assigned_states": 12,
+            "action_changes": 10,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              1,
+              9,
+              2
+            ]
+          },
+          "PLAN-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.3125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.75
+              },
+              "positive_components": 2,
+              "rows": 12
+            },
+            "supported_hit_effect": {
+              "mean": 0.3125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.75
+              },
+              "positive_components": 2,
+              "rows": 12
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.4593972516250002,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5354596945000007,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.3942816595,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4700121665,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.4378354860000002
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 12
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.4777826153125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5194868379999997,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.4158682185,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4595637960000003,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.5162116087500002
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "supported_states": 12,
+            "assigned_states": 12,
+            "action_changes": 11,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              3,
+              7,
+              2
+            ]
+          }
+        },
+        "high": {
+          "UPDATE-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.25,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": -1,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1
+              },
+              "positive_components": 2,
+              "rows": 12
+            },
+            "supported_hit_effect": {
+              "mean": 0.25,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": -1,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1
+              },
+              "positive_components": 2,
+              "rows": 12
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 0.08492672843750004,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.08615751250000003,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.08050113950000037,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.0844507462499996,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.08859751550000017
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 12
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 0.06365652750000006,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.03729185099999999,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.09716916350000027,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.11940809250000006,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.0007570029999999228
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "supported_states": 12,
+            "assigned_states": 12,
+            "action_changes": 9,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              3,
+              8,
+              1
+            ]
+          },
+          "PLAN-UPDATE": {
+            "assigned_hit_effect": {
+              "mean": 0.0625,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1,
+                "typed-ancestry-341ed92ba201e1cfedfc": -0.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.25
+              },
+              "positive_components": 1,
+              "rows": 12
+            },
+            "supported_hit_effect": {
+              "mean": 0.0625,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1,
+                "typed-ancestry-341ed92ba201e1cfedfc": -0.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.25
+              },
+              "positive_components": 1,
+              "rows": 12
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.4159072993750002,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4105441060000004,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.4064747050000004,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.453221821,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.3933885654999996
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 12
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.433219436875,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5038844445000001,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.3335321844999997,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4238446055,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.471616513
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "supported_states": 12,
+            "assigned_states": 12,
+            "action_changes": 10,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              1,
+              9,
+              2
+            ]
+          },
+          "PLAN-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.3125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.75
+              },
+              "positive_components": 2,
+              "rows": 12
+            },
+            "supported_hit_effect": {
+              "mean": 0.3125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.75
+              },
+              "positive_components": 2,
+              "rows": 12
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.5008340278125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4967016185000004,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.4869758445000008,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.5376725672499998,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.4819860809999998
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 12
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.496875964375,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5411762955000001,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.430701348,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.543252698,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.472373516
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "supported_states": 12,
+            "assigned_states": 12,
+            "action_changes": 11,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              3,
+              7,
+              2
+            ]
+          }
+        }
+      }
+    },
+    {
+      "variable": "remaining_assays",
+      "bin": "24",
+      "summary": {
+        "cheap": {
+          "UPDATE-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.5,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.5,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.0,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.5
+              },
+              "positive_components": 3,
+              "rows": 12
+            },
+            "supported_hit_effect": {
+              "mean": 0.5,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.5,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.0,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.5
+              },
+              "positive_components": 3,
+              "rows": 12
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 0.1243860455000001,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.16167506500000028,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.08519278750000003,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.20249329250000003,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.04818303700000004
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 12
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 0.20185268431250025,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.2788983335000004,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.06303927449999991,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.46287624775000036,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.0025968815000003698
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "supported_states": 12,
+            "assigned_states": 12,
+            "action_changes": 10,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              4,
+              6,
+              2
+            ]
+          },
+          "PLAN-UPDATE": {
+            "assigned_hit_effect": {
+              "mean": 0.5625,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 2.5,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": -2.0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.75
+              },
+              "positive_components": 2,
+              "rows": 12
+            },
+            "supported_hit_effect": {
+              "mean": 0.5625,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 2.5,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": -2.0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.75
+              },
+              "positive_components": 2,
+              "rows": 12
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.0743927193125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.170524382,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.0016926475000003,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.0871887219999996,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.03816512575
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 12
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.0005792436249998,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.1384121279999997,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.96956694,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.812113388,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.0822245185
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "supported_states": 12,
+            "assigned_states": 12,
+            "action_changes": 12,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              5,
+              0,
+              7
+            ]
+          },
+          "PLAN-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 1.0625,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 3,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1,
+                "typed-ancestry-341ed92ba201e1cfedfc": -1,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.25
+              },
+              "positive_components": 3,
+              "rows": 12
+            },
+            "supported_hit_effect": {
+              "mean": 1.0625,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 3,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1,
+                "typed-ancestry-341ed92ba201e1cfedfc": -1,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.25
+              },
+              "positive_components": 3,
+              "rows": 12
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.1987787648125001,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.3321994470000003,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.0868854350000003,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.2896820144999999,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.08634816275
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 12
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.2024319279375002,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4173104615,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.0326062145,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.2749896357500003,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.0848214000000003
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "supported_states": 12,
+            "assigned_states": 12,
+            "action_changes": 12,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              7,
+              1,
+              4
+            ]
+          }
+        },
+        "high": {
+          "UPDATE-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.5,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.5,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.0,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.5
+              },
+              "positive_components": 3,
+              "rows": 12
+            },
+            "supported_hit_effect": {
+              "mean": 0.5,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.5,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.0,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.5
+              },
+              "positive_components": 3,
+              "rows": 12
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 0.11879785643750007,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.1079756475,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.1720260705000003,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.11036730375000048,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.08482240399999952
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 12
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 0.0625234873124999,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.04626853250000007,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.07435384749999985,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.0423044484999997,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.08716712075
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "supported_states": 12,
+            "assigned_states": 12,
+            "action_changes": 10,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              4,
+              6,
+              2
+            ]
+          },
+          "PLAN-UPDATE": {
+            "assigned_hit_effect": {
+              "mean": 0.8125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 3,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": -2,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.75
+              },
+              "positive_components": 3,
+              "rows": 12
+            },
+            "supported_hit_effect": {
+              "mean": 0.8125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 3,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": -2,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.75
+              },
+              "positive_components": 3,
+              "rows": 12
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.3989428444375003,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4795917235000002,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.3559857734999998,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4195118822500001,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.3406819985000005
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 12
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.4085629244375002,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4308409265000002,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.4529982255,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4250882745000002,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.32532427125
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "supported_states": 12,
+            "assigned_states": 12,
+            "action_changes": 12,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              5,
+              1,
+              6
+            ]
+          },
+          "PLAN-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 1.3125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 3.5,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 2.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": -1.0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+              },
+              "positive_components": 3,
+              "rows": 12
+            },
+            "supported_hit_effect": {
+              "mean": 1.3125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 3.5,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 2.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": -1.0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+              },
+              "positive_components": 3,
+              "rows": 12
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.5177407008750001,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5875673710000002,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.5280118440000001,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.5298791860000005,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.4255044024999999
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 12
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.47108641175,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4771094590000002,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.5273520729999999,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.467392723,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.412491392
+              },
+              "positive_components": 4,
+              "rows": 12
+            },
+            "supported_states": 12,
+            "assigned_states": 12,
+            "action_changes": 12,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              7,
+              0,
+              5
+            ]
+          }
+        }
+      }
+    },
+    {
+      "variable": "cached_margin",
+      "bin": "<=0.05",
+      "summary": {
+        "cheap": {
+          "UPDATE-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.36458333333333337,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.25,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.9583333333333334,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+              },
+              "positive_components": 3,
+              "rows": 23
+            },
+            "supported_hit_effect": {
+              "mean": 0.36458333333333337,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.25,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.9583333333333334,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+              },
+              "positive_components": 3,
+              "rows": 23
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 0.10714639234374995,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.12482445000000031,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.07362291474999971,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.15929414999999997,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.07084405462499982
+              },
+              "positive_components": 4,
+              "rows": 23
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 23
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 0.16867751115625018,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.1986625580000001,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.06985865850000006,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.3224048598750003,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.08378396825000034
+              },
+              "positive_components": 4,
+              "rows": 23
+            },
+            "supported_states": 23,
+            "assigned_states": 23,
+            "action_changes": 19,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              7,
+              13,
+              3
+            ]
+          },
+          "PLAN-UPDATE": {
+            "assigned_hit_effect": {
+              "mean": 0.11458333333333326,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.25,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": -2.041666666666667,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.75
+              },
+              "positive_components": 3,
+              "rows": 23
+            },
+            "supported_hit_effect": {
+              "mean": 0.11458333333333326,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.25,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": -2.041666666666667,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.75
+              },
+              "positive_components": 3,
+              "rows": 23
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.2205161897083336,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.3090051207500002,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.1669606325000004,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.2148512358333334,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.1912477697500004
+              },
+              "positive_components": 4,
+              "rows": 23
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 23
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.1741492993125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.2697360917499998,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.1543785579999999,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.0557500113750002,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.2167325361249999
+              },
+              "positive_components": 4,
+              "rows": 23
+            },
+            "supported_states": 23,
+            "assigned_states": 23,
+            "action_changes": 21,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              5,
+              9,
+              9
+            ]
+          },
+          "PLAN-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.4791666666666667,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": -1.0833333333333333,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.0
+              },
+              "positive_components": 3,
+              "rows": 23
+            },
+            "supported_hit_effect": {
+              "mean": 0.4791666666666667,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.5,
+                "typed-ancestry-341ed92ba201e1cfedfc": -1.0833333333333333,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.0
+              },
+              "positive_components": 3,
+              "rows": 23
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.3276625820520835,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4338295707500004,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.2405835472500002,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.3741453858333332,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.2620918243750001
+              },
+              "positive_components": 4,
+              "rows": 23
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 23
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.3428268104687502,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.46839864975,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.2242372165,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.3781548712500005,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.3005165043750002
+              },
+              "positive_components": 4,
+              "rows": 23
+            },
+            "supported_states": 23,
+            "assigned_states": 23,
+            "action_changes": 22,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              9,
+              8,
+              6
+            ]
+          }
+        },
+        "high": {
+          "UPDATE-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.36458333333333337,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.25,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.9583333333333334,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+              },
+              "positive_components": 3,
+              "rows": 23
+            },
+            "supported_hit_effect": {
+              "mean": 0.36458333333333337,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.25,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.9583333333333334,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+              },
+              "positive_components": 3,
+              "rows": 23
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 0.10073494807291669,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.09706658000000001,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.12626360500000033,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.09289964754166657,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.08670995974999984
+              },
+              "positive_components": 4,
+              "rows": 23
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 23
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 0.06950243263541667,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.04178019175000003,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.08576150550000006,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.10650597141666662,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.04396206187499996
+              },
+              "positive_components": 4,
+              "rows": 23
+            },
+            "supported_states": 23,
+            "assigned_states": 23,
+            "action_changes": 19,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              7,
+              13,
+              3
+            ]
+          },
+          "PLAN-UPDATE": {
+            "assigned_hit_effect": {
+              "mean": 0.2708333333333333,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.25,
+                "typed-ancestry-341ed92ba201e1cfedfc": -1.9166666666666667,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+              },
+              "positive_components": 3,
+              "rows": 23
+            },
+            "supported_hit_effect": {
+              "mean": 0.2708333333333333,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.25,
+                "typed-ancestry-341ed92ba201e1cfedfc": -1.9166666666666667,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+              },
+              "positive_components": 3,
+              "rows": 23
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.40782469246875,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4450679147500003,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.3812302392500002,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4379653338750003,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.367035282
+              },
+              "positive_components": 4,
+              "rows": 23
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 23
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.4166100521145832,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4673626855000002,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.3932652049999998,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4073419258333333,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.3984703921250001
+              },
+              "positive_components": 4,
+              "rows": 23
+            },
+            "supported_states": 23,
+            "assigned_states": 23,
+            "action_changes": 21,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              5,
+              10,
+              8
+            ]
+          },
+          "PLAN-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.6354166666666667,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.75,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.25,
+                "typed-ancestry-341ed92ba201e1cfedfc": -0.9583333333333333,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.5
+              },
+              "positive_components": 3,
+              "rows": 23
+            },
+            "supported_hit_effect": {
+              "mean": 0.6354166666666667,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.75,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.25,
+                "typed-ancestry-341ed92ba201e1cfedfc": -0.9583333333333333,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.5
+              },
+              "positive_components": 3,
+              "rows": 23
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.5085596405416668,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5421344947500004,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.5074938442500003,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.5308649814166668,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.4537452417499999
+              },
+              "positive_components": 4,
+              "rows": 23
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 23
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.48611248475,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5091428772500002,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.4790267105,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.51384789725,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.442432454
+              },
+              "positive_components": 4,
+              "rows": 23
+            },
+            "supported_states": 23,
+            "assigned_states": 23,
+            "action_changes": 22,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              9,
+              7,
+              7
+            ]
+          }
+        }
+      }
+    },
+    {
+      "variable": "cached_margin",
+      "bin": ">0.05",
+      "summary": {
+        "cheap": {
+          "UPDATE-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 0
+              },
+              "positive_components": 0,
+              "rows": 1
+            },
+            "supported_hit_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 0
+              },
+              "positive_components": 0,
+              "rows": 1
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 0.11722943200000024,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.11722943200000024
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 0
+              },
+              "positive_components": 0,
+              "rows": 1
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 0.11215640100000002,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.11215640100000002
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "supported_states": 1,
+            "assigned_states": 1,
+            "action_changes": 0,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              0,
+              1,
+              0
+            ]
+          },
+          "PLAN-UPDATE": {
+            "assigned_hit_effect": {
+              "mean": 4,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 4
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "supported_hit_effect": {
+              "mean": 4,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 4
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.3348843000000001,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.3348843000000001
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 0
+              },
+              "positive_components": 0,
+              "rows": 1
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.238406382,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.238406382
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "supported_states": 1,
+            "assigned_states": 1,
+            "action_changes": 1,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              1,
+              0,
+              0
+            ]
+          },
+          "PLAN-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 4,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 4
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "supported_hit_effect": {
+              "mean": 4,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 4
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.4521137320000004,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4521137320000004
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 0
+              },
+              "positive_components": 0,
+              "rows": 1
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.350562783,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.350562783
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "supported_states": 1,
+            "assigned_states": 1,
+            "action_changes": 1,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        "high": {
+          "UPDATE-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 0
+              },
+              "positive_components": 0,
+              "rows": 1
+            },
+            "supported_hit_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 0
+              },
+              "positive_components": 0,
+              "rows": 1
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 0.1151884290000007,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.1151884290000007
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 0
+              },
+              "positive_components": 0,
+              "rows": 1
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": -0.08628865600000069,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": -0.08628865600000069
+              },
+              "positive_components": 0,
+              "rows": 1
+            },
+            "supported_states": 1,
+            "assigned_states": 1,
+            "action_changes": 0,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              0,
+              1,
+              0
+            ]
+          },
+          "PLAN-UPDATE": {
+            "assigned_hit_effect": {
+              "mean": 3,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 3
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "supported_hit_effect": {
+              "mean": 3,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 3
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.4703226040000006,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4703226040000006
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 0
+              },
+              "positive_components": 0,
+              "rows": 1
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.6235183880000008,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.6235183880000008
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "supported_states": 1,
+            "assigned_states": 1,
+            "action_changes": 1,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              1,
+              0,
+              0
+            ]
+          },
+          "PLAN-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 3,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 3
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "supported_hit_effect": {
+              "mean": 3,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 3
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.5855110330000013,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.5855110330000013
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 0
+              },
+              "positive_components": 0,
+              "rows": 1
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.5372297320000001,
+              "components": {
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.5372297320000001
+              },
+              "positive_components": 1,
+              "rows": 1
+            },
+            "supported_states": 1,
+            "assigned_states": 1,
+            "action_changes": 1,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              1,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "variable": "recent_brier",
+      "bin": "<=0.25",
+      "summary": {
+        "cheap": {
+          "UPDATE-REUSE": {
+            "assigned_hit_effect": {
+              "mean": -0.125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.5
+              },
+              "positive_components": 0,
+              "rows": 7
+            },
+            "supported_hit_effect": {
+              "mean": -0.125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.5
+              },
+              "positive_components": 0,
+              "rows": 7
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 0.09493443449999997,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.12401294799999985,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.06311169299999975,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.13541886549999993,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.05719423150000036
+              },
+              "positive_components": 4,
+              "rows": 7
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 7
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 0.09653262268750012,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.13908348000000004,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.040340036999999995,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.1306593975000001,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.07604757625000036
+              },
+              "positive_components": 4,
+              "rows": 7
+            },
+            "supported_states": 7,
+            "assigned_states": 7,
+            "action_changes": 5,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              2,
+              4,
+              1
+            ]
+          },
+          "PLAN-UPDATE": {
+            "assigned_hit_effect": {
+              "mean": 2.0625,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1,
+                "typed-ancestry-341ed92ba201e1cfedfc": 2,
+                "typed-ancestry-52211aa39e1b3526ca3b": 5.25
+              },
+              "positive_components": 3,
+              "rows": 7
+            },
+            "supported_hit_effect": {
+              "mean": 2.0625,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1,
+                "typed-ancestry-341ed92ba201e1cfedfc": 2,
+                "typed-ancestry-52211aa39e1b3526ca3b": 5.25
+              },
+              "positive_components": 3,
+              "rows": 7
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.1712110950625,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4079606420000004,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.929815203,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.3429817525,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.0040867827500002
+              },
+              "positive_components": 4,
+              "rows": 7
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 7
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.11761737775,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.3811890629999999,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.8188866060000004,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.280344473,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.9900493689999996
+              },
+              "positive_components": 4,
+              "rows": 7
+            },
+            "supported_states": 7,
+            "assigned_states": 7,
+            "action_changes": 7,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              3,
+              3,
+              1
+            ]
+          },
+          "PLAN-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 1.9375,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1,
+                "typed-ancestry-341ed92ba201e1cfedfc": 2,
+                "typed-ancestry-52211aa39e1b3526ca3b": 4.75
+              },
+              "positive_components": 3,
+              "rows": 7
+            },
+            "supported_hit_effect": {
+              "mean": 1.9375,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1,
+                "typed-ancestry-341ed92ba201e1cfedfc": 2,
+                "typed-ancestry-52211aa39e1b3526ca3b": 4.75
+              },
+              "positive_components": 3,
+              "rows": 7
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.2661455295625001,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5319735900000002,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.9929268959999997,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.478400618,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.0612810142500004
+              },
+              "positive_components": 4,
+              "rows": 7
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 7
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.2141500004375,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.520272543,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.8592266430000004,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4110038705,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.06609694525
+              },
+              "positive_components": 4,
+              "rows": 7
+            },
+            "supported_states": 7,
+            "assigned_states": 7,
+            "action_changes": 6,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              4,
+              3,
+              0
+            ]
+          }
+        },
+        "high": {
+          "UPDATE-REUSE": {
+            "assigned_hit_effect": {
+              "mean": -0.125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.5
+              },
+              "positive_components": 0,
+              "rows": 7
+            },
+            "supported_hit_effect": {
+              "mean": -0.125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.5
+              },
+              "positive_components": 0,
+              "rows": 7
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 0.10617976699999998,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.06687704700000019,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.12314997100000014,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.10781560950000002,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.12687644049999958
+              },
+              "positive_components": 4,
+              "rows": 7
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 7
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 0.05610335018749968,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.08442260299999926,
+                "typed-ancestry-3bdd4e9dd09027c116b1": -0.04255774200000051,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.06873473249999984,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.11381380725000012
+              },
+              "positive_components": 3,
+              "rows": 7
+            },
+            "supported_states": 7,
+            "assigned_states": 7,
+            "action_changes": 5,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              2,
+              4,
+              1
+            ]
+          },
+          "PLAN-UPDATE": {
+            "assigned_hit_effect": {
+              "mean": 2.25,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 3,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": 4.5
+              },
+              "positive_components": 3,
+              "rows": 7
+            },
+            "supported_hit_effect": {
+              "mean": 2.25,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 3,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": 4.5
+              },
+              "positive_components": 3,
+              "rows": 7
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.4328353545000003,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4287713070000008,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.383478453,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.5186446370000004,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.400447021
+              },
+              "positive_components": 4,
+              "rows": 7
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 7
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.5125431124375002,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4653667830000003,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.5544718949999998,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.5786950785000005,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.4516386932499998
+              },
+              "positive_components": 4,
+              "rows": 7
+            },
+            "supported_states": 7,
+            "assigned_states": 7,
+            "action_changes": 7,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              3,
+              3,
+              1
+            ]
+          },
+          "PLAN-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 2.125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 3,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": 4
+              },
+              "positive_components": 3,
+              "rows": 7
+            },
+            "supported_hit_effect": {
+              "mean": 2.125,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 3,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": 4
+              },
+              "positive_components": 3,
+              "rows": 7
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.5390151215000003,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.495648354000001,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.506628424,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.6264602465000004,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.5273234614999995
+              },
+              "positive_components": 4,
+              "rows": 7
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 7
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.5686464626249998,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5497893859999996,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.5119141529999993,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.6474298110000003,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.5654525005
+              },
+              "positive_components": 4,
+              "rows": 7
+            },
+            "supported_states": 7,
+            "assigned_states": 7,
+            "action_changes": 6,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              4,
+              2,
+              1
+            ]
+          }
+        }
+      }
+    },
+    {
+      "variable": "recent_brier",
+      "bin": ">0.25",
+      "summary": {
+        "cheap": {
+          "UPDATE-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.3645833333333333,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.3333333333333333,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.875,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+              },
+              "positive_components": 3,
+              "rows": 17
+            },
+            "supported_hit_effect": {
+              "mean": 0.3645833333333333,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.3333333333333333,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.875,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+              },
+              "positive_components": 3,
+              "rows": 17
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 0.10533723470833327,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.12509495066666712,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.07712665533333303,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.15374057625000004,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.0653867565833329
+              },
+              "positive_components": 4,
+              "rows": 17
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 17
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 0.17294305676041688,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.21852225066666678,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.07969819900000008,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.3359417018750003,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.05761007550000034
+              },
+              "positive_components": 4,
+              "rows": 17
+            },
+            "supported_states": 17,
+            "assigned_states": 17,
+            "action_changes": 14,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              5,
+              10,
+              2
+            ]
+          },
+          "PLAN-UPDATE": {
+            "assigned_hit_effect": {
+              "mean": -0.3645833333333333,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.6666666666666667,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.3333333333333333,
+                "typed-ancestry-341ed92ba201e1cfedfc": -2.625,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.8333333333333333
+              },
+              "positive_components": 2,
+              "rows": 17
+            },
+            "supported_hit_effect": {
+              "mean": -0.3645833333333333,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.6666666666666667,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.3333333333333333,
+                "typed-ancestry-341ed92ba201e1cfedfc": -2.625,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.8333333333333333
+              },
+              "positive_components": 2,
+              "rows": 17
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.2444396640208337,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.2760199470000002,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.2460091090000007,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.1958579572500003,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.2598716428333336
+              },
+              "positive_components": 4,
+              "rows": 17
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 17
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.2115162561145834,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.232585101333333,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.2662092086666663,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.0337489363750003,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.3135217780833335
+              },
+              "positive_components": 4,
+              "rows": 17
+            },
+            "supported_states": 17,
+            "assigned_states": 17,
+            "action_changes": 15,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              3,
+              6,
+              8
+            ]
+          },
+          "PLAN-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 1.3877787807814457e-17,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 2,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.3333333333333333,
+                "typed-ancestry-341ed92ba201e1cfedfc": -1.75,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.5833333333333333
+              },
+              "positive_components": 2,
+              "rows": 17
+            },
+            "supported_hit_effect": {
+              "mean": 1.3877787807814457e-17,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 2,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.3333333333333333,
+                "typed-ancestry-341ed92ba201e1cfedfc": -1.75,
+                "typed-ancestry-52211aa39e1b3526ca3b": -0.5833333333333333
+              },
+              "positive_components": 2,
+              "rows": 17
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.349776898729167,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4011148976666672,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.3231357643333337,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.3495985335000003,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.3252583994166667
+              },
+              "positive_components": 4,
+              "rows": 17
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 17
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.3844593128750002,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.451107352,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.3459074076666664,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.3696906382500005,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.371131853583334
+              },
+              "positive_components": 4,
+              "rows": 17
+            },
+            "supported_states": 17,
+            "assigned_states": 17,
+            "action_changes": 17,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              6,
+              5,
+              6
+            ]
+          }
+        },
+        "high": {
+          "UPDATE-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.3645833333333333,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.3333333333333333,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.875,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+              },
+              "positive_components": 3,
+              "rows": 17
+            },
+            "supported_hit_effect": {
+              "mean": 0.3645833333333333,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.3333333333333333,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.875,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.25
+              },
+              "positive_components": 3,
+              "rows": 17
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 0.0977098789895834,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.10712975766666662,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.1273014830000004,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.08756730237499999,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.06884097291666658
+              },
+              "positive_components": 4,
+              "rows": 17
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 17
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 0.06257882947916672,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0.02756605466666695,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.12853458800000025,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0.08029367899999984,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0.013920996249999835
+              },
+              "positive_components": 4,
+              "rows": 17
+            },
+            "supported_states": 17,
+            "assigned_states": 17,
+            "action_changes": 14,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              5,
+              10,
+              2
+            ]
+          },
+          "PLAN-UPDATE": {
+            "assigned_hit_effect": {
+              "mean": -0.27083333333333337,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 2,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.6666666666666666,
+                "typed-ancestry-341ed92ba201e1cfedfc": -2.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": -1.25
+              },
+              "positive_components": 2,
+              "rows": 17
+            },
+            "supported_hit_effect": {
+              "mean": -0.27083333333333337,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 2,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.6666666666666666,
+                "typed-ancestry-341ed92ba201e1cfedfc": -2.5,
+                "typed-ancestry-52211aa39e1b3526ca3b": -1.25
+              },
+              "positive_components": 2,
+              "rows": 17
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.3962571898020835,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4505001173333334,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.3804808346666668,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4170012818750002,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.3370465253333332
+              },
+              "positive_components": 4,
+              "rows": 17
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 17
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.3922900245,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4680279863333334,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.3395296416666664,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.39550455225,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.3660979177500003
+              },
+              "positive_components": 4,
+              "rows": 17
+            },
+            "supported_states": 17,
+            "assigned_states": 17,
+            "action_changes": 15,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              3,
+              7,
+              7
+            ]
+          },
+          "PLAN-REUSE": {
+            "assigned_hit_effect": {
+              "mean": 0.09375000000000003,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 2.3333333333333335,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.6666666666666666,
+                "typed-ancestry-341ed92ba201e1cfedfc": -1.625,
+                "typed-ancestry-52211aa39e1b3526ca3b": -1
+              },
+              "positive_components": 2,
+              "rows": 17
+            },
+            "supported_hit_effect": {
+              "mean": 0.09375000000000003,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 2.3333333333333335,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0.6666666666666666,
+                "typed-ancestry-341ed92ba201e1cfedfc": -1.625,
+                "typed-ancestry-52211aa39e1b3526ca3b": -1
+              },
+              "positive_components": 2,
+              "rows": 17
+            },
+            "assigned_cpu_effect_seconds": {
+              "mean": 1.4939670687916669,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.5576298750000002,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.5077823176666671,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.5045685842500003,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.4058874982499998
+              },
+              "positive_components": 4,
+              "rows": 17
+            },
+            "assigned_deliveries_effect": {
+              "mean": 0,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 0,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+                "typed-ancestry-341ed92ba201e1cfedfc": 0,
+                "typed-ancestry-52211aa39e1b3526ca3b": 0
+              },
+              "positive_components": 0,
+              "rows": 17
+            },
+            "assigned_whole_process_cpu_effect_seconds": {
+              "mean": 1.4548688539791668,
+              "components": {
+                "typed-ancestry-3d78be158d61c2c9cfd8": 1.4955940410000004,
+                "typed-ancestry-3bdd4e9dd09027c116b1": 1.4680642296666668,
+                "typed-ancestry-341ed92ba201e1cfedfc": 1.4757982312499998,
+                "typed-ancestry-52211aa39e1b3526ca3b": 1.3800189139999999
+              },
+              "positive_components": 4,
+              "rows": 17
+            },
+            "supported_states": 17,
+            "assigned_states": 17,
+            "action_changes": 17,
+            "unsupported_reasons": {},
+            "positive_zero_negative": [
+              6,
+              5,
+              6
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "inherited_controls": {
+    "G1": {
+      "hits": {
+        "mean": 19.5,
+        "components": {
+          "typed-ancestry-52211aa39e1b3526ca3b": 19.7,
+          "typed-ancestry-341ed92ba201e1cfedfc": 18.1,
+          "typed-ancestry-3bdd4e9dd09027c116b1": 21.5,
+          "typed-ancestry-3d78be158d61c2c9cfd8": 18.7
+        },
+        "positive_components": 4,
+        "rows": 60
+      },
+      "cpu_seconds": {
+        "mean": 2.7128527181875,
+        "components": {
+          "typed-ancestry-52211aa39e1b3526ca3b": 2.7035195455,
+          "typed-ancestry-341ed92ba201e1cfedfc": 2.69987227615,
+          "typed-ancestry-3bdd4e9dd09027c116b1": 2.7763457262,
+          "typed-ancestry-3d78be158d61c2c9cfd8": 2.6716733249
+        },
+        "positive_components": 4,
+        "rows": 60
+      },
+      "hit_delta_vs_G1": {
+        "mean": 0,
+        "components": {
+          "typed-ancestry-52211aa39e1b3526ca3b": 0,
+          "typed-ancestry-341ed92ba201e1cfedfc": 0,
+          "typed-ancestry-3bdd4e9dd09027c116b1": 0,
+          "typed-ancestry-3d78be158d61c2c9cfd8": 0
+        },
+        "positive_components": 0,
+        "rows": 60
+      },
+      "cpu_saving_vs_G1": 0.0,
+      "parameters": [
+        "None"
+      ]
+    },
+    "Gk": {
+      "hits": {
+        "mean": 19.512500000000003,
+        "components": {
+          "typed-ancestry-341ed92ba201e1cfedfc": 19.1,
+          "typed-ancestry-52211aa39e1b3526ca3b": 19.85,
+          "typed-ancestry-3bdd4e9dd09027c116b1": 20.8,
+          "typed-ancestry-3d78be158d61c2c9cfd8": 18.3
+        },
+        "positive_components": 4,
+        "rows": 60
+      },
+      "cpu_seconds": {
+        "mean": 1.3807390201375,
+        "components": {
+          "typed-ancestry-341ed92ba201e1cfedfc": 1.36788933145,
+          "typed-ancestry-52211aa39e1b3526ca3b": 1.3804503649000002,
+          "typed-ancestry-3bdd4e9dd09027c116b1": 1.4056994321,
+          "typed-ancestry-3d78be158d61c2c9cfd8": 1.3689169521
+        },
+        "positive_components": 4,
+        "rows": 60
+      },
+      "hit_delta_vs_G1": {
+        "mean": 0.012500000000000004,
+        "components": {
+          "typed-ancestry-341ed92ba201e1cfedfc": 1.0,
+          "typed-ancestry-52211aa39e1b3526ca3b": 0.15,
+          "typed-ancestry-3bdd4e9dd09027c116b1": -0.7,
+          "typed-ancestry-3d78be158d61c2c9cfd8": -0.4
+        },
+        "positive_components": 2,
+        "rows": 60
+      },
+      "cpu_saving_vs_G1": 0.4910379723599615,
+      "parameters": [
+        "2"
+      ]
+    },
+    "T": {
+      "hits": {
+        "mean": 19.7,
+        "components": {
+          "typed-ancestry-341ed92ba201e1cfedfc": 18.8,
+          "typed-ancestry-3d78be158d61c2c9cfd8": 18.9,
+          "typed-ancestry-3bdd4e9dd09027c116b1": 21,
+          "typed-ancestry-52211aa39e1b3526ca3b": 20.1
+        },
+        "positive_components": 4,
+        "rows": 60
+      },
+      "cpu_seconds": {
+        "mean": 3.482180737925,
+        "components": {
+          "typed-ancestry-341ed92ba201e1cfedfc": 3.48266175285,
+          "typed-ancestry-3d78be158d61c2c9cfd8": 3.4685906041,
+          "typed-ancestry-3bdd4e9dd09027c116b1": 3.5065655428,
+          "typed-ancestry-52211aa39e1b3526ca3b": 3.47090505195
+        },
+        "positive_components": 4,
+        "rows": 60
+      },
+      "hit_delta_vs_G1": {
+        "mean": 0.2,
+        "components": {
+          "typed-ancestry-341ed92ba201e1cfedfc": 0.7,
+          "typed-ancestry-3d78be158d61c2c9cfd8": 0.2,
+          "typed-ancestry-3bdd4e9dd09027c116b1": -0.5,
+          "typed-ancestry-52211aa39e1b3526ca3b": 0.4
+        },
+        "positive_components": 3,
+        "rows": 60
+      },
+      "cpu_saving_vs_G1": -0.28358635711396096,
+      "parameters": [
+        "[4, 0.05]"
+      ]
+    }
+  },
+  "inherited_controls_are_not_new_fixed_k4_or_frozen_nearest_hit": true,
+  "full_proposed_H3_catalogue": "NOT_RUN",
+  "ranking_change": "NOT_IDENTIFIED_FROM_TRACE",
+  "new_molecular_units": 0,
+  "final_outcomes_open": false,
+  "uncertainty": "descriptive fixed-cohort ranges; one MIX seed; no population CI or independent confirmation"
+}

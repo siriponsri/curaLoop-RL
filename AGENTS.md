@@ -1,5 +1,62 @@
 # Agent instructions: CuraLoop-RL
 
+## Owner authorizes D0/D1 main delivery and requests LR-D23 proposal
+
+On 9 November the owner explicitly requested a long-run goal proposal and
+authorized normal commit/push of completed work. Read
+docs/06_execution/MAIN_DELIVERY_D0_D1_LR_D23_20261109.md and
+research/manifests/d0_d1_main_delivery_owner_20261109_v1.json. Deliver completed
+D0/D1 source/tests/aggregate evidence and the disabled LR-D23 proposal on main.
+This supersedes historical local-only/no-push wording for repository delivery.
+Do not publish private data/traces/archives/reading PDFs/permits or credentials.
+LR-D23 is PROPOSED_NOT_RELEASED: fresh24 CPU-hours/72 hours/max4 workers, D2 then
+conditional D3 development. No scientific clock/root or training starts here.
+All old ledgers/frozen source/results, final16 and inactive conditional96h stay
+closed. No M3, actual P1 integration, paid/GPU, live team write/deploy or journal
+submission. Earlier no-push/creation-time status snapshots remain historical.
+
+## D1 complete; owner reviews before D2, 9 November 2026
+
+Read docs/03_research/D1_OPERATION_HEADROOM_RESULTS_20261109.md,
+docs/06_execution/D1_OWNER_CHECKPOINT_20261109.md and HANDOFF.md. D1 is closed
+at4,500 retained CPU-seconds /14,400; 12 synthetic contexts and120 new control
+campaigns PASS, plus144/180 authenticated historical branch/control units reused.
+All2,153 remote task files plus seven export files were returned/reread before
+exact owned cleanup and fresh absence. All58 old pins/ten old ledgers unchanged.
+Do not recreate the D1 root, rerun a completed booking or borrow unused allowance.
+Context-limited UPDATE headroom is not a new method result. No gate was fitted;
+D2/M3/final16 and conditional96h remain closed. Normal local English delivery
+only; no commit/push or external publication. Earlier release states are history.
+
+## Owner releases D1, 9 November 2026
+
+The owner approved D1 as proposed: a fresh 4 CPU-hours / 24 elapsed hours /
+one combined worker. Read research/manifests/d1_release_20261109_v1.json and
+the pinned docs/06_execution/M2_DIAGNOSTIC_PLAN_20261109.md. Fresh private root
+.local/d1-operation-headroom-20261109-v1 only. Reuse authenticated retained
+paired evidence before any fresh molecular unit; freeze estimands, thresholds,
+selection and code before diagnostic utility analysis. Existing six exposed
+development assays only; no old validation/final features/labels/presence.
+Preserve all old ledgers/source/results and the inactive conditional96h grant.
+One combined worker, local guarded reuse analysis or admitted dr-train compute
+using the existing chaw profile; no parallel scientific jobs. No automatic D2,
+D3/M3, new data, paid service/GPU, team write, deployment, journal action or push.
+Complete a bounded report and owner decision; do not change thresholds after
+results. The D0 proposal records below remain historical planning states.
+
+## Current local diagnostic adaptation, 9 November 2026
+
+Owner authorized applying the research outline: local D0 source/aggregate audit,
+reversible operation-probe instrumentation and lightweight constructed tests.
+Read docs/03_research/M2_D0_OPERATION_AUDIT_20261109.md and
+docs/06_execution/M2_DIAGNOSTIC_PLAN_20261109.md. Parent sole writer. D1 molecular
+run/budget is PROPOSED_NOT_RELEASED; no new development outcome inspection,
+SSH experiment, scientific clock or root. Final16 remain sealed; all historical
+ledgers/frozen source/results stay unchanged and conditional96h is inactive.
+This delivery stays local, without push/external publication or another-chat
+report. Do not infer scientific authority from ordinary constructed test PASS.
+The older M2 closeout below remains the scientific disposition.
+
 ## Current M2 closeout,9 November 2026
 
 M2 COMPLETE/INCONCLUSIVE. Read docs/03_research/M2_COSTED_RESULTS_20261108.md,

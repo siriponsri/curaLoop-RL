@@ -1,4 +1,81 @@
-# Handoff: M2 complete, INCONCLUSIVE; owner review next
+# Handoff: D1 complete; owner review before D2
+
+## Current delivery and proposed long run, 9 November 2026
+
+The owner now authorizes normal main commit/push of completed D0/D1 work and
+requests [LR-D23](docs/06_execution/LONG_RUN_D2_D3_PROPOSAL_20261109.md).
+Read [delivery authority](docs/06_execution/MAIN_DELIVERY_D0_D1_LR_D23_20261109.md).
+Historical local/uncommitted/NOT_RUN publication statements below and in old
+receipts describe their creation-time checkpoint; scientific bytes remain intact.
+Final observed Git SHA/remote equality is reported after delivery.
+
+LR-D23 is a disabled proposal: fresh24 CPU-hours /72 hours /max4 combined workers,
+one residual UPDATE/REUSE candidate, D2 then conditional D3 development. It ends
+with reproducible evidence, offline product handoff and paper insert, before
+owner review for M3/final16/actual integration. No new grant is started by this
+proposal. See [machine-readable plan](research/configs/lr_d23_proposal_20261109_v1.json).
+All D1/M2 and other old ledgers stay closed; conditional96h remains inactive.
+
+## Current D1 closure, 9 November 2026
+
+[Results](docs/03_research/D1_OPERATION_HEADROOM_RESULTS_20261109.md),
+[owner checkpoint](docs/06_execution/D1_OWNER_CHECKPOINT_20261109.md),
+[execution](docs/06_execution/D1_EXECUTION_NOTES_20261109.md),
+[evidence](docs/evidence/d1-operation-headroom-20261109-v1/README.md) and
+[status](research/configs/d1_status_20261109_v1.json).
+
+D1 COMPLETE_FOR_OWNER_REVIEW. Reused144 RF MIX branches/24 states/48 regime
+contexts and180 old main controls, preserving masked/full-pool differences.
+UPDATE-REUSE mean+0.375; PLAN-UPDATE+0.3125 cheap/+0.4375 high. The stale>=4
+bin is+1.1667 for UPDATE but has only eight states and different case mix.
+New H3:120 campaigns, five fixed controls, six exposed assays, two seeds/B32/C5.
+Mean G1/Gk4/T4/nearest/frozen hits20.96875/20.4375/19.9375/19.28125/17.09375.
+Gk4 saves73.9% scientific CPU but loses0.53125 hits vsG1, beyond the frozen0.25
+loss preference. No learned gate fit or new-method superiority result.
+
+New ledger `.local/d1-operation-headroom-20261109-v1/ledger.json` is CLOSED at
+4,500/14,400 retained CPU-seconds (1.25/4h), within its original24-hour deadline.
+All37 unique constructed checks PASS. Full private return:2,153 task files /
+176,150,363 bytes plus seven export files, independently reread/hash-verified.
+Archive `.local/d1-operation-headroom-20261109-v1/remote-return/export/full-task-v1.tar.gz`,
+60,147,833 bytes, SHA256 `cc57a6f03d3eb1a5b5a19b726fd6f023e693644616041832f57132044ec3474f`.
+Exact remote task/export roots were rehashed/deleted and freshly observed absent.
+All58 old preservation pins/ten old ledgers match. WinError206 transport recovery
+retained the original command/permit and first-dispatched the same booking;
+no scientific unit was repeated. See execution notes before interpreting retries.
+
+Next actor owner: decide whether to design one distinct residual UPDATE/REUSE
+candidate against strong cheap controls, or pause the controller thesis. No
+automatic D2/M3, final16, new data/product/journal action or conditional96h grant.
+Unused D1 allowance cannot be reused. M2 stays INCONCLUSIVE. Current D0/D1 edits
+are local on main, uncommitted/unpushed; independent review NOT_RUN.
+
+## D1 owner release, 9 November 2026
+
+The owner explicitly approved D1. [Release](research/manifests/d1_release_20261109_v1.json)
+starts a fresh 4 CPU-hour / 24-hour / one-worker account in
+`.local/d1-operation-headroom-20261109-v1`, with thresholds frozen before D1
+utility analysis. Retained RF MIX branches and full-pool controls are inventoried
+and authenticated first; their different original populations/caps are preserved.
+Final16 remain closed, old ledgers stay unchanged and conditional96h is inactive.
+No automatic D2/M3 or push. The earlier D0 proposal wording below is historical.
+
+## Local diagnostic adaptation, 9 November 2026
+
+Owner authorized local D0 audit, reversible instrumentation and constructed
+checks. [D0 findings](docs/03_research/M2_D0_OPERATION_AUDIT_20261109.md) and
+[D0-D3 plan](docs/06_execution/M2_DIAGNOSTIC_PLAN_20261109.md) now supplement the
+closed M2 result. The outcome-free probe wraps frozen State operations without
+loading a dataset or delivering labels. [Evidence](docs/evidence/m2-diagnostics-20261109-v1/README.md)
+distinguishes constructed logic from NOT_RUN molecular diagnostics.
+
+D1 is proposed at a fresh 4 CPU-hours / 24 hours / one worker, not released;
+owner must choose the usefulness preferences and authorize the exact protocol
+before any new diagnostic outcomes. A Linux admitted continuation runner is
+still needed. No new scientific clock/root, SSH, final16 access, old-ledger reuse,
+conditional96h activation, push or external publication occurred. Current edits
+are local on main for review. The historical verified delivery SHA below refers
+to M2 closeout, not these uncommitted additions. No independent review was run.
 
 Verified closeout on9 November 2026. Repository:
 `C:\Users\User\Desktop\myProject\curaloop-rl`, branch main. Parent sole writer.

@@ -1,0 +1,55 @@
+{
+  "schema": "curaloop.m2_diagnostics.verification.v1",
+  "status": "PASS",
+  "started_utc": "2026-11-09T05:54:22.033154+00:00",
+  "completed_utc": "2026-11-09T05:54:26.856191+00:00",
+  "base_commit": "bf59b103a789fa2832762abcdc6d5f7dc723466e",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cpu_affinity": {
+    "mask": 1,
+    "cpu_count": 1
+  },
+  "threadpools": [
+    {
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "version": "0.3.30"
+    },
+    {
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "version": null
+    },
+    {
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "version": "0.3.30"
+    }
+  ],
+  "pytest_exit_code": 0,
+  "ruff_exit_code": 0,
+  "ruff_output": "All checks passed!\n",
+  "junit_xml": "constructed-tests-v1.xml",
+  "local_links_checked": 10,
+  "historical_files_hash_checked": 58,
+  "historical_preservation": "PASS",
+  "source_sha256": {
+    "research/m2_diagnostics_v1/__init__.py": "30e6c1354da55b0a9f898c146b12e723941724d574defeac13b2fcc163296aea",
+    "research/m2_diagnostics_v1/operations.py": "d1ff428ffc0c7c2f93457cdf36ed3f18ad64dcd80c478fc9a53f1e0c0f6a82f1",
+    "tests/research/test_m2_diagnostics_v1.py": "060d167e9a99edac5d407144dcab3d08a1d9ae922c0a0dfd43469f2173e2e4cb",
+    "tools/check_m2_diagnostics_v1.py": "50576cea6628c9c98b02b9f3b5fba9d773315f6b27a0922faed73737be256f98"
+  },
+  "wall_seconds": 4.85899999999674,
+  "current_process_cpu_seconds": 3.03125,
+  "cpu_measurement_scope": "verification parent including in-process pytest; excludes ruff child",
+  "scientific_records_or_outcomes_read": false,
+  "new_scientific_grant_started": false,
+  "old_ledger_reopened": false,
+  "final_payloads_opened": false,
+  "ssh_or_remote_job": false,
+  "molecular_D1": "NOT_RUN",
+  "linux_real_cpu_interrupt": "NOT_RUN",
+  "independent_review": "NOT_RUN",
+  "publication_or_push": "NOT_RUN"
+}

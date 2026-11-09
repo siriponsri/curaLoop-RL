@@ -1,5 +1,29 @@
 # Method-first plan
 
+**Ready for owner review:** [LR-D23 long-run proposal](docs/06_execution/LONG_RUN_D2_D3_PROPOSAL_20261109.md),
+fresh24 CPU-hours /72 hours /four workers, D2 -> conditional D3 development and
+product/paper handoff preparation. Execution disabled; no final16/M3 or actual
+integration. Owner now authorizes normal main commit/push of completed work and
+the proposal. Historical local-only statements below are creation-time records.
+
+**Current D1 complete, 9 November:** [results](docs/03_research/D1_OPERATION_HEADROOM_RESULTS_20261109.md)
+and [owner decision](docs/06_execution/D1_OWNER_CHECKPOINT_20261109.md). The fresh
+4h/24h grant is CLOSED at1.25 retained CPU-hours; all remote files returned before
+exact cleanup. No new gate fit, final16 or automatic D2/M3. Old release markers
+below are historical. A distinct residual mechanism needs owner review first.
+
+**D1 approved, 9 November:** fresh 4 CPU-hours / 24 hours / one combined worker;
+[release](research/manifests/d1_release_20261109_v1.json). Reuse retained matched
+evidence first, freeze before utility analysis, then report for owner decision.
+No final16, automatic D2/M3 or conditional96h activation. Earlier proposal states
+below are retained as dated history.
+
+**Current local work, 9 November:** owner released D0 audit/instrumentation and
+constructed checks under the [diagnostic adaptation](docs/06_execution/M2_DIAGNOSTIC_PLAN_20261109.md).
+D1's proposed fresh 4 CPU-hour / 24-hour run is NOT_RELEASED. D2/D3 are conditional
+proposals; M3 and final16 stay closed. The M2 scientific disposition and inactive
+96-hour grant below are unchanged. This local engineering work does not resume M1.
+
 **9 November 2026: M2 is complete, INCONCLUSIVE; next actor is the owner.**
 Read the [results](docs/03_research/M2_COSTED_RESULTS_20261108.md) and
 [owner checkpoint](docs/06_execution/M2_OWNER_CHECKPOINT_20261108.md).

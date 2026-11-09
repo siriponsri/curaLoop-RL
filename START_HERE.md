@@ -1,5 +1,20 @@
 # Start here
 
+**Next owner decision:** [LR-D23 long-run proposal](docs/06_execution/LONG_RUN_D2_D3_PROPOSAL_20261109.md).
+Proposed fresh24 CPU-hours /72 hours /four workers; one candidate, D2 then
+conditional D3 development. It is NOT_RELEASED and final16 remain sealed.
+The owner separately authorized normal main delivery of the completed D0/D1 work
+and this proposal. Older uncommitted/no-push snapshots below are historical.
+
+**Current: D1 COMPLETE_FOR_OWNER_REVIEW, 9 November 2026.** Read the
+[D1 results](docs/03_research/D1_OPERATION_HEADROOM_RESULTS_20261109.md),
+[owner checkpoint](docs/06_execution/D1_OWNER_CHECKPOINT_20261109.md) and
+[evidence](docs/evidence/d1-operation-headroom-20261109-v1/README.md) first.
+D1 found context-limited UPDATE value and cheap-control tradeoffs, not a new
+method superiority result. Fresh1.25/4 retained CPU-hours closed; full return/
+cleanup PASS. D2/M3 and final16 remain closed. Earlier M2 disposition below
+remains unchanged; current D0/D1 files are local and uncommitted on main.
+
 **Current: M2 COMPLETE / INCONCLUSIVE, 9 November 2026. Final outcomes closed.**
 
 The full development matrix and technical closeout passed. The learned gate did

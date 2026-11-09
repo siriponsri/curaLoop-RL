@@ -200,3 +200,24 @@ docs/03_research/LR_M12_M1_RESULTS_20261108.md -text
 docs/06_execution/LR_M12_*20261108.md -text
 # Copied Windows receipts retain their original CRLF bytes.
 docs/evidence/lr-m12-20261108-v1/** whitespace=cr-at-eol
+
+# D0/D1 tested source, closed evidence and owner-reviewable LR-D23 scope.
+research/m2_diagnostics_v1/*.py -text whitespace=cr-at-eol
+research/d1_v1/*.py -text whitespace=cr-at-eol
+tests/research/test_m2_diagnostics_v1.py -text whitespace=cr-at-eol
+tests/research/test_d1_*.py -text whitespace=cr-at-eol
+tools/check_m2_diagnostics_v1.py -text whitespace=cr-at-eol
+tools/d1_*.py -text whitespace=cr-at-eol
+research/configs/m2_diagnostics_plan_20261109_v1.json -text
+research/configs/d1_status_20261109_v1.json -text
+research/configs/lr_d23_proposal_20261109_v1.json -text
+research/manifests/d1_release_20261109_v1.json -text
+research/manifests/d0_d1_main_delivery_owner_20261109_v1.json -text
+docs/03_research/M2_D0_OPERATION_AUDIT_20261109.md -text
+docs/03_research/D1_OPERATION_HEADROOM_RESULTS_20261109.md -text
+docs/06_execution/M2_DIAGNOSTIC_PLAN_20261109.md -text
+docs/06_execution/D1_*20261109.md -text
+docs/06_execution/LONG_RUN_D2_D3_PROPOSAL_20261109.md -text
+docs/06_execution/MAIN_DELIVERY_D0_D1_LR_D23_20261109.md -text
+docs/evidence/m2-diagnostics-20261109-v1/** whitespace=cr-at-eol
+docs/evidence/d1-operation-headroom-20261109-v1/** whitespace=cr-at-eol

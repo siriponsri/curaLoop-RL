@@ -94,6 +94,16 @@ The literature may report advantages of another method. Such values remain that 
 
 For each change of status record: claim ID, previous wording, new wording, run/artifact identity, exact endpoint, population, reviewer and date. A single-author project can perform an explicit second-pass audit without inventing an independent reviewer. Missing evidence leaves the claim at its prior status while implementation continues.
 
-## Literature-derived claim boundaries
+## D1 diagnostic claims, 9 November 2026
+
+| ID | Claim | Current evidence status | Evidence and limit |
+| --- | --- | --- | --- |
+| D1-01 | Selective computation has useful headroom in the exposed cohort | CONTEXT_LIMITED_ASSOCIATION | [Results](../03_research/D1_OPERATION_HEADROOM_RESULTS_20261109.md): UPDATE-REUSE +0.375 overall; +1.1667 in eight stale>=4 states. Masked pools, one MIX seed, different bin case mix; no learned-policy or population inference. |
+| D1-02 | PLAN's weak mean effect comes from always choosing greedy | NOT_SUPPORTED_IN_THIS_SLICE | [Reuse evidence](../evidence/d1-operation-headroom-20261109-v1/reuse-results-v1.json): PLAN changed first choices in 22/24 states versus UPDATE; mean incremental gain +0.3125 cheap / +0.4375 high. One operation plus a G1 tail. |
+| D1-03 | Fixed Gk4 retains G1 discovery within the approved saving preference | NOT_MET_ON_CURRENT_MEANS | [Fresh matched controls](../evidence/d1-operation-headroom-20261109-v1/controls-summary-v1.json): 73.9% scientific CPU saving; mean hit loss 0.53125 exceeds 0.25. Six assays, four annotation components, two seeds; no population CI. |
+| D1-04 | D1 establishes a new controller, clinical value or publication readiness | NOT_ESTABLISHED | No new gate fitted; ordinary controls and diagnostics are not method novelty. Final16/M3 closed; independent review NOT_RUN. |
+| D1-05 | D1 artifacts were fully returned before exact remote deletion | PASS_COMPLETE_RETURN_AND_FRESH_ABSENCE | [Evidence](../evidence/d1-operation-headroom-20261109-v1/README.md): 2,153 task files plus seven export files, hash reread, exact owned cleanup; 1.25/4 retained CPU-hours, old pins unchanged. |
+
+## Historical literature-derived claim boundaries
 
 The version-2 review supports statements about inspected source versions and planned controls. It does not support “all journal versions reproduced,” “unbiased for all targets,” “VDR labels corrected,” “BayBE savings achieved,” or “new asynchronous backend implemented.” R05's known-active start, R03's target ascertainment and R26's case-specific objective must remain visible whenever their results inform a comparison. The discrepancy register records uncertainty rather than declaring source errors.
