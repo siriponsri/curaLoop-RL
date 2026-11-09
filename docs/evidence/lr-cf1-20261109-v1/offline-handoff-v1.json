@@ -1,0 +1,58 @@
+{
+  "schema": "curaloop.confirmation.offline-report.v1",
+  "status": "WAITING_INPUT",
+  "created_utc": "2026-11-09T14:31:41.290311+00:00",
+  "estimand": "OBSERVATION_SUPPORTED_PRIMARY_HITS_ONLY",
+  "final16_access": false,
+  "new_selector_training": false,
+  "gates": {
+    "source": false,
+    "rights": false,
+    "roles": false,
+    "observation_support": false,
+    "resources": false,
+    "mandatory_baselines": false
+  },
+  "campaigns_admitted": 0,
+  "campaign_metadata_entries": 17,
+  "provisional_cached_target_matches": 8,
+  "source_experiment_blocks": null,
+  "metrics": {
+    "confirmed_positives": null,
+    "positive_structure_groups": null
+  },
+  "uncertainty": {
+    "estimated": false,
+    "seed_intervals_are_biological_uncertainty": false
+  },
+  "integration_status": "OFFLINE_HANDOFF_ONLY",
+  "evidence": [
+    "source-inventory-v1.json",
+    "role-review-v1.json",
+    "cached-target-review-v1.json",
+    "remote-preflight-v1.json",
+    "constructed-checks-v1.json"
+  ],
+  "labels": {
+    "en": {
+      "title": "Confirmation portfolio evidence",
+      "status": "Waiting for source information",
+      "results": "Not run",
+      "population": "Historically confirmed primary hits only",
+      "scope": "Retrospective source-defined activity; no whole-library or clinical claim",
+      "confirmation_zero": "Source nonpositive: inactive or inconclusive; original state unavailable",
+      "missing_confirmation": "Not observed; never filled as inactive",
+      "next_step": "Validate Supporting Information and finish campaign admission before fitting baselines"
+    },
+    "th": {
+      "title": "\u0e2b\u0e25\u0e31\u0e01\u0e10\u0e32\u0e19\u0e01\u0e32\u0e23\u0e08\u0e31\u0e14\u0e0a\u0e38\u0e14\u0e2a\u0e32\u0e23\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e22\u0e37\u0e19\u0e22\u0e31\u0e19\u0e1c\u0e25",
+      "status": "\u0e23\u0e2d\u0e02\u0e49\u0e2d\u0e21\u0e39\u0e25\u0e08\u0e32\u0e01\u0e41\u0e2b\u0e25\u0e48\u0e07\u0e15\u0e49\u0e19\u0e09\u0e1a\u0e31\u0e1a",
+      "results": "\u0e22\u0e31\u0e07\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49\u0e23\u0e31\u0e19",
+      "population": "\u0e40\u0e09\u0e1e\u0e32\u0e30\u0e2a\u0e32\u0e23\u0e17\u0e35\u0e48\u0e2d\u0e2d\u0e01\u0e24\u0e17\u0e18\u0e34\u0e4c\u0e43\u0e19\u0e01\u0e32\u0e23\u0e04\u0e31\u0e14\u0e01\u0e23\u0e2d\u0e07\u0e23\u0e2d\u0e1a\u0e41\u0e23\u0e01\u0e41\u0e25\u0e30\u0e21\u0e35\u0e1c\u0e25\u0e22\u0e37\u0e19\u0e22\u0e31\u0e19\u0e43\u0e19\u0e2d\u0e14\u0e35\u0e15",
+      "scope": "\u0e01\u0e32\u0e23\u0e28\u0e36\u0e01\u0e29\u0e32\u0e22\u0e49\u0e2d\u0e19\u0e2b\u0e25\u0e31\u0e07\u0e15\u0e32\u0e21\u0e19\u0e34\u0e22\u0e32\u0e21\u0e15\u0e49\u0e19\u0e09\u0e1a\u0e31\u0e1a \u0e22\u0e31\u0e07\u0e44\u0e21\u0e48\u0e2a\u0e23\u0e38\u0e1b\u0e1c\u0e25\u0e15\u0e48\u0e2d\u0e17\u0e31\u0e49\u0e07\u0e04\u0e25\u0e31\u0e07\u0e2a\u0e32\u0e23\u0e2b\u0e23\u0e37\u0e2d\u0e1c\u0e25\u0e17\u0e32\u0e07\u0e04\u0e25\u0e34\u0e19\u0e34\u0e01",
+      "confirmation_zero": "\u0e01\u0e25\u0e38\u0e48\u0e21\u0e17\u0e35\u0e48\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49\u0e22\u0e37\u0e19\u0e22\u0e31\u0e19\u0e27\u0e48\u0e32\u0e2d\u0e2d\u0e01\u0e24\u0e17\u0e18\u0e34\u0e4c \u0e23\u0e27\u0e21\u0e1c\u0e25\u0e44\u0e21\u0e48\u0e2d\u0e2d\u0e01\u0e24\u0e17\u0e18\u0e34\u0e4c\u0e41\u0e25\u0e30\u0e1c\u0e25\u0e17\u0e35\u0e48\u0e22\u0e31\u0e07\u0e2a\u0e23\u0e38\u0e1b\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49 \u0e42\u0e14\u0e22\u0e41\u0e22\u0e01\u0e2a\u0e16\u0e32\u0e19\u0e30\u0e40\u0e14\u0e34\u0e21\u0e01\u0e25\u0e31\u0e1a\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49",
+      "missing_confirmation": "\u0e44\u0e21\u0e48\u0e21\u0e35\u0e1c\u0e25\u0e17\u0e35\u0e48\u0e2a\u0e31\u0e07\u0e40\u0e01\u0e15\u0e44\u0e14\u0e49 \u0e44\u0e21\u0e48\u0e40\u0e15\u0e34\u0e21\u0e40\u0e1b\u0e47\u0e19\u0e1c\u0e25\u0e44\u0e21\u0e48\u0e2d\u0e2d\u0e01\u0e24\u0e17\u0e18\u0e34\u0e4c",
+      "next_step": "\u0e15\u0e23\u0e27\u0e08 Supporting Information \u0e41\u0e25\u0e30\u0e01\u0e32\u0e23\u0e23\u0e31\u0e1a\u0e41\u0e15\u0e48\u0e25\u0e30 campaign \u0e40\u0e02\u0e49\u0e32\u0e28\u0e36\u0e01\u0e29\u0e32\u0e43\u0e2b\u0e49\u0e04\u0e23\u0e1a\u0e01\u0e48\u0e2d\u0e19\u0e1d\u0e36\u0e01 baseline"
+    }
+  }
+}

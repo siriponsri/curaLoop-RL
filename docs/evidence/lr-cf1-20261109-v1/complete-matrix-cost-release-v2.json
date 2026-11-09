@@ -1,0 +1,680 @@
+{
+  "status": "PASS_PRIMARY_ONLY_COMPLETE_MATRIX_COST_RELEASE",
+  "cost_rule": "ceil(max(60,1.75*campaign_method_first_seed_whole_cpu+30))",
+  "execution_order": "descending pre-outcome CPU cap, then immutable job name; nonoverlapping three-core waves",
+  "cost_observations": [
+    {
+      "campaign": "628/677",
+      "ranker": "mvsa",
+      "first_seed_cpu_seconds": 82.263529,
+      "first_seed_memory_peak_bytes": 517795840,
+      "remaining_unit_cap_seconds": 174
+    },
+    {
+      "campaign": "628/677",
+      "ranker": "rf",
+      "first_seed_cpu_seconds": 51.374481,
+      "first_seed_memory_peak_bytes": 408260608,
+      "remaining_unit_cap_seconds": 120
+    },
+    {
+      "campaign": "1040/1254",
+      "ranker": "mvsa",
+      "first_seed_cpu_seconds": 244.525373,
+      "first_seed_memory_peak_bytes": 1391894528,
+      "remaining_unit_cap_seconds": 458
+    },
+    {
+      "campaign": "1040/1254",
+      "ranker": "rf",
+      "first_seed_cpu_seconds": 175.352931,
+      "first_seed_memory_peak_bytes": 964378624,
+      "remaining_unit_cap_seconds": 337
+    },
+    {
+      "campaign": "2661/2821",
+      "ranker": "mvsa",
+      "first_seed_cpu_seconds": 449.083582,
+      "first_seed_memory_peak_bytes": 2168725504,
+      "remaining_unit_cap_seconds": 816
+    },
+    {
+      "campaign": "2661/2821",
+      "ranker": "rf",
+      "first_seed_cpu_seconds": 224.964388,
+      "first_seed_memory_peak_bytes": 1425661952,
+      "remaining_unit_cap_seconds": 424
+    },
+    {
+      "campaign": "449739/489005",
+      "ranker": "mvsa",
+      "first_seed_cpu_seconds": 141.305753,
+      "first_seed_memory_peak_bytes": 791015424,
+      "remaining_unit_cap_seconds": 278
+    },
+    {
+      "campaign": "449739/489005",
+      "ranker": "rf",
+      "first_seed_cpu_seconds": 83.783087,
+      "first_seed_memory_peak_bytes": 626896896,
+      "remaining_unit_cap_seconds": 177
+    },
+    {
+      "campaign": "485270/492964",
+      "ranker": "mvsa",
+      "first_seed_cpu_seconds": 406.916374,
+      "first_seed_memory_peak_bytes": 2197426176,
+      "remaining_unit_cap_seconds": 743
+    },
+    {
+      "campaign": "485270/492964",
+      "ranker": "rf",
+      "first_seed_cpu_seconds": 324.032142,
+      "first_seed_memory_peak_bytes": 1628069888,
+      "remaining_unit_cap_seconds": 598
+    },
+    {
+      "campaign": "485273/493155",
+      "ranker": "mvsa",
+      "first_seed_cpu_seconds": 483.965292,
+      "first_seed_memory_peak_bytes": 2225582080,
+      "remaining_unit_cap_seconds": 877
+    },
+    {
+      "campaign": "485273/493155",
+      "ranker": "rf",
+      "first_seed_cpu_seconds": 385.491489,
+      "first_seed_memory_peak_bytes": 1504911360,
+      "remaining_unit_cap_seconds": 705
+    }
+  ],
+  "remaining_fits": [
+    {
+      "name": "matrix-fit-485273-493155-mvsa-90113",
+      "handler": "fit",
+      "cpu": 877,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "485273/493155",
+        "ranker": "mvsa",
+        "seed": 90113,
+        "output_name": "485273-493155-mvsa-90113"
+      }
+    },
+    {
+      "name": "matrix-fit-485273-493155-mvsa-90133",
+      "handler": "fit",
+      "cpu": 877,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "485273/493155",
+        "ranker": "mvsa",
+        "seed": 90133,
+        "output_name": "485273-493155-mvsa-90133"
+      }
+    },
+    {
+      "name": "matrix-fit-485273-493155-mvsa-90149",
+      "handler": "fit",
+      "cpu": 877,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "485273/493155",
+        "ranker": "mvsa",
+        "seed": 90149,
+        "output_name": "485273-493155-mvsa-90149"
+      }
+    },
+    {
+      "name": "matrix-fit-485273-493155-mvsa-90163",
+      "handler": "fit",
+      "cpu": 877,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "485273/493155",
+        "ranker": "mvsa",
+        "seed": 90163,
+        "output_name": "485273-493155-mvsa-90163"
+      }
+    },
+    {
+      "name": "matrix-fit-2661-2821-mvsa-90113",
+      "handler": "fit",
+      "cpu": 816,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "2661/2821",
+        "ranker": "mvsa",
+        "seed": 90113,
+        "output_name": "2661-2821-mvsa-90113"
+      }
+    },
+    {
+      "name": "matrix-fit-2661-2821-mvsa-90133",
+      "handler": "fit",
+      "cpu": 816,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "2661/2821",
+        "ranker": "mvsa",
+        "seed": 90133,
+        "output_name": "2661-2821-mvsa-90133"
+      }
+    },
+    {
+      "name": "matrix-fit-2661-2821-mvsa-90149",
+      "handler": "fit",
+      "cpu": 816,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "2661/2821",
+        "ranker": "mvsa",
+        "seed": 90149,
+        "output_name": "2661-2821-mvsa-90149"
+      }
+    },
+    {
+      "name": "matrix-fit-2661-2821-mvsa-90163",
+      "handler": "fit",
+      "cpu": 816,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "2661/2821",
+        "ranker": "mvsa",
+        "seed": 90163,
+        "output_name": "2661-2821-mvsa-90163"
+      }
+    },
+    {
+      "name": "matrix-fit-485270-492964-mvsa-90113",
+      "handler": "fit",
+      "cpu": 743,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "485270/492964",
+        "ranker": "mvsa",
+        "seed": 90113,
+        "output_name": "485270-492964-mvsa-90113"
+      }
+    },
+    {
+      "name": "matrix-fit-485270-492964-mvsa-90133",
+      "handler": "fit",
+      "cpu": 743,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "485270/492964",
+        "ranker": "mvsa",
+        "seed": 90133,
+        "output_name": "485270-492964-mvsa-90133"
+      }
+    },
+    {
+      "name": "matrix-fit-485270-492964-mvsa-90149",
+      "handler": "fit",
+      "cpu": 743,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "485270/492964",
+        "ranker": "mvsa",
+        "seed": 90149,
+        "output_name": "485270-492964-mvsa-90149"
+      }
+    },
+    {
+      "name": "matrix-fit-485270-492964-mvsa-90163",
+      "handler": "fit",
+      "cpu": 743,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "485270/492964",
+        "ranker": "mvsa",
+        "seed": 90163,
+        "output_name": "485270-492964-mvsa-90163"
+      }
+    },
+    {
+      "name": "matrix-fit-485273-493155-rf-90113",
+      "handler": "fit",
+      "cpu": 705,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "485273/493155",
+        "ranker": "rf",
+        "seed": 90113,
+        "output_name": "485273-493155-rf-90113"
+      }
+    },
+    {
+      "name": "matrix-fit-485273-493155-rf-90133",
+      "handler": "fit",
+      "cpu": 705,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "485273/493155",
+        "ranker": "rf",
+        "seed": 90133,
+        "output_name": "485273-493155-rf-90133"
+      }
+    },
+    {
+      "name": "matrix-fit-485273-493155-rf-90149",
+      "handler": "fit",
+      "cpu": 705,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "485273/493155",
+        "ranker": "rf",
+        "seed": 90149,
+        "output_name": "485273-493155-rf-90149"
+      }
+    },
+    {
+      "name": "matrix-fit-485273-493155-rf-90163",
+      "handler": "fit",
+      "cpu": 705,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "485273/493155",
+        "ranker": "rf",
+        "seed": 90163,
+        "output_name": "485273-493155-rf-90163"
+      }
+    },
+    {
+      "name": "matrix-fit-485270-492964-rf-90113",
+      "handler": "fit",
+      "cpu": 598,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "485270/492964",
+        "ranker": "rf",
+        "seed": 90113,
+        "output_name": "485270-492964-rf-90113"
+      }
+    },
+    {
+      "name": "matrix-fit-485270-492964-rf-90133",
+      "handler": "fit",
+      "cpu": 598,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "485270/492964",
+        "ranker": "rf",
+        "seed": 90133,
+        "output_name": "485270-492964-rf-90133"
+      }
+    },
+    {
+      "name": "matrix-fit-485270-492964-rf-90149",
+      "handler": "fit",
+      "cpu": 598,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "485270/492964",
+        "ranker": "rf",
+        "seed": 90149,
+        "output_name": "485270-492964-rf-90149"
+      }
+    },
+    {
+      "name": "matrix-fit-485270-492964-rf-90163",
+      "handler": "fit",
+      "cpu": 598,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "485270/492964",
+        "ranker": "rf",
+        "seed": 90163,
+        "output_name": "485270-492964-rf-90163"
+      }
+    },
+    {
+      "name": "matrix-fit-1040-1254-mvsa-90113",
+      "handler": "fit",
+      "cpu": 458,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "1040/1254",
+        "ranker": "mvsa",
+        "seed": 90113,
+        "output_name": "1040-1254-mvsa-90113"
+      }
+    },
+    {
+      "name": "matrix-fit-1040-1254-mvsa-90133",
+      "handler": "fit",
+      "cpu": 458,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "1040/1254",
+        "ranker": "mvsa",
+        "seed": 90133,
+        "output_name": "1040-1254-mvsa-90133"
+      }
+    },
+    {
+      "name": "matrix-fit-1040-1254-mvsa-90149",
+      "handler": "fit",
+      "cpu": 458,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "1040/1254",
+        "ranker": "mvsa",
+        "seed": 90149,
+        "output_name": "1040-1254-mvsa-90149"
+      }
+    },
+    {
+      "name": "matrix-fit-1040-1254-mvsa-90163",
+      "handler": "fit",
+      "cpu": 458,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "1040/1254",
+        "ranker": "mvsa",
+        "seed": 90163,
+        "output_name": "1040-1254-mvsa-90163"
+      }
+    },
+    {
+      "name": "matrix-fit-2661-2821-rf-90113",
+      "handler": "fit",
+      "cpu": 424,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "2661/2821",
+        "ranker": "rf",
+        "seed": 90113,
+        "output_name": "2661-2821-rf-90113"
+      }
+    },
+    {
+      "name": "matrix-fit-2661-2821-rf-90133",
+      "handler": "fit",
+      "cpu": 424,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "2661/2821",
+        "ranker": "rf",
+        "seed": 90133,
+        "output_name": "2661-2821-rf-90133"
+      }
+    },
+    {
+      "name": "matrix-fit-2661-2821-rf-90149",
+      "handler": "fit",
+      "cpu": 424,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "2661/2821",
+        "ranker": "rf",
+        "seed": 90149,
+        "output_name": "2661-2821-rf-90149"
+      }
+    },
+    {
+      "name": "matrix-fit-2661-2821-rf-90163",
+      "handler": "fit",
+      "cpu": 424,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "2661/2821",
+        "ranker": "rf",
+        "seed": 90163,
+        "output_name": "2661-2821-rf-90163"
+      }
+    },
+    {
+      "name": "matrix-fit-1040-1254-rf-90113",
+      "handler": "fit",
+      "cpu": 337,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "1040/1254",
+        "ranker": "rf",
+        "seed": 90113,
+        "output_name": "1040-1254-rf-90113"
+      }
+    },
+    {
+      "name": "matrix-fit-1040-1254-rf-90133",
+      "handler": "fit",
+      "cpu": 337,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "1040/1254",
+        "ranker": "rf",
+        "seed": 90133,
+        "output_name": "1040-1254-rf-90133"
+      }
+    },
+    {
+      "name": "matrix-fit-1040-1254-rf-90149",
+      "handler": "fit",
+      "cpu": 337,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "1040/1254",
+        "ranker": "rf",
+        "seed": 90149,
+        "output_name": "1040-1254-rf-90149"
+      }
+    },
+    {
+      "name": "matrix-fit-1040-1254-rf-90163",
+      "handler": "fit",
+      "cpu": 337,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "1040/1254",
+        "ranker": "rf",
+        "seed": 90163,
+        "output_name": "1040-1254-rf-90163"
+      }
+    },
+    {
+      "name": "matrix-fit-449739-489005-mvsa-90113",
+      "handler": "fit",
+      "cpu": 278,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "449739/489005",
+        "ranker": "mvsa",
+        "seed": 90113,
+        "output_name": "449739-489005-mvsa-90113"
+      }
+    },
+    {
+      "name": "matrix-fit-449739-489005-mvsa-90133",
+      "handler": "fit",
+      "cpu": 278,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "449739/489005",
+        "ranker": "mvsa",
+        "seed": 90133,
+        "output_name": "449739-489005-mvsa-90133"
+      }
+    },
+    {
+      "name": "matrix-fit-449739-489005-mvsa-90149",
+      "handler": "fit",
+      "cpu": 278,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "449739/489005",
+        "ranker": "mvsa",
+        "seed": 90149,
+        "output_name": "449739-489005-mvsa-90149"
+      }
+    },
+    {
+      "name": "matrix-fit-449739-489005-mvsa-90163",
+      "handler": "fit",
+      "cpu": 278,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "449739/489005",
+        "ranker": "mvsa",
+        "seed": 90163,
+        "output_name": "449739-489005-mvsa-90163"
+      }
+    },
+    {
+      "name": "matrix-fit-449739-489005-rf-90113",
+      "handler": "fit",
+      "cpu": 177,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "449739/489005",
+        "ranker": "rf",
+        "seed": 90113,
+        "output_name": "449739-489005-rf-90113"
+      }
+    },
+    {
+      "name": "matrix-fit-449739-489005-rf-90133",
+      "handler": "fit",
+      "cpu": 177,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "449739/489005",
+        "ranker": "rf",
+        "seed": 90133,
+        "output_name": "449739-489005-rf-90133"
+      }
+    },
+    {
+      "name": "matrix-fit-449739-489005-rf-90149",
+      "handler": "fit",
+      "cpu": 177,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "449739/489005",
+        "ranker": "rf",
+        "seed": 90149,
+        "output_name": "449739-489005-rf-90149"
+      }
+    },
+    {
+      "name": "matrix-fit-449739-489005-rf-90163",
+      "handler": "fit",
+      "cpu": 177,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "449739/489005",
+        "ranker": "rf",
+        "seed": 90163,
+        "output_name": "449739-489005-rf-90163"
+      }
+    },
+    {
+      "name": "matrix-fit-628-677-mvsa-90113",
+      "handler": "fit",
+      "cpu": 174,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "628/677",
+        "ranker": "mvsa",
+        "seed": 90113,
+        "output_name": "628-677-mvsa-90113"
+      }
+    },
+    {
+      "name": "matrix-fit-628-677-mvsa-90133",
+      "handler": "fit",
+      "cpu": 174,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "628/677",
+        "ranker": "mvsa",
+        "seed": 90133,
+        "output_name": "628-677-mvsa-90133"
+      }
+    },
+    {
+      "name": "matrix-fit-628-677-mvsa-90149",
+      "handler": "fit",
+      "cpu": 174,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "628/677",
+        "ranker": "mvsa",
+        "seed": 90149,
+        "output_name": "628-677-mvsa-90149"
+      }
+    },
+    {
+      "name": "matrix-fit-628-677-mvsa-90163",
+      "handler": "fit",
+      "cpu": 174,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "628/677",
+        "ranker": "mvsa",
+        "seed": 90163,
+        "output_name": "628-677-mvsa-90163"
+      }
+    },
+    {
+      "name": "matrix-fit-628-677-rf-90113",
+      "handler": "fit",
+      "cpu": 120,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "628/677",
+        "ranker": "rf",
+        "seed": 90113,
+        "output_name": "628-677-rf-90113"
+      }
+    },
+    {
+      "name": "matrix-fit-628-677-rf-90133",
+      "handler": "fit",
+      "cpu": 120,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "628/677",
+        "ranker": "rf",
+        "seed": 90133,
+        "output_name": "628-677-rf-90133"
+      }
+    },
+    {
+      "name": "matrix-fit-628-677-rf-90149",
+      "handler": "fit",
+      "cpu": 120,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "628/677",
+        "ranker": "rf",
+        "seed": 90149,
+        "output_name": "628-677-rf-90149"
+      }
+    },
+    {
+      "name": "matrix-fit-628-677-rf-90163",
+      "handler": "fit",
+      "cpu": 120,
+      "bucket": "features_and_baseline_reproduction",
+      "extra": {
+        "campaign": "628/677",
+        "ranker": "rf",
+        "seed": 90163,
+        "output_name": "628-677-rf-90163"
+      }
+    }
+  ],
+  "remaining_fit_count": 48,
+  "remaining_fit_cap_seconds": 22828,
+  "portfolio_unit_cap_seconds": 180,
+  "portfolio_total_cap_seconds": 1080,
+  "projected_retained_cpu_seconds": 92128,
+  "projected_artifacts_and_compressed_return_bytes": 7571167342,
+  "storage_forecast_rule": "current tree + 1.5x first-seed model bytes per remaining seed + 64MiB metadata; measured level-1 gzip streams + 1.5x first-seed compressed model bytes per remaining seed + 64MiB export metadata; actual writer enforces 8GiB",
+  "retained_utility_bucket_seconds": 43200,
+  "cell_count": 2700,
+  "confirmation_values_analyzed": false,
+  "source_or_scientific_parameters_changed": false
+}

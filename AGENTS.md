@@ -1,5 +1,81 @@
 # Agent instructions: CuraLoop-RL
 
+## LR-CF1 complete; owner checkpoint before any new phase
+
+Read docs / 03_research/LR_CF1_RESULTS_20261109.md,
+docs / 06_execution/LR_CF1_OWNER_CHECKPOINT_20261109.md and HANDOFF.md. All 60
+molecular fits and2,700 cells PASS; independent recount/full private return and
+exact owned cleanup/fresh absence PASS. NO_GO_QUOTA_ONLY_METHOD_CLAIM; a new
+selector's novelty/potential is not established. All six current confirmations
+are exposed development; final16 remains sealed. No new selector, actual
+integration, paid/GPU, live team write/deploy or submission was performed.
+
+Finish final audit/budget closure/main delivery if still pending, then stop for
+owner decision. Do not relaunch completed units or recreate deleted task/export
+roots. Retain93,088/172,800 CPU seconds including full utility bucket and failed
+attempts; no unused ceiling releases another phase. Original deadline/account
+unchanged. CF2-Design and P-CF1 are proposals only. Parent sole writer. Normal
+main commit/push at closeout is explicitly authorized. Earlier active/blocked/
+release/proposal markers below are historical and do not override this state.
+
+## Owner chooses A and resumes LR-CF1, 9 November 2026
+
+Owner explicitly answered A: use AID + pinned repository while retaining SI
+codename discrepancies. Read research/manifests/lr_cf1_source_a_owner_20261109_v1.json.
+This resolves the source-choice blocker and supersedes the pending/blocked
+snapshots below. Resume in the same active budget ledger/root and original
+13 November14:10:48.561842Z deadline. No new goal/account or clock reset.
+Use numeric primary/confirmation AID ordering and qualified processed-repository
+reproduction claims. All other source/role/rights/observation/resource gates still
+apply. Do not silently fix author MVS-A code. No final16, new selector, live
+activity intake outside the approved snapshot, paid/GPU or actual integration.
+Parent sole writer; complete return/reread before exact owned cleanup and main
+commit/push at goal closeout. Earlier owner-choice waits are historical.
+
+## Owner releases LR-CF1, 9 November 2026
+
+Goal blocked audit reached its three-turn threshold while the same owner A/B
+source-concordance choice remains absent. Read
+docs/06_execution/LR_CF1_BLOCKED_HANDOFF_20261109.md. Independent source preparation
+is complete; do not manufacture more work or repeat the question. Goal BLOCKED
+pending owner input is not scientific completion, budget closure or permission
+to apply A. Original deadline/account and all exclusions remain unchanged.
+
+Latest execution checkpoint: ACTIVE_WAITING_OWNER_SOURCE_CONCORDANCE.
+Independent source-use/baseline review and constructed source-behavior probes are
+complete; read docs/03_research/LR_CF1_SOURCE_USE_AND_BASELINE_CONCORDANCE_20261109.md.
+Those probes used no molecular data or real LightGBM fit and do not release intake.
+The source-concordance answer remains required; do not silently fix author code.
+
+Owner supplied SI; visual pp6–7 review found13/17 codename conflicts with repository
+metadata, with the same17 AID pairs. Read
+docs/06_execution/LR_CF1_SOURCE_CONCORDANCE_DECISION_20261109.md and the v2 audit.
+The owner has been asked whether to use AID/repository reconstruction with explicit
+aliases or wait for author clarification. Do not apply a source correction or
+perform dependent campaign intake before that answer. Continue only independent
+authorized preparation/provenance work. Account/clock remain active and unchanged.
+No campaign data, primary-training/confirmation values or final16 payloads read;
+no remote task/export created.16 descriptions,23 author blobs and11 constructed
+tests checked. Preparation lint/link checks PASS after retained spacing-only fixes.
+
+Owner confirmed the confirmation-portfolio contribution and explicitly approved
+LR-CF1 at2549696. Read docs/06_execution/LONG_RUN_CONFIRMATION_FEASIBILITY_PROPOSAL_20261109.md
+and research/manifests/lr_cf1_release_20261109_v1.json. Fresh48 CPU-hours /96 hours /
+max4 combined workers, local1 target1GiB plus dr-train3 each1CPU-equivalent/4GiB.
+Release2026-11-09T14:10:48.561842Z, deadline2026-11-13T14:10:48.561842Z.
+Fresh .local/lr-cf1-20261109-v1 and matching owned remote root only. Preserve12
+old ledger pins and every old STOP/source/result/role. At most6 AIC_Finder whole
+development campaigns, min4 /min2 source-experiment blocks, <=1GiB data transfer,
+<=2M primary records /100k confirmations /8GiB remote artifacts. Scope allows
+development confirmation labels only after source/role/rights/technical gates;
+mandatory primary/MVS-A reproduction precedes <=2700 frozen portfolio cells.
+Old MF-PCBA/ChEMBL live intake and separate DataValuationPlatform data stay out.
+No new selector, final16 feature/label/presence evaluation, paid/GPU, actual
+integration/live writes/deploy or submission. Owner checkpoint before novel
+method/independent evaluation. Parent sole writer; full private return/reread
+before exact owned cleanup, then normal main commit/push, even on early stop.
+Historical proposal-only and completed LR-D23 markers below are prior snapshots.
+
 ## LR-D23 complete; owner review before a new phase, 9 November 2026
 
 Read docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md,

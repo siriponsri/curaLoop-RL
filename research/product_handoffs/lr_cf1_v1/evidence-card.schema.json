@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LR-CF1 aggregate-only offline feasibility card",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "created_utc",
+    "estimand",
+    "final16_access",
+    "new_selector_training",
+    "gates",
+    "campaigns",
+    "source_experiment_blocks",
+    "annotation_connected_components",
+    "metrics",
+    "metric_context",
+    "uncertainty",
+    "integration_status",
+    "publication_ready",
+    "data_use_scope",
+    "source_snapshot",
+    "source_name_conflicts",
+    "evidence",
+    "labels"
+  ],
+  "properties": {
+    "schema": {
+      "const": "curaloop.confirmation.offline-report.v1"
+    },
+    "status": {
+      "const": "FEASIBILITY_COMPLETE"
+    },
+    "created_utc": {
+      "type": "string"
+    },
+    "estimand": {
+      "const": "OBSERVATION_SUPPORTED_PRIMARY_HITS_ONLY"
+    },
+    "final16_access": {
+      "const": false
+    },
+    "new_selector_training": {
+      "const": false
+    },
+    "gates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "rights",
+        "roles",
+        "observation_support",
+        "resources",
+        "mandatory_baselines"
+      ],
+      "properties": {
+        "source": {
+          "const": true
+        },
+        "rights": {
+          "const": true
+        },
+        "roles": {
+          "const": true
+        },
+        "observation_support": {
+          "const": true
+        },
+        "resources": {
+          "const": true
+        },
+        "mandatory_baselines": {
+          "const": true
+        }
+      }
+    },
+    "campaigns": {
+      "type": "integer",
+      "minimum": 4,
+      "maximum": 6
+    },
+    "source_experiment_blocks": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "annotation_connected_components": {
+      "const": 1
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "confirmed_positives",
+        "positive_structure_groups"
+      ],
+      "properties": {
+        "confirmed_positives": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "positive_structure_groups": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "metric_context": {
+      "type": "string",
+      "minLength": 1
+    },
+    "uncertainty": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "estimated",
+        "type",
+        "seed_intervals_are_biological_uncertainty"
+      ],
+      "properties": {
+        "estimated": {
+          "const": true
+        },
+        "type": {
+          "type": "string"
+        },
+        "seed_intervals_are_biological_uncertainty": {
+          "const": false
+        }
+      }
+    },
+    "integration_status": {
+      "const": "OFFLINE_HANDOFF_ONLY"
+    },
+    "publication_ready": {
+      "const": false
+    },
+    "data_use_scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_snapshot": {
+      "const": "04c58e85188e724ec5ff44cbed2e7b960f6f3df3"
+    },
+    "source_name_conflicts": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "results",
+        "cells"
+      ],
+      "properties": {
+        "results": {
+          "type": "string"
+        },
+        "cells": {
+          "type": "string"
+        }
+      }
+    },
+    "labels": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "en",
+        "th"
+      ],
+      "properties": {
+        "en": {
+          "$ref": "#/$defs/labels"
+        },
+        "th": {
+          "$ref": "#/$defs/labels"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "labels": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "status",
+        "scope",
+        "confirmation_zero",
+        "next_step"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "confirmation_zero": {
+          "type": "string"
+        },
+        "next_step": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

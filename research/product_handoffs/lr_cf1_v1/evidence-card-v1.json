@@ -1,0 +1,54 @@
+{
+  "schema": "curaloop.confirmation.offline-report.v1",
+  "status": "FEASIBILITY_COMPLETE",
+  "created_utc": "2026-11-09T18:19:57.675333+00:00",
+  "estimand": "OBSERVATION_SUPPORTED_PRIMARY_HITS_ONLY",
+  "final16_access": false,
+  "new_selector_training": false,
+  "gates": {
+    "source": true,
+    "rights": true,
+    "roles": true,
+    "observation_support": true,
+    "resources": true,
+    "mandatory_baselines": true
+  },
+  "campaigns": 6,
+  "source_experiment_blocks": 4,
+  "annotation_connected_components": 1,
+  "metrics": {
+    "confirmed_positives": 3050,
+    "positive_structure_groups": 2436
+  },
+  "metric_context": "Sum across six complete admitted observation-supported universes; assay-specific observations/groups, not unique cross-assay compounds or a selected policy's output",
+  "uncertainty": {
+    "estimated": true,
+    "type": "five-seed observed range and SD",
+    "seed_intervals_are_biological_uncertainty": false
+  },
+  "integration_status": "OFFLINE_HANDOFF_ONLY",
+  "publication_ready": false,
+  "data_use_scope": "Bounded noncommercial reanalysis and derived aggregate report preparation; raw redistribution and commercial data clearance are not established",
+  "source_snapshot": "04c58e85188e724ec5ff44cbed2e7b960f6f3df3",
+  "source_name_conflicts": "13 of 17 SI/repository aliases conflict; numeric AID pairs and pinned repository govern",
+  "evidence": {
+    "results": "../../../docs/evidence/lr-cf1-20261109-v1/results-summary-v1.json",
+    "cells": "../../../docs/evidence/lr-cf1-20261109-v1/portfolio-cells-v1.csv"
+  },
+  "labels": {
+    "en": {
+      "title": "Confirmation portfolio evidence",
+      "status": "Development feasibility complete",
+      "scope": "Published processed-repository reproduction; observation-supported primary hits only",
+      "confirmation_zero": "Source nonpositive includes inactive or inconclusive; missing is never imputed",
+      "next_step": "Owner reviews contribution and study design before any new selector or independent evaluation"
+    },
+    "th": {
+      "title": "\u0e2b\u0e25\u0e31\u0e01\u0e10\u0e32\u0e19\u0e01\u0e32\u0e23\u0e08\u0e31\u0e14\u0e0a\u0e38\u0e14\u0e2a\u0e32\u0e23\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e22\u0e37\u0e19\u0e22\u0e31\u0e19\u0e1c\u0e25",
+      "status": "\u0e15\u0e23\u0e27\u0e08\u0e04\u0e27\u0e32\u0e21\u0e40\u0e1b\u0e47\u0e19\u0e44\u0e1b\u0e44\u0e14\u0e49\u0e1a\u0e19\u0e0a\u0e38\u0e14\u0e1e\u0e31\u0e12\u0e19\u0e32\u0e40\u0e2a\u0e23\u0e47\u0e08\u0e41\u0e25\u0e49\u0e27",
+      "scope": "\u0e17\u0e14\u0e2a\u0e2d\u0e1a\u0e08\u0e32\u0e01\u0e02\u0e49\u0e2d\u0e21\u0e39\u0e25\u0e17\u0e35\u0e48\u0e1c\u0e39\u0e49\u0e40\u0e02\u0e35\u0e22\u0e19\u0e1b\u0e23\u0e30\u0e21\u0e27\u0e25\u0e1c\u0e25\u0e41\u0e25\u0e30\u0e40\u0e1c\u0e22\u0e41\u0e1e\u0e23\u0e48 \u0e40\u0e09\u0e1e\u0e32\u0e30\u0e2a\u0e32\u0e23 primary hit \u0e17\u0e35\u0e48\u0e21\u0e35\u0e1c\u0e25\u0e22\u0e37\u0e19\u0e22\u0e31\u0e19\u0e1a\u0e31\u0e19\u0e17\u0e36\u0e01\u0e44\u0e27\u0e49",
+      "confirmation_zero": "\u0e04\u0e48\u0e32 0 \u0e23\u0e27\u0e21\u0e1c\u0e25\u0e44\u0e21\u0e48\u0e2d\u0e2d\u0e01\u0e24\u0e17\u0e18\u0e34\u0e4c\u0e41\u0e25\u0e30\u0e1c\u0e25\u0e17\u0e35\u0e48\u0e22\u0e31\u0e07\u0e2a\u0e23\u0e38\u0e1b\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49 \u0e2a\u0e48\u0e27\u0e19\u0e1c\u0e25\u0e17\u0e35\u0e48\u0e2b\u0e32\u0e22\u0e44\u0e1b\u0e44\u0e21\u0e48\u0e40\u0e15\u0e34\u0e21\u0e40\u0e1b\u0e47\u0e19 0",
+      "next_step": "\u0e40\u0e08\u0e49\u0e32\u0e02\u0e2d\u0e07\u0e42\u0e04\u0e23\u0e07\u0e01\u0e32\u0e23\u0e23\u0e48\u0e27\u0e21\u0e15\u0e31\u0e14\u0e2a\u0e34\u0e19\u0e43\u0e08 contribution \u0e41\u0e25\u0e30\u0e41\u0e1a\u0e1a\u0e01\u0e32\u0e23\u0e28\u0e36\u0e01\u0e29\u0e32\u0e01\u0e48\u0e2d\u0e19\u0e1e\u0e31\u0e12\u0e19\u0e32\u0e27\u0e34\u0e18\u0e35\u0e43\u0e2b\u0e21\u0e48\u0e2b\u0e23\u0e37\u0e2d\u0e1b\u0e23\u0e30\u0e40\u0e21\u0e34\u0e19\u0e0a\u0e38\u0e14\u0e2d\u0e34\u0e2a\u0e23\u0e30"
+    }
+  }
+}

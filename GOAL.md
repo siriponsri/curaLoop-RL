@@ -1,12 +1,25 @@
 # Goal: a defensible method and a useful R&D plugin
 
-**Contribution revision proposed:** [confirmation-budget chemotype coverage](docs/03_research/CONFIRMATION_PORTFOLIO_CONTRIBUTION_PROPOSAL_20261109.md).
-Owner review precedes any separately budgeted data/baseline feasibility work.
-No new scientific goal is released; the completed LR-D23 verdict remains unchanged.
-The [LR-CF1 proposal](docs/06_execution/LONG_RUN_CONFIRMATION_FEASIBILITY_PROPOSAL_20261109.md)
-would close data/endpoint and baseline/opportunity preparation with a fresh
-48 CPU-hour / 96-hour cap. It awaits owner approval and excludes new-selector
-training, protected evaluation and actual integration.
+**Current: LR-CF1 study complete; owner review before a new phase.**
+Six admitted published-source campaigns, 1,333,191 retained primary observations,
+6,896 observation-supported confirmations, 60 molecular fits and2,700 portfolio
+cells completed. All 30 real MVS-A score checks and independent local H/D recount
+passed. Complete private return/reread and exact owned remote cleanup passed.
+
+The [results](docs/03_research/LR_CF1_RESULTS_20261109.md) confirm a classical
+hit/coverage tradeoff. **NO_GO for a quota-only new-method claim; journal readiness
+is not established.** The [EN/TH offline report](research/product_handoffs/lr_cf1_v1/report.html)
+and [English paper insert](docs/07_publication/LR_CF1_METHODS_RESULTS_INSERT_20261109.md)
+preserve the actual evidence. Final16 remains sealed; no novel selector or live
+integration was activated. Read the [owner checkpoint](docs/06_execution/LR_CF1_OWNER_CHECKPOINT_20261109.md)
+and [evidence index](docs/evidence/lr-cf1-20261109-v1/README.md).
+
+CF2-Design and P-CF1 are alternative proposals requiring a new owner decision.
+No unused LR-CF1 allowance or old conditional grant releases another phase.
+
+## Historical checkpoints
+
+The states below describe their original checkpoints, not current permissions.
 
 **LR-D23 complete, 9 November:** [results](docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md).
 D2 INCONCLUSIVE; D3 NOT_RUN because the frozen gate failed. All 2,052 biological

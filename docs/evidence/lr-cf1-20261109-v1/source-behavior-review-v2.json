@@ -1,0 +1,51 @@
+{
+  "status": "PASS_CONSTRUCTED_SOURCE_BEHAVIOR_PROBES",
+  "author_source_sha256": "d68898ba92b417739f066278b82e5293a162ed91e6f0fcc61f1a740860f2c52c",
+  "dependency_source_sha256": "6e3179b1a9884cecf90e4db733eb82b57284ae90131f07110ade63bd6e370e35",
+  "dependency_tag": "v3.1.1",
+  "si_pages_visually_checked_for_equation": [
+    3,
+    4
+  ],
+  "checks": [
+    {
+      "name": "score_equation_and_clipping",
+      "status": "PASS",
+      "scope": "Synthetic arrays only"
+    },
+    {
+      "name": "leaf_l1_loop",
+      "status": "OBSERVED_CONVENTION",
+      "maximum_leaf_index": 2,
+      "indices_visited": [
+        0,
+        1
+      ],
+      "source_l1": 3.0,
+      "all_three_constructed_leaf_l1": 7.0
+    },
+    {
+      "name": "checkpoint_iteration_arguments",
+      "status": "OBSERVED_CONVENTION",
+      "arguments": [
+        0,
+        1,
+        2
+      ],
+      "pinned_dependency_zero_argument_means": "ALL_ITERATIONS_NOT_EMPTY_MODEL"
+    },
+    {
+      "name": "dictionary_parameter_branch",
+      "status": "OBSERVED_CONVENTION",
+      "instance_dictionary_does_not_set_params": true,
+      "default_string_branch_parameters_verified": true
+    }
+  ],
+  "real_lightgbm_runtime_test": false,
+  "molecular_inputs_used": false,
+  "baseline_reproduction": false,
+  "model_fits": 0,
+  "confirmation_values_analyzed": false,
+  "source_implementation_modified": false,
+  "source_correction_applied": false
+}

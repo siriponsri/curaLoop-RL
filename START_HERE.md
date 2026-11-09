@@ -1,12 +1,25 @@
 # Start here
 
-**Proposed direction for owner review:** [confirmation-budget portfolios](docs/03_research/CONFIRMATION_PORTFOLIO_CONTRIBUTION_PROPOSAL_20261109.md),
-targeting assay-confirmed chemotype coverage with explicit hit retention and
-strong diversified controls. See the [source/access review](docs/02_literature/CONFIRMATION_DIRECTION_SOURCE_REVIEW_20261109.md).
-This is contribution planning only; no new data access, training or phase starts.
-Next proposed work: [LR-CF1](docs/06_execution/LONG_RUN_CONFIRMATION_FEASIBILITY_PROPOSAL_20261109.md),
-fresh 48 CPU-hours / 96 hours / max4 workers for data and baseline opportunity.
-Owner execution approval is pending; no old account is reopened.
+**Current: LR-CF1 study complete; owner review before a new phase.**
+Six admitted published-source campaigns, 1,333,191 retained primary observations,
+6,896 observation-supported confirmations, 60 molecular fits and2,700 portfolio
+cells completed. All 30 real MVS-A score checks and independent local H/D recount
+passed. Complete private return/reread and exact owned remote cleanup passed.
+
+The [results](docs/03_research/LR_CF1_RESULTS_20261109.md) confirm a classical
+hit/coverage tradeoff. **NO_GO for a quota-only new-method claim; journal readiness
+is not established.** The [EN/TH offline report](research/product_handoffs/lr_cf1_v1/report.html)
+and [English paper insert](docs/07_publication/LR_CF1_METHODS_RESULTS_INSERT_20261109.md)
+preserve the actual evidence. Final16 remains sealed; no novel selector or live
+integration was activated. Read the [owner checkpoint](docs/06_execution/LR_CF1_OWNER_CHECKPOINT_20261109.md)
+and [evidence index](docs/evidence/lr-cf1-20261109-v1/README.md).
+
+CF2-Design and P-CF1 are alternative proposals requiring a new owner decision.
+No unused LR-CF1 allowance or old conditional grant releases another phase.
+
+## Historical checkpoints
+
+The states below describe their original checkpoints, not current permissions.
 
 **Current: LR-D23 complete, 9 November 2026.** Read the
 [results](docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md),

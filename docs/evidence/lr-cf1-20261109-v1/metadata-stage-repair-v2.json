@@ -1,0 +1,10 @@
+{
+  "status": "PASS_FAILED_STAGE_TERMINAL_AND_TARGET_ABSENT",
+  "MainPID": "0",
+  "ActiveState": "failed",
+  "metadata_target_absent": true,
+  "cause": "Concurrent rendered() calls temporarily mutate the shared bootstrap factory; a stale True marker leaked into later staging in the same process. Worker dispatch does not use that bootstrap body.",
+  "repair": "Fresh serial metadata staging reuses exact passed checks and immutable scientific code; no refit or new cell",
+  "original_failure_retained": true,
+  "confirmation_values_analyzed": false
+}

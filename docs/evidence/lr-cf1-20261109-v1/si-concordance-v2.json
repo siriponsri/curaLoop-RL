@@ -1,0 +1,176 @@
+{
+  "status": "STOP_DEPENDENT_INTAKE_SOURCE_CONCORDANCE_OWNER_DECISION",
+  "si": {
+    "path": "research/raw_data/external-benchmarks/aic-finder-2024/metadata/oc3c01517_si_001.pdf",
+    "sha256": "adf8716fb2559aeb0ac1248d4f42c72b1466babced2e102b1cee69b9558e43b1",
+    "bytes": 1024247,
+    "pages": 25,
+    "owner_supplied": true,
+    "used_as_instructions": false
+  },
+  "si_table_pages_visually_checked": [
+    6,
+    7
+  ],
+  "campaign_pairs_in_both_sources": 17,
+  "codename_conflicts": 13,
+  "comparisons": [
+    {
+      "primary_aid": 485270,
+      "confirmation_aid": 492964,
+      "repository_codename": "GPCR",
+      "si_table_s3_codename": "transporter",
+      "same_codename": false
+    },
+    {
+      "primary_aid": 1040,
+      "confirmation_aid": 1254,
+      "repository_codename": "GPCR_2",
+      "si_table_s3_codename": "transcription",
+      "same_codename": false
+    },
+    {
+      "primary_aid": 628,
+      "confirmation_aid": 677,
+      "repository_codename": "GPCR_3",
+      "si_table_s3_codename": "transcription_2",
+      "same_codename": false
+    },
+    {
+      "primary_aid": 1672,
+      "confirmation_aid": 2032,
+      "repository_codename": "ion_channel",
+      "si_table_s3_codename": "GPCR_2",
+      "same_codename": false
+    },
+    {
+      "primary_aid": 449739,
+      "confirmation_aid": 489005,
+      "repository_codename": "ion_channel_2",
+      "si_table_s3_codename": "GPCR_3",
+      "same_codename": false
+    },
+    {
+      "primary_aid": 2239,
+      "confirmation_aid": 2287,
+      "repository_codename": "ion_channel_3",
+      "si_table_s3_codename": "ion_channel",
+      "same_codename": false
+    },
+    {
+      "primary_aid": 2661,
+      "confirmation_aid": 2821,
+      "repository_codename": "kinase",
+      "si_table_s3_codename": "ion_channel_2",
+      "same_codename": false
+    },
+    {
+      "primary_aid": 488975,
+      "confirmation_aid": 493221,
+      "repository_codename": "transporter",
+      "si_table_s3_codename": "ion_channel_3",
+      "same_codename": false
+    },
+    {
+      "primary_aid": 504558,
+      "confirmation_aid": 588343,
+      "repository_codename": "transcription",
+      "si_table_s3_codename": "kinase",
+      "same_codename": false
+    },
+    {
+      "primary_aid": 2098,
+      "confirmation_aid": 2382,
+      "repository_codename": "transcription_2",
+      "si_table_s3_codename": "GPCR",
+      "same_codename": false
+    },
+    {
+      "primary_aid": 624304,
+      "confirmation_aid": 624474,
+      "repository_codename": "transcription_3",
+      "si_table_s3_codename": "serine",
+      "same_codename": false
+    },
+    {
+      "primary_aid": 485273,
+      "confirmation_aid": 493155,
+      "repository_codename": "ubiquitin",
+      "si_table_s3_codename": "transcription_3",
+      "same_codename": false
+    },
+    {
+      "primary_aid": 873,
+      "confirmation_aid": 1431,
+      "repository_codename": "serine",
+      "si_table_s3_codename": "ubiquitin",
+      "same_codename": false
+    },
+    {
+      "primary_aid": 2221,
+      "confirmation_aid": 435010,
+      "repository_codename": "splicing",
+      "si_table_s3_codename": "splicing",
+      "same_codename": true
+    },
+    {
+      "primary_aid": 720511,
+      "confirmation_aid": 743267,
+      "repository_codename": "channel_atp",
+      "si_table_s3_codename": "channel_atp",
+      "same_codename": true
+    },
+    {
+      "primary_aid": 686996,
+      "confirmation_aid": 720632,
+      "repository_codename": "cysteine_protease",
+      "si_table_s3_codename": "cysteine_protease",
+      "same_codename": true
+    },
+    {
+      "primary_aid": 1832,
+      "confirmation_aid": 1960,
+      "repository_codename": "zinc_finger",
+      "si_table_s3_codename": "zinc_finger",
+      "same_codename": true
+    }
+  ],
+  "cleanup_log_crosschecks": [
+    {
+      "repository_codename": "channel_atp",
+      "primary_aid": 720511,
+      "confirmation_aid": 743267,
+      "cleanup_log_sha256": "fb13e1789f2ee5e1c64ce4d1f25fe3aa294c853ea7b25e3fe67b76fd77f95332",
+      "git_blob_authenticated": true,
+      "conflicts_with_si_codename": false
+    },
+    {
+      "repository_codename": "cysteine_protease",
+      "primary_aid": 686996,
+      "confirmation_aid": 720632,
+      "cleanup_log_sha256": "ede50b135f7796682820c079837d6febb2ae3c1fe3e1cad9f22af484f0acbc6f",
+      "git_blob_authenticated": true,
+      "conflicts_with_si_codename": false
+    },
+    {
+      "repository_codename": "ion_channel_3",
+      "primary_aid": 2239,
+      "confirmation_aid": 2287,
+      "cleanup_log_sha256": "84172ad6d7581ba514805e0730a2c530aab6bbfb7ce04eeceff9ac10ce0af2db",
+      "git_blob_authenticated": true,
+      "conflicts_with_si_codename": true
+    },
+    {
+      "repository_codename": "zinc_finger",
+      "primary_aid": 1832,
+      "confirmation_aid": 1960,
+      "cleanup_log_sha256": "2503616e64a4a2f25016f84b48783ab0d609250747f4a0187748e2a660be7349",
+      "git_blob_authenticated": true,
+      "conflicts_with_si_codename": false
+    }
+  ],
+  "campaign_payload_downloads": 0,
+  "confirmation_values_analyzed": false,
+  "source_correction_applied": false,
+  "final16_access": false
+}

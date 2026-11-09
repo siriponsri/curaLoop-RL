@@ -1,0 +1,40 @@
+{
+  "claim": "All fixed ranking controls have budget-dependent hit and structural-coverage curves; every operator and seed range remains visible",
+  "visual_form": "six ranker facets; three ordered operator curves per facet; separate H and D figures",
+  "metric": [
+    "mean source-confirmed positives H",
+    "mean positive structure groups D"
+  ],
+  "unit": "counts per campaign",
+  "direction": "higher",
+  "aggregation": "equal weight to the same six development campaigns within each seed",
+  "focal_series": "no proposed new method; top-ranked anchor",
+  "required_baselines": [
+    "random",
+    "primary_score",
+    "mvsa",
+    "gbm",
+    "rf",
+    "nearest_primary"
+  ],
+  "stable_series_order": [
+    "top_ranked",
+    "cluster_round_robin",
+    "classical_max_min"
+  ],
+  "width_mm": 178,
+  "height_mm": 145,
+  "uncertainty": "observed min/max across five conditional seeds; not a biological population interval",
+  "annotation_plan": "shared operator legend and ranker facet titles; no outcome-selected callout",
+  "palette_override": "burgundy accent follows owner preference against green/teal",
+  "references": [
+    "gpt6_astra_north_star.md figures 1/2/5; final-size small-multiple grammar",
+    "top_reference_set.md ranks 6/7/13: sparse comparisons and explicit variation"
+  ],
+  "output_formats": [
+    "svg",
+    "pdf",
+    "png"
+  ],
+  "source": "../results-summary-v1.json"
+}

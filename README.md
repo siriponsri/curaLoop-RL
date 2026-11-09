@@ -60,6 +60,17 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 ## Research and R&D pilot programme
 
+**Current research checkpoint:** [LR-CF1 is complete](docs/03_research/LR_CF1_RESULTS_20261109.md).
+Six published-source development campaigns, 60 molecular fits and2,700 fixed
+portfolio cells passed, including independent H/D recalculation and complete
+private return/exact remote cleanup. Classical group diversification increases
+coverage while losing hits; a quota alone does not establish a new method.
+Final16 remains sealed and journal readiness is not established. Open the
+[EN/TH offline evidence report](research/product_handoffs/lr_cf1_v1/README.md),
+[English paper insert](docs/07_publication/LR_CF1_METHODS_RESULTS_INSERT_20261109.md)
+and [owner checkpoint](docs/06_execution/LR_CF1_OWNER_CHECKPOINT_20261109.md).
+Future method/product proposals require a new owner decision.
+
 **9 November 2026:** [LR-D23 is complete](docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md).
 The residual candidate did not meet its frozen D2 criteria; Gk2 achieved more
 mean hits with less CPU. Conditional D3 was not run, and final outcomes remain
@@ -69,14 +80,12 @@ and [English paper insert](docs/07_publication/LR_D23_METHODS_RESULTS_INSERT_202
 preserve that result. See the [owner checkpoint](docs/06_execution/LR_D23_OWNER_CHECKPOINT_20261109.md)
 and [evidence index](docs/evidence/lr-d23-20261109-v1/README.md).
 
-**Contribution revision proposed:** [confirmation-budget portfolios](docs/03_research/CONFIRMATION_PORTFOLIO_CONTRIBUTION_PROPOSAL_20261109.md)
-would study assay-confirmed chemotype coverage against strong ranking and diversity
-controls. The [source review](docs/02_literature/CONFIRMATION_DIRECTION_SOURCE_REVIEW_20261109.md)
-records the remaining novelty and data-readiness questions. This is an owner-review
-proposal; no new experiment or product integration has been released.
-The recommended [LR-CF1 long run](docs/06_execution/LONG_RUN_CONFIRMATION_FEASIBILITY_PROPOSAL_20261109.md)
-would close data feasibility and baseline/portfolio opportunity within a proposed
-fresh 48 CPU-hour / 96-hour ceiling, before any new selector or final evaluation.
+**Contribution direction evaluated:** the owner-approved
+[confirmation-portfolio question](docs/03_research/CONFIRMATION_PORTFOLIO_CONTRIBUTION_PROPOSAL_20261109.md)
+now has real baseline evidence. LR-CF1 closes data/endpoint feasibility and
+baseline opportunity; **NO_GO for a quota-only method claim**. A distinct
+mechanism and independent evaluation remain unresolved. The original proposal's
+disabled configuration records its creation time, not the later released study.
 
 **M2 complete / INCONCLUSIVE, 9 November 2026.** CuraLoop's method-first study
 evaluated learned REUSE/UPDATE/PLAN allocation on six exposed FS-Mol assays,
