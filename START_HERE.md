@@ -1,5 +1,13 @@
 # Start here
 
+**Proposed direction for owner review:** [confirmation-budget portfolios](docs/03_research/CONFIRMATION_PORTFOLIO_CONTRIBUTION_PROPOSAL_20261109.md),
+targeting assay-confirmed chemotype coverage with explicit hit retention and
+strong diversified controls. See the [source/access review](docs/02_literature/CONFIRMATION_DIRECTION_SOURCE_REVIEW_20261109.md).
+This is contribution planning only; no new data access, training or phase starts.
+Next proposed work: [LR-CF1](docs/06_execution/LONG_RUN_CONFIRMATION_FEASIBILITY_PROPOSAL_20261109.md),
+fresh 48 CPU-hours / 96 hours / max4 workers for data and baseline opportunity.
+Owner execution approval is pending; no old account is reopened.
+
 **Current: LR-D23 complete, 9 November 2026.** Read the
 [results](docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md),
 [owner checkpoint](docs/06_execution/LR_D23_OWNER_CHECKPOINT_20261109.md) and

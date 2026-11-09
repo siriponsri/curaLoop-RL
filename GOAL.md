@@ -1,5 +1,13 @@
 # Goal: a defensible method and a useful R&D plugin
 
+**Contribution revision proposed:** [confirmation-budget chemotype coverage](docs/03_research/CONFIRMATION_PORTFOLIO_CONTRIBUTION_PROPOSAL_20261109.md).
+Owner review precedes any separately budgeted data/baseline feasibility work.
+No new scientific goal is released; the completed LR-D23 verdict remains unchanged.
+The [LR-CF1 proposal](docs/06_execution/LONG_RUN_CONFIRMATION_FEASIBILITY_PROPOSAL_20261109.md)
+would close data/endpoint and baseline/opportunity preparation with a fresh
+48 CPU-hour / 96-hour cap. It awaits owner approval and excludes new-selector
+training, protected evaluation and actual integration.
+
 **LR-D23 complete, 9 November:** [results](docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md).
 D2 INCONCLUSIVE; D3 NOT_RUN because the frozen gate failed. All 2,052 biological
 units, complete return/audit/cleanup and offline EN/TH product/English paper

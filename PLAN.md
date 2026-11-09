@@ -1,5 +1,14 @@
 # Method-first plan
 
+**Proposed next direction:** [confirmation-budget portfolios](docs/03_research/CONFIRMATION_PORTFOLIO_CONTRIBUTION_PROPOSAL_20261109.md).
+Confirm the contribution with the owner, then propose one bounded eligibility and
+baseline-reproduction study. No dataset intake, training, new clock or automatic
+advance is authorized. Existing MF-PCBA A2/A3 and LR-D23 limitations remain binding.
+The concrete [LR-CF1 long-run proposal](docs/06_execution/LONG_RUN_CONFIRMATION_FEASIBILITY_PROPOSAL_20261109.md)
+and [disabled scope configuration](research/configs/lr_cf1_proposal_20261109_v1.json)
+request fresh 48 CPU-hours / 96 hours / max4 combined workers. Approval remains
+pending; its final checkpoint precedes any new-selector or independent evaluation.
+
 **LR-D23 complete, 9 November:** [results](docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md)
 and [owner checkpoint](docs/06_execution/LR_D23_OWNER_CHECKPOINT_20261109.md).
 D2 INCONCLUSIVE; conditional D3 NOT_RUN. Both training rounds and all primary/

@@ -1,5 +1,26 @@
 # Handoff: LR-D23 complete; owner review before a new phase
 
+## Contribution revision proposed, 9 November 2026
+
+The owner requested contribution revision using an externally produced literature
+review. Read the [confirmation-portfolio proposal](docs/03_research/CONFIRMATION_PORTFOLIO_CONTRIBUTION_PROPOSAL_20261109.md)
+and [targeted source/access review](docs/02_literature/CONFIRMATION_DIRECTION_SOURCE_REVIEW_20261109.md).
+The recommended question shifts to assay-confirmed chemotype coverage at fixed
+confirmation count, with confirmed-hit retention and strong diversified controls.
+This is PROPOSED_FOR_OWNER_REVIEW, not a novelty certificate or execution release.
+The private source PDF was read; primary literature and existing A2/A3 limits
+were checked. No dataset/result rows, SSH, training or final16 payloads were used.
+Original PDFs, old ledgers, STOPs, masks and frozen results remain untouched.
+The owner then requested a long-run proposal. Read
+[LR-CF1](docs/06_execution/LONG_RUN_CONFIRMATION_FEASIBILITY_PROPOSAL_20261109.md):
+proposed fresh 48 CPU-hours / 96 hours / max4 workers, at most six scoped
+development campaigns, two preparation phases (data/endpoint qualification and
+baseline/portfolio opportunity), plus independent handoff. The disabled
+[configuration](research/configs/lr_cf1_proposal_20261109_v1.json) starts no clock.
+Next owner decision: confirm/revise the contribution and approve/revise LR-CF1
+before any record access. No new selector/final evaluation, budget or paid/live
+integration is released by this note or by requesting a proposal.
+
 ## Completed LR-D23 checkpoint, 9 November 2026
 
 Repository: `C:\Users\User\Desktop\myProject\curaloop-rl`, main, base

@@ -69,6 +69,15 @@ and [English paper insert](docs/07_publication/LR_D23_METHODS_RESULTS_INSERT_202
 preserve that result. See the [owner checkpoint](docs/06_execution/LR_D23_OWNER_CHECKPOINT_20261109.md)
 and [evidence index](docs/evidence/lr-d23-20261109-v1/README.md).
 
+**Contribution revision proposed:** [confirmation-budget portfolios](docs/03_research/CONFIRMATION_PORTFOLIO_CONTRIBUTION_PROPOSAL_20261109.md)
+would study assay-confirmed chemotype coverage against strong ranking and diversity
+controls. The [source review](docs/02_literature/CONFIRMATION_DIRECTION_SOURCE_REVIEW_20261109.md)
+records the remaining novelty and data-readiness questions. This is an owner-review
+proposal; no new experiment or product integration has been released.
+The recommended [LR-CF1 long run](docs/06_execution/LONG_RUN_CONFIRMATION_FEASIBILITY_PROPOSAL_20261109.md)
+would close data feasibility and baseline/portfolio opportunity within a proposed
+fresh 48 CPU-hour / 96-hour ceiling, before any new selector or final evaluation.
+
 **M2 complete / INCONCLUSIVE, 9 November 2026.** CuraLoop's method-first study
 evaluated learned REUSE/UPDATE/PLAN allocation on six exposed FS-Mol assays,
 four annotation components, two predictors and eight matched arms. All 4,164
