@@ -56,7 +56,20 @@ class OrchestrationGuard:
                    'reserved_envelope_cpu_seconds':self.limit,'deadline_utc':self.deadline.isoformat(),
                    'project_deadline_utc':self.project_deadline.isoformat(),
                    'wall_seconds':time.monotonic()-self.started,**self.accounting()}
-            tmp=self.path.with_suffix('.tmp');tmp.write_text(json.dumps(value,indent=2)+'\n',encoding='utf-8');os.replace(tmp,self.path)
+            tmp=self.path.with_suffix('.tmp');payload=json.dumps(value,indent=2)+'\n'
+            error=None
+            for attempt in range(50):
+                try:
+                    tmp.write_text(payload,encoding='utf-8',newline='\n');os.replace(tmp,self.path);return True
+                except PermissionError as exc:
+                    error=exc;time.sleep(.01)
+            # Telemetry I/O must never terminate the CPU/deadline watchdog.
+            # Kernel Job limits remain active while a contended reader releases.
+            with self.path.with_suffix('.telemetry-errors.jsonl').open('a',encoding='utf-8',newline='\n') as f:
+                f.write(json.dumps({'utc':datetime.now(timezone.utc).isoformat(),'status':status,
+                  'error':str(error),'watchdog_continues':status=='RUNNING'})+'\n')
+            if status!='RUNNING':raise error
+            return False
 
     def watch(self):
         next_heartbeat=time.monotonic()+30
