@@ -16,10 +16,19 @@ def main():
     primary=[r for r in result['paired_contrasts'] if r['predictor']=='rf' and r['regime']=='cheap']
     history=result['rf_ablation_contrasts'][0];scope=json.loads((ROOT/'research/manifests/m2_data_scope_20261108_v1.json').read_text())
     labels={g['id']:g['label'] for g in scope['groups']};decision=result['method_decision']
+    approval=json.loads((ROOT/'research/manifests/conditional_m3_p1_j1_owner_approval_20261109_v1.json').read_text())
+    conditional_entry=(decision=='PROMISING_DEVELOPMENT_SIGNAL' and approval['owner_option']=='A'
+      and approval['status']=='OWNER_APPROVED_CONDITIONAL_NOT_STARTED')
+    continuation=('The owner separately approved conditional option A on 9 November. M2 now satisfies its scientific and closeout entry conditions; '
+      'after this evidence is delivered on main, the executor may start the separate 96 CPU-hour / 120 elapsed-hour M3 -> P1 -> J1 release. '
+      'Final-label decoding still requires a frozen M3 protocol and passed readiness/calibration.' if conditional_entry else
+      'The owner\'s conditional M3 -> P1 -> J1 grant is not activated because M2 did not meet its predeclared promising-signal entry condition. '
+      'Review the findings with the owner before another research release; final outcomes remain closed.')
     caps=json.loads((PUBLIC/'technical-admission-v1.json').read_text())['caps']
     lines=['# Costed M2 development results','',f'**COMPLETE_FOR_OWNER_REVIEW — {decision}.** Technical closeout: **PASS**.',
-      '', 'The fixed development study is complete. The owner must decide before M3. Final outcomes remain closed. '+
+      '', 'The fixed development study is complete. Final outcomes remained closed throughout M2. '+
       'Completion is a research result, including mixed or negative findings; it is not publication readiness or a production-policy release.',
+      '', continuation,
       '', '## Question and evidence scope','',
       'The method learns whether to REUSE cached scores, UPDATE the predictor, or PLAN with the same nonmyopic reference used by its controls. '+
       'The incremental contribution under test is useful outcome-supervised computation allocation in molecular active search. '+
@@ -88,8 +97,11 @@ def main():
       f"The fresh release completed 4,248 intended units and retained {cpu['retained_not_dispatched_attempts']} additional not-dispatched technical failures, each retried with unchanged parameters. "+
       'The first local calibration coordinator hit its CPU envelope; switching to in-process booking and batched transport resolved that overhead. '+
       'A later SSH connect timeout stopped tuning after 174 completed units; fresh exact job/unit absence preceded three identical-context retries. '+
-      'The stopped attempts and the original orchestration charge remain retained; a new 2,000-second local orchestration envelope uses the remaining engineering allocation. '+
+      'All stopped attempts and local orchestration reservations remain retained. Controller restarts continue only unchanged frozen units after reconciling successful remote receipts. '+
+      'A Windows heartbeat replacement collision was repaired without changing the molecular engine; its two actual-reader-lock checks concern telemetry only. '+
       'Eleven distinct constructed engine checks, three analysis checks and five transport checks passed. Repeated executions are not additional distinct checks.',
+      '',table(['Local orchestration attempt','Final state','Retained reservation (CPU-s)'],
+        [[j['job'],j['state'],j['reservation_seconds']] for j in ledger['jobs'] if j['job'].startswith('orchestration-recovery-')]),
       '',table(['Budget stage','Charged reservation (CPU-s)','Stage ceiling (CPU-s)'],[[k,v,cpu['bucket_caps_seconds'][k]] for k,v in cpu['bucket_charged_seconds'].items()]),
       '',f"Cumulative conservative charge: **{number(cpu['cumulative_charged_cpu_hours'])} CPU-hours of 48**, including {cpu['prior_retained_seconds']} retained seconds from earlier M2 steps. "+
       'Failed attempts and utility reservations remain charged in full. This is conservative reservation accounting, not measured total-host CPU consumption. '+
@@ -107,9 +119,7 @@ def main():
       'Repeated seeds and correlated continuations do not increase biological independence. Similar scaffolds remain, predictor probabilities are uncalibrated, '+
       'the synchronous retrospective simulator has unit costs and immediate delivery, and CPU regimes are hardware-specific. '+
       'Delivered-observation error diagnostics are selection-biased. There is no chemical-OOD, clinical, lab-savings or universal-policy claim.',
-      '', 'A promising development signal would justify considering a separately approved M3 protocol. '+
-      'Mixed or negative findings justify reviewing the measured failure mechanism, narrowing the claim or stopping this method. '+
-      'Neither outcome authorizes opening final outcomes, another automatic M1 loop, a larger dataset, a new mechanism or journal submission.',
+      '', continuation+' A mixed or negative finding is not permission for an automatic M1 loop, larger dataset, new mechanism or journal submission.',
       '', 'The research controller is not integrated into the product as a validated production policy. '+
       'The existing EN/TH app and R&D plugin retain their earlier evidence limits. Workflow utility and business value require separate assessment.',
       '', '## Reproduction, return and preservation','',
@@ -127,11 +137,11 @@ def main():
     with report.open('x',encoding='utf-8',newline='\n') as f:f.write('\n'.join(lines)+'\n')
     checkpoint=ROOT/'docs/06_execution/M2_OWNER_CHECKPOINT_20261108.md'
     with checkpoint.open('x',encoding='utf-8',newline='\n') as f:
-        f.write('# M2 owner checkpoint\n\n**M2 complete; '+decision+'. M3 not released.**\n\n'+
+        f.write('# M2 owner checkpoint\n\n**M2 complete; '+decision+'.**\n\n'+
           'Read the [complete results](../03_research/M2_COSTED_RESULTS_20261108.md) before deciding. '+
           'The full fixed development matrix, accounting audit, complete private return and exact remote cleanup passed. '+
-          'Final outcomes remain closed. This is not publication readiness.\n\n'+
-          ('Recommended next step: discuss a bounded M3 protocol and an independent novelty review, then approve its population, endpoint, protected evaluation access and new budget before any execution.\n\n' if decision=='PROMISING_DEVELOPMENT_SIGNAL' else
+          'Final outcomes remained closed throughout M2. This is not publication readiness.\n\n'+continuation+'\n\n'+
+          ('Next step: deliver M2 on main, then execute the already-approved conditional [long-run plan](CONDITIONAL_LONG_RUN_M3_P1_J1_20261109.md). Do not ask again for the same routine release. Material scope/rights/data changes still require the owner.\n\n' if conditional_entry else
            'Recommended next step: review the measured method/overhead/attribution findings with the owner before committing another research budget. Do not automatically repeat M1, enlarge the cohort or open the final set to resolve ambiguity.\n\n')+
           table(['Option','What it authorizes now','What remains a later decision'],[
             ['Discuss the M2 evidence first','Interpret effects, limitations and reviewer concerns; no new experiments','Any new research protocol or budget'],
@@ -140,7 +150,9 @@ def main():
     status=json.loads((ROOT/'research/configs/m2_costed_status_20261108_v2.json').read_text())
     status.update(status='COMPLETE_FOR_OWNER_REVIEW',method_efficacy=decision,biological_units_completed=4164,
       fresh_successful_units=4248,retained_not_dispatched_attempts=cpu['retained_not_dispatched_attempts'],cumulative_charged_seconds=cpu['cumulative_charged_seconds'],
-      report=str(report.relative_to(ROOT)).replace('\\','/'),next_actor='owner decides before M3; release closed and exact remote roots absent')
+      report=str(report.relative_to(ROOT)).replace('\\','/'),
+      next_actor=('executor starts separate approved conditional release after main delivery; protected labels require M3 readiness' if conditional_entry else
+      'owner reviews M2 findings; conditional grant not activated; release closed and exact remote roots absent'))
     (ROOT/'research/configs/m2_costed_status_20261108_v2.json').write_text(json.dumps(status,indent=2)+'\n',encoding='utf-8',newline='\n')
     result.update(status='COMPLETE_FOR_OWNER_REVIEW',technical_closeout='PASS',remote_exact_cleanup='PASS')
     (PUBLIC/'aggregate-results-v1.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
