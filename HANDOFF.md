@@ -90,9 +90,11 @@ measured CPU-s within its180-second retained reservation.
 
 ## Delivery and remaining project phases
 
-Current source/results/docs are prepared for normal main commit/push. Final
-delivery readback will pin the verified code/evidence checkpoint and remote
-equality; do not infer that an old SHA is current. Application runtime was not
+Code/evidence checkpoint: `039cfb550424dea3d25a29a310287bab12a675e9` on main, pushed and freshly
+verified equal to origin/main. The [delivery readback](docs/evidence/m2-costed-20261108-v2/delivery-readback-v1.json)
+also repeats exact remote absence with a new timestamp. Its additive receipt,
+handoff and final validation are committed afterward; final HEAD/origin equality
+is checked again after that metadata commit, avoiding a self-referential Git SHA. Application runtime was not
 changed, so no new frontend/browser/build verification is claimed. Existing
 four-screen EN/TH dashboard/manual retains its prior verified checkpoint.
 

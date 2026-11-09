@@ -16,6 +16,9 @@ def new(path,value):
 
 def main():
     pin_local_reader()
+    revision=int(sys.argv[1]) if len(sys.argv)>1 else 1
+    assert 1<=revision<=9
+    output=PUB/f'delivery-validation-v{revision}.json'
     ledger=read(TASK/'ledger.json');result=read(PUB/'aggregate-results-v1.json');cpu=read(PUB/'cpu-accounting-v1.json')
     status=read(ROOT/'research/configs/m2_costed_status_20261108_v2.json')
     disposition=read(ROOT/'research/manifests/conditional_m3_p1_j1_disposition_20261109_v1.json')
@@ -64,6 +67,10 @@ def main():
     qa=read(PUB/'figure-qa-v1.json');assert qa['status']=='PASS_STRUCTURAL_AND_FINAL_RENDER_REVIEW'
     assert qa['figure_count']==3 and qa['export_count']==9
     assert all(sha(ROOT/r['path'])==r['sha256'] for r in qa['manual_review']['reviewed_files'])
+    normalized=read(PUB/'svg-delivery-normalization-v1.json')
+    assert normalized['status']=='PASS_FORMAT_ONLY_SVG_DELIVERY_NORMALIZATION' and not normalized['png_pdf_and_source_numbers_changed']
+    assert len(normalized['files'])==3
+    assert all(sha(ROOT/r['path'])==r['delivered_sha256'] and r['preflight']['passed'] for r in normalized['files'])
     tests=read(PUB/'constructed-checks-v1.json')
     assert len(tests['engine']['checks'])==11 and len(tests['analysis']['checks'])==3 and len(tests['pairing_supplement']['checks'])==3
     assert len(tests['transport']['checks'])==5
@@ -80,7 +87,8 @@ def main():
             target=target.strip('<>');target=unquote(target.split('#',1)[0].split('?',1)[0])
             if not target or re.match(r'^[a-zA-Z][a-zA-Z0-9+.-]*:',target):continue
             checked+=1
-            if not (path.parent/target).exists():broken.append({'source':name,'target':target})
+            resolved=(path.parent/target).resolve()
+            if resolved!=output.resolve() and not resolved.exists():broken.append({'source':name,'target':target})
     assert not broken,broken
     manuscript=(ROOT/'docs/01_paper/MANUSCRIPT.md').read_text(encoding='utf-8')
     chapters=sorted((ROOT/'docs/01_paper').glob('[0-9][0-9]_*.md'));assert len(chapters)==10
@@ -93,6 +101,7 @@ def main():
     for name in ['tools/m2c_closeout_audit_v2.py','tools/m2c_figures_v2.py','tools/m2c_write_report_v2.py','tools/m2c_check_delivery_v2.py']:
         ast.parse((ROOT/name).read_text(encoding='utf-8'))
     record={'status':'PASS_M2_COMPLETE_CLOSEOUT_DELIVERY_AUDIT','utc':datetime.now(timezone.utc).isoformat(),
+      'validation_revision':revision,'supersedes':('delivery-validation-v1.json after final publication metadata and format-only SVG normalization' if revision>1 else None),
       'method_decision':'INCONCLUSIVE','scientific_gate':'NOT_PASSED','technical_closeout':'PASS','closed_ledger':True,
       'successful_fresh_units':4248,'biological_units':4164,'retained_not_dispatched_attempts':6,
       'cumulative_charged_cpu_seconds':114225,'original_cap_seconds':172800,'prior_history_sources_rechecked':len(older['records']),
@@ -104,7 +113,7 @@ def main():
       'scope':'No new molecular execution, dataset intake or source-role change; delivery/audit only.',
       'current_document_sha256':{n:sha(ROOT/n) for n in docs},
       'source_sha256':{n:sha(ROOT/n) for n in ['tools/m2c_closeout_audit_v2.py','tools/m2c_figures_v2.py','tools/m2c_write_report_v2.py','tools/m2c_check_delivery_v2.py']}}
-    new(PUB/'delivery-validation-v1.json',record)
+    new(output,record);assert output.is_file()
     print(json.dumps({k:v for k,v in record.items() if not isinstance(v,dict)}))
 
 

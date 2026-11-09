@@ -1,0 +1,29 @@
+{
+  "schema": "curaloop.m2.delivery_readback.v1",
+  "status": "PASS_CODE_EVIDENCE_CHECKPOINT_PUSH_AND_FRESH_REMOTE_ABSENCE",
+  "utc": "2026-11-09T03:00:14.664320+00:00",
+  "code_evidence_checkpoint": "039cfb550424dea3d25a29a310287bab12a675e9",
+  "origin_main_verified_at_that_checkpoint": "039cfb550424dea3d25a29a310287bab12a675e9",
+  "final_metadata_commit": "This receipt and handoff are additive delivery metadata; final HEAD/origin equality is checked after their commit, outside self-referential Git content.",
+  "method_decision": "INCONCLUSIVE",
+  "scientific_release": "CLOSED",
+  "closed_ledger_sha256": "42d4b5714ff3b9cd32bedb67b14c1cdef029c89e4aaae0d7a9d2fe36d68293df",
+  "cumulative_charged_seconds": 114225,
+  "fresh96h_grant_started": false,
+  "final_outcomes_opened": false,
+  "remote_readback": {
+    "status": "PASS_FRESH_EXACT_ABSENCE_DELIVERY_READBACK",
+    "utc": "2026-11-09T03:00:13.598987+00:00",
+    "hostname": "dr-train",
+    "home": "/home/chaw",
+    "cpu_affinity": [
+      69
+    ],
+    "paths": [
+      "/home/chaw/curaloop-tasks/m2-costed-20261108-v2",
+      "/home/chaw/curaloop-tasks/m2-costed-20261108-v2-export-v1"
+    ]
+  },
+  "latest_delivery_validation": "delivery-validation-v2.json",
+  "scope": "Read-only delivery/provenance verification; no new scientific job, dataset, clock or root."
+}

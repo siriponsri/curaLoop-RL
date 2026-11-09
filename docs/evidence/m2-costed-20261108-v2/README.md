@@ -72,3 +72,14 @@ reconstruction; no independent full-study reexecution is claimed.
 The old [interim snapshot](interim-status-20261109.json) is historical. Final
 outcomes remain closed. The conditional 96h / 120h M3/P1/J1 grant was not activated;
 see the [disposition](../../../research/manifests/conditional_m3_p1_j1_disposition_20261109_v1.json).
+
+## Final delivery verification
+
+[Final completion/link/preservation audit](delivery-validation-v2.json)
+supersedes the [earlier preparation snapshot](delivery-validation-v1.json) after
+format-only SVG line-ending cleanup and delivery metadata. The
+[SVG normalization proof](svg-delivery-normalization-v1.json) verifies unchanged
+parsed geometry/text/style, with current font/dimension preflight. PNG/PDF and
+all numerical values are unchanged. [Published checkpoint and fresh remote
+readback](delivery-readback-v1.json) pins the delivered code/evidence commit;
+the final metadata commit's HEAD/origin equality is checked after push.
