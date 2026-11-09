@@ -1,0 +1,90 @@
+{
+  "status": "PASS_STRUCTURAL_AND_FINAL_RENDER_REVIEW",
+  "source_values_sha256": "a14bed148f704ac4099d550c946c67914433997647c7ba4dd28038a240f1c7bd",
+  "figure_count": 3,
+  "export_count": 9,
+  "text_bounds": [
+    {
+      "name": "primary-discovery-v1",
+      "status": "PASS_TEXT_SIZE_AND_CANVAS_BOUNDS",
+      "width_mm": 178,
+      "height_mm": 110,
+      "minimum_font_pt": 8.5
+    },
+    {
+      "name": "rf-cheap-discovery-curves-1-v1",
+      "status": "PASS_TEXT_SIZE_AND_CANVAS_BOUNDS",
+      "width_mm": 178,
+      "height_mm": 145,
+      "minimum_font_pt": 8.5
+    },
+    {
+      "name": "rf-cheap-discovery-curves-2-v1",
+      "status": "PASS_TEXT_SIZE_AND_CANVAS_BOUNDS",
+      "width_mm": 178,
+      "height_mm": 145,
+      "minimum_font_pt": 8.5
+    }
+  ],
+  "manual_review": {
+    "status": "PASS_FINAL_SIZE_AND_GRAYSCALE_REVIEW",
+    "reviewed_utc": "2026-11-09T02:37:23.456838+00:00",
+    "reviewer": "Codex visual image inspection; not author scientific approval",
+    "method": "Inspected all three final300dpi PNG exports and their three grayscale previews; SVG/PDF physical dimensions and font sizes passed programmatic preflight.",
+    "target_width_mm": 178,
+    "minimum_font_pt": 8.5,
+    "physical_print_performed": false,
+    "source_values_sha256": "a14bed148f704ac4099d550c946c67914433997647c7ba4dd28038a240f1c7bd",
+    "observations": [
+      "Titles, axes, legend and footnotes remain legible; no clipped or overlapping text observed.",
+      "Zero and assignedB32 retained on absolute axes; paired zero line and all three contrasts shown.",
+      "Focal diamond versus comparator circles, and solid versus dashed curves, remain distinguishable in grayscale.",
+      "All eight arms remain visible across primary/curve panels; no unfavorable primary contrast was omitted.",
+      "Intervals are labeled conditional on the fixed cohort; curve bands explicitly pointwise."
+    ],
+    "numeric_spotchecks": {
+      "RF_Ccheap_mean_H": {
+        "R": 16.2625,
+        "G1": 19.5,
+        "Gk": 19.5125,
+        "U": 16.2375,
+        "P": 18.0,
+        "T": 19.7,
+        "E": 18.1125,
+        "L": 19.275
+      },
+      "primary_differences": {
+        "L-G1": -0.225,
+        "L-T": -0.425,
+        "L-E": 1.1625
+      },
+      "observation": "Plotted order/endpoints and contrast signs match the aggregate table; all three primary intervals include zero."
+    },
+    "reviewed_files": [
+      {
+        "path": "docs/evidence/m2-costed-20261108-v2/primary-discovery-v1.png",
+        "sha256": "52dae527c83d12ec9724db2266fa1b8267b17ca9d07d20d38ea24b2ee0a1b544"
+      },
+      {
+        "path": "docs/evidence/m2-costed-20261108-v2/rf-cheap-discovery-curves-1-v1.png",
+        "sha256": "e7d7e9829f7191bcfbeb71ea5c6a4cdb90ef2e78ca2d33ffa3483ac331701e33"
+      },
+      {
+        "path": "docs/evidence/m2-costed-20261108-v2/rf-cheap-discovery-curves-2-v1.png",
+        "sha256": "48cdac6cac56cbcc999e8d1bfbd6ee8c9d8bdfcb046127e42f70db717956a6ff"
+      },
+      {
+        "path": ".local/m2-costed-20261108-v2/primary-discovery-v1-grayscale.png",
+        "sha256": "c4dbec3770781ad119635d59dd7acb014f176485eea32e5aa696bd8217d3318a"
+      },
+      {
+        "path": ".local/m2-costed-20261108-v2/rf-cheap-discovery-curves-1-v1-grayscale.png",
+        "sha256": "8cac0282f780e40e9dfc0ef79bb7b48d0dca9df3bc006f4498ea07f2b71d8453"
+      },
+      {
+        "path": ".local/m2-costed-20261108-v2/rf-cheap-discovery-curves-2-v1-grayscale.png",
+        "sha256": "75d8eaf3a72d26debf0a884d82bfaf6df563d4f075dbfbc9e211cfad49d1aa92"
+      }
+    ]
+  }
+}

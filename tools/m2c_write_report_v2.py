@@ -71,7 +71,7 @@ def main():
       'Nondominance below compares mean scientific CPU and mean discovery across the 16 cheap/high operating points within each predictor. This is a descriptive mean-point frontier, not statistical dominance; all dominated points remain in the full tables.', '',
       table(['Predictor','C regime','Arm','Science CPU (s)','New positives'],[[r['predictor'],r['regime'],r['arm'],number(r['scientific_cpu_seconds']),number(r['new_positives'])] for r in result['descriptive_compute_discovery_frontier'] if r['nondominated_mean_point']]),
       '', '### Discovery curves','',
-      'All curves use the assigned query budget. CPU-exhausted campaigns retain their last delivered count; no extra labels are acquired. Bands use the same conditional seed-vector bootstrap.', '',
+      'All curves use the assigned query budget. CPU-exhausted campaigns retain their last delivered count; no extra labels are acquired. Bands are pointwise 95% intervals from the same conditional seed-vector bootstrap, not simultaneous coverage across all budgets.', '',
       '![RF cheap discovery curves: R, G1, Gk and U versus L](../evidence/m2-costed-20261108-v2/rf-cheap-discovery-curves-1-v1.png)', '',
       '![RF cheap discovery curves: P, T and E versus L](../evidence/m2-costed-20261108-v2/rf-cheap-discovery-curves-2-v1.png)', '',
       'The [aggregate curve table](../evidence/m2-costed-20261108-v2/discovery-curves-v1.csv) includes all eight policies, both predictors and both CPU regimes. Vector SVG/PDF exports accompany the previews.',

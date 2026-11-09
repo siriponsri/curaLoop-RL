@@ -60,36 +60,29 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 ## Research and R&D pilot programme
 
-**Current direction: a method paper using existing datasets, with a useful R&D plugin.**
-The [method design](docs/03_research/METHOD_FIRST_DESIGN_20261108.md) includes
-an executable small predictive-scenario rollout reference and constructed checks.
-Its [closest-work review](docs/02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md)
-records strong prior-art overlap. The [LR-M12 M1 investigation](docs/03_research/LR_M12_M1_RESULTS_20261108.md)
-executed a small exposed-data predictor adapter, 17 constructed checks and 36
-planning timing calls. It ended **NO-GO for the method transition**; novelty and
-molecular benefit remain unestablished. Conditional M2 was not run.
+**M2 complete / INCONCLUSIVE, 9 November 2026.** CuraLoop's method-first study
+evaluated learned REUSE/UPDATE/PLAN allocation on six exposed FS-Mol assays,
+four annotation components, two predictors and eight matched arms. All 4,164
+biological units and the full technical return/cleanup/audit completed.
 
-The owner approved the [M2 contribution direction](docs/03_research/M2_CONTRIBUTION_PROPOSAL_20261108.md):
-learn when to reuse a predictor, update it or invoke nonmyopic planning, and
-released its [48 CPU-hour / 96-hour experiment plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md).
-The [executed preflight](docs/03_research/M2_PREFLIGHT_RESULTS_20261108.md) passed
-six-pool data admission and 12 constructed checks, then reached a per-campaign
-CPU admission stop on synthetic planning. The approved
-[CPU profiling amendment completed all 12 RF campaigns](docs/03_research/M2_CPU_PROFILE_RESULTS_20261108.md).
-The [costed continuation](docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md)
-retains two predictors/eight arms/five seeds within the cumulative 48-hour bound.
-The owner released it; all 96 synthetic technical contexts passed and the
-development-only study is in progress. Read the
-[current execution record](docs/06_execution/M2_COSTED_EXECUTION_NOTES_20261108.md).
-**M2 efficacy is not yet established**; final outcomes remain closed.
-The [9 November interim owner report](docs/06_execution/M2_INTERIM_OWNER_REPORT_20261109.md)
-separates verified completion, local-controller recovery and remaining evaluation.
+In the primary RF/Ccheap setting, L-G1=-0.225, L-T=-0.425 and L-E=+1.1625
+new binary positives. History attribution is positive, but the learned method
+does not establish an advantage over strong simple controls. Read the
+[complete results and figures](docs/03_research/M2_COSTED_RESULTS_20261108.md),
+[aggregate evidence](docs/evidence/m2-costed-20261108-v2/README.md) and
+[reviewer assessment](docs/01_paper/M2_EVIDENCE_POSITION_20261109.md).
 
-The earlier baseline-relative rollout remains isolated historical research code.
-The current controller is a research implementation under grouped development
-evaluation and is not a production policy.
-Toy checks do not establish drug discovery,
-real-world safety, speedup or publication readiness.
+The predeclared promising-signal rule was not met. The owner's conditional
+96 CPU-hour / 120-hour M3 -> P1 -> J1 grant was **not activated**; final 16 outcomes
+remain closed. The study closed at 31.729 / 48 conservatively charged CPU-hours.
+All 27,454 remote task files were returned/hash-reread before exact cleanup.
+Next step is the [owner evidence review](docs/06_execution/M2_OWNER_CHECKPOINT_20261108.md).
+
+The existing EN/TH app and C Workspace remain research prototypes with their
+earlier evidence limits. The new learned controller is not a production policy;
+new-method integration and a new results manuscript were not run. Earlier M1
+NO-GO, slower-planning findings and all prior source roles/results are preserved.
+There is no clinical, operational Digital Twin, lab-savings or publication claim.
 
 Read [GOAL](GOAL.md), [PLAN](PLAN.md), [START_HERE](START_HERE.md) and
 [constructed evidence](docs/evidence/method-first-20261108-v1/README.md).

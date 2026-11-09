@@ -1,5 +1,20 @@
 # Agent instructions: CuraLoop-RL
 
+## Current M2 closeout,9 November 2026
+
+M2 COMPLETE/INCONCLUSIVE. Read docs/03_research/M2_COSTED_RESULTS_20261108.md,
+docs/06_execution/M2_OWNER_CHECKPOINT_20261108.md and HANDOFF.md. Full4248-unit
+fresh matrix, all4164 biological units, extra pairing checks, complete27,454-file
+return/reread, old-history/data/source/budget audit and exact remote cleanup PASS.
+Ledger CLOSED at 114,225 conservative CPU-seconds under 172,800/original deadline;
+no RESERVED jobs. Do not relaunch v3/v4/v5 or recreate old task/export roots.
+The owner-approved conditional 96h / 120h M3/P1/J1 entry is NOT_MET because M2 is
+INCONCLUSIVE. Its clock/root remains unstarted and final 16 payloads remain closed.
+Read research/manifests/conditional_m3_p1_j1_disposition_20261109_v1.json. Next
+actor owner reviews findings before a new release; no automatic method revision,
+new dataset, product-method integration, J1 draft or protected evaluation. Normal
+English main closeout delivery remains authorized. Earlier markers are history.
+
 ## Owner conditionally approves M3 -> P1 -> J1 long run, 9 November 2026
 
 Owner explicitly selected option A in

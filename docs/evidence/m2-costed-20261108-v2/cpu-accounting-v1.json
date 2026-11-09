@@ -1,0 +1,45 @@
+{
+  "status": "PASS_CUMULATIVE_RESERVATION_ACCOUNTING",
+  "prior_retained_seconds": 6922,
+  "fresh_charged_seconds": 107303,
+  "cumulative_charged_seconds": 114225,
+  "cumulative_charged_cpu_hours": 31.729166666666668,
+  "cumulative_cap_seconds": 172800,
+  "unused_against_original_ceiling_seconds": 58575,
+  "bucket_caps_seconds": {
+    "engineering_guards": 12690,
+    "synthetic_calibration_and_utilities": 2700,
+    "training_prefixes_branches_gate": 39600,
+    "control_tuning": 18000,
+    "main_comparison": 57600,
+    "ablation_transfer": 16200,
+    "analysis_return_cleanup_retry_delivery": 17460
+  },
+  "bucket_charged_seconds": {
+    "engineering_guards": 11640,
+    "synthetic_calibration_and_utilities": 2460,
+    "training_prefixes_branches_gate": 27288,
+    "control_tuning": 13224,
+    "main_comparison": 43680,
+    "ablation_transfer": 7524,
+    "analysis_return_cleanup_retry_delivery": 1487
+  },
+  "attempted_units_this_release": 4254,
+  "successful_units_this_release": 4248,
+  "retained_not_dispatched_attempts": 6,
+  "unique_synthetic_contexts_including_previous_profile": 96,
+  "not_dispatched_absence_and_identical_retry_contexts_rechecked": 6,
+  "biological_units": 4164,
+  "accounting_basis": "conservative reservations retained in full; not total-host measured consumption",
+  "settled_resource_hashes_rechecked": 4275,
+  "final_cpu_counter_unavailable_jobs": [
+    "orchestration-recovery-v2"
+  ],
+  "reservation_only_utility_envelopes": [
+    "serial-orchestration-utilities"
+  ],
+  "final_counter_scope": "Receipt values rechecked against reservations; unavailable final counters remain explicit lower bounds, not fabricated totals. Closeout-audit settles after this snapshot.",
+  "deadline_utc": "2026-11-12T08:17:29Z",
+  "final_outcomes_opened": false,
+  "m3_released": false
+}

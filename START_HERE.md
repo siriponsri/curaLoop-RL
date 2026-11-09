@@ -1,52 +1,53 @@
 # Start here
 
-**Current: costed M2 development study in progress; final outcomes remain closed.**
-See the [verified 9 November interim report](docs/06_execution/M2_INTERIM_OWNER_REPORT_20261109.md)
-for completed stages, the recovered local interruption, reserved CPU and remaining work.
-The owner selected a method paper using existing datasets and approved
-predictor-aware selective computation: choose whether to reuse, update or plan.
-The approved [M2 plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md) uses six
-existing FS-Mol development assays, eight matched arms and 48 fresh CPU-hours /
-96 hours / max four workers. [Data and constructed checks passed](docs/03_research/M2_PREFLIGHT_RESULTS_20261108.md),
-but a synthetic planning CPU bound exceeded its per-campaign admission limit.
-The approved [profiling amendment completed 12 RF campaigns](docs/03_research/M2_CPU_PROFILE_RESULTS_20261108.md).
-The [costed full-matrix continuation](docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md)
-is owner-approved. All 96 synthetic contexts and fresh six-pool admission passed;
-the scoped development study is running. Read the
-[execution record](docs/06_execution/M2_COSTED_EXECUTION_NOTES_20261108.md).
-No final outcomes were opened.
-The earlier [M1 NO-GO](docs/03_research/LR_M12_M1_RESULTS_20261108.md) is retained;
-it is not retroactively changed by this new contribution direction.
+**Current: M2 COMPLETE / INCONCLUSIVE, 9 November 2026. Final outcomes closed.**
+
+The full development matrix and technical closeout passed. The learned gate did
+not beat Greedy/threshold controls on the primary means, so its predeclared
+promising-signal rule was not met. The separately approved conditional 96h / 120h
+M3 -> P1 -> J1 grant was **not activated**. Next actor: owner reviews the findings.
 
 ## Read in this order
 
-1. [Goal](GOAL.md) and [plan](PLAN.md): current destination and phase boundaries.
-2. [Approved contribution](docs/03_research/M2_CONTRIBUTION_PROPOSAL_20261108.md), [original experiment plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md) and [current costed continuation](docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md): data, controls, measured costs and remaining decision.
-3. [M2 reading receipt](docs/02_literature/M2_READING_RECEIPT_20261108.json): primary passages actually inspected; closest-work matrix is in the contribution proposal.
-4. [M1 report](docs/03_research/LR_M12_M1_RESULTS_20261108.md): retained negative investigation; earlier [constructed evidence](docs/evidence/method-first-20261108-v1/README.md) remains engineering evidence only.
-5. [Data inventory](docs/03_research/LOCAL_DATA_INVENTORY_20261107.md) and [claim ledger](docs/00_project/CLAIM_LEDGER.md): existing assets and evidence limits.
-6. [Working manuscript](docs/01_paper/MANUSCRIPT.md): current design framing with separately retained historical studies.
-7. [Handoff](HANDOFF.md): exact scope, preservation and next actor.
+1. [Complete M2 results](docs/03_research/M2_COSTED_RESULTS_20261108.md): effects,
+   conditional uncertainty, all policies/regimes, ablations, transfer and costs.
+2. [Owner checkpoint](docs/06_execution/M2_OWNER_CHECKPOINT_20261108.md) and
+   [reviewer assessment](docs/01_paper/M2_EVIDENCE_POSITION_20261109.md): what is
+   supported, what failed, publication limits and the next decision.
+3. [Evidence index](docs/evidence/m2-costed-20261108-v2/README.md): CSV/JSON,
+   SVG/PDF/PNG figures, complete-return, preservation and exact-cleanup proofs.
+4. [GOAL](GOAL.md), [PLAN](PLAN.md) and [HANDOFF](HANDOFF.md): project destination,
+   remaining phases, closed resources and exact continuation boundaries.
+5. [Contribution](docs/03_research/M2_CONTRIBUTION_PROPOSAL_20261108.md),
+   [original plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md),
+   [costed continuation](docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md)
+   and [execution record](docs/06_execution/M2_COSTED_EXECUTION_NOTES_20261108.md):
+   approved design and retained repairs; no outcome-based retuning.
+6. [Reading receipt](docs/02_literature/M2_READING_RECEIPT_20261108.json),
+   [claim ledger](docs/00_project/CLAIM_LEDGER.md) and
+   [historical manuscript map](docs/01_paper/README.md).
 
 ## Operate the existing app
 
-Use [START_WINDOWS](START_WINDOWS.md) and the
-[English Dashboard guide](docs/manual/CuraLoop-RL-Dashboard-Guide-EN-v3.pdf).
-The main app and C Workspace retain EN/TH support. The new research reference
-does not change the application engine, current UI/CLI policies or live MCP tools.
+Use [START_WINDOWS](START_WINDOWS.md), the
+[English Dashboard manual](docs/manual/CuraLoop-RL-Dashboard-Guide-EN-v3.pdf) and
+[actual EN/TH gallery](docs/evidence/four-screen-dashboard-20261108-v1/README.md).
+Discovery Overview, Retrospective Simulator, Benchmark Arena and Compound Explorer
+use the existing Python engine. C Workspace and metadata tools remain available.
+This research closeout changes no application runtime and releases no production
+learned policy or live team-tool write.
 
-## Scope and status
+## Evidence boundary
 
-QP32/QC500 are deferred, not awaiting execution confirmation. LR-M12's approved
-24 CPU-hour / 72-hour release closed at M1 after 17 constructed checks and 36
-timing calls, with no molecular campaign. Remote files were returned/hash-reread
-before exact cleanup. No old clock, source STOP, protected role or final outcome
-was reopened. The next phase requires the owner. No dataset-publication fallback,
-paid service, live team write or journal submission is automatic.
+M2 used six previously exposed FS-Mol assays / four annotation components, not an
+independent final population. Its31.729 / 48 CPU-hour conservative charge includes
+retained failures and utility reservations; it is not measured total-host CPU.
+All 27,454 remote task files were returned and hash-reread before exact cleanup.
+The old ledgers, models, negative findings and source roles remain preserved.
 
-Read the historical [full-text amendment](docs/02_literature/FULL_TEXT_REVIEW_ADDENDUM.md),
-[version discrepancies](docs/02_literature/VERSION_DISCREPANCIES.md) and
-[baseline specification](docs/03_research/BASELINE_SPECIFICATION.md) before a new
-data/comparator adaptation. Their existing findings remain; the current design
-is retained as historical context. COMPLETE investigation, PASS checks and NO-GO have
-different meanings. None is publication or real-world efficacy evidence.
+Earlier [M1 NO-GO](docs/03_research/LR_M12_M1_RESULTS_20261108.md), original
+[CPU preflight stop](docs/03_research/M2_PREFLIGHT_RESULTS_20261108.md) and
+[12-profile amendment](docs/03_research/M2_CPU_PROFILE_RESULTS_20261108.md) are
+historical steps. QP32/QC500 remain deferred. No benchmark-publication pivot,
+paid API/GPU, new intake, protected evaluation or journal submission follows
+automatically from completed software or technical PASS evidence.

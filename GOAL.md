@@ -1,77 +1,60 @@
 # Goal: a defensible method and a useful R&D plugin
 
-**Current owner decision, 8 November 2026: method-first.** The paper's primary
-contribution must be CuraLoop's method, evaluated using existing datasets.
-Creating/publishing a benchmark is not the selected destination. RL is optional.
+**Current checkpoint, 9 November 2026: M2 COMPLETE / INCONCLUSIVE.**
+The project still seeks a useful method evaluated on existing datasets and a
+source-grounded R&D workflow. A new benchmark publication is not the destination.
+RL is optional; the evaluated L controller is a learned computation gate.
 
-## Current research question
+## Research question and measured answer
 
-Can a predictor-aware controller choose when to reuse, update or plan from
-observable screening history, improving delivered assay-positive discovery under
-separate assay/CPU limits over strong fixed and adaptive operation controls?
+Can a predictor-aware controller choose REUSE, UPDATE or PLAN from observable
+screening history and improve discovery under separate assay/CPU limits over
+strong controls using the same predictor?
 
-The owner approved this [M2 contribution direction](docs/03_research/M2_CONTRIBUTION_PROPOSAL_20261108.md)
-and its [experiment plan](docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md)
-on 8 November: six existing FS-Mol development assays, grouped separation, two
-predictors/eight policies, 48 fresh CPU-hours / 96 hours / max four workers.
-The [first preflight](docs/03_research/M2_PREFLIGHT_RESULTS_20261108.md) stopped
-at its per-campaign CPU admission bound. The owner then approved synthetic-only
-profiling; [all 12 RF campaigns completed](docs/03_research/M2_CPU_PROFILE_RESULTS_20261108.md).
-The [costed continuation](docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md)
-preserves the full scientific matrix within the cumulative 48-hour cap and is
-owner-approved. All 96 synthetic contexts and fresh six-pool admission passed;
-development execution is in progress. See the
-[execution record](docs/06_execution/M2_COSTED_EXECUTION_NOTES_20261108.md).
-General metareasoning and portfolios remain prior art; incremental utility is
-unestablished until the fixed evaluation and audit complete.
+The [complete M2 report](docs/03_research/M2_COSTED_RESULTS_20261108.md) retains all
+4,164 biological units, eight arms, two predictors, five main seeds, attribution
+and B16 transfer. In the primary RF/Ccheap setting, mean L-G1 is -0.225, L-T is
+- 0.425 and L-E is +1.1625 newly delivered binary positives. Only one of four
+components favors L over G1. History helps relative to its ablation (+1.2875),
+but incremental benefit over the strongest controls is not established.
 
-The earlier [method design](docs/03_research/METHOD_FIRST_DESIGN_20261108.md) and
-[closest-work review](docs/02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md)
-are historical. The [LR-M12 M1 investigation](docs/03_research/LR_M12_M1_RESULTS_20261108.md)
-executed a small exposed-data predictor adapter and two revisions, but ended
-**NO_GO_METHOD_DISTINCTION_UNRESOLVED**. M2 was withheld because its gate failed;
-algorithmic novelty and molecular benefit are not established.
-No new theorem or real-world safety guarantee is claimed.
+This is exposed development evidence from six FS-Mol assays / four annotation
+components, not independent biological-family confirmation or clinical benefit.
+All 96 synthetic contexts passed; full return, reread, source/data/budget audit
+and exact remote cleanup passed. [Aggregate evidence](docs/evidence/m2-costed-20261108-v2/README.md)
+and the [execution record](docs/06_execution/M2_COSTED_EXECUTION_NOTES_20261108.md)
+separate technical completion from the scientific result. Earlier M1 NO-GO and
+all other historical findings remain unchanged.
 
-## What success requires
+## What success still requires
 
-1. An identifiable contribution beyond established active-search, metareasoning
-   and acquisition portfolios, or an explicit finding that this strategy is insufficient.
-2. A useful molecular decision/compute tradeoff beyond strong controls with the
-   same predictor, update rules, metadata and cache opportunities.
-3. Existing-data evaluation with pinned semantics, exposure/protection and
-   uncertainty. Repeated seeds do not become independent biological units.
-4. A reviewable search -> plan -> cited export plugin, evaluated for correctness,
-   source fidelity, abstention and workflow effort separately from molecular utility.
+1. A distinguishable method contribution with useful measured tradeoffs beyond
+   strong fixed/adaptive controls, or an explicit decision to retire the thesis.
+2. Independent, appropriately scoped evaluation with frozen semantics, roles,
+   dependence and uncertainty; seeds are repetitions within tasks.
+3. A useful search -> evidence -> plan -> cited-report workflow, assessed for
+   source fidelity, abstention and effort separately from biological utility.
+4. Human scientific/author review and appropriate journal fit before submission.
 
-## Existing evidence and constraints
+## Authority at this checkpoint
 
-The existing application and EN/TH frontend remain available. Older HIV/Tox21/
-FS-Mol development studies, null findings and slower-planning evidence remain
-historical results. A new prototype does not supersede their measured outcomes.
-See the [claim ledger](docs/00_project/CLAIM_LEDGER.md) and
-[data inventory](docs/03_research/LOCAL_DATA_INVENTORY_20261107.md).
+M2 is closed at 114,225 conservatively charged CPU-seconds (31.729 / 48 CPU-hours),
+within its original 12 November,08:17:29Z deadline. All prior charges, clocks,
+STOPs, source roles, frozen bytes and unfavorable evidence are retained.
 
-All old ledgers, clocks, source STOPs, exposed/protected roles, frozen data and
-final outcomes remain unchanged. QP32/QC500 proposals are deferred and are not
-the next approval request. ChEMBL is optional supporting data, not a mandatory
-benchmark-construction programme. No automatic benchmark-publication fallback.
+The owner approved a [conditional 96h / 120h M3 -> P1 -> J1 plan](docs/06_execution/CONDITIONAL_LONG_RUN_M3_P1_J1_20261109.md).
+Its entry required PROMISING_DEVELOPMENT_SIGNAL and complete M2 closure. The
+scientific condition was not met: **the new grant was not activated**, its clock
+was not started, and final 16 payloads were not opened. Read the
+[owner checkpoint](docs/06_execution/M2_OWNER_CHECKPOINT_20261108.md) before any new
+research release. Unused old allowance is not a new experiment budget.
 
-## Authority and completion
+The existing EN/TH four-screen app, C Workspace and metadata tools remain
+available under their earlier evidence limits. New-method P1 integration and J1
+results manuscript are NOT_RUN. No paid API/GPU, new dataset intake, live team
+write, deployment or journal submission occurred in this M2 closeout.
 
-The owner authorized LR-M12 M1 then conditional M2 with 24 new CPU-hours / 72
-hours and at most four local/dr-train workers. This release is now CLOSED at
-the M1 owner checkpoint, retaining 2 h 02 min including delivery reservations.
-All owned remote files were returned and verified before exact cleanup. Only
-the admitted exposed development pools were decoded; final outcomes remain closed.
-The subsequent M2 release stopped at its resource-fit checkpoint before biological
-labels or molecular campaigns. Its scoped return/cleanup and accounting are
-documented in the new checkpoint. Normal English main delivery is authorized;
-the completed profiling amendment now supports a costed M2 continuation awaiting
-the owner's next decision before biological campaigns. No unused
-allowance, paid service, live team write,
-protected evaluation or submission is automatically released.
-
-Publication budget remains USD 300; venue fit/fees and human declarations require
-fresh submission-time review. Clinical efficacy, actual lab savings and customer
-demand remain unsupported. Read [PLAN](PLAN.md) and [HANDOFF](HANDOFF.md).
+Publication budget remains USD300, with fresh venue/fee and human declaration
+review required at submission time. Clinical efficacy, lab savings and buyer
+demand remain unsupported. Read [PLAN](PLAN.md), [HANDOFF](HANDOFF.md) and the
+[claim ledger](docs/00_project/CLAIM_LEDGER.md).

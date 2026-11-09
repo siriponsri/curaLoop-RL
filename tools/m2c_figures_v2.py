@@ -55,6 +55,8 @@ def main():
             for ext in('svg','pdf','png'):
                 path=PUBLIC/(name+'.'+ext);assert not path.exists()
                 fig.savefig(path,dpi=300,format=ext)
+                if ext=='svg':
+                    path.write_text('\n'.join(line.rstrip() for line in path.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8',newline='\n')
                 report=qa.inspect_visual(path,target_width_mm=178,target_height_mm=height,min_font_pt=8.5).to_dict()
                 qa_rows.append(report);assert report['passed'],report
                 formats.append(str(path.relative_to(ROOT)).replace('\\','/'))
@@ -98,7 +100,7 @@ def main():
                 ax.grid(axis='y',color='#E8E8E5',lw=.5)
             handles,labels=axes.flat[0].get_legend_handles_labels();fig.legend(handles,labels,loc='upper left',bbox_to_anchor=(.08,.855),ncol=2,frameon=False)
             fig.supylabel('New binary positives',x=.02,fontsize=8.5);fig.supxlabel('Assigned query budget',y=.15,fontsize=8.5)
-            fig.text(.025,.09,'Bands: 95% conditional seed intervals on the fixed exposed cohort.',fontsize=8.5)
+            fig.text(.025,.09,'Bands: pointwise 95% seed intervals; fixed exposed cohort.',fontsize=8.5)
             fig.text(.025,.045,'CPU-exhausted curves carry the last count forward; no free queries.',fontsize=8.5)
             save(fig,'rf-cheap-discovery-curves-'+str(index)+'-v1',145)
         new(TASK/'figure-programmatic-qa-v1.json',{'status':'PASS_PROGRAMMATIC_FIGURE_QA_MANUAL_REVIEW_PENDING',

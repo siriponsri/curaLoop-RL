@@ -1,0 +1,115 @@
+{
+  "engine": {
+    "status": "PASS_CONSTRUCTED_ENGINE_CHECKS",
+    "checks": [
+      {
+        "name": "hidden-label-permutation-leaves-public-features-and-choice-invariant",
+        "status": "PASS"
+      },
+      {
+        "name": "snapshot-restores-observed-state-and-cache",
+        "status": "PASS"
+      },
+      {
+        "name": "initial-positives-excluded-from-new-discovery",
+        "status": "PASS"
+      },
+      {
+        "name": "no-free-query-after-exhausted-compute",
+        "status": "PASS"
+      },
+      {
+        "name": "nonpositive-gate-benefits-select-reuse",
+        "status": "PASS"
+      },
+      {
+        "name": "restricted-operation-excluded-before-choice",
+        "status": "PASS"
+      },
+      {
+        "name": "exp3-updates-only-selected-operation-with-actual-probability",
+        "status": "PASS"
+      },
+      {
+        "name": "gate-and-scaler-exclude-entire-heldout-component",
+        "status": "PASS"
+      },
+      {
+        "name": "no-history-gate-has-only-budget-and-cached-ranking-features",
+        "status": "PASS"
+      },
+      {
+        "name": "control-selection-excludes-heldout-outcomes",
+        "status": "PASS"
+      },
+      {
+        "name": "millisecond-cpu-guard-retains-budget-and-discards-partial-work",
+        "status": "PASS"
+      }
+    ],
+    "biological_records_read": false,
+    "final_outcomes_opened": false
+  },
+  "analysis": {
+    "status": "PASS_CONSTRUCTED_ANALYSIS_CHECKS",
+    "checks": [
+      "equal component weights despite unequal assay counts",
+      "paired signs and initial-count/seed matching",
+      "joint seed-vector conditional bootstrap on constructed constant effects"
+    ],
+    "biological_outcomes_read": false,
+    "final_outcomes_opened": false
+  },
+  "pairing_supplement": {
+    "status": "PASS_CONSTRUCTED_PAIRING_SUPPLEMENT",
+    "checks": [
+      {
+        "name": "heterogeneous-assay-n0-seed-offsets-retain-paired-effects-and-equal-component-weight",
+        "status": "PASS"
+      },
+      {
+        "name": "joint-seed-bootstrap-agrees-with-exhaustive-finite-distribution",
+        "status": "PASS"
+      },
+      {
+        "name": "duplicate-and-missing-paired-contexts-rejected",
+        "status": "PASS"
+      }
+    ],
+    "scope": "constructed nonbiological fixture; no new efficacy criterion or analytical estimator",
+    "biological_outcomes_read": false,
+    "final_outcomes_opened": false
+  },
+  "transport": {
+    "status": "PASS_CONSTRUCTED_TRANSPORT_CHECKS",
+    "checks": [
+      {
+        "name": "successful-connection-dispatched-once",
+        "status": "PASS",
+        "mock_connections": 1
+      },
+      {
+        "name": "proven-tcp-timeout-retries-identical-undispatched-payload",
+        "status": "PASS",
+        "mock_connections": 2
+      },
+      {
+        "name": "authentication-failure-is-not-retried",
+        "status": "PASS",
+        "mock_connections": 1
+      },
+      {
+        "name": "partial-output-or-ambiguous-completion-is-never-retried",
+        "status": "PASS",
+        "mock_connections": 1
+      },
+      {
+        "name": "tcp-retries-stop-after-three-connect-attempts",
+        "status": "PASS",
+        "mock_connections": 3
+      }
+    ],
+    "network_calls_made": 0,
+    "scientific_units_run": 0
+  }
+}

@@ -101,6 +101,9 @@ def main():
         new(PUBLIC/'constructed-checks-v1.json',{'engine':engine,'analysis':analysis,'pairing_supplement':pairing,'transport':transport})
         figures=json.loads((TASK/'figure-programmatic-qa-v1.json').read_text())
         manual=json.loads((TASK/'figure-manual-review-v1.json').read_text());assert manual['status']=='PASS_FINAL_SIZE_AND_GRAYSCALE_REVIEW'
+        assert len(manual['reviewed_files'])==6
+        assert all(sha(ROOT/r['path'])==r['sha256'] for r in manual['reviewed_files'])
+        assert manual['source_values_sha256']==figures['source_values_sha256']
         assert all(r['passed'] for r in figures['preflight'])
         new(PUBLIC/'figure-qa-v1.json',{'status':'PASS_STRUCTURAL_AND_FINAL_RENDER_REVIEW','source_values_sha256':figures['source_values_sha256'],
           'figure_count':3,'export_count':len(figures['outputs']),'text_bounds':figures['text_bounds'],'manual_review':manual})

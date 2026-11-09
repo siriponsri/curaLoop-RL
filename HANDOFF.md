@@ -1,3 +1,112 @@
+# Handoff: M2 complete, INCONCLUSIVE; owner review next
+
+Verified closeout on9 November 2026. Repository:
+`C:\Users\User\Desktop\myProject\curaloop-rl`, branch main. Parent sole writer.
+
+## Current result and entry condition
+
+Read the [complete results](docs/03_research/M2_COSTED_RESULTS_20261108.md),
+[owner checkpoint](docs/06_execution/M2_OWNER_CHECKPOINT_20261108.md),
+[reviewer assessment](docs/01_paper/M2_EVIDENCE_POSITION_20261109.md) and
+[evidence index](docs/evidence/m2-costed-20261108-v2/README.md).
+
+M2 ledger: CLOSED_COMPLETE_FOR_OWNER_REVIEW; method decision INCONCLUSIVE.
+All 4,164 biological units and84 fresh synthetic contexts completed. Including
+the preceding12 profiles,96 unique calibration contexts passed. Primary RF/cheap
+L-G1=-0.225, L-T=-0.425 and L-E=+1.1625. Only 1/4 annotation components favors
+L over G1. History helps relative to no_history (+1.2875), but strong-control
+superiority and B16 transfer are not established. No p<0.05 gate was required.
+
+The owner's option A96 CPU-hour / 120-hour M3 -> P1offline -> J1draft plan remains
+conditionally approved but **NOT_ACTIVATED_M2_ENTRY_NOT_MET**. Read the
+[disposition](research/manifests/conditional_m3_p1_j1_disposition_20261109_v1.json).
+No new clock/root, final 16 payload, new-method P1 integration or J1 results draft
+was started. No paid API/GPU, new intake, live team write, deployment or journal
+submission. Next actor is the owner; do not auto-relabel a signal, rerun M1,
+open final outcomes or borrow unused allowance.
+
+## Exact completed scope and evidence
+
+- Six exposed FS-Mol assays,1,285 task rows / 1,107 canonical structures / four
+  annotation components; zero cross-component canonical overlap. No independent
+  biological-family, chemical-OOD, clinical or lab-savings claim.
+- 48 prefixes,1,152 branches,576 tuning,1,920 main,180 RF ablations,288 B16
+  transfer. Five main seeds and three B16 seeds; eight arms/two predictor strata.
+- 11 constructed engine checks, three original analysis checks, three additional
+  heterogeneous-pairing scenarios, five constructed transport checks and two
+  telemetry-only reader-lock checks. Supplementary pairing job actually PASS.
+- Complete matrix/trace/label/C/startup/core/held-out artifact audits PASS.
+  Source-model and all previous26 preservation records rechecked unchanged.
+- Three final-size figures, nine SVG/PDF/PNG exports; structural font/dimension
+  checks plus actual color/grayscale visual review. Physical printing NOT_RUN.
+- Current statistical formula and criterion unchanged; audit assertions were
+  strengthened outcome-blind, with duplicate/missing-pair checks.
+
+## Private materials and immutable boundaries
+
+Task: `.local/m2-costed-20261108-v2/`. Inspect `ledger.json`, previous-state pins,
+freezes, specs/permits, jobs and `remote-return/verified-v1.json` before acting.
+Full archive: `.local/m2-costed-20261108-v2/remote-return/export/full-task-v1.tar.gz`.
+77,321,791 bytes; SHA256
+`678f5a2fd2af96091d7adc2fdb3d6d1e138ca02794cc1351010b50ff1f6e2040`.
+Returned/extracted content:27,454 regular files / 260,658,750 bytes, plus seven
+export files. Every file was independently hash-reread. Raw structures, labels,
+fingerprints, gates and individual histories remain private and untracked.
+
+Scientific implementation: `research/m2_costed_v2/`, executed code projection03.
+Original `research/m2_v1/models.py` SHA256 remains
+`7a7403e5906dc0b74883f9d2eb35b50a438f13273d82cd2c9ddb25430ba722dc`.
+Earlier R0/LR-M12/M2 preflight/profile ledgers, source roles and negative evidence
+remain unchanged. Never recreate a closed task or reuse a closed grant.
+
+## Closed resources, failures and remote cleanup
+
+Original M2 release 08:17:29Z8 November; absolute deadline 08:17:29Z12 November.
+Costed continuation release 09:59:47Z8 November, without resetting that deadline.
+Closed:2026-11-09T02:40:30.932710+00:00. Conservative charge114,225 / 172,800 seconds
+(31.729 / 48 CPU-hours), including 6,922 retained prior seconds and full failed/
+utility reservations. Unspent 58,575 seconds is not authority for a new study.
+This is reservation accounting; an old v2 final CPU counter remains unavailable
+and explicit as a lower bound, not fabricated actual total-host consumption.
+
+Max local1 CPU / 512 MiB and remote3 each1 CPU-equivalent / 4 GiB/no swap; timed molecular
+comparisons all on admitted dr-train cores69/70/71 with single-thread libraries.
+Existing chaw SSH IP profile only; no credential/config/privilege changes.
+
+Six not-dispatched attempts across calibration/tuning remain charged and their
+identical-context retries verified. Later controller interruptions preserve every
+completed unit. V3's final502.453125 CPU-s counter was recovered; v4 stopped on
+an existing prepared command before SSH (2.15625 measured, full2000 retained).
+Fresh absence and exact prepared command/permit equality preceded v5 first
+dispatch of the three original bookings. No extra scientific attempt resulted.
+V5 completed with354.234375 measured CPU-s, full1500 retained. All controllers
+and workers are terminal; no RESERVED job remains.
+
+After complete private return/reread, exact
+`/home/chaw/curaloop-tasks/m2-costed-20261108-v2` and its `-export-v1` sibling
+were rehashed and deleted. Fresh exact absence passed. Do not recreate these
+roots or delete any other project. Current closeout audit job PASS,0.8125
+measured CPU-s within its180-second retained reservation.
+
+## Delivery and remaining project phases
+
+Current source/results/docs are prepared for normal main commit/push. Final
+delivery readback will pin the verified code/evidence checkpoint and remote
+equality; do not infer that an old SHA is current. Application runtime was not
+changed, so no new frontend/browser/build verification is claimed. Existing
+four-screen EN/TH dashboard/manual retains its prior verified checkpoint.
+
+M3 independent evaluation, new-method P1/workflow assessment and J1 results
+manuscript remain incomplete project phases. Review the observed method gap
+before approving a new bounded phase. Human author/declaration, rights and fresh
+journal fit/fee checks remain later submission gates. Do not force a benchmark
+publication or make a clinical/business claim from this development study.
+
+## Retained historical checkpoints below
+
+The following dated text is retained as history, not current liveness, permission
+or scientific status. Use the closed M2 report/status above for current state.
+
 # Handoff: costed M2 development study in progress
 
 Owner selected conditional long-run option A on 9 November: after M2 closes

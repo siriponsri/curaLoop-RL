@@ -1,5 +1,11 @@
 # Submission readiness
 
+> **Current evidence,9 November 2026:** [M2 is complete and INCONCLUSIVE](../03_research/M2_COSTED_RESULTS_20261108.md).
+> Read the [reviewer assessment](M2_EVIDENCE_POSITION_20261109.md). The conditional
+> M3/P1/J1 grant was not activated; final outcomes are closed. The design/venue
+> material below is historical, with fresh scientific/author/fee review required.
+> No new results manuscript or journal submission is claimed.
+
 > **Current override, 8 November 2026:** the owner selected a method paper
 > evaluated on existing benchmarks. [Method novelty remains HOLD](../02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md).
 > Historical venue/fee guidance below requires fresh submission-time checking;

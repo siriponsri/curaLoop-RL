@@ -1,13 +1,16 @@
-# Working manuscript: method design, M1 negative checkpoint and historical evidence
+# Historical manuscript chapters and current evidence pointer
 
-**METHOD_FIRST_M1_NEGATIVE_CHECKPOINT; NOT_SUBMISSION_READY.**
-The owner requests a method contribution evaluated on existing datasets.
-LR-M12 M1 executed a small-pool adapter but failed its method-distinction gate;
-conditional M2 was not run. Final outcomes remain closed. Historical results
-and declarations retain their original scopes and bytes.
+**Current checkpoint, 9 November 2026: M2 COMPLETE / INCONCLUSIVE; NOT_SUBMISSION_READY.**
+Read [current M2 results](../03_research/M2_COSTED_RESULTS_20261108.md) and
+[reviewer assessment](M2_EVIDENCE_POSITION_20261109.md). The conditional J1
+results manuscript was not activated. The ten numbered chapters below retain
+their historical design/results/declarations; their earlier use of "current"
+refers to those dated checkpoints. They are not a new M2 paper or author approval.
+No final evaluation, live product release or journal submission occurred.
 
-This file is assembled from the ten numbered chapters; edit those chapters and
-rebuild before publication. No final study or journal submission has occurred.
+Edit/reconcile the numbered chapters under a later approved manuscript phase
+before publication. The preserved chapters are assembled without changing their
+source bytes.
 
 ## Title, design abstract and contribution
 
