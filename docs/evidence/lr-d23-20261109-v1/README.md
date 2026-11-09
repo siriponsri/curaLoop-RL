@@ -22,6 +22,7 @@ NOT_RUN_D2_GATE_NOT_MET. Final16 and M3 remain closed.
 - [Final checks](final-validation-v1.json), [28-case JUnit](final-tests-v2.xml) and [11-case historical JUnit](historical-analysis-tests-v1.xml)
 - [Local validation recovery](validation-recovery-v1.json), [actual offline CLI reproduction](exact-cli-reproduction-v1.json) and [final-size visual review](figure-visual-review-v1.json)
 - [Selected primary-paper reading boundary](selected-primary-reading-v1.json)
+- [Verified main code/evidence publication](main-publication-validation-v1.json)
 
 The original failed constructed-test XML and first figure specification/data
 remain as engineering history. They do not represent failed molecular units or

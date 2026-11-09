@@ -8,6 +8,11 @@ Repository: `C:\Users\User\Desktop\myProject\curaloop-rl`, main, base
 [owner checkpoint](docs/06_execution/LR_D23_OWNER_CHECKPOINT_20261109.md) and
 [reproduction guide](docs/06_execution/LR_D23_REPRODUCTION_GUIDE_20261109.md).
 Normal main commit/push is authorized; the closing report identifies the final SHA.
+Verified code/evidence checkpoint:
+`180130324a582e7507565d27e91747e04704b126`, pushed to origin/main and checked
+against all 75 committed files and 17 frozen source pins. The
+[main publication receipt](docs/evidence/lr-d23-20261109-v1/main-publication-validation-v1.json)
+records that checkpoint; this receipt-only follow-up changes handoff/index metadata.
 
 Scientific status: **INCONCLUSIVE_D2**. Gk2 mean-point dominates v1; the G1 loss,
 component-coverage and history-attribution requirements fail. Both fixed rounds,
