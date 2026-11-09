@@ -1,5 +1,15 @@
 # Method-first plan
 
+**LR-D23 complete, 9 November:** [results](docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md)
+and [owner checkpoint](docs/06_execution/LR_D23_OWNER_CHECKPOINT_20261109.md).
+D2 INCONCLUSIVE; conditional D3 NOT_RUN. Both training rounds and all primary/
+attribution units completed. Evidence/product/paper handoff, full private return,
+reread and exact cleanup PASS. Retained 8.0667/24 CPU-hours; final16/M3 closed.
+Next: owner reviews the problem/contribution or a separate product workflow scope.
+No automatic training, integration or reuse of an old account.
+
+The release/proposal states below are retained historical snapshots.
+
 **Ready for owner review:** [LR-D23 long-run proposal](docs/06_execution/LONG_RUN_D2_D3_PROPOSAL_20261109.md),
 fresh24 CPU-hours /72 hours /four workers, D2 -> conditional D3 development and
 product/paper handoff preparation. Execution disabled; no final16/M3 or actual

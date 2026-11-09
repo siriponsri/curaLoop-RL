@@ -1,5 +1,43 @@
 # Agent instructions: CuraLoop-RL
 
+## LR-D23 complete; owner review before a new phase, 9 November 2026
+
+Read docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md,
+docs/06_execution/LR_D23_OWNER_CHECKPOINT_20261109.md and HANDOFF.md first.
+D2 is INCONCLUSIVE_D2: Gk2 mean-point dominates v1 and history attribution fails.
+D3 is NOT_RUN_D2_GATE_NOT_MET. All 2,052 biological units, 12 fits and 72 synthetic
+admission contexts completed; complete 11,188-file + seven-export return/reread,
+trace/source/resource/role audit and exact remote cleanup/absence PASS.
+Retain 29,040/86,400 CPU-seconds, including the full utility bucket. No unused
+allowance authorizes more work. Preserve all 58 old pins, 11 old ledgers, frozen
+source/matrices, results and original masks. D1's masked/full-pool wording was
+incorrect: the old mask retained every member in all six pools; see the erratum.
+Product card/schema/type and English paper insert are offline handoffs only.
+Normal main commit/push at closure is authorized; no additional science starts.
+Final16 features/labels/presence, M3, inactive conditional96h, new method/data,
+actual integration/live writes/deploy, paid/GPU and journal submission stay closed.
+Do not recreate deleted roots or relaunch completed units. Parent sole writer.
+Earlier release/proposal/current-status markers below are historical snapshots.
+
+## Owner releases LR-D23, 9 November 2026
+
+The owner approved the exact long-run goal at36f3812. Read
+docs/06_execution/LONG_RUN_D2_D3_PROPOSAL_20261109.md and
+research/manifests/lr_d23_release_20261109_v1.json. Fresh24 CPU-hours /72 hours /
+max4 combined workers: local1 target1GiB plus dr-train3 each1 CPU-equivalent /
+4GiB /swap0. Release2026-11-09T11:47:12.999016Z; original absolute deadline
+2026-11-12T11:47:12.999016Z (18:47:12 Bangkok). Fresh .local/lr-d23-20261109-v1
+and matching remote root only; preserve all11 old ledger pins and old artifacts.
+One residual UPDATE/REUSE candidate, exactly two training rounds, full six-pool
+development labels only after identity/technical admission and outer-fold
+isolation. Freeze sources/roles/units/gates before outcomes. D3 automatic only
+after the frozen D2 gate; no third round, retuning or replacement mechanism.
+Complete evidence/product handoff/paper insert even on a scientific early stop.
+Final16 feature/label/presence, old validation, new datasets, actual integration,
+paid/GPU, team writes/deploy and submission remain excluded. Conditional96h
+inactive. Parent sole writer. Complete private return/reread before exact owned
+cleanup, then normal main commit/push and owner report. Earlier markers history.
+
 ## Owner authorizes D0/D1 main delivery and requests LR-D23 proposal
 
 On 9 November the owner explicitly requested a long-run goal proposal and

@@ -60,13 +60,14 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 ## Research and R&D pilot programme
 
-**9 November 2026:** [D1 diagnostics are complete](docs/03_research/D1_OPERATION_HEADROOM_RESULTS_20261109.md).
-Refresh decisions show limited contextual value; a new method advantage remains
-unestablished. [LR-D23](docs/06_execution/LONG_RUN_D2_D3_PROPOSAL_20261109.md)
-proposes one residual controller and development robustness within a fresh
-24 CPU-hour /72-hour ceiling. It awaits owner approval; final outcomes stay sealed.
-See the [owner checkpoint](docs/06_execution/D1_OWNER_CHECKPOINT_20261109.md)
-and [evidence](docs/evidence/d1-operation-headroom-20261109-v1/README.md).
+**9 November 2026:** [LR-D23 is complete](docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md).
+The residual candidate did not meet its frozen D2 criteria; Gk2 achieved more
+mean hits with less CPU. Conditional D3 was not run, and final outcomes remain
+sealed. All 2,052 biological units and the complete remote return/cleanup were
+audited. The [EN/TH evidence handoff](research/product_handoffs/lr_d23_v1/README.md)
+and [English paper insert](docs/07_publication/LR_D23_METHODS_RESULTS_INSERT_20261109.md)
+preserve that result. See the [owner checkpoint](docs/06_execution/LR_D23_OWNER_CHECKPOINT_20261109.md)
+and [evidence index](docs/evidence/lr-d23-20261109-v1/README.md).
 
 **M2 complete / INCONCLUSIVE, 9 November 2026.** CuraLoop's method-first study
 evaluated learned REUSE/UPDATE/PLAN allocation on six exposed FS-Mol assays,

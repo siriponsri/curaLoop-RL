@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="17" time="4.739" timestamp="2026-11-09T19:17:23.164400+07:00" hostname="DESKTOP-C8EHASQ"><testcase classname="tests.research.test_lr_d23_matrix_worker_v1" name="test_training_fold_rounds_and_paired_cpu_are_exact" time="0.003" /><testcase classname="tests.research.test_lr_d23_matrix_worker_v1" name="test_chunks_do_not_split_counterfactuals_or_comparators" time="0.004" /><testcase classname="tests.research.test_lr_d23_matrix_worker_v1" name="test_attribution_matches_primary_core_and_never_changes_arms" time="0.002" /><testcase classname="tests.research.test_lr_d23_matrix_worker_v1" name="test_no_third_round_or_unplanned_transfer_cell" time="0.000" /><testcase classname="tests.research.test_lr_d23_matrix_worker_v1" name="test_real_prefix_files_restore_a_matched_pair" time="3.816"><failure message="TypeError: test_real_prefix_files_restore_a_matched_pair.&lt;locals&gt;.&lt;lambda&gt;() takes 0 positional arguments but 1 was given">state = &lt;research.lr_d23_v1.policy.ResidualState object at 0x000002D1AC3630B0&gt;
+oracle = &lt;research.m2_costed_v2.engine.Oracle object at 0x000002D1AC363080&gt;
+clock = &lt;research.m2_costed_v2.engine.Clock object at 0x000002D1AC361880&gt;
+policy = 'Gk', parameter = 2, gate = None, forced = None, restricted = ()
+snapshots = True
+
+    def run(state,oracle,clock,policy,parameter=None,gate=None,forced=None,restricted=(),snapshots=False):
+        saved={}
+        previous_handler=signal.getsignal(signal.SIGPROF)
+        def interrupt(signum,frame):raise ComputeInterrupt('SCIENTIFIC_CPU_LIMIT')
+        signal.signal(signal.SIGPROF,interrupt)
+        try:
+            if not state.observed:state.observed=oracle.initial(state.initial_indices())
+&gt;           if state.deliveries==0:state.initialize_model(clock)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+research\m2_costed_v2\engine.py:223: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+research\d1_v1\controls.py:21: in initialize_model
+    return super().initialize_model(clock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;research.lr_d23_v1.policy.ResidualState object at 0x000002D1AC3630B0&gt;
+clock = &lt;research.m2_costed_v2.engine.Clock object at 0x000002D1AC361880&gt;
+
+    def initialize_model(self,clock):
+        if self.ready() or self.cold():return True
+        if not clock.enough(self.costs['UPDATE']):return False
+        before=self.model.p.copy();fitted=self.model.fitted_observations
+        try:
+            clock.arm();t=time.process_time();self.model.update(self.observed);elapsed=time.process_time()-t
+            self.costs['UPDATE']=.5*self.costs['UPDATE']+.5*max(.00001,elapsed);self.initial_fit_count+=1
+            return True
+        except ComputeInterrupt:
+            self.model.p=before;self.model.fitted_observations=fitted;self.interruptions+=1;return False
+&gt;       finally:clock.disarm()
+                ^^^^^^^^^^^^^^
+E       TypeError: test_real_prefix_files_restore_a_matched_pair.&lt;locals&gt;.&lt;lambda&gt;() takes 0 positional arguments but 1 was given
+
+research\m2_costed_v2\engine.py:107: TypeError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('C:/Users/User/AppData/Local/Temp/pytest-of-User/pytest-2172/test_real_prefix_files_restore0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002D1AC3628A0&gt;
+
+    def test_real_prefix_files_restore_a_matched_pair(tmp_path, monkeypatch):
+        # Only Windows signal plumbing is replaced. No runtime/timing claim follows.
+        monkeypatch.setattr(engine.signal, "SIGPROF", 27, raising=False)
+        monkeypatch.setattr(engine.signal, "getsignal", lambda signum: None)
+        monkeypatch.setattr(engine.signal, "signal", lambda *args: None)
+        monkeypatch.setattr(engine.Clock, "arm", lambda self: None)
+        monkeypatch.setattr(engine.Clock, "disarm", lambda: None)
+        task = "SYNTHETIC-64"
+        data = {"task_id": task, "component": "g1", "role": "development",
+                "records": [{"candidate_id": "synthetic-" + str(i), "active": bool(i % 3 == 0),
+                             "morgan_on_bits": [i, i + 64]} for i in range(64)]}
+        (tmp_path / "inputs").mkdir()
+        source = tmp_path / "inputs" / (task + ".json")
+        source.write_text(json.dumps(data), encoding="utf-8")
+        digest = hashlib.sha256(source.read_bytes()).hexdigest()
+        meta = {task: dict(sha256=digest, component="g1")}
+        caps = {"rf:16:32": {"C_ref": 5., "cost_priors": dict(REUSE=.00001, UPDATE=.00001, PLAN=.1)}}
+        spec = dict(name="constructed-prefix", stage="training_prefixes", task_id=task,
+                    input_sha256=digest, heldout="g0", training_components=["g1", "g2", "g3"],
+                    predictor="rf", budget=32, n0=16, seed=41, round=0, control="Gk2")
+&gt;       result, snapshots, state = campaign(tmp_path, spec, {}, caps, meta)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\research\test_lr_d23_matrix_worker_v1.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+research\lr_d23_v1\worker.py:87: in campaign
+    result, snapshots = run_campaign(state, oracle, clock, policy, parameter,
+research\lr_d23_v1\worker.py:111: in run_campaign
+    return run(state, oracle, clock, policy, parameter=parameter, forced=forced, snapshots=snapshots)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+state = &lt;research.lr_d23_v1.policy.ResidualState object at 0x000002D1AC3630B0&gt;
+oracle = &lt;research.m2_costed_v2.engine.Oracle object at 0x000002D1AC363080&gt;
+clock = &lt;research.m2_costed_v2.engine.Clock object at 0x000002D1AC361880&gt;
+policy = 'Gk', parameter = 2, gate = None, forced = None, restricted = ()
+snapshots = True
+
+    def run(state,oracle,clock,policy,parameter=None,gate=None,forced=None,restricted=(),snapshots=False):
+        saved={}
+        previous_handler=signal.getsignal(signal.SIGPROF)
+        def interrupt(signum,frame):raise ComputeInterrupt('SCIENTIFIC_CPU_LIMIT')
+        signal.signal(signal.SIGPROF,interrupt)
+        try:
+            if not state.observed:state.observed=oracle.initial(state.initial_indices())
+            if state.deliveries==0:state.initialize_model(clock)
+            if snapshots:saved[0]=state.snapshot(clock)
+            while state.deliveries&lt;state.budget and state.eligible() and clock.enough():
+                credit=None
+                step_policy=('R' if state.rng.random()&lt;.5 else 'G1') if policy=='MIX' else policy
+                if state.cold():
+                    forced=None
+                    requested=actual='COLD_UNIFORM';chosen=min(state.eligible(),key=lambda i:int(state.tie[i]))
+                else:
+                    if not state.initialize_model(clock):
+                        if not clock.enough(state.costs['REUSE']):break
+                        forced=None
+                        requested=actual='NO_MODEL_UNIFORM';chosen=min(state.eligible(),key=lambda i:int(state.tie[i]))
+                    else:
+                        chosen_policy=forced if forced is not None else step_policy
+                        requested,credit=state.choose_operation(chosen_policy,clock,parameter,gate,restricted)
+                        forced=None
+                        if requested is None:break
+                        chosen,actual=state.execute(requested,step_policy,clock)
+                        if chosen is None:break
+                if not clock.enough():break
+                prediction=float(state.model.p[chosen]);label=oracle.query(chosen)
+                state.accept(chosen,label,prediction,requested,actual,clock,credit)
+                if snapshots and state.deliveries in(8,16,24):saved[state.deliveries]=state.snapshot(clock)
+            return {'new_positives':state.hits,'new_deliveries':state.deliveries,'assigned_B':state.budget,
+                'assigned_C':clock.cap,'scientific_cpu_seconds':clock.spent(),'cpu_guard_reserve_seconds':clock.margin,
+                'cpu_violation':clock.spent()&gt;clock.cap,'initial_observations':state.n0,
+                'operations':state.operation_counts,'interruptions':state.interruptions,
+                'feasibility_fallbacks':state.feasibility_fallbacks,'trace':state.trace},saved
+&gt;       finally:clock.disarm();signal.signal(signal.SIGPROF,previous_handler)
+                ^^^^^^^^^^^^^^
+E       TypeError: test_real_prefix_files_restore_a_matched_pair.&lt;locals&gt;.&lt;lambda&gt;() takes 0 positional arguments but 1 was given
+
+research\m2_costed_v2\engine.py:252: TypeError</failure></testcase><testcase classname="tests.research.test_lr_d23_v1" name="test_constructed_non_signal_boundary_checks" time="0.023" /><testcase classname="tests.research.test_lr_d23_v1" name="test_deadband_does_not_replace_the_incumbent[-0.25]" time="0.003" /><testcase classname="tests.research.test_lr_d23_v1" name="test_deadband_does_not_replace_the_incumbent[0]" time="0.005" /><testcase classname="tests.research.test_lr_d23_v1" name="test_deadband_does_not_replace_the_incumbent[0.25]" time="0.004" /><testcase classname="tests.research.test_lr_d23_v1" name="test_features_never_fit_a_shadow_model" time="0.003" /><testcase classname="tests.research.test_lr_d23_v1" name="test_outer_component_cannot_enter_gate_training" time="0.001" /><testcase classname="tests.research.test_lr_d23_v1" name="test_heldout_labels_cannot_leak_through_behavior_policy" time="0.001" /><testcase classname="tests.research.test_lr_d23_v1" name="test_inadequate_executed_support_is_not_replaced_or_fitted" time="0.000" /><testcase classname="tests.research.test_lr_d23_v1" name="test_training_weights_and_no_history_have_frozen_contract" time="0.009" /><testcase classname="tests.research.test_lr_d23_v1" name="test_final_gate_uses_only_round_one_targets" time="0.001" /><testcase classname="tests.research.test_lr_d23_v1" name="test_nan_gate_coefficients_do_not_get_silent_fallback" time="0.001" /><testcase classname="tests.research.test_lr_d23_v1" name="test_restored_training_branch_keeps_prefix_history_counts" time="0.003" /></testsuite></testsuites>

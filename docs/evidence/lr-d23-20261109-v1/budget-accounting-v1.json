@@ -1,0 +1,22 @@
+{
+  "status": "PASS_RETAINED_ENVELOPES_WITHIN_RELEASE",
+  "retained_by_stage_seconds": {
+    "utilities_handoff": 6000,
+    "synthetic_admission": 1080,
+    "training_prefixes": 2160,
+    "paired_branches": 12960,
+    "gate_fits": 1440,
+    "D2_primary": 4200,
+    "attribution": 1200
+  },
+  "retained_total_seconds": 29040,
+  "retained_total_cpu_hours": 8.066666666666666,
+  "cap_seconds": 86400,
+  "utility_bucket_seconds": 6000,
+  "utility_individual_envelopes_at_handoff_seconds": 4590,
+  "utility_scope": "includes failures, reading, setup, transport, verification, cleanup, figures, tests, report and routine metadata/Git delivery; not a complete measurement of all utility CPU",
+  "measured_remote_scientific_worker_process_cpu_seconds": 2629.320879083001,
+  "measured_experimental_training_cpu_seconds": 1704.1937726330002,
+  "hypothetical_training_recovery_campaigns_vs_G1": 1483,
+  "unspent_allowance_released_for_another_study": false
+}

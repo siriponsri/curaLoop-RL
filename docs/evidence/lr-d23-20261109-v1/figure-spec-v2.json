@@ -1,0 +1,72 @@
+{
+  "claim": "Residual scheduling did not meet D2 criteria",
+  "visual_form": "dot_interval",
+  "metric": {
+    "name": "new assay positives",
+    "unit": "count",
+    "direction": "higher",
+    "aggregation": "equal components, equal assays within component, matched n0/seed",
+    "denominator": "6 exposed assays / 4 annotation components"
+  },
+  "secondary_metric": {
+    "name": "scientific CPU",
+    "unit": "seconds",
+    "direction": "lower",
+    "scale": "log10"
+  },
+  "data_source": {
+    "path_or_identifier": "private D2-rows-private.json; public D2-aggregate-v1.json",
+    "checksum": "afafe714161b98feb823d03a2335b26d9346e2bc895110b827df852b41980f7d"
+  },
+  "focal_series": "candidate_v1",
+  "required_baselines": [
+    "G1",
+    "Gk2",
+    "Gk4",
+    "T_k4_tau0.05",
+    "frozen_cache_greedy",
+    "nearest_hit",
+    "candidate_v0",
+    "no_history_v1"
+  ],
+  "series_order": [
+    "G1",
+    "Gk2",
+    "Gk4",
+    "T_k4_tau0.05",
+    "frozen_cache_greedy",
+    "nearest_hit",
+    "candidate_v0",
+    "no_history_v1",
+    "candidate_v1"
+  ],
+  "uncertainty": {
+    "available": true,
+    "type": "bootstrap_interval",
+    "level": 0.95,
+    "sample_or_seed_count": 5,
+    "note": "all5^5 joint-seed resamples, conditional on the exposed assays, not biological population uncertainty"
+  },
+  "target": {
+    "medium": "paper",
+    "width": 178,
+    "height": 119.38,
+    "unit": "mm",
+    "minimum_text_size_pt": 8
+  },
+  "output_formats": [
+    "svg",
+    "png"
+  ],
+  "selected_reference_ids": [
+    "OAI-VIS-002",
+    "OAI-VIS-001",
+    "OAI-VIS-087"
+  ],
+  "exceptions": [
+    {
+      "rule": "focal teal",
+      "reason": "Use the owner's approved wine accent instead of the rejected green/teal direction."
+    }
+  ]
+}

@@ -221,3 +221,19 @@ docs/06_execution/LONG_RUN_D2_D3_PROPOSAL_20261109.md -text
 docs/06_execution/MAIN_DELIVERY_D0_D1_LR_D23_20261109.md -text
 docs/evidence/m2-diagnostics-20261109-v1/** whitespace=cr-at-eol
 docs/evidence/d1-operation-headroom-20261109-v1/** whitespace=cr-at-eol
+
+# LR-D23 executed/frozen source and byte-verifiable closure artifacts.
+research/lr_d23_v1/** -text whitespace=cr-at-eol
+research/manifests/lr_d23_*20261109_v1.json -text whitespace=cr-at-eol
+research/product_handoffs/lr_d23_v1/** -text whitespace=cr-at-eol
+tools/lrd23*.py -text whitespace=cr-at-eol
+tests/research/test_lr_d23*.py -text whitespace=cr-at-eol
+docs/03_research/LR_D23_*20261109.md -text whitespace=cr-at-eol
+docs/05_product/LR_D23_*20261109.md -text whitespace=cr-at-eol
+docs/06_execution/LR_D23_*20261109.md -text whitespace=cr-at-eol
+docs/07_publication/LR_D23_*20261109.md -text whitespace=cr-at-eol
+docs/evidence/lr-d23-20261109-v1/** -text whitespace=cr-at-eol
+docs/assets/research/lr-d23-v1/** -text
+# Preserve generated SVG path formatting and original failed-test diagnostics.
+docs/assets/research/lr-d23-v1/*.svg whitespace=-blank-at-eol,cr-at-eol
+docs/evidence/lr-d23-20261109-v1/matrix-worker-tests.xml whitespace=-blank-at-eol,cr-at-eol

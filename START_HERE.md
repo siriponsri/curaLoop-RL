@@ -1,5 +1,14 @@
 # Start here
 
+**Current: LR-D23 complete, 9 November 2026.** Read the
+[results](docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md),
+[owner checkpoint](docs/06_execution/LR_D23_OWNER_CHECKPOINT_20261109.md) and
+[evidence](docs/evidence/lr-d23-20261109-v1/README.md). D2 is INCONCLUSIVE; Gk2
+has more mean hits and lower CPU than v1. Conditional D3 was not run. All remote
+files were returned/reread before exact cleanup. Offline product/paper handoffs
+are prepared; final16, M3 and the conditional96h grant remain closed.
+The older release/proposal/local-only states below describe historical checkpoints.
+
 **Next owner decision:** [LR-D23 long-run proposal](docs/06_execution/LONG_RUN_D2_D3_PROPOSAL_20261109.md).
 Proposed fresh24 CPU-hours /72 hours /four workers; one candidate, D2 then
 conditional D3 development. It is NOT_RELEASED and final16 remain sealed.

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://curaloop.local/schemas/lr-d23-evidence-card-v1",
+  "title": "LR-D23 aggregate-only development evidence card",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "research_status", "D3_status", "evaluation_scope", "result", "comparisons", "decision", "limitations", "runtime_integration"],
+  "properties": {
+    "schema": {"const": "curaloop.lr_d23.evidence_card.v1"},
+    "research_status": {"enum": ["PASS_D2", "INCONCLUSIVE_D2", "STOPPED_TECHNICAL", "STOPPED_SUPPORT"]},
+    "D3_status": {"type": "string"},
+    "evaluation_scope": {"const": "six exposed FS-Mol development assays / four annotation components"},
+    "result": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {"path": {"type": "string"}, "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}}
+    },
+    "comparisons": {
+      "type": "array", "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["arm", "mean_new_positives", "mean_scientific_cpu_seconds"],
+        "properties": {"arm": {"type": "string"}, "mean_new_positives": {"type": "number", "minimum": 0},
+                       "mean_scientific_cpu_seconds": {"type": "number", "minimum": 0}}
+      }
+    },
+    "decision": {"type": "object", "additionalProperties": false, "required": ["en", "th"],
+                 "properties": {"en": {"type": "string"}, "th": {"type": "string"}}},
+    "limitations": {"type": "array", "minItems": 4, "items": {"type": "string"}},
+    "runtime_integration": {"const": "NOT_RUN_OFFLINE_HANDOFF_ONLY"}
+  }
+}

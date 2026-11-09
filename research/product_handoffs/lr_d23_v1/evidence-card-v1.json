@@ -1,0 +1,70 @@
+{
+  "schema": "curaloop.lr_d23.evidence_card.v1",
+  "research_status": "INCONCLUSIVE_D2",
+  "D3_status": "NOT_RUN_D2_GATE_NOT_MET",
+  "evaluation_scope": "six exposed FS-Mol development assays / four annotation components",
+  "result": {
+    "path": "docs/evidence/lr-d23-20261109-v1/D2-aggregate-v1.json",
+    "sha256": "8754529f2965145af946036dda9555b33ab6de0b73f82f41b42858a46b5f9a52"
+  },
+  "comparisons": [
+    {
+      "arm": "G1",
+      "mean_new_positives": 19.925,
+      "mean_scientific_cpu_seconds": 2.7442750974750005
+    },
+    {
+      "arm": "Gk2",
+      "mean_new_positives": 19.6,
+      "mean_scientific_cpu_seconds": 1.3914223903000003
+    },
+    {
+      "arm": "Gk4",
+      "mean_new_positives": 18.8,
+      "mean_scientific_cpu_seconds": 0.7179238403250002
+    },
+    {
+      "arm": "T_k4_tau0.05",
+      "mean_new_positives": 18.975,
+      "mean_scientific_cpu_seconds": 3.49003990325
+    },
+    {
+      "arm": "candidate_v0",
+      "mean_new_positives": 19.5375,
+      "mean_scientific_cpu_seconds": 1.8321706066624999
+    },
+    {
+      "arm": "candidate_v1",
+      "mean_new_positives": 18.8375,
+      "mean_scientific_cpu_seconds": 1.59445547585
+    },
+    {
+      "arm": "frozen_cache_greedy",
+      "mean_new_positives": 16.4,
+      "mean_scientific_cpu_seconds": 0.05582879973749993
+    },
+    {
+      "arm": "nearest_hit",
+      "mean_new_positives": 18.775,
+      "mean_scientific_cpu_seconds": 0.010690794837499868
+    },
+    {
+      "arm": "no_history_v1",
+      "mean_new_positives": 19.125,
+      "mean_scientific_cpu_seconds": 1.4846271758624998
+    }
+  ],
+  "decision": {
+    "en": "The residual candidate did not meet D2 criteria. D3 was not run. Keep all controls visible; await owner review before a new research or integration phase.",
+    "th": "\u0e27\u0e34\u0e18\u0e35 residual \u0e22\u0e31\u0e07\u0e44\u0e21\u0e48\u0e1c\u0e48\u0e32\u0e19\u0e40\u0e01\u0e13\u0e11\u0e4c D2 \u0e08\u0e36\u0e07\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49\u0e23\u0e31\u0e19 D3 \u0e43\u0e2b\u0e49\u0e41\u0e2a\u0e14\u0e07\u0e1c\u0e25\u0e02\u0e2d\u0e07 baseline \u0e17\u0e38\u0e01\u0e15\u0e31\u0e27 \u0e41\u0e25\u0e30\u0e23\u0e2d\u0e40\u0e08\u0e49\u0e32\u0e02\u0e2d\u0e07\u0e42\u0e04\u0e23\u0e07\u0e01\u0e32\u0e23\u0e15\u0e31\u0e14\u0e2a\u0e34\u0e19\u0e43\u0e08\u0e01\u0e48\u0e2d\u0e19\u0e40\u0e23\u0e34\u0e48\u0e21\u0e07\u0e32\u0e19\u0e27\u0e34\u0e08\u0e31\u0e22\u0e2b\u0e23\u0e37\u0e2d\u0e40\u0e0a\u0e37\u0e48\u0e2d\u0e21\u0e23\u0e30\u0e1a\u0e1a\u0e43\u0e19 phase \u0e43\u0e2b\u0e21\u0e48"
+  },
+  "limitations": [
+    "Previously exposed development evidence, not final validation.",
+    "Four annotation components are not certified independent biological families.",
+    "Intervals resample five joint seeds conditional on the same six assays.",
+    "Scientific CPU excludes offline training and is not a laboratory cost saving.",
+    "Random was not assigned in this experiment; app demonstrations are separate evidence.",
+    "No runtime integration, clinical efficacy, customer benefit or commercial-data clearance is established."
+  ],
+  "runtime_integration": "NOT_RUN_OFFLINE_HANDOFF_ONLY"
+}

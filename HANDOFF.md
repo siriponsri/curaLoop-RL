@@ -1,4 +1,72 @@
-# Handoff: D1 complete; owner review before D2
+# Handoff: LR-D23 complete; owner review before a new phase
+
+## Completed LR-D23 checkpoint, 9 November 2026
+
+Repository: `C:\Users\User\Desktop\myProject\curaloop-rl`, main, base
+`36f3812fe2633eb170b554813fa6df987567a539`. Read the
+[results](docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md),
+[owner checkpoint](docs/06_execution/LR_D23_OWNER_CHECKPOINT_20261109.md) and
+[reproduction guide](docs/06_execution/LR_D23_REPRODUCTION_GUIDE_20261109.md).
+Normal main commit/push is authorized; the closing report identifies the final SHA.
+
+Scientific status: **INCONCLUSIVE_D2**. Gk2 mean-point dominates v1; the G1 loss,
+component-coverage and history-attribution requirements fail. Both fixed rounds,
+all 420 primary and 120 attribution campaigns completed. D3 is
+NOT_RUN_D2_GATE_NOT_MET. No method replacement or threshold relaxation occurred.
+Final16 features/labels/presence, M3 and the inactive conditional96h stay closed.
+
+The fresh account retains 29,040/86,400 seconds = 8.0667/24 CPU-hours. Original
+release 2026-11-09T11:47:12.999016Z; deadline 2026-11-12T11:47:12.999016Z.
+All 58 old file pins and 11 old ledgers remain unchanged. Preserve the new closed
+ledger, source/matrix freeze and every failed/negative receipt. Never borrow an
+unused allowance or recreate any deleted task/export root.
+
+Private evidence is at
+`C:\Users\User\Desktop\myProject\curaloop-rl\.local\lr-d23-20261109-v1`.
+It includes exact matrices, six development projections, all prefixes/caches,
+traces, fitted artifacts, permits and the complete returned code/dependencies.
+Return: 11,188 task files / 248,687,151 bytes, plus seven export files. Archive
+SHA-256 `ed2359cec1c73bc07007889a762e9538ee540a1961faf0a185cf2c42c2a1dcde`.
+Full independent local reread preceded exact remote deletion and fresh absence.
+The [closure audit](docs/evidence/lr-d23-20261109-v1/closure-audit-v1.json) checks
+2,052 biological units, actual delivered labels/counts, initial exclusion,
+outer-fold support, 100 kernel-proven worker batches and exact D2 reproduction.
+
+The [product card/schema/type](research/product_handoffs/lr_d23_v1/README.md) and
+[English paper insert](docs/07_publication/LR_D23_METHODS_RESULTS_INSERT_20261109.md)
+are offline handoffs. App runtime/UI/build, real engine adapters, customer
+workflow, live connectors, deployment, journal submission and independent final
+validation are NOT_RUN here. Do not present the card as an integrated product
+or the insert as a submission-ready paper.
+
+D1's old masked/full-pool explanation was wrong: identifier-only verification
+shows that the original mask retained all members of every six-pool assay. The
+erratum corrects wording without changing old masks/results. Retain the engineering
+notes about the pre-outcome Windows stub repair, early same-core utility overlap,
+figure-only tick check repair and one frozen import-order warning.
+Final local validation: 39 distinct cases pass; the earlier aggregate512MiB
+subprocess failure and in-process1GiB recovery are retained in the evidence index.
+Actual offline CLI reproduction of all540 evaluation rows also passes.
+
+Next actor is the owner. Recommended research action is to close this candidate
+and review the problem/contribution before designing another method. A separate
+product workflow scope may use transparent baseline evidence. No D3/M3, new data,
+third training round, paid/GPU, actual integration, live write or submission is
+authorized by this closure. Earlier sections below are historical snapshots.
+
+## Historical LR-D23 release, 9 November 2026
+
+Owner approved LR-D23 at36f3812. [Release](research/manifests/lr_d23_release_20261109_v1.json)
+starts a fresh24 CPU-hour /72-hour /max4-worker account in
+`.local/lr-d23-20261109-v1`. Original deadline12 November2026 11:47:12.999016Z
+(18:47 Bangkok). One residual UPDATE/REUSE candidate/two declared training rounds;
+D2 then D3 only on the frozen gate. Technical admission/source/fold freeze
+precede development-label decoding. All11 prior ledgers are pinned unchanged.
+Final16 and conditional96h remain closed. Parent sole writer; no new dataset,
+actual product integration, live write/deploy or submission. Complete the
+independent product/paper evidence handoff even after an early scientific stop,
+then full remote return/reread, exact cleanup and normal main delivery.
+Earlier proposal-only/local-only statements below are historical.
 
 ## Current delivery and proposed long run, 9 November 2026
 

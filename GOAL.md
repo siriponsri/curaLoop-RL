@@ -1,5 +1,14 @@
 # Goal: a defensible method and a useful R&D plugin
 
+**LR-D23 complete, 9 November:** [results](docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md).
+D2 INCONCLUSIVE; D3 NOT_RUN because the frozen gate failed. All 2,052 biological
+units, complete return/audit/cleanup and offline EN/TH product/English paper
+handoffs are complete. Retained 8.0667/24 CPU-hours. Final16, M3 and all old
+ledgers remain closed. [Owner checkpoint](docs/06_execution/LR_D23_OWNER_CHECKPOINT_20261109.md)
+precedes any new phase; normal main delivery is authorized.
+
+The release/proposal states below are retained historical snapshots.
+
 **Next proposal: [LR-D23](docs/06_execution/LONG_RUN_D2_D3_PROPOSAL_20261109.md).**
 Fresh24 CPU-hours /72 hours /max4 workers would close D2 and conditional D3
 development around one residual UPDATE/REUSE mechanism. Owner approval remains
