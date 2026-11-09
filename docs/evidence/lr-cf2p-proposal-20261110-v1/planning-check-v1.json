@@ -1,0 +1,79 @@
+{
+  "schema": "curaloop.planning-verification.v1",
+  "status": "PASS",
+  "verified_utc": "2026-11-09T22:43:42.851430+00:00",
+  "scope": "Proposal arithmetic, disabled authority flags, source input identities, existing aggregate row count, local links and planning/navigation-only diff against HEAD; no runtime or scientific validation",
+  "inspected_base_sha": "f3d0d5989770a09f1842dde16088451eee67734a",
+  "checks": {
+    "planning_only": true,
+    "budget_arithmetic": true,
+    "ten_hour_elapsed_window": true,
+    "two_combined_cpu_workers": true,
+    "no_automatic_training_or_phase": true,
+    "label_and_data_boundaries": true,
+    "source_inputs": [
+      {
+        "path": "research/product_handoffs/lr_cf1_v1/evidence-card-v1.json",
+        "pass": true
+      },
+      {
+        "path": "research/product_handoffs/lr_cf1_v1/evidence-card.schema.json",
+        "pass": true
+      },
+      {
+        "path": "docs/evidence/lr-cf1-20261109-v1/portfolio-cells-v1.csv",
+        "pass": true
+      },
+      {
+        "path": "docs/evidence/lr-cf1-20261109-v1/results-summary-v1.json",
+        "pass": true
+      },
+      {
+        "path": "frontend/package-lock.json",
+        "pass": true
+      }
+    ],
+    "existing_cell_count": true,
+    "view_count": true,
+    "relative_links": {
+      "pass": true,
+      "broken": []
+    },
+    "inspected_base_unchanged": true,
+    "changes_limited_to_planning_and_navigation": true,
+    "no_product_or_scientific_execution": "NOT_RUN"
+  },
+  "documents": [
+    {
+      "path": "docs/06_execution/LONG_RUN_CF2_DESIGN_P_CF1_PROPOSAL_20261110.md",
+      "sha256": "15a31641cb2e1ec2a2dd47da9662699b66a920cbc308ff1243997994cb977b1e"
+    },
+    {
+      "path": "docs/06_execution/PROJECT_PHASE_STATUS_20261110.md",
+      "sha256": "636e4ba663ee162123825611201da2306c36e114caee208f175dc9b8f2874920"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "9e30d220be34d67953a2c9c907ebbf5fd90857b9b53d3321c83864e4e372f1a3"
+    },
+    {
+      "path": "HANDOFF.md",
+      "sha256": "9b2d1f08d46afac0dcd80ca66f351cca3e754989558ce8179b78918ce6feec57"
+    },
+    {
+      "path": "START_HERE.md",
+      "sha256": "b443e3f8d1a8cf315a1a9539173fa39a2b60dd4e270eaa0f221141d32de48f09"
+    },
+    {
+      "path": "GOAL.md",
+      "sha256": "0a37ef49d1a7d1f04d3a2fe1bbdb803a12fa29fc5c9be994b2f671d6475140e0"
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "9f0f4233e143acb057af6b7ab77c1cde9cdb08efaef83e921e7abc4c715f1066"
+    }
+  ],
+  "config_sha256": "fc8592e7e41206e4ae480096f27c798edac4b37392950d98ea34976461baa928",
+  "new_execution": "NOT_RUN",
+  "independent_review": "NOT_RUN"
+}

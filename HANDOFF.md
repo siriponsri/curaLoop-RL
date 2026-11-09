@@ -1,4 +1,24 @@
-# Handoff: LR-CF1 complete, owner checkpoint
+# Handoff: LR-CF1 complete; combined next proposal ready
+
+## Current planning checkpoint, 10 November 2026
+
+The owner selected **CF2-Design + P-CF1** and requested all phase statuses plus
+a ten-hour long run. The [phase report](docs/06_execution/PROJECT_PHASE_STATUS_20261110.md)
+records completed investigations, scientific failures and unrun work. The
+[LR-CF2P proposal](docs/06_execution/LONG_RUN_CF2_DESIGN_P_CF1_PROPOSAL_20261110.md)
+recommends a fresh **8 CPU-hours / 10 elapsed hours / max two combined CPU
+workers**. Its [configuration](research/configs/lr_cf2p_proposal_20261110_v1.json)
+is disabled, with null release/deadline/roots. No new execution was released.
+
+Only planning/navigation files changed in this proposal checkpoint. No build,
+SSH, new ledger/root, data intake, model fit or product integration ran. CF1's
+scientific result, source/aggregate bytes, closed budget and prior exact cleanup
+are unchanged. Normal main proposal delivery is authorized. Next actor: owner
+reviews the combined budget and real local aggregate integration scope before
+execution. This selection supersedes the older alternatives-only wording, not
+the old closed scopes or final16 protection.
+
+## Completed LR-CF1 checkpoint
 
 **Final audit and budget closure PASS.** [Closure audit](docs/evidence/lr-cf1-20261109-v1/closure-audit-v2.json) and [closed budget](docs/evidence/lr-cf1-20261109-v1/budget-closeout-v1.json). No open bookings. The enclosing main delivery commit identifies this checkpoint. Owner decision precedes any new phase.
 
@@ -85,8 +105,10 @@ shipped version; verify live main/origin equality before any continuation.
 No scientific or return unit remains to run. Do not invent a self-referential
 precomputed commit SHA or reopen the account to repeat completed checks.
 
-After delivery, the next actor is the owner. CF2-Design (2 CPU-hours / 24 h/local 1) and
-P-CF1 (4 CPU-hours / 48 h/max 2) are alternatives only, not released goals. No new source,
+At LR-CF1 delivery, CF2-Design (2 CPU-hours / 24 h/local 1) and
+P-CF1 (4 CPU-hours / 48 h/max 2) were alternatives only, not released goals. The
+owner's later combined planning choice is recorded at the top; execution still
+requires the next approval. No new source,
 selector, independent evaluation, final16, paid/GPU, actual team/lab write,
 deployment or submission follows automatically. Preserve12 old ledger pins,
 58 old scientific pins and17 LR-D23 source pins; the closure audit verifies them.

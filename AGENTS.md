@@ -1,5 +1,26 @@
 # Agent instructions: CuraLoop-RL
 
+## Combined next direction selected; ten-hour proposal only, 10 November 2026
+
+Owner selected CF2-Design + P-CF1 and requested the full phase report plus a
+ten-hour long-run proposal. Read
+docs/06_execution/PROJECT_PHASE_STATUS_20261110.md and
+docs/06_execution/LONG_RUN_CF2_DESIGN_P_CF1_PROPOSAL_20261110.md, with disabled
+research/configs/lr_cf2p_proposal_20261110_v1.json. LR-CF2P is
+PROPOSED_NOT_RELEASED: fresh 8 CPU-hours / 10 elapsed hours / max two combined
+workers, local one CPU/1 GiB plus optional dr-train one CPU-equivalent/4 GiB.
+No release, clock, ledger/task root, build, SSH or implementation starts from
+the direction choice or proposal request. Owner approval of this combined
+budget and actual local aggregate integration scope is the next action.
+
+CF2 design and product integration are independent workstreams: a scientific
+NO_GO does not prevent truthful baseline product delivery. No molecular fits,
+private row-level CF1/new activity/final16 access, new data, paid/GPU, live
+team/lab writes, deployment or submission is proposed. LR-CF1 and all old
+accounts remain closed; preserve frozen evidence and deleted roots. Parent
+sole writer; no subagents. Normal main delivery of this proposal is covered
+by standing owner authority. Earlier alternative-choice wording is history.
+
 ## LR-CF1 complete; owner checkpoint before any new phase
 
 Read docs / 03_research/LR_CF1_RESULTS_20261109.md,

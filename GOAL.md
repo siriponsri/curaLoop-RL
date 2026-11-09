@@ -1,6 +1,14 @@
 # Goal: a defensible method and a useful R&D plugin
 
-**Current: LR-CF1 study complete; owner review before a new phase.**
+**Current: CF2-Design + P-CF1 selected; ten-hour proposal awaiting approval.**
+Read the [complete phase status](docs/06_execution/PROJECT_PHASE_STATUS_20261110.md)
+and [combined LR-CF2P proposal](docs/06_execution/LONG_RUN_CF2_DESIGN_P_CF1_PROPOSAL_20261110.md).
+Recommended new ceiling: 8 CPU-hours / 10 elapsed hours / max two CPU workers.
+This would close one research-design decision and one internal aggregate
+product integration; no training or independent final evaluation. Execution
+is disabled, with no new clock/root or SSH. The owner reviews this fresh scope
+before implementation. CF1 remains complete with the limitations below.
+
 Six admitted published-source campaigns, 1,333,191 retained primary observations,
 6,896 observation-supported confirmations, 60 molecular fits and2,700 portfolio
 cells completed. All 30 real MVS-A score checks and independent local H/D recount
@@ -14,8 +22,8 @@ preserve the actual evidence. Final16 remains sealed; no novel selector or live
 integration was activated. Read the [owner checkpoint](docs/06_execution/LR_CF1_OWNER_CHECKPOINT_20261109.md)
 and [evidence index](docs/evidence/lr-cf1-20261109-v1/README.md).
 
-CF2-Design and P-CF1 are alternative proposals requiring a new owner decision.
-No unused LR-CF1 allowance or old conditional grant releases another phase.
+The earlier alternatives have been selected together for proposal preparation.
+No unused LR-CF1 allowance or old conditional grant releases execution.
 
 ## Historical checkpoints
 
