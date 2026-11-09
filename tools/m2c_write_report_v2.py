@@ -137,18 +137,23 @@ def main():
       '[owner checkpoint](../06_execution/M2_OWNER_CHECKPOINT_20261108.md).']
     report=ROOT/'docs/03_research/M2_COSTED_RESULTS_20261108.md'
     with report.open('x',encoding='utf-8',newline='\n') as f:f.write('\n'.join(lines)+'\n')
+    checkpoint_table=(table(['Approved stage','Required boundary','Delivery'],[
+      ['M3','After M2 main delivery; freeze protocol and pass readiness/calibration before final16 labels','Protected evaluation report with all results retained'],
+      ['P1','Offline prototype; no live destination writes or paid services','Typed R&D workflow and verified aggregate evidence in the EN/TH app'],
+      ['J1','Draft only; human review and actual submission remain later decisions','English manuscript and reproducibility package']]) if conditional_entry else
+      table(['Option','What it authorizes now','What remains a later decision'],[
+      ['Discuss the M2 evidence first','Interpret effects, limitations and reviewer concerns; no new experiments','Any new research protocol or budget'],
+      ['Request an M3 proposal','Plan independent evaluation and novelty checks using the retained evidence','Data access, final outcomes, experiment execution and journal submission'],
+      ['Prioritize product workflow','Prepare a separate product evaluation proposal','Live integrations, customer claims, paid services and production deployment']]))
     checkpoint=ROOT/'docs/06_execution/M2_OWNER_CHECKPOINT_20261108.md'
     with checkpoint.open('x',encoding='utf-8',newline='\n') as f:
         f.write('# M2 owner checkpoint\n\n**M2 complete; '+decision+'.**\n\n'+
-          'Read the [complete results](../03_research/M2_COSTED_RESULTS_20261108.md) before deciding. '+
+          'Read the [complete results](../03_research/M2_COSTED_RESULTS_20261108.md) for effects, costs and limitations. '+
           'The full fixed development matrix, accounting audit, complete private return and exact remote cleanup passed. '+
           'Final outcomes remained closed throughout M2. This is not publication readiness.\n\n'+continuation+'\n\n'+
           ('Next step: deliver M2 on main, then execute the already-approved conditional [long-run plan](CONDITIONAL_LONG_RUN_M3_P1_J1_20261109.md). Do not ask again for the same routine release. Material scope/rights/data changes still require the owner.\n\n' if conditional_entry else
            'Recommended next step: review the measured method/overhead/attribution findings with the owner before committing another research budget. Do not automatically repeat M1, enlarge the cohort or open the final set to resolve ambiguity.\n\n')+
-          table(['Option','What it authorizes now','What remains a later decision'],[
-            ['Discuss the M2 evidence first','Interpret effects, limitations and reviewer concerns; no new experiments','Any new research protocol or budget'],
-            ['Request an M3 proposal','Plan independent evaluation and novelty checks using the retained evidence','Data access, final outcomes, experiment execution and journal submission'],
-            ['Prioritize product workflow','Prepare a separate product evaluation proposal','Live integrations, customer claims, paid services and production deployment']])+'\n')
+          checkpoint_table+'\n')
     status=json.loads((ROOT/'research/configs/m2_costed_status_20261108_v2.json').read_text())
     status.update(status='COMPLETE_FOR_OWNER_REVIEW',method_efficacy=decision,biological_units_completed=4164,
       fresh_successful_units=4248,retained_not_dispatched_attempts=cpu['retained_not_dispatched_attempts'],cumulative_charged_seconds=cpu['cumulative_charged_seconds'],
