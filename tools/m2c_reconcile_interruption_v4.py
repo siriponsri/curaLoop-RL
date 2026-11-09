@@ -4,12 +4,13 @@ from datetime import datetime,timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from tools.m2c_batch_v2 import admin_call,collect,save_collected
-from tools.m2c_live_readback_v4 import alive,shared_json
+from tools.m2c_live_readback_v4 import alive,shared_json,pin_local_reader
 from research.m2_costed_v2.guard import new
 TASK=ROOT/'.local/m2-costed-20261108-v2'
 
 
 def main():
+    pin_local_reader()
     assert not (TASK/'durable-pipeline-pid-v4.json').exists()
     old=shared_json(TASK/'durable-pipeline-pid-v3.json')
     child=shared_json(TASK/'main-resume-v3-orchestration-resource.json')

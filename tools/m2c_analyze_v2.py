@@ -24,6 +24,7 @@ def balanced(rows,field):
 
 def contrast(rows,left,right,seeds):
     lookup={(r['task_id'],r['spec']['n0'],r['spec']['seed'],r['arm']):r for r in rows}
+    assert len(lookup)==len(rows),'DUPLICATE_PAIRED_CONTEXT'
     tasks=sorted({r['task_id'] for r in rows});groups=sorted({r['component'] for r in rows})
     components={t:next(r['component'] for r in rows if r['task_id']==t) for t in tasks}
     vectors=[];group_vectors={g:[] for g in groups}
@@ -47,6 +48,15 @@ def main():
             assert json.loads((TASK/(stage+'-summary.json')).read_text())['status']=='PASS_COMPLETE_STAGE'
         returned=json.loads((TASK/'remote-return/verified-v1.json').read_text());assert returned['status']=='PASS_COMPLETE_PRIVATE_RETURN_AND_LOCAL_REREAD'
         matrix=json.loads((TASK/'execution-matrix-v1.json').read_text());projection=json.loads((TASK/'development-projection-manifest.json').read_text())
+        frozen=json.loads((TASK/'main-execution-freeze.json').read_text())
+        assert sha(TASK/'execution-matrix-v1.json')==frozen['matrix_sha256'],'EXECUTION_MATRIX_CHANGED_AFTER_FREEZE'
+        assert sha(TASK/'code-stage-03.json')==frozen['code_stage']
+        assert sha(TASK/'jobs/fit-gates/result.json')==frozen['gates_sha256']
+        assert sha(TASK/'jobs/fit-controls/result.json')==frozen['controls_sha256']
+        assert len({e['job'] for e in matrix['entries']})==len(matrix['entries'])==4164
+        assert len(frozen['jobs'])==len(set(frozen['jobs']))==2100
+        assert all(sha(TASK/'specs'/(name+'.json'))==expected for name,expected in frozen['spec_pins'].items())
+        assert matrix['counts']=={'prefix':48,'branch':1152,'tuning':576,'main':1920,'ablation':180,'transfer':288}
         gate_artifacts=json.loads((TASK/'jobs/fit-gates/result.json').read_text())
         control_artifacts=json.loads((TASK/'jobs/fit-controls/result.json').read_text())['artifacts']
         resolution=json.loads((TASK/'execution-retry-resolution-v1.json').read_text())['mapping'] if (TASK/'execution-retry-resolution-v1.json').exists() else {}

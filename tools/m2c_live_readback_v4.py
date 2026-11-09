@@ -6,6 +6,13 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];TASK=ROOT/'.local/m2-costed-20261108-v2'
 
 
+def pin_local_reader():
+    kernel=ctypes.WinDLL('kernel32',use_last_error=True)
+    kernel.GetCurrentProcess.restype=w.HANDLE
+    kernel.SetProcessAffinityMask.argtypes=[w.HANDLE,ctypes.c_size_t]
+    if not kernel.SetProcessAffinityMask(kernel.GetCurrentProcess(),1):raise ctypes.WinError(ctypes.get_last_error())
+
+
 def shared_json(path):
     kernel=ctypes.WinDLL('kernel32',use_last_error=True)
     kernel.CreateFileW.argtypes=[w.LPCWSTR,w.DWORD,w.DWORD,ctypes.c_void_p,w.DWORD,w.DWORD,w.HANDLE]
@@ -32,6 +39,7 @@ def alive(pid):
 
 
 def main():
+    pin_local_reader()
     now=datetime.now(timezone.utc);phase=shared_json(TASK/'pipeline-status.json')
     version=4 if (TASK/'durable-pipeline-pid-v4.json').exists() else 3
     resource=shared_json(TASK/f'durable-pipeline-resource-v{version}.json')

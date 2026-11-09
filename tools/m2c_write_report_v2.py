@@ -99,7 +99,9 @@ def main():
       'A later SSH connect timeout stopped tuning after 174 completed units; fresh exact job/unit absence preceded three identical-context retries. '+
       'All stopped attempts and local orchestration reservations remain retained. Controller restarts continue only unchanged frozen units after reconciling successful remote receipts. '+
       'A Windows heartbeat replacement collision was repaired without changing the molecular engine; its two actual-reader-lock checks concern telemetry only. '+
-      'Eleven distinct constructed engine checks, three analysis checks and five transport checks passed. Repeated executions are not additional distinct checks.',
+      'Eleven distinct constructed engine checks, three original analysis checks, three supplemental heterogeneous-pairing scenarios and five transport checks passed. '+
+      'The pairing supplement verifies nonconstant shared-seed effects against an exhaustive finite bootstrap distribution and rejects malformed pairs. '+
+      'It changes neither the estimator nor the predeclared scientific criterion. Repeated executions are not additional distinct checks.',
       '',table(['Local orchestration attempt','Final state','Retained reservation (CPU-s)'],
         [[j['job'],j['state'],j['reservation_seconds']] for j in ledger['jobs'] if j['job'].startswith('orchestration-recovery-')]),
       '',table(['Budget stage','Charged reservation (CPU-s)','Stage ceiling (CPU-s)'],[[k,v,cpu['bucket_caps_seconds'][k]] for k,v in cpu['bucket_charged_seconds'].items()]),

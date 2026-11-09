@@ -51,8 +51,17 @@ def main():
           'previous_complete_preservation_sources_rechecked':len(older['records']),
           'six_original_development_source_hashes_unchanged':True,'executed_scientific_code_matches_projection_03':True})
         transport=json.loads((TASK/'transport-constructed-checks-v1.json').read_text());assert transport['status']=='PASS_CONSTRUCTED_TRANSPORT_CHECKS'
-        new(PUBLIC/'constructed-checks-v1.json',{'engine':json.loads((TASK/'jobs/engine-checks-03/result.json').read_text()),
-          'analysis':json.loads((TASK/'jobs/analysis-constructed-checks/result.json').read_text()),'transport':transport})
+        engine=json.loads((TASK/'jobs/engine-checks-03/result.json').read_text())
+        analysis=json.loads((TASK/'jobs/analysis-constructed-checks/result.json').read_text())
+        pairing=json.loads((TASK/'jobs/analysis-pairing-checks-v3/result.json').read_text())
+        assert engine['status']=='PASS_CONSTRUCTED_ENGINE_CHECKS' and len(engine['checks'])==11
+        assert all(c['status']=='PASS' for c in engine['checks']) and not engine['biological_records_read']
+        assert analysis['status']=='PASS_CONSTRUCTED_ANALYSIS_CHECKS' and len(analysis['checks'])==3
+        assert pairing['status']=='PASS_CONSTRUCTED_PAIRING_SUPPLEMENT' and all(c['status']=='PASS' for c in pairing['checks'])
+        assert len(transport['checks'])==5 and all(c['status']=='PASS' for c in transport['checks'])
+        for name in('engine-checks-03','analysis-constructed-checks','analysis-pairing-checks-v3'):
+            assert json.loads((TASK/'jobs'/name/'resource.json').read_text())['status']=='PASS'
+        new(PUBLIC/'constructed-checks-v1.json',{'engine':engine,'analysis':analysis,'pairing_supplement':pairing,'transport':transport})
         figures=json.loads((TASK/'figure-programmatic-qa-v1.json').read_text())
         manual=json.loads((TASK/'figure-manual-review-v1.json').read_text());assert manual['status']=='PASS_FINAL_SIZE_AND_GRAYSCALE_REVIEW'
         assert all(r['passed'] for r in figures['preflight'])
