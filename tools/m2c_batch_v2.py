@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from tools import m2c_admin_v2 as admin
-from tools.m2c_remote_v2 import dispatch
+from tools.m2c_remote_v2 import dispatch,render_dispatch
 TASK=ROOT/'.local/m2-costed-20261108-v2'
 REMOTE='/home/chaw/curaloop-tasks/m2-costed-20261108-v2'
 
@@ -73,8 +73,27 @@ def save_collected(row):
                 with p.open('x',encoding='utf-8',newline='\n') as f:json.dump(row[key],f,indent=2);f.write('\n')
 
 
-def batch(names,action='calibration'):
-    scripts=[dispatch(action,name,prepare_only=True) for name in names]
+def batch(names,action='calibration',retained_proof=None):
+    proof=json.loads(Path(retained_proof).read_text()) if retained_proof else None
+    if proof:
+        assert action=='worker' and proof['status']=='PASS_FRESH_V5_LOCAL_ABSENCE_AND_NOT_DISPATCHED'
+        age=(datetime.now(timezone.utc)-datetime.fromisoformat(proof['utc'])).total_seconds()
+        assert 0<=age<300,'FIRST_DISPATCH_ABSENCE_PROOF_EXPIRED'
+    scripts=[]
+    for name in names:
+        if proof and name in proof['reserved_not_dispatched_jobs']:
+            row=next(r for r in proof['fresh_not_dispatched_proofs'] if r['job']==name)
+            assert not row['job_exists'] and row['unit_state']['LoadState']=='not-found' and row['unit_state']['ActiveState']=='inactive'
+            job=TASK/'jobs'/name;pin=proof['local_prepared_pins'][name]
+            assert hashlib.sha256((job/'permit.json').read_bytes()).hexdigest()==pin['permit_sha256']
+            source,permit=render_dispatch(action,name);path=job/'remote-command.py'
+            if pin['command_sha256']is not None:
+                assert hashlib.sha256(path.read_bytes()).hexdigest()==pin['command_sha256']
+                assert path.read_text()==source,'RETAINED_COMMAND_DIFFERS_FROM_AUTHENTICATED_PERMIT'
+                scripts.append(source)
+            else:
+                assert not path.exists();scripts.append(dispatch(action,name,prepare_only=True))
+        else:scripts.append(dispatch(action,name,prepare_only=True))
     # Each namespace gets its own permit/environment and service; no shared policy state.
     scripts=[s.replace('print(json.dumps(out))','') for s in scripts]
     code='''import base64,concurrent.futures,json,os,resource,time

@@ -22,16 +22,21 @@ def main():
     active=[j['job'] for j in ledger['jobs'] if j['state']=='RESERVED']
     assert len(active)<=3 and all(n.startswith(('main-','ablation-')) for n in active)
     rows=collect(active)['results'] if active else []
-    if not all(r.get('resource',{}).get('status')=='PASS' and r.get('result',{}).get('status')=='PASS_CAMPAIGN'
-      and r['unit_state']['ActiveState']=='inactive' for r in rows):
+    successful=[r for r in rows if r.get('resource',{}).get('status')=='PASS' and r.get('result',{}).get('status')=='PASS_CAMPAIGN'
+      and r['unit_state']['ActiveState']=='inactive']
+    undispatched=[r for r in rows if not r['job_exists'] and r['unit_state']['LoadState']=='not-found'
+      and r['unit_state']['ActiveState']=='inactive']
+    if len(successful)+len(undispatched)!=len(rows):
         print(json.dumps({'status':'WAIT_OR_INSPECT_REMOTE_UNITS','jobs':[
           {'job':r['job'],'resource_status':r.get('resource',{}).get('status'),'unit':r['unit_state']} for r in rows]}));return
-    for row in rows:
+    for row in successful:
         save_collected(row);admin_call('settle',row['job'])
     new(TASK/'local-controller-absence-v4.json',{'status':'PASS_FRESH_NO_RECORDED_V3_CONTROLLERS',
       'utc':datetime.now(timezone.utc).isoformat(),'parent_pid':old['pid'],'child_pid':child['pid'],
       'absence_check':'Windows OpenProcess ERROR_INVALID_PARAMETER; access errors are not absence',
-      'recovered_successful_remote_jobs':[r['job'] for r in rows],
+      'recovered_successful_remote_jobs':[r['job'] for r in successful],
+      'reserved_not_dispatched_jobs':[r['job'] for r in undispatched],
+      'fresh_not_dispatched_proofs':undispatched,
       'old_controller_and_scientific_reservations_retained':True})
     new(TASK/'pipeline-status-interrupted-v3.json',shared_json(TASK/'pipeline-status.json'))
     path=TASK/'specs/orchestration-recovery-v4.json'
@@ -40,7 +45,8 @@ def main():
       'arguments':{'scope':'metadata-only controller continuation of the unchanged frozen main/ablation/transfer matrix',
       'main_child_cpu_envelope_seconds':1000,'scientific_retries':0}})
     admin_call('reserve',path)
-    print(json.dumps({'status':'PASS_V3_LOCAL_LIMIT_RECOVERY_BOOKED','recovered_remote_successes':len(rows),
+    print(json.dumps({'status':'PASS_V3_LOCAL_LIMIT_RECOVERY_BOOKED','recovered_remote_successes':len(successful),
+      'retained_bookings_awaiting_first_dispatch':len(undispatched),
       'new_orchestration_envelope_seconds':2000,'final_outcomes_opened':False}))
 
 

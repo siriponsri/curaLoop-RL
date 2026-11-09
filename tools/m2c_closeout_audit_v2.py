@@ -1,5 +1,5 @@
 """Closeout evidence audit; retains old history and exact scoped cleanup proofs."""
-import collections,hashlib,json,sys
+import collections,hashlib,json,math,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from research.m2_costed_v2.guard import CostedGuard,new
@@ -32,10 +32,43 @@ def main():
         assert all(ledger['bucket_reserved_seconds'][k]<=v for k,v in ledger['bucket_caps_seconds'].items())
         assert [j['job'] for j in ledger['jobs'] if j['state']=='RESERVED']==['closeout-audit-v1']
         assert not ledger['final_outcomes_opened'] and not ledger['m3_released']
+        final_counter_jobs=[];lower_bound_jobs=[];reservation_only_jobs=[]
+        for row in ledger['jobs']:
+            if row['state']=='CHARGED_UTILITIES_ENVELOPE':
+                reservation_only_jobs.append(row['job']);continue
+            if row['job']=='closeout-audit-v1':continue
+            assert row['state']in('PASS','FAIL','FAIL_RESOURCE_LIMIT','FAIL_ADMISSION')
+            resource_path=TASK/'jobs'/row['job']/'resource.json'
+            assert sha(resource_path)==row['resource_sha256'],'SETTLED_RESOURCE_RECEIPT_CHANGED'
+            receipt=json.loads(resource_path.read_text())
+            assert receipt['attempt']==row['job'] and receipt['status']==row['state']
+            assert receipt['cpu_seconds']==row['reported_cpu_seconds']
+            assert math.isfinite(receipt['cpu_seconds']) and 0<=receipt['cpu_seconds']<=row['reservation_seconds']
+            if 'reservation_seconds'in receipt:assert receipt['reservation_seconds']==row['reservation_seconds']
+            text=str(receipt.get('cpu_measurement_scope',''))+' '+str(receipt.get('measurement_scope',''))
+            (lower_bound_jobs if 'LOWER_BOUND' in text else final_counter_jobs).append(row['job'])
         counts=collections.Counter(j['state'] for j in ledger['jobs']);execution=[j for j in ledger['jobs'] if j.get('execution_unit')]
         retained_failures=sum(j['state']=='FAIL' for j in execution)
         assert len(execution)==ledger['attempted_units']==4248+retained_failures and retained_failures==6
         assert sum(j['state']=='PASS' for j in execution)==4248
+        calibration_retries=json.loads((TASK/'calibration-retry-overrides.json').read_text())
+        retries={old:row['job'] for old,row in calibration_retries.items()}
+        retries.update(json.loads((TASK/'execution-retry-resolution-v1.json').read_text())['mapping'])
+        assert len(retries)==6 and set(retries)=={j['job'] for j in execution if j['state']=='FAIL'}
+        probes=[]
+        for name in('orchestration-recovery-probe.json','tuning-recovery-probe-v1.json'):
+            rows=json.loads((TASK/name).read_text())['results']
+            assert all(not r['job_exists'] and r['unit_state']['LoadState']=='not-found' and r['unit_state']['ActiveState']=='inactive' for r in rows)
+            probes.extend(r['job'] for r in rows)
+        assert set(probes)==set(retries)
+        returned_manifest=json.loads((TASK/'remote-return/export/manifest.json').read_text())
+        for old,replacement in retries.items():
+            original=json.loads((TASK/'jobs'/old/'permit.json').read_text())
+            retried=json.loads((TASK/'jobs'/replacement/'permit.json').read_text())
+            for key in('arguments','cpu','handler','code_pins','code_directory'):
+                assert original.get(key)==retried.get(key),'SCIENTIFIC_RETRY_CONTEXT_CHANGED'
+            assert not any(r['path'].startswith('jobs/'+old+'/') for r in returned_manifest['files'])
+            assert json.loads((TASK/'jobs'/replacement/'resource.json').read_text())['status']=='PASS'
         cpu={'status':'PASS_CUMULATIVE_RESERVATION_ACCOUNTING','prior_retained_seconds':ledger['prior_retained_seconds'],
           'fresh_charged_seconds':reserved,'cumulative_charged_seconds':reserved+ledger['prior_retained_seconds'],
           'cumulative_charged_cpu_hours':(reserved+ledger['prior_retained_seconds'])/3600,
@@ -43,7 +76,11 @@ def main():
           'bucket_caps_seconds':ledger['bucket_caps_seconds'],'bucket_charged_seconds':ledger['bucket_reserved_seconds'],
           'attempted_units_this_release':len(execution),'successful_units_this_release':4248,
           'retained_not_dispatched_attempts':retained_failures,'unique_synthetic_contexts_including_previous_profile':96,
+          'not_dispatched_absence_and_identical_retry_contexts_rechecked':len(retries),
           'biological_units':4164,'accounting_basis':'conservative reservations retained in full; not total-host measured consumption',
+          'settled_resource_hashes_rechecked':len(final_counter_jobs)+len(lower_bound_jobs),
+          'final_cpu_counter_unavailable_jobs':lower_bound_jobs,'reservation_only_utility_envelopes':reservation_only_jobs,
+          'final_counter_scope':'Receipt values rechecked against reservations; unavailable final counters remain explicit lower bounds, not fabricated totals. Closeout-audit settles after this snapshot.',
           'deadline_utc':ledger['deadline_utc'],'final_outcomes_opened':False,'m3_released':False}
         new(PUBLIC/'cpu-accounting-v1.json',cpu)
         new(PUBLIC/'old-history-unchanged-v1.json',{'status':'PASS_PINNED_HISTORY_UNCHANGED','paths':pins,

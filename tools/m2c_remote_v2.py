@@ -1,4 +1,4 @@
-"""Synthetic-only profile transport/launch under an enforced one-core cgroup."""
+"""Authenticated transport for the fixed M2 root and enforced one-core services."""
 import base64,json,subprocess,sys
 from pathlib import Path
 
@@ -57,7 +57,7 @@ def remote(code,stdin=None,timeout=300):
         '-o','ConnectTimeout=10','-o','ConnectionAttempts=1',profile,cmd],stdin=stdin,capture_output=True,timeout=timeout)
 
 
-def dispatch(action,name,prepare_only=False):
+def render_dispatch(action,name):
     assert action in('bootstrap','calibration','worker')
     job=TASK/'jobs'/name;permit=json.loads((job/'permit.json').read_text())
     assert permit['host']=='dr-train' and permit['task_root']==REMOTE
@@ -101,6 +101,11 @@ for field in('resource','kernel-proof','result','failure'):
              '__CREATE__':repr(action=='bootstrap'),'__BODY__':repr(body),'__MODULE__':repr(module)}
     for key,value in mapping.items():code=code.replace(key,value)
     compile(code,'<profile-launcher>','exec')
+    return code,permit
+
+
+def dispatch(action,name,prepare_only=False):
+    code,permit=render_dispatch(action,name);job=TASK/'jobs'/name
     with (job/'remote-command.py').open('x',encoding='utf-8') as f:f.write(code)
     if prepare_only:return code
     if action=='bootstrap':

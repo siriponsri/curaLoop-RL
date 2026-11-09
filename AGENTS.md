@@ -17,6 +17,24 @@ submission. If M2 is not promising, close/report and do not activate this grant.
 This explicit conditional decision supersedes the earlier routine owner checkpoint
 before M3 only within these conditions. Parent remains sole writer.
 
+## Verified M2 utility recovery, 9 November 2026
+
+Read the latest section of docs/06_execution/M2_COSTED_EXECUTION_NOTES_20261108.md.
+V3 stopped at its local utility CPU limit with1494 main/ablation successes; its
+final counter was recovered. V4 stopped before SSH on a prepared-command file;
+both complete reservations remain charged. Fresh absence and exact retained
+command/permit authentication preceded v5 first dispatch of the same three
+bookings. All three passed. V5 now continues only the original frozen remaining
+main/ablation/transfer units; no scientific attempt or retry was added. Freshly
+inspect exact PID, heartbeat and logs with tools/m2c_live_readback_v4.py, which
+auto-detects v5. Never infer liveness from a status file or launch duplicates.
+Engineering charge11580/12690 seconds; cumulative48h/original deadline still
+bind. After the full pipeline and parent settle, run the prepared60-second
+tools/m2c_check_pairing_v3.py job and settle it before closeout; its real PASS is
+required by the final audit. Preserve every old counter/receipt/clock. Final
+payloads remain closed and the conditional96h grant remains NOT_STARTED.
+Parent sole writer. Earlier snapshots below are historical observations.
+
 ## Verified M2 continuation status, 9 November 2026
 
 Read docs/06_execution/M2_INTERIM_OWNER_REPORT_20261109.md. Technical/training/

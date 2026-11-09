@@ -122,3 +122,58 @@ Thirty-second resource heartbeats and independent process readback were added.
 Process existence, refreshed heartbeat and advancing completion logs were verified
 after the launching shell exited. Interrupted timing is retained as an execution
 limitation; seed intervals do not quantify every source of timing variation.
+
+## Outcome-blind closeout authentication, 9 November
+
+While the fixed outer matrix was still running and before inspecting its effects,
+the analysis audit was strengthened to recheck the matrix, all 2,100 frozen
+main/ablation specs, code-stage manifest, fitted gates and selected controls against
+their pre-evaluation hashes. A fresh metadata-only check passed. The paired
+analysis now explicitly rejects duplicate contexts; the estimator, weighting,
+seed-vector bootstrap and scientific decision rule are unchanged.
+
+Three supplemental constructed pairing scenarios are prepared for a guarded
+60 CPU-second engineering job after the scientific pipeline completes. They use
+heterogeneous assay/initial-count/seed offsets, an exhaustive finite distribution
+for checking joint-seed uncertainty, and malformed pairs. **PREPARED_NOT_RUN** at
+this dated preparation checkpoint; the final audit requires their actual result
+and resource receipts. These are nonbiological checks and add no scientific units.
+
+The final budget audit also rechecks every settled resource receipt's hash and
+reported counter against its reservation. Unavailable final counters remain
+explicit lower bounds and utility-only envelopes remain reservations. The six
+not-dispatched failures require their retained absence probes, identical retry
+arguments and absence from the complete remote return. None of these validation
+additions changes the frozen molecular engine or introduces a new efficacy gate.
+
+## Local utility-limit recovery and prepared-command correction, 9 November
+
+The resumed main controller reached its 500-second local utility envelope at
+499.59375 measured aggregate CPU-seconds. Both recorded Python processes were
+freshly confirmed absent. The parent closed FAIL with 502.453125 measured seconds;
+its full 2,000-second reservation remains charged. All 1,494 completed molecular
+units were retained. Three additional original permits were booked but a fresh
+SSH probe found all three exact remote job directories and units absent.
+
+A new 2,000-second local envelope was booked. Its first continuation stopped
+before SSH because exclusive local command creation encountered a previously
+prepared command file. This engineering failure consumed 2.15625 measured seconds;
+the entire reservation remains charged. No molecular worker started in that
+continuation. It was an omitted recovery case, not an efficacy result.
+
+Fresh absence was checked again. All three retained command files matched fresh
+rendering from their original authenticated permits. Rendering is now separate
+from exclusive file creation; the recovery path may consume an existing command
+only with a recent absence proof and matching command/permit hashes. Remote
+directory creation remains exclusive. The ordinary fresh-dispatch path retains
+its exclusive local creation behavior.
+
+A separate 1,500-second local envelope was booked inside the original engineering
+ceiling. Controller v5 preserves the original permits for those first dispatches,
+then resumes the remaining frozen order. All three first dispatches passed; a
+subsequent readback observed 1,506/2,100 main/ablation units, live parent/child,
+fresh heartbeats and no worker failures. The original absolute deadline, one-core
+local limit, remote slots, scientific caps, arguments and six prior failed-unit
+records are unchanged. These recoveries add no scientific attempt or retry.
+The fresh final counter for v3 also closes its earlier stale-heartbeat gap; the
+older v2 counter remains explicitly unavailable. No final payload was opened.

@@ -41,7 +41,7 @@ def alive(pid):
 def main():
     pin_local_reader()
     now=datetime.now(timezone.utc);phase=shared_json(TASK/'pipeline-status.json')
-    version=4 if (TASK/'durable-pipeline-pid-v4.json').exists() else 3
+    version=next(v for v in(5,4,3) if (TASK/f'durable-pipeline-pid-v{v}.json').exists())
     resource=shared_json(TASK/f'durable-pipeline-resource-v{version}.json')
     launch=shared_json(TASK/f'durable-pipeline-pid-v{version}.json');lines=(TASK/f'durable-v{version}-stdout.log').read_text().splitlines()
     child_path=TASK/f'main-resume-v{version}-orchestration-resource.json'
