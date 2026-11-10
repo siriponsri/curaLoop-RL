@@ -2,6 +2,7 @@ import { Component, lazy, Suspense, useRef, useState, type ReactNode } from "rea
 import { NavLink, Route, Routes, useLocation, Link } from "react-router-dom";
 import {
   BarChart3,
+  Bot,
   BookOpen,
   ChevronRight,
   FileCheck,
@@ -29,6 +30,7 @@ const Compounds = lazy(() => import("./pages/Compounds"));
 const Benchmarks = lazy(() => import("./pages/Benchmarks"));
 const Evidence = lazy(() => import("./pages/Evidence"));
 const Confirmation = lazy(() => import("./pages/Confirmation"));
+const AgentMission = lazy(() => import("./pages/AgentMission"));
 const GuidedPresentation = lazy(() => import("./pages/Presentation"));
 
 const pages = [
@@ -55,6 +57,7 @@ const pages = [
     en: "Confirmation evidence",
     icon: FileCheck,
   },
+  { path: "/agent", en: "Agent mission control", icon: Bot },
   {
     path: "/presentation",
     en: "Guided presentation",
@@ -177,10 +180,10 @@ function Workspace() {
               {t(notice)}
             </div>
           )}
-          {pathname === "/confirmation" ? (
-            <RouteBoundary key="confirmation" fallback={<RouteError />}>
+          {pathname === "/confirmation" || pathname === "/agent" ? (
+            <RouteBoundary key={pathname} fallback={<RouteError />}>
               <Suspense fallback={<div className="loading-panel" role="status">{t("Loading workspace…")}</div>}>
-                <Confirmation />
+                {pathname === "/agent" ? <AgentMission /> : <Confirmation />}
               </Suspense>
             </RouteBoundary>
           ) : loading ? (

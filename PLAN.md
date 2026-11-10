@@ -1,6 +1,17 @@
 # Method-first plan
 
-**Current: LR-CF2P complete; owner checkpoint before another phase.**
+**Current: AgentRD solo continuation is ACTIVE, 10 November 2026.** Complete the
+bounded local evidence workbench and matched real-model computational study,
+then analysis, figures/tables and manuscript under the already released 96
+CPU-hours / 120 hours. Preserve every old negative result and sealed data.
+No external expert/customer/wet lab is required or claimed. Continue through
+negative results without tuning until a win. [Live execution](docs/08_agent_rd/ACTIVE_EXECUTION_20261110.md)
+and [fixed protocol](docs/08_agent_rd/COMPUTATIONAL_PROTOCOL_V1.md) govern this
+track; the earlier phase-approval stop rules below are historical.
+
+## Historical CF2P checkpoint
+
+**LR-CF2P complete; its original owner checkpoint is superseded for this new track.**
 CF2-Design is **NO_GO_THIS_MECHANISM** after two formulations and 12 constructed
 cases. P-CF1 is **PASS_INTERNAL_INTEGRATION**: actual main-app EN/TH comparison,
 strict aggregate API, additive local C Workspace tools, filtered exports,

@@ -1,0 +1,24 @@
+{
+  "status": "HEURISTIC_FEASIBLE_NOT_GUARANTEED",
+  "latest_interface_probe_cpu_by_family": {
+    "extraction": 575.5022279999998,
+    "comparison": 857.8241010000002,
+    "interpretation": 715.0104670000001,
+    "boundary": 223.48533299999963,
+    "source_fault": 159.26248699999996,
+    "recovery": 497.4028359999993
+  },
+  "planned_model_missions_by_family": {
+    "extraction": 60,
+    "comparison": 60,
+    "interpretation": 57,
+    "boundary": 57,
+    "source_fault": 39,
+    "recovery": 39
+  },
+  "projection_cpu_seconds": 165103.78793699996,
+  "projection_with_15_percent_headroom": 189869.35612754992,
+  "evaluation_cap_cpu_seconds": 201600,
+  "stop_headroom_cpu_seconds": 3000,
+  "note": "One or two latest-interface observations per family, not an uncertainty bound. Earlier failed interface versions remain charged and reported. Hard stopping and all planned-unit dispositions apply."
+}

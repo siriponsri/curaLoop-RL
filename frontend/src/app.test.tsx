@@ -196,7 +196,9 @@ describe("runnable research UI", () => {
   });
   it("preserves provenance, weak evaluation and controller fallback disclosures", async () => {
     show("/evidence");
-    await screen.findByRole("heading", { name: "Research evidence" });
+    // The first lazy-route transform can exceed Testing Library's one-second
+    // default on the explicitly capped single-core acceptance machine.
+    await screen.findByRole("heading", { name: "Research evidence" }, { timeout: 10000 });
     expect(
       screen.getByText(
         "Original in-process synthetic generator; no external data.",

@@ -1,6 +1,17 @@
 # Start here
 
-**Current: LR-CF2P complete; owner checkpoint before another phase.**
+**Current: AgentRD solo continuation is ACTIVE, 10 November 2026.** The owner
+authorizes A0 -> necessary A1/A2 -> real matched evaluation -> analysis and a
+complete manuscript, including negative/inconclusive findings. The fresh option-A
+account is 96 CPU-hours / 120 hours, up to four combined CPU cores, existing
+Typhoon 12B on dr-train; no paid API or new model download. Do not ask routine
+phase approvals or stop at A1. [Live checkpoint](docs/08_agent_rd/ACTIVE_EXECUTION_20261110.md)
+and [protocol](docs/08_agent_rd/COMPUTATIONAL_PROTOCOL_V1.md) identify actual
+receipts and remaining work. Final16/private rows/hidden outcomes stay closed.
+
+## Historical CF2P checkpoint
+
+**LR-CF2P complete; its original owner checkpoint is superseded for this new track.**
 CF2-Design is **NO_GO_THIS_MECHANISM** after two formulations and 12 constructed
 cases. P-CF1 is **PASS_INTERNAL_INTEGRATION**: actual main-app EN/TH comparison,
 strict aggregate API, additive local C Workspace tools, filtered exports,

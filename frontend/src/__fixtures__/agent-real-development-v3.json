@@ -1,0 +1,259 @@
+{
+  "mission_id": "2728af1c-d4fe-451a-9585-fc04c5f82c6f",
+  "revision": 7,
+  "state": "COMPLETED",
+  "created_utc": "2026-11-10T12:17:13.898771+00:00",
+  "spec": {
+    "arms": [
+      "mvsa/top_ranked"
+    ],
+    "budgets": [
+      10
+    ],
+    "campaign": "628/677",
+    "export_requested": true,
+    "goal": "Report only the mean H and D for the first arm using b10:a0:H and b10:a0:D. State development_only and seed_range_not_ci.",
+    "locale": "en",
+    "mode": "agent"
+  },
+  "events": [
+    {
+      "detail": "Authenticate only the four admitted public aggregate files",
+      "previous": null,
+      "revision": 1,
+      "sha256": "c0d58e498a99dfd63128a63f82ead87f9c202fff4cdf56edbfabbba7057d11cd",
+      "state": "VALIDATING",
+      "utc": "2026-11-10T12:17:13.928781+00:00"
+    },
+    {
+      "detail": "Read-only CF1 comparison; no simulator action is registered",
+      "previous": "c0d58e498a99dfd63128a63f82ead87f9c202fff4cdf56edbfabbba7057d11cd",
+      "revision": 2,
+      "sha256": "07192894b96eae863ca72ac06a270477b334bf0ebce3ad74fba67ce5f0c2afc1",
+      "state": "PLAN_READY",
+      "utc": "2026-11-10T12:17:14.025611+00:00"
+    },
+    {
+      "detail": "Trusted controller read; not a model-proposed action",
+      "previous": "07192894b96eae863ca72ac06a270477b334bf0ebce3ad74fba67ce5f0c2afc1",
+      "revision": 3,
+      "sha256": "97dbf461e525e5662ecf73ff410f5ed207d2cb031b85dc821c45de3090c2bf88",
+      "state": "TOOL_COMPLETED",
+      "utc": "2026-11-10T12:17:14.049339+00:00"
+    },
+    {
+      "detail": "Actual pinned CPU-only model call 1",
+      "previous": "97dbf461e525e5662ecf73ff410f5ed207d2cb031b85dc821c45de3090c2bf88",
+      "revision": 4,
+      "sha256": "43ef1e1c0fafdf4e6fc711cf8d71a8a6e433757f6da079cbc5607ab3857a5b25",
+      "state": "MODEL_REQUESTED",
+      "utc": "2026-11-10T12:17:14.085112+00:00"
+    },
+    {
+      "detail": "Provider response recorded; this is not verified scientific output",
+      "previous": "43ef1e1c0fafdf4e6fc711cf8d71a8a6e433757f6da079cbc5607ab3857a5b25",
+      "revision": 5,
+      "sha256": "9dfdb6f405dd69ee91ade795e7388a50af2c020be14a9c0182c5ac83a4029e8a",
+      "state": "MODEL_RETURNED",
+      "utc": "2026-11-10T12:20:30.468811+00:00"
+    },
+    {
+      "detail": "Separate deterministic claim check; not expert validation",
+      "previous": "9dfdb6f405dd69ee91ade795e7388a50af2c020be14a9c0182c5ac83a4029e8a",
+      "revision": 6,
+      "sha256": "e30559ae009aa9eb34c50800933402c5085a4d51d2827bcc4689959846db3da1",
+      "state": "VERIFYING",
+      "utc": "2026-11-10T12:20:30.505282+00:00"
+    },
+    {
+      "revision": 7,
+      "state": "COMPLETED",
+      "detail": "Guarded source-checked release",
+      "utc": "2026-11-10T12:20:30.531840+00:00",
+      "previous": "e30559ae009aa9eb34c50800933402c5085a4d51d2827bcc4689959846db3da1",
+      "sha256": "954f3c91a5b1cfdce651971c4face1b70ba0600c13eb853bc59037e48b62f4d6"
+    }
+  ],
+  "candidate": {
+    "action": "answer",
+    "evidence_id": "bdbf686428cd390c",
+    "limitations": [
+      "development_only",
+      "seed_range_not_ci"
+    ],
+    "values": {
+      "b10:a0:D": 89.2,
+      "b10:a0:DB": 0.544,
+      "b10:a0:H": 136.2,
+      "b10:a0:HB": 0.83
+    }
+  },
+  "released": {
+    "action": "answer",
+    "values": {
+      "b10:a0:H": 136.2,
+      "b10:a0:D": 89.2,
+      "b10:a0:HB": 0.83,
+      "b10:a0:DB": 0.544
+    },
+    "limitations": [
+      "development_only",
+      "seed_range_not_ci"
+    ],
+    "evidence_id": "bdbf686428cd390c"
+  },
+  "verification": {
+    "errors": [],
+    "valid": true,
+    "verified_values": 4
+  },
+  "fallback": null,
+  "error": null,
+  "cost": {
+    "failed_calls": 0,
+    "model_calls": 1,
+    "model_cpu_seconds": 575.5022279999998,
+    "model_tokens": 729,
+    "model_wall_seconds": 194.7099580829963,
+    "paid_cost_usd": 0,
+    "tool_calls": 1
+  },
+  "evidence": {
+    "arms": [
+      "mvsa/top_ranked"
+    ],
+    "budgets": [
+      10
+    ],
+    "campaign": "628/677",
+    "evidence_digest": "bdbf686428cd390c65913ee5749e5b5e3d8acfde07063b46c0e61bea4bdea069",
+    "evidence_id": "bdbf686428cd390c",
+    "final16_access": false,
+    "limitations": {
+      "aggregate_only": "No individual compounds or hidden/pending outcomes are available.",
+      "commercial_rights_unconfirmed": "Commercial/raw-data redistribution clearance is not established.",
+      "development_only": "Exposed development evidence, not independent biological confirmation.",
+      "mechanical_d_equals_h": "Round-robin D=H is mechanical at these budgets.",
+      "missing_excluded": "Missing confirmation is excluded, never treated as inactive.",
+      "no_lab_or_clinical_value": "No measured laboratory savings, prospective efficacy or clinical benefit.",
+      "no_rl_result": "CF1 did not evaluate RL; the simulator is a separate retrospective study.",
+      "nonpositive_mixed": "Source nonpositive includes inactive and inconclusive.",
+      "one_component": "Six campaigns share one annotation-connected component.",
+      "seed_range_not_ci": "Five-seed ranges are conditional repetitions, not biological confidence intervals."
+    },
+    "paper_url": "https://doi.org/10.1021/acscentsci.3c01517",
+    "schema": "curaloop.agent-rd.evidence.v1",
+    "source_hashes": [
+      {
+        "bytes": 3884,
+        "path": "research/product_handoffs/lr_cf1_v1/evidence-card-v1.json",
+        "sha256": "e4ed702d61f1a283cc7bc0f1abcd4b41dd4f241f1b66857afed9a299254a3fa9"
+      },
+      {
+        "bytes": 4357,
+        "path": "research/product_handoffs/lr_cf1_v1/evidence-card.schema.json",
+        "sha256": "06709cfa3d1878a95291a5d0ef1b4b4a26c54e9777eda9b9d1f1ec353f5fea69"
+      },
+      {
+        "bytes": 384138,
+        "path": "docs/evidence/lr-cf1-20261109-v1/portfolio-cells-v1.csv",
+        "sha256": "495fd9d918b00db16e779a866f9f8a801e300ef0b6e4c23635dd1fb9a395d831"
+      },
+      {
+        "bytes": 114773,
+        "path": "docs/evidence/lr-cf1-20261109-v1/results-summary-v1.json",
+        "sha256": "fff5b722a6ade896f056c798bcf40fdc3a21909e63882909f9915dbec7e10486"
+      }
+    ],
+    "source_snapshot": "04c58e85188e724ec5ff44cbed2e7b960f6f3df3",
+    "source_url": "https://github.com/dahvida/AIC_Finder/tree/04c58e85188e724ec5ff44cbed2e7b960f6f3df3",
+    "status": "available",
+    "units": {
+      "B": "confirmation observations",
+      "D": "positive fixed structure groups",
+      "DB": "fraction, not percent or currency",
+      "FP": "positive fingerprint groups",
+      "H": "historical positive observations",
+      "HB": "fraction, not percent or currency"
+    },
+    "values": {
+      "b10:a0:B": 164,
+      "b10:a0:B:max": 164,
+      "b10:a0:B:min": 164,
+      "b10:a0:D": 89.2,
+      "b10:a0:D:max": 91,
+      "b10:a0:D:min": 87,
+      "b10:a0:DB": 0.544,
+      "b10:a0:DB:max": 0.555,
+      "b10:a0:DB:min": 0.53,
+      "b10:a0:FP": 83.8,
+      "b10:a0:FP:max": 85,
+      "b10:a0:FP:min": 82,
+      "b10:a0:H": 136.2,
+      "b10:a0:H:max": 139,
+      "b10:a0:H:min": 134,
+      "b10:a0:HB": 0.83,
+      "b10:a0:HB:max": 0.848,
+      "b10:a0:HB:min": 0.817
+    }
+  },
+  "calls": [
+    {
+      "call_id": "2728af1cd4fe451a9585fc04c5f82c6f-0",
+      "status": "PASS",
+      "output": "{\"action\": \"answer\", \"values\": {\"b10:a0:H\": 136.2, \"b10:a0:D\": 89.2, \"b10:a0:HB\": 0.83, \"b10:a0:DB\": 0.544}, \"limitations\": [\"development_only\", \"seed_range_not_ci\"], \"evidence_id\": \"bdbf686428cd390c\"}"
+    }
+  ],
+  "tool_receipts": [
+    {
+      "initiator": "trusted_controller_preflight",
+      "result": {
+        "arms": [
+          "mvsa/top_ranked"
+        ],
+        "budgets": [
+          10
+        ],
+        "campaign": "628/677",
+        "evidence_id": "bdbf686428cd390c",
+        "limitation_codes": [
+          "development_only",
+          "missing_excluded",
+          "nonpositive_mixed",
+          "seed_range_not_ci",
+          "one_component",
+          "mechanical_d_equals_h",
+          "no_lab_or_clinical_value",
+          "aggregate_only",
+          "commercial_rights_unconfirmed",
+          "no_rl_result"
+        ],
+        "source_facts": {
+          "annotation_components": 1,
+          "campaigns": 6,
+          "conditional_seeds": 5,
+          "lab_clinical_cost_data": "unavailable",
+          "missing": "excluded",
+          "nonpositive": "inactive_or_inconclusive",
+          "round_robin_D_equals_H": "mechanical"
+        },
+        "status": "available",
+        "values": {
+          "b10:a0:B": 164,
+          "b10:a0:D": 89.2,
+          "b10:a0:D:max": 91,
+          "b10:a0:D:min": 87,
+          "b10:a0:DB": 0.544,
+          "b10:a0:FP": 83.8,
+          "b10:a0:H": 136.2,
+          "b10:a0:H:max": 139,
+          "b10:a0:H:min": 134,
+          "b10:a0:HB": 0.83
+        }
+      },
+      "sha256": "c98ee5578ea79364d2912812af5b2d961f2bc051998ab7521da6758ec47b12be",
+      "status": "PASS",
+      "tool": "read"
+    }
+  ]
+}

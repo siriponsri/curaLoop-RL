@@ -28,6 +28,7 @@ from curaloop.service import LIMITATIONS, RunService, code_identity, compare
 from curaloop_rd.confirmation_study import StudyUnavailable, comparison_brief
 from curaloop_rd.confirmation_study import view as confirmation_view
 
+from .agent_rd_routes import install_agent_routes
 from .storage import (
     RECOVERY_HELP,
     SCHEMA_VERSION,
@@ -275,6 +276,8 @@ def create_app(storage_path: str | Path | None = None) -> FastAPI:
     async def lifespan(app: FastAPI):
         yield
         app.state.executor.shutdown(wait=True)
+        if app.state.agent_executor is not None:
+            app.state.agent_executor.shutdown(wait=True)
 
     app = FastAPI(
         title="CuraLoop-RL Local API",
@@ -296,6 +299,8 @@ def create_app(storage_path: str | Path | None = None) -> FastAPI:
     app.state.executor = ThreadPoolExecutor(max_workers=2, thread_name_prefix="curaloop-local")
     app.state.storage_error = None
     app.state.recovery_issues = []
+    mission_base = Path(storage_path or os.environ.get("CURALOOP_STORAGE_PATH") or ROOT / ".local/curaloop.sqlite3")
+    install_agent_routes(app, mission_base.parent / (mission_base.stem + "-agent-rd"))
     try:
         app.state.storage = SnapshotStore(
             storage_path

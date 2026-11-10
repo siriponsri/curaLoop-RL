@@ -1,0 +1,36 @@
+{
+  "status": "PASS_REAL_MODEL_MISSION",
+  "scope": "development canary, not locked evaluation",
+  "mission_id": "2728af1c-d4fe-451a-9585-fc04c5f82c6f",
+  "state": "COMPLETED",
+  "released": {
+    "action": "answer",
+    "values": {
+      "b10:a0:H": 136.2,
+      "b10:a0:D": 89.2,
+      "b10:a0:HB": 0.83,
+      "b10:a0:DB": 0.544
+    },
+    "limitations": [
+      "development_only",
+      "seed_range_not_ci"
+    ],
+    "evidence_id": "bdbf686428cd390c"
+  },
+  "verification": {
+    "errors": [],
+    "valid": true,
+    "verified_values": 4
+  },
+  "fallback": null,
+  "cost": {
+    "failed_calls": 0,
+    "model_calls": 1,
+    "model_cpu_seconds": 575.5022279999998,
+    "model_tokens": 729,
+    "model_wall_seconds": 194.7099580829963,
+    "paid_cost_usd": 0,
+    "tool_calls": 1
+  },
+  "error": null
+}

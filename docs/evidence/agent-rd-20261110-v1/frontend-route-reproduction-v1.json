@@ -1,0 +1,16 @@
+{
+  "command": [
+    "npm.cmd",
+    "run",
+    "test",
+    "--",
+    "src/app.test.tsx",
+    "-t",
+    "preserves provenance",
+    "--maxWorkers=1",
+    "--no-file-parallelism"
+  ],
+  "exit_code": 0,
+  "stdout": "\n RUN  v4.1.12 C:/Users/User/Desktop/myProject/curaloop-rl/frontend\n\n\n Test Files  1 passed (1)\n      Tests  1 passed | 19 skipped (20)\n   Start at  19:55:30\n   Duration  11.73s (transform 1.32s, setup 1.09s, import 1.92s, tests 2.77s, environment 5.29s)\n\n",
+  "stderr": "npm notice run curaloop-research-web@0.3.0 test\nnpm notice run vitest run src/app.test.tsx -t preserves provenance --maxWorkers=1 --no-file-parallelism\n"
+}

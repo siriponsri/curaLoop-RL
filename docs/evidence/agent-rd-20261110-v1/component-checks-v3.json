@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "real_model_evaluation": false,
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "--fix",
+        "src/curaloop_rd/agent_rd",
+        "api/agent_rd_routes.py",
+        "api/main.py",
+        "tests/test_agent_rd.py",
+        "tests/test_agent_rd_eval.py",
+        "research/agent_rd_eval_v1",
+        "tools\\agent_rd_a1_checks_v1.py",
+        "tools\\agent_rd_admin_v1.py",
+        "tools\\agent_rd_analyze_v1.py",
+        "tools\\agent_rd_browser_v1.py",
+        "tools\\agent_rd_calibrate_v1.py",
+        "tools\\agent_rd_canary_v1.py",
+        "tools\\agent_rd_checks_v1.py",
+        "tools\\agent_rd_development_v1.py",
+        "tools\\agent_rd_evaluate_v1.py",
+        "tools\\agent_rd_freeze_v1.py",
+        "tools\\agent_rd_frontend_checks_v1.py",
+        "tools\\agent_rd_prepare_ui_v1.py",
+        "tools\\agent_rd_progress_v1.py",
+        "tools\\agent_rd_remote_v1.py",
+        "tools\\agent_rd_remote_worker_v1.py",
+        "tools\\agent_rd_ui_fixture_v1.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Found 5 errors (5 fixed, 0 remaining).\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "tests/test_agent_rd.py",
+        "tests/test_agent_rd_eval.py",
+        "tests/test_confirmation_study.py",
+        "-q",
+        "--basetemp=.local/agent-rd-run-20261110-v1/pytest-v3"
+      ],
+      "exit_code": 0,
+      "stdout": "............................................                             [100%]\n============================== warnings summary ===============================\n.venv\\Lib\\site-packages\\fastapi\\testclient.py:1\n  C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.venv\\Lib\\site-packages\\fastapi\\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n44 passed, 1 warning in 48.51s\n",
+      "stderr": ""
+    }
+  ]
+}

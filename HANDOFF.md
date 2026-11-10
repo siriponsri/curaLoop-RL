@@ -1,4 +1,34 @@
-# Handoff: LR-CF2P owner checkpoint
+# Handoff: active AgentRD solo continuation
+
+## Current authority, 10 November 2026
+
+The owner explicitly approved continuous A0 -> A1/necessary A2 -> real matched
+evaluation -> analysis/manuscript and a working localhost product, then chose
+resource option A: fresh96 CPU-hours /120 elapsed hours, max4 combined CPU cores,
+existing Typhoon12B on dr-train, no paid API/GPU/new model download. Read
+[active execution](docs/08_agent_rd/ACTIVE_EXECUTION_20261110.md),
+[source/reuse gate](docs/08_agent_rd/A0_SOURCE_AND_REUSE_20261110.md),
+[closest work](docs/08_agent_rd/A0_CLOSEST_WORK_20261110.md), the new release
+manifest and ACTIVE local ledger. Deadline15 November2026 18:10 Bangkok.
+
+Continue until real experiments, reproducible artifacts, manuscript and product
+delivery are complete. No routine per-phase approval is needed. Keep final16,
+private CF1 rows, hidden outcomes and every historical source/result/ledger
+unchanged. Two initial technical canaries failed; the third completed one real
+CPU-only call. Six fixed development probes then completed: five task passes
+and one refusal-task failure with only permitted aggregate numbers, not a leak.
+Actual component tests46 PASS, frontend30 tests/type/lint/build PASS. The real
+built-browser -> API -> model -> dossier acceptance passed one complete authored
+question and actual process restart. UI refinement reused that real record with
+no new inference. Protocol/source freeze27 pins PASS; do not edit them. Locked
+evaluation remains NOT_STARTED pending main commit and the one-time phase
+transition. Consult the live checkpoint before launching or resuming anything.
+Do not call author checks independent expert or real-user validation. Preserve
+all failures/fallback/cost. Complete return/reread before exact owned remote
+cleanup, then authorized main commit/push. The historical checkpoint below
+describes the previous closed grant and does not stop this new release.
+
+## Historical LR-CF2P checkpoint
 
 **Current: LR-CF2P complete; owner checkpoint before another phase.**
 CF2-Design is **NO_GO_THIS_MECHANISM** after two formulations and 12 constructed

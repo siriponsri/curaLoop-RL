@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "script": "typecheck",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "npm notice run curaloop-research-web@0.3.0 typecheck\nnpm notice run tsc --noEmit\n"
+    },
+    {
+      "script": "lint",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "npm notice run curaloop-research-web@0.3.0 lint\nnpm notice run eslint src --max-warnings 0\n"
+    },
+    {
+      "script": "test",
+      "exit_code": 0,
+      "stdout": "\n RUN  v4.1.12 C:/Users/User/Desktop/myProject/curaloop-rl/frontend\n\n\n Test Files  4 passed (4)\n      Tests  30 passed (30)\n   Start at  20:13:03\n   Duration  61.34s (transform 2.35s, setup 4.59s, import 5.76s, tests 29.73s, environment 18.48s)\n\n",
+      "stderr": "npm notice run curaloop-research-web@0.3.0 test\nnpm notice run vitest run --maxWorkers=1 --no-file-parallelism\n"
+    },
+    {
+      "script": "build",
+      "exit_code": 0,
+      "stdout": "vite v8.3.5 building client environment for production...\ntransforming...\n✓ 2241 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                               0.65 kB │ gzip:   0.41 kB\ndist/assets/confirmation-CWeYVVtG.css         5.62 kB │ gzip:   1.57 kB\ndist/assets/AgentMission-DZUURY7u.css         6.70 kB │ gzip:   1.86 kB\ndist/assets/index-B01p0t73.css               69.06 kB │ gzip:  14.44 kB\ndist/assets/check-CE9BVudN.js                 0.11 kB │ gzip:   0.13 kB\ndist/assets/chevron-left-CVoJvsRy.js          0.11 kB │ gzip:   0.13 kB\ndist/assets/arrow-right-CTgl-ZkT.js           0.15 kB │ gzip:   0.15 kB\ndist/assets/arrow-up-right-CKQMrs_w.js        0.15 kB │ gzip:   0.15 kB\ndist/assets/clock-3-CeAvV-OU.js               0.15 kB │ gzip:   0.15 kB\ndist/assets/search-CbA-j0kU.js                0.16 kB │ gzip:   0.16 kB\ndist/assets/circle-check-ChbV2eEG.js          0.16 kB │ gzip:   0.16 kB\ndist/assets/play-DOGO4ydK.js                  0.17 kB │ gzip:   0.17 kB\ndist/assets/rotate-ccw-41uolQ3l.js            0.18 kB │ gzip:   0.17 kB\ndist/assets/sliders-horizontal-D8tYCwvl.js    0.41 kB │ gzip:   0.23 kB\ndist/assets/file-check-corner-HJoVCQO2.js     0.46 kB │ gzip:   0.29 kB\ndist/assets/charts-pqtqlgeu.js                1.38 kB │ gzip:   0.49 kB\ndist/assets/Presentation-CjMAkJGO.js          3.60 kB │ gzip:   1.60 kB\ndist/assets/shared-U3o5QxUQ.js                4.83 kB │ gzip:   1.78 kB\ndist/assets/Scenario-bS25tvVQ.js              7.63 kB │ gzip:   2.88 kB\ndist/assets/Evidence-CnK2DD2B.js              8.19 kB │ gzip:   2.55 kB\ndist/assets/Overview-BNMs8nR3.js              9.03 kB │ gzip:   3.07 kB\ndist/assets/Compounds-BWcEnvbG.js             9.47 kB │ gzip:   3.07 kB\ndist/assets/Confirmation-CaLkMNTk.js         12.51 kB │ gzip:   4.03 kB\ndist/assets/Benchmarks-DWXXBVN8.js           12.82 kB │ gzip:   3.84 kB\ndist/assets/AgentMission-DicGoqWd.js         13.75 kB │ gzip:   4.57 kB\ndist/assets/Lab-BG78CwQ7.js                  14.82 kB │ gzip:   4.55 kB\ndist/assets/i18n-CPeEUD9i.js                117.41 kB │ gzip:  32.21 kB\ndist/assets/index-CQaehZab.js               384.57 kB │ gzip: 128.22 kB\ndist/assets/chart-content-DCHwVY1K.js       410.21 kB │ gzip: 116.22 kB\n\n✓ built in 5.22s\n",
+      "stderr": "npm notice run curaloop-research-web@0.3.0 build\nnpm notice run tsc --noEmit && vite build\n"
+    }
+  ]
+}

@@ -1,5 +1,33 @@
 # Agent instructions: CuraLoop-RL
 
+## AgentRD solo continuation released, 10 November 2026
+
+Latest owner instructions supersede the attached planning pack's A0-only,
+mock-first and per-phase approval limits. Complete A0 -> necessary A1/A2 ->
+real matched agent evaluation -> analysis/manuscript and working localhost
+product continuously. Owner selected resource option A: fresh 96 CPU-hours /
+120 elapsed hours, max combined four CPU cores (local one / 1 GiB, dr-train
+one isolated three-core-equivalent model job / 12 GiB / swap0), existing pinned
+Typhoon 2.1 Gemma3 12B only. No new model download, GPU or paid API. Consult
+docs/08_agent_rd/RESOURCE_AND_MODEL_DECISION_20261110.md and the new release
+manifest/ledger before executing. Old accounts remain inactive; preserve ledger
+bytes and original statuses, including the frozen legacy awaiting-input record.
+
+Parent sole writer, no subagents. Preserve final16, private CF1 rows, hidden
+outcomes, all frozen sources/results/negative findings and existing services.
+Use only admitted public CF1 aggregates, necessary pinned literature metadata
+and isolated constructed integrity/recovery cases. No simulator mutation,
+external writes, public deployment or manuscript submission. Developer checks
+are author self-checks, never independent expert or real-user validation.
+Match deterministic, LLM-only, LLM+tools and guarded controls; freeze scoring,
+tasks/protocol and model/prompts before locked evaluation. Keep all attempts,
+failures, fallback and costs. Negative/inconclusive results still require full
+analysis and manuscript; no positive-result hunting. Do not stop at A0/A1 or
+ask routine phase approvals. Report milestones/material blockers. Return and
+reread all owned remote code/data/evidence before exact owned cleanup, then
+authorized main commit/push. Do not remove reused model caches or services.
+The earlier CF2P checkpoint below is historical, not this new track's stop rule.
+
 ## LR-CF2P closeout and owner checkpoint, 10 November 2026
 
 Read docs/06_execution/LR_CF2P_OWNER_CHECKPOINT_20261110.md and the current

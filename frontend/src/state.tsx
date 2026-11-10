@@ -39,7 +39,7 @@ const Context = createContext<Store | null>(null);
 const message = (err: unknown) => err instanceof Error ? err.message : String(err);
 
 export function AppProvider({ children }: { children: ReactNode }) {
-  const initialStudyRoute = useRef(useLocation().pathname === "/confirmation");
+  const initialStudyRoute = useRef(["/confirmation", "/agent"].includes(useLocation().pathname));
   const [run, setRun] = useState<RunView | null>(null),
     [meta, setMeta] = useState<Meta | null>(null),
     [datasets, setDatasets] = useState<DatasetInfo[]>([]),

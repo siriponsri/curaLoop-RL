@@ -258,3 +258,13 @@ tools/build_confirmation_manual_en_v4.py -text whitespace=cr-at-eol
 tests/test_confirmation_study.py -text whitespace=cr-at-eol
 research/manifests/lr_cf2p_* -text whitespace=cr-at-eol
 docs/evidence/lr-cf2p-20261110-v1/** -text whitespace=cr-at-eol
+
+# AgentRD exact protocol, executed source and public trace identities.
+src/curaloop_rd/agent_rd/** -text whitespace=cr-at-eol
+research/agent_rd_eval_v1/** -text whitespace=cr-at-eol
+research/manifests/agent_rd_* -text whitespace=cr-at-eol
+tools/agent_rd_*.py -text whitespace=cr-at-eol
+tests/test_agent_rd*.py -text whitespace=cr-at-eol
+docs/08_agent_rd/** -text whitespace=cr-at-eol
+docs/07_publication/agent-rd-v1/** -text whitespace=cr-at-eol
+frontend/src/__fixtures__/agent-real-development-v3.json -text

@@ -1,8 +1,8 @@
-<h1 align="center">Screening decisions you can audit.</h1>
+<h1 align="center">Pharmaceutical evidence you can trace.</h1>
 
 <p align="center">
-  A local research workbench for sequential pharmaceutical screening.<br>
-  Choose candidates. Wait for feedback. Compare policies. Preserve the evidence.
+  A local workbench for retrospective screening and inspectable evidence missions.<br>
+  Compare methods. Check sources. Follow real model decisions. Preserve the evidence.
 </p>
 
 <p align="center">
@@ -16,11 +16,16 @@
   <a href="docs/EVALUATION.md">Scientific evaluation</a>
 </p>
 
-<p align="center"><strong>Research POC</strong> &nbsp; / &nbsp; Local CPU &nbsp; / &nbsp; Windows first &nbsp; / &nbsp; Offline after installation &nbsp; / &nbsp; MIT code</p>
+<p align="center"><strong>Research POC</strong> &nbsp; / &nbsp; Windows first &nbsp; / &nbsp; Local workspace &nbsp; / &nbsp; Optional CPU model via SSH &nbsp; / &nbsp; MIT code</p>
 
 ---
 
-CuraLoop-RL explores a practical research question: **with a budget for 30 assays
+CuraLoop-RL connects retrospective screening with bounded pharmaceutical evidence
+missions. The new Agent RD workspace records actual model proposals, read-only
+aggregate calculations, source checks and explicit fallback. Its computational
+evaluation is **in progress**; software checks do not establish agent superiority.
+
+The historical screening track asks: **with a budget for 30 assays
 in a library of 1,200 historical compounds, which candidates should be tested
 first?** The workbench connects selection policies to delayed feedback, explicit
 resource accounting and an inspectable public event ledger.
@@ -58,12 +63,23 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 | **Scenario builder** | Configure dataset, seed, policy, budget, capacity, delay, jitter and missingness. |
 | **Research evidence** | Inspect provenance and limitations; export, resume and recover saved campaigns or revisions. |
 | **Confirmation evidence** | Compare recorded CF1 H/coverage tradeoffs across six development campaigns, five budgets and 18 arms; inspect source hashes and download an EN/TH comparison brief. |
+| **Agent RD** | Run a bounded real-model or explicit deterministic evidence mission; inspect actual events, proposals and source checks, then prepare a local EN/TH dossier. Model execution requires an active authorized SSH session. |
 | **Guided presentation** | Explain the screening loop in 5-7 minutes using the same live campaign. |
 | **C Workspace** | Trace cached declared fields to their original sources, review readiness and export local files in EN/TH. |
 
 ## Research and R&D pilot programme
 
-**Current checkpoint, 10 November 2026:** [LR-CF2P is complete](docs/06_execution/LR_CF2P_OWNER_CHECKPOINT_20261110.md).
+**Current work, 10 November 2026:** [AgentRD solo continuation](docs/08_agent_rd/ACTIVE_EXECUTION_20261110.md)
+is authorized continuously through actual evaluation, analysis and manuscript.
+The existing Typhoon 12B model runs on an isolated CPU-only dr-train worker.
+Development already includes unsuccessful canaries and a source-correct answer
+that fails a refusal task; these remain evidence. The [computational protocol](docs/08_agent_rd/COMPUTATIONAL_PROTOCOL_V1.md)
+separates numerical correctness, task completion, abstention and cost. Locked
+evaluation has not started until its explicit freeze receipt exists. Final16,
+private CF1 rows and hidden outcomes remain closed; no paid API or live lab/team
+integration is used. Prior scientific negatives below remain unchanged.
+
+**Historical checkpoint, 10 November 2026:** [LR-CF2P is complete](docs/06_execution/LR_CF2P_OWNER_CHECKPOINT_20261110.md).
 CF2-Design ends with **NO_GO_THIS_MECHANISM**: two generic coverage/feedback
 formulations do not yet supply a distinct identifiable new method. P-CF1 is
 **PASS_INTERNAL_INTEGRATION**: the main app and additive local C Workspace now

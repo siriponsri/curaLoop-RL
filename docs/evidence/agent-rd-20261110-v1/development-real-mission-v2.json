@@ -1,0 +1,37 @@
+{
+  "status": "RETAINED_MODEL_MISSION_NOT_COMPLETED",
+  "scope": "development canary, not locked evaluation",
+  "mission_id": "98f5c4b4-e6ea-454b-97ad-eb31f6ea8662",
+  "state": "ABSTAINED",
+  "released": {
+    "action": "abstain",
+    "reason": "insufficient_evidence",
+    "values": {},
+    "limitations": [
+      "development_only",
+      "aggregate_only"
+    ]
+  },
+  "verification": {
+    "valid": false,
+    "errors": [
+      "EVIDENCE_ID_MISMATCH",
+      "DEVELOPMENT_SCOPE_MISSING",
+      "UNSUPPORTED_KEY:evidence_id",
+      "UNSUPPORTED_KEY:development_only",
+      "UNSUPPORTED_KEY:seed_range_not_ci"
+    ],
+    "verified_values": 2
+  },
+  "fallback": "DETERMINISTIC_ABSTENTION_AFTER_CAP",
+  "cost": {
+    "failed_calls": 0,
+    "model_calls": 3,
+    "model_cpu_seconds": 1016.8126139999995,
+    "model_tokens": 3062,
+    "model_wall_seconds": 342.83073992002755,
+    "paid_cost_usd": 0,
+    "tool_calls": 2
+  },
+  "error": null
+}
