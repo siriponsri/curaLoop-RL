@@ -142,7 +142,7 @@ def cost(analysis, output):
             raise AssertionError("Direct label collision requires a transparent layout revision")
     fig.text(.04, .94, "Observed latency accompanies every completion rate", fontsize=11, color=INK, weight="semibold")
     fig.text(.04, .875, "All attempted units, including abstention and failure. B0 timing is retained.", fontsize=9, color=MUTED)
-    fig.text(.04, .12, "Wall time includes orchestration and SSH wait; model CPU is reported separately in Table 2.", fontsize=8.5, color=MUTED)
+    fig.text(.04, .12, "Recorded unit segments include orchestration/SSH; interrupted work excludes the offline gap.", fontsize=8.5, color=MUTED)
     fig.text(.04, .065, "One CPU runtime and fixed execution order; prompt caching affects latency. No laboratory-cost claim.", fontsize=8.5, color=MUTED)
     fig.text(.04, .015, "Missing units remain in the task-success denominator; no primary inference if the matrix is incomplete.", fontsize=8.5, color=MUTED)
     return save(fig, "03-cost-completion", output, [178, 108])

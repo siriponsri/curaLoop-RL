@@ -38,6 +38,7 @@ def main():
     assert final["status"] in ("COMPLETE", "INCOMPLETE") and final["stop_reason"] != "OPERATIONAL_BATCH_BOUNDARY"
     time.sleep(2)
     commands = [
+        [sys.executable, "tools/agent_rd_recovery_preflight_v1.py", "postrun-v1"],
         [sys.executable, "tools/agent_rd_analyze_v1.py"],
         [sys.executable, "tools/agent_rd_descriptive_report_v1.py"],
         [sys.executable, "tools/agent_rd_verify_results_v1.py", "--write-receipt"],

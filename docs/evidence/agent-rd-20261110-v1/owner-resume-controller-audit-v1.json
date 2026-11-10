@@ -1,0 +1,32 @@
+{
+  "status": "PASS_ORPHAN_ACCOUNTING_AND_RESULT_PRESERVATION",
+  "utc": "2026-11-10T22:54:53.937322+00:00",
+  "completed_units_preserved": 197,
+  "planned": 408,
+  "next_unit": {
+    "unit_id": "L-B06--17023--P",
+    "case_id": "L-B06",
+    "seed": 17023,
+    "system": "P"
+  },
+  "pending_exact_call_reconciliation": {
+    "mission_id": "f8ff9ae2-664b-4d47-b91d-1134074b1bba",
+    "state": "MODEL_REQUESTED",
+    "calls": [
+      {
+        "call_id": "f8ff9ae2664b4d47b91d1134074b1bba-0",
+        "status": "RUNNING"
+      }
+    ]
+  },
+  "last_resource_heartbeat": "2026-11-10T21:01:28.910773+00:00",
+  "resource_file_preserved_sha256": "57c8bc88e3b0c66d3e5657b2d525e032ae7c1216b19daba9a1b6291e483debb6",
+  "observed_cpu_lower_bound_seconds": 343.703125,
+  "retained_cpu_cap_seconds": 6000,
+  "refund_or_budget_reset": false,
+  "exit_cause": "UNKNOWN; stale resource record and absence of local controller processes observed",
+  "owner_resume": true,
+  "frozen_pins_preserved": 27,
+  "new_model_calls": 0,
+  "old_completion_or_resource_record_rewritten": false
+}

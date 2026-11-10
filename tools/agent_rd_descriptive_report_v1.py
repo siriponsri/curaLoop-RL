@@ -76,6 +76,8 @@ def main():
                for u in plan)
 
     units, failure_counts, system_rows = [], Counter(), []
+    recovery_path = PUBLIC / "exact-call-owner-recovery-v1.json"
+    operational_recovery = read(recovery_path) if recovery_path.exists() else None
     for unit in plan:
         identity, case_id = unit["unit_id"], unit["case_id"]
         receipt, trace = results.get(identity), traces.get(identity)
@@ -101,6 +103,7 @@ def main():
         calls = trace["calls"] if trace else []
         successful_calls = sum(c["status"] == "PASS" for c in calls)
         units.append({**unit, "family": cards[case_id]["family"], "disposition": dispositions[identity],
+                      "controller_host_interrupted_timing": bool(operational_recovery and operational_recovery["unit_id"] == identity),
                       "terminal_state": trace["state"] if trace else None,
                       "expected_action": expected, "released_action": report.get("action") if terminal else None,
                       "task_success": observed["success"] if observed else None,
@@ -137,6 +140,9 @@ def main():
         recovery_units = [r for r in found if r["family"] == "recovery"]
         system_rows.append({"system": system, "attempted": len(found), "answer_expected_attempted": len(answers),
                             "tool_calls": sum(r["tool_calls"] for r in found),
+                            "missions_with_model_attempts": sum(r["model_calls"] > 0 for r in found),
+                            "missions_with_successful_provider_responses": sum(r["successful_model_calls"] > 0 for r in found),
+                            "missions_without_model_attempts": sum(r["model_calls"] == 0 for r in found),
                             "required_numeric_key_instances": required_n, "required_numeric_keys_correct": required_correct,
                             "required_numeric_key_correct_rate": rate(required_correct, required_n),
                             "required_scope_code_instances": scope_n, "required_scope_codes_present": scope_found,
@@ -183,6 +189,7 @@ def main():
           "planned": len(plan), "attempted": len(results), "quality": system_rows,
           "matched_ablation": anchor_rows, "anchor_case_ids": anchors, "system_seeds": seed_rows,
           "failure_reasons": failure_rows,
+          "operational_recovery": operational_recovery,
           "notes": ["Task and numeric scores come from frozen scorer; no new scientific score or inferential claim.",
                     "Required-field coverage aggregates the prespecified correct-field contract on attempted answer tasks.",
                     "Malformed rates use successful provider responses as denominator, including malformed outputs.",
@@ -191,6 +198,8 @@ def main():
                     "Unknown failed-call cost and planned unattempted units remain explicit.",
                     "Ablation compares P only on the same eight fixed anchors; no full-matrix extrapolation.",
                     "Tool calls include the trusted preflight read; that read is not an autonomous model action.",
+                    "Source faults supply an unavailable-source observation to the real model arms; B0 handles the fault deterministically. Planned/interrupted units are not relabeled as successful model responses.",
+                    "A documented controller-host-interrupted unit has final-segment unit wall time, excluding pre-abort work/offline gap. Original model receipt CPU/tokens are retained separately.",
                     "No independent expert or actual private-data leakage validation."],
           "source_pins": {"analysis.json": sha(PUBLIC / "analysis-v1/analysis.json"),
                           "locked-progress-v1.json": sha(PUBLIC / "locked-progress-v1.json"),

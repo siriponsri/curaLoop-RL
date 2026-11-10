@@ -138,15 +138,22 @@ There are 16 development and 32 locked author-created interface cards. Locked
 families contain six extraction, six comparison, six interpretation, six
 boundary, four source-fault and four recovery tasks. Interpretation is scored
 through explicit limitation codes, not open-ended narrative quality.
-Source-fault cases delete or alter actual public-copy files. Recovery introduces
-a declared controller exception immediately after a real model response has
-been durably recorded and then resumes that exact call. It does not simulate
-every property of a real machine crash or network outage.
+Source-fault cases delete or alter actual public-copy files. The trusted source
+adapter supplies an unavailable-source observation; model arms still use the
+real model to answer or abstain, while B0 handles that condition deterministically.
+These are controlled source-unavailability tests, not general security or
+private-data refusal validation. Actual model-attempt and successful-response
+mission counts are reported separately.
+Recovery introduces a declared controller exception immediately after a real
+model response has been durably recorded and then resumes that exact call. It
+does not simulate every property of a real machine crash or network outage.
 
 Each locked card crosses B0/B1/B2/P and decoding seeds 17011, 17023 and 17033,
 giving 384 units. Eight preselected anchors also cross A-NOREPAIR and the same
 seeds, giving 24 additional units. The total is 408 planned units, including
-312 real-model missions. The fixed schedule randomizes system order within
+312 planned model-arm missions; actual calls and successful responses are
+reported separately from planned or interrupted units.
+The fixed schedule randomizes system order within
 case/seed blocks using Python seed 20261110. Historical CF1 seeds are distinct
 from these decoding seeds.
 

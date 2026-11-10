@@ -132,6 +132,20 @@ def assemble():
                  f"There were {sum(r['failed_model_calls_unknown_cost'] for r in a['systems'])} failed calls with potentially unknown actual cost. "
                  "Recorded tokens include prompt and generated tokens. These sums are observed research-model work, not the reserved whole-project budget. Local-controller CPU, per-unit wall times "
                  "and full retained resource caps are different quantities. B0 performs real deterministic computation; NA model CPU does not mean zero total compute.")
+    model_mission_text = "; ".join(f"{k}: {quality[k]['missions_with_model_attempts']} missions with a model attempt, "
+                                   f"{quality[k]['missions_with_successful_provider_responses']} with a successful provider response"
+                                   for k in ("B1", "B2", "P", "A-NOREPAIR"))
+    cost_text += (" Actual model participation was " + model_mission_text + ". For constructed source faults, model arms receive an "
+                  "unavailable-source observation and still call the real model; B0 handles that condition deterministically. "
+                  "These are controlled file/source-unavailability tests, not general security or private-data refusal validation. "
+                  "The312 planned model-arm missions are distinct from actual attempt and successful-response counts.")
+    if d.get("operational_recovery"):
+        interrupted = d["operational_recovery"]
+        cost_text += (f" Unit {interrupted['unit_id']} was interrupted by a local controller-host exit. Its exact previously recorded response "
+                      "was reconciled without regeneration. The frozen unit-wall measurement for this unit is the final controller segment, "
+                      "excluding earlier work and the offline gap. Model receipt CPU and token cost remain retained; the full resource reservation "
+                      "of the interrupted controller was not refunded. Latency summaries therefore describe recorded execution segments, "
+                      "not uninterrupted end-to-end user waiting time.")
     discussion = ("The practical decision is whether this application's language interface adds enough value to justify its measured errors and cost. "
                   "B0 is the appropriate reference for tasks whose complete calculation and scope rules are already specified. Its pre-freeze ceiling "
                   "was disclosed and is not evidence of broader reasoning. The B2/P comparison tests this particular source gate and bounded correction "

@@ -6,6 +6,42 @@ and manuscript. Do not stop at A0/A1 or seek another routine phase approval.
 Negative findings still require the complete report/manuscript. No external
 expert/researcher/customer/wet lab is a prerequisite or claimed validation.
 
+## Latest owner resume, 11 November 2026 Bangkok
+
+The owner explicitly resumed the same goal.197/408 unit receipts and traces
+were present and hash-matched their original mission files. The previous local
+controller no longer existed; its last resource record was still RUNNING at
+21:01 UTC on10 November, with343.703125 CPU seconds observed. The exit cause
+is unknown. That raw record is preserved and the orphan booking settled as
+FAIL_ABRUPT_CONTROLLER_EXIT_RESOURCE_RECORD_STALE, retaining its entire6,000
+CPU-second allowance. No old account, frozen result or scientific pin changed.
+
+A fresh read-only probe passed against the same original container/EVALUATION
+phase, with129,410.576471 CPU seconds remaining. The pending first call for
+`L-B06--17023--P` had already completed remotely at21:04:25.779082 UTC. Its
+exact response/request identity was reconciled into the same local mission,
+without generation again. `exact-call-owner-recovery-v1.json` records this.
+The frozen unit-wall field for that unit measures the final controller segment;
+the offline gap and earlier work are excluded. Reports retain this caveat and
+the original full model receipt CPU/tokens, without rewriting the frozen result.
+
+Current booking is **locked-supervisor-host-resume-v1**, started23:08:28 UTC
+10 November /06:08:28 Bangkok11 November. Hidden bounded admin process PID
+**12928** was verified live after its launching PowerShell process had exited.
+It retains2,400 local CPU seconds within the original account, one CPU/1GiB,
+with a two-day local job watchdog bounded by the unchanged overall deadline.
+No automatic network-retry allowance is reset. It resumes the unchanged frozen
+evaluator and invokes reports only after an actual final evaluator disposition.
+
+Inspect the exact PID/command and fresh resource heartbeat, not a stale lock:
+`jobs/locked-supervisor-host-resume-v1/resource.json`,
+`supervisor-host-resume-v1/evaluation.stdout.txt`, stderr and heartbeat. Final
+documents use `postrun-documents-host-resume-v1`. The launcher receipt is
+`owner-background-launch-v1.json`; the older exec sessions below are historical.
+The final evaluator marker remains `evaluation-completion-v1.json`. Do not
+double-launch while the current admin process is live. Original CPU cap,
+phase baseline, deadline, model, prompts, cases, schedule and scoring persist.
+
 ## Latest transport recovery, 10 November 2026 at16:18 UTC
 
 The first evaluator completed52/408 immutable units before an SSH banner

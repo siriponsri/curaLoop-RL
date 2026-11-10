@@ -1,5 +1,26 @@
 # Handoff: active AgentRD solo continuation
 
+## Latest owner resume, 11 November 2026 Bangkok
+
+Current state supersedes the older session details below.197/408 immutable
+unit results were preserved after an abrupt local controller exit. Its stale
+resource record remains unchanged; its whole6,000-second booking was retained
+and settled as a failure. A fresh probe confirmed the original remote phase.
+The interrupted `L-B06--17023--P` response already existed on dr-train and was
+reconciled by exact request ID, not generated again. Reports identify its
+final-segment-only wall measurement and retain original model CPU/tokens.
+
+Current bounded local booking is **locked-supervisor-host-resume-v1**, hidden
+admin **PID12928** (verify PID plus matching command line and heartbeat before
+trusting it). Started23:08:28 UTC10 November /06:08:28 Bangkok11 November,
+2,400 retained CPU seconds, one core/1GiB, unchanged original account/deadline.
+Its launching PowerShell process had exited while the admin/evaluator remained
+live. Do not double-launch or reopen an old booking. Current logs are under
+`supervisor-host-resume-v1`; actual postrun reports will be under
+`postrun-documents-host-resume-v1`. Read the latest active checkpoint, the
+owner-resume audit and exact-call recovery receipt. No frozen science, model
+settings, data roles, phase cap or source bytes changed. The goal remains ACTIVE.
+
 ## Current authority, 10 November 2026
 
 The owner explicitly approved continuous A0 -> A1/necessary A2 -> real matched
