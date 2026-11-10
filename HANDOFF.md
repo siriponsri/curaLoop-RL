@@ -21,8 +21,10 @@ Actual component tests46 PASS, frontend30 tests/type/lint/build PASS. The real
 built-browser -> API -> model -> dossier acceptance passed one complete authored
 question and actual process restart. UI refinement reused that real record with
 no new inference. Protocol/source freeze27 pins PASS; do not edit them. Locked
-evaluation remains NOT_STARTED pending main commit and the one-time phase
-transition. Consult the live checkpoint before launching or resuming anything.
+evaluation is now running under supervisor job `locked-supervisor-v1`, exec
+session68220, after main commit/push064bd3d and one EVALUATION phase transition.
+Do not repeat the phase or run another independent local resource Job while
+the supervisor is RESERVED. Consult the live checkpoint before any launch.
 Do not call author checks independent expert or real-user validation. Preserve
 all failures/fallback/cost. Complete return/reread before exact owned remote
 cleanup, then authorized main commit/push. The historical checkpoint below

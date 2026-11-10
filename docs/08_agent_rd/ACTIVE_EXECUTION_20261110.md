@@ -1,6 +1,6 @@
 # AgentRD active execution checkpoint
 
-Status: **PROTOCOL_FROZEN_READY_FOR_MAIN_COMMIT; LOCKED_EVALUATION_NOT_STARTED**.
+Status: **ACTIVE_LOCKED_EVALUATION_WITH_PARALLEL_LOCAL_DOCUMENT_WORK**.
 Owner authorizes continuous A0 -> A1 -> necessary A2 -> evaluation -> analysis
 and manuscript. Do not stop at A0/A1 or seek another routine phase approval.
 Negative findings still require the complete report/manuscript. No external
@@ -35,11 +35,13 @@ prelaunch attempts are retained; no model attempt ran on the rejected booking.
   change. Actual tiny JSON-format inference passed with GPU VRAM zero.
 - Initial controller prototype, typed aggregate bridge, numerical verifier,
   separate mission store, immutable dossier, additive API and EN/TH page added.
-  **44 actual component/oracle/CF1 regression checks passed**. EN/TH frontend
+  **46 actual component/oracle/CF1 regression checks passed**. EN/TH frontend
   type/lint/build and30 tests PASS. One legacy asynchronous route test initially
   timed out in the full single-core suite, passed isolated reproduction, then
   passed the full suite after an explicit bounded lazy-route wait; all receipts
-  remain. Browser acceptance is in progress, not yet passed at this checkpoint.
+  remain. Actual browser/model/dossier and subsequent saved-record UI acceptance
+  both passed; receipts distinguish the new real call from later zero-inference
+  screenshot refinement.
 - First real development mission exhausted its three-call cap in repeated
   compute actions and abstained. 2,422.747 container CPU seconds, 4,347 recorded
   tokens; retained as a negative canary, not a successful agent task.
@@ -86,14 +88,31 @@ track's protocol, engine/provider/contracts/store/dossier, evaluator/scorer/
 oracle/analysis/cases, supervisor, runtime worker/transport, freezer or
 `.gitattributes`. Read the actual freeze manifest for the exact list.
 
-No locked model call or EVALUATION phase transition has occurred yet. Next:
-publish the actual example, audit/stage/commit the freeze on main, transition
-the remote phase once, then run the fixed evaluation via the local supervisor.
+Freeze, actual public example and built workbench were committed and pushed
+to main as **064bd3d** before any locked model call. The remote EVALUATION phase
+was entered once at2026-11-10T13:24:36.107549Z, CPU baseline8191.85586 seconds,
+new phase cap201,600 seconds. Do not repeat/reset that transition.
+
+`locked-supervisor-v1` is now running, exec session68220. Its booking retains
+6,000 implementation CPU seconds; all local orchestration/document children
+share the same one-core/1GiB Job. Do not start another independent local Job
+while it is RESERVED. Read `supervisor-v1/evaluation.stdout.txt`, stderr and
+`locked-evaluation-v1/progress.json`; do not relaunch completed unit IDs.
+The public fixed matrix is408 units; process completion is not study success.
+
 The supervisor keeps evaluation orchestration and registered document helpers
 inside the same one-core/1GiB Windows Job, allowing local guide preparation
 while the three-core remote model runs. Its internal queue is not an agent
 tool, public service or extra CPU/memory allowance. Do not launch another
 independent local resource job while the supervisor booking is RESERVED.
+
+The supervisor's one-time PDF operation marker succeeded, expected two PDF
+artifacts (guide and later manuscript). Do not run another marker for this
+same operation. Bundled document dependencies were located before authoring.
+The actual-screenshot English guide is built, all seven rendered pages were
+visually inspected, and `manual-visual-review-v1.json` records author self-QA.
+It is linked from README. Original evidence/cost and historical negatives are
+unchanged. Manuscript/figures await actual locked data and remain unfinished.
 
 ## Pre-freeze study artifacts
 
@@ -128,8 +147,8 @@ Docker CLI initially failed under address-space limits before any remote root
 creation. The working control transport uses the already-authorized Docker
 Unix API directly, without increasing permissions or the total memory ceiling.
 A watchdog inside the same container cgroup enforces phase CPU/deadline. Phase
-is currently DEVELOPMENT; do not re-enter/reset it. Only after actual freeze
-may the parent advance once to EVALUATION.
+is currently EVALUATION, entered once after the committed freeze. Do not
+re-enter/reset it or recreate an old runtime root.
 
 Remote `worker.py` is original bootstrap; `worker-v2.py` adds a serialized,
 cumulative 600-second host-client guard. Its source/hash is versioned and retained.
@@ -139,16 +158,18 @@ No private rows, final16 or hidden outcomes are mounted or read.
 
 ## Next concrete work
 
-1. Finish the already running real browser acceptance; preserve all outcomes,
-   actual screenshots and any failure. No duplicate canary/probe/model job.
-2. Run component check v4 for the operator-session deadline/config change and
-   remaining scorer/API conformance. Repair only supported technical issues;
-   preserve legacy simulator/Confirmation navigation and database schema.
-3. Write/finalize a source-derived case manifest, independent CSV oracle,
-   frozen scoring, model/config/prompt/code pins and fair controls. No gold in
-   model context/tools. No LLM self-judge. No implicit biological independence.
-4. Run the complete predeclared locked comparisons within the existing account;
-   report negative/tied/inconclusive effects, all failure/fallback/cost cells.
+1. Monitor the already running fixed evaluator under supervisor session68220.
+   Source-check and task failures are actual data, not grounds for prompt/scoring
+   edits. Preserve every planned unit, cap/fallback and unknown failed-call cost.
+2. Complete figure-source preparation and manuscript methods while the model
+   runs. Use the supervisor's registered helper queue for local computation;
+   no second independent local Job while its booking is RESERVED.
+3. Preserve the now-frozen protocol, cases, schedule, oracle, scorer, analysis,
+   engine/prompts and runtime. No gold in model context/tools. No LLM judge or
+   implied biological independence. B0's known pre-freeze ceiling is disclosed.
+4. After complete or resource-stopped execution, run the frozen analysis and
+   recount the immutable public traces; produce full negative/tied/inconclusive
+   results as appropriate. An incomplete matrix is not a superiority result.
 5. Produce analysis, standalone figures/tables, English manuscript and realistic
    publication-readiness assessment, actual screenshots/operator guide, full
    remote return/reread before exact owned cleanup, final preservation/budget
@@ -159,3 +180,32 @@ nonredundant ablation/sample-cost refinement is fixed before locked execution
 and documented transparently, never selected from locked outcomes. No larger
 model, GPU, paid provider, new biological dataset, external write, public deploy
 or manuscript submission is released by unused budget.
+
+## Document/figure continuation notes
+
+- `tools/agent_rd_documents_v1.py` currently creates the seven-page guide and
+  renders it. Guide construction, render and all-page visual review PASS. Do
+  not rerun its one-time creation against the existing final PDF. Append the
+  manuscript mode only after actual locked analysis; it is not yet implemented.
+- PDF operation marker `pdf-marker-20261110` succeeded once for two final
+  documents. The guide is the first; manuscript PDF is the second. Do not
+  repeat the marker for this same authoring operation.
+- Scientific-visual skill/core references were read, including governing Astra
+  grammar/tokens, style/form/quality contracts and top reference set. Use the
+  owner's graphite/copper accent, meaningful denominators, all baselines,
+  actual uncertainty only, final-size/grayscale/source checks and standalone SVG.
+- `tools/agent_rd_visual_spec_v1.py` materialized a no-results figure plan and
+  selected form-matched style references. Its first render failed because the
+  bundled runtime lacks Matplotlib. That failure is retained. A registered
+  helper is installing pinned Matplotlib3.10.8 and dependencies only under
+  `.local/agent-rd-run-20261110-v1/plotdeps-v1`; project/model environments stay
+  unchanged. PyPI identity was checked. No model or molecular data download.
+- Plot dependency repair passed; pinned dependencies exist only in the owned
+  document target. v1 diagram touched a neighboring border; it is retained.
+  The corrected `figures-v2/01-control-flow.svg/png` passed actual color and
+  grayscale self-review. These are protocol-derived diagrams, not numeric
+  results. `python-environment-observed-v1.json` records the current project
+  versions during execution and does not pretend to be a pre-run whole-env seal.
+- Pending: actual result figures/tables, complete English manuscript/PDF,
+  resource/source/claim audit, full exact remote return/reread and cleanup,
+  budget closure and final main commit/push. The goal remains ACTIVE.

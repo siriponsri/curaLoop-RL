@@ -8,6 +8,8 @@
 <p align="center">
   <a href="docs/manual/CuraLoop-RL-Dashboard-Guide-EN-v3.pdf"><strong>English user manual (PDF)</strong></a> &nbsp;·&nbsp;
   <a href="docs/manual/CuraLoop-RL-Confirmation-Evidence-Guide-EN-v4.pdf"><strong>Confirmation evidence guide (PDF)</strong></a> &nbsp;·&nbsp;
+  <a href="docs/manual/CuraLoop-AgentRD-Guide-EN-v1.pdf"><strong>Agent RD guide (PDF)</strong></a> &nbsp;·&nbsp;
+  <a href="docs/evidence/agent-rd-20261110-v1/README.md">Actual agent evidence</a> &nbsp;·&nbsp;
   <a href="docs/evidence/lr-cf2p-20261110-v1/README.md">CF1 integration gallery</a> &nbsp;·&nbsp;
   <a href="docs/evidence/four-screen-dashboard-20261108-v1/README.md">EN/TH screen gallery</a> &nbsp;·&nbsp;
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
@@ -75,7 +77,11 @@ The existing Typhoon 12B model runs on an isolated CPU-only dr-train worker.
 Development already includes unsuccessful canaries and a source-correct answer
 that fails a refusal task; these remain evidence. The [computational protocol](docs/08_agent_rd/COMPUTATIONAL_PROTOCOL_V1.md)
 separates numerical correctness, task completion, abstention and cost. Locked
-evaluation has not started until its explicit freeze receipt exists. Final16,
+evaluation is running from the committed source/protocol freeze at `064bd3d`.
+The seven-page [Agent RD guide](docs/manual/CuraLoop-AgentRD-Guide-EN-v1.pdf)
+uses actual served-application captures, with all rendered pages reviewed.
+The [recorded model dossier](docs/evidence/agent-rd-20261110-v1/example-dossier-v1/report-en.html)
+remains available independently of a live model session. Final16,
 private CF1 rows and hidden outcomes remain closed; no paid API or live lab/team
 integration is used. Prior scientific negatives below remain unchanged.
 

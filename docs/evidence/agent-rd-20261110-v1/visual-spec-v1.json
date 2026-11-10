@@ -1,0 +1,84 @@
+{
+  "status": "DESIGN_SPEC_NO_EXPERIMENT_VALUES",
+  "series_order": [
+    "B0",
+    "B1",
+    "B2",
+    "P"
+  ],
+  "focal": "P",
+  "palette": {
+    "ink": "#29282b",
+    "baseline": "#777777",
+    "focal": "#a6492d",
+    "background": "#ffffff"
+  },
+  "palette_reason": "Owner-approved graphite/copper brand; replaces the skill's default green accent",
+  "global_references": [
+    "GPT-6 Astra governing system-card grammar: tables1/2/4/6/7/8, figures1/2/5/6/9/12/13/14/17/19",
+    "Append-only context: aligned near-monochrome workflow with one accent",
+    "Professional benchmark table: sparse rules, exact values, consistent model order"
+  ],
+  "form_matched_retrieval": [
+    {
+      "query": "workflow architecture diagram append only context",
+      "selector_output": "| Score | ID | Visual | Type | Tier | Link | Direct asset |\n|---:|---|---|---|---:|---|---|\n| 126.0 | OAI-VIS-005 | Append-only context | Context-management diagram | 1 | [source](https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/#avoid-context-bloat) | [asset](https://images.ctfassets.net/kftzwdyauwt9/4Yc2D5KqZejneZPTlOtA39/9799e64403c51e214ca4c53d9c8b40ed/Append-only_context_light_desktop.svg?w=3840&q=80) |\n| 89.0 | OAI-VIS-052 | MLE-bench evaluation workflow | Evaluation workflow diagram | 1 | [source](https://deploymentsafety.openai.com/data/eval-sets/gpt-5/assets/mle.png) | [asset](https://deploymentsafety.openai.com/data/eval-sets/gpt-5/assets/mle.png) |\n| 80.0 | OAI-VIS-010 | Needle-in-a-haystack retrieval across context length and position | Heatmap | 1 | [source](https://openai.com/index/gpt-4-1/#evaluations) | — |\n| 77.0 | OAI-VIS-106 | How our agentic harness streamlines repeated work | Workflow comparison diagram | 1 | [source](https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency/#how-our-agentic-harness-streamlines-repeated-work) | [asset](https://images.ctfassets.net/kftzwdyauwt9/4ufC2p4FrIJYDfnieoZ25Y/932a6d7e4931d64792f35f96a3afb1b0/figure3-light-desktop.svg?w=3840&q=90) |\n"
+    },
+    {
+      "query": "accuracy uncertainty horizontal model comparison",
+      "selector_output": "| Score | ID | Visual | Type | Tier | Link | Direct asset |\n|---:|---|---|---|---:|---|---|\n| 94.0 | OAI-VIS-002 | Agents’ Last Exam | Score–latency / model comparison | 1 | [source](https://openai.com/index/gpt-5-6/#efficient-by-default-maximum-performance-on-demand) | — |\n| 92.0 | OAI-VIS-001 | Jalapeño widens the lead at previous-best TBT | Pareto-frontier comparison chart | 1 | [source](https://openai.com/index/jalapeno-first-results/#chart-31bFDtnrbeUgGQ7fLMZRX4) | — |\n| 83.0 | OAI-VIS-087 | Hallucination and factuality comparison | Model comparison chart | 1 | [source](https://deploymentsafety.openai.com/data/eval-sets/gpt-5-6/assets/images/image47.png) | [asset](https://deploymentsafety.openai.com/data/eval-sets/gpt-5-6/assets/images/image47.png) |\n| 80.0 | OAI-VIS-003 | Artificial Analysis Intelligence Index v4.1 | Score–cost–time comparison | 1 | [source](https://openai.com/index/gpt-5-6/#efficient-by-default-maximum-performance-on-demand) | — |\n"
+    },
+    {
+      "query": "score latency inference cost scatter",
+      "selector_output": "| Score | ID | Visual | Type | Tier | Link | Direct asset |\n|---:|---|---|---|---:|---|---|\n| 102.0 | OAI-VIS-002 | Agents’ Last Exam | Score–latency / model comparison | 1 | [source](https://openai.com/index/gpt-5-6/#efficient-by-default-maximum-performance-on-demand) | — |\n| 95.0 | OAI-VIS-003 | Artificial Analysis Intelligence Index v4.1 | Score–cost–time comparison | 1 | [source](https://openai.com/index/gpt-5-6/#efficient-by-default-maximum-performance-on-demand) | — |\n| 89.0 | OAI-VIS-089 | Hallucination rate versus latency | Performance–latency scatter | 1 | [source](https://deploymentsafety.openai.com/data/eval-sets/gpt-5-6/assets/images/image37.png) | [asset](https://deploymentsafety.openai.com/data/eval-sets/gpt-5-6/assets/images/image37.png) |\n| 87.0 | OAI-VIS-009 | SEC-Bench Pro | Cost–performance chart | 1 | [source](https://deploymentsafety.openai.com/data/eval-sets/gpt-5-6-preview/assets/images/image21.png) | [asset](https://deploymentsafety.openai.com/data/eval-sets/gpt-5-6-preview/assets/images/image21.png) |\n"
+    }
+  ],
+  "figures": [
+    {
+      "id": "01-control-flow",
+      "claim": "Matched B2/P input and tool flow differ at the source gate and bounded repair",
+      "form": "minimal workflow diagram",
+      "width_mm": 178,
+      "height_mm": 122,
+      "source": "frozen protocol and engine",
+      "numeric_results": false
+    },
+    {
+      "id": "02-task-completion",
+      "claim": "Show actual task completion and every required baseline, including a strong deterministic reference",
+      "form": "horizontal dots with actual three-decoding-seed range; companion family matrix only if legible",
+      "source": "actual locked receipts after complete analysis",
+      "metric": "task success",
+      "unit": "% of32 authored cases per decoding seed",
+      "direction": "higher is better",
+      "uncertainty": "three-seed min/max, not a biological CI",
+      "width_mm": 178,
+      "height_mm": 108
+    },
+    {
+      "id": "03-cost-completion",
+      "claim": "Show observed completion against actual runtime without hiding deterministic cost",
+      "form": "direct-labeled scatter; log latency only if its range warrants it; no lines between model families",
+      "source": "actual locked receipts",
+      "x": "median unit wall seconds",
+      "y": "all-planned task success %",
+      "timing_scope": "single CPU runtime/order/prompt-cache conditions; all attempt costs retained",
+      "width_mm": 178,
+      "height_mm": 108
+    }
+  ],
+  "tables": [
+    "Completion, abstention, fallback, malformed response and numeric errors with actual denominators",
+    "Actual compute/calls/tokens/wall; unknown failed-call costs are not zero",
+    "Eight matched no-repair anchors, compared with P on the same cases only"
+  ],
+  "rules": [
+    "No fabricated missing values or intervals",
+    "No baseline omission if P loses",
+    "No biological independence claim",
+    "No significance stars or Pareto claim without a computed estimand",
+    "SVG plus300dpi PNG and editable code",
+    "At least8.5pt text at final size; inspect color, grayscale, clipping and manuscript insertion"
+  ],
+  "freeze_sha256": "5b70e5f1454e9062441b3e292a50fab45f9aebe73ed7994971c6a88de2ad4c8e"
+}

@@ -38,6 +38,12 @@ Final16/private CF1 rows/hidden outcomes remain closed.
 [Thai recorded events](screens-v2/05-agent-translated-trail-th.png) ·
 [Mobile result](screens-v2/06-agent-mobile-result-th.png)
 
+[Seven-page English guide](../../manual/CuraLoop-AgentRD-Guide-EN-v1.pdf) ·
+[Rendered-page self-review](manual-visual-review-v1.json) ·
+[Exact original real mission](example-mission-v1.json) ·
+[Actual EN dossier](example-dossier-v1/report-en.html) ·
+[Actual TH dossier](example-dossier-v1/report-th.html)
+
 ## Locked study
 
 [Protocol/source freeze](protocol-freeze-v1.json) precedes locked model calls.
@@ -57,3 +63,17 @@ no unrun result or model effect is filled in here.
 [Live checkpoint](../../08_agent_rd/ACTIVE_EXECUTION_20261110.md) ·
 [Source/reuse](../../08_agent_rd/A0_SOURCE_AND_REUSE_20261110.md) ·
 [Targeted related work](../../08_agent_rd/A0_CLOSEST_WORK_20261110.md)
+
+## Source-derived control diagram
+
+![Fixed comparison design, with source gate and bounded repair](figures-v2/01-control-flow.png)
+
+[Editable SVG](figures-v2/01-control-flow.svg) ·
+[Color/grayscale author review](control-flow-visual-review-v2.json) ·
+[Visual specification](visual-spec-v1.json)
+
+This is a diagram of the frozen implementation, not an experimental result.
+The first layout is retained in `figures-v1`; the revised layout separates the
+repair label from the neighboring node. Diagram/guide dependencies are isolated
+from the running model/evaluator environment. Quantitative figures await the
+actual fixed-matrix analysis.
