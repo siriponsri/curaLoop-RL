@@ -66,6 +66,7 @@ def assemble():
     assert read(TASK / "supervisor-v1/receipts/pdf-marker-20261110.json")["exit_code"] == 0
     assert (PUBLIC / "result-figures-build-v1.json").is_file()
     s = {r["system"]: r for r in a["systems"]}
+    quality = {r["system"]: r for r in d["quality"]}
     p = a["primary"]
     ci = p["exploratory_paired_case_interval_95_pp"]
     complete = a["status"] == "COMPLETE"
@@ -95,7 +96,7 @@ def assemble():
     quality_rows = [(k, fraction(s[k]["appropriate_abstentions"], s[k]["abstention_expected_attempted"]),
                      fraction(s[k]["overrefusals"], s[k]["answer_expected_attempted"]), str(s[k]["deterministic_abstention_fallbacks"]),
                      fraction(s[k]["released_numeric_errors"], s[k]["released_numeric_claims"])) for k in s]
-    cost_rows = [(k, count(s[k]["model_calls"]), count(s[k]["recorded_model_tokens"]),
+    cost_rows = [(k, count(s[k]["model_calls"]) + " / " + count(quality[k]["tool_calls"]), count(s[k]["recorded_model_tokens"]),
                   f"{s[k]['known_model_cpu_seconds'] / 3600:.3f}" if k != "B0" else "NA (no model)",
                   "NA" if s[k]["median_unit_wall_seconds"] is None else f"{s[k]['median_unit_wall_seconds']:.3f}",
                   str(s[k]["failed_model_calls_unknown_cost"])) for k in s]
@@ -106,6 +107,15 @@ def assemble():
     ablation_rows = [(r["system"], str(r["attempted"]) + "/" + str(r["planned"]),
                       fraction(r["task_successes"], r["planned"]), str(r["model_calls"]),
                       f"{r['known_model_cpu_seconds'] / 3600:.3f}") for r in d["matched_ablation"]]
+    families = list(dict.fromkeys(r["family"] for r in a["families"]))
+    family_rows = []
+    for family in families:
+        selected = {r["system"]: r for r in a["families"] if r["family"] == family}
+        family_rows.append((family.replace("_", " "), *(fraction(selected[k]["successes"], selected[k]["planned"])
+                                                       for k in ("B0", "B1", "B2", "P"))))
+    numeric_rows = [(k, fraction(s[k]["raw_numeric_errors"], s[k]["raw_numeric_claims"]),
+                     fraction(s[k]["released_numeric_errors"], s[k]["released_numeric_claims"]),
+                     fraction(s[k]["citations_correct"], s[k]["citations_present"]), str(s[k]["execution_failed"])) for k in s]
     seed_text = "; ".join(f"seed {r['seed']}: {r['difference_pp']:+.2f} pp" for r in a["seed_differences"])
     q_p = next(r for r in d["quality"] if r["system"] == "P")
     findings = (f"The guarded arm produced {s['P']['successes']} successful tasks among {s['P']['attempted']} attempted units "
@@ -150,14 +160,19 @@ def assemble():
             "\n\nTable 2. Appropriate abstention, overrefusal, deterministic abstention fallback and released numerical error. Empty claim denominators are NA.\n\n" +
             table_md(["System", "Appropriate abstention", "Overrefusal", "Fallback n", "Released errors / claims"], quality_rows) +
             "\n\n### Computational cost\n\n" + cost_text +
-            "\n\nTable 3. Actual observed cost. Model CPU is a known lower bound if a failed call has unknown cost; wall time includes orchestration and SSH wait. API charges are US$0 throughout.\n\n" +
-            table_md(["System", "Calls", "Tokens", "Model CPU h", "Median unit wall s", "Failed calls, cost unknown"], cost_rows) +
+            "\n\nTable 3. Actual observed cost. Model/tool call counts are separate counts, not a rate. Tool calls include the trusted preflight read, which is not an autonomous model action. Model CPU is a known lower bound if a failed call has unknown cost; wall time includes orchestration and SSH wait. API charges are US$0 throughout.\n\n" +
+            table_md(["System", "Model / tool calls", "Tokens", "Model CPU h", "Median unit wall s", "Failed calls, cost unknown"], cost_rows) +
             "\n\n![Figure 3. Task completion and observed median unit latency. B0's actual timing remains visible; CPU is a separate measure.](../evidence/agent-rd-20261110-v1/result-figures-v1/03-cost-completion.png)\n\n"
             "### Task completeness and matched no-repair anchors\n\n"
             "Table 4. Descriptive completeness. Rates use attempted answer-task key/code instances and successful provider responses. Malformed means unparsable JSON or an invalid values-map type under the frozen scorer, not every possible action-schema failure. A source-valid task failure is not a numeric error by definition.\n\n" +
             table_md(["System", "Malformed / responses", "Correct required keys", "Required scope codes", "Task failures / valid checks"], detail_rows) +
             "\n\nTable 5. P and A-NOREPAIR on exactly the same eight fixed anchors and three seeds. Descriptive only, with no full-matrix extrapolation.\n\n" +
             table_md(["System", "Attempted / planned", "Success / planned", "Calls", "Known model CPU h"], ablation_rows) +
+            "\n\n### Family results and raw-versus-released fidelity\n\n"
+            "Table 6. Task success by prespecified family, with all planned family units retained. These are authored task types, not independent biological families.\n\n" +
+            table_md(["Task family", "B0", "B1", "B2", "P"], family_rows) +
+            "\n\nTable 7. Raw proposal errors, released numerical errors, citation correctness and failed execution units. Numerical rates use parseable claim instances; malformed responses are separately retained in Table 4. Correct citations alone do not establish task completion.\n\n" +
+            table_md(["System", "Raw errors / claims", "Released errors / claims", "Correct / present citations", "Failed units"], numeric_rows) +
             "\n\n### Localhost engineering acceptance\n\n"
             "The actual UI-to-API-to-model acceptance mission used two real calls, 2,054 recorded tokens and 904.552 model CPU seconds. "
             "It passed its separately authored comparison task and explicit five-file dossier reread. An actual API restart recovered the same completed "
@@ -238,6 +253,8 @@ def pdf_from_markdown(content):
             continue
         paragraph = []
         while i < len(lines) and lines[i].strip() and not lines[i].startswith(("#", "|", "![")):
+            if paragraph and re.match(r"^\d+\.\s", lines[i]):
+                break
             paragraph.append(lines[i])
             i += 1
         story.append(Paragraph(inline(" ".join(paragraph)), styles["PaperBody"]))

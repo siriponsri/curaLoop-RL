@@ -21,10 +21,22 @@ Actual component tests46 PASS, frontend30 tests/type/lint/build PASS. The real
 built-browser -> API -> model -> dossier acceptance passed one complete authored
 question and actual process restart. UI refinement reused that real record with
 no new inference. Protocol/source freeze27 pins PASS; do not edit them. Locked
-evaluation is now running under supervisor job `locked-supervisor-v1`, exec
-session68220, after main commit/push064bd3d and one EVALUATION phase transition.
+evaluation first ran under `locked-supervisor-v1`, session68220, after main
+commit/push064bd3d and one EVALUATION phase transition. At52/408 units an SSH
+banner timeout occurred in a pre-unit status check. No next model call had
+started. Only the waiting document child was stopped after evaluator exit;
+the original job settled FAIL, retaining every result/log and its full allowance.
+A read-only reconnect confirmed the same container/phase,174,442.812247 CPU
+seconds remaining and all27 pins unchanged. Targeted helper checks PASS.
+Current booking is **locked-supervisor-recovery-v1**, exec session**3321**,
+running the unchanged frozen evaluator from the existing schedule/store. It
+skips completed units; no model replacement, trial retry or clock/phase reset.
+The new wrapper starts reports only after evaluator exit and permits at most
+three invocations for recognized pre-unit status-network failures. Current logs
+are in `.local/agent-rd-run-20261110-v1/supervisor-recovery-v1`, followed by
+`postrun-documents-recovery-v1`; final exit marker is `evaluation-completion-v1.json`.
 Do not repeat the phase or run another independent local resource Job while
-the supervisor is RESERVED. Consult the live checkpoint before any launch.
+this supervisor is RESERVED. Consult the live checkpoint before any launch.
 Do not call author checks independent expert or real-user validation. Preserve
 all failures/fallback/cost. Complete return/reread before exact owned remote
 cleanup, then authorized main commit/push. The historical checkpoint below

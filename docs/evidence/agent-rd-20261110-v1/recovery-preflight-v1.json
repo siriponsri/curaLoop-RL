@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "tools/agent_rd_descriptive_report_v1.py",
+        "tools/agent_rd_document_dispatch_v1.py",
+        "tools/agent_rd_manuscript_v1.py",
+        "tools/agent_rd_postrun_documents_v1.py",
+        "tools/agent_rd_result_figures_v1.py",
+        "tools/agent_rd_return_remote_program_v1.py",
+        "tools/agent_rd_return_v1.py",
+        "tools/agent_rd_verify_results_v1.py",
+        "tools/agent_rd_closeout_v1.py",
+        "tools/agent_rd_ssh_recovery_v1.py",
+        "tools/agent_rd_supervisor_recovery_v1.py",
+        "tools/agent_rd_recovery_preflight_v1.py"
+      ],
+      "exit_code": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.venv\\Scripts\\python.exe",
+        "-m",
+        "py_compile",
+        "tools/agent_rd_descriptive_report_v1.py",
+        "tools/agent_rd_document_dispatch_v1.py",
+        "tools/agent_rd_manuscript_v1.py",
+        "tools/agent_rd_postrun_documents_v1.py",
+        "tools/agent_rd_result_figures_v1.py",
+        "tools/agent_rd_return_remote_program_v1.py",
+        "tools/agent_rd_return_v1.py",
+        "tools/agent_rd_verify_results_v1.py",
+        "tools/agent_rd_closeout_v1.py",
+        "tools/agent_rd_ssh_recovery_v1.py",
+        "tools/agent_rd_supervisor_recovery_v1.py",
+        "tools/agent_rd_recovery_preflight_v1.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "source_pins": {
+    "tools/agent_rd_descriptive_report_v1.py": "c73f080483199b323726e4a28e440486f5ad02111eeda8f9047ee0638597382e",
+    "tools/agent_rd_document_dispatch_v1.py": "af18abf390d1fea161a0d948820d831a82c987962a204b16ec03c28ae2e94c75",
+    "tools/agent_rd_manuscript_v1.py": "0d8559706399919900c94fc8fd48f731cf3af4b3e7b680ac3f40dbb9951c0b40",
+    "tools/agent_rd_postrun_documents_v1.py": "d55c4322890ae337272a883c152940ab8f38981103ffd8079341ed00952c549e",
+    "tools/agent_rd_result_figures_v1.py": "bee4ee99a9fc2dcb1ab3a394d8c3130d47fa465acd5a07b6483563206abe935f",
+    "tools/agent_rd_return_remote_program_v1.py": "206e9b9b236796268c18cd162b9ebbdcc46ae5e26f7bf1e6d9937c4ab079260d",
+    "tools/agent_rd_return_v1.py": "1f35e52f5b30ae54b3f0aaf42f256092edb4f0b4286be58b1de216a8fc8062b6",
+    "tools/agent_rd_verify_results_v1.py": "b4f25ecfb2094f6bac2f646f9e7632bd5680ca659b993ec2a3ec7dddcac6400b",
+    "tools/agent_rd_closeout_v1.py": "e61a9aacb2206637545c1b22b050509aa7452d0b5f5836e31f90b0165898a872",
+    "tools/agent_rd_ssh_recovery_v1.py": "58991f931cb4230f20d22222e30a1cb566ff3a58a28e0f7cdeb80ab0af167aa1",
+    "tools/agent_rd_supervisor_recovery_v1.py": "14ae72da372aaa7e0e6b114d509c58e53006481cc022907010b7d1455a622d1e",
+    "tools/agent_rd_recovery_preflight_v1.py": "84f6a6a20fdddb9fbbfac3fef1c57537ad558d52917ac351629aebaf10a3eb4d"
+  },
+  "frozen_27_pins_preserved": true,
+  "new_model_calls": 0,
+  "phase_or_deadline_reset": false
+}

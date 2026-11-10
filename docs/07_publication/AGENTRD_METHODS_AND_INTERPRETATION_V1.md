@@ -84,7 +84,9 @@ experiment or user study is part of this work.
 ### Workbench and agent controller
 
 The workbench adds a bilingual EN/TH mission page and API to the existing
-localhost React/FastAPI application. A closed mission specification selects a
+localhost React/FastAPI application. EN/TH describes interface and dossier
+localization; the locked questions are English, so no comparative Thai-language
+agent-performance result is claimed. A closed mission specification selects a
 campaign, ordered methods and budgets. It cannot supply arbitrary paths,
 providers, code or external write actions. A trusted controller authenticates
 and reads the source packet before generation. This preflight read is not a

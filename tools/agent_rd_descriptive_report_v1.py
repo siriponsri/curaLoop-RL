@@ -120,6 +120,7 @@ def main():
                       "unit_wall_seconds": receipt["unit_wall_seconds"] if receipt else None,
                       "known_model_cpu_seconds": observed["cost"]["model_cpu_seconds"] if observed else None,
                       "model_calls": observed["cost"]["model_calls"] if observed else None,
+                      "tool_calls": observed["cost"]["tool_calls"] if observed else None,
                       "failed_model_calls_unknown_cost": observed["cost"]["failed_calls"] if observed else None,
                       "recorded_tokens": observed["cost"]["model_tokens"] if observed else None})
     for system in ORDER:
@@ -135,6 +136,7 @@ def main():
         checked_fail = sum(r["source_check_valid"] and not r["task_success"] for r in found)
         recovery_units = [r for r in found if r["family"] == "recovery"]
         system_rows.append({"system": system, "attempted": len(found), "answer_expected_attempted": len(answers),
+                            "tool_calls": sum(r["tool_calls"] for r in found),
                             "required_numeric_key_instances": required_n, "required_numeric_keys_correct": required_correct,
                             "required_numeric_key_correct_rate": rate(required_correct, required_n),
                             "required_scope_code_instances": scope_n, "required_scope_codes_present": scope_found,
@@ -188,6 +190,7 @@ def main():
                     "Empty-claim numerical error is NA, not a favorable zero.",
                     "Unknown failed-call cost and planned unattempted units remain explicit.",
                     "Ablation compares P only on the same eight fixed anchors; no full-matrix extrapolation.",
+                    "Tool calls include the trusted preflight read; that read is not an autonomous model action.",
                     "No independent expert or actual private-data leakage validation."],
           "source_pins": {"analysis.json": sha(PUBLIC / "analysis-v1/analysis.json"),
                           "locked-progress-v1.json": sha(PUBLIC / "locked-progress-v1.json"),

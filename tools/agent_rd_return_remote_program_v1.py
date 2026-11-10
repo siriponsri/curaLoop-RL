@@ -61,7 +61,7 @@ def write(path, value):
 
 def validate_root():
     assert ROOT.is_absolute() and ROOT.parent == Path("/home/chaw/curaloop-tasks")
-    assert ROOT.is_dir() and not ROOT.is_symlink() and ROOT.resolve() == ROOT
+    assert ROOT.is_dir() and not ROOT.is_symlink() and not ROOT.is_mount() and ROOT.resolve() == ROOT
     assert ARCHIVE.parent == ROOT.parent and ARCHIVE.name == ROOT.name + "-return-v1.tar.gz"
     assert not ARCHIVE.is_symlink()
     assert digest(ROOT / "worker-v2.py") == WORKER_SHA

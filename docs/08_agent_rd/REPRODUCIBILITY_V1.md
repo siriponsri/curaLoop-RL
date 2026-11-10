@@ -14,7 +14,11 @@ It pins 27 code/input/protocol files. Later commits add actual receipts, author
 documentation, figures and analysis/reporting helpers while retaining those
 bytes. The manifest identifies the exact executed remote `worker-v2.py`; the
 later formatted local worker source is a separate identity. Do not assume they
-are byte-identical. The private full-return audit verifies both versions.
+are byte-identical. The full-return audit verifies both versions, and the exact
+authored remote programs are published under `executed-runtime-source-v1/`
+beside the evidence, excluding weights and private operational archives.
+The source artifacts append `.txt` to their original `.py` names to mark them
+as verbatim evidence rather than auto-imported modules; their bytes are unchanged.
 
 On Windows, preserve the committed bytes when cloning:
 

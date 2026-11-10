@@ -1,10 +1,43 @@
 # AgentRD active execution checkpoint
 
-Status: **ACTIVE_LOCKED_EVALUATION_WITH_PARALLEL_LOCAL_DOCUMENT_WORK**.
+Status: **ACTIVE_LOCKED_EVALUATION_OPERATIONAL_RECOVERY**.
 Owner authorizes continuous A0 -> A1 -> necessary A2 -> evaluation -> analysis
 and manuscript. Do not stop at A0/A1 or seek another routine phase approval.
 Negative findings still require the complete report/manuscript. No external
 expert/researcher/customer/wet lab is a prerequisite or claimed validation.
+
+## Latest transport recovery, 10 November 2026 at16:18 UTC
+
+The first evaluator completed52/408 immutable units before an SSH banner
+timeout in the status check ahead of the next unit. The next model mission
+had not started. Its evaluator process exited1, but the document helper was
+still waiting for a final disposition that could no longer be written. Only
+the positively identified waiting document child was stopped; the supervisor
+then settled FAIL normally. Its full6,000-second reservation and203.109375
+observed local CPU seconds remain retained, along with all logs and52 results.
+
+A read-only reconnect passed on the same container and original EVALUATION
+phase at16:15 UTC, with174,442.812247 CPU seconds remaining. No new inference,
+model/runtime replacement, phase/deadline reset or system-permission change.
+The interruption receipt and targeted helper lint/compile preflight are public.
+All27 frozen pins remain unchanged. This is an operational infrastructure
+pause, not an unsuccessful model task or an invitation to replace old results.
+
+Current local booking is **locked-supervisor-recovery-v1**, exec session**3321**,
+still one CPU/1GiB, a fresh6,000-second reservation inside the same original
+account. It launches the unchanged frozen evaluator against the existing
+schedule/store, which verifies and skips all completed units. Its wrapper
+records at most three transport invocations, resuming only a recognized
+pre-unit SSH-status failure; no model retry or completed-unit regeneration.
+It starts reporting only after evaluator exit, preventing the original waiting
+helper deadlock. A model/unit failure or unclassified exit is not retried as a
+successful replacement. The earlier session68220 below is historical and FAIL.
+
+The final evaluator marker will be `evaluation-completion-v1.json`; new
+orchestration logs are under `supervisor-recovery-v1`. Reporting uses
+`postrun-documents-recovery-v1`, preserving the interrupted document-wait folder.
+The protocol, model, prompts, cards, scoring, all output caps and random schedule
+are unchanged. This is not a new scientific configuration or a new CPU budget.
 
 ## Released resources
 

@@ -24,7 +24,9 @@ def read(path):
 
 
 def main():
-    work = TASK / "postrun-documents-v1"
+    run_id = sys.argv[1] if len(sys.argv) == 2 else "v1"
+    assert run_id and all(c.isalnum() or c == "-" for c in run_id)
+    work = TASK / ("postrun-documents-" + run_id)
     work.mkdir(exist_ok=False)
     deadline = datetime.fromisoformat(read(TASK / "release.json")["deadline_utc"])
     progress = PUBLIC / "locked-progress-v1.json"

@@ -20,7 +20,7 @@ from PIL import Image  # noqa: E402
 
 ORDER = ("B0", "B1", "B2", "P")
 LABELS = {"B0": "B0  Deterministic", "B1": "B1  LLM only", "B2": "B2  LLM + tools", "P": "P  Guarded"}
-PALETTE = {"B0": "#29282b", "B1": "#999999", "B2": "#777777", "P": "#a6492d"}
+PALETTE = {"B0": "#29282b", "B1": "#808080", "B2": "#606060", "P": "#a6492d"}
 MARKERS = {"B0": "s", "B1": "o", "B2": "^", "P": "D"}
 INK, MUTED, RULE = "#29282b", "#655e57", "#ded8d0"
 
@@ -129,7 +129,8 @@ def cost(analysis, output):
                       (8, 40), (8, -46), (-8, 40), (-8, -46)]
         for dx, dy in candidates:
             label = ax.annotate(f"{system}  {x:.3g} s", (x, y), xytext=(dx, dy), textcoords="offset points",
-                                ha="left" if dx > 0 else "right", va="center", fontsize=8.5, color=PALETTE[system])
+                                ha="left" if dx > 0 else "right", va="center", fontsize=8.5,
+                                color=PALETTE[system] if system == "P" else INK)
             fig.canvas.draw()
             bounds = label.get_window_extent(fig.canvas.get_renderer()).expanded(1.05, 1.16)
             limits = ax.get_window_extent()

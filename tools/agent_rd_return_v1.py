@@ -21,8 +21,11 @@ ARCHIVE = WORK / "all-owned-remote-files-v1.tar.gz"
 def require_finalized():
     authority()
     ledger = read(TASK / "ledger.json")
-    assert ledger["bookings"]["locked-supervisor-v1"]["status"] != "RESERVED"
-    assert read(TASK / "supervisor-v1/completion.json")["evaluation_exit_code"] == 0
+    assert not any(name.startswith("locked-supervisor") and booking["status"] == "RESERVED"
+                   for name, booking in ledger["bookings"].items())
+    completion = read(TASK / "evaluation-completion-v1.json")
+    assert completion["evaluation_exit_code"] == 0
+    assert completion["disposition_sha256"] == sha(PUBLIC / "locked-progress-v1.json")
     progress = read(PUBLIC / "locked-progress-v1.json")
     assert progress["status"] in ("COMPLETE", "INCOMPLETE") and progress["stop_reason"] != "OPERATIONAL_BATCH_BOUNDARY"
     freeze = read(ROOT / "research/manifests/agent_rd_protocol_freeze_20261110_v1.json")
@@ -135,6 +138,18 @@ def verify():
     freeze = read(ROOT / "research/manifests/agent_rd_protocol_freeze_20261110_v1.json")
     assert sha(destination / "worker-v2.py") == freeze["executed_remote_worker_sha256"]
     assert (destination / "worker.py").is_file()
+    # These authored runtime programs contain no keys/weights/private rows. Ship
+    # their exact executed bytes, rather than only a later formatted local copy.
+    executed = PUBLIC / "executed-runtime-source-v1"
+    executed.mkdir(exist_ok=False)
+    public_sources = {}
+    for filename in ("worker.py", "worker-v2.py"):
+        # Text suffix marks verbatim evidence rather than an importable module;
+        # bytes and SHA remain identical to the executed original Python file.
+        target = executed / (filename + ".txt")
+        target.write_bytes((destination / filename).read_bytes())
+        assert sha(target) == sha(destination / filename)
+        public_sources[target.relative_to(ROOT).as_posix()] = sha(target)
     matched_calls = 0
     for path in sorted((PUBLIC / "locked-results-v1").glob("*-trace.json")):
         trace = read(path)["payload"]
@@ -154,6 +169,7 @@ def verify():
                "content_bytes": total, "archive_sha256": sha(ARCHIVE), "manifest_sha256": sha(manifest_path),
                "matched_locked_successful_call_files": matched_calls, "all_remote_call_statuses": status_counts,
                "worker_v1_sha256": sha(destination / "worker.py"), "worker_v2_sha256": sha(destination / "worker-v2.py"),
+               "public_exact_executed_worker_sources": public_sources,
                "model_weights_included": False, "private_compound_rows_included": False,
                "cleanup": "NOT_RUN_BEFORE_THIS_FULL_REREAD"}
     write(WORK / "verification-v1.json", receipt, True)
