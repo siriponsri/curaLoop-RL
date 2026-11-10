@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "commit_checked": "454d1a1",
+  "command": [
+    "rtk",
+    "proxy",
+    "git",
+    "-c",
+    "core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol",
+    "-c",
+    "core.attributesFile=C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.local\\agent-rd-run-20261110-v1\\delivery-check-attributes-v1.txt",
+    "diff",
+    "064bd3d",
+    "454d1a1",
+    "--check"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "[rtk] /!\\ No hook installed — run `rtk init -g` for automatic token savings\n",
+  "exception_scope": "Treat CRLF as Windows line endings; preserve Matplotlib path-command trailing spaces only in the two exact generated SVG folders. Source whitespace checks remain enabled.",
+  "default_check": "FAILED on CRLF; a CRLF-aware retry identified generated SVG path spaces. The checkpoint had already been pushed; this follow-up records the completed check transparently.",
+  "frozen_27_pins_preserved": true,
+  "svg_validation": {
+    "v1": {
+      "xml": "PASS",
+      "sha256": "bddceb6919d65b07616f054a9116d86cafb212a4e935e3db460ac528262b1d29"
+    },
+    "v2": {
+      "xml": "PASS",
+      "sha256": "2f142dce2f9df1c78d700daf05220ccb3d635dac7e99b968d8f74c47f0e79632"
+    }
+  },
+  "persistent_git_configuration_changed": false,
+  "evidence_bytes_rewritten": false
+}

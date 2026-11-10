@@ -63,6 +63,8 @@ def plan():
         previous = json.loads((PUBLIC / "visual-spec-v1.json").read_text(encoding="utf-8"))
         assert previous["freeze_sha256"] == hashlib.sha256((ROOT / "research/manifests/agent_rd_protocol_freeze_20261110_v1.json").read_bytes()).hexdigest()
         ensure_plot_dependencies()
+        if (PUBLIC / ("figures-" + FIG_VERSION) / "01-control-flow.svg").exists():
+            raise SystemExit(subprocess.run([sys.executable, str(ROOT / "tools/agent_rd_delivery_check_v1.py")], cwd=ROOT).returncode)
         raise SystemExit(subprocess.run([str(BUNDLED), __file__, "render-flow"], cwd=ROOT).returncode)
     references = []
     for query in ("workflow architecture diagram append only context", "accuracy uncertainty horizontal model comparison", "score latency inference cost scatter"):
