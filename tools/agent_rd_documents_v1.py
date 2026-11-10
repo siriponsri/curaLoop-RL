@@ -212,5 +212,11 @@ if __name__ == "__main__":
         manual()
     elif sys.argv[1] == "render-manual":
         render_manual()
+    elif sys.argv[1] == "manuscript":
+        from agent_rd_manuscript_v1 import build
+        build()
+    elif sys.argv[1] == "render-manuscript":
+        from agent_rd_manuscript_v1 import render
+        render()
     else:
         raise SystemExit("Manuscript authoring follows actual locked analysis, never invented results")

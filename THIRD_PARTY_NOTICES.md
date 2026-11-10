@@ -96,3 +96,24 @@ The public payload contains original review text, citations and PDF metadata, wi
   artwork is shipped.
 - Oil UI and no-slop-ui informed design/review decisions. The reference sources
   and the owner's approved direction are recorded in docs/05_product.
+
+## AgentRD model and report tooling, 10 November 2026
+
+The bounded CPU study reuses the existing Typhoon2.1 Gemma3 12B GGUF model;
+weights are not included in this repository or downloaded by this continuation.
+The frozen historical local tag and model digest are recorded in the study
+protocol. The original SCB10X model-card URL currently redirects to
+[Typhoon's model card](https://huggingface.co/typhoon-ai/typhoon2.1-gemma3-12b-gguf),
+which lists the Gemma license. Preserve and review upstream model terms for a
+future use; the project's MIT license does not license those weights or imply
+general commercial clearance. Ollama0.12.6 is the existing isolated runtime,
+and the shared model cache is read-only and excluded from owned cleanup.
+
+The current AgentRD application is EN/TH; earlier English-only wording above
+describes the historical frontend checkpoint. ReportLab, pypdf and Pillow are
+document tooling. Matplotlib3.10.8 and its recorded dependencies were installed
+only in an owned document target, with distribution/wheel identities recorded
+in `docs/evidence/agent-rd-20261110-v1/plotting-dependencies-v1.json`. They do not
+replace the frozen model/evaluator environment. No paper PDF, third-party figure
+or model weight is republished as a project-owned asset. Diagrams and result
+plots are original renders of the frozen code/design and actual study records.

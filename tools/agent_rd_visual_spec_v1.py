@@ -49,6 +49,9 @@ def write(path, value):
 def plan():
     freeze = json.loads((ROOT / "research/manifests/agent_rd_protocol_freeze_20261110_v1.json").read_text(encoding="utf-8"))
     assert all(hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == value for path, value in freeze["pins"].items())
+    if (TASK / "document-next-action-v1.json").exists():
+        # A bounded operator helper, never an inference tool or second resource Job.
+        raise SystemExit(subprocess.run([sys.executable, str(ROOT / "tools/agent_rd_document_dispatch_v1.py")], cwd=ROOT).returncode)
     if not (PUBLIC / "python-environment-observed-v1.json").exists():
         packages = {}
         for package in ("pydantic", "pydantic-core", "fastapi", "uvicorn", "pytest", "ruff", "jsonschema", "numpy"):

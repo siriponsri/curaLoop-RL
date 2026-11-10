@@ -121,15 +121,16 @@ separate direct-CSV oracle, scorer, real source-fault/recovery executor, fixed
 408-unit schedule definition and prespecified analysis. Source numeric operands
 are rounded before deltas. B0 engineering conformance already passed all32
 authored cards before freeze; this known ceiling is disclosed, not a blind
-result. No locked-card model output has been run. Three decoding seeds, B0/B1/
+result. At design materialization no locked-card model output had been run;
+the later committed evaluation is now active. Three decoding seeds, B0/B1/
 B2/P plus24 no-repair anchor units;312 actual model missions are planned.
 No gold is given to the model. Cases are author-defined on exposed data, not
 independent biological or expert-validated tasks. See the full computational
 protocol for exact denominators, limits, resource stopping and interpretation.
 
-Do not run the one-time freezer until readiness receipts exist. It materializes
-and pins cards/gold/schedule/code. Commit the freeze to main before entering
-the remote EVALUATION phase once and launching `agent_rd_evaluate_v1.py`.
+The one-time freezer has already materialized and pinned cards/gold/schedule/
+code. It is committed on main, and the EVALUATION phase has already been entered.
+Do not rerun the freezer or repeat the phase transition.
 The evaluator supports operational batches, immutable unit IDs and exact-ID
 reconciliation; no successful-retry selection. Primary comparison is
 inconclusive if the planned matrix cannot finish within the same budget.
@@ -209,3 +210,20 @@ or manuscript submission is released by unused budget.
 - Pending: actual result figures/tables, complete English manuscript/PDF,
   resource/source/claim audit, full exact remote return/reread and cleanup,
   budget closure and final main commit/push. The goal remains ACTIVE.
+
+- The guide/diagram checkpoint is pushed as454d1a1. Its initial whitespace
+  check failed on Windows CRLF and generated SVG path spaces, but the command
+  sequence mistakenly continued to commit/push. Follow-up a73d8eb records the
+  completed scoped check without changing evidence or any frozen byte. The
+  exception applies only to the two generated SVG folders; source whitespace
+  and SVG XML/hash checks pass. No persistent Git configuration was changed.
+- `AGENTRD_METHODS_AND_INTERPRETATION_V1.md` is the completed manuscript core,
+  explicitly without empirical results. Descriptive reporting, actual-data
+  figures, the final manuscript builder, read-only replay and exact owned
+  return programs are prepared separately from the frozen scientific code.
+  Their lint/compile checks are not empirical or cleanup evidence. Do not
+  execute analysis or return while the fixed matrix is still running.
+- Registered document helpers now accept an explicit internal operator action
+  through `agent_rd_document_dispatch_v1.py`. They snapshot authoring sources
+  and inherit the same local Job. This does not add a model tool, change the
+  frozen supervisor or grant a second CPU/memory allowance.
