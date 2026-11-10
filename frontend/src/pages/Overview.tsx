@@ -8,6 +8,7 @@ import { Button } from "../components/ui/button";
 import { GoLink, SourceBadge } from "../components/shared";
 import { DiscoveryChart } from "../components/charts";
 import { policyNames, type Candidate } from "../types";
+import "../confirmation.css";
 
 export default function Overview() {
   const { run, meta } = useApp();
@@ -55,6 +56,7 @@ export default function Overview() {
     <div className="discovery-metrics">{stats.map(item => <section className="surface discovery-metric" key={item.title}>
       <div><span>{t(item.title)}</span><item.icon size={17} /></div><strong>{item.value.toLocaleString("en-US")}</strong><p>{t(item.note)}</p>
     </section>)}</div>
+    <section className="surface cf-overview-entry"><div><span className="eyebrow">{t("Recorded study / CF1")}</span><h2>{t("Confirmation evidence")}</h2><p>{t("Explore historical hit and chemotype tradeoffs separately from the active campaign.")}</p></div><Button asChild variant="outline"><Link to="/confirmation">{t("Open CF1 study")}<ArrowUpRight size={15} /></Link></Button></section>
     <div className="overview-grid">
       <section className="surface campaign-performance">
         <div className="section-heading"><div><h2>{t("Discovery performance")}</h2><p>{t("Confirmed hits against simulated cost")}</p></div><SourceBadge /></div>

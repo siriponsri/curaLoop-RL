@@ -1,5 +1,38 @@
 # Agent instructions: CuraLoop-RL
 
+## LR-CF2P closeout and owner checkpoint, 10 November 2026
+
+Read docs/06_execution/LR_CF2P_OWNER_CHECKPOINT_20261110.md and the current
+closure/budget receipts in docs/evidence/lr-cf2p-20261110-v1. CF2-Design completes
+with NO_GO_THIS_MECHANISM; P-CF1 is PASS_INTERNAL_INTEGRATION. No new method fit,
+private CF1 row or final16 access. One local CPU/1 GiB sufficed; no remote task
+or export was created. Preserve every earlier ledger/source/result and the
+disabled immutable proposal snapshot. Finish only audit/account closure and
+authorized main delivery if still pending, then wait for the owner. No unused
+allowance authorizes F2/F3/F5-F8, another design loop, paid/GPU/live writes,
+deployment or submission. Parent sole writer; no subagents. Earlier release and
+proposal markers below are historical and do not override this checkpoint.
+
+## Historical LR-CF2P release, 10 November 2026
+
+Owner explicitly approved LR-CF2P at ebf5c5b. Read
+research/manifests/lr_cf2p_release_20261110_v1.json and the pinned combined
+proposal. Fresh 8 CPU-hours / 10 elapsed hours / max two combined CPU workers;
+release 2026-11-09T22:54:26Z, deadline 2026-11-10T08:54:26Z (15:54:26 Bangkok).
+Use .local/lr-cf2p-20261110-v1 only; optional matching owned dr-train root and
+exact export sibling after admission. Local one CPU/1 GiB; remote one
+CPU-equivalent/4 GiB/swap0. Parent sole writer, no subagents.
+
+Complete CF2-Design (max two mechanisms, no molecular fits/private rows/new
+activity/final16) independently of P-CF1's real aggregate-only EN/TH API/UI and
+additive C local export. Product may pass even if CF2 is NO_GO. Preserve old
+ledgers, sources, results and deleted roots. No new molecular intake, paid/GPU,
+actual team/lab write, deployment or submission. Full private return/reread
+before exact owned cleanup, source/claim/budget audit, English manual/screenshots,
+main commit/push and owner report. Stop before a new phase or material scope
+change. Older proposal-only language records history and does not override this
+explicit release; the proposal JSON itself remains an immutable disabled snapshot.
+
 ## Combined next direction selected; ten-hour proposal only, 10 November 2026
 
 Owner selected CF2-Design + P-CF1 and requested the full phase report plus a

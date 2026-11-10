@@ -1,0 +1,75 @@
+{
+  "status": "PASS_EXECUTED_TARGETED_ENGINEERING_CHECKS",
+  "checks": {
+    "final-api-privacy-regressions-v1": {
+      "status": "PASS",
+      "stdout_sha256": "ce1b2c530da41d1727ee04369e2c1029f4aac475d00c51d07b2381a1e4a493b3",
+      "resource_sha256": "11fa580022da1a7ae5519f1039a358919816579d55ed0fb1953e5f5784f75181",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "tests/test_confirmation_study.py",
+        "tests/test_web_api.py::test_health_meta_datasets_and_policies",
+        "tests/test_web_api.py::test_request_pending_delivered_budget_and_event_contract",
+        "tests/test_web_api.py::test_public_candidate_search_filter_sort_pagination_hides_labels",
+        "tests/test_web_api.py::test_candidate_labels_stay_hidden_while_pending",
+        "tests/test_web_api.py::test_json_csv_exports_and_pending_resume",
+        "tests/test_web_api.py::test_origin_cors_and_host_are_local_only",
+        "-q",
+        "--basetemp=.local/lr-cf2p-20261110-v1/pytest-final-v1"
+      ]
+    },
+    "final-frontend-tests-v4": {
+      "status": "PASS",
+      "stdout_sha256": "fc6933cfffcb67def5c88eddd3e2080fa1fee16e6c7de94e6a3a4edfa97a964f",
+      "resource_sha256": "5792f01ba43ec21f1da0de89e8d48dfdc92d44e6ad0f1a782881e6107a81a73a",
+      "command": [
+        "rtk",
+        "proxy",
+        "npm",
+        "--prefix",
+        "frontend",
+        "test",
+        "--",
+        "--maxWorkers=1"
+      ]
+    },
+    "final-python-lint-v3": {
+      "status": "PASS",
+      "stdout_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "resource_sha256": "054d8f011ad0df79fd5dbe2d57cf9f0eae1dd6481b39b2dc2b4e91c1eabe88b6",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "api/main.py",
+        "src/curaloop_rd/confirmation_study.py",
+        "src/curaloop_rd/confirmation_workspace_v3.py",
+        "src/curaloop_rd/confirmation_mcp_v3.py",
+        "tests/test_confirmation_study.py",
+        "tools/cf2p_admin_v1.py",
+        "tools/cf2p_guard_v1.py",
+        "tools/cf2p_browser_check_v1.py",
+        "tools/cf2p_build_v1.py",
+        "tools/cf2p_constructed_v1.py",
+        "tools/cf2p_existing_reading_v1.py",
+        "tools/cf2p_literature_intake_v1.py",
+        "tools/cf2p_native_c_check_v1.py",
+        "tools/cf2p_preflight_v1.py",
+        "tools/cf2p_prepare_ui_v1.py",
+        "tools/build_confirmation_manual_en_v4.py",
+        "tools/cf2p_finalize_docs_v1.py",
+        "tools/cf2p_closeout_checks_v1.py"
+      ]
+    }
+  },
+  "python_tests": 22,
+  "frontend_tests": 26,
+  "all_scientific_suites_rerun": false,
+  "dependency_warning": "FastAPI TestClient: Starlette/httpx deprecation, tests pass",
+  "production_browser": "browser-check-v5.json",
+  "production_build": "frontend-build-v5.json",
+  "native_stdio": "native-c-workspace-v2.json"
+}

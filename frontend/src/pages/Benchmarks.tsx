@@ -13,6 +13,8 @@ import {
 } from "../components/charts";
 import { colors, policyNames, type Job, type Policy } from "../types";
 import { number, readPreference, removePreference, writePreference } from "../lib";
+import { Link } from "react-router-dom";
+import "../confirmation.css";
 
 export default function Benchmarks() {
   const { t } = useI18n();
@@ -106,6 +108,7 @@ export default function Benchmarks() {
         description={t("Matched conditions. Independent campaigns. Evidence you can export.")}
       />
       <div className="arena-context"><span className="eyebrow">{t("Four strategy families")}</span><div className="arena-families"><span>01 {t("Random")}</span><span>02 {t("Greedy")}</span><span>03 {t("Active Learning")}</span><span>04 {t("Reinforcement Learning")}</span></div><p>{t("Compare discovery yield and simulated cost. Learned controllers may use a disclosed Greedy fallback.")}</p></div>
+      <section className="surface cf-mode-link"><div><strong>{t("Confirmation portfolio study")}</strong><p>{t("CF1 compares rankers and portfolio operators. Its data and endpoints are separate from HIV and RL.")}</p></div><Button asChild variant="outline"><Link to="/confirmation">{t("Open CF1 study")}</Link></Button></section>
       <div className="presentation-origin">
         <SourceBadge />
       </div>

@@ -1,20 +1,17 @@
 # Project phases and remaining work
 
-Date: 10 November 2026, Asia/Bangkok. Inspected main:
-`f3d0d5989770a09f1842dde16088451eee67734a`.
-Status: **CURRENT_RECORD_REVIEW_COMPLETE; NEXT_EXECUTION_NOT_RELEASED**.
-
-The owner selected CF2-Design together with P-CF1, then requested a complete
-phase report and a ten-hour long-run proposal. This selects the planning
-direction. It does not approve the new combined execution budget.
+Date: 10 November 2026, Asia/Bangkok. Updated after executing the owner-approved
+LR-CF2P proposal based on `ebf5c5b`. Status: **COMPLETE_FOR_OWNER_REVIEW**.
+CF2-Design is NO_GO_THIS_MECHANISM; P-CF1 is PASS_INTERNAL_INTEGRATION.
+[Current owner checkpoint](LR_CF2P_OWNER_CHECKPOINT_20261110.md).
 
 ## How to read the status
 
 **COMPLETE** means the bounded work and its report were delivered. It does not
 mean its scientific claim passed. **NO_GO**, **INCONCLUSIVE** and **REVISE** are
 retained scientific results. **NOT_RUN** means there is no execution evidence.
-The records linked below were inspected in this planning turn; their historical
-tests were not rerun. An old checkpoint's statements about later work apply to
+Historical tests below were not rerun wholesale. Current CF2P engineering
+acceptance is separately executed and linked in the current checkpoint. An old checkpoint's statements about later work apply to
 its original date, not to the current state.
 
 The many R0 and 4R names are investigations within earlier directions, not
@@ -47,9 +44,9 @@ to reach the current destination. No new benchmark publication is the fallback.
 | D1 | Matched operation diagnostics and cheap-control comparisons | COMPLETE_INVESTIGATION; limited context-dependent headroom, not method superiority | [D1 checkpoint](D1_OWNER_CHECKPOINT_20261109.md) |
 | D2 / LR-D23 | Both fixed training rounds, 2,052 biological units, 12 fitted artifacts and complete closure | COMPLETE / INCONCLUSIVE; Gk2 mean-point dominates the candidate and history attribution fails | [D2 checkpoint](LR_D23_OWNER_CHECKPOINT_20261109.md) |
 | D3 | Conditional continuation of D2 | NOT_RUN_D2_GATE_NOT_MET; not an unfinished background task | [LR-D23 checkpoint](LR_D23_OWNER_CHECKPOINT_20261109.md) |
-| Four-screen dashboard | Discovery Overview, Retrospective Simulation Lab, Benchmark Arena and Compound Explorer connected to the Python engine; EN/TH, structures and pending-label protection | COMPLETE_PRODUCT_CHECKPOINT; current manual v3 and actual browser evidence delivered; CF1 not integrated | [Four-screen delivery](../05_product/FOUR_SCREEN_DASHBOARD_CHECKPOINT_20261108.md) |
+| Four-screen dashboard | Discovery Overview, Retrospective Simulation Lab, Benchmark Arena and Compound Explorer connected to the Python engine; EN/TH, structures and pending-label protection | COMPLETE_PRODUCT_CHECKPOINT; manual v3 and actual browser evidence delivered; later P-CF1 integration below | [Four-screen delivery](../05_product/FOUR_SCREEN_DASHBOARD_CHECKPOINT_20261108.md) |
 | LR-CF1 | Six AIC_Finder campaigns, 60 real molecular fits, 2,700 portfolio cells, original-code checks and independent result recount | COMPLETE_FEASIBILITY; classical hit/coverage tradeoff confirmed, NO_GO_QUOTA_ONLY_METHOD_CLAIM | [CF1 checkpoint](LR_CF1_OWNER_CHECKPOINT_20261109.md), [results](../03_research/LR_CF1_RESULTS_20261109.md) |
-| CF1 product and journal handoffs | Strict aggregate card/schema, standalone EN/TH report, plots, English methods/results insert, full private return and remote cleanup | OFFLINE_HANDOFF_COMPLETE; runtime adapter NOT_RUN; complete submission manuscript and independent evaluation NOT_READY | [Product contract](../05_product/LR_CF1_OFFLINE_HANDOFF_CONTRACT_20261109.md), [paper insert](../07_publication/LR_CF1_METHODS_RESULTS_INSERT_20261109.md) |
+| CF1 product and journal handoffs | Strict aggregate card/schema, standalone EN/TH report, plots, English methods/results insert, full private return and remote cleanup | OFFLINE_HANDOFF_COMPLETE; subsequent runtime adapter completed in P-CF1; manuscript and independent evaluation NOT_READY | [Product contract](../05_product/LR_CF1_OFFLINE_HANDOFF_CONTRACT_20261109.md), [paper insert](../07_publication/LR_CF1_METHODS_RESULTS_INSERT_20261109.md) |
 
 At the current inspected checkpoint, the existing product is usable as a local
 research prototype. The study pipelines and negative findings are real assets.
@@ -58,26 +55,25 @@ validated product. The original final16 are still sealed. All six CF1 campaigns
 are exposed development, with four provider blocks but one annotation-connected
 component; six campaigns do not become six independent biological families.
 
-## Remaining roadmap: eight work packages, two proposed now
+## Roadmap: two packages closed here, six conditional packages remain
 
 The navigation labels F1-F8 below simplify the remaining destination. They are
-not new grants or replacements for historical M/R/D phase identifiers. Only
-CF2-Design and P-CF1 have been selected for the next proposal. All later packages
-are conditional; a defensible NO_GO may end the current method-paper line.
+not new grants or replacements for historical M/R/D phase identifiers. CF2-Design and P-CF1 were released and completed. All later packages are
+conditional; the current design NO_GO does not release a method-development run.
 
 | Package | Track and destination | State now | Exit evidence / dependency |
 | :--- | :--- | :--- | :--- |
-| F1: CF2-Design | Decide whether at most two mechanisms support one distinct, identifiable research design | OWNER_DIRECTION_SELECTED; EXECUTION_NOT_RELEASED | Source-located comparison, falsification examples, GO_FOR_OWNER_PROTOCOL_REVIEW / NO_GO_THIS_MECHANISM / INSUFFICIENT_EVIDENCE |
+| F1: CF2-Design | Decide whether at most two mechanisms support one distinct, identifiable research design | COMPLETE / NO_GO_THIS_MECHANISM | Two generic formulations, 12 exact constructed cases, source-located review and one final design ticket; no fit or final access |
 | F2: new-method development | Implement and evaluate the one owner-approved design against strong controls | NOT_RUN; conditional on F1 and a new grant | Frozen development protocol, admitted information/labels, meaningful effects and uncertainty; no automatic tuning loop |
 | F3: independent confirmation evaluation | Test a frozen method on an independently admitted confirmation population | NOT_RUN; conditional on F2, data support and owner approval | Appropriate independent units, source/rights/support, calibration/readiness and frozen analysis. Old final16 are not automatically a matching primary-to-confirmation panel |
-| F4: P-CF1 | Integrate validated CF1 aggregates into the main app and local C Workspace export path | OWNER_DIRECTION_SELECTED; EXECUTION_NOT_RELEASED | Real API/UI/export, all arms/budgets, EN/TH, provenance, privacy, regression evidence and actual manual/screenshots |
+| F4: P-CF1 | Integrate validated CF1 aggregates into the main app and local C Workspace export path | COMPLETE / PASS_INTERNAL_INTEGRATION | Actual API/UI/local C tools/export, all 70 EN/TH views, strict provenance, privacy/regressions, screenshots and English PDF; no user/market validation |
 | F5: workflow evaluation and selected connector | Evaluate search -> evidence -> plan -> report with representative researchers; add one chosen team-tool connector | NOT_RUN; needs participants, destinations, permission and a new protocol | Source fidelity, abstention, errors, analyst effort and task completion versus ordinary tools; approved destination writes only |
 | F6: product pilot and release readiness | Harden one product deployment and establish a business/data-use basis | NOT_RUN; conditional on F5 and owner requirements | Chosen hosting/security/access/operations, deployment/rollback checks, applicable data-use clearance and prospective customer evidence |
 | F7: J1 manuscript and reproduction readiness | Complete the method paper, claim/evidence reconciliation and submission package | Partial historical drafts/inserts only; NOT_SUBMISSION_READY | F2/F3 evidence, appropriate venue, author/scientific review, reproduction instructions, declarations and current fee route within owner budget |
 | F8: submission and editorial follow-up | Author-approved submission, response to reviewers and any approved revision work | NOT_RUN; acceptance is outside the agent's control | Separate explicit submission authority, final author declarations, current venue requirements and reviewer decisions |
 
-**The proposed ten-hour LR-CF2P closes F1 and F4 investigations/delivery, plus
-one joint owner checkpoint: two of these eight remaining packages.** It does
+**The executed LR-CF2P closes F1 and F4 plus the joint owner checkpoint:
+two of the previously remaining eight packages.** It does
 not claim to close F2/F3/F5/F6/F7/F8, prove novelty, obtain journal acceptance or
 launch a business. A CF2 design verdict is still a decision, not measured method
 superiority. A P-CF1 PASS is internal integration evidence, not a user study.
@@ -89,10 +85,13 @@ limitations. No repeat of all historical phases is required.
 
 ## Next decision
 
-Review the [ten-hour combined proposal](LONG_RUN_CF2_DESIGN_P_CF1_PROPOSAL_20261110.md)
-and its [disabled scope](../../research/configs/lr_cf2p_proposal_20261110_v1.json).
-The next actor is the owner, approving or adjusting the fresh budget and local
-integration scope. No execution clock or task namespace starts in this report.
-
-Planning status: **READY_FOR_REVIEW**. New runtime, SSH, research and product
-acceptance checks: **NOT_RUN**.
+Read [the actual owner checkpoint](LR_CF2P_OWNER_CHECKPOINT_20261110.md) and
+[source-located CF2 decision](../03_research/CF2_DESIGN_DECISION_20261110.md).
+Recommended next discussion is F5 product workflow evaluation: representative
+research tasks/users, one proposed destination and comparison with ordinary
+tools, with an owner-reviewed protocol before any live writes or new grant.
+The method-paper line needs a distinct specific strategy and suitable evidence;
+the current NO_GO is not permission to repeat training/design automatically.
+The six remaining packages are conditional destinations, not mandatory reruns.
+The owner chooses the next scope; no old unused allowance or final16 access is
+released. The original proposal/config remain immutable creation-time records.

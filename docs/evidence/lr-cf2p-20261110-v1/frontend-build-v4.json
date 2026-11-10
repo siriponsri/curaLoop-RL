@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "task": "lint",
+      "command": [
+        "rtk",
+        "proxy",
+        "npm",
+        "--prefix",
+        "frontend",
+        "run",
+        "lint"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "[rtk] /!\\ No hook installed \u2014 run `rtk init -g` for automatic token savings\nnpm notice run curaloop-research-web@0.3.0 lint\nnpm notice run eslint src --max-warnings 0\n"
+    },
+    {
+      "task": "build",
+      "command": [
+        "rtk",
+        "proxy",
+        "npm",
+        "--prefix",
+        "frontend",
+        "run",
+        "build"
+      ],
+      "exit_code": 0,
+      "stdout": "vite v8.3.5 building client environment for production...\ntransforming...\n\u2713 2238 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                               0.65 kB \u2502 gzip:   0.41 kB\ndist/assets/confirmation-CWeYVVtG.css         5.62 kB \u2502 gzip:   1.57 kB\ndist/assets/index-DETtB_Da.css               69.03 kB \u2502 gzip:  14.42 kB\ndist/assets/chevron-left-D7opYsas.js          0.11 kB \u2502 gzip:   0.13 kB\ndist/assets/arrow-right-BpLiJGz7.js           0.15 kB \u2502 gzip:   0.15 kB\ndist/assets/arrow-up-right-Bg8jEikC.js        0.15 kB \u2502 gzip:   0.15 kB\ndist/assets/clock-3-C2lgXcpN.js               0.15 kB \u2502 gzip:   0.15 kB\ndist/assets/search-KkyhU7pb.js                0.16 kB \u2502 gzip:   0.16 kB\ndist/assets/circle-check-DxjQqYTI.js          0.16 kB \u2502 gzip:   0.16 kB\ndist/assets/play-qLDToJZL.js                  0.17 kB \u2502 gzip:   0.17 kB\ndist/assets/rotate-ccw-D8_V4ZaA.js            0.18 kB \u2502 gzip:   0.17 kB\ndist/assets/sliders-horizontal-BJa34Tu6.js    0.41 kB \u2502 gzip:   0.23 kB\ndist/assets/charts-6q7tLj-k.js                1.38 kB \u2502 gzip:   0.49 kB\ndist/assets/Presentation-BcW_Vm8a.js          3.60 kB \u2502 gzip:   1.59 kB\ndist/assets/shared-bX5ayaOm.js                4.85 kB \u2502 gzip:   1.79 kB\ndist/assets/Scenario-BaE9yV-K.js              7.63 kB \u2502 gzip:   2.88 kB\ndist/assets/Evidence-BK4wfztt.js              8.19 kB \u2502 gzip:   2.56 kB\ndist/assets/Overview-BtfOACid.js              9.03 kB \u2502 gzip:   3.07 kB\ndist/assets/Compounds-CwWudNGf.js             9.47 kB \u2502 gzip:   3.07 kB\ndist/assets/Benchmarks-4ovCZ3yj.js           12.80 kB \u2502 gzip:   3.84 kB\ndist/assets/Confirmation-DepSyc22.js         12.85 kB \u2502 gzip:   4.18 kB\ndist/assets/Lab-CEY-AVlI.js                  14.81 kB \u2502 gzip:   4.55 kB\ndist/assets/i18n-CqEjUOkJ.js                104.14 kB \u2502 gzip:  29.14 kB\ndist/assets/index-CyrjWSrL.js               383.71 kB \u2502 gzip: 127.95 kB\ndist/assets/chart-content-CqEvJwX8.js       410.21 kB \u2502 gzip: 116.22 kB\n\n\u2713 built in 3.64s\n",
+      "stderr": "[rtk] /!\\ No hook installed \u2014 run `rtk init -g` for automatic token savings\nnpm notice run curaloop-research-web@0.3.0 build\nnpm notice run tsc --noEmit && vite build\n"
+    }
+  ]
+}

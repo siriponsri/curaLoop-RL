@@ -1,0 +1,123 @@
+{
+  "status": "PASS_TWELVE_CONSTRUCTED_FALSIFICATION_CASES",
+  "molecular_data_used": false,
+  "model_fits": 0,
+  "final16_access": false,
+  "cases": [
+    {
+      "id": "C01",
+      "status": "PASS",
+      "claim": "Identical marginals do not identify joint group coverage",
+      "values": {
+        "independent": 0.64,
+        "perfectly_correlated": 0.4
+      }
+    },
+    {
+      "id": "C02",
+      "status": "PASS",
+      "claim": "Same marginal predictions can reverse the optimal two-item batch",
+      "values": {
+        "same_group_positive": 0.4,
+        "same_group_negative": 0.8,
+        "cross_group": 0.7
+      }
+    },
+    {
+      "id": "C03",
+      "status": "PASS",
+      "claim": "Static expected coverage stays submodular under an arbitrary fixed joint law",
+      "values": {
+        "checked_marginal_inequalities": 108
+      }
+    },
+    {
+      "id": "C04",
+      "status": "PASS",
+      "claim": "Static submodularity does not imply adaptive submodularity: a positive in one group raises another group's conditional gain",
+      "values": {
+        "prior_other_group_gain": 0.5,
+        "conditional_other_group_gain": 1.0
+      }
+    },
+    {
+      "id": "C05",
+      "status": "PASS",
+      "claim": "Primary-hit-only observations do not identify full-library outcomes",
+      "values": {
+        "observed_confirmed_positives": 1,
+        "compatible_full_library_totals": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "C06",
+      "status": "PASS",
+      "claim": "One selected item per group makes D equal H without a second independent achievement",
+      "values": {
+        "outcome_patterns": 8
+      }
+    },
+    {
+      "id": "C07",
+      "status": "PASS",
+      "claim": "A one-per-group quota can lose expected positive-group coverage to classical probability-aware selection",
+      "values": {
+        "quota": 0.91,
+        "probability_aware": 0.99
+      }
+    },
+    {
+      "id": "C08",
+      "status": "PASS",
+      "claim": "A classical hit/coverage tradeoff exists with independent labels",
+      "values": {
+        "top_H": 1.7,
+        "top_D": 0.98,
+        "spread_H": 1.6,
+        "spread_D": 1.6
+      }
+    },
+    {
+      "id": "C09",
+      "status": "PASS",
+      "claim": "Preference weights change the chosen portfolio; a toy weight is not an owner-approved material-effect criterion",
+      "values": {
+        "illustrative_weights": [
+          0.1,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "C10",
+      "status": "PASS",
+      "claim": "Correcting primary-to-confirmation calibration can change ranking without creating a new optimizer",
+      "values": {
+        "primary_top_confirmation": 0.1,
+        "calibrated_top_confirmation": 0.7
+      }
+    },
+    {
+      "id": "C11",
+      "status": "PASS",
+      "claim": "Known-group binary confirmation coverage embeds in a multiclass diminishing-returns utility",
+      "values": {
+        "checked_outcome_patterns": 16,
+        "utility": "sum_g min(1, positive_count_g)"
+      }
+    },
+    {
+      "id": "C12",
+      "status": "PASS",
+      "claim": "Feedback can have value under a known joint model; this does not distinguish the mechanism from Bayesian active search",
+      "values": {
+        "adaptive": 1.5,
+        "static": 1.0
+      }
+    }
+  ],
+  "interpretation": "Exact illustrative mechanism checks, not empirical utility, novelty proof or a new algorithm evaluation"
+}

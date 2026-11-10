@@ -25,6 +25,8 @@ from curaloop.domain import BASELINES, DATASETS, POLICIES, Scenario
 from curaloop.export import csv_report, json_report
 from curaloop.learning import load_checkpoint
 from curaloop.service import LIMITATIONS, RunService, code_identity, compare
+from curaloop_rd.confirmation_study import StudyUnavailable, comparison_brief
+from curaloop_rd.confirmation_study import view as confirmation_view
 
 from .storage import (
     RECOVERY_HELP,
@@ -810,6 +812,31 @@ def create_app(storage_path: str | Path | None = None) -> FastAPI:
             media_type="application/json" if format == "json" else "text/csv",
             headers={"Content-Disposition": f'attachment; filename="curaloop-comparison.{format}"'},
         )
+
+    @app.get("/api/v1/studies/cf1")
+    def cf1_study(request: Request, campaign: str = "equal", budget_percent: int = 10):
+        if set(request.query_params) - {"campaign", "budget_percent"} or len(request.query_params.multi_items()) != len(request.query_params):
+            raise HTTPException(status_code=422, detail="Unexpected or repeated study filters")
+        try:
+            return confirmation_view(campaign, budget_percent)
+        except StudyUnavailable as exc:
+            raise HTTPException(status_code=503, detail=str(exc)) from exc
+        except ValueError as exc:
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+    @app.get("/api/v1/studies/cf1/export")
+    def cf1_brief(request: Request, campaign: str = "equal", budget_percent: int = 10,
+                  ranker: str = "mvsa", operator: str = "top_ranked", locale: str = "en"):
+        if set(request.query_params) - {"campaign", "budget_percent", "ranker", "operator", "locale"} or len(request.query_params.multi_items()) != len(request.query_params):
+            raise HTTPException(status_code=422, detail="Unexpected or repeated study filters")
+        try:
+            brief = comparison_brief(campaign, budget_percent, ranker, operator, locale)
+            return Response(json.dumps(brief, ensure_ascii=False, allow_nan=False), media_type="application/json",
+                            headers={"Content-Disposition": 'attachment; filename="curaloop-cf1-comparison.json"'})
+        except StudyUnavailable as exc:
+            raise HTTPException(status_code=503, detail=str(exc)) from exc
+        except ValueError as exc:
+            raise HTTPException(status_code=422, detail=str(exc)) from exc
 
     @app.get("/api/v1/evidence")
     def evidence():

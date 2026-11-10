@@ -1,0 +1,970 @@
+{
+  "schema": "curaloop.confirmation.study-view.v1",
+  "study_id": "cf1",
+  "integration_status": "LOCAL_AGGREGATE_ADAPTER",
+  "research_status": "NO_GO_QUOTA_ONLY_METHOD_CLAIM",
+  "source_snapshot": "04c58e85188e724ec5ff44cbed2e7b960f6f3df3",
+  "campaign": "equal",
+  "budget_percent": 10,
+  "campaigns": [
+    {
+      "campaign": "628/677",
+      "provider_block": "Vanderbilt Screening Center for GPCRs, Ion Channels and Transporters",
+      "source_rows": 63643,
+      "retained_primary_rows": 63058,
+      "universe_size": 1640,
+      "source_confirmed_positive_count": 717,
+      "source_positive_structure_groups": 599,
+      "murcko_or_fallback_groups": 1404,
+      "fingerprint_sensitivity_groups": 1406,
+      "budgets": [
+        17,
+        33,
+        82,
+        164,
+        328
+      ]
+    },
+    {
+      "campaign": "1040/1254",
+      "provider_block": "The Scripps Research Institute Molecular Screening Center",
+      "source_rows": 196068,
+      "retained_primary_rows": 194681,
+      "universe_size": 1181,
+      "source_confirmed_positive_count": 246,
+      "source_positive_structure_groups": 210,
+      "murcko_or_fallback_groups": 998,
+      "fingerprint_sensitivity_groups": 1009,
+      "budgets": [
+        12,
+        24,
+        60,
+        119,
+        237
+      ]
+    },
+    {
+      "campaign": "2661/2821",
+      "provider_block": "Broad Institute",
+      "source_rows": 321563,
+      "retained_primary_rows": 319652,
+      "universe_size": 219,
+      "source_confirmed_positive_count": 171,
+      "source_positive_structure_groups": 127,
+      "murcko_or_fallback_groups": 166,
+      "fingerprint_sensitivity_groups": 174,
+      "budgets": [
+        3,
+        5,
+        11,
+        22,
+        44
+      ]
+    },
+    {
+      "campaign": "449739/489005",
+      "provider_block": "Vanderbilt Screening Center for GPCRs, Ion Channels and Transporters",
+      "source_rows": 104663,
+      "retained_primary_rows": 103716,
+      "universe_size": 881,
+      "source_confirmed_positive_count": 693,
+      "source_positive_structure_groups": 567,
+      "murcko_or_fallback_groups": 705,
+      "fingerprint_sensitivity_groups": 684,
+      "budgets": [
+        9,
+        18,
+        45,
+        89,
+        177
+      ]
+    },
+    {
+      "campaign": "485270/492964",
+      "provider_block": "The Scripps Research Institute Molecular Screening Center",
+      "source_rows": 325747,
+      "retained_primary_rows": 323814,
+      "universe_size": 1780,
+      "source_confirmed_positive_count": 872,
+      "source_positive_structure_groups": 701,
+      "murcko_or_fallback_groups": 1406,
+      "fingerprint_sensitivity_groups": 1451,
+      "budgets": [
+        18,
+        36,
+        89,
+        178,
+        356
+      ]
+    },
+    {
+      "campaign": "485273/493155",
+      "provider_block": "Burnham Center for Chemical Genomics",
+      "source_rows": 330197,
+      "retained_primary_rows": 328270,
+      "universe_size": 1195,
+      "source_confirmed_positive_count": 351,
+      "source_positive_structure_groups": 232,
+      "murcko_or_fallback_groups": 756,
+      "fingerprint_sensitivity_groups": 704,
+      "budgets": [
+        12,
+        24,
+        60,
+        120,
+        239
+      ]
+    }
+  ],
+  "budgets": [
+    1,
+    2,
+    5,
+    10,
+    20
+  ],
+  "seeds": [
+    90101,
+    90113,
+    90133,
+    90149,
+    90163
+  ],
+  "arms": [
+    {
+      "ranker": "mvsa",
+      "operator": "top_ranked",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 75.13333333333333,
+          "sd": 1.4308117354223169,
+          "min": 73,
+          "max": 76.33333333333333
+        },
+        "positive_structure_groups": {
+          "mean": 45.36666666666667,
+          "sd": 0.5451809077932035,
+          "min": 44.833333333333336,
+          "max": 46
+        },
+        "positive_fingerprint_groups": {
+          "mean": 44.3,
+          "sd": 0.3205897343611879,
+          "min": 43.833333333333336,
+          "max": 44.666666666666664
+        },
+        "hits_per_confirmation": {
+          "mean": 0.6989918752572905,
+          "sd": 0.011411684798733411,
+          "min": 0.6857322037246433,
+          "max": 0.7105036963172955
+        },
+        "groups_per_confirmation": {
+          "mean": 0.4417721994500483,
+          "sd": 0.012768167631617765,
+          "min": 0.42824218491302946,
+          "max": 0.45959445833524953
+        }
+      }
+    },
+    {
+      "ranker": "mvsa",
+      "operator": "cluster_round_robin",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 65.13333333333333,
+          "sd": 1.023338762200584,
+          "min": 63.666666666666664,
+          "max": 66.5
+        },
+        "positive_structure_groups": {
+          "mean": 65.13333333333333,
+          "sd": 1.023338762200584,
+          "min": 63.666666666666664,
+          "max": 66.5
+        },
+        "positive_fingerprint_groups": {
+          "mean": 56.56666666666667,
+          "sd": 1.3773969007596265,
+          "min": 54.5,
+          "max": 58.333333333333336
+        },
+        "hits_per_confirmation": {
+          "mean": 0.6280775835251678,
+          "sd": 0.004981088328293269,
+          "min": 0.6196651539029789,
+          "max": 0.6329978232272173
+        },
+        "groups_per_confirmation": {
+          "mean": 0.6280775835251678,
+          "sd": 0.004981088328293269,
+          "min": 0.6196651539029789,
+          "max": 0.6329978232272173
+        }
+      }
+    },
+    {
+      "ranker": "mvsa",
+      "operator": "classical_max_min",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 47.56666666666667,
+          "sd": 0.9098229375970783,
+          "min": 46.333333333333336,
+          "max": 48.5
+        },
+        "positive_structure_groups": {
+          "mean": 47.56666666666667,
+          "sd": 0.9098229375970783,
+          "min": 46.333333333333336,
+          "max": 48.5
+        },
+        "positive_fingerprint_groups": {
+          "mean": 47.56666666666667,
+          "sd": 0.9098229375970783,
+          "min": 46.333333333333336,
+          "max": 48.5
+        },
+        "hits_per_confirmation": {
+          "mean": 0.45603708270389715,
+          "sd": 0.008679236170032736,
+          "min": 0.4473481623812899,
+          "max": 0.46575335728185824
+        },
+        "groups_per_confirmation": {
+          "mean": 0.45603708270389715,
+          "sd": 0.008679236170032736,
+          "min": 0.4473481623812899,
+          "max": 0.46575335728185824
+        }
+      }
+    },
+    {
+      "ranker": "rf",
+      "operator": "top_ranked",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 76.4,
+          "sd": 0.5348935511960374,
+          "min": 76,
+          "max": 77.33333333333333
+        },
+        "positive_structure_groups": {
+          "mean": 46.0,
+          "sd": 0.39086797998528705,
+          "min": 45.666666666666664,
+          "max": 46.5
+        },
+        "positive_fingerprint_groups": {
+          "mean": 43.53333333333333,
+          "sd": 0.49159604012508645,
+          "min": 42.833333333333336,
+          "max": 44
+        },
+        "hits_per_confirmation": {
+          "mean": 0.6989924775062122,
+          "sd": 0.009099466881015652,
+          "min": 0.6899590432351221,
+          "max": 0.7090378180221489
+        },
+        "groups_per_confirmation": {
+          "mean": 0.4316945477793333,
+          "sd": 0.01422573934564149,
+          "min": 0.40730725696691394,
+          "max": 0.44324728222089305
+        }
+      }
+    },
+    {
+      "ranker": "rf",
+      "operator": "cluster_round_robin",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 67.36666666666666,
+          "sd": 1.5064675384635566,
+          "min": 64.83333333333333,
+          "max": 68.83333333333333
+        },
+        "positive_structure_groups": {
+          "mean": 67.36666666666666,
+          "sd": 1.5064675384635566,
+          "min": 64.83333333333333,
+          "max": 68.83333333333333
+        },
+        "positive_fingerprint_groups": {
+          "mean": 58.166666666666664,
+          "sd": 1.6499158227686108,
+          "min": 55.5,
+          "max": 59.5
+        },
+        "hits_per_confirmation": {
+          "mean": 0.6320859604378054,
+          "sd": 0.012713204881637437,
+          "min": 0.6143438432865028,
+          "max": 0.649446791098412
+        },
+        "groups_per_confirmation": {
+          "mean": 0.6320859604378054,
+          "sd": 0.012713204881637437,
+          "min": 0.6143438432865028,
+          "max": 0.649446791098412
+        }
+      }
+    },
+    {
+      "ranker": "rf",
+      "operator": "classical_max_min",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 45.733333333333334,
+          "sd": 0.5845225972250058,
+          "min": 45,
+          "max": 46.5
+        },
+        "positive_structure_groups": {
+          "mean": 45.733333333333334,
+          "sd": 0.5845225972250058,
+          "min": 45,
+          "max": 46.5
+        },
+        "positive_fingerprint_groups": {
+          "mean": 45.733333333333334,
+          "sd": 0.5845225972250058,
+          "min": 45,
+          "max": 46.5
+        },
+        "hits_per_confirmation": {
+          "mean": 0.42387099693178715,
+          "sd": 0.0034229457190401405,
+          "min": 0.4209342867917739,
+          "max": 0.428891832150783
+        },
+        "groups_per_confirmation": {
+          "mean": 0.42387099693178715,
+          "sd": 0.0034229457190401405,
+          "min": 0.4209342867917739,
+          "max": 0.428891832150783
+        }
+      }
+    },
+    {
+      "ranker": "gbm",
+      "operator": "top_ranked",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 76.06666666666666,
+          "sd": 1.5392999852025109,
+          "min": 73.83333333333333,
+          "max": 78
+        },
+        "positive_structure_groups": {
+          "mean": 47.166666666666664,
+          "sd": 0.9501461875826143,
+          "min": 46,
+          "max": 48.5
+        },
+        "positive_fingerprint_groups": {
+          "mean": 45.699999999999996,
+          "sd": 1.0368220676663849,
+          "min": 44.5,
+          "max": 47.166666666666664
+        },
+        "hits_per_confirmation": {
+          "mean": 0.7084620423486834,
+          "sd": 0.011314214931622964,
+          "min": 0.6913032336347347,
+          "max": 0.7215677350688151
+        },
+        "groups_per_confirmation": {
+          "mean": 0.4561877098929958,
+          "sd": 0.01164205037143853,
+          "min": 0.4434462226721992,
+          "max": 0.47101426418080455
+        }
+      }
+    },
+    {
+      "ranker": "gbm",
+      "operator": "cluster_round_robin",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 66.83333333333333,
+          "sd": 0.6561673228343209,
+          "min": 65.83333333333333,
+          "max": 67.66666666666667
+        },
+        "positive_structure_groups": {
+          "mean": 66.83333333333333,
+          "sd": 0.6561673228343209,
+          "min": 65.83333333333333,
+          "max": 67.66666666666667
+        },
+        "positive_fingerprint_groups": {
+          "mean": 58.6,
+          "sd": 0.9689627902499086,
+          "min": 57,
+          "max": 59.5
+        },
+        "hits_per_confirmation": {
+          "mean": 0.6436693891039562,
+          "sd": 0.004799001837221519,
+          "min": 0.6363863710278119,
+          "max": 0.6494675772930896
+        },
+        "groups_per_confirmation": {
+          "mean": 0.6436693891039562,
+          "sd": 0.004799001837221519,
+          "min": 0.6363863710278119,
+          "max": 0.6494675772930896
+        }
+      }
+    },
+    {
+      "ranker": "gbm",
+      "operator": "classical_max_min",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 48.233333333333334,
+          "sd": 0.5845225972250054,
+          "min": 47.333333333333336,
+          "max": 48.833333333333336
+        },
+        "positive_structure_groups": {
+          "mean": 48.233333333333334,
+          "sd": 0.5845225972250054,
+          "min": 47.333333333333336,
+          "max": 48.833333333333336
+        },
+        "positive_fingerprint_groups": {
+          "mean": 48.233333333333334,
+          "sd": 0.5845225972250054,
+          "min": 47.333333333333336,
+          "max": 48.833333333333336
+        },
+        "hits_per_confirmation": {
+          "mean": 0.4650282491149046,
+          "sd": 0.00428802697737274,
+          "min": 0.4582669074173596,
+          "max": 0.4690344449978435
+        },
+        "groups_per_confirmation": {
+          "mean": 0.4650282491149046,
+          "sd": 0.00428802697737274,
+          "min": 0.4582669074173596,
+          "max": 0.4690344449978435
+        }
+      }
+    },
+    {
+      "ranker": "primary_score",
+      "operator": "top_ranked",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 57.5,
+          "sd": 0.6770032003863296,
+          "min": 56.833333333333336,
+          "max": 58.333333333333336
+        },
+        "positive_structure_groups": {
+          "mean": 52.03333333333333,
+          "sd": 0.8283182426526111,
+          "min": 50.833333333333336,
+          "max": 53
+        },
+        "positive_fingerprint_groups": {
+          "mean": 52.266666666666666,
+          "sd": 0.9398581453247792,
+          "min": 51.166666666666664,
+          "max": 53.166666666666664
+        },
+        "hits_per_confirmation": {
+          "mean": 0.5739531312745166,
+          "sd": 0.0049866940937179785,
+          "min": 0.5687690376315785,
+          "max": 0.5815537427258205
+        },
+        "groups_per_confirmation": {
+          "mean": 0.5253477075077272,
+          "sd": 0.005685372106409638,
+          "min": 0.5170147782906315,
+          "max": 0.532957374384518
+        }
+      }
+    },
+    {
+      "ranker": "primary_score",
+      "operator": "cluster_round_robin",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 55.233333333333334,
+          "sd": 0.4183300132670398,
+          "min": 54.666666666666664,
+          "max": 55.833333333333336
+        },
+        "positive_structure_groups": {
+          "mean": 55.233333333333334,
+          "sd": 0.4183300132670398,
+          "min": 54.666666666666664,
+          "max": 55.833333333333336
+        },
+        "positive_fingerprint_groups": {
+          "mean": 53.36666666666667,
+          "sd": 0.4624812308503874,
+          "min": 52.833333333333336,
+          "max": 53.833333333333336
+        },
+        "hits_per_confirmation": {
+          "mean": 0.555601307398899,
+          "sd": 0.00296524123104083,
+          "min": 0.5514686420919797,
+          "max": 0.5588439503956245
+        },
+        "groups_per_confirmation": {
+          "mean": 0.555601307398899,
+          "sd": 0.00296524123104083,
+          "min": 0.5514686420919797,
+          "max": 0.5588439503956245
+        }
+      }
+    },
+    {
+      "ranker": "primary_score",
+      "operator": "classical_max_min",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 48.43333333333334,
+          "sd": 0.8215838362577487,
+          "min": 47.333333333333336,
+          "max": 49.5
+        },
+        "positive_structure_groups": {
+          "mean": 48.4,
+          "sd": 0.8045012257431436,
+          "min": 47.333333333333336,
+          "max": 49.5
+        },
+        "positive_fingerprint_groups": {
+          "mean": 48.43333333333334,
+          "sd": 0.8215838362577487,
+          "min": 47.333333333333336,
+          "max": 49.5
+        },
+        "hits_per_confirmation": {
+          "mean": 0.4266062147971374,
+          "sd": 0.0049882460983163455,
+          "min": 0.41881387103950096,
+          "max": 0.4315181401957795
+        },
+        "groups_per_confirmation": {
+          "mean": 0.42632843701935963,
+          "sd": 0.004760732891924583,
+          "min": 0.41881387103950096,
+          "max": 0.4315181401957795
+        }
+      }
+    },
+    {
+      "ranker": "nearest_primary",
+      "operator": "top_ranked",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 73.4,
+          "sd": 0.19002923751652404,
+          "min": 73.16666666666667,
+          "max": 73.66666666666667
+        },
+        "positive_structure_groups": {
+          "mean": 42.63333333333333,
+          "sd": 0.18257418583505666,
+          "min": 42.5,
+          "max": 42.833333333333336
+        },
+        "positive_fingerprint_groups": {
+          "mean": 40.3,
+          "sd": 0.18257418583505666,
+          "min": 40.166666666666664,
+          "max": 40.5
+        },
+        "hits_per_confirmation": {
+          "mean": 0.6553256387717481,
+          "sd": 0.0012601367792265793,
+          "min": 0.6538579867616429,
+          "max": 0.6572111367363491
+        },
+        "groups_per_confirmation": {
+          "mean": 0.3767932092491198,
+          "sd": 0.0010694774519661146,
+          "min": 0.37601217334887316,
+          "max": 0.3779647630994898
+        }
+      }
+    },
+    {
+      "ranker": "nearest_primary",
+      "operator": "cluster_round_robin",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 65.7,
+          "sd": 0.4314059701848266,
+          "min": 65.16666666666667,
+          "max": 66.16666666666667
+        },
+        "positive_structure_groups": {
+          "mean": 65.7,
+          "sd": 0.4314059701848266,
+          "min": 65.16666666666667,
+          "max": 66.16666666666667
+        },
+        "positive_fingerprint_groups": {
+          "mean": 55.666666666666664,
+          "sd": 0.31180478223116115,
+          "min": 55.333333333333336,
+          "max": 56
+        },
+        "hits_per_confirmation": {
+          "mean": 0.6020880198081042,
+          "sd": 0.007887098919709352,
+          "min": 0.5921786209937274,
+          "max": 0.6107340367572824
+        },
+        "groups_per_confirmation": {
+          "mean": 0.6020880198081042,
+          "sd": 0.007887098919709352,
+          "min": 0.5921786209937274,
+          "max": 0.6107340367572824
+        }
+      }
+    },
+    {
+      "ranker": "nearest_primary",
+      "operator": "classical_max_min",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 46.666666666666664,
+          "sd": 0.7817359599705711,
+          "min": 45.5,
+          "max": 47.666666666666664
+        },
+        "positive_structure_groups": {
+          "mean": 46.53333333333333,
+          "sd": 0.9082951062292476,
+          "min": 45.166666666666664,
+          "max": 47.666666666666664
+        },
+        "positive_fingerprint_groups": {
+          "mean": 46.666666666666664,
+          "sd": 0.7817359599705711,
+          "min": 45.5,
+          "max": 47.666666666666664
+        },
+        "hits_per_confirmation": {
+          "mean": 0.43683712474501246,
+          "sd": 0.004929881733278592,
+          "min": 0.431721869386701,
+          "max": 0.4424271065377412
+        },
+        "groups_per_confirmation": {
+          "mean": 0.43572601363390134,
+          "sd": 0.0060423349672774525,
+          "min": 0.4289440916089232,
+          "max": 0.4424271065377412
+        }
+      }
+    },
+    {
+      "ranker": "random",
+      "operator": "top_ranked",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 52.4,
+          "sd": 1.0448285345771642,
+          "min": 51,
+          "max": 53.666666666666664
+        },
+        "positive_structure_groups": {
+          "mean": 50.5,
+          "sd": 1.1547005383792512,
+          "min": 49,
+          "max": 51.666666666666664
+        },
+        "positive_fingerprint_groups": {
+          "mean": 50.6,
+          "sd": 1.2725739445880733,
+          "min": 49,
+          "max": 51.833333333333336
+        },
+        "hits_per_confirmation": {
+          "mean": 0.5112328821095526,
+          "sd": 0.004683249070547365,
+          "min": 0.5057042670161898,
+          "max": 0.5154848459144157
+        },
+        "groups_per_confirmation": {
+          "mean": 0.4929980100779111,
+          "sd": 0.012103506395471456,
+          "min": 0.4774553309369456,
+          "max": 0.5060124395224261
+        }
+      }
+    },
+    {
+      "ranker": "random",
+      "operator": "cluster_round_robin",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 51.666666666666664,
+          "sd": 0.6972166887783945,
+          "min": 50.833333333333336,
+          "max": 52.666666666666664
+        },
+        "positive_structure_groups": {
+          "mean": 51.666666666666664,
+          "sd": 0.6972166887783945,
+          "min": 50.833333333333336,
+          "max": 52.666666666666664
+        },
+        "positive_fingerprint_groups": {
+          "mean": 51.0,
+          "sd": 0.8740073734751254,
+          "min": 50.166666666666664,
+          "max": 52.166666666666664
+        },
+        "hits_per_confirmation": {
+          "mean": 0.5017006732021724,
+          "sd": 0.013677589408179102,
+          "min": 0.479519062248416,
+          "max": 0.511391150753466
+        },
+        "groups_per_confirmation": {
+          "mean": 0.5017006732021724,
+          "sd": 0.013677589408179102,
+          "min": 0.479519062248416,
+          "max": 0.511391150753466
+        }
+      }
+    },
+    {
+      "ranker": "random",
+      "operator": "classical_max_min",
+      "seed_count": 5,
+      "metrics": {
+        "confirmation_count": {
+          "mean": 115.33333333333333,
+          "sd": 0.0,
+          "min": 115.33333333333333,
+          "max": 115.33333333333333
+        },
+        "confirmed_positives": {
+          "mean": 46.93333333333333,
+          "sd": 0.4944132324730429,
+          "min": 46.333333333333336,
+          "max": 47.666666666666664
+        },
+        "positive_structure_groups": {
+          "mean": 46.833333333333336,
+          "sd": 0.4564354645876378,
+          "min": 46.333333333333336,
+          "max": 47.5
+        },
+        "positive_fingerprint_groups": {
+          "mean": 46.93333333333333,
+          "sd": 0.4944132324730429,
+          "min": 46.333333333333336,
+          "max": 47.666666666666664
+        },
+        "hits_per_confirmation": {
+          "mean": 0.451395524443781,
+          "sd": 0.008614820837331017,
+          "min": 0.437212463358829,
+          "max": 0.45922822923068757
+        },
+        "groups_per_confirmation": {
+          "mean": 0.45065270297062243,
+          "sd": 0.008999026299994333,
+          "min": 0.43582357446994013,
+          "max": 0.45922822923068757
+        }
+      }
+    }
+  ],
+  "universe_observations": 6896,
+  "primary_observations": 1333191,
+  "source_experiment_blocks": 4,
+  "annotation_connected_components": 1,
+  "aggregation": "equal-campaign mean within each seed",
+  "uncertainty": "Observed seed range and SD; not a biological population confidence interval",
+  "limitations": [
+    "Exposed development evidence; no independent confirmation evaluation or new selector.",
+    "Observation-supported primary hits only; missing confirmation is excluded, not negative.",
+    "Source nonpositive combines inactive and inconclusive outcomes.",
+    "Five-seed ranges describe conditional repetitions, not biological population confidence intervals.",
+    "Four provider blocks, one annotation-connected component; no independent-family or chemical-OOD claim.",
+    "Round-robin has one selection per group at these budgets: D equals H mechanically.",
+    "SI/repository names conflict for 13 of 17 pairs; numeric AIDs and the pinned repository govern.",
+    "Counts per confirmation are not monetary savings, laboratory time or clinical efficacy.",
+    "RL was not evaluated in CF1. HIV policies and current simulator results are separate studies.",
+    "Internal derived-report use only; raw redistribution and commercial data clearance are not established."
+  ],
+  "source_labels": {
+    "en": {
+      "title": "Confirmation portfolio evidence",
+      "status": "Development feasibility complete",
+      "scope": "Published processed-repository reproduction; observation-supported primary hits only",
+      "confirmation_zero": "Source nonpositive includes inactive or inconclusive; missing is never imputed",
+      "next_step": "Owner reviews contribution and study design before any new selector or independent evaluation"
+    },
+    "th": {
+      "title": "\u0e2b\u0e25\u0e31\u0e01\u0e10\u0e32\u0e19\u0e01\u0e32\u0e23\u0e08\u0e31\u0e14\u0e0a\u0e38\u0e14\u0e2a\u0e32\u0e23\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e22\u0e37\u0e19\u0e22\u0e31\u0e19\u0e1c\u0e25",
+      "status": "\u0e15\u0e23\u0e27\u0e08\u0e04\u0e27\u0e32\u0e21\u0e40\u0e1b\u0e47\u0e19\u0e44\u0e1b\u0e44\u0e14\u0e49\u0e1a\u0e19\u0e0a\u0e38\u0e14\u0e1e\u0e31\u0e12\u0e19\u0e32\u0e40\u0e2a\u0e23\u0e47\u0e08\u0e41\u0e25\u0e49\u0e27",
+      "scope": "\u0e17\u0e14\u0e2a\u0e2d\u0e1a\u0e08\u0e32\u0e01\u0e02\u0e49\u0e2d\u0e21\u0e39\u0e25\u0e17\u0e35\u0e48\u0e1c\u0e39\u0e49\u0e40\u0e02\u0e35\u0e22\u0e19\u0e1b\u0e23\u0e30\u0e21\u0e27\u0e25\u0e1c\u0e25\u0e41\u0e25\u0e30\u0e40\u0e1c\u0e22\u0e41\u0e1e\u0e23\u0e48 \u0e40\u0e09\u0e1e\u0e32\u0e30\u0e2a\u0e32\u0e23 primary hit \u0e17\u0e35\u0e48\u0e21\u0e35\u0e1c\u0e25\u0e22\u0e37\u0e19\u0e22\u0e31\u0e19\u0e1a\u0e31\u0e19\u0e17\u0e36\u0e01\u0e44\u0e27\u0e49",
+      "confirmation_zero": "\u0e04\u0e48\u0e32 0 \u0e23\u0e27\u0e21\u0e1c\u0e25\u0e44\u0e21\u0e48\u0e2d\u0e2d\u0e01\u0e24\u0e17\u0e18\u0e34\u0e4c\u0e41\u0e25\u0e30\u0e1c\u0e25\u0e17\u0e35\u0e48\u0e22\u0e31\u0e07\u0e2a\u0e23\u0e38\u0e1b\u0e44\u0e21\u0e48\u0e44\u0e14\u0e49 \u0e2a\u0e48\u0e27\u0e19\u0e1c\u0e25\u0e17\u0e35\u0e48\u0e2b\u0e32\u0e22\u0e44\u0e1b\u0e44\u0e21\u0e48\u0e40\u0e15\u0e34\u0e21\u0e40\u0e1b\u0e47\u0e19 0",
+      "next_step": "\u0e40\u0e08\u0e49\u0e32\u0e02\u0e2d\u0e07\u0e42\u0e04\u0e23\u0e07\u0e01\u0e32\u0e23\u0e23\u0e48\u0e27\u0e21\u0e15\u0e31\u0e14\u0e2a\u0e34\u0e19\u0e43\u0e08 contribution \u0e41\u0e25\u0e30\u0e41\u0e1a\u0e1a\u0e01\u0e32\u0e23\u0e28\u0e36\u0e01\u0e29\u0e32\u0e01\u0e48\u0e2d\u0e19\u0e1e\u0e31\u0e12\u0e19\u0e32\u0e27\u0e34\u0e18\u0e35\u0e43\u0e2b\u0e21\u0e48\u0e2b\u0e23\u0e37\u0e2d\u0e1b\u0e23\u0e30\u0e40\u0e21\u0e34\u0e19\u0e0a\u0e38\u0e14\u0e2d\u0e34\u0e2a\u0e23\u0e30"
+    }
+  },
+  "source_hashes": [
+    {
+      "path": "research/product_handoffs/lr_cf1_v1/evidence-card-v1.json",
+      "bytes": 3884,
+      "sha256": "e4ed702d61f1a283cc7bc0f1abcd4b41dd4f241f1b66857afed9a299254a3fa9"
+    },
+    {
+      "path": "research/product_handoffs/lr_cf1_v1/evidence-card.schema.json",
+      "bytes": 4357,
+      "sha256": "06709cfa3d1878a95291a5d0ef1b4b4a26c54e9777eda9b9d1f1ec353f5fea69"
+    },
+    {
+      "path": "docs/evidence/lr-cf1-20261109-v1/portfolio-cells-v1.csv",
+      "bytes": 384138,
+      "sha256": "495fd9d918b00db16e779a866f9f8a801e300ef0b6e4c23635dd1fb9a395d831"
+    },
+    {
+      "path": "docs/evidence/lr-cf1-20261109-v1/results-summary-v1.json",
+      "bytes": 114773,
+      "sha256": "fff5b722a6ade896f056c798bcf40fdc3a21909e63882909f9915dbec7e10486"
+    }
+  ],
+  "source_url": "https://github.com/dahvida/AIC_Finder/tree/04c58e85188e724ec5ff44cbed2e7b960f6f3df3",
+  "paper_url": "https://doi.org/10.1021/acscentsci.3c01517",
+  "final16_access": false,
+  "new_selector_training": false,
+  "publication_ready": false
+}

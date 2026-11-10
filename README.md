@@ -7,6 +7,8 @@
 
 <p align="center">
   <a href="docs/manual/CuraLoop-RL-Dashboard-Guide-EN-v3.pdf"><strong>English user manual (PDF)</strong></a> &nbsp;·&nbsp;
+  <a href="docs/manual/CuraLoop-RL-Confirmation-Evidence-Guide-EN-v4.pdf"><strong>Confirmation evidence guide (PDF)</strong></a> &nbsp;·&nbsp;
+  <a href="docs/evidence/lr-cf2p-20261110-v1/README.md">CF1 integration gallery</a> &nbsp;·&nbsp;
   <a href="docs/evidence/four-screen-dashboard-20261108-v1/README.md">EN/TH screen gallery</a> &nbsp;·&nbsp;
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
   <a href="#architecture">Architecture</a> &nbsp;·&nbsp;
@@ -55,12 +57,25 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 | **Compound Explorer** | Search a structure table or grid; inspect public descriptors, outcome visibility and selection history. |
 | **Scenario builder** | Configure dataset, seed, policy, budget, capacity, delay, jitter and missingness. |
 | **Research evidence** | Inspect provenance and limitations; export, resume and recover saved campaigns or revisions. |
+| **Confirmation evidence** | Compare recorded CF1 H/coverage tradeoffs across six development campaigns, five budgets and 18 arms; inspect source hashes and download an EN/TH comparison brief. |
 | **Guided presentation** | Explain the screening loop in 5-7 minutes using the same live campaign. |
 | **C Workspace** | Trace cached declared fields to their original sources, review readiness and export local files in EN/TH. |
 
 ## Research and R&D pilot programme
 
-**Current research checkpoint:** [LR-CF1 is complete](docs/03_research/LR_CF1_RESULTS_20261109.md).
+**Current checkpoint, 10 November 2026:** [LR-CF2P is complete](docs/06_execution/LR_CF2P_OWNER_CHECKPOINT_20261110.md).
+CF2-Design ends with **NO_GO_THIS_MECHANISM**: two generic coverage/feedback
+formulations do not yet supply a distinct identifiable new method. P-CF1 is
+**PASS_INTERNAL_INTEGRATION**: the main app and additive local C Workspace now
+read the same authenticated CF1 aggregates, with all 70 EN/TH comparison views,
+filtered exports, real screenshots and a six-page English PDF addendum.
+No selector was trained and final16 remains sealed. This closes a design
+decision and internal product integration; user/business validation and a
+publishable method remain open. [Integration guide](docs/05_product/CF1_INTEGRATION_GUIDE_20261110.md)
+· [Evidence](docs/evidence/lr-cf2p-20261110-v1/README.md)
+· [Full phase status](docs/06_execution/PROJECT_PHASE_STATUS_20261110.md).
+
+**Prior research checkpoint:** [LR-CF1 is complete](docs/03_research/LR_CF1_RESULTS_20261109.md).
 Six published-source development campaigns, 60 molecular fits and2,700 fixed
 portfolio cells passed, including independent H/D recalculation and complete
 private return/exact remote cleanup. Classical group diversification increases
@@ -69,7 +84,8 @@ Final16 remains sealed and journal readiness is not established. Open the
 [EN/TH offline evidence report](research/product_handoffs/lr_cf1_v1/README.md),
 [English paper insert](docs/07_publication/LR_CF1_METHODS_RESULTS_INSERT_20261109.md)
 and [owner checkpoint](docs/06_execution/LR_CF1_OWNER_CHECKPOINT_20261109.md).
-Future method/product proposals require a new owner decision.
+The subsequent P-CF1 integration above uses these recorded aggregates; any
+further method, workflow pilot or live connector needs a new owner decision.
 
 **9 November 2026:** [LR-D23 is complete](docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md).
 The residual candidate did not meet its frozen D2 criteria; Gk2 achieved more

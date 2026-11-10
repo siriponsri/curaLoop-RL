@@ -107,3 +107,12 @@ For each change of status record: claim ID, previous wording, new wording, run/a
 ## Historical literature-derived claim boundaries
 
 The version-2 review supports statements about inspected source versions and planned controls. It does not support “all journal versions reproduced,” “unbiased for all targets,” “VDR labels corrected,” “BayBE savings achieved,” or “new asynchronous backend implemented.” R05's known-active start, R03's target ascertainment and R26's case-specific objective must remain visible whenever their results inform a comparison. The discrepancy register records uncertainty rather than declaring source errors.
+
+## CF2 design and P-CF1 integration, 10 November 2026
+
+| ID | Claim | Evidence status | Evidence and limit |
+| --- | --- | --- | --- |
+| CF2P-R1 | Two generic probability/dependence or feedback coverage formulations supply a new method | NO_GO_THIS_MECHANISM | [Design decision](../03_research/CF2_DESIGN_DECISION_20261110.md), closest-work locations and 12 constructed cases. No fitted joint model, identifiable adaptive evidence, new selector or final access. Not a proof that every specific alternative is impossible. |
+| CF2P-P1 | Main app and additive local C tools expose the authenticated CF1 study | PASS_INTERNAL_INTEGRATION | [Integration guide](../05_product/CF1_INTEGRATION_GUIDE_20261110.md), 70 actual served-build EN/TH views, 22 Python/API and 26 frontend tests, native stdio, atomic local exports, screenshots and six-page English PDF. No live connector or representative-user study. |
+| CF2P-P2 | Product integration establishes laboratory/business value or journal readiness | NOT_ESTABLISHED | All six source campaigns remain exposed development; structural-group coverage is a proxy. No prospective assay, customer, independent method evaluation or submission. |
+| CF2P-A1 | This goal preserves earlier evidence and closes within fresh limits | CHECK_CLOSURE_RECEIPTS | [Audit/budget](../evidence/lr-cf2p-20261110-v1/README.md): 13 old ledgers, 66 merged scientific pins, five inputs and prior C/manual bytes. Local-only compute; read-only SSH, no remote files created or deleted. |

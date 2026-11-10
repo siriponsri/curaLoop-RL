@@ -1,0 +1,40 @@
+{
+  "status": "PASS_PARENT_RENDERED_SELF_REVIEW",
+  "independent_reviewer": false,
+  "pdf": "docs/manual/CuraLoop-RL-Confirmation-Evidence-Guide-EN-v4.pdf",
+  "sha256": "940d1fd025f3254ed005739ab0bb2d688565f57f60e6e8a5882f33d168f3796f",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "final_pages_1_to_5_render_byte_identical_to_viewed_first_render": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+  },
+  "page6_repaired_and_final_render_viewed": true,
+  "issue_found": "Original page 6 heading clipped at right edge",
+  "repair": "Shortened heading with measured width assertion; body and all other page renders unchanged",
+  "checks": [
+    "No final title/body/footer overlap or clipped text",
+    "Readable chart and selected metrics at printed page size",
+    "Actual app/export screenshots correctly described",
+    "Thai mobile chart labels inside SVG",
+    "Grayscale operator shapes and selected outline remain distinguishable",
+    "Scope, seed ranges and provenance preserved"
+  ],
+  "ui_views_reviewed": [
+    "screens-v4/02-tradeoff-en.png",
+    "screens-v4/06b-tradeoff-mobile-th.png",
+    "screens-v4/09-c-workspace-th.png"
+  ],
+  "grayscale_capture_private": ".local/lr-cf2p-20261110-v1/chart-grayscale-v4.png",
+  "visual_spec": "visual-spec-v1.json",
+  "score_or_independent_certification_claim": false
+}

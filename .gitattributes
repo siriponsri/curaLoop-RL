@@ -250,3 +250,11 @@ docs/06_execution/LR_CF1_*.md -text whitespace=cr-at-eol
 docs/07_publication/LR_CF1_*.md -text whitespace=cr-at-eol
 docs/evidence/lr-cf1-20261109-v1/** -text whitespace=cr-at-eol
 docs/evidence/lr-cf1-20261109-v1/figures/*.svg whitespace=-blank-at-eol,cr-at-eol
+
+# LR-CF2P executed adapter, helpers and release identities.
+src/curaloop_rd/confirmation_*.py -text whitespace=cr-at-eol
+tools/cf2p_*.py -text whitespace=cr-at-eol
+tools/build_confirmation_manual_en_v4.py -text whitespace=cr-at-eol
+tests/test_confirmation_study.py -text whitespace=cr-at-eol
+research/manifests/lr_cf2p_* -text whitespace=cr-at-eol
+docs/evidence/lr-cf2p-20261110-v1/** -text whitespace=cr-at-eol

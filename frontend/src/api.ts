@@ -11,6 +11,7 @@ import type {
   SavedComparisons,
   Scenario,
 } from "./types";
+import type { ConfirmationStudy } from "./confirmation";
 
 export class ApiError extends Error {
   constructor(
@@ -53,6 +54,7 @@ export async function request<T>(
 const post = <T>(path: string, body: unknown) =>
   request<T>(path, { method: "POST", body: JSON.stringify(body) });
 export const api = {
+  confirmation: (campaign = "equal", budget = 10) => request<ConfirmationStudy>("/studies/cf1?" + new URLSearchParams({ campaign, budget_percent: String(budget) })),
   meta: () => request<Meta>("/meta"),
   datasets: () => request<DatasetInfo[]>("/datasets"),
   policies: () => request<PolicyInfo[]>("/policies"),

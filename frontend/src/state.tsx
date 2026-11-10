@@ -10,6 +10,7 @@ import {
 import { api, ApiError } from "./api";
 import { readPreference, removePreference, writePreference } from "./lib";
 import type { DatasetInfo, Evidence, Meta, Policy, PolicyInfo, RunView, Scenario } from "./types";
+import { useLocation } from "react-router-dom";
 
 export const defaultScenario: Scenario = {
   dataset: "hiv_moleculenet_replay_v1", seed: 42, candidate_count: 1200,
@@ -38,6 +39,7 @@ const Context = createContext<Store | null>(null);
 const message = (err: unknown) => err instanceof Error ? err.message : String(err);
 
 export function AppProvider({ children }: { children: ReactNode }) {
+  const initialStudyRoute = useRef(useLocation().pathname === "/confirmation");
   const [run, setRun] = useState<RunView | null>(null),
     [meta, setMeta] = useState<Meta | null>(null),
     [datasets, setDatasets] = useState<DatasetInfo[]>([]),
@@ -74,6 +76,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
           setNotice("The previous campaign is unavailable. Saved campaigns and portable JSON recovery are available in Research evidence.");
         }
       }
+      if (!current && initialStudyRoute.current) return;
       if (!current) {
         const saved = await api.runs();
         if (saved.recovery_issues.length) {

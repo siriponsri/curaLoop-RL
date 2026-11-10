@@ -1,29 +1,20 @@
 # Goal: a defensible method and a useful R&D plugin
 
-**Current: CF2-Design + P-CF1 selected; ten-hour proposal awaiting approval.**
-Read the [complete phase status](docs/06_execution/PROJECT_PHASE_STATUS_20261110.md)
-and [combined LR-CF2P proposal](docs/06_execution/LONG_RUN_CF2_DESIGN_P_CF1_PROPOSAL_20261110.md).
-Recommended new ceiling: 8 CPU-hours / 10 elapsed hours / max two CPU workers.
-This would close one research-design decision and one internal aggregate
-product integration; no training or independent final evaluation. Execution
-is disabled, with no new clock/root or SSH. The owner reviews this fresh scope
-before implementation. CF1 remains complete with the limitations below.
+**Current: LR-CF2P complete; owner checkpoint before another phase.**
+CF2-Design is **NO_GO_THIS_MECHANISM** after two formulations and 12 constructed
+cases. P-CF1 is **PASS_INTERNAL_INTEGRATION**: actual main-app EN/TH comparison,
+strict aggregate API, additive local C Workspace tools, filtered exports,
+70 served-build views and a six-page English PDF addendum. No molecular fit,
+private CF1 row or final16 was opened. Journal readiness is **NOT_READY**.
 
-Six admitted published-source campaigns, 1,333,191 retained primary observations,
-6,896 observation-supported confirmations, 60 molecular fits and2,700 portfolio
-cells completed. All 30 real MVS-A score checks and independent local H/D recount
-passed. Complete private return/reread and exact owned remote cleanup passed.
-
-The [results](docs/03_research/LR_CF1_RESULTS_20261109.md) confirm a classical
-hit/coverage tradeoff. **NO_GO for a quota-only new-method claim; journal readiness
-is not established.** The [EN/TH offline report](research/product_handoffs/lr_cf1_v1/report.html)
-and [English paper insert](docs/07_publication/LR_CF1_METHODS_RESULTS_INSERT_20261109.md)
-preserve the actual evidence. Final16 remains sealed; no novel selector or live
-integration was activated. Read the [owner checkpoint](docs/06_execution/LR_CF1_OWNER_CHECKPOINT_20261109.md)
-and [evidence index](docs/evidence/lr-cf1-20261109-v1/README.md).
-
-The earlier alternatives have been selected together for proposal preparation.
-No unused LR-CF1 allowance or old conditional grant releases execution.
+Read the [owner checkpoint](docs/06_execution/LR_CF2P_OWNER_CHECKPOINT_20261110.md),
+[full phase status](docs/06_execution/PROJECT_PHASE_STATUS_20261110.md),
+[integration guide](docs/05_product/CF1_INTEGRATION_GUIDE_20261110.md) and
+[acceptance/closure evidence](docs/evidence/lr-cf2p-20261110-v1/README.md).
+The current design decision and internal integration close F1 and F4 of the
+eight-package roadmap. Six conditional packages remain; none starts automatically.
+Next actor: owner reviews product-workflow evaluation or a different specific
+research direction. A benchmark-publication pivot is not the selected fallback.
 
 ## Historical checkpoints
 

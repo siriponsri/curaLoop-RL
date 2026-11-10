@@ -1,22 +1,73 @@
-# Handoff: LR-CF1 complete; combined next proposal ready
+# Handoff: LR-CF2P owner checkpoint
 
-## Current planning checkpoint, 10 November 2026
+**Current: LR-CF2P complete; owner checkpoint before another phase.**
+CF2-Design is **NO_GO_THIS_MECHANISM** after two formulations and 12 constructed
+cases. P-CF1 is **PASS_INTERNAL_INTEGRATION**: actual main-app EN/TH comparison,
+strict aggregate API, additive local C Workspace tools, filtered exports,
+70 served-build views and a six-page English PDF addendum. No molecular fit,
+private CF1 row or final16 was opened. Journal readiness is **NOT_READY**.
 
-The owner selected **CF2-Design + P-CF1** and requested all phase statuses plus
-a ten-hour long run. The [phase report](docs/06_execution/PROJECT_PHASE_STATUS_20261110.md)
-records completed investigations, scientific failures and unrun work. The
-[LR-CF2P proposal](docs/06_execution/LONG_RUN_CF2_DESIGN_P_CF1_PROPOSAL_20261110.md)
-recommends a fresh **8 CPU-hours / 10 elapsed hours / max two combined CPU
-workers**. Its [configuration](research/configs/lr_cf2p_proposal_20261110_v1.json)
-is disabled, with null release/deadline/roots. No new execution was released.
+Read the [owner checkpoint](docs/06_execution/LR_CF2P_OWNER_CHECKPOINT_20261110.md),
+[full phase status](docs/06_execution/PROJECT_PHASE_STATUS_20261110.md),
+[integration guide](docs/05_product/CF1_INTEGRATION_GUIDE_20261110.md) and
+[acceptance/closure evidence](docs/evidence/lr-cf2p-20261110-v1/README.md).
+The current design decision and internal integration close F1 and F4 of the
+eight-package roadmap. Six conditional packages remain; none starts automatically.
+Next actor: owner reviews product-workflow evaluation or a different specific
+research direction. A benchmark-publication pivot is not the selected fallback.
 
-Only planning/navigation files changed in this proposal checkpoint. No build,
-SSH, new ledger/root, data intake, model fit or product integration ran. CF1's
-scientific result, source/aggregate bytes, closed budget and prior exact cleanup
-are unchanged. Normal main proposal delivery is authorized. Next actor: owner
-reviews the combined budget and real local aggregate integration scope before
-execution. This selection supersedes the older alternatives-only wording, not
-the old closed scopes or final16 protection.
+## Exact continuation boundary
+
+Working checkout: `C:\Users\User\Desktop\myProject\curaloop-rl`, branch main.
+Fresh local namespace: `.local/lr-cf2p-20261110-v1`. Release base is
+`ebf5c5be06e8b2a84c50d9d2f83e6d06f6558b60`. The enclosing main delivery commit
+identifies this checkpoint; verify HEAD, origin/main and the final owner report
+before continuing. Finish only pending delivery if any; do not relaunch completed
+bookings, recreate deleted old roots, reuse an old budget or run another design loop.
+
+Original release `2026-11-09T22:54:26+00:00`, deadline
+`2026-11-10T08:54:26+00:00` (15:54:26 Bangkok). Fresh maximum 8 CPU-hours,
+10 elapsed hours, max two combined workers; the actual work succeeded locally
+on one CPU / aggregate 1 GiB. No remote task/upload/export was created. Read-only
+SSH absence is recorded; new remote return/deletion is not applicable. Prior CF1
+private return and exact deletion remain intact. Closed budget and preservation
+receipts are in the current evidence index; all failed reservations are retained.
+
+Key current files: shared adapter `src/curaloop_rd/confirmation_study.py`, API
+`api/main.py`, main page `frontend/src/pages/Confirmation.tsx`, local tools
+`confirmation_workspace_v3.py` / `confirmation_mcp_v3.py`, and tests
+`tests/test_confirmation_study.py` / `frontend/src/confirmation.test.tsx`.
+Current build/browser v5 are final. Manual uses actual v4 Confirmation captures
+with unchanged page component/layout; final navigation additionally allows the
+explicit empty-state Scenario builder. All 22 Python/API and 26 frontend checks
+pass; browser verifies all 70 numerical views. Old full manual v3 is preserved.
+
+Public evidence contains versioned failures as well as passes. Browser v1's port
+was rejected by the original origin policy; v3 caught Thai SVG-label overflow.
+The first PDF had one clipped heading; generation v2 and visual review supersede
+it. Initial lint findings were unused/import-format issues, repaired within scope.
+Do not remove failed charges or describe these as failed scientific fits.
+There were no new fits in this phase. Existing FastAPI TestClient emits one
+dependency deprecation warning; the regression tests pass.
+
+Research disposition: one ticket, NO_GO for two generic mechanisms, not all
+confirmation research. Expected coverage and Bayesian feedback have close prior
+work; current aggregates cannot identify the proposed joint/adaptive signal.
+No independent scientific or user reviewer was invented. All six CF1 campaigns
+stay exposed development in one annotation-connected component. Final16,
+historical scientific pins/STOPs and inactive conditional96h grant stay closed.
+No paid/GPU/live external writes/deployment/submission occurred.
+
+Acceptance gaps: representative-researcher workflow evaluation, chosen live
+connector, commercial-data basis, deployment/customer pilot, distinct molecular
+method, independent confirmation population, complete journal manuscript and
+submission authority. Recommended next discussion is F5 protocol design, not an
+automatic F2 training cycle. Owner chooses the next scope and fresh budget.
+
+## Historical CF1 handoff
+
+The material below is preserved at its earlier checkpoint; its old future-task
+wording does not supersede the current P-CF1 integration above.
 
 ## Completed LR-CF1 checkpoint
 

@@ -4,6 +4,7 @@ import {
   BarChart3,
   BookOpen,
   ChevronRight,
+  FileCheck,
   FlaskConical,
   LayoutDashboard,
   Menu,
@@ -27,6 +28,7 @@ const Lab = lazy(() => import("./pages/Lab"));
 const Compounds = lazy(() => import("./pages/Compounds"));
 const Benchmarks = lazy(() => import("./pages/Benchmarks"));
 const Evidence = lazy(() => import("./pages/Evidence"));
+const Confirmation = lazy(() => import("./pages/Confirmation"));
 const GuidedPresentation = lazy(() => import("./pages/Presentation"));
 
 const pages = [
@@ -47,6 +49,11 @@ const pages = [
     path: "/evidence",
     en: "Research evidence",
     icon: BookOpen,
+  },
+  {
+    path: "/confirmation",
+    en: "Confirmation evidence",
+    icon: FileCheck,
   },
   {
     path: "/presentation",
@@ -133,7 +140,7 @@ function Workspace() {
             <LanguageSwitch />
             <span className="connection-pill">
               <Wifi size={13} />
-              {loading ? t("Connecting") : !run ? t("Connection unavailable") : t("Local API")}
+              {loading ? t("Connecting") : !meta ? t("Connection unavailable") : t("Local API")}
             </span>
           </div>
         </header>
@@ -170,7 +177,13 @@ function Workspace() {
               {t(notice)}
             </div>
           )}
-          {loading ? (
+          {pathname === "/confirmation" ? (
+            <RouteBoundary key="confirmation" fallback={<RouteError />}>
+              <Suspense fallback={<div className="loading-panel" role="status">{t("Loading workspace…")}</div>}>
+                <Confirmation />
+              </Suspense>
+            </RouteBoundary>
+          ) : loading ? (
             <div className="initial-loading">
               <div className="spinner" />
               <h1>
@@ -180,6 +193,12 @@ function Workspace() {
                 {t("Loading public metadata and the current local campaign.")}
               </p>
             </div>
+          ) : !run && pathname === "/scenario" ? (
+            <RouteBoundary key="empty-scenario" fallback={<RouteError />}>
+              <Suspense fallback={<div className="loading-panel" role="status">{t("Loading workspace…")}</div>}>
+                <Scenario />
+              </Suspense>
+            </RouteBoundary>
           ) : !run ? (
             <SavedRuns includeImport />
           ) : (
