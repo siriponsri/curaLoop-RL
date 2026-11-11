@@ -1,0 +1,32 @@
+{
+  "status": "PASS_MAIN_DATASET_PAUSE_CHECKPOINT_DELIVERY",
+  "verified_utc": "2026-11-11T08:32:28.833896+00:00",
+  "source_and_checkpoint_commit": "d6ff314bbcb53d60f4a4a8fe00f7102131933439",
+  "observed_origin_main_commit": "d6ff314bbcb53d60f4a4a8fe00f7102131933439",
+  "clean_tree_before_delivery_receipt": true,
+  "receipt_commit_note": "This receipt is delivered in a subsequent metadata-only commit; source/checkpoint identity above is already pushed.",
+  "pause_status": "PAUSED_OWNER_REQUEST",
+  "resume_clock_state": "AWAITING_OWNER_RESUME",
+  "effective_resume_start_utc": null,
+  "effective_resume_deadline_utc": null,
+  "hours_after_next_explicit_owner_resume": 168,
+  "paused_ledger_sha256": "3d43582afda2df3877c4bd6d96b6cad838b60398593bc6ac01886b37333a6382",
+  "cpu_gpu_budget_reset": false,
+  "dataset_archive_ready": true,
+  "dataset_bytes": 1769478786,
+  "dataset_sha256": "46e715d3b2196d459d2dff52aa487f506a95ec44b44262e82208d086ea879610",
+  "raw_archive_committed": false,
+  "private_intake_committed": false,
+  "no_started_jobs_remaining": true,
+  "model_calls": 0,
+  "gpu_allocated_seconds": 0,
+  "prior_ledger_identities_preserved": 15,
+  "prior_agent_rd_artifacts_preserved": 947,
+  "evidence_pins": {
+    "owner-pause-v1.json": "e5c76eae17e57aef19ec37d7d7d8ddae971e046ebef13f8d2c4e4cda958edb89",
+    "owner-clock-amendment-v1.json": "38d254873e7713cdf8213a98283d3d3a5bc8ccbf5f303dc257ebd282f44bd01b",
+    "dataset-archive-receipt-v2.json": "6140a7dfe719762d279f4473c83144a6cd0007383edca1cd325e3390e7f64b12",
+    "pause-checks-v1.json": "a6e4c7982b8001afee659ab0c0230d5cad4e03ea72bf9b552b8d6ffc3fb60c7f",
+    "pause-delivery-audit-v1.json": "ce928f8e617ace620e9475aecbf4afd84aabd2d711df51dfa69728e7505d1d6a"
+  }
+}
