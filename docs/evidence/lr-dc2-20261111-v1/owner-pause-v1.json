@@ -1,0 +1,72 @@
+{
+  "status": "PAUSED_OWNER_REQUEST",
+  "paused_utc": "2026-11-11T08:26:56.915250+00:00",
+  "dataset_archive_ready": true,
+  "evaluation_clock_state": "AWAITING_OWNER_RESUME",
+  "effective_resume_start_utc": null,
+  "effective_resume_deadline_utc": null,
+  "hours_from_next_explicit_owner_resume": 168,
+  "cpu_gpu_budget_reset": false,
+  "retained_cpu_seconds": 2430,
+  "observed_guarded_job_cpu_seconds": 193.65625,
+  "administrative_cpu_separately_metered": false,
+  "retained_gpu_seconds": 0,
+  "authorized_cpu_seconds": 230400,
+  "authorized_gpu_seconds": 86400,
+  "downloads_bytes": 1769627760,
+  "all_started_jobs_settled": true,
+  "model_calls": 0,
+  "ledger_sha256": "3d43582afda2df3877c4bd6d96b6cad838b60398593bc6ac01886b37333a6382",
+  "handoff_sha256": "b1721d9b14e1b38e4b7f80eadffe884d05c17995f5daa56c789c13f0559cb0a6",
+  "guarded_jobs": {
+    "local-controller-preflight-v1": {
+      "status": "PASS",
+      "resource_sha256": "4c47adc1ae62e7c8242d414a1476ed4146f56c9e8502abd2dc0f2c7f6cd75f1d",
+      "observed_cpu_seconds": 2.171875,
+      "retained_cpu_seconds": 90
+    },
+    "dataset-annotation-intake-v1": {
+      "status": "PASS",
+      "resource_sha256": "8e4ecfd4e38149e7bde0734f1b621b47d4db834c3706ac48d7fd97058510f8ed",
+      "observed_cpu_seconds": 3.21875,
+      "retained_cpu_seconds": 180
+    },
+    "dataset-archive-probe-v1": {
+      "status": "PASS",
+      "resource_sha256": "c0e51c1b378a26433045691aec9e8ac9848d47eb8ae8ef2529c2f07b1f1fcf4a",
+      "observed_cpu_seconds": 1.796875,
+      "retained_cpu_seconds": 120
+    },
+    "dataset-archive-browser-probe-v1": {
+      "status": "PASS",
+      "resource_sha256": "2f12dd16173e27adff3aa924e070e82a8bb4685c435881a155a942193a34da10",
+      "observed_cpu_seconds": 3.875,
+      "retained_cpu_seconds": 120
+    },
+    "dataset-browser-stream-v1": {
+      "status": "PASS",
+      "resource_sha256": "b6c41b32b8dd2203c25bb10b2c7844e093b7dc5148039a9481ee2aadda688b28",
+      "observed_cpu_seconds": 171.03125,
+      "retained_cpu_seconds": 900
+    },
+    "dataset-receipt-followup-v1": {
+      "status": "FAIL",
+      "resource_sha256": "d6d6313f3242f6f34f16bed4d9fd7b14124d7600ba9fd946c8f6e83e25a85c65",
+      "observed_cpu_seconds": 1.765625,
+      "retained_cpu_seconds": 120
+    },
+    "dataset-receipt-followup-v2": {
+      "status": "PASS",
+      "resource_sha256": "516522f03d05fc826ac655013d94a51b073250d496906df08df62321448685f7",
+      "observed_cpu_seconds": 6.1875,
+      "retained_cpu_seconds": 120
+    },
+    "dataset-pause-checks-v1": {
+      "status": "PASS",
+      "resource_sha256": "e8605f4f4c5bb50ccd9091caaa8c7388d1b56d226a63f25ef3950866cb6da336",
+      "observed_cpu_seconds": 3.609375,
+      "retained_cpu_seconds": 180
+    }
+  },
+  "prior_ledgers_preserved": 15
+}

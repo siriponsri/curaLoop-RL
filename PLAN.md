@@ -1,5 +1,12 @@
 # Method-first plan
 
+**Latest: LR-DC2 is PAUSED_OWNER_REQUEST after complete dataset receipt.**
+Follow the [exact pause/resume handoff](docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md).
+No next phase runs before owner resume. The effective168-hour clock starts then;
+pre-pause bookings remain inside the original64 CPU-hour/24 GPU-hour budget.
+No GPU/model work occurred, and cohort/contribution gates have not passed.
+The completed AgentRD track below remains intact historical evidence.
+
 **Current, 11 November 2026: the authorized AgentRD computational scope is complete.**
 A0 reconciliation, necessary A1/A2 localhost implementation, all 408 actual
 evaluation units, read-only scorer replay, figures/tables, English manuscript

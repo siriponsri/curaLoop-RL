@@ -1,4 +1,38 @@
-# Handoff: completed AgentRD computation and localhost package
+# Handoff: LR-DC2 paused after verified dataset download
+
+## Current owner checkpoint, 11 November 2026
+
+LR-DC2 is **PAUSED_OWNER_REQUEST**. Read
+[the detailed dataset/resume handoff](docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md)
+and [the settled pause receipt](docs/evidence/lr-dc2-20261111-v1/owner-pause-v1.json).
+Official ScienceAgentBench verified ZIP downloaded completely:1,769,478,786
+bytes, SHA-25646e715d3b2196d459d2dff52aa487f506a95ec44b44262e82208d086ea879610.
+It is at research/raw_data/external-benchmarks/scienceagentbench-verified-20260430/benchmark_verified.zip,
+ignored/private, unextracted. ZIP metadata has955 entries and4,071,815,117
+expanded bytes. Annotation snapshot has102 rows; cohort/native-oracle admission
+and contribution distinction remain incomplete. Do not call raw counts a PASS.
+
+The owner explicitly starts the168-hour clock only at the next owner resume.
+No effective start/deadline is assigned yet. The separate clock amendment
+supersedes the original release deadline; preserve both original release and
+amendment bytes. Keep the same64 CPU-hour/24 GPU-hour ceilings and every prior
+booking, including pre-pause failures. Retained CPU2,430 seconds; observed
+guarded-job CPU193.65625 seconds, administrative CPU not separately metered;
+GPU0, model calls0. All started jobs are settled. No remote task/SSH/GPU/model
+download was created, and no research worker remains to resume automatically.
+
+Next actor: owner says `resume LR-DC2`. Then record the effective clock once,
+reuse the verified archive and resume admission under the approved gates.
+No further job before that instruction. Preserve15 historical ledger identities,
+66 old/27 AgentRD scientific pins and947 prior AgentRD artifacts; original
+final16/private CF1 rows/hidden outcomes stay closed. The public evidence index
+records source provenance, retained failures, current limits and main-delivery
+identity. Source/checkpoint SHA is recorded after actual push, not inferred.
+
+## Historical AgentRD delivery and execution record
+
+The completed AgentRD content below is retained history, separate from paused
+LR-DC2. Its completed/active execution statements do not override this pause.
 
 ## Current checkpoint, 11 November 2026
 

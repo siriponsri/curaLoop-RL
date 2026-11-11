@@ -74,6 +74,13 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 ## Research and R&D pilot programme
 
+**LR-DC2 owner pause, 11 November 2026:** the official ScienceAgentBench verified
+archive is fully downloaded and hash-reread, retained privately without
+extraction or gold access. Contribution/cohort/GPU admission remains incomplete;
+no model/GPU work has begun. The seven-day clock starts only on the next owner
+resume, with all earlier bookings retained. [Pause/resume handoff](docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md)
+· [Intake evidence](docs/evidence/lr-dc2-20261111-v1/README.md).
+
 **Completed computational work, 11 November 2026:** the
 [AgentRD owner report](docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md) delivers the
 localhost workbench, all 408 frozen unit results, actual analysis and a full

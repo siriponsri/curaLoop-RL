@@ -1,0 +1,88 @@
+{
+  "status": "PASS_OFFICIAL_VERIFIED_ANNOTATION_SNAPSHOT_NOT_FULL_BENCHMARK",
+  "hf_revision": "9c6e96c9e74572e979b0930ee735041cef528cb7",
+  "split": "verified",
+  "rows": 102,
+  "domain_counts": {
+    "Computational Chemistry": 20,
+    "Geographical Information Science": 27,
+    "Bioinformatics": 27,
+    "Psychology and Cognitive science": 28
+  },
+  "repository_counts": {
+    "deepchem/deepchem": 9,
+    "uw-cmg/MAST-ML": 1,
+    "hackingmaterials/matminer_examples": 1,
+    "geopandas/geopandas": 7,
+    "psa-lab/predicting-activity-by-machine-learning": 4,
+    "kexinhuang12345/DeepPurpose": 2,
+    "swansonk14/admet_ai": 2,
+    "felixjwong/antibioticsai": 1,
+    "martin-sicho/papyrus-scaffold-visualizer": 1,
+    "anikaliu/CAMDA-DILI": 5,
+    "OlivierBeq/Papyrus-scripts": 1,
+    "mad-lab-fau/BioPsyKit": 7,
+    "chemosim-lab/ProLIF": 3,
+    "materialsproject/pymatgen": 3,
+    "neuropsychology/NeuroKit": 6,
+    "rasterio/rasterio": 5,
+    "ajdawson/eofs/": 3,
+    "SciTools/iris": 4,
+    "nriesterer/syllogistic-nvc": 6,
+    "OGGM/tutorials": 2,
+    "brand-d/cogsci-jnmf": 7,
+    "scverse/scvi-tutorials": 3,
+    "ZitongLu1996/EEG2EEG": 3,
+    "OGGM/oggm": 1,
+    "Solve-Geosolutions/transform_2022": 2,
+    "scverse/scanpy-tutorials": 7,
+    "https://github.com/GeoStat-Framework/PyKrige": 1,
+    "ResidentMario/geoplot": 2,
+    "scverse/scirpy": 1,
+    "ppdebreuck/modnet": 2
+  },
+  "captures": {
+    "hf-repo-metadata.json": {
+      "requested_url": "https://huggingface.co/api/datasets/osunlp/ScienceAgentBench",
+      "bytes": 2144,
+      "sha256": "d5ea60335e4a4fcf871320c9c3ce0e1c3abe375f6e330b3cd48533f947128fa1",
+      "etag": "W/\"860-PEfxB8+6rDxgxFxwK9jSAoonl3o\"",
+      "content_type": "application/json; charset=utf-8"
+    },
+    "hf-README.md": {
+      "requested_url": "https://huggingface.co/datasets/osunlp/ScienceAgentBench/resolve/9c6e96c9e74572e979b0930ee735041cef528cb7/README.md",
+      "bytes": 5705,
+      "sha256": "e482e8a8662d84a991ea473bc7934e945364c489d2c49396bc5979a6f674c9d0",
+      "etag": "\"a3cdb281ee783de9df2aa8c5b7c40b896331bdf6\"",
+      "content_type": "text/plain; charset=utf-8"
+    },
+    "verified.parquet": {
+      "requested_url": "https://huggingface.co/datasets/osunlp/ScienceAgentBench/resolve/9c6e96c9e74572e979b0930ee735041cef528cb7/data/verified-00000-of-00001.parquet",
+      "bytes": 129086,
+      "sha256": "c6f937863a220bd1762a00c20a0f79cc8dfca900b819bdb552150310731ae147",
+      "etag": "\"77637b5cb4ece9d392e634f8d7d6b9305055a98b2d1e6c7fe4a09f1e3dc38c98\"",
+      "content_type": "application/octet-stream"
+    },
+    "github-README.md": {
+      "requested_url": "https://raw.githubusercontent.com/OSU-NLP-Group/ScienceAgentBench/main/README.md",
+      "bytes": 12039,
+      "sha256": "0696fe4ffa234ea30346901d9d61263d20d548e58810049c873b2049ac1a04b1",
+      "etag": "\"3de8816b086eab0402c38c5e2c15211c751f0429cc9402980214fef5b8205c4a\"",
+      "content_type": "text/plain; charset=utf-8"
+    }
+  },
+  "structural_columns_read": [
+    "instance_id",
+    "domain",
+    "github_name",
+    "subtask_categories",
+    "eval_script_name",
+    "output_fname"
+  ],
+  "reference_solutions_read": false,
+  "activity_labels_read": false,
+  "full_archive_downloaded": false,
+  "full_dataset_admitted": false,
+  "new_model_calls": 0,
+  "owner_steering": "Finish permitted dataset download/verification, then pause for explicit owner resume"
+}

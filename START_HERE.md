@@ -1,5 +1,12 @@
 # Start here
 
+**Latest checkpoint: LR-DC2 is paused for the owner after dataset download.**
+The [detailed handoff](docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md)
+records the verified ZIP, unrun research gates and exact resume procedure.
+The seven-day clock starts at the next owner resume; existing CPU/GPU caps and
+pre-pause bookings remain. No GPU or model has been started for LR-DC2.
+The completed AgentRD work described below remains available independently.
+
 **Current, 11 November 2026: AgentRD computational and localhost delivery.**
 Start with the [final owner report](docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md),
 [English manuscript](docs/07_publication/CuraLoop-AgentRD-Computational-Report-EN-v2.pdf),

@@ -1,5 +1,49 @@
 # Agent instructions: CuraLoop-RL
 
+## Latest owner steering: dataset intake then pause
+
+Current status: PAUSED_OWNER_REQUEST. The official verified archive is fully
+downloaded, hash-reread and quarantined; all started jobs are settled. Read
+docs/evidence/lr-dc2-20261111-v1/owner-pause-v1.json and the dataset pause handoff.
+No model/GPU/SSH or further research starts before explicit owner resume.
+
+The owner now requires finishing the permitted dataset download/integrity step,
+then PAUSE and wait for explicit owner resume while other projects take priority.
+The seven-day research clock starts only at the next explicit owner resume.
+Read research/manifests/lr_dc2_owner_clock_amendment_20261111_v1.json; it
+supersedes the original release deadline without rewriting the release or
+resetting any CPU/GPU bookings. Until pause, only dataset intake and handoff
+administration are authorized. No GPU allocation, SSH/model work, contribution
+adjudication, development, frozen evaluation or manuscript expansion before
+resume. After owner-pause-v1.json exists and the ledger is PAUSED_OWNER_REQUEST,
+do not launch jobs. Read docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md
+for exact dataset readiness, remaining work and the one-time resume clock rule.
+The original release description below records history and approved post-resume
+scope; its initial seven-day deadline is superseded by the owner amendment.
+
+## LR-DC2 released, 11 November 2026
+
+The owner approved NEXT_GOAL_DECISION_CONTRACT_PROPOSAL_20261111.md in full:
+fresh64 CPU-hours +24 allocated GPU-hours /168 elapsed hours, maximum four CPU
+cores and one GPU worker. Read research/manifests/lr_dc2_release_20261111_v1.json
+and docs/08_agent_rd/LR_DC2_EXECUTION_20261111.md. Only the new
+.local/lr-dc2-20261111-v1 account is active. Original T0 is07:39 UTC11 November,
+deadline07:39 UTC18 November (14:39 Bangkok). The proposal/config remain disabled
+historical snapshots; the separate release records actual approval.
+
+Perform source-located contribution distinction, metadata/rights/group split
+and free-GPU admission before large downloads/inference. Continue only passed
+gates, stop and report the first failed gate; no data/model substitution or
+repeated outcome-driven experiments. Existing Typhoon12B plus one approved
+Qwen14B Q4 checkpoint, isolated generated-code execution and capped benchmark
+downloads are permitted only within the proposal. Never evict another GPU job,
+alter shared services/config, use paid APIs/rental, deploy, write to external
+team tools or submit. All original final16/private CF1/hidden outcomes remain
+closed; preserve15 old ledgers,66 old and27 AgentRD frozen scientific pins and
+all947 pinned prior AgentRD artifacts. Parent sole writer; no subagents. Full
+owned remote return/reread before exact cleanup; final commit/push main. The
+completed AgentRD checkpoint below is historical, not this new release's stop rule.
+
 ## AgentRD final delivery checkpoint, 11 November 2026
 
 Read docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md, the acceptance matrix and

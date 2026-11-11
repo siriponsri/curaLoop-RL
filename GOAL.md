@@ -1,5 +1,12 @@
 # Goal: a defensible method and a useful R&D plugin
 
+**Latest owner checkpoint: LR-DC2 is PAUSED after verified dataset download.**
+Read the [dataset/resume handoff](docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md).
+The seven-day clock begins only on the next explicit owner resume, with the
+same64 CPU-hour/24 GPU-hour caps and all pre-pause bookings retained. No model
+or GPU work has started. The archive is quarantined; research admission remains
+incomplete. Earlier AgentRD completion below is a separate historical result.
+
 **Current, 11 November 2026: AgentRD computational and localhost work complete.**
 The continuous solo scope produced the actual EN/TH workbench, all 408 frozen
 units, auditable analysis and a complete English manuscript/guide. P and B2
