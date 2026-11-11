@@ -1,0 +1,640 @@
+{
+  "status": "COMPLETE",
+  "planned": 408,
+  "attempted": 408,
+  "systems": [
+    {
+      "system": "B0",
+      "planned": 96,
+      "attempted": 96,
+      "not_run": 0,
+      "successes": 96,
+      "success_rate_all_planned": 1.0,
+      "success_rate_attempted": 1.0,
+      "execution_failed": 0,
+      "deterministic_abstention_fallbacks": 0,
+      "appropriate_abstentions": 30,
+      "abstention_expected_attempted": 30,
+      "overrefusals": 0,
+      "answer_expected_attempted": 66,
+      "raw_numeric_claims": 0,
+      "raw_numeric_errors": 0,
+      "raw_numeric_error_rate": null,
+      "released_numeric_claims": 912,
+      "released_numeric_errors": 0,
+      "released_numeric_error_rate": 0.0,
+      "citations_present": 66,
+      "citations_correct": 66,
+      "citation_precision": 1.0,
+      "model_calls": 0,
+      "failed_model_calls_unknown_cost": 0,
+      "known_model_cpu_seconds": 0,
+      "recorded_model_tokens": 0,
+      "model_wall_seconds": 0,
+      "known_controller_cpu_seconds": 5.09375,
+      "median_unit_wall_seconds": 0.15599999997357372,
+      "median_model_cpu_seconds": null,
+      "paid_api_cost_usd": 0
+    },
+    {
+      "system": "B1",
+      "planned": 96,
+      "attempted": 96,
+      "not_run": 0,
+      "successes": 60,
+      "success_rate_all_planned": 0.625,
+      "success_rate_attempted": 0.625,
+      "execution_failed": 0,
+      "deterministic_abstention_fallbacks": 11,
+      "appropriate_abstentions": 22,
+      "abstention_expected_attempted": 30,
+      "overrefusals": 13,
+      "answer_expected_attempted": 66,
+      "raw_numeric_claims": 178,
+      "raw_numeric_errors": 27,
+      "raw_numeric_error_rate": 0.15168539325842698,
+      "released_numeric_claims": 178,
+      "released_numeric_errors": 27,
+      "released_numeric_error_rate": 0.15168539325842698,
+      "citations_present": 61,
+      "citations_correct": 61,
+      "citation_precision": 1.0,
+      "model_calls": 118,
+      "failed_model_calls_unknown_cost": 0,
+      "known_model_cpu_seconds": 38710.91853699999,
+      "recorded_model_tokens": 95447,
+      "model_wall_seconds": 13113.365380785428,
+      "known_controller_cpu_seconds": 8.453125,
+      "median_unit_wall_seconds": 85.46100000001024,
+      "median_model_cpu_seconds": 227.76941900000384,
+      "paid_api_cost_usd": 0
+    },
+    {
+      "system": "B2",
+      "planned": 96,
+      "attempted": 96,
+      "not_run": 0,
+      "successes": 67,
+      "success_rate_all_planned": 0.6979166666666666,
+      "success_rate_attempted": 0.6979166666666666,
+      "execution_failed": 0,
+      "deterministic_abstention_fallbacks": 18,
+      "appropriate_abstentions": 20,
+      "abstention_expected_attempted": 30,
+      "overrefusals": 19,
+      "answer_expected_attempted": 66,
+      "raw_numeric_claims": 206,
+      "raw_numeric_errors": 0,
+      "raw_numeric_error_rate": 0.0,
+      "released_numeric_claims": 206,
+      "released_numeric_errors": 0,
+      "released_numeric_error_rate": 0.0,
+      "citations_present": 57,
+      "citations_correct": 57,
+      "citation_precision": 1.0,
+      "model_calls": 144,
+      "failed_model_calls_unknown_cost": 0,
+      "known_model_cpu_seconds": 45951.31311099996,
+      "recorded_model_tokens": 126726,
+      "model_wall_seconds": 15579.249445612542,
+      "known_controller_cpu_seconds": 9.4375,
+      "median_unit_wall_seconds": 84.92949999999837,
+      "median_model_cpu_seconds": 242.38855500000136,
+      "paid_api_cost_usd": 0
+    },
+    {
+      "system": "P",
+      "planned": 96,
+      "attempted": 96,
+      "not_run": 0,
+      "successes": 67,
+      "success_rate_all_planned": 0.6979166666666666,
+      "success_rate_attempted": 0.6979166666666666,
+      "execution_failed": 0,
+      "deterministic_abstention_fallbacks": 18,
+      "appropriate_abstentions": 20,
+      "abstention_expected_attempted": 30,
+      "overrefusals": 19,
+      "answer_expected_attempted": 66,
+      "raw_numeric_claims": 206,
+      "raw_numeric_errors": 0,
+      "raw_numeric_error_rate": 0.0,
+      "released_numeric_claims": 206,
+      "released_numeric_errors": 0,
+      "released_numeric_error_rate": 0.0,
+      "citations_present": 57,
+      "citations_correct": 57,
+      "citation_precision": 1.0,
+      "model_calls": 144,
+      "failed_model_calls_unknown_cost": 0,
+      "known_model_cpu_seconds": 47598.48842899994,
+      "recorded_model_tokens": 126726,
+      "model_wall_seconds": 16129.87763651833,
+      "known_controller_cpu_seconds": 11.75,
+      "median_unit_wall_seconds": 87.99200000001292,
+      "median_model_cpu_seconds": 242.331127999998,
+      "paid_api_cost_usd": 0
+    },
+    {
+      "system": "A-NOREPAIR",
+      "planned": 24,
+      "attempted": 24,
+      "not_run": 0,
+      "successes": 24,
+      "success_rate_all_planned": 1.0,
+      "success_rate_attempted": 1.0,
+      "execution_failed": 0,
+      "deterministic_abstention_fallbacks": 0,
+      "appropriate_abstentions": 6,
+      "abstention_expected_attempted": 6,
+      "overrefusals": 0,
+      "answer_expected_attempted": 18,
+      "raw_numeric_claims": 78,
+      "raw_numeric_errors": 0,
+      "raw_numeric_error_rate": 0.0,
+      "released_numeric_claims": 78,
+      "released_numeric_errors": 0,
+      "released_numeric_error_rate": 0.0,
+      "citations_present": 18,
+      "citations_correct": 18,
+      "citation_precision": 1.0,
+      "model_calls": 30,
+      "failed_model_calls_unknown_cost": 0,
+      "known_model_cpu_seconds": 7772.233530999998,
+      "recorded_model_tokens": 23040,
+      "model_wall_seconds": 2629.603478412144,
+      "known_controller_cpu_seconds": 2.984375,
+      "median_unit_wall_seconds": 67.76549999999406,
+      "median_model_cpu_seconds": 190.71804999999586,
+      "paid_api_cost_usd": 0
+    }
+  ],
+  "families": [
+    {
+      "system": "B0",
+      "family": "extraction",
+      "planned": 18,
+      "attempted": 18,
+      "successes": 18,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "B0",
+      "family": "comparison",
+      "planned": 18,
+      "attempted": 18,
+      "successes": 18,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "B0",
+      "family": "interpretation",
+      "planned": 18,
+      "attempted": 18,
+      "successes": 18,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "B0",
+      "family": "boundary",
+      "planned": 18,
+      "attempted": 18,
+      "successes": 18,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "B0",
+      "family": "source_fault",
+      "planned": 12,
+      "attempted": 12,
+      "successes": 12,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "B0",
+      "family": "recovery",
+      "planned": 12,
+      "attempted": 12,
+      "successes": 12,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "B1",
+      "family": "extraction",
+      "planned": 18,
+      "attempted": 18,
+      "successes": 18,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "B1",
+      "family": "comparison",
+      "planned": 18,
+      "attempted": 18,
+      "successes": 3,
+      "success_rate_all_planned": 0.16666666666666666
+    },
+    {
+      "system": "B1",
+      "family": "interpretation",
+      "planned": 18,
+      "attempted": 18,
+      "successes": 5,
+      "success_rate_all_planned": 0.2777777777777778
+    },
+    {
+      "system": "B1",
+      "family": "boundary",
+      "planned": 18,
+      "attempted": 18,
+      "successes": 10,
+      "success_rate_all_planned": 0.5555555555555556
+    },
+    {
+      "system": "B1",
+      "family": "source_fault",
+      "planned": 12,
+      "attempted": 12,
+      "successes": 12,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "B1",
+      "family": "recovery",
+      "planned": 12,
+      "attempted": 12,
+      "successes": 12,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "B2",
+      "family": "extraction",
+      "planned": 18,
+      "attempted": 18,
+      "successes": 18,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "B2",
+      "family": "comparison",
+      "planned": 18,
+      "attempted": 18,
+      "successes": 12,
+      "success_rate_all_planned": 0.6666666666666666
+    },
+    {
+      "system": "B2",
+      "family": "interpretation",
+      "planned": 18,
+      "attempted": 18,
+      "successes": 5,
+      "success_rate_all_planned": 0.2777777777777778
+    },
+    {
+      "system": "B2",
+      "family": "boundary",
+      "planned": 18,
+      "attempted": 18,
+      "successes": 8,
+      "success_rate_all_planned": 0.4444444444444444
+    },
+    {
+      "system": "B2",
+      "family": "source_fault",
+      "planned": 12,
+      "attempted": 12,
+      "successes": 12,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "B2",
+      "family": "recovery",
+      "planned": 12,
+      "attempted": 12,
+      "successes": 12,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "P",
+      "family": "extraction",
+      "planned": 18,
+      "attempted": 18,
+      "successes": 18,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "P",
+      "family": "comparison",
+      "planned": 18,
+      "attempted": 18,
+      "successes": 12,
+      "success_rate_all_planned": 0.6666666666666666
+    },
+    {
+      "system": "P",
+      "family": "interpretation",
+      "planned": 18,
+      "attempted": 18,
+      "successes": 5,
+      "success_rate_all_planned": 0.2777777777777778
+    },
+    {
+      "system": "P",
+      "family": "boundary",
+      "planned": 18,
+      "attempted": 18,
+      "successes": 8,
+      "success_rate_all_planned": 0.4444444444444444
+    },
+    {
+      "system": "P",
+      "family": "source_fault",
+      "planned": 12,
+      "attempted": 12,
+      "successes": 12,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "P",
+      "family": "recovery",
+      "planned": 12,
+      "attempted": 12,
+      "successes": 12,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "A-NOREPAIR",
+      "family": "extraction",
+      "planned": 6,
+      "attempted": 6,
+      "successes": 6,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "A-NOREPAIR",
+      "family": "comparison",
+      "planned": 6,
+      "attempted": 6,
+      "successes": 6,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "A-NOREPAIR",
+      "family": "interpretation",
+      "planned": 3,
+      "attempted": 3,
+      "successes": 3,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "A-NOREPAIR",
+      "family": "boundary",
+      "planned": 3,
+      "attempted": 3,
+      "successes": 3,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "A-NOREPAIR",
+      "family": "source_fault",
+      "planned": 3,
+      "attempted": 3,
+      "successes": 3,
+      "success_rate_all_planned": 1.0
+    },
+    {
+      "system": "A-NOREPAIR",
+      "family": "recovery",
+      "planned": 3,
+      "attempted": 3,
+      "successes": 3,
+      "success_rate_all_planned": 1.0
+    }
+  ],
+  "paired_cases": [
+    {
+      "case_id": "L-A01",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-A02",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-A03",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-A04",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-A05",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-A06",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-B01",
+      "B2": 0.0,
+      "P": 0.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-B02",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-B03",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-B04",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-B05",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-B06",
+      "B2": 0.0,
+      "P": 0.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-C01",
+      "B2": 0.0,
+      "P": 0.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-C02",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-C03",
+      "B2": 0.6666666666666666,
+      "P": 0.6666666666666666,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-C04",
+      "B2": 0.0,
+      "P": 0.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-C05",
+      "B2": 0.0,
+      "P": 0.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-C06",
+      "B2": 0.0,
+      "P": 0.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-D01",
+      "B2": 0.0,
+      "P": 0.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-D02",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-D03",
+      "B2": 0.0,
+      "P": 0.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-D04",
+      "B2": 0.0,
+      "P": 0.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-D05",
+      "B2": 0.6666666666666666,
+      "P": 0.6666666666666666,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-D06",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-E01",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-E02",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-E03",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-E04",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-F01",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-F02",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-F03",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    },
+    {
+      "case_id": "L-F04",
+      "B2": 1.0,
+      "P": 1.0,
+      "difference_pp": 0.0
+    }
+  ],
+  "seed_differences": [
+    {
+      "seed": 17011,
+      "B2": 22,
+      "P": 22,
+      "difference_pp": 0.0
+    },
+    {
+      "seed": 17023,
+      "B2": 23,
+      "P": 23,
+      "difference_pp": 0.0
+    },
+    {
+      "seed": 17033,
+      "B2": 22,
+      "P": 22,
+      "difference_pp": 0.0
+    }
+  ],
+  "primary": {
+    "comparison": "P minus B2",
+    "all_primary_units_present": true,
+    "difference_pp_all_planned": 0.0,
+    "exploratory_paired_case_interval_95_pp": [
+      0.0,
+      0.0
+    ],
+    "scope": "Conditional authored-case resampling; not a biological or real-user population interval"
+  },
+  "protected_data_access": false,
+  "independent_expert_validation": false
+}

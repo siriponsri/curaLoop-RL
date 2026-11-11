@@ -1,0 +1,80 @@
+{
+  "status": "RENDERED_V2_AWAITING_AUTHOR_VISUAL_REVIEW",
+  "steps": [
+    {
+      "command": [
+        "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "tools/agent_rd_revision_documents_v1.py",
+        "tools/agent_rd_author_review_record_v1.py",
+        "tools/agent_rd_mechanism_audit_v1.py",
+        "tools/agent_rd_result_figures_v1.py",
+        "tools/agent_rd_preview_reproduction_v1.py",
+        "tools/agent_rd_manuscript_v1.py",
+        "tools/agent_rd_documents_v1.py",
+        "tools/agent_rd_closeout_v1.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.venv\\Scripts\\python.exe",
+        "-m",
+        "py_compile",
+        "tools/agent_rd_revision_documents_v1.py",
+        "tools/agent_rd_author_review_record_v1.py",
+        "tools/agent_rd_mechanism_audit_v1.py",
+        "tools/agent_rd_result_figures_v1.py",
+        "tools/agent_rd_preview_reproduction_v1.py",
+        "tools/agent_rd_manuscript_v1.py",
+        "tools/agent_rd_documents_v1.py",
+        "tools/agent_rd_closeout_v1.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\User\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "tools/agent_rd_result_figures_v1.py",
+        "--edition",
+        "v2"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\User\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "tools/agent_rd_preview_reproduction_v1.py",
+        "v2"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\User\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "tools/agent_rd_documents_v1.py",
+        "manuscript-v2"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\User\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "tools/agent_rd_documents_v1.py",
+        "render-manuscript-v2"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "preserved_old_file_count": 947,
+  "scientific_values_or_scores_changed": false,
+  "new_model_calls": 0,
+  "original_analysis_sha256": "7eec6097a01a40f60ca04e6031f3c67abdc861ddbb88b94680c89c07d400ab84",
+  "repairs": [
+    "Latency labels have leader lines and an open P marker; original coordinates unchanged.",
+    "Headings stay with following content; system column widened; joined prose words corrected.",
+    "Actual current-product task failure described separately from lifecycle acceptance; references are clickable."
+  ]
+}

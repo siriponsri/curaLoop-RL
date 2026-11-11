@@ -75,7 +75,7 @@ def main():
     assert all(dispositions[u["unit_id"]] == ("ATTEMPTED" if u["unit_id"] in results else progress["stop_reason"])
                for u in plan)
 
-    units, failure_counts, system_rows = [], Counter(), []
+    units, failure_counts, system_rows, call_lengths = [], Counter(), [], []
     recovery_path = PUBLIC / "exact-call-owner-recovery-v1.json"
     operational_recovery = read(recovery_path) if recovery_path.exists() else None
     for unit in plan:
@@ -102,6 +102,22 @@ def main():
             failure_counts.update((unit["system"], reason) for reason in observed["failure_reasons"])
         calls = trace["calls"] if trace else []
         successful_calls = sum(c["status"] == "PASS" for c in calls)
+        measured_lengths = []
+        for call in calls:
+            if call["status"] != "PASS":
+                continue
+            response = call["receipt"]["response"]
+            cap = call["request"]["max_tokens"]
+            generated = response.get("eval_count")
+            assert cap == 256
+            assert generated is None or (type(generated) is int and generated >= 0)
+            measured_lengths.append({"unit_id": identity, "case_id": case_id, "system": unit["system"],
+                                     "seed": unit["seed"], "call_id": call["call_id"], "max_output_tokens": cap,
+                                     "recorded_generated_tokens": generated,
+                                     "recorded_prompt_tokens": response.get("prompt_eval_count"),
+                                     "provider_done_reason": response.get("done_reason"),
+                                     "reached_output_cap": generated >= cap if generated is not None else None})
+        call_lengths.extend(measured_lengths)
         units.append({**unit, "family": cards[case_id]["family"], "disposition": dispositions[identity],
                       "controller_host_interrupted_timing": bool(operational_recovery and operational_recovery["unit_id"] == identity),
                       "terminal_state": trace["state"] if trace else None,
@@ -114,6 +130,8 @@ def main():
                       "required_scope_codes": len(required_limits),
                       "required_scope_codes_present": limits_correct if receipt else None,
                       "successful_model_calls": successful_calls if receipt else None,
+                      "responses_with_output_length": sum(r["recorded_generated_tokens"] is not None for r in measured_lengths) if receipt else None,
+                      "responses_reaching_output_cap": sum(r["reached_output_cap"] is True for r in measured_lengths) if receipt else None,
                       "malformed_model_responses": observed["raw_numeric"]["malformed_responses"] if observed else None,
                       "deterministic_abstention_fallback": observed["fallback"] == "DETERMINISTIC_ABSTENTION_AFTER_CAP" if observed else None,
                       "raw_numeric_claims": observed["raw_numeric"]["claims"] if observed else None,
@@ -138,6 +156,8 @@ def main():
         checked = sum(r["source_check_valid"] for r in found)
         checked_fail = sum(r["source_check_valid"] and not r["task_success"] for r in found)
         recovery_units = [r for r in found if r["family"] == "recovery"]
+        measured_n = sum(r["responses_with_output_length"] for r in found)
+        capped_n = sum(r["responses_reaching_output_cap"] for r in found)
         system_rows.append({"system": system, "attempted": len(found), "answer_expected_attempted": len(answers),
                             "tool_calls": sum(r["tool_calls"] for r in found),
                             "missions_with_model_attempts": sum(r["model_calls"] > 0 for r in found),
@@ -148,6 +168,8 @@ def main():
                             "required_scope_code_instances": scope_n, "required_scope_codes_present": scope_found,
                             "required_scope_code_presence_rate": rate(scope_found, scope_n),
                             "successful_model_response_count": parsed_calls, "malformed_model_responses": malformed,
+                            "responses_with_output_length": measured_n, "responses_reaching_output_cap": capped_n,
+                            "reached_output_cap_rate": rate(capped_n, measured_n),
                             "malformed_response_rate": rate(malformed, parsed_calls),
                             "source_check_valid_count": checked, "source_check_valid_but_task_failed": checked_fail,
                             "task_fail_rate_given_valid_source_check": rate(checked_fail, checked),
@@ -184,16 +206,20 @@ def main():
         csv_file(destination / (name + ".csv"), rows)
     if failure_rows:
         csv_file(destination / "failure-reasons.csv", failure_rows)
+    if call_lengths:
+        csv_file(destination / "provider-output-lengths.csv", call_lengths)
     write(destination / "descriptive.json", {"status": "DESCRIPTIVE_SUPPLEMENT_NO_SCORE_CHANGE",
           "matrix_status": analysis["status"], "stop_reason": progress["stop_reason"],
           "planned": len(plan), "attempted": len(results), "quality": system_rows,
           "matched_ablation": anchor_rows, "anchor_case_ids": anchors, "system_seeds": seed_rows,
           "failure_reasons": failure_rows,
+          "provider_output_lengths": call_lengths,
           "operational_recovery": operational_recovery,
           "notes": ["Task and numeric scores come from frozen scorer; no new scientific score or inferential claim.",
                     "Required-field coverage aggregates the prespecified correct-field contract on attempted answer tasks.",
                     "Malformed rates use successful provider responses as denominator, including malformed outputs.",
                     "Malformed means JSON parsing failure or invalid values-map type under the frozen scorer, not every action-schema failure.",
+                    "Output-cap counts are post-hoc descriptive provider metadata, not a new score, causal truncation diagnosis or permission to retune. A response can reach its cap and still be valid.",
                     "Empty-claim numerical error is NA, not a favorable zero.",
                     "Unknown failed-call cost and planned unattempted units remain explicit.",
                     "Ablation compares P only on the same eight fixed anchors; no full-matrix extrapolation.",

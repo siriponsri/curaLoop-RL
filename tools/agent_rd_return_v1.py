@@ -165,9 +165,23 @@ def verify():
     for path in (destination / "calls").glob("*.json"):
         state = read(path)["status"]
         status_counts[state] = status_counts.get(state, 0) + 1
+    host_counter = read(destination / "host-client-cpu.json")
+    host_upper = host_counter["accounted_cpu_seconds"] + (3 if host_counter["inflight"] else 0)
+    assert host_counter["hard_cap_seconds"] == 600 and host_upper <= 600
+    acceptance_calls = 0
+    for path in (PUBLIC / "example-mission-v1.json", PUBLIC / "product-current-model-mission-v1.json"):
+        if not path.exists():
+            continue
+        for call in read(path)["payload"]["calls"]:
+            if call["status"] == "PASS":
+                assert read(destination / "calls" / (call["call_id"] + ".json")) == call["receipt"]
+                acceptance_calls += 1
     receipt = {"status": "PASS_COMPLETE_RETURN_AND_FULL_FILE_REREAD", "files_reread": len(names),
                "content_bytes": total, "archive_sha256": sha(ARCHIVE), "manifest_sha256": sha(manifest_path),
                "matched_locked_successful_call_files": matched_calls, "all_remote_call_statuses": status_counts,
+               "matched_product_acceptance_call_files": acceptance_calls,
+               "host_client_accounted_upper_cpu_seconds": host_upper, "host_client_reserved_cpu_seconds": 600,
+               "host_client_counter_sha256": sha(destination / "host-client-cpu.json"),
                "worker_v1_sha256": sha(destination / "worker.py"), "worker_v2_sha256": sha(destination / "worker-v2.py"),
                "public_exact_executed_worker_sources": public_sources,
                "model_weights_included": False, "private_compound_rows_included": False,

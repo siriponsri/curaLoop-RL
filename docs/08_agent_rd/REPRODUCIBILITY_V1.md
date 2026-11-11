@@ -63,7 +63,8 @@ one-time freezer or normalize old ledgers merely to make a check pass.
 | `analysis-v1/analysis.json` | Prespecified aggregation and conditional primary interval. |
 | `descriptive-v1/all-planned-units.csv` | Descriptive per-unit coverage, refusal, malformed-output and cost fields. |
 | `descriptive-v1/matched-ablation-anchors.csv` | P and A-NOREPAIR on the same eight anchors only. |
-| `result-figures-v1/` | Actual-data SVG/300dpi PNG figures, linked to exact analysis hashes. |
+| `mechanism-audit-v1.json` | Post-hoc unchanged-verifier replay and observed B2/P output-sequence comparison; no new score or trial. |
+| `result-figures-v2/` | Final actual-data SVG/300dpi PNG figures, linked to exact analysis hashes; v1 is preserved history. |
 | `example-mission-v1.json` and `example-dossier-v1/` | One actual pre-freeze UI acceptance mission; not a locked observation. |
 | `complete-remote-return-v1.json` | Full private return/file-reread and matching provider-file audit. |
 | `owned-remote-cleanup-v1.json` and `fresh-remote-absence-v1.json` | Exact owned removal after successful return. |
@@ -75,6 +76,39 @@ closeout identify what was actually completed. Private returned operational
 archives remain outside public Git; all public study inputs, unit traces and
 analysis needed for the read-only replay are included.
 
+## Regenerating figures without overwriting published evidence
+
+After the read-only replay above succeeds, use the figure renderer's explicit
+preview mode and a new directory. It reads the published analysis/descriptive
+files, uses the same visual definitions and writes new SVG/PNG files and a
+preview receipt. It does not call a model, SSH or HTTP, change scores, or require
+an active research ledger. Existing output directories are refused.
+
+Use a separate Python3.12 environment with the repository dependencies and
+Matplotlib/Pillow available. The original plotting versions and wheel identities
+are recorded in `plotting-dependencies-v1.json` in the evidence directory. The
+preview mode uses packages in the chosen environment rather than relying on
+the original private plotting directory. For example, from the repository root:
+
+```powershell
+rtk proxy .venv/Scripts/python.exe -m tools.agent_rd_result_figures_v1 --edition v2 --preview-dir C:\Temp\curaloop-agent-rd-figures-new
+```
+
+The delivered offline reproduction receipt checks identical PNG pixels with
+the original package versions on the author's machine while preserving every
+old figure, analysis, trace and frozen pin. It is not a clean-machine or
+independent replication. SVG metadata can differ, so byte identity is not
+promised for a new SVG. During active execution, this check remains pending
+until the actual receipt exists. New model generation is a separate operation
+described below.
+
+The first figure/report edition and its unsuccessful visual-review receipts
+remain intact. The delivered v2 latency figure adds label leaders and an open
+marker at clustered points without changing coordinates. Exact first-edition
+authoring sources are retained under `authoring-source-v1/` beside the evidence;
+their `.txt` suffix marks verbatim source evidence. The final v2 receipt is
+`offline-figure-reproduction-v2.json`.
+
 ## Localhost use after research-worker cleanup
 
 Start the existing Windows web launcher following README. The screening,
@@ -82,15 +116,21 @@ Confirmation evidence, C Workspace and Agent RD pages remain available. In
 Agent RD, deterministic mode uses actual admitted public aggregates without a
 model. Recorded local missions are read without regenerating responses. The
 exact published real-model example also opens as the retained EN/TH HTML
-dossier from the evidence index and README; a clean checkout does not silently
-import a private development mission store.
+dossier from the evidence index and README. The explicit **Open recorded model
+example** button imports exactly that published mission into the local store,
+without a model call, preserving its original timestamp, source and costs. A
+clean checkout does not silently import a private development mission store.
 
 Model mode requires a currently authorized operator session. The research
 container and task root are deliberately removed after complete return, and
 the new account is closed. Reopening the completed study's ledger, recreating
 its deleted root or borrowing another project's session is prohibited. A future
-live model session needs fresh owner authorization and operator configuration
-through `CURALOOP_AGENT_SESSION`, using the same bounded provider contract.
+live model session needs fresh owner authorization and operator transport setup,
+using the same bounded provider contract. The current provider transport is
+bound to the historical task namespace. `CURALOOP_AGENT_SESSION` selects an
+authorization record; setting it alone does not create or configure a new
+runner. An operator must adapt/provision the transport and verify its new
+namespace, limits and recovery before enabling new inference.
 There is no paid-provider fallback or claim that the retired research worker
 is an always-on product service.
 

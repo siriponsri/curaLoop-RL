@@ -5,6 +5,7 @@ import json
 import shutil
 import subprocess
 import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -21,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TASK = ROOT / ".local/agent-rd-run-20261110-v1"
 PUBLIC = ROOT / "docs/evidence/agent-rd-20261110-v1"
 MANUAL = ROOT / "docs/manual/CuraLoop-AgentRD-Guide-EN-v1.pdf"
+EDITION = "v1"
 POPPLER = Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/Library/bin/pdftoppm.exe"
 INK = colors.HexColor("#29282b")
 MUTED = colors.HexColor("#655e57")
@@ -60,7 +62,8 @@ def page(c, number, heading):
     c.line(LEFT, 38, W - LEFT, 38)
     c.setFillColor(MUTED)
     c.setFont("Helvetica", 8)
-    c.drawString(LEFT, 24, "Internal research prototype | English guide v1 | 10 November 2026")
+    date = "10 November 2026" if EDITION == "v1" else datetime.now(timezone.utc).astimezone(timezone(timedelta(hours=7))).strftime("%d %B %Y")
+    c.drawString(LEFT, 24, f"Internal research prototype | English guide {EDITION} | {date}")
     c.drawRightString(W - LEFT, 24, str(number))
     return H - 106
 
@@ -96,16 +99,24 @@ def manual():
     assert marker["exit_code"] == 0  # One successful two-document operation marker; never rerun it here.
     assert read(PUBLIC / "browser-acceptance-v1.json")["status"] == "PASS_ACTUAL_LOCALHOST_REAL_MODEL_ACCEPTANCE"
     assert read(PUBLIC / "browser-refinement-v2.json")["status"] == "PASS_SERVED_UI_REFINEMENT_NO_NEW_INFERENCE"
+    policy = None
+    if EDITION != "v1":
+        policy = read(PUBLIC / "product-policy-acceptance.json")
+        assert policy["status"] == "PASS_CURRENT_PRODUCT_POLICY_NOT_FROZEN_STUDY"
+        assert read(PUBLIC / policy["browser"])["status"] == "PASS_SERVED_PRODUCT_POLICY_NO_NEW_INFERENCE"
     assert not MANUAL.exists(), "Preserve an existing edition; use an explicit revision operation"
     screens = PUBLIC / "screens-v2"
     MANUAL.parent.mkdir(parents=True, exist_ok=True)
     c = canvas.Canvas(str(MANUAL), pagesize=A4, pageCompression=1)
-    c.setTitle("CuraLoop AgentRD - English Operator Guide v1")
+    c.setTitle("CuraLoop AgentRD - English Operator Guide " + EDITION)
     c.setAuthor("CuraLoop-RL")
     c.setSubject("Actual localhost model mission, source checks and recorded evidence")
 
     top = page(c, 1, "From question to evidence")
-    top = text(c, "A bounded pharmaceutical evidence mission, from a research question to an inspectable local report. The screenshots show an actual Typhoon 12B CPU-model run, not a generated interface or a mocked agent result.", LEFT, top, WIDTH, size=12)
+    introduction = "A bounded pharmaceutical evidence mission, from a research question to an inspectable local report. The comparison screenshots show an actual Typhoon 12B CPU-model run, not a generated interface or a mocked agent result."
+    if EDITION != "v1":
+        introduction += " Open the recorded model example without new inference, or use deterministic mode without a model session. Controller-only scope denials are identified separately."
+    top = text(c, introduction, LEFT, top, WIDTH, size=12)
     top = screenshot(c, screens / "03-agent-result-detail-en.png", top, max_height=270, crop=lambda s: (0, 0, s[0], min(s[1], 410)))
     top = text(c, "<b>What the workbench does</b><br/>Read the admitted historical CF1 aggregates. Let the real model answer or request a fixed calculation. Check released numbers against those sources. Preserve the trace and export an EN/TH dossier when explicitly requested.", LEFT, top, WIDTH)
     top = text(c, "<b>What the numbers mean</b><br/>H is the mean number of historical confirmed-positive observations. D is the mean number of positive fixed structure groups. HB and DB are fractions per confirmation. These are not new experiments, monetary savings or clinical outcomes.", LEFT, top, WIDTH)
@@ -182,9 +193,21 @@ def manual():
     ], top, [168, WIDTH - 168], ["State / message", "Meaning and next action"])
     top = text(c, "<b>Evidence and reproducibility</b><br/>The repository evidence index links the actual screenshots, original model mission, five-file dossier, failed development canaries, component checks and frozen computational protocol. The locked study reports all planned attempts, fallback and costs. Author checks are not independent expert or user validation.", LEFT, top, WIDTH, available=top - 85)
     text(c, "This guide adds Agent RD to the existing Dashboard Guide v3 and Confirmation Evidence Guide v4. It does not change historical assay results, the sealed-data boundary or the limits of the underlying studies.", LEFT, top, WIDTH, size=9.5, available=top - 55)
+    if EDITION != "v1":
+        c.showPage()
+        top = page(c, 8, "When the controller stops a request")
+        top = text(c, "The current product adds a deterministic scope check before model execution. This actual served-application capture shows a recorded controller refusal with zero model calls. It is not an LLM answer or a new comparative research result.", LEFT, top, WIDTH)
+        top = screenshot(c, PUBLIC / policy["screens_folder"] / "01-controller-denial-en.png", top, max_height=390)
+        for value in [
+            "<b>Known unsupported requests stop early.</b><br/>Requests for private compounds, hidden/final16 outcomes or unsupported laboratory/clinical/economic conclusions are denied by the existing capability rule and conservative Thai interface rules. These are not a general intent classifier. The closed data/tool interfaces remain the actual access boundary.",
+            "<b>Original model failures remain evidence.</b><br/>The frozen engine-v1 study still includes its unsuccessful refusal/completeness cases. The newer API scope check does not replace them, regrade them or establish a comparative model benefit.",
+            "<b>Use the workbench after research cleanup.</b><br/>Open recorded model example imports the exact original mission only when requested. Its original date/calls remain visible. Deterministic mode can run the five-budget comparison and local exports. New live inference requires fresh authorization and operator transport setup; setting an environment variable alone does not provision a new runner.",
+        ]:
+            top = text(c, value, LEFT, top, WIDTH, size=9.5, available=top - 50)
     c.save()
     reader = PdfReader(MANUAL)
-    assert len(reader.pages) == 7
+    expected_pages = 7 if EDITION == "v1" else 8
+    assert len(reader.pages) == expected_pages
     extracted = "\n".join(p.extract_text() for p in reader.pages)
     assert all(value in extracted for value in ("From question to evidence", "Quick reference", "final16", "Deterministic", "source-correct"))
     assert "\ufffd" not in extracted
@@ -192,19 +215,22 @@ def manual():
     mirror.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(MANUAL, mirror)
     source_pins = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in screens.glob("*.png")}
-    write(PUBLIC / "manual-build-v1.json", {"status": "CREATED_AWAITING_RENDERED_PAGE_REVIEW", "pages": 7,
+    if policy:
+        source_pins.update({p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+                            for p in (PUBLIC / policy["screens_folder"]).glob("*.png")})
+    write(PUBLIC / ("manual-build-" + EDITION + ".json"), {"status": "CREATED_AWAITING_RENDERED_PAGE_REVIEW", "pages": expected_pages,
           "path": MANUAL.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(MANUAL.read_bytes()).hexdigest(),
           "source_screenshots": source_pins, "new_model_inference": False, "independent_expert_validation": False})
-    print(json.dumps({"status": "CREATED_AWAITING_VISUAL_REVIEW", "pages": 7, "path": str(MANUAL)}))
+    print(json.dumps({"status": "CREATED_AWAITING_VISUAL_REVIEW", "pages": expected_pages, "path": str(MANUAL)}))
 
 
 def render_manual():
-    target = TASK / "manual-render-v1"
+    target = TASK / ("manual-render-" + EDITION)
     target.mkdir(exist_ok=False)
     result = subprocess.run([str(POPPLER), "-r", "110", "-png", str(MANUAL), str(target / "page")], capture_output=True, text=True)
     assert result.returncode == 0, result.stderr
-    assert len(list(target.glob("page-*.png"))) == 7
-    print(json.dumps({"status": "RENDERED_SEVEN_PAGES_REVIEW_PENDING", "folder": str(target)}))
+    assert len(list(target.glob("page-*.png"))) == len(PdfReader(MANUAL).pages)
+    print(json.dumps({"status": "ALL_GUIDE_PAGES_RENDERED_REVIEW_PENDING", "folder": str(target)}))
 
 
 if __name__ == "__main__":
@@ -212,11 +238,21 @@ if __name__ == "__main__":
         manual()
     elif sys.argv[1] == "render-manual":
         render_manual()
+    elif sys.argv[1] in ("manual-v2", "manual-v3", "render-manual-v2", "render-manual-v3"):
+        EDITION = sys.argv[1].rsplit("-", 1)[1]
+        MANUAL = ROOT / ("docs/manual/CuraLoop-AgentRD-Guide-EN-" + EDITION + ".pdf")
+        # Same two-final-document operation: v1 remains historical evidence;
+        # the current reviewed guide and the manuscript are the final outputs.
+        render_manual() if sys.argv[1].startswith("render-") else manual()
     elif sys.argv[1] == "manuscript":
         from agent_rd_manuscript_v1 import build
         build()
     elif sys.argv[1] == "render-manuscript":
         from agent_rd_manuscript_v1 import render
         render()
+    elif sys.argv[1] in ("manuscript-v2", "render-manuscript-v2"):
+        import agent_rd_manuscript_v1 as manuscript
+        manuscript.set_edition("v2")
+        manuscript.render() if sys.argv[1].startswith("render-") else manuscript.build()
     else:
         raise SystemExit("Manuscript authoring follows actual locked analysis, never invented results")

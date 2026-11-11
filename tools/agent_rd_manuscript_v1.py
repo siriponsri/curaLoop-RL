@@ -28,6 +28,7 @@ TASK = ROOT / ".local/agent-rd-run-20261110-v1"
 OUT = ROOT / "docs/07_publication"
 PDF = OUT / "CuraLoop-AgentRD-Computational-Report-EN-v1.pdf"
 MD = OUT / "CURALOOP_AGENTRD_COMPUTATIONAL_REPORT_EN_V1.md"
+EDITION = "v1"
 INK, COPPER, RULE = colors.HexColor("#29282b"), colors.HexColor("#a6492d"), colors.HexColor("#ded8d0")
 
 
@@ -56,15 +57,34 @@ def table_md(headers, rows):
                       *("| " + " | ".join(str(v) for v in row) + " |" for row in rows)])
 
 
+def set_edition(edition):
+    global EDITION, PDF, MD
+    assert edition in ("v1", "v2")
+    EDITION = edition
+    PDF = OUT / ("CuraLoop-AgentRD-Computational-Report-EN-" + edition + ".pdf")
+    MD = OUT / ("CURALOOP_AGENTRD_COMPUTATIONAL_REPORT_EN_" + edition.upper() + ".md")
+
+
 def assemble():
     a_path, d_path = PUBLIC / "analysis-v1/analysis.json", PUBLIC / "descriptive-v1/descriptive.json"
     a, d = read(a_path), read(d_path)
     assert d["source_pins"]["analysis.json"] == sha(a_path)
+    mechanism_path = PUBLIC / "mechanism-audit-v1.json"
+    if not mechanism_path.exists():
+        project_python = ROOT / ".venv/Scripts/python.exe"
+        for command in ([str(project_python), "-m", "ruff", "check", "tools/agent_rd_mechanism_audit_v1.py"],
+                        [str(project_python), "tools/agent_rd_mechanism_audit_v1.py"]):
+            checked = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
+            if checked.returncode:
+                raise RuntimeError("Descriptive mechanism audit failed without changing study results: " + checked.stdout + checked.stderr)
+    mechanism = read(mechanism_path)
+    assert mechanism["status"] == "DESCRIPTIVE_FIXED_TRACE_VERIFIER_REPLAY_NO_SCORE_CHANGE"
+    assert mechanism["source_pins"]["analysis"] == sha(a_path)
     disposition = read(PUBLIC / "locked-progress-v1.json")
     assert disposition["status"] in ("COMPLETE", "INCOMPLETE") and disposition["stop_reason"] != "OPERATIONAL_BATCH_BOUNDARY"
     assert disposition["attempted_units"] == a["attempted"]
     assert read(TASK / "supervisor-v1/receipts/pdf-marker-20261110.json")["exit_code"] == 0
-    assert (PUBLIC / "result-figures-build-v1.json").is_file()
+    assert (PUBLIC / ("result-figures-build-" + EDITION + ".json")).is_file()
     s = {r["system"]: r for r in a["systems"]}
     quality = {r["system"]: r for r in d["quality"]}
     p = a["primary"]
@@ -73,6 +93,9 @@ def assemble():
     if complete:
         effect = (f"The prespecified P-minus-B2 task-success difference was {p['difference_pp_all_planned']:+.2f} percentage points "
                   f"(exploratory paired-case 95% interval {ci[0]:+.2f} to {ci[1]:+.2f}).")
+        if mechanism["all_case_averaged_primary_differences_zero"]:
+            effect += (" All case-averaged paired differences were zero; the degenerate interval describes these authored cases "
+                       "and does not establish equivalence in an external population.")
     else:
         effect = (f"The fixed matrix was incomplete after {a['attempted']} of {a['planned']} units "
                   f"(stop reason: {d['stop_reason']}); the primary comparison is inconclusive and has no primary interval.")
@@ -127,6 +150,20 @@ def assemble():
                 "This directly distinguishes a source check from the separately scored task contract. Required-key coverage, scope-code coverage "
                 "and malformed responses are shown in Table 4. Wrong-action refusals are not reclassified as actual private-data leaks. "
                 "The boundary adapters do not provide protected data to any arm.")
+    observed_p = next(row for row in mechanism["arms"] if row["system"] == "P")
+    observed_b2 = next(row for row in mechanism["arms"] if row["system"] == "B2")
+    mechanism_text = (f"A post-hoc replay of the unchanged verifier found {observed_p['verifier_invalid_terminal_proposals']} invalid "
+                      f"terminal proposals among {observed_p['terminal_proposals']} P terminal proposals, and "
+                      f"{observed_b2['verifier_invalid_terminal_proposals']} among {observed_b2['terminal_proposals']} B2 terminal proposals. "
+                      f"B2/P had identical recorded output sequences in {mechanism['B2_P_identical_recorded_output_sequences']}/"
+                      f"{mechanism['comparable_B2_P_seed_case_pairs']} comparable seed-case pairs and equal task-success outcomes in "
+                      f"{mechanism['B2_P_equal_task_success_pairs']} pairs. Output-sequence comparison excludes call identities and timings. "
+                      "This is descriptive execution evidence, not a new score or hypothesis test.")
+    if observed_p["verifier_invalid_terminal_proposals"] == 0:
+        mechanism_text += (" The repair branch triggered by an invalid numeric/source check was not exercised by these observed P terminal "
+                           "proposals. The study therefore cannot establish its efficacy on a population containing such invalid proposals. "
+                           "Malformed JSON and missing task requirements remain separate failures. Component integrity tests do not substitute "
+                           "for a model-generated challenge to that branch.")
     cost_text = (f"Across all arms, retained successful responses recorded {count(sum(r['recorded_model_tokens'] for r in a['systems']))} tokens "
                  f"and {sum(r['known_model_cpu_seconds'] for r in a['systems']) / 3600:.3f} known model CPU-hours. "
                  f"There were {sum(r['failed_model_calls_unknown_cost'] for r in a['systems'])} failed calls with potentially unknown actual cost. "
@@ -139,6 +176,12 @@ def assemble():
                   "unavailable-source observation and still call the real model; B0 handles that condition deterministically. "
                   "These are controlled file/source-unavailability tests, not general security or private-data refusal validation. "
                   "The312 planned model-arm missions are distinct from actual attempt and successful-response counts.")
+    cap_text = "; ".join(k + ": " + fraction(quality[k]["responses_reaching_output_cap"], quality[k]["responses_with_output_length"])
+                         for k in ("B1", "B2", "P", "A-NOREPAIR"))
+    cost_text += (" Post-hoc descriptive provider metadata show responses reaching the fixed256-token output cap: " + cap_text +
+                  ". Reaching this cap is not itself a malformed response or proof that the cap caused failure. "
+                  "The provider-output-length table retains every observed length and stop reason. The short output cap limits generalization; "
+                  "it was not increased or retuned after observing locked results.")
     if d.get("operational_recovery"):
         interrupted = d["operational_recovery"]
         cost_text += (f" Unit {interrupted['unit_id']} was interrupted by a local controller-host exit. Its exact previously recorded response "
@@ -146,12 +189,43 @@ def assemble():
                       "excluding earlier work and the offline gap. Model receipt CPU and token cost remain retained; the full resource reservation "
                       "of the interrupted controller was not refunded. Latency summaries therefore describe recorded execution segments, "
                       "not uninterrupted end-to-end user waiting time.")
+    control_path = PUBLIC / "interactive-control-accounting-v1.json"
+    if control_path.exists():
+        control = read(control_path)
+        assert control["status"] == "RETAINED_UNMETERED_ADMINISTRATIVE_CONTROL_ALLOWANCE"
+        cost_text += (f" Interactive authoring and read-only monitoring CPU were not separately metered; a full {control['retained_cpu_seconds']} "
+                      "CPU-second administrative allowance was retained within the original budget. This is an accounting provision, "
+                      "not measured consumption or retroactive proof of a hard cap. Model/test jobs have separate enforcement receipts.")
     discussion = ("The practical decision is whether this application's language interface adds enough value to justify its measured errors and cost. "
                   "B0 is the appropriate reference for tasks whose complete calculation and scope rules are already specified. Its pre-freeze ceiling "
                   "was disclosed and is not evidence of broader reasoning. The B2/P comparison tests this particular source gate and bounded correction "
                   "under a short typed interface; it cannot establish a universal advantage for agents or verification loops. "
                   "The no-repair comparison is restricted to its matched eight anchors. Neither successful file recovery nor source fidelity establishes "
                   "scientific interpretation beyond the required codes. The full negative, tied or incomplete findings remain part of the result.")
+    product_note = ""
+    policy_path = PUBLIC / "product-policy-acceptance.json"
+    if policy_path.exists():
+        policy = read(policy_path)
+        assert policy["status"] == "PASS_CURRENT_PRODUCT_POLICY_NOT_FROZEN_STUDY"
+        product_note = ("After the fixed experiment, the product API received a separate deterministic capability preflight. "
+                        "Served-application checks exercised English/Thai controller denials, a real five-budget deterministic sweep, "
+                        "explicit import of the original real-model example, local dossiers and restart persistence without new inference. "
+                        "Controller denials are labeled as zero-model-call decisions. Conservative lexical rules are not a general intent or "
+                        "security guarantee. This service version was not the frozen P research condition; none of its tests replace or "
+                        "rescore the original failures. The recorded example retains its original date and actual model calls.")
+    current_model_path = PUBLIC / "product-current-model-acceptance-v1.json"
+    if current_model_path.exists():
+        smoke = read(current_model_path)
+        if smoke["status"] == "PASS_ACTUAL_CURRENT_PRODUCT_MODEL_LIFECYCLE":
+            product_note += (f" A separate post-study current-product mission completed its technical lifecycle with {smoke['actual_cost']['model_calls']} real model calls. ")
+            if smoke["task_required_fields_and_scope_pass"]:
+                product_note += "Its required-field and scope check passed. "
+            else:
+                product_note += "It ended in abstention and failed the requested-field/scope task check; this task failure is retained. "
+            product_note += "This engineering observation is outside the comparative matrix and provides no efficacy estimate."
+        else:
+            product_note += (" A separate current-product model smoke check had disposition " + smoke["status"] +
+                             ". No successful current-service model claim is inferred from an unrun or failed check.")
     readiness = ("This is a complete computational application report with actual model evidence, rather than a claim of a new molecular-design method. "
                  "JCAMD's official scope includes molecular analysis/design methods and applications, but this one-corpus typed reliability study has "
                  "limited evidence of a distinct molecular-design advance. Submission readiness as a competitive JCAMD research article is not established. "
@@ -170,7 +244,7 @@ def assemble():
             "\n\nTable 1. Task completion, with every planned denominator. A-NOREPAIR has eight fixed cases, not the full32-case roster.\n\n" +
             table_md(["System", "Planned", "Attempted", "Success / planned", "Success / attempted"], completion_rows) +
             "\n\n![Figure 2. All-planned completion. Whiskers are min/max over three decoding seeds, not confidence intervals.](../evidence/agent-rd-20261110-v1/result-figures-v1/02-task-completion.png)\n\n"
-            "### Refusal, fallback and released claims\n\n" + failures +
+            "### Refusal, fallback and released claims\n\n" + failures + "\n\n" + mechanism_text +
             "\n\nTable 2. Appropriate abstention, overrefusal, deterministic abstention fallback and released numerical error. Empty claim denominators are NA.\n\n" +
             table_md(["System", "Appropriate abstention", "Overrefusal", "Fallback n", "Released errors / claims"], quality_rows) +
             "\n\n### Computational cost\n\n" + cost_text +
@@ -193,7 +267,9 @@ def assemble():
             "row without regeneration. EN/TH, mobile and legacy-isolation self-checks passed. The refined screenshot pass reused the same response with "
             "no new inference.46 backend/oracle/source tests and30 frontend tests/type/lint/build passed. These are engineering acceptance records, "
             "not additional locked observations or independent validation.\n\n"
-            "## Discussion\n\n" + discussion + "\n\n## Limitations\n\n" + sections["Interpretive limits"] +
+            "## Discussion\n\n" + discussion +
+            ("\n\n### Delivered product version\n\n" + product_note if product_note else "") +
+            "\n\n## Limitations\n\n" + sections["Interpretive limits"] +
             "\n\n## Reproducibility and availability\n\n" + sections["Reproducibility and availability"] +
             "\n\nThe associated audited JSON/CSV files retain each planned unit, per-family outcomes, seed differences, raw/released numeric counts, "
             "failure reasons, exact traces and source hashes. Figure sources use those records directly. The original study source freeze precedes all locked calls. "
@@ -205,6 +281,12 @@ def assemble():
             "Funding, competing interests and final author approval are not confirmed in this draft. Supplied author details do not constitute signed declarations. "
             "No human-participant, prospective clinical or wet-lab study is reported.\n\n" + sections["Writing-assistance disclosure for the final author to review"] +
             "\n\n## References\n\n" + sections["References"] + "\n")
+    for old, new in (("full32", "full 32"), ("The312", "The 312"), ("fixed256", "fixed 256"),
+                     ("inference.46", "inference. 46"), ("and30", "and 30")):
+        text = text.replace(old, new)
+    if EDITION == "v2":
+        text = text.replace("/result-figures-v1/", "/result-figures-v2/")
+        text = text.replace("CPU is a separate measure.]", "CPU is a separate measure. Leader lines identify displaced labels; P uses an open diamond in the cluster.]")
     return text, a, d
 
 
@@ -212,6 +294,7 @@ def inline(text):
     text = escape(text)
     text = re.sub(r"`([^`]+)`", r'<font name="Courier">\1</font>', text)
     text = re.sub(r"\*\*([^*]+)\*\*", r"<b>\1</b>", text)
+    text = re.sub(r"https?://[^\s<>]+", lambda match: '<link href="' + match.group(0) + '" color="#a6492d">' + match.group(0) + '</link>', text)
     return text
 
 
@@ -223,8 +306,10 @@ def pdf_from_markdown(content):
     styles.add(ParagraphStyle("PaperCell", fontName="Helvetica", fontSize=8.5, leading=11, textColor=INK))
     styles["Heading1"].textColor = COPPER
     styles["Heading1"].fontSize, styles["Heading1"].leading = 14, 18
+    styles["Heading1"].keepWithNext = True
     styles["Heading2"].textColor = INK
     styles["Heading2"].fontSize, styles["Heading2"].leading = 11, 15
+    styles["Heading2"].keepWithNext = True
     story, lines, i = [], content.splitlines(), 0
     width = A4[0] - 88
     while i < len(lines):
@@ -248,7 +333,7 @@ def pdf_from_markdown(content):
                     rows.append([Paragraph(inline(v), styles["PaperCell"]) for v in cells])
                 i += 1
             columns = len(rows[0])
-            weights = [1.1] + [1.8] * (columns - 1)
+            weights = [1.6] + [1.7] * (columns - 1)
             table = Table(rows, colWidths=[width * w / sum(weights) for w in weights], repeatRows=1, hAlign="LEFT")
             table.setStyle(TableStyle([("LINEABOVE", (0, 0), (-1, 0), .7, INK), ("LINEBELOW", (0, 0), (-1, 0), .4, RULE),
                                       ("LINEBELOW", (0, -1), (-1, -1), .6, RULE), ("VALIGN", (0, 0), (-1, -1), "TOP"),
@@ -271,7 +356,11 @@ def pdf_from_markdown(content):
                 break
             paragraph.append(lines[i])
             i += 1
-        story.append(Paragraph(inline(" ".join(paragraph)), styles["PaperBody"]))
+        paragraph_text = " ".join(paragraph)
+        paragraph_style = styles["PaperBody"]
+        if paragraph_text.startswith("Table "):
+            paragraph_style = ParagraphStyle("TableCaption", parent=paragraph_style, keepWithNext=True)
+        story.append(Paragraph(inline(paragraph_text), paragraph_style))
 
     def footer(canvas, document):
         canvas.saveState()
@@ -279,7 +368,7 @@ def pdf_from_markdown(content):
         canvas.line(44, 35, A4[0] - 44, 35)
         canvas.setFont("Helvetica", 8.5)
         canvas.setFillColor(INK)
-        canvas.drawString(44, 22, "CuraLoop AgentRD | Author computational report | Not submitted")
+        canvas.drawString(44, 22, "CuraLoop AgentRD | Author computational report " + EDITION + " | Not submitted")
         canvas.drawRightString(A4[0] - 44, 22, str(document.page))
         canvas.restoreState()
 
@@ -303,14 +392,14 @@ def build():
                "markdown_sha256": sha(MD), "analysis_sha256": sha(PUBLIC / "analysis-v1/analysis.json"),
                "descriptive_sha256": sha(PUBLIC / "descriptive-v1/descriptive.json"), "stop_reason": d["stop_reason"],
                "manuscript_submitted": False, "independent_expert_validation": False}
-    with (PUBLIC / "manuscript-build-v1.json").open("x", encoding="utf-8", newline="\n") as stream:
+    with (PUBLIC / ("manuscript-build-" + EDITION + ".json")).open("x", encoding="utf-8", newline="\n") as stream:
         json.dump(receipt, stream, indent=2, allow_nan=False)
         stream.write("\n")
     print(json.dumps(receipt))
 
 
 def render():
-    target = TASK / "manuscript-render-v1"
+    target = TASK / ("manuscript-render-" + EDITION)
     target.mkdir(exist_ok=False)
     poppler = Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies/native/poppler/Library/bin/pdftoppm.exe"
     result = subprocess.run([str(poppler), "-r", "110", "-png", str(PDF), str(target / "page")], capture_output=True, text=True)

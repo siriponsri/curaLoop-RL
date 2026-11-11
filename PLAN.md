@@ -1,13 +1,19 @@
 # Method-first plan
 
-**Current: AgentRD solo continuation is ACTIVE, 10 November 2026.** Complete the
-bounded local evidence workbench and matched real-model computational study,
-then analysis, figures/tables and manuscript under the already released 96
-CPU-hours / 120 hours. Preserve every old negative result and sealed data.
-No external expert/customer/wet lab is required or claimed. Continue through
-negative results without tuning until a win. [Live execution](docs/08_agent_rd/ACTIVE_EXECUTION_20261110.md)
-and [fixed protocol](docs/08_agent_rd/COMPUTATIONAL_PROTOCOL_V1.md) govern this
-track; the earlier phase-approval stop rules below are historical.
+**Current, 11 November 2026: the authorized AgentRD computational scope is complete.**
+A0 reconciliation, necessary A1/A2 localhost implementation, all 408 actual
+evaluation units, read-only scorer replay, figures/tables, English manuscript
+and screenshot guide have actual evidence. Full 477-file return/reread and
+exact owned cleanup passed. Read the [owner report](docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md)
+and [requirement matrix](docs/08_agent_rd/DELIVERY_ACCEPTANCE_MATRIX_V1.md).
+
+The primary P minus B2 effect is 0pp; the observed numerical/source repair
+opportunity was absent. A working product does not establish model reliability,
+user value or a novel molecular method. Competitive JCAMD readiness is not
+established. Final audit/account settlement/main identity are recorded in the
+[evidence directory](docs/evidence/agent-rd-20261110-v1/README.md). No next phase
+starts automatically. Keep every old negative, ledger and sealed source intact;
+future live inference needs fresh authorization and transport setup.
 
 ## Historical CF2P checkpoint
 

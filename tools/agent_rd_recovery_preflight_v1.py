@@ -12,6 +12,10 @@ paths = ["tools/agent_rd_descriptive_report_v1.py", "tools/agent_rd_document_dis
          "tools/agent_rd_closeout_v1.py", "tools/agent_rd_ssh_recovery_v1.py", "tools/agent_rd_supervisor_recovery_v1.py",
          "tools/agent_rd_recovery_preflight_v1.py", "tools/agent_rd_owner_resume_v1.py",
          "tools/agent_rd_supervisor_host_resume_v1.py"]
+paths.extend(["api/agent_product_scope_v1.py", "api/agent_recorded_example_v1.py", "api/agent_rd_routes.py", "tests/test_agent_product_scope_v1.py",
+              "tools/agent_rd_product_checks_v1.py", "tools/agent_rd_product_browser_v1.py",
+              "tools/agent_rd_product_real_model_v1.py", "tools/agent_rd_documents_v1.py",
+              "tools/agent_rd_preview_reproduction_v1.py", "tools/agent_rd_control_accounting_v1.py"])
 freeze = read(ROOT / "research/manifests/agent_rd_protocol_freeze_20261110_v1.json")
 assert all(sha(ROOT / p) == h for p, h in freeze["pins"].items())
 checks = []

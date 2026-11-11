@@ -1,7 +1,8 @@
 """Wait for the fixed evaluator to end, then build only audited actual reports.
 
-Runs inside the already reserved local Job. No model calls, retries, scientific
-changes, remote cleanup, account closure or automatic publication are possible.
+Runs inside the already reserved local Job. The optional current-product smoke
+mission uses only headroom in the unchanged remote envelope after study exit.
+No scientific changes, remote cleanup, account closure or publication occur.
 Every step preserves failures and refuses existing one-time output paths.
 """
 
@@ -42,7 +43,12 @@ def main():
         [sys.executable, "tools/agent_rd_analyze_v1.py"],
         [sys.executable, "tools/agent_rd_descriptive_report_v1.py"],
         [sys.executable, "tools/agent_rd_verify_results_v1.py", "--write-receipt"],
+        [sys.executable, "tools/agent_rd_product_checks_v1.py", "v1"],
+        [sys.executable, "tools/agent_rd_product_real_model_v1.py"],
+        [str(BUNDLED), "tools/agent_rd_documents_v1.py", "manual-v2"],
+        [str(BUNDLED), "tools/agent_rd_documents_v1.py", "render-manual-v2"],
         [str(BUNDLED), "tools/agent_rd_result_figures_v1.py"],
+        [str(BUNDLED), "tools/agent_rd_preview_reproduction_v1.py"],
         [str(BUNDLED), "tools/agent_rd_documents_v1.py", "manuscript"],
         [str(BUNDLED), "tools/agent_rd_documents_v1.py", "render-manuscript"],
     ]

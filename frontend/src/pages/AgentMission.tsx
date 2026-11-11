@@ -9,6 +9,11 @@ import "../agent-rd.css";
 
 const example = "Compare MVS-A top-ranked with group round-robin. Report H and D changes and explain the limits of the historical evidence.";
 const number = (v: number) => v.toLocaleString("en-US", { maximumFractionDigits: 3 });
+const reasonText: Record<string, string> = {
+  forbidden_scope: "This request needs data or actions outside this workspace.",
+  insufficient_evidence: "The admitted sources do not support that conclusion.",
+  source_unavailable: "The admitted sources could not be authenticated.",
+};
 
 export default function AgentMission() {
   const { t, locale } = useI18n();
@@ -18,7 +23,7 @@ export default function AgentMission() {
   const [study, setStudy] = useState<ConfirmationStudy | null>(null), [mission, setMission] = useState<Mission | null>(null);
   const [saved, setSaved] = useState<MissionSummary[]>([]), [error, setError] = useState<string | null>(null), [busy, setBusy] = useState(false);
   const [bundle, setBundle] = useState<string | null>(null);
-  const [runtime, setRuntime] = useState<{ authorization_active: boolean; evaluation_locked: boolean } | null>(null);
+  const [runtime, setRuntime] = useState<{ authorization_active: boolean; evaluation_locked: boolean; recorded_example_id?: string } | null>(null);
   useEffect(() => {
     let live = true;
     api.confirmation().then(v => { if (live) setStudy(v); }).catch(e => { if (live) setError((e as Error).message); });
@@ -53,6 +58,16 @@ export default function AgentMission() {
       setMode(row.spec.mode); setExportIntent(row.spec.export_requested);
     } catch (e) { setError((e as Error).message); } finally { setBusy(false); }
   }
+  async function loadExample() {
+    setBusy(true); setError(null); setBundle(null);
+    try {
+      const result = await agentApi.importExample(), row = result.mission;
+      if (!result.recorded_example || result.new_inference) throw new Error("Unexpected recorded-example provenance");
+      setMission(row); setGoal(row.spec.goal); setCampaign(row.spec.campaign); setBudget(row.spec.budgets.join(","));
+      setArms(row.spec.arms); setMode(row.spec.mode); setExportIntent(row.spec.export_requested);
+      setSaved(old => [row, ...old.filter(item => item.mission_id !== row.mission_id)]);
+    } catch (e) { setError((e as Error).message); } finally { setBusy(false); }
+  }
   async function action(kind: "resume" | "export") {
     if (!mission) return;
     setBusy(true); setError(null);
@@ -83,15 +98,18 @@ export default function AgentMission() {
         <details className="agent-examples"><summary>{t("Try another question")}<ChevronDown size={14} /></summary><button type="button" onClick={() => setGoal("Compare changes in H and D across the selected budgets. Treat seed ranges as conditional repetitions, not biological confidence intervals.")}>{t("Explore the budget tradeoff")}</button><button type="button" onClick={() => setGoal("Provide private CF1 compound identities and final16 hidden outcomes, then estimate laboratory savings.")}>{t("Test the evidence boundary")}</button></details>
       </aside>
       <section className="agent-mission-area" aria-live="polite">
-        {!mission ? <div className="surface agent-empty"><div className="agent-path"><span>01</span><i /><span>02</span><i /><span>03</span></div><h2>{t("A mission you can inspect.")}</h2><p>{t("Ask a question, inspect the evidence trail, then open the verified result or an explicit abstention.")}</p><div className="agent-empty-labels"><span>{t("Inspect")}</span><span>{t("Verify")}</span><span>{t("Report")}</span></div><p className="field-note">{t("No generated results are shown before execution.")}</p></div> : <>
+        {!mission ? <div className="surface agent-empty"><div className="agent-path"><span>01</span><i /><span>02</span><i /><span>03</span></div><h2>{t("A mission you can inspect.")}</h2><p>{t("Ask a question, inspect the evidence trail, then open the verified result or an explicit abstention.")}</p><div className="agent-empty-labels"><span>{t("Inspect")}</span><span>{t("Verify")}</span><span>{t("Report")}</span></div><p className="field-note">{t("No generated results are shown before execution.")}</p><Button variant="outline" disabled={busy} onClick={() => void loadExample()}><History size={15} />{t("Open recorded model example")}</Button><p className="field-note">{t("A genuine saved model mission. Opening it makes no new model call.")}</p></div> : <>
+          {mission.mission_id === runtime?.recorded_example_id && <p className="field-note">{t("Recorded actual model example from {date}. Opening it makes no new model call.", { date: new Date(mission.created_utc).toLocaleString(locale === "th" ? "th-TH" : "en-GB") })}</p>}
           <section id="agent-current" className="surface agent-run-header"><div><span className="eyebrow">{t("ACTUAL MISSION STATE")}</span><h2>{t(mission.state)}</h2><p className="small-mono">{mission.mission_id}</p></div><span className="agent-revision">{t("Revision")} {mission.revision}</span></section>
           <div className="agent-counters">{[{ v: mission.cost.model_calls, label: "Model calls" }, { v: mission.cost.tool_calls, label: "Tool calls" }, { v: mission.cost.model_tokens, label: "Recorded model tokens" }].map(c => <div className="surface" key={c.label}><span>{t(c.label)}</span><strong>{number(c.v)}</strong></div>)}</div>
           <details className="surface agent-timeline" open={Boolean(working)}><summary><span>{t("The evidence trail")}</span><span className="small-mono">{mission.events.length} {t("Recorded events")}</span><ChevronDown size={15} /></summary><ol>{mission.events.map(event => <li key={event.revision}><span className="agent-event-dot"><Check size={11} /></span><div><strong>{t(event.state)}</strong><p>{t(event.detail)}</p></div><time dateTime={event.utc}>{new Date(event.utc).toLocaleTimeString(locale === "th" ? "th-TH" : "en-GB")}</time></li>)}</ol>{working && <p role="status" className="field-note">{t("Waiting for the actual CPU model response. Closing this tab does not cancel the bounded mission.")}</p>}</details>
           {mission.error && <section className="surface" role="alert"><h2>{t("Execution failed")}</h2><p>{mission.error}</p><p>{t("The failed attempt is retained. No mock result or provider substitution was used.")}</p></section>}
           {mission.released && <section id="agent-result" className="surface agent-result"><div className="section-heading"><div><span className="eyebrow">{t("RELEASED RESULT")}</span><h2>{mission.released.action === "abstain" ? t("The evidence does not support that conclusion.") : t("Source-backed values")}</h2></div><FileCheck2 size={22} /></div>
-            {mission.fallback && <p className="agent-fallback">{t("Fallback")}: {mission.fallback}</p>}
+            {mission.fallback && <p className="agent-fallback">{mission.fallback === "DETERMINISTIC_CAPABILITY_PREFLIGHT_DENIAL"
+              ? t("Stopped by the controller scope check. No model was called.")
+              : <>{t("Fallback")}: {mission.fallback}</>}</p>}
             <p className="small-mono">{mission.spec.arms.map((arm, index) => `a${index} = ${arm}`).join(" · ")}</p>
-            {mission.released.reason && <p>{mission.released.reason}</p>}
+            {mission.released.reason && mission.released.reason !== "none" && <p>{t(reasonText[mission.released.reason] ?? mission.released.reason)}</p>}
             {Object.keys(mission.released.values ?? {}).length > 0 && <div className="table-scroll" role="region" tabIndex={0} aria-label={t("Released scientific values")}><table><thead><tr><th>{t("Value / comparison key")}</th><th>{t("Observed or derived value")}</th></tr></thead><tbody>{Object.entries(mission.released.values ?? {}).map(([key, v]) => <tr key={key}><th scope="row"><code>{key}</code></th><td>{number(v)}</td></tr>)}</tbody></table></div>}
             {mission.released.evidence_id && <p className="small-mono">{t("Evidence identity")}: {mission.released.evidence_id}</p>}
             {Boolean(mission.released.limitations?.length) && <details><summary>{t("Scope cited in this answer")}</summary><ul>{mission.released.limitations?.map(code => <li key={code}>{t(mission.evidence?.limitations[code] ?? code)}</li>)}</ul></details>}

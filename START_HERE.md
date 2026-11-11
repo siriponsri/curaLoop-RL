@@ -1,13 +1,23 @@
 # Start here
 
-**Current: AgentRD solo continuation is ACTIVE, 10 November 2026.** The owner
-authorizes A0 -> necessary A1/A2 -> real matched evaluation -> analysis and a
-complete manuscript, including negative/inconclusive findings. The fresh option-A
-account is 96 CPU-hours / 120 hours, up to four combined CPU cores, existing
-Typhoon 12B on dr-train; no paid API or new model download. Do not ask routine
-phase approvals or stop at A1. [Live checkpoint](docs/08_agent_rd/ACTIVE_EXECUTION_20261110.md)
-and [protocol](docs/08_agent_rd/COMPUTATIONAL_PROTOCOL_V1.md) identify actual
-receipts and remaining work. Final16/private rows/hidden outcomes stay closed.
+**Current, 11 November 2026: AgentRD computational and localhost delivery.**
+Start with the [final owner report](docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md),
+[English manuscript](docs/07_publication/CuraLoop-AgentRD-Computational-Report-EN-v2.pdf),
+[English screenshot guide](docs/manual/CuraLoop-AgentRD-Guide-EN-v2.pdf) and
+[actual evidence](docs/evidence/agent-rd-20261110-v1/README.md).
+All 408 frozen units completed. P and LLM + tools each succeeded on 67/96 tasks;
+the deterministic reference succeeded on 96/96. The gate's invalid-candidate
+repair branch was not naturally exercised. This is a complete conditional
+negative/inconclusive study, not established JCAMD method readiness.
+
+Run `Start-CuraLoop-Web.cmd`, open `http://127.0.0.1:8000/agent`, explicitly open
+the recorded real-model example or use deterministic mode for actual aggregate
+comparisons/sweeps and local EN/TH dossiers. The owned research worker was
+removed after verified full return; fresh inference needs new authorization
+and transport setup. [Reproduction/operation](docs/08_agent_rd/REPRODUCIBILITY_V1.md)
+and [acceptance matrix](docs/08_agent_rd/DELIVERY_ACCEPTANCE_MATRIX_V1.md) state
+the limits. Final16/private rows/hidden outcomes and all old ledgers remain
+closed. No subsequent study, integration or submission starts automatically.
 
 ## Historical CF2P checkpoint
 

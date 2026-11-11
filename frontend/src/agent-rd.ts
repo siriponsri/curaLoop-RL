@@ -23,7 +23,8 @@ export type MissionSummary = Pick<AgentMission, "mission_id" | "revision" | "sta
 export const terminalMission = (state: string) => ["COMPLETED", "ABSTAINED", "FAILED", "CANCELLED", "INTERRUPTED_RECOVERABLE"].includes(state);
 const post = <T>(path: string, body: unknown) => request<T>(path, { method: "POST", body: JSON.stringify(body) });
 export const agentApi = {
-  runtime: () => request<{ authorization_active: boolean; evaluation_locked: boolean; model: string | null; provider_health: string; paid_fallback: boolean }>("/agent/runtime"),
+  runtime: () => request<{ authorization_active: boolean; evaluation_locked: boolean; model: string | null; provider_health: string; paid_fallback: boolean; recorded_example_id?: string }>("/agent/runtime"),
+  importExample: () => post<{ mission: AgentMission; recorded_example: boolean; new_inference: boolean; source_sha256: string }>("/agent/examples/recorded-model", {}),
   list: () => request<{ items: MissionSummary[]; integrity_issues: { mission_id: string; error: string }[] }>("/agent/missions"),
   read: (id: string) => request<AgentMission>("/agent/missions/" + id),
   create: (spec: MissionSpec) => post<AgentMission>("/agent/missions", spec),

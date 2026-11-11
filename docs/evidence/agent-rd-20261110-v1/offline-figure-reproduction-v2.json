@@ -1,0 +1,30 @@
+{
+  "status": "PASS_OFFLINE_REPRODUCTION_IN_FRESH_OUTPUT_DIRECTORY",
+  "command": [
+    "C:\\Users\\User\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "tools/agent_rd_result_figures_v1.py",
+    "--edition",
+    "v2",
+    "--preview-dir",
+    "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.local\\agent-rd-run-20261110-v1\\offline-figure-reproduction-v2"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"status\": \"RENDERED_AWAITING_ACTUAL_COLOR_GRAYSCALE_AND_MANUSCRIPT_REVIEW\", \"figures\": 2}\n",
+  "stderr": "Matplotlib is building the font cache; this may take a moment.\n",
+  "scope": "Author offline same-machine figure reproduction from public study inputs into a new directory",
+  "new_model_calls": 0,
+  "ssh_or_http_requests": 0,
+  "independent_validation": false,
+  "clean_machine_test": false,
+  "matching_png_pixels": [
+    "02-task-completion.png",
+    "03-cost-completion.png"
+  ],
+  "original_files_unchanged": 864,
+  "source_pins": {
+    "analysis": "7eec6097a01a40f60ca04e6031f3c67abdc861ddbb88b94680c89c07d400ab84",
+    "descriptive": "634a0c728293df8587d8f048c517583e0cbb81655f6482ded5626beb40ec6235",
+    "figure_source": "dbd7f6c3341012dadf08f1dd7beb02a68fb2caecf120af31a4666e51e2462003"
+  },
+  "svg_byte_identity_claim": false
+}

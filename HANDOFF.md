@@ -1,4 +1,61 @@
-# Handoff: active AgentRD solo continuation
+# Handoff: completed AgentRD computation and localhost package
+
+## Current checkpoint, 11 November 2026
+
+All 408 frozen units completed at 05:49:33 UTC. The last supervisor exited PASS
+at 06:06:34 UTC; PID12928 and all observation sessions are historical, not running
+jobs to resume. Read docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md and the
+evidence index. P and B2 each succeeded 67/96, B0 96/96 and B1 60/96. Primary
+effect 0pp, conditional interval [0,0], all 96 paired outputs identical. No
+naturally invalid B2/P terminal proposal exercised source/numeric repair. No
+general equivalence, agent advantage, user value or competitive JCAMD claim.
+
+Current product has 57 backend and 32 frontend passes, actual EN/TH/mobile
+served checks, 129 independently coded CSV-value checks for its five-budget
+sweep, persisted zero-call controller denials, explicit byte-identical original
+real-model example import, immutable dossier and actual restart without new
+generation. Its separate latest actual model mission 98661213... completed
+three calls but ABSTAINED, failing the task. Technical lifecycle PASS does not
+erase that failure. The frozen research condition was not changed.
+
+Final files: docs/manual/CuraLoop-AgentRD-Guide-EN-v2.pdf (8 pages) and
+docs/07_publication/CuraLoop-AgentRD-Computational-Report-EN-v2.pdf (11 pages),
+plus editable English manuscript, seven tables and three figures. Every final
+page and color/grayscale/final-insertion plot was actually reviewed. V1 failed
+layout-review receipts and exact original authoring sources remain intact.
+Read-only scoring and fresh-output same-machine figure reproduction passed.
+
+All 477 owned remote files were returned and hash-reread, including all 436
+locked and five product provider files. Exact owned cleanup passed 06:29:30 UTC;
+fresh root/container/archive absence passed 06:29:36 UTC. Shared caches/services
+unchanged. Local private archive is under
+.local/agent-rd-run-20261110-v1/remote-return-v1; never publish it or delete the
+returned evidence. Exact executed workers are published as source evidence.
+Do not recreate /home/chaw/curaloop-tasks/agent-rd-20261110-v1 or its container.
+
+The original 96 CPU-hour/120-hour allowance/deadline never reset. Final closure
+receipts in docs/evidence/agent-rd-20261110-v1 are final-audit-v1.json,
+account-closure-v1.json and settled-account-identity-v1.json. Their actual
+existence/status governs account completion. Main was pushed through ec1778c
+before final packaging; final-main-delivery-v1.json records the subsequent
+actual delivery SHA/origin verification. Never infer a push from this narrative.
+
+Finish only any absent final audit, closure or main delivery. Then wait for
+owner direction. No additional model trial, new study, deployment or submission
+is authorized by unused budget. Author funding/COI/signoff and future venue
+choice remain owner decisions; the solo goal does not require external experts
+or wet-lab work. Final16, private CF1 rows and hidden outcomes remain closed;
+14 prior ledgers/66 old scientific pins/27 new frozen pins stay byte-identical.
+
+For offline use run Start-CuraLoop-Web.cmd and open 127.0.0.1:8000/agent; select
+deterministic mode or explicitly open the recorded model example. Future live
+inference needs fresh owner authorization and transport setup, not just a
+session variable. No always-on model or general autonomous R&D claim.
+
+## Historical execution notes
+
+The dated notes below retain the original running checkpoint and recovery
+history. Their PENDING/RUNNING statuses are historical, superseded above.
 
 ## Latest owner resume, 11 November 2026 Bangkok
 
@@ -20,6 +77,78 @@ live. Do not double-launch or reopen an old booking. Current logs are under
 `postrun-documents-host-resume-v1`. Read the latest active checkpoint, the
 owner-resume audit and exact-call recovery receipt. No frozen science, model
 settings, data roles, phase cap or source bytes changed. The goal remains ACTIVE.
+
+## Prepared product and report closeout, 11 November 2026
+
+Current sole-writer working changes are not yet a tested delivery. The new
+product-only API scope preflight records known unsupported requests as actual
+controller abstentions with zero model calls. Explicit recorded-example import
+copies the genuine original788428ed... mission only on a user's action, never
+generates/overwrites it, and preserves its historical timestamp/cost. Both are
+outside the frozen scientific engine. The newer product cannot replace failed
+v1 research observations or support a new comparative efficacy claim.
+
+The existing supervisor will run the updated unfrozen postrun pipeline after
+actual evaluator exit: no-fix lint/compile, frozen analysis, descriptive tables,
+read-only score replay, targeted product tests/frontend build and real served
+EN/TH checks, optional one current-product real-model mission with sufficient
+unchanged-phase headroom, revised guide v2/render, actual result figures and
+manuscript/render. Do not launch these concurrently with the active local Job.
+All are PENDING until their actual receipts exist. Failures need preserved
+versioned engineering follow-up, not overwritten outputs or new scientific
+trials. The one successful PDF-operation marker already covers the two final
+documents; do not repeat it. Keep original guide v1 as historical evidence.
+
+New descriptive output-length fields retain provider token counts/stop reasons
+and cap-reached counts. They are explicitly post-hoc metadata, not rescoring,
+causal attribution or permission to tune the frozen256-token cap. The final
+return additionally checks the cumulative600-second host-client counter and
+the original product-model call files against exact returned provider receipts.
+
+A portable figure-preview mode now writes only to a new non-evidence directory
+and uses packages in its chosen Python environment. The postrun pipeline will
+check that regenerated PNG pixels match and all original inputs/figures remain
+unchanged. This author same-machine check is PENDING, not independent or
+clean-machine reproduction. Its actual receipt is now a final audit requirement.
+Ruff/compile preflight includes the new helper; no extra local job is launched.
+
+Administrative control accounting now explicitly retains an additional1,800
+CPU-second allowance within the original technical-retry bucket, with every
+previous booking unchanged. Interactive file authoring/read-only monitoring
+CPU was not separately metered. This is not actual usage or retroactive hard
+enforcement; report that limit alongside the guarded model/test receipts.
+There is no new model/worker, resource ceiling, deadline or remote phase. The
+public receipt is `interactive-control-accounting-v1.json`.
+
+Read-only observation now uses `tools/agent_rd_observe_v1.ps1`, one persistent
+PowerShell process pinned to local CPU0, with a verified native handle to the
+original PID12928/start23:08:28.0819121Z. It observes every180 seconds and never
+starts/stops a model. Unified exec session80513 is this observer, not the model
+controller; its current window started about02:42 UTC11 November for at most
+24 observations. That observer window ended normally at about03:54 UTC,
+explicitly reporting controller_exited=false and model_stop_requested=false;
+its last periodic count was358/408 at03:51:33.890052Z. Session80513 is now
+historical. Start another read-only observer window or inspect the original
+PID/command/fresh heartbeat before action. Do not restart the model because
+an observation window ended. The single observer used less than one recorded
+CPU second over its window; this subset does not meter all interactive work.
+
+The current new-account remote booking has the original explicit status
+RESERVED_PHASE_ENVELOPE. Closeout now validates that status and checks every
+RESERVED-prefixed booking before closure, rather than wrongly assuming that
+the remote envelope has the local job's literal RESERVED status. No existing
+booking status is normalized or edited by this source correction.
+
+After the current job settles: inspect every page of the final guide/manuscript
+and color/grayscale figures, write actual visual reviews, return/reread all
+owned remote bytes, delete only verified owned roots/container, confirm fresh
+absence, audit all old/new pins and costs, close/settle only this new account,
+update README/evidence/acceptance matrix and commit/push main. The final audit
+now also requires guide-v2 and current product-policy acceptance; older tests
+alone do not establish the changed service. Future live model use after
+cleanup needs new authorization and operator transport setup, not only an
+environment-variable change. The goal remains ACTIVE; no owner phase gate is
+pending and no resource deadline has been reset.
 
 ## Current authority, 10 November 2026
 

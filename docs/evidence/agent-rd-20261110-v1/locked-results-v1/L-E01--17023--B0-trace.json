@@ -1,0 +1,134 @@
+{
+  "payload": {
+    "calls": [],
+    "candidate": {
+      "action": "abstain",
+      "limitations": [
+        "development_only",
+        "missing_excluded",
+        "nonpositive_mixed",
+        "seed_range_not_ci",
+        "one_component",
+        "mechanical_d_equals_h",
+        "no_lab_or_clinical_value",
+        "aggregate_only",
+        "commercial_rights_unconfirmed",
+        "no_rl_result"
+      ],
+      "reason": "source_unavailable",
+      "values": {}
+    },
+    "controller_wall_seconds": 0.046999999991385266,
+    "cost": {
+      "failed_calls": 0,
+      "model_calls": 0,
+      "model_cpu_seconds": 0,
+      "model_tokens": 0,
+      "model_wall_seconds": 0,
+      "paid_cost_usd": 0,
+      "tool_calls": 0
+    },
+    "created_utc": "2026-11-10T14:34:53.271472+00:00",
+    "derived": {
+      "values": {}
+    },
+    "error": null,
+    "events": [
+      {
+        "detail": "Authenticate only the four admitted public aggregate files",
+        "previous": null,
+        "revision": 1,
+        "sha256": "eeddd0ae6236fa445e6c93f9f07884891e32b7edb90f5dddf51111edac517952",
+        "state": "VALIDATING",
+        "utc": "2026-11-10T14:34:53.310981+00:00"
+      },
+      {
+        "detail": "Read-only CF1 comparison; no simulator action is registered",
+        "previous": "eeddd0ae6236fa445e6c93f9f07884891e32b7edb90f5dddf51111edac517952",
+        "revision": 2,
+        "sha256": "df9e6942973e21fcda2e2aac878dc61b41dc24e25485c6b7da6d408aca3fbe18",
+        "state": "PLAN_READY",
+        "utc": "2026-11-10T14:34:53.341852+00:00"
+      },
+      {
+        "detail": "Deterministic mode; no model was called",
+        "previous": "df9e6942973e21fcda2e2aac878dc61b41dc24e25485c6b7da6d408aca3fbe18",
+        "revision": 3,
+        "sha256": "24cbd405ce8d6c22e3eb8b5a47e2cc66afb177de682ae00453adbd9cbd3f903e",
+        "state": "ABSTAINED",
+        "utc": "2026-11-10T14:34:53.359442+00:00"
+      }
+    ],
+    "evidence": {
+      "diagnostic": "Recorded confirmation evidence is unavailable",
+      "evidence_id": null,
+      "limitations": {
+        "aggregate_only": "No individual compounds or hidden/pending outcomes are available.",
+        "commercial_rights_unconfirmed": "Commercial/raw-data redistribution clearance is not established.",
+        "development_only": "Exposed development evidence, not independent biological confirmation.",
+        "mechanical_d_equals_h": "Round-robin D=H is mechanical at these budgets.",
+        "missing_excluded": "Missing confirmation is excluded, never treated as inactive.",
+        "no_lab_or_clinical_value": "No measured laboratory savings, prospective efficacy or clinical benefit.",
+        "no_rl_result": "CF1 did not evaluate RL; the simulator is a separate retrospective study.",
+        "nonpositive_mixed": "Source nonpositive includes inactive and inconclusive.",
+        "one_component": "Six campaigns share one annotation-connected component.",
+        "seed_range_not_ci": "Five-seed ranges are conditional repetitions, not biological confidence intervals."
+      },
+      "source_hashes": [],
+      "status": "source_unavailable",
+      "values": {}
+    },
+    "fallback": "EXPLICIT_DETERMINISTIC_MODE",
+    "implementation_id": "b8c010a02a898f5aa8431cfc7e1a3ef17e58ddf4792eba23bb4d8b7ecc677393",
+    "limits": {
+      "max_output_tokens_per_call": 256,
+      "model_calls": 3,
+      "repair_calls_within_total": 2,
+      "tool_calls": 2
+    },
+    "mission_id": "528ce5fc-9a7f-4dc1-ba4b-bc7e4782b3e4",
+    "released": {
+      "action": "abstain",
+      "limitations": [
+        "development_only",
+        "missing_excluded",
+        "nonpositive_mixed",
+        "seed_range_not_ci",
+        "one_component",
+        "mechanical_d_equals_h",
+        "no_lab_or_clinical_value",
+        "aggregate_only",
+        "commercial_rights_unconfirmed",
+        "no_rl_result"
+      ],
+      "reason": "source_unavailable",
+      "values": {}
+    },
+    "revision": 3,
+    "schema": "curaloop.agent-rd.mission.v1",
+    "seed": 17023,
+    "spec": {
+      "arms": [
+        "mvsa/top_ranked"
+      ],
+      "budgets": [
+        10
+      ],
+      "campaign": "equal",
+      "export_requested": true,
+      "goal": "Report b10:a0:H from the authenticated evidence, or abstain if that source cannot be authenticated.",
+      "locale": "en",
+      "mode": "agent"
+    },
+    "spec_sha256": "19a6c1ea24c3be8b51aeff1598a5916c042c3a3c3d4a896a83a365dcc6bac104",
+    "state": "ABSTAINED",
+    "system": "B0",
+    "tool_receipts": [],
+    "verification": {
+      "errors": [],
+      "valid": true,
+      "verified_values": 0
+    }
+  },
+  "sha256": "32ffe87e935770a80a6495b54763e9bbaf064c7c419be932f504710ba2f3d0fd"
+}

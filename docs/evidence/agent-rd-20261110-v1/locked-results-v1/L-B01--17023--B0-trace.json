@@ -1,0 +1,276 @@
+{
+  "payload": {
+    "calls": [],
+    "candidate": {
+      "action": "answer",
+      "evidence_id": "fe37c935176cb7f2",
+      "limitations": [
+        "development_only",
+        "missing_excluded",
+        "nonpositive_mixed",
+        "seed_range_not_ci",
+        "one_component",
+        "mechanical_d_equals_h",
+        "no_lab_or_clinical_value",
+        "aggregate_only",
+        "commercial_rights_unconfirmed",
+        "no_rl_result"
+      ],
+      "reason": "none",
+      "values": {
+        "b1:a0:B": 3,
+        "b1:a0:D": 2.2,
+        "b1:a0:D:max": 3,
+        "b1:a0:D:min": 2,
+        "b1:a0:DB": 0.733,
+        "b1:a0:FP": 3,
+        "b1:a0:H": 3,
+        "b1:a0:H:max": 3,
+        "b1:a0:H:min": 3,
+        "b1:a0:HB": 1.0,
+        "b1:a1:B": 3,
+        "b1:a1:D": 3,
+        "b1:a1:D:max": 3,
+        "b1:a1:D:min": 3,
+        "b1:a1:DB": 1.0,
+        "b1:a1:FP": 3,
+        "b1:a1:H": 3,
+        "b1:a1:H:max": 3,
+        "b1:a1:H:min": 3,
+        "b1:a1:HB": 1.0,
+        "delta:b1:D": 0.8,
+        "delta:b1:DB": 0.267,
+        "delta:b1:FP": 0,
+        "delta:b1:H": 0,
+        "delta:b1:HB": 0.0
+      }
+    },
+    "controller_wall_seconds": 0.1720000000204891,
+    "cost": {
+      "failed_calls": 0,
+      "model_calls": 0,
+      "model_cpu_seconds": 0,
+      "model_tokens": 0,
+      "model_wall_seconds": 0,
+      "paid_cost_usd": 0,
+      "tool_calls": 0
+    },
+    "created_utc": "2026-11-11T01:57:08.922471+00:00",
+    "derived": {
+      "definition": "right-minus-left for first two arms; last-minus-first budget for sweeps; rounded operands",
+      "evidence_id": "fe37c935176cb7f2",
+      "values": {
+        "delta:b1:D": 0.8,
+        "delta:b1:DB": 0.267,
+        "delta:b1:FP": 0,
+        "delta:b1:H": 0,
+        "delta:b1:HB": 0.0
+      }
+    },
+    "error": null,
+    "events": [
+      {
+        "detail": "Authenticate only the four admitted public aggregate files",
+        "previous": null,
+        "revision": 1,
+        "sha256": "01362bf1fed37a8fced737d756c1ddcd8c03e0985af552f69b2ed3b6c8f5a0b9",
+        "state": "VALIDATING",
+        "utc": "2026-11-11T01:57:08.946335+00:00"
+      },
+      {
+        "detail": "Read-only CF1 comparison; no simulator action is registered",
+        "previous": "01362bf1fed37a8fced737d756c1ddcd8c03e0985af552f69b2ed3b6c8f5a0b9",
+        "revision": 2,
+        "sha256": "c879546e90e554afce67b22b031edc50c812b62d07f6c99d1124baf6ad80e0e6",
+        "state": "PLAN_READY",
+        "utc": "2026-11-11T01:57:09.114444+00:00"
+      },
+      {
+        "detail": "Deterministic mode; no model was called",
+        "previous": "c879546e90e554afce67b22b031edc50c812b62d07f6c99d1124baf6ad80e0e6",
+        "revision": 3,
+        "sha256": "447ef64bca4e7c6570ee570b171afbcffc726c81d1f591dee969e407d50ce99c",
+        "state": "COMPLETED",
+        "utc": "2026-11-11T01:57:09.141961+00:00"
+      }
+    ],
+    "evidence": {
+      "arms": [
+        "mvsa/top_ranked",
+        "mvsa/cluster_round_robin"
+      ],
+      "budgets": [
+        1
+      ],
+      "campaign": "2661/2821",
+      "evidence_digest": "fe37c935176cb7f2f38a0f9b0e701bfd8e6609fd4573b168b19f7520bc3ec1bd",
+      "evidence_id": "fe37c935176cb7f2",
+      "final16_access": false,
+      "limitations": {
+        "aggregate_only": "No individual compounds or hidden/pending outcomes are available.",
+        "commercial_rights_unconfirmed": "Commercial/raw-data redistribution clearance is not established.",
+        "development_only": "Exposed development evidence, not independent biological confirmation.",
+        "mechanical_d_equals_h": "Round-robin D=H is mechanical at these budgets.",
+        "missing_excluded": "Missing confirmation is excluded, never treated as inactive.",
+        "no_lab_or_clinical_value": "No measured laboratory savings, prospective efficacy or clinical benefit.",
+        "no_rl_result": "CF1 did not evaluate RL; the simulator is a separate retrospective study.",
+        "nonpositive_mixed": "Source nonpositive includes inactive and inconclusive.",
+        "one_component": "Six campaigns share one annotation-connected component.",
+        "seed_range_not_ci": "Five-seed ranges are conditional repetitions, not biological confidence intervals."
+      },
+      "paper_url": "https://doi.org/10.1021/acscentsci.3c01517",
+      "schema": "curaloop.agent-rd.evidence.v1",
+      "source_hashes": [
+        {
+          "bytes": 3884,
+          "path": "research/product_handoffs/lr_cf1_v1/evidence-card-v1.json",
+          "sha256": "e4ed702d61f1a283cc7bc0f1abcd4b41dd4f241f1b66857afed9a299254a3fa9"
+        },
+        {
+          "bytes": 4357,
+          "path": "research/product_handoffs/lr_cf1_v1/evidence-card.schema.json",
+          "sha256": "06709cfa3d1878a95291a5d0ef1b4b4a26c54e9777eda9b9d1f1ec353f5fea69"
+        },
+        {
+          "bytes": 384138,
+          "path": "docs/evidence/lr-cf1-20261109-v1/portfolio-cells-v1.csv",
+          "sha256": "495fd9d918b00db16e779a866f9f8a801e300ef0b6e4c23635dd1fb9a395d831"
+        },
+        {
+          "bytes": 114773,
+          "path": "docs/evidence/lr-cf1-20261109-v1/results-summary-v1.json",
+          "sha256": "fff5b722a6ade896f056c798bcf40fdc3a21909e63882909f9915dbec7e10486"
+        }
+      ],
+      "source_snapshot": "04c58e85188e724ec5ff44cbed2e7b960f6f3df3",
+      "source_url": "https://github.com/dahvida/AIC_Finder/tree/04c58e85188e724ec5ff44cbed2e7b960f6f3df3",
+      "status": "available",
+      "units": {
+        "B": "confirmation observations",
+        "D": "positive fixed structure groups",
+        "DB": "fraction, not percent or currency",
+        "FP": "positive fingerprint groups",
+        "H": "historical positive observations",
+        "HB": "fraction, not percent or currency"
+      },
+      "values": {
+        "b1:a0:B": 3,
+        "b1:a0:B:max": 3,
+        "b1:a0:B:min": 3,
+        "b1:a0:D": 2.2,
+        "b1:a0:D:max": 3,
+        "b1:a0:D:min": 2,
+        "b1:a0:DB": 0.733,
+        "b1:a0:DB:max": 1.0,
+        "b1:a0:DB:min": 0.667,
+        "b1:a0:FP": 3,
+        "b1:a0:FP:max": 3,
+        "b1:a0:FP:min": 3,
+        "b1:a0:H": 3,
+        "b1:a0:H:max": 3,
+        "b1:a0:H:min": 3,
+        "b1:a0:HB": 1.0,
+        "b1:a0:HB:max": 1.0,
+        "b1:a0:HB:min": 1.0,
+        "b1:a1:B": 3,
+        "b1:a1:B:max": 3,
+        "b1:a1:B:min": 3,
+        "b1:a1:D": 3,
+        "b1:a1:D:max": 3,
+        "b1:a1:D:min": 3,
+        "b1:a1:DB": 1.0,
+        "b1:a1:DB:max": 1.0,
+        "b1:a1:DB:min": 1.0,
+        "b1:a1:FP": 3,
+        "b1:a1:FP:max": 3,
+        "b1:a1:FP:min": 3,
+        "b1:a1:H": 3,
+        "b1:a1:H:max": 3,
+        "b1:a1:H:min": 3,
+        "b1:a1:HB": 1.0,
+        "b1:a1:HB:max": 1.0,
+        "b1:a1:HB:min": 1.0
+      }
+    },
+    "fallback": "EXPLICIT_DETERMINISTIC_MODE",
+    "implementation_id": "b8c010a02a898f5aa8431cfc7e1a3ef17e58ddf4792eba23bb4d8b7ecc677393",
+    "limits": {
+      "max_output_tokens_per_call": 256,
+      "model_calls": 3,
+      "repair_calls_within_total": 2,
+      "tool_calls": 2
+    },
+    "mission_id": "c9102d30-fc92-4725-b6b1-7b26e9c3342e",
+    "released": {
+      "action": "answer",
+      "evidence_id": "fe37c935176cb7f2",
+      "limitations": [
+        "development_only",
+        "missing_excluded",
+        "nonpositive_mixed",
+        "seed_range_not_ci",
+        "one_component",
+        "mechanical_d_equals_h",
+        "no_lab_or_clinical_value",
+        "aggregate_only",
+        "commercial_rights_unconfirmed",
+        "no_rl_result"
+      ],
+      "reason": "none",
+      "values": {
+        "b1:a0:B": 3,
+        "b1:a0:D": 2.2,
+        "b1:a0:D:max": 3,
+        "b1:a0:D:min": 2,
+        "b1:a0:DB": 0.733,
+        "b1:a0:FP": 3,
+        "b1:a0:H": 3,
+        "b1:a0:H:max": 3,
+        "b1:a0:H:min": 3,
+        "b1:a0:HB": 1.0,
+        "b1:a1:B": 3,
+        "b1:a1:D": 3,
+        "b1:a1:D:max": 3,
+        "b1:a1:D:min": 3,
+        "b1:a1:DB": 1.0,
+        "b1:a1:FP": 3,
+        "b1:a1:H": 3,
+        "b1:a1:H:max": 3,
+        "b1:a1:H:min": 3,
+        "b1:a1:HB": 1.0,
+        "delta:b1:D": 0.8,
+        "delta:b1:DB": 0.267,
+        "delta:b1:FP": 0,
+        "delta:b1:H": 0,
+        "delta:b1:HB": 0.0
+      }
+    },
+    "revision": 3,
+    "schema": "curaloop.agent-rd.mission.v1",
+    "seed": 17023,
+    "spec": {
+      "arms": [
+        "mvsa/top_ranked",
+        "mvsa/cluster_round_robin"
+      ],
+      "budgets": [
+        1
+      ],
+      "campaign": "2661/2821",
+      "export_requested": true,
+      "goal": "Calculate right-minus-left arm differences for delta:b1:H, delta:b1:D. Use rounded source operands; include development_only.",
+      "locale": "en",
+      "mode": "agent"
+    },
+    "spec_sha256": "10393deba41fff2afc7c9412d67607303529b953b28b4657fae7955763291314",
+    "state": "COMPLETED",
+    "system": "B0",
+    "tool_receipts": [],
+    "verification": {
+      "errors": [],
+      "valid": true,
+      "verified_values": 25
+    }
+  },
+  "sha256": "31ab421357f2162880f4dbb4368b990f0f7c5c5e90c7883115d069d44aba58b0"
+}

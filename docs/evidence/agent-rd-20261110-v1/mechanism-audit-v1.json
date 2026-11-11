@@ -1,0 +1,56 @@
+{
+  "status": "DESCRIPTIVE_FIXED_TRACE_VERIFIER_REPLAY_NO_SCORE_CHANGE",
+  "arms": [
+    {
+      "system": "B1",
+      "missions": 96,
+      "terminal_proposals": 85,
+      "verifier_invalid_terminal_proposals": 15,
+      "verification_error_types": {
+        "WRONG_VALUE:delta:b2:H": 3,
+        "WRONG_VALUE:sweep:a0:H": 6,
+        "WRONG_VALUE:sweep:a0:D": 6,
+        "WRONG_VALUE:delta:b10:H": 3,
+        "WRONG_VALUE:delta:b10:D": 3,
+        "WRONG_VALUE:delta:b20:H": 3,
+        "WRONG_VALUE:delta:b20:D": 3,
+        "DEVELOPMENT_SCOPE_MISSING": 3
+      }
+    },
+    {
+      "system": "B2",
+      "missions": 96,
+      "terminal_proposals": 78,
+      "verifier_invalid_terminal_proposals": 0,
+      "verification_error_types": {}
+    },
+    {
+      "system": "P",
+      "missions": 96,
+      "terminal_proposals": 78,
+      "verifier_invalid_terminal_proposals": 0,
+      "verification_error_types": {}
+    },
+    {
+      "system": "A-NOREPAIR",
+      "missions": 24,
+      "terminal_proposals": 24,
+      "verifier_invalid_terminal_proposals": 0,
+      "verification_error_types": {}
+    }
+  ],
+  "comparable_B2_P_seed_case_pairs": 96,
+  "B2_P_identical_recorded_output_sequences": 96,
+  "B2_P_equal_task_success_pairs": 96,
+  "all_case_averaged_primary_differences_zero": true,
+  "source_pins": {
+    "analysis": "7eec6097a01a40f60ca04e6031f3c67abdc861ddbb88b94680c89c07d400ab84",
+    "all_unit_source_pins": "ed38a2c8128c90edaae68dc75914467e0612f605db8adbd915316cfb91c4ac97",
+    "frozen_verifier": "ba2f190a01f7982eeedfbfa48c87edb36fc8015f7a85d12f79edf20f4019eaad",
+    "descriptive_audit_source": "a064c5bfa26e3c283bda68d79e7307928f79500ce909b6187ec43dbc290aee84"
+  },
+  "new_model_calls": 0,
+  "new_scientific_score": false,
+  "independent_expert_validation": false,
+  "interpretation": "Replay describes verifier opportunities in observed proposals, not general gate efficacy or semantic task correctness. Identical observed paired scores and a degenerate resampling interval do not establish external-population equivalence."
+}

@@ -1,6 +1,25 @@
 # AgentRD active execution checkpoint
 
-Status: **ACTIVE_LOCKED_EVALUATION_OPERATIONAL_RECOVERY**.
+## Final computational checkpoint, 11 November 2026
+
+Status: **COMPLETE_COMPUTATIONAL_REPORT_AND_LOCALHOST_ACCEPTANCE**. All 408 units
+completed 05:49:33 UTC; supervisor exited PASS 06:06:34 UTC. No model/evaluator
+process remains to resume. P 67/96 = B2 67/96, B0 96/96, B1 60/96; source/numeric
+repair was not naturally exercised by an invalid B2/P terminal proposal.
+The final owner report, acceptance matrix and evidence index identify the
+actual analysis, replay, current product checks, reviewed guide/manuscript,
+full 477-file return and exact remote cleanup/fresh absence. Final audit,
+settled account and main-delivery receipts govern technical closeout. Finish
+only those if missing; do not rerun or recreate remote resources. No subsequent
+phase, live inference, paid service, protected data or submission is released.
+
+[Owner report](FINAL_OWNER_REPORT_20261111.md) ·
+[Acceptance matrix](DELIVERY_ACCEPTANCE_MATRIX_V1.md) ·
+[Evidence](../evidence/agent-rd-20261110-v1/README.md).
+
+## Historical execution and recovery record
+
+Historical status: **ACTIVE_LOCKED_EVALUATION_OPERATIONAL_RECOVERY**.
 Owner authorizes continuous A0 -> A1 -> necessary A2 -> evaluation -> analysis
 and manuscript. Do not stop at A0/A1 or seek another routine phase approval.
 Negative findings still require the complete report/manuscript. No external
@@ -43,6 +62,19 @@ double-launch while the current admin process is live. Original CPU cap,
 phase baseline, deadline, model, prompts, cases, schedule and scoring persist.
 
 ## Latest transport recovery, 10 November 2026 at16:18 UTC
+
+### Current product work prepared during the unchanged run
+
+The newer API scope policy and explicit original-example import are outside
+the27 frozen scientific pins. Targeted backend/frontend checks, the served
+EN/TH denial/sweep/restart test and a revised eight-page guide are queued only
+after the evaluator exits. No PASS is inferred from their implementation.
+An optional one-mission current-service model smoke check requires at least
+6,000 remaining remote CPU seconds and one hour before the original deadline;
+otherwise it records NOT_RUN. It cannot reset the phase/cap or replace a
+frozen result. The research controller itself is unchanged. The remaining
+steps are actual analysis/replay, inspected figures/PDFs, full remote return
+and reread, exact owned cleanup, account audit/closure and main delivery.
 
 The first evaluator completed52/408 immutable units before an SSH banner
 timeout in the status check ahead of the next unit. The next model mission

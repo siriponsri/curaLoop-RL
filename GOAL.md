@@ -1,14 +1,21 @@
 # Goal: a defensible method and a useful R&D plugin
 
-**Current: complete the AgentRD solo project, not another planning-only phase.**
-The owner's 10 November 2026 grant covers A0 -> necessary A1/A2 -> actual
-deterministic/LLM-only/LLM+tools/guarded evaluation -> analysis/manuscript and
-working localhost delivery. Report real failures, fallback and costs, even if
-the agent adds no advantage. Use the existing CPU-only Typhoon model within
-96 CPU-hours / 120 hours; no paid API, new model, protected-data access or live
-external integration. [Actual checkpoint](docs/08_agent_rd/ACTIVE_EXECUTION_20261110.md)
-and [protocol](docs/08_agent_rd/COMPUTATIONAL_PROTOCOL_V1.md) supersede the old
-stop-after-design rules. Normal main commit/push is authorized.
+**Current, 11 November 2026: AgentRD computational and localhost work complete.**
+The continuous solo scope produced the actual EN/TH workbench, all 408 frozen
+units, auditable analysis and a complete English manuscript/guide. P and B2
+each completed 67/96 tasks; B0 completed 96/96. Incremental gate superiority
+and competitive JCAMD original-method readiness are not established. This is
+a completed negative/inconclusive report, not another planning milestone.
+
+Read the [final owner report](docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md),
+[acceptance matrix](docs/08_agent_rd/DELIVERY_ACCEPTANCE_MATRIX_V1.md) and
+[evidence](docs/evidence/agent-rd-20261110-v1/README.md). Final audit, closed-account
+identity and main-delivery receipts govern technical delivery. The research
+worker/root was removed after verified full return. Offline deterministic
+missions and explicit recorded-example replay remain usable. No fresh model
+session, phase, paid API, protected data or external integration starts from
+unused allowance. Prior results and final16/private rows/hidden outcomes remain
+closed. Subsequent research or submission is the owner's separate decision.
 
 ## Historical CF2P checkpoint
 

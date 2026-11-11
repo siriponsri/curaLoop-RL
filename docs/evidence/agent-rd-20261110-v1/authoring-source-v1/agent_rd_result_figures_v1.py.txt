@@ -1,0 +1,189 @@
+"""Draw publication figures only from the completed audited locked analysis."""
+
+import argparse
+import hashlib
+import json
+import os
+import sys
+import tempfile
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+TASK = ROOT / ".local/agent-rd-run-20261110-v1"
+PUBLIC = ROOT / "docs/evidence/agent-rd-20261110-v1"
+PREVIEW_REQUESTED = any(arg == "--preview-dir" or arg.startswith("--preview-dir=") for arg in sys.argv[1:])
+if PREVIEW_REQUESTED:
+    os.environ.setdefault("MPLCONFIGDIR", str(Path(tempfile.gettempdir()) / "curaloop-agent-rd-figure-cache"))
+else:
+    sys.path.insert(0, str(TASK / "plotdeps-v1"))
+    os.environ["MPLCONFIGDIR"] = str(TASK / "mpl-cache-v1")
+
+import matplotlib  # noqa: E402
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt  # noqa: E402
+from PIL import Image  # noqa: E402
+
+ORDER = ("B0", "B1", "B2", "P")
+LABELS = {"B0": "B0  Deterministic", "B1": "B1  LLM only", "B2": "B2  LLM + tools", "P": "P  Guarded"}
+PALETTE = {"B0": "#29282b", "B1": "#808080", "B2": "#606060", "P": "#a6492d"}
+MARKERS = {"B0": "s", "B1": "o", "B2": "^", "P": "D"}
+INK, MUTED, RULE = "#29282b", "#655e57", "#ded8d0"
+
+
+def read(path):
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def save(fig, name, output, dimensions):
+    fig.canvas.draw()
+    renderer = fig.canvas.get_renderer()
+    minimum = 100
+    for label in fig.findobj(match=matplotlib.text.Text):
+        if not label.get_text() or not label.get_visible():
+            continue
+        # Matplotlib creates off-axis unused tick labels on some log locators.
+        if label.get_clip_on():
+            continue
+        minimum = min(minimum, label.get_fontsize())
+        assert label.get_fontsize() >= 8.5, label.get_text()
+        box = label.get_window_extent(renderer)
+        assert box.x0 >= -1 and box.y0 >= -1 and box.x1 <= fig.bbox.width + 1 and box.y1 <= fig.bbox.height + 1, label.get_text()
+    files = {}
+    for extension in ("svg", "png"):
+        target = output / (name + "." + extension)
+        assert not target.exists()
+        fig.savefig(target, dpi=300)
+        files[target.relative_to(ROOT).as_posix() if target.is_relative_to(ROOT) else target.as_posix()] = sha(target)
+    review = output / "grayscale-review" if PREVIEW_REQUESTED else TASK / "result-figure-review-v1"
+    gray = review / (name + "-gray.png")
+    gray.parent.mkdir(parents=True, exist_ok=True)
+    Image.open(output / (name + ".png")).convert("L").save(gray)
+    plt.close(fig)
+    return {"files": files, "dimensions_mm": dimensions, "minimum_text_pt": minimum,
+            "grayscale_review_path": str(gray), "status": "RENDERED_AWAITING_ACTUAL_VISUAL_REVIEW"}
+
+
+def completion(analysis, supplement, output):
+    systems = {r["system"]: r for r in analysis["systems"]}
+    fig = plt.figure(figsize=(178 / 25.4, 108 / 25.4), dpi=300)
+    ax = fig.add_axes([.27, .28, .54, .48])
+    rows = list(reversed(ORDER))
+    ax.set_xlim(-2, 102)
+    ax.set_ylim(-.55, 3.55)
+    ax.set_yticks(range(4), [LABELS[s] for s in rows])
+    ax.set_xticks([0, 25, 50, 75, 100])
+    ax.set_xlabel("Task success (% of all planned units)", labelpad=8)
+    ax.tick_params(axis="both", length=0, labelsize=9)
+    ax.xaxis.grid(True, color=RULE, linewidth=.6)
+    ax.set_axisbelow(True)
+    for side in ax.spines.values():
+        side.set_visible(False)
+    for i, system in enumerate(rows):
+        record = systems[system]
+        seeds = [100 * r["success_rate_all_planned"] for r in supplement["system_seeds"] if r["system"] == system]
+        mean = 100 * record["success_rate_all_planned"]
+        ax.plot([min(seeds), max(seeds)], [i, i], color=PALETTE[system], linewidth=1.7, solid_capstyle="round")
+        ax.scatter([mean], [i], marker=MARKERS[system], s=33, color=PALETTE[system], zorder=4)
+        fig.text(.845, .28 + .48 * (i + .55) / 4.1,
+                 f"{record['successes']}/{record['planned']}", va="center", fontsize=9, color=INK)
+    fig.text(.04, .94, "Task completion includes the deterministic reference", fontsize=11, color=INK, weight="semibold")
+    fig.text(.04, .875, f"{analysis['attempted']}/{analysis['planned']} units attempted; 32 authored cases, three decoding seeds.", fontsize=9, color=MUTED)
+    p = analysis["primary"]
+    interval = p["exploratory_paired_case_interval_95_pp"]
+    if interval is None:
+        message = "Primary P - B2 comparison is inconclusive: the fixed matrix is incomplete."
+    else:
+        message = f"P - B2: {p['difference_pp_all_planned']:+.1f} pp; exploratory case interval [{interval[0]:+.1f}, {interval[1]:+.1f}]."
+    fig.text(.04, .155, message, fontsize=8.5, color=INK)
+    fig.text(.04, .095, "Whiskers: three-seed min/max, not a confidence interval. Missing units remain in denominators.", fontsize=8.5, color=MUTED)
+    fig.text(.04, .04, "B0's pre-freeze 32/32 conformance ceiling was known. One corpus/model; no biological independence.", fontsize=8.5, color=MUTED)
+    return save(fig, "02-task-completion", output, [178, 108])
+
+
+def cost(analysis, output):
+    systems = {r["system"]: r for r in analysis["systems"]}
+    fig = plt.figure(figsize=(178 / 25.4, 108 / 25.4), dpi=300)
+    ax = fig.add_axes([.125, .25, .83, .52])
+    selected = [systems[s] for s in ORDER if systems[s]["median_unit_wall_seconds"] is not None]
+    values = [r["median_unit_wall_seconds"] for r in selected]
+    assert values and min(values) > 0  # No fabricated floor for missing/zero time.
+    logarithmic = max(values) / min(values) >= 50
+    if logarithmic:
+        ax.set_xscale("log")
+        ax.set_xlim(min(values) / 5, max(values) * 6)
+    else:
+        ax.set_xlim(0, max(values) * 1.4)
+    ax.set_ylim(-8, 110)
+    ax.set_yticks([0, 25, 50, 75, 100])
+    ax.set_ylabel("Task success (%)", fontsize=9)
+    ax.set_xlabel("Median unit wall time (seconds" + (", log scale)" if logarithmic else ")"), labelpad=8, fontsize=9)
+    ax.tick_params(axis="both", length=0, labelsize=8.5)
+    ax.grid(axis="y", color=RULE, linewidth=.6)
+    ax.minorticks_off()
+    for name in ("top", "right", "left"):
+        ax.spines[name].set_visible(False)
+    ax.spines["bottom"].set_color(RULE)
+    placed = []
+    for r in selected:
+        system, x, y = r["system"], r["median_unit_wall_seconds"], 100 * r["success_rate_all_planned"]
+        ax.scatter([x], [y], marker=MARKERS[system], s=34, color=PALETTE[system], zorder=4)
+        candidates = [(8, 9), (8, -15), (-8, 9), (-8, -15), (8, 24), (8, -30), (-8, 24), (-8, -30),
+                      (8, 40), (8, -46), (-8, 40), (-8, -46)]
+        for dx, dy in candidates:
+            label = ax.annotate(f"{system}  {x:.3g} s", (x, y), xytext=(dx, dy), textcoords="offset points",
+                                ha="left" if dx > 0 else "right", va="center", fontsize=8.5,
+                                color=PALETTE[system] if system == "P" else INK)
+            fig.canvas.draw()
+            bounds = label.get_window_extent(fig.canvas.get_renderer()).expanded(1.05, 1.16)
+            limits = ax.get_window_extent()
+            if limits.contains(bounds.x0, bounds.y0) and limits.contains(bounds.x1, bounds.y1) and not any(bounds.overlaps(p) for p in placed):
+                placed.append(bounds)
+                break
+            label.remove()
+        else:
+            raise AssertionError("Direct label collision requires a transparent layout revision")
+    fig.text(.04, .94, "Observed latency accompanies every completion rate", fontsize=11, color=INK, weight="semibold")
+    fig.text(.04, .875, "All attempted units, including abstention and failure. B0 timing is retained.", fontsize=9, color=MUTED)
+    fig.text(.04, .12, "Recorded unit segments include orchestration/SSH; interrupted work excludes the offline gap.", fontsize=8.5, color=MUTED)
+    fig.text(.04, .065, "One CPU runtime and fixed execution order; prompt caching affects latency. No laboratory-cost claim.", fontsize=8.5, color=MUTED)
+    fig.text(.04, .015, "Missing units remain in the task-success denominator; no primary inference if the matrix is incomplete.", fontsize=8.5, color=MUTED)
+    return save(fig, "03-cost-completion", output, [178, 108])
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Render actual audited results; existing figures are never overwritten")
+    parser.add_argument("--preview-dir", type=Path, help="A new output directory for offline reproduction, outside research/evidence folders")
+    args = parser.parse_args()
+    analysis_path = PUBLIC / "analysis-v1/analysis.json"
+    supplement_path = PUBLIC / "descriptive-v1/descriptive.json"
+    analysis, supplement = read(analysis_path), read(supplement_path)
+    assert supplement["source_pins"]["analysis.json"] == sha(analysis_path)
+    assert analysis["attempted"] == supplement["attempted"]
+    plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 9, "svg.fonttype": "none",
+                         "axes.labelcolor": INK, "xtick.color": MUTED, "ytick.color": INK,
+                         "figure.facecolor": "white", "axes.facecolor": "white", "savefig.facecolor": "white"})
+    output = args.preview_dir.resolve() if args.preview_dir else PUBLIC / "result-figures-v1"
+    if args.preview_dir:
+        assert not output.is_relative_to(ROOT / "research") and not output.is_relative_to(ROOT / "docs/evidence")
+    output.mkdir(parents=True, exist_ok=False)
+    figures = {"completion": completion(analysis, supplement, output), "cost": cost(analysis, output)}
+    receipt = {"status": "RENDERED_AWAITING_ACTUAL_COLOR_GRAYSCALE_AND_MANUSCRIPT_REVIEW",
+               "figures": figures, "source_pins": {"analysis": sha(analysis_path), "descriptive": sha(supplement_path),
+                                                    "figure_source": sha(Path(__file__))},
+               "style": "Owner graphite/copper accent; all required baselines; minimum8.5pt; SVG plus300dpi PNG",
+               "offline_preview_reproduction": bool(args.preview_dir), "new_model_or_scientific_score": False,
+               "invented_values": False, "biological_confidence_interval": False}
+    receipt_path = output / "preview-build.json" if args.preview_dir else PUBLIC / "result-figures-build-v1.json"
+    with receipt_path.open("x", encoding="utf-8", newline="\n") as stream:
+        json.dump(receipt, stream, indent=2, allow_nan=False)
+        stream.write("\n")
+    print(json.dumps({"status": receipt["status"], "figures": len(figures)}))
+
+
+if __name__ == "__main__":
+    main()

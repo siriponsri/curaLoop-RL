@@ -8,7 +8,8 @@
 <p align="center">
   <a href="docs/manual/CuraLoop-RL-Dashboard-Guide-EN-v3.pdf"><strong>English user manual (PDF)</strong></a> &nbsp;·&nbsp;
   <a href="docs/manual/CuraLoop-RL-Confirmation-Evidence-Guide-EN-v4.pdf"><strong>Confirmation evidence guide (PDF)</strong></a> &nbsp;·&nbsp;
-  <a href="docs/manual/CuraLoop-AgentRD-Guide-EN-v1.pdf"><strong>Agent RD guide (PDF)</strong></a> &nbsp;·&nbsp;
+  <a href="docs/manual/CuraLoop-AgentRD-Guide-EN-v2.pdf"><strong>Agent RD guide (PDF)</strong></a> &nbsp;·&nbsp;
+  <a href="docs/07_publication/CuraLoop-AgentRD-Computational-Report-EN-v2.pdf"><strong>Computational report (PDF)</strong></a> &nbsp;·&nbsp;
   <a href="docs/evidence/agent-rd-20261110-v1/README.md">Actual agent evidence</a> &nbsp;·&nbsp;
   <a href="docs/evidence/lr-cf2p-20261110-v1/README.md">CF1 integration gallery</a> &nbsp;·&nbsp;
   <a href="docs/evidence/four-screen-dashboard-20261108-v1/README.md">EN/TH screen gallery</a> &nbsp;·&nbsp;
@@ -24,8 +25,10 @@
 
 CuraLoop-RL connects retrospective screening with bounded pharmaceutical evidence
 missions. The new Agent RD workspace records actual model proposals, read-only
-aggregate calculations, source checks and explicit fallback. Its computational
-evaluation is **in progress**; software checks do not establish agent superiority.
+aggregate calculations, source checks and explicit fallback. Its frozen
+computational evaluation is **complete: 408/408 units**. The guarded agent and
+matched LLM + tools each completed 67/96 tasks; deterministic code completed
+96/96. The study does not establish incremental agent superiority.
 
 The historical screening track asks: **with a budget for 30 assays
 in a library of 1,200 historical compounds, which candidates should be tested
@@ -65,25 +68,40 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 | **Scenario builder** | Configure dataset, seed, policy, budget, capacity, delay, jitter and missingness. |
 | **Research evidence** | Inspect provenance and limitations; export, resume and recover saved campaigns or revisions. |
 | **Confirmation evidence** | Compare recorded CF1 H/coverage tradeoffs across six development campaigns, five budgets and 18 arms; inspect source hashes and download an EN/TH comparison brief. |
-| **Agent RD** | Run a bounded real-model or explicit deterministic evidence mission; inspect actual events, proposals and source checks, then prepare a local EN/TH dossier. Model execution requires an active authorized SSH session. |
+| **Agent RD** | Inspect the genuine recorded model example, run deterministic aggregate comparisons or a five-budget sweep, and export an EN/TH dossier. Designated unsupported requests produce explicit controller abstentions. New model execution needs a freshly authorized operator session and transport setup; the research worker is retired. |
 | **Guided presentation** | Explain the screening loop in 5-7 minutes using the same live campaign. |
 | **C Workspace** | Trace cached declared fields to their original sources, review readiness and export local files in EN/TH. |
 
 ## Research and R&D pilot programme
 
-**Current work, 10 November 2026:** [AgentRD solo continuation](docs/08_agent_rd/ACTIVE_EXECUTION_20261110.md)
-is authorized continuously through actual evaluation, analysis and manuscript.
-The existing Typhoon 12B model runs on an isolated CPU-only dr-train worker.
-Development already includes unsuccessful canaries and a source-correct answer
-that fails a refusal task; these remain evidence. The [computational protocol](docs/08_agent_rd/COMPUTATIONAL_PROTOCOL_V1.md)
-separates numerical correctness, task completion, abstention and cost. Locked
-evaluation is running from the committed source/protocol freeze at `064bd3d`.
-The seven-page [Agent RD guide](docs/manual/CuraLoop-AgentRD-Guide-EN-v1.pdf)
-uses actual served-application captures, with all rendered pages reviewed.
-The [recorded model dossier](docs/evidence/agent-rd-20261110-v1/example-dossier-v1/report-en.html)
-remains available independently of a live model session. Final16,
-private CF1 rows and hidden outcomes remain closed; no paid API or live lab/team
-integration is used. Prior scientific negatives below remain unchanged.
+**Completed computational work, 11 November 2026:** the
+[AgentRD owner report](docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md) delivers the
+localhost workbench, all 408 frozen unit results, actual analysis and a full
+[English manuscript](docs/07_publication/CURALOOP_AGENTRD_COMPUTATIONAL_REPORT_EN_V2.md).
+The primary guarded-agent minus LLM + tools effect was **0.00 percentage points**.
+Both produced identical recorded outputs on all 96 paired seed/task units; no
+invalid terminal proposal naturally exercised their numerical/source repair
+branch. This result is conditional on one model and authored aggregate tasks,
+and does not establish external equivalence or general verifier efficacy.
+
+The [eight-page Agent RD guide](docs/manual/CuraLoop-AgentRD-Guide-EN-v2.pdf)
+uses actual served-app screenshots. The
+[11-page computational report](docs/07_publication/CuraLoop-AgentRD-Computational-Report-EN-v2.pdf)
+includes seven tables, three figures, costs and failure analysis. Final pages
+and figures passed author visual checks; this is not independent review.
+The latest current-service real-model mission passed its technical lifecycle
+but **failed the comparison task by abstaining after three calls**. It remains
+evidence alongside the earlier successful
+[recorded model dossier](docs/evidence/agent-rd-20261110-v1/example-dossier-v1/report-en.html).
+
+Use **Open recorded model example** explicitly or select deterministic mode for
+offline operation. The owned dr-train worker/root was removed after all 477
+files were returned and hash-reread; new inference needs a fresh authorized
+session and transport setup. [Reproduction and operating limits](docs/08_agent_rd/REPRODUCIBILITY_V1.md)
+explain the distinction. Final16, private CF1 rows and hidden outcomes stay
+closed. No paid API, live team/lab write, public deployment or submission was
+performed. A competitive JCAMD method paper is **not established**. Prior
+negative studies below remain unchanged.
 
 **Historical checkpoint, 10 November 2026:** [LR-CF2P is complete](docs/06_execution/LR_CF2P_OWNER_CHECKPOINT_20261110.md).
 CF2-Design ends with **NO_GO_THIS_MECHANISM**: two generic coverage/feedback

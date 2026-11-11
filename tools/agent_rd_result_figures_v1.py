@@ -1,16 +1,23 @@
 """Draw publication figures only from the completed audited locked analysis."""
 
+import argparse
 import hashlib
 import json
 import os
 import sys
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TASK = ROOT / ".local/agent-rd-run-20261110-v1"
 PUBLIC = ROOT / "docs/evidence/agent-rd-20261110-v1"
-sys.path.insert(0, str(TASK / "plotdeps-v1"))
-os.environ["MPLCONFIGDIR"] = str(TASK / "mpl-cache-v1")
+EDITION = "v1"
+PREVIEW_REQUESTED = any(arg == "--preview-dir" or arg.startswith("--preview-dir=") for arg in sys.argv[1:])
+if PREVIEW_REQUESTED:
+    os.environ.setdefault("MPLCONFIGDIR", str(Path(tempfile.gettempdir()) / "curaloop-agent-rd-figure-cache"))
+else:
+    sys.path.insert(0, str(TASK / "plotdeps-v1"))
+    os.environ["MPLCONFIGDIR"] = str(TASK / "mpl-cache-v1")
 
 import matplotlib  # noqa: E402
 
@@ -52,9 +59,10 @@ def save(fig, name, output, dimensions):
         target = output / (name + "." + extension)
         assert not target.exists()
         fig.savefig(target, dpi=300)
-        files[target.relative_to(ROOT).as_posix()] = sha(target)
-    gray = TASK / "result-figure-review-v1" / (name + "-gray.png")
-    gray.parent.mkdir(exist_ok=True)
+        files[target.relative_to(ROOT).as_posix() if target.is_relative_to(ROOT) else target.as_posix()] = sha(target)
+    review = output / "grayscale-review" if PREVIEW_REQUESTED else TASK / ("result-figure-review-" + EDITION)
+    gray = review / (name + "-gray.png")
+    gray.parent.mkdir(parents=True, exist_ok=True)
     Image.open(output / (name + ".png")).convert("L").save(gray)
     plt.close(fig)
     return {"files": files, "dimensions_mm": dimensions, "minimum_text_pt": minimum,
@@ -124,15 +132,22 @@ def cost(analysis, output):
     placed = []
     for r in selected:
         system, x, y = r["system"], r["median_unit_wall_seconds"], 100 * r["success_rate_all_planned"]
-        ax.scatter([x], [y], marker=MARKERS[system], s=34, color=PALETTE[system], zorder=4)
-        candidates = [(8, 9), (8, -15), (-8, 9), (-8, -15), (8, 24), (8, -30), (-8, 24), (-8, -30),
-                      (8, 40), (8, -46), (-8, 40), (-8, -46)]
+        if EDITION == "v2" and system == "P":
+            ax.scatter([x], [y], marker=MARKERS[system], s=45, facecolors="none", edgecolors=PALETTE[system], linewidths=1.2, zorder=5)
+        else:
+            ax.scatter([x], [y], marker=MARKERS[system], s=34, color=PALETTE[system], zorder=4)
+        if EDITION == "v2":
+            candidates = {"B0": [(8, -14)], "B1": [(24, -20)], "B2": [(24, 22)], "P": [(24, -2)]}[system]
+        else:
+            candidates = [(8, 9), (8, -15), (-8, 9), (-8, -15), (8, 24), (8, -30), (-8, 24), (-8, -30),
+                          (8, 40), (8, -46), (-8, 40), (-8, -46)]
         for dx, dy in candidates:
             label = ax.annotate(f"{system}  {x:.3g} s", (x, y), xytext=(dx, dy), textcoords="offset points",
                                 ha="left" if dx > 0 else "right", va="center", fontsize=8.5,
-                                color=PALETTE[system] if system == "P" else INK)
+                                color=PALETTE[system] if system == "P" else INK,
+                                arrowprops={"arrowstyle": "-", "lw": .6, "color": PALETTE[system], "shrinkA": 2, "shrinkB": 4} if EDITION == "v2" else None)
             fig.canvas.draw()
-            bounds = label.get_window_extent(fig.canvas.get_renderer()).expanded(1.05, 1.16)
+            bounds = matplotlib.text.Text.get_window_extent(label, fig.canvas.get_renderer()).expanded(1.05, 1.16)
             limits = ax.get_window_extent()
             if limits.contains(bounds.x0, bounds.y0) and limits.contains(bounds.x1, bounds.y1) and not any(bounds.overlaps(p) for p in placed):
                 placed.append(bounds)
@@ -143,12 +158,20 @@ def cost(analysis, output):
     fig.text(.04, .94, "Observed latency accompanies every completion rate", fontsize=11, color=INK, weight="semibold")
     fig.text(.04, .875, "All attempted units, including abstention and failure. B0 timing is retained.", fontsize=9, color=MUTED)
     fig.text(.04, .12, "Recorded unit segments include orchestration/SSH; interrupted work excludes the offline gap.", fontsize=8.5, color=MUTED)
-    fig.text(.04, .065, "One CPU runtime and fixed execution order; prompt caching affects latency. No laboratory-cost claim.", fontsize=8.5, color=MUTED)
+    runtime_note = ("One CPU-only runtime; fixed order and prompt caching affect latency. No laboratory-cost claim."
+                    if EDITION == "v2" else "One CPU runtime and fixed execution order; prompt caching affects latency. No laboratory-cost claim.")
+    fig.text(.04, .065, runtime_note, fontsize=8.5, color=MUTED)
     fig.text(.04, .015, "Missing units remain in the task-success denominator; no primary inference if the matrix is incomplete.", fontsize=8.5, color=MUTED)
     return save(fig, "03-cost-completion", output, [178, 108])
 
 
 def main():
+    global EDITION
+    parser = argparse.ArgumentParser(description="Render actual audited results; existing figures are never overwritten")
+    parser.add_argument("--preview-dir", type=Path, help="A new output directory for offline reproduction, outside research/evidence folders")
+    parser.add_argument("--edition", choices=("v1", "v2"), default="v1", help="v2 repairs label association without changing data")
+    args = parser.parse_args()
+    EDITION = args.edition
     analysis_path = PUBLIC / "analysis-v1/analysis.json"
     supplement_path = PUBLIC / "descriptive-v1/descriptive.json"
     analysis, supplement = read(analysis_path), read(supplement_path)
@@ -157,15 +180,19 @@ def main():
     plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 9, "svg.fonttype": "none",
                          "axes.labelcolor": INK, "xtick.color": MUTED, "ytick.color": INK,
                          "figure.facecolor": "white", "axes.facecolor": "white", "savefig.facecolor": "white"})
-    output = PUBLIC / "result-figures-v1"
-    output.mkdir(exist_ok=False)
+    output = args.preview_dir.resolve() if args.preview_dir else PUBLIC / ("result-figures-" + EDITION)
+    if args.preview_dir:
+        assert not output.is_relative_to(ROOT / "research") and not output.is_relative_to(ROOT / "docs/evidence")
+    output.mkdir(parents=True, exist_ok=False)
     figures = {"completion": completion(analysis, supplement, output), "cost": cost(analysis, output)}
     receipt = {"status": "RENDERED_AWAITING_ACTUAL_COLOR_GRAYSCALE_AND_MANUSCRIPT_REVIEW",
                "figures": figures, "source_pins": {"analysis": sha(analysis_path), "descriptive": sha(supplement_path),
                                                     "figure_source": sha(Path(__file__))},
                "style": "Owner graphite/copper accent; all required baselines; minimum8.5pt; SVG plus300dpi PNG",
+               "edition": EDITION, "offline_preview_reproduction": bool(args.preview_dir), "new_model_or_scientific_score": False,
                "invented_values": False, "biological_confidence_interval": False}
-    with (PUBLIC / "result-figures-build-v1.json").open("x", encoding="utf-8", newline="\n") as stream:
+    receipt_path = output / "preview-build.json" if args.preview_dir else PUBLIC / ("result-figures-build-" + EDITION + ".json")
+    with receipt_path.open("x", encoding="utf-8", newline="\n") as stream:
         json.dump(receipt, stream, indent=2, allow_nan=False)
         stream.write("\n")
     print(json.dumps({"status": receipt["status"], "figures": len(figures)}))

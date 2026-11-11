@@ -31,16 +31,37 @@ def audit():
         "owned-remote-cleanup-v1.json": "PASS_EXACT_OWNED_CLEANUP_AFTER_VERIFIED_RETURN",
         "fresh-remote-absence-v1.json": "PASS_FRESH_OWNED_ABSENCE",
         "manual-visual-review-v1.json": "PASS_AUTHOR_RENDERED_PAGE_REVIEW",
-        "manuscript-visual-review-v1.json": "PASS_AUTHOR_ALL_PAGE_VISUAL_REVIEW",
-        "result-figures-visual-review-v1.json": "PASS_AUTHOR_COLOR_GRAYSCALE_AND_INSERTION_REVIEW",
+        "manual-visual-review-v2.json": "PASS_AUTHOR_RENDERED_PAGE_REVIEW",
+        "product-policy-acceptance.json": "PASS_CURRENT_PRODUCT_POLICY_NOT_FROZEN_STUDY",
+        "manuscript-visual-review-v2.json": "PASS_AUTHOR_ALL_PAGE_VISUAL_REVIEW",
+        "result-figures-visual-review-v2.json": "PASS_AUTHOR_COLOR_GRAYSCALE_AND_INSERTION_REVIEW",
+        "offline-figure-reproduction-v2.json": "PASS_OFFLINE_REPRODUCTION_IN_FRESH_OUTPUT_DIRECTORY",
+        "first-edition-authoring-source-v1.json": "RETAINED_EXACT_EXECUTED_FIRST_EDITION_AUTHORING_SOURCES",
+        "interactive-control-accounting-v1.json": "RETAINED_UNMETERED_ADMINISTRATIVE_CONTROL_ALLOWANCE",
+        "mechanism-audit-v1.json": "DESCRIPTIVE_FIXED_TRACE_VERIFIER_REPLAY_NO_SCORE_CHANGE",
     }
     for name, expected in requirements.items():
         assert read(PUBLIC / name)["status"] == expected, name
-    for name in ("manual-visual-review-v1.json", "manuscript-visual-review-v1.json"):
+    for name in ("manual-visual-review-v1.json", "manual-visual-review-v2.json", "manuscript-visual-review-v2.json"):
         record = read(PUBLIC / name)
         assert sha(ROOT / record["pdf"]) == record["pdf_sha256"]
         assert record["pages_reviewed"] == list(range(1, len(record["pages_reviewed"]) + 1))
-    figure_review = read(PUBLIC / "result-figures-visual-review-v1.json")
+    policy = read(PUBLIC / "product-policy-acceptance.json")
+    assert sha(PUBLIC / policy["checks"]) == policy["checks_sha256"]
+    assert sha(PUBLIC / policy["browser"]) == policy["browser_sha256"]
+    assert read(PUBLIC / policy["checks"])["status"] == "PASS_POST_STUDY_PRODUCT_SCOPE_CHECKS"
+    product_checks = read(PUBLIC / policy["checks"])
+    assert all(sha(ROOT / path) == identity for path, identity in product_checks["changed_product_source_pins"].items())
+    browser = read(PUBLIC / policy["browser"])
+    assert browser["status"] == "PASS_SERVED_PRODUCT_POLICY_NO_NEW_INFERENCE"
+    assert all(sha(ROOT / path) == identity for path, identity in browser["served_build_pins"].items())
+    smoke = read(PUBLIC / "product-current-model-acceptance-v1.json")
+    assert smoke["status"] in ("PASS_ACTUAL_CURRENT_PRODUCT_MODEL_LIFECYCLE", "NOT_RUN_RESOURCE_HEADROOM", "NOT_RUN_RUNTIME_UNAVAILABLE", "FAIL")
+    if smoke["status"] == "PASS_ACTUAL_CURRENT_PRODUCT_MODEL_LIFECYCLE":
+        assert sha(PUBLIC / "product-current-model-mission-v1.json") == smoke["model_mission_sha256"]
+    original_sources = read(PUBLIC / "first-edition-authoring-source-v1.json")
+    assert all(sha(ROOT / path) == identity for path, identity in original_sources["files"].items())
+    figure_review = read(PUBLIC / "result-figures-visual-review-v2.json")
     assert all(sha(ROOT / path) == identity for path, identity in figure_review["files"].items())
     returned_sources = read(PUBLIC / "complete-remote-return-v1.json")["public_exact_executed_worker_sources"]
     assert all(sha(ROOT / path) == identity for path, identity in returned_sources.items())
@@ -53,11 +74,20 @@ def audit():
     sources = read(PUBLIC / "analysis-v1/source-pins.json")
     assert all(sha(ROOT / path) == value for path, value in sources.items())
     links = []
-    documents = [ROOT / "README.md", ROOT / "docs/evidence/agent-rd-20261110-v1/README.md",
-                 ROOT / "docs/07_publication/CURALOOP_AGENTRD_COMPUTATIONAL_REPORT_EN_V1.md"]
+    documents = [ROOT / name for name in (
+        "README.md", "GOAL.md", "PLAN.md", "START_HERE.md", "HANDOFF.md", "AGENTS.md",
+        "docs/evidence/agent-rd-20261110-v1/README.md",
+        "docs/07_publication/CURALOOP_AGENTRD_COMPUTATIONAL_REPORT_EN_V2.md",
+        "docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md",
+        "docs/08_agent_rd/DELIVERY_ACCEPTANCE_MATRIX_V1.md",
+        "docs/08_agent_rd/ACTIVE_EXECUTION_20261110.md",
+        "docs/08_agent_rd/REPRODUCIBILITY_V1.md")]
     for document in documents:
-        for target in re.findall(r"\]\(([^)]+)\)", document.read_text(encoding="utf-8")):
-            if target.startswith(("http:", "https:", "mailto:", "#")):
+        content = document.read_text(encoding="utf-8")
+        targets = re.findall(r"\]\(([^)]+)\)", content)
+        targets.extend(re.findall(r'''(?:href|src)=["']([^"']+)["']''', content))
+        for target in dict.fromkeys(targets):
+            if target.startswith(("http:", "https:", "mailto:", "data:", "#")):
                 continue
             target = target.split("#", 1)[0]
             assert (document.parent / target).resolve().exists(), (str(document), target)
@@ -69,7 +99,13 @@ def audit():
                "attempted": analysis["attempted"], "planned": analysis["planned"],
                "verified_required_receipts": {name: sha(PUBLIC / name) for name in requirements},
                "local_links_checked": len(links), "local_links": links,
+               "final_document_sha256": {p.relative_to(ROOT).as_posix(): sha(p) for p in documents},
+               "current_product_source_and_served_build_match_tested_receipts": True,
+               "first_edition_executed_sources_preserved": len(original_sources["files"]),
                "retained_cpu_seconds": dict(ledger["retained_seconds"]),
+               "interactive_administrative_cpu_separately_metered": False,
+               "control_allowance_is_measured_usage": False,
+               "resource_verification_scope": "Guarded model/test jobs and retained allocation limits; interactive administrative overhead is not separately metered",
                "retained_total_cpu_seconds": sum(ledger["retained_seconds"].values()),
                "authorized_total_cpu_seconds": release["cpu_cap_seconds"], "original_deadline_utc": release["deadline_utc"],
                "final16_access": False, "private_compound_row_access": False, "hidden_outcome_access": False,
@@ -86,7 +122,8 @@ def close():
     assert ledger["status"] == "ACTIVE"
     assert read(PUBLIC / "final-audit-v1.json")["status"] == "PASS_FINAL_REPORT_PRESERVATION_RESOURCE_AND_LOCAL_LINK_AUDIT"
     assert read(PUBLIC / "fresh-remote-absence-v1.json")["status"] == "PASS_FRESH_OWNED_ABSENCE"
-    reserved = {name for name, booking in ledger["bookings"].items() if booking["status"] == "RESERVED"}
+    assert ledger["bookings"]["remote-model-envelope-v1"]["status"] == "RESERVED_PHASE_ENVELOPE"
+    reserved = {name for name, booking in ledger["bookings"].items() if booking["status"].startswith("RESERVED")}
     assert reserved == {"remote-model-envelope-v1", "close-agent-rd-account-v1"}, reserved
     retained = dict(ledger["retained_seconds"])
     assert sum(retained.values()) <= release["cpu_cap_seconds"]
@@ -109,7 +146,7 @@ def close():
 def finalize():
     release, ledger = read(TASK / "release.json"), read(TASK / "ledger.json")
     assert ledger["status"] == "CLOSED_DELIVERED_COMPUTATIONAL_REPORT"
-    assert not any(b["status"] == "RESERVED" for b in ledger["bookings"].values())
+    assert not any(b["status"].startswith("RESERVED") for b in ledger["bookings"].values())
     assert ledger["bookings"]["close-agent-rd-account-v1"]["status"] == "PASS"
     assert all(sha(ROOT / p) == h for p, h in release["prior_ledger_pins"].items())
     write(PUBLIC / "settled-account-identity-v1.json", {"status": "PASS_CLOSED_ACCOUNT_FULLY_SETTLED",

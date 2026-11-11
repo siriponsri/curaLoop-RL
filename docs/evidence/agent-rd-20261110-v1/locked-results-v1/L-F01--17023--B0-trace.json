@@ -1,0 +1,220 @@
+{
+  "payload": {
+    "calls": [],
+    "candidate": {
+      "action": "answer",
+      "evidence_id": "2ee575014b2f93f7",
+      "limitations": [
+        "development_only",
+        "missing_excluded",
+        "nonpositive_mixed",
+        "seed_range_not_ci",
+        "one_component",
+        "mechanical_d_equals_h",
+        "no_lab_or_clinical_value",
+        "aggregate_only",
+        "commercial_rights_unconfirmed",
+        "no_rl_result"
+      ],
+      "reason": "none",
+      "values": {
+        "b1:a0:B": 12,
+        "b1:a0:D": 6.4,
+        "b1:a0:D:max": 7,
+        "b1:a0:D:min": 5,
+        "b1:a0:DB": 0.533,
+        "b1:a0:FP": 5.4,
+        "b1:a0:H": 10.8,
+        "b1:a0:H:max": 12,
+        "b1:a0:H:min": 10,
+        "b1:a0:HB": 0.9
+      }
+    },
+    "controller_wall_seconds": 0.046999999991385266,
+    "cost": {
+      "failed_calls": 0,
+      "model_calls": 0,
+      "model_cpu_seconds": 0,
+      "model_tokens": 0,
+      "model_wall_seconds": 0,
+      "paid_cost_usd": 0,
+      "tool_calls": 0
+    },
+    "created_utc": "2026-11-10T20:08:33.357759+00:00",
+    "derived": {
+      "definition": "right-minus-left for first two arms; last-minus-first budget for sweeps; rounded operands",
+      "evidence_id": "2ee575014b2f93f7",
+      "values": {}
+    },
+    "error": null,
+    "events": [
+      {
+        "detail": "Authenticate only the four admitted public aggregate files",
+        "previous": null,
+        "revision": 1,
+        "sha256": "edaf6e790e54288507fa524f72910799402d60b7ea6455fc35d191930d363e70",
+        "state": "VALIDATING",
+        "utc": "2026-11-10T20:08:33.368930+00:00"
+      },
+      {
+        "detail": "Read-only CF1 comparison; no simulator action is registered",
+        "previous": "edaf6e790e54288507fa524f72910799402d60b7ea6455fc35d191930d363e70",
+        "revision": 2,
+        "sha256": "11654e881ae690e0cc7b895838611c441420c87401ed2e7e63d3ded4224e5f9c",
+        "state": "PLAN_READY",
+        "utc": "2026-11-10T20:08:33.412848+00:00"
+      },
+      {
+        "detail": "Deterministic mode; no model was called",
+        "previous": "11654e881ae690e0cc7b895838611c441420c87401ed2e7e63d3ded4224e5f9c",
+        "revision": 3,
+        "sha256": "77376f1d5680ef55795131fd104ac5d16c9435cf5f1aa0227746f93103dd2d80",
+        "state": "COMPLETED",
+        "utc": "2026-11-10T20:08:33.442411+00:00"
+      }
+    ],
+    "evidence": {
+      "arms": [
+        "mvsa/top_ranked"
+      ],
+      "budgets": [
+        1
+      ],
+      "campaign": "1040/1254",
+      "evidence_digest": "2ee575014b2f93f79b0fab967e70102fecc96535f716bcbcae006a740ab1ac04",
+      "evidence_id": "2ee575014b2f93f7",
+      "final16_access": false,
+      "limitations": {
+        "aggregate_only": "No individual compounds or hidden/pending outcomes are available.",
+        "commercial_rights_unconfirmed": "Commercial/raw-data redistribution clearance is not established.",
+        "development_only": "Exposed development evidence, not independent biological confirmation.",
+        "mechanical_d_equals_h": "Round-robin D=H is mechanical at these budgets.",
+        "missing_excluded": "Missing confirmation is excluded, never treated as inactive.",
+        "no_lab_or_clinical_value": "No measured laboratory savings, prospective efficacy or clinical benefit.",
+        "no_rl_result": "CF1 did not evaluate RL; the simulator is a separate retrospective study.",
+        "nonpositive_mixed": "Source nonpositive includes inactive and inconclusive.",
+        "one_component": "Six campaigns share one annotation-connected component.",
+        "seed_range_not_ci": "Five-seed ranges are conditional repetitions, not biological confidence intervals."
+      },
+      "paper_url": "https://doi.org/10.1021/acscentsci.3c01517",
+      "schema": "curaloop.agent-rd.evidence.v1",
+      "source_hashes": [
+        {
+          "bytes": 3884,
+          "path": "research/product_handoffs/lr_cf1_v1/evidence-card-v1.json",
+          "sha256": "e4ed702d61f1a283cc7bc0f1abcd4b41dd4f241f1b66857afed9a299254a3fa9"
+        },
+        {
+          "bytes": 4357,
+          "path": "research/product_handoffs/lr_cf1_v1/evidence-card.schema.json",
+          "sha256": "06709cfa3d1878a95291a5d0ef1b4b4a26c54e9777eda9b9d1f1ec353f5fea69"
+        },
+        {
+          "bytes": 384138,
+          "path": "docs/evidence/lr-cf1-20261109-v1/portfolio-cells-v1.csv",
+          "sha256": "495fd9d918b00db16e779a866f9f8a801e300ef0b6e4c23635dd1fb9a395d831"
+        },
+        {
+          "bytes": 114773,
+          "path": "docs/evidence/lr-cf1-20261109-v1/results-summary-v1.json",
+          "sha256": "fff5b722a6ade896f056c798bcf40fdc3a21909e63882909f9915dbec7e10486"
+        }
+      ],
+      "source_snapshot": "04c58e85188e724ec5ff44cbed2e7b960f6f3df3",
+      "source_url": "https://github.com/dahvida/AIC_Finder/tree/04c58e85188e724ec5ff44cbed2e7b960f6f3df3",
+      "status": "available",
+      "units": {
+        "B": "confirmation observations",
+        "D": "positive fixed structure groups",
+        "DB": "fraction, not percent or currency",
+        "FP": "positive fingerprint groups",
+        "H": "historical positive observations",
+        "HB": "fraction, not percent or currency"
+      },
+      "values": {
+        "b1:a0:B": 12,
+        "b1:a0:B:max": 12,
+        "b1:a0:B:min": 12,
+        "b1:a0:D": 6.4,
+        "b1:a0:D:max": 7,
+        "b1:a0:D:min": 5,
+        "b1:a0:DB": 0.533,
+        "b1:a0:DB:max": 0.583,
+        "b1:a0:DB:min": 0.417,
+        "b1:a0:FP": 5.4,
+        "b1:a0:FP:max": 6,
+        "b1:a0:FP:min": 4,
+        "b1:a0:H": 10.8,
+        "b1:a0:H:max": 12,
+        "b1:a0:H:min": 10,
+        "b1:a0:HB": 0.9,
+        "b1:a0:HB:max": 1.0,
+        "b1:a0:HB:min": 0.833
+      }
+    },
+    "fallback": "EXPLICIT_DETERMINISTIC_MODE",
+    "implementation_id": "b8c010a02a898f5aa8431cfc7e1a3ef17e58ddf4792eba23bb4d8b7ecc677393",
+    "limits": {
+      "max_output_tokens_per_call": 256,
+      "model_calls": 3,
+      "repair_calls_within_total": 2,
+      "tool_calls": 2
+    },
+    "mission_id": "52dd7054-673b-47a2-a607-781c477831a5",
+    "released": {
+      "action": "answer",
+      "evidence_id": "2ee575014b2f93f7",
+      "limitations": [
+        "development_only",
+        "missing_excluded",
+        "nonpositive_mixed",
+        "seed_range_not_ci",
+        "one_component",
+        "mechanical_d_equals_h",
+        "no_lab_or_clinical_value",
+        "aggregate_only",
+        "commercial_rights_unconfirmed",
+        "no_rl_result"
+      ],
+      "reason": "none",
+      "values": {
+        "b1:a0:B": 12,
+        "b1:a0:D": 6.4,
+        "b1:a0:D:max": 7,
+        "b1:a0:D:min": 5,
+        "b1:a0:DB": 0.533,
+        "b1:a0:FP": 5.4,
+        "b1:a0:H": 10.8,
+        "b1:a0:H:max": 12,
+        "b1:a0:H:min": 10,
+        "b1:a0:HB": 0.9
+      }
+    },
+    "revision": 3,
+    "schema": "curaloop.agent-rd.mission.v1",
+    "seed": 17023,
+    "spec": {
+      "arms": [
+        "mvsa/top_ranked"
+      ],
+      "budgets": [
+        1
+      ],
+      "campaign": "1040/1254",
+      "export_requested": true,
+      "goal": "Report b1:a0:H, b1:a0:D. Include development_only. A controller interruption may occur; do not invent missing results.",
+      "locale": "en",
+      "mode": "agent"
+    },
+    "spec_sha256": "17cc6dd60bb6b6796420a4f3147df0b536b6cb474522638608779633ae927288",
+    "state": "COMPLETED",
+    "system": "B0",
+    "tool_receipts": [],
+    "verification": {
+      "errors": [],
+      "valid": true,
+      "verified_values": 10
+    }
+  },
+  "sha256": "ed58b94772fd91491c5d4de5c101373b91e176c1628519c9be77d92a52ce001f"
+}

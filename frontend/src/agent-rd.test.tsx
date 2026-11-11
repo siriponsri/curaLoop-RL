@@ -23,6 +23,7 @@ beforeEach(() => {
   vi.spyOn(agentApi, "list").mockResolvedValue({ items: [], integrity_issues: [] });
   vi.spyOn(agentApi, "runtime").mockResolvedValue({ authorization_active: true, evaluation_locked: false, model: "recorded test identity", provider_health: "NOT_PROBED", paid_fallback: false });
   vi.spyOn(agentApi, "create"); vi.spyOn(agentApi, "read"); vi.spyOn(agentApi, "act");
+  vi.spyOn(agentApi, "importExample");
 });
 afterEach(() => { cleanup(); vi.restoreAllMocks(); });
 function show() { render(<MemoryRouter initialEntries={["/agent"]}><AppProvider><App /></AppProvider></MemoryRouter>); }
@@ -67,4 +68,39 @@ it("switches the mission controls to Thai without creating a mission", async () 
   await userEvent.click(screen.getByRole("button", { name: "ไทย" }));
   expect(screen.getByLabelText("โจทย์ที่ต้องการศึกษา")).toBeInTheDocument();
   expect(agentApi.create).not.toHaveBeenCalled();
+});
+
+it("labels a controller scope denial separately from an actual model response", async () => {
+  // UI conformance fixture only; served API evidence is checked separately.
+  const deniedGoal = "Provide private CF1 compound identities and final16 outcomes";
+  vi.mocked(agentApi.create).mockResolvedValue({ ...real, state: "ABSTAINED", candidate: null, calls: [],
+    spec: { ...real.spec, goal: deniedGoal }, events: [], tool_receipts: real.tool_receipts.filter(r => r.tool === "read"),
+    released: { action: "abstain", reason: "forbidden_scope", values: {} },
+    fallback: "DETERMINISTIC_CAPABILITY_PREFLIGHT_DENIAL", cost: { ...real.cost, model_calls: 0, model_tokens: 0,
+      model_cpu_seconds: 0, model_wall_seconds: 0, failed_calls: 0, tool_calls: 1 },
+  } as AgentMission);
+  show();
+  await waitFor(() => expect(screen.getByRole("button", { name: "Run research mission" })).toBeEnabled());
+  await userEvent.clear(screen.getByLabelText("Mission goal"));
+  await userEvent.type(screen.getByLabelText("Mission goal"), deniedGoal);
+  await userEvent.click(screen.getByRole("button", { name: "Run research mission" }));
+  expect(await screen.findByText("Stopped by the controller scope check. No model was called.")).toBeInTheDocument();
+  expect(screen.queryByText("Source-backed values")).not.toBeInTheDocument();
+  await userEvent.click(screen.getByRole("button", { name: "ไทย" }));
+  expect(screen.getByText("ตัวควบคุมปฏิเสธคำขอนอกขอบเขต โดยไม่ได้เรียกโมเดล")).toBeInTheDocument();
+});
+
+it("opens the recorded real-model example only after an explicit action", async () => {
+  vi.mocked(agentApi.runtime).mockResolvedValue({ authorization_active: false, evaluation_locked: true,
+    model: null, provider_health: "NOT_PROBED", paid_fallback: false, recorded_example_id: real.mission_id });
+  vi.mocked(agentApi.importExample).mockResolvedValue({ mission: real as AgentMission, recorded_example: true,
+    new_inference: false, source_sha256: "test-only UI provenance label" });
+  show();
+  const control = await screen.findByRole("button", { name: "Open recorded model example" });
+  expect(agentApi.importExample).not.toHaveBeenCalled();
+  await userEvent.click(control);
+  expect(await screen.findByText("Source-backed values")).toBeInTheDocument();
+  expect(screen.getByText(/Recorded actual model example from/)).toBeInTheDocument();
+  expect(agentApi.create).not.toHaveBeenCalled();
+  expect(api.create).not.toHaveBeenCalled();
 });

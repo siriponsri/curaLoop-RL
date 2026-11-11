@@ -1,5 +1,28 @@
 # Agent instructions: CuraLoop-RL
 
+## AgentRD final delivery checkpoint, 11 November 2026
+
+Read docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md, the acceptance matrix and
+docs/evidence/agent-rd-20261110-v1/README.md first. All 408 frozen units completed;
+P 67/96 = B2 67/96, B0 96/96, B1 60/96. The observed invalid-proposal repair
+opportunity was absent; no incremental superiority or external equivalence
+claim. Actual product checks, scorer replay, manuscript/guide all-page reviews
+and full 477-file return/reread/exact cleanup/fresh absence passed. The current
+service model mission's technical lifecycle passed but its task failed with
+ABSTAINED; retain it.
+
+Finish only final audit/account settlement/authorized main delivery if any is
+still pending; their actual receipts are authoritative. Do not restart model
+work, reopen this or any historical account, recreate the deleted remote root,
+borrow another service/session, or treat unused allowance as a new release.
+After final delivery wait for the owner's next scope decision. Offline
+deterministic/recorded-example use remains available; future live inference
+needs fresh authorization and transport setup. No public deployment, team/lab
+writes, new data/model/GPU/paid API, protected data access or journal submission.
+Parent remains sole writer; no subagents. Preserve all old/new frozen bytes,
+negative results and ledger statuses. The sections below are dated execution
+history, not authority to restart a completed job or override this checkpoint.
+
 ## AgentRD solo continuation released, 10 November 2026
 
 Latest owner instructions supersede the attached planning pack's A0-only,
