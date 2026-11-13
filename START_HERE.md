@@ -1,6 +1,10 @@
 # Start here
 
 **Latest checkpoint, 13 November 2026: local molecular workflow.**
+This released scope is complete and its resource account is closed. Start with
+the [final owner report](docs/08_agent_rd/LOCAL_WORKFLOW_FINAL_OWNER_REPORT_20261113.md),
+[English screenshot guide](docs/manual/CuraLoop-Local-Molecular-Workflow-Guide-EN-v3.pdf)
+and [feasibility manuscript](docs/07_publication/CuraLoop-Local-Workflow-Feasibility-EN-v2.pdf).
 Open `/workflow` on the localhost application for actual CSV/RDKit calculations,
 2D structures, saved jobs and verified report/ZIP collection in EN/TH. Six frozen
 author model cases passed using twelve actual responses; these are software

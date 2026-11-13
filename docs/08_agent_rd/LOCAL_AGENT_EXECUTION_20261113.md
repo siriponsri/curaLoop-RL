@@ -1,9 +1,10 @@
 # Local scientific workflow: execution and admission checkpoint
 
-Status: **ACTIVE_PRODUCT_FALLBACK**. Updated 13 November 2026.
+Status: **COMPLETE_LOCAL_WORKFLOW_FEASIBILITY_ACCOUNT_CLOSED**. Updated 13 November 2026.
 Owner adopted the new local-agent scope, selected budget B and explicitly
-opened a new goal after clearing the old goal. Continue the same approved
-fallback through a working product and honest feasibility/software manuscript.
+opened a new goal after clearing the old goal. The approved fallback delivered
+a working product and honest feasibility/software manuscript. The account is
+closed with zero active jobs; final documentation/main delivery closes the scope.
 
 ## Authority, resources and preservation
 

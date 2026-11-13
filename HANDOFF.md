@@ -1,4 +1,52 @@
-# Handoff: LR-DC2 resumed for proposal review
+# Handoff: local molecular workflow and bounded feasibility delivery
+
+## Latest closeout, 13 November 2026
+
+The owner-approved fallback is complete. Tested implementation checkpoint:
+`46fadc3662b8ff846ad8ce027a6c5b2461e3fc16` on `main`. The subsequent
+documentation/account closeout commit is pushed as the last delivery step; its
+exact remote SHA is recorded in the delivery conversation and
+`.local/lr-dc2-local-20261113-v1/delivery-git-receipt-v1.json`.
+Read [the final owner report](docs/08_agent_rd/LOCAL_WORKFLOW_FINAL_OWNER_REPORT_20261113.md)
+and [final account audit](docs/evidence/lr-dc2-local-20261113-v1/delivery-audit-v1.json).
+
+Account `.local/lr-dc2-local-20261113-v1` is closed with zero active jobs. Retained
+new bookings are 7.791666667 CPU-hours and 0.525 allocated GPU-hours, including
+failed attempts; prior 0.675 CPU-hours remain separate. The original resumed
+deadline was not reset. All protected ledger/source/artifact pins verified.
+
+`/workflow` delivers real CSV/RDKit/report/ZIP in EN/TH, with actual structures,
+persisted jobs, cancellation, explicit recovery and artifact checks. Fifty-eight
+component/API checks passed. Six frozen author model cases passed with twelve
+real responses, 332 generated tokens and no repeated case. Offline public
+reproduction passed three fresh deterministic cases. Actual saved model jobs
+reopened after service restart without new inference.
+
+Final guide: `docs/manual/CuraLoop-Local-Molecular-Workflow-Guide-EN-v3.pdf`
+(five pages). Manuscript:
+`docs/07_publication/CuraLoop-Local-Workflow-Feasibility-EN-v2.pdf` (six pages).
+All eleven final pages and the final color/grayscale figure were visually
+self-reviewed. This is not independent expert validation. The native external
+comparison is NOT_RUN; effect NOT_ESTIMABLE; scientific superiority, user benefit
+and journal-method readiness are unestablished. The negative admission result
+and earlier mistakes/failures remain available.
+
+All 39,565 owned persistent remote files were returned and individually reread
+under `.local/lr-dc2-local-20261113-v1/remote-return-v1`. Archive SHA:
+`a9dacf8d40a8b46b7f4ba20b853788a4bf878cd4ce0ff15637887c6f582ecefa`.
+Exact root/export cleanup passed in v2 after a retained root-owned-file permission
+failure in v1; fresh SSH confirmed absence. The recovery used only the exact task
+bind and changed no system permissions. Shared models/images/other jobs remain.
+
+Start the app on a free loopback port, for example 18083, following the guide.
+Existing services on 8000/5173 were preserved. Test-owned preview services were
+stopped. Future live-model work requires a fresh authorized session/transport;
+offline explicit-limit analysis and saved actual results remain usable. Do not
+recreate the retired research root or reuse unused account allowance.
+
+No additional phase is authorized automatically. Any future research requires a
+new owner decision. Final16, private CF1 rows and old hidden outcomes remain closed.
+All active/pending/pause sections below are historical, superseded by this closeout.
 
 ## Current active goal, 13 November 2026: product fallback delivery
 

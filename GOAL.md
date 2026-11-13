@@ -1,18 +1,20 @@
 # Goal: a defensible method and a useful R&D plugin
 
-**Latest checkpoint, 13 November 2026: active local-workflow delivery.**
+**Latest checkpoint, 13 November 2026: local-workflow scope complete.**
 The owner resumed, adopted the new proposal and released fresh 96 CPU-hours /
 24 allocated GPU-hours. Native external admission stopped at three qualified
 evaluation lineages against four required, so its agent comparison is NOT_RUN
 and the effect is NOT_ESTIMABLE. The approved fallback delivers the same actual
 CSV/RDKit/report EN/TH workflow. Six frozen author model cases passed with twelve
-genuine responses; component/API regression passed 58 tests. Documentation,
-owned return/cleanup and final main delivery are being completed. Read the
+genuine responses; component/API regression passed 58 tests. The English guide,
+feasibility manuscript and full owned return/cleanup passed. The resource account
+is closed with zero jobs; final authorized main delivery closes this scope. Read the
+[final owner report](docs/08_agent_rd/LOCAL_WORKFLOW_FINAL_OWNER_REPORT_20261113.md) and
 [current execution record](docs/08_agent_rd/LOCAL_AGENT_EXECUTION_20261113.md).
 The [old pause handoff](docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md)
 and earlier AgentRD work remain separate preserved history.
 
-**Current, 11 November 2026: AgentRD computational and localhost work complete.**
+**Earlier, 11 November 2026: AgentRD computational and localhost work complete.**
 The continuous solo scope produced the actual EN/TH workbench, all 408 frozen
 units, auditable analysis and a complete English manuscript/guide. P and B2
 each completed 67/96 tasks; B0 completed 96/96. Incremental gate superiority

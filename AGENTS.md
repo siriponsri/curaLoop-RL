@@ -1,5 +1,30 @@
 # Agent instructions: CuraLoop-RL
 
+## Latest closeout, 13 November 2026: local workflow complete
+
+The new account is COMPLETE_LOCAL_WORKFLOW_FEASIBILITY_ACCOUNT_CLOSED, with
+zero active jobs. Read docs/08_agent_rd/LOCAL_WORKFLOW_FINAL_OWNER_REPORT_20261113.md
+and docs/evidence/lr-dc2-local-20261113-v1/delivery-audit-v1.json. Tested source
+commit: 46fadc3662b8ff846ad8ce027a6c5b2461e3fc16. The final closeout is a
+documentation/account commit; no model/research run may restart. Its main SHA
+is verified in the delivery conversation/private
+Git receipt. All lower active/pending/pause sections are preserved history.
+
+Delivered: actual EN/TH CSV/RDKit/report workflow, 58 API/component checks,
+six frozen author model cases with twelve genuine responses, public offline
+reproduction, five-page English guide and six-page feasibility manuscript.
+External native admission failed its unchanged four-lineage rule; comparison
+NOT_RUN, primary effect NOT_ESTIMABLE. No superior-agent publication readiness.
+Full 39,565-file owned persistent return/reread and exact cleanup v2 passed;
+v1 permission failure is retained. Shared models and other work remain intact.
+Fresh retained bookings: 7.791666667 CPU-hours / 0.525 GPU-hours, plus the prior
+separate 0.675 CPU-hours. These are reservations, not measured total usage.
+All prior preservation pins pass; final16/private CF1/hidden outcomes stay closed.
+
+Do not reuse the closed account, recreate retired remote workers, open outcomes,
+launch a substitute study or spend remaining allowance. Future live inference or
+research needs new owner scope/resources. Ordinary offline use remains available.
+
 ## Native admission closed; approved product fallback, 13 November 2026
 
 Current state: ACTIVE_PRODUCT_FALLBACK. Read
