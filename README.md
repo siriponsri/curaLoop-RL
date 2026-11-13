@@ -25,6 +25,16 @@
 
 ---
 
+**Latest research checkpoint, LR-SC1:** stopped at native evaluator admission.
+After one permitted adapter repair, official validation references passed
+**28/29 subproblem checks (5/6 entire main problems)**; reference 70.8 still
+failed an unchanged native assertion. **No agent comparison or GPU inference ran.**
+The effect remains **NOT_ESTIMABLE**. This is a readiness failure, not a negative
+agent-performance result. [Owner report](docs/08_agent_rd/LR_SC1_OWNER_REPORT_20261113.md)
+· [Admission evidence](docs/evidence/lr-sc1-20261113-v1/README.md)
+· [English technical manuscript (PDF)](docs/07_publication/LR_SC1_SCICODE_ADMISSION_MANUSCRIPT_EN_20261113.pdf)
+· [Editable manuscript](docs/07_publication/LR_SC1_SCICODE_ADMISSION_MANUSCRIPT_EN_20261113.md).
+
 **Latest delivery, 13 November 2026:** open **`/workflow`** for an actual
 CSV → RDKit → verified report/ZIP workflow in English or Thai. It includes a
 searchable descriptor table, real 2D structures, saved jobs, cancellation and

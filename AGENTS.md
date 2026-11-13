@@ -1,5 +1,22 @@
 # Agent instructions: CuraLoop-RL
 
+## Owner-authorized LR-SC1, 13 November 2026
+
+The owner approved NEXT_GOAL_SCIENTIFIC_VALIDATION_PROPOSAL_20261113.md:
+SciCode; fresh 128 CPU-hours and 96 allocated GPU-hours; 14 elapsed days;
+maximum four combined CPU equivalents and one GPU. The clock starts at
+2026-11-13T16:03:03Z and ends 2026-11-27T16:03:03Z (23:03:03 Bangkok).
+Read research/manifests/lr_sc1_release_20261113_v1.json and the new account
+.local/lr-sc1-20261113-v1/ledger.json. This account does not reopen prior ones.
+Advance only after each frozen gate passes; stop/report a failed gate without
+experiment retries or substitute datasets/models. Gate 0 precedes intake and
+remote compute. Complete genuine evaluation/manuscript and assess Empirical
+Software Engineering when gates permit; commit/push main on closeout.
+Parent remains sole writer. Keep final16, private CF1 rows, old hidden outcomes,
+historical ledgers, frozen code/results and preservation pins intact. No paid
+API/rental, public deployment, external team writes or manuscript submission.
+The lower closeouts and active/pending sections are preserved history.
+
 ## Latest closeout, 13 November 2026: local workflow complete
 
 The new account is COMPLETE_LOCAL_WORKFLOW_FEASIBILITY_ACCOUNT_CLOSED, with

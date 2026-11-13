@@ -1,0 +1,70 @@
+{
+  "schema": "curaloop.lr-sc1.gate1.v1",
+  "status": "NO_GO_NATIVE_EVALUATOR_READINESS",
+  "gate0": "PASS_BOUNDED_EMPIRICAL_DISTINCTION",
+  "native_technical_attempts": {
+    "1": {
+      "passed_subproblems": 26,
+      "total_subproblems": 29,
+      "passed_main_problems": 4,
+      "total_main_problems": 6,
+      "failed_step_ids": [
+        "70.6",
+        "70.8",
+        "10.7"
+      ],
+      "raw_receipt_sha256": "92d9dbaf8b4e8d16ecca41d6dc4c3693c67b4aee6fb551351cee36ab0877b713",
+      "container_exit_code": 2,
+      "container_wall_seconds": 54.694631971011404
+    },
+    "2": {
+      "passed_subproblems": 28,
+      "total_subproblems": 29,
+      "passed_main_problems": 5,
+      "total_main_problems": 6,
+      "failed_step_ids": [
+        "70.8"
+      ],
+      "raw_receipt_sha256": "6f483055023fa3646eee58a819e38de87ad83e98bdd2dfa55aad110a9abc5fa0",
+      "container_exit_code": 2,
+      "container_wall_seconds": 52.20153266598936
+    }
+  },
+  "technical_repair_limit": 1,
+  "technical_repairs_used": 1,
+  "further_research_runs_authorized_in_this_goal": false,
+  "native_reference_failure_remaining": "70.8: AssertionError in unchanged native predicate",
+  "remaining_failure_cause": "UNRESOLVED_REFERENCE_TARGET_ENVIRONMENT_DISCORDANCE",
+  "universal_dataset_defect_proven": false,
+  "test_main_fixture_group_coverage": 65,
+  "test_main_total": 65,
+  "native_scoreable_test_cohort": null,
+  "native_scoreable_test_cohort_status": "NOT_ESTABLISHED",
+  "known_upstream_skip_denominator_cases": [
+    "13.6",
+    "62.1",
+    "76.3"
+  ],
+  "official_code_revision": "e3158ea011d4235245a547460d3688d7ccbf9900",
+  "hf_dataset_revision": "4510f6a6aa27c43fad7b43da2c59602a86e88480",
+  "numeric_asset_sha256": "48b0272a88b17dbd29777c217e1b4fb2b019b92e11cc2add847409db9541b890",
+  "agent_model_calls": 0,
+  "agent_episodes_completed": 0,
+  "agent_matrix_maximum_planned": 520,
+  "new_model_download_bytes": 0,
+  "allocated_gpu_seconds": 0,
+  "external_comparison": "NOT_RUN",
+  "primary_effect": null,
+  "primary_effect_status": "NOT_ESTIMABLE",
+  "test_expected_numeric_values_accessed": false,
+  "test_reference_execution": false,
+  "old_final16_private_cf1_hidden_outcomes": "CLOSED",
+  "empirical_software_engineering_submission_readiness": "NO_GO_NO_AGENT_COMPARATIVE_EVIDENCE",
+  "next_authorized_actions": [
+    "Return and verify owned remote files",
+    "Prepare admission report and manuscript-status note",
+    "Exact owned remote cleanup",
+    "Preservation and delivery audits",
+    "Commit/push main"
+  ]
+}
