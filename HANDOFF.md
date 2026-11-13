@@ -1,4 +1,35 @@
-# Handoff: LR-DC2 paused after verified dataset download
+# Handoff: LR-DC2 resumed for proposal review
+
+## Current owner checkpoint, 13 November 2026
+
+Status: **RESUMED_SCOPE_ADOPTED_BUDGET_PENDING**. The owner requested resume
+and reading the new proposal, then adopted option A and a new budget in
+principle. The numerical resource choice is pending, not a scope approval.
+Read the
+[comparison and recommendation](docs/08_agent_rd/LOCAL_AGENT_PROPOSAL_REVIEW_20261113.md)
+and [protocol design](docs/08_agent_rd/LOCAL_AGENT_PROTOCOL_DESIGN_20261113.md),
+[scope adoption](research/manifests/lr_dc2_local_scope_adoption_20261113_v1.json)
+and [initial resume receipt](docs/evidence/lr-dc2-20261111-v1/owner-resume-review-20261113-v1.json).
+The adopted scope is one local workflow, matched-checklist primary comparison,
+one primary model, a matrix frozen after bounded feasibility, and truthful
+negative/inconclusive completion. No routine phase approvals after resource
+release. Do not infer numerical budget from the words "new budget".
+
+The effective clock started 13 November 2026 at 11:51:07 UTC / 18:51:07 Bangkok;
+deadline is 20 November 2026 at the same times. Discussion does not extend it
+automatically. Existing caps remain 64 CPU-hours and 24 allocated GPU-hours;
+retain all pre-pause bookings, including 2,430 CPU seconds. No new GPU/model/SSH
+work, archive extraction or evaluation occurred during review. The original
+release deadline remains historical; use the effective resume deadline.
+
+The original attachment is retained privately with its hash, not published as
+execution authority. Its reported BBBC002 reference-code exposure remains
+unmapped: treat related tasks as development/excluded from locked evaluation
+pending lineage review. No reference/gold content was opened in this review.
+All prior scientific pins and ledger identities remain unchanged. The verified
+archive is retained privately and unextracted. Parent sole writer.
+
+The pause handoff and receipts below remain immutable historical evidence.
 
 ## Current owner checkpoint, 11 November 2026
 

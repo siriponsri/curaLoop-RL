@@ -1,5 +1,28 @@
 # Agent instructions: CuraLoop-RL
 
+## Latest owner resume and proposal review, 13 November 2026
+
+Current state: RESUMED_SCOPE_ADOPTED_BUDGET_PENDING. The owner explicitly
+resumed LR-DC2, requested reading a new local-agent proposal, then adopted
+option A and approved a new budget in principle. Its numerical amount is the
+one outstanding resource decision; do not reset or silently increase caps. Read
+docs/08_agent_rd/LOCAL_AGENT_PROPOSAL_REVIEW_20261113.md and
+docs/08_agent_rd/LOCAL_AGENT_PROTOCOL_DESIGN_20261113.md, plus
+research/manifests/lr_dc2_local_scope_adoption_20261113_v1.json. The initial
+review-only manifest remains immutable history. Continue independent protocol
+and source review within existing authority; do not allocate new research/model
+jobs until the numerical resource choice is recorded. After the complete
+amendment is released, routine phase approvals are not required.
+
+The effective 168-hour clock runs from 13 November 2026 11:51:07 UTC to
+20 November 2026 11:51:07 UTC (18:51:07 Bangkok on each date). Preserve the
+original release/deadline as history. No CPU/GPU cap or booking is reset; the
+ledger's effective_resume_deadline_utc is authoritative for this resume.
+No GPU/model/SSH, archive extraction or evaluation occurred in this review.
+All protected outcomes, historical ledgers and frozen evidence remain closed
+or byte-identical as applicable. Parent sole writer; no subagents.
+The earlier pause below is historical and superseded by this owner resume.
+
 ## Latest owner steering: dataset intake then pause
 
 Current status: PAUSED_OWNER_REQUEST. The official verified archive is fully

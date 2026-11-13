@@ -1,4 +1,20 @@
-# LR-DC2 dataset intake and owner pause
+# LR-DC2 dataset and resume evidence
+
+## Current owner checkpoint, 13 November 2026
+
+State: **RESUMED_SCOPE_ADOPTED_BUDGET_PENDING**. The owner resumed, requested
+review of a new proposal, then adopted its local-workflow scope and a new
+budget in principle. One numerical resource choice remains; no model/GPU job
+or archive extraction has started. Read the
+[proposal review](../../08_agent_rd/LOCAL_AGENT_PROPOSAL_REVIEW_20261113.md),
+[protocol design](../../08_agent_rd/LOCAL_AGENT_PROTOCOL_DESIGN_20261113.md),
+[initial resume receipt](owner-resume-review-20261113-v1.json) and
+[subsequent scope adoption](local-scope-adoption-20261113-v1.json).
+The effective seven-day window is 13 November 2026 11:51:07 UTC through
+20 November 2026 11:51:07 UTC, both 18:51:07 Bangkok. Prior bookings/results
+remain intact; no numerical budget reset is inferred from approval in principle.
+
+## Historical dataset pause, 11 November 2026
 
 Current state: **PAUSED_OWNER_REQUEST**, all started jobs settled. This is a
 dataset checkpoint, not a passed contribution/cohort gate or a completed study.

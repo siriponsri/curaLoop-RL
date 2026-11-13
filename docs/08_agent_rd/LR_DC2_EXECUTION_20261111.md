@@ -1,5 +1,21 @@
 # LR-DC2 execution record
 
+## Owner resume and new proposal review, 13 November 2026
+
+Current status: **RESUMED_SCOPE_ADOPTED_BUDGET_PENDING**. Read the
+[proposal comparison](LOCAL_AGENT_PROPOSAL_REVIEW_20261113.md) and
+[protocol design](LOCAL_AGENT_PROTOCOL_DESIGN_20261113.md), with
+[scope adoption](../../research/manifests/lr_dc2_local_scope_adoption_20261113_v1.json).
+The owner adopted option A and a new budget in principle after the initial
+review. Numerical resource confirmation is pending; no new allocation yet.
+The effective 168-hour window is 13 November 2026
+11:51:07 UTC through 20 November 2026 11:51:07 UTC, both 18:51:07 Bangkok.
+Caps and prior bookings are unchanged. No research/model/GPU job was launched
+during this administrative review. The old pause and original deadline below
+are historical; do not overwrite their immutable receipts.
+
+## Historical dataset pause, 11 November 2026
+
 Status: **PAUSED_OWNER_REQUEST**, dataset downloaded and verified 11 November 2026.
 The immutable [proposal](NEXT_GOAL_DECISION_CONTRACT_PROPOSAL_20261111.md)
 and disabled configuration are historical planning snapshots. The actual
