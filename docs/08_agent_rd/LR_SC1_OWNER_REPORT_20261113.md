@@ -6,6 +6,30 @@ after failure without repeated experiments. This report preserves that outcome.
 Final return/cleanup, resource and main-delivery identities are recorded in
 `docs/evidence/lr-sc1-20261113-v1/` and the private account delivery receipt.
 
+Account closed: **13 November 2026, 16:49:18 UTC / 23:49:18 Bangkok**.
+Source/evidence commit: `4a4196ee5f9506f19ac09d73a14f18a86d7380a0`.
+A final documentation/account commit follows; exact pushed SHA is recorded in
+the owner conversation and private `delivery-git-receipt-v1.json`.
+
+## Verified closeout
+
+- Full remote-owned persistent return and independent local reread: **PASS**,
+  **9,714 files / 1,408,097,133 bytes**, with a 524,611,890-byte archive.
+- Exact owned root, two exports and four stopped containers removed: **PASS**.
+  A subsequent read-only SSH check confirmed absence. Shared models and other
+  projects were not modified.
+- All **94 prior preservation pins**: **PASS**. Five returned executed remote
+  source files also match the committed local sources byte-for-byte.
+- English manuscript: **5 pages**, all final pages and grayscale figure reviewed
+  by the author; this is not independent expert validation.
+- Retained CPU reservations: **20,530 seconds / 5.702777778 hours** against the
+  128-hour cap. These include unused reserved ceilings, administration and failed
+  attempts; they are not measured aggregate CPU usage. The final audit separately
+  records measured local-job and remote-return process CPU, without inventing
+  missing aggregate measurements. GPU allocation: **0 hours**.
+- Active booked local/remote and research jobs at closure: **0**.
+- Research result: **NO_GO**, no comparative evidence and no submission readiness.
+
 ## What was completed
 
 - Opened a fresh 128 CPU-hour / 96 allocated GPU-hour account, separate from all

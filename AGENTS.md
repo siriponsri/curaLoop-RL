@@ -1,5 +1,34 @@
 # Agent instructions: CuraLoop-RL
 
+## Latest closeout: LR-SC1 stopped at failed admission, 13 November 2026
+
+LR-SC1 is CLOSED_NO_GO_NATIVE_EVALUATOR_READINESS, with zero active booked
+local/remote jobs. Read docs/08_agent_rd/LR_SC1_OWNER_REPORT_20261113.md and
+docs/evidence/lr-sc1-20261113-v1/delivery-audit-v1.json. Source/evidence commit:
+4a4196ee5f9506f19ac09d73a14f18a86d7380a0. A documentation/account closeout commit
+follows; its exact pushed SHA is in the delivery conversation/private Git receipt.
+
+Gate 0 accepted a bounded empirical distinction. Native validation passed 26/29
+checks initially; the one permitted comparator-import repair yielded 28/29,
+5/6 complete main references. Reference 70.8 still fails an unchanged assertion.
+Static upstream gold-assembly AST concordance passed; the remaining cause is
+unresolved. There is no third attempt/model/data substitution authorization.
+Test fixture metadata coverage is 65/65, not qualified numerical scoreability.
+Agent comparison NOT_RUN, primary effect NOT_ESTIMABLE, model calls/GPU use zero.
+New Qwen model was not downloaded; no scientific-contract plugin was implemented.
+
+Full 9,714-file / 1,408,097,133-byte owned return and independent reread passed;
+the exact owned task root, two exports and four stopped containers were removed.
+Fresh SSH absence and all 94 prior preservation pins passed. The English
+five-page admission manuscript is NOT_READY for Empirical Software Engineering.
+Retained CPU reservations total 20,530 seconds (5.702777778 hours), including
+unmetered administration/failures; actual aggregate CPU is not established.
+GPU allocation is zero. All old accounts/results remain closed and unchanged.
+
+Do not reopen this account or spend its nominal unused allowance. Future
+research needs a new explicit owner scope/resources decision. Ordinary offline
+audit reconstruction remains available. Lower releases are preserved history.
+
 ## Owner-authorized LR-SC1, 13 November 2026
 
 The owner approved NEXT_GOAL_SCIENTIFIC_VALIDATION_PROPOSAL_20261113.md:
