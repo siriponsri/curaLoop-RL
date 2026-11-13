@@ -1,0 +1,245 @@
+{
+  "status": "PASS_ACTUAL_CPU_AND_WALL_TERMINATION",
+  "probes": [
+    {
+      "ready": {
+        "status": "PASS_GPU_LEASE_STARTED_NO_INFERENCE",
+        "lease_id": "guard-probe-cpu-v1",
+        "gpu_uuid": "GPU-277ccc57-c3e5-0731-cd49-f4f8695f7089",
+        "model_digest": "ab914ef406c9a78e2a8893eaa3b0ef78049f6c4e2703626433028e838d3a168b",
+        "cpu_seconds": 0.983562,
+        "running_model_metadata": {
+          "models": []
+        },
+        "utc": "2026-11-13T12:44:24.314970+00:00"
+      },
+      "probe": {
+        "status": "PASS_WATCHDOG_ACTUALLY_TERMINATED_CONTAINER",
+        "kind": "cpu",
+        "elapsed_seconds": 13.243398666381836,
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-13T12:44:23.411472403Z",
+          "FinishedAt": "2026-11-13T12:44:35.813217874Z"
+        },
+        "observations": [
+          {
+            "wall_seconds": 2.402036190032959,
+            "cpu_seconds": 1.218824
+          },
+          {
+            "wall_seconds": 3.483079433441162,
+            "cpu_seconds": 3.382423
+          },
+          {
+            "wall_seconds": 4.568114995956421,
+            "cpu_seconds": 5.551388
+          },
+          {
+            "wall_seconds": 5.652214050292969,
+            "cpu_seconds": 7.722754
+          },
+          {
+            "wall_seconds": 6.73712158203125,
+            "cpu_seconds": 9.891867
+          },
+          {
+            "wall_seconds": 7.8219709396362305,
+            "cpu_seconds": 12.062912
+          },
+          {
+            "wall_seconds": 8.909396171569824,
+            "cpu_seconds": 14.23241
+          },
+          {
+            "wall_seconds": 9.995449304580688,
+            "cpu_seconds": 16.392293
+          },
+          {
+            "wall_seconds": 11.07734990119934,
+            "cpu_seconds": 18.553683
+          },
+          {
+            "wall_seconds": 12.159495115280151,
+            "cpu_seconds": 20.718358
+          }
+        ],
+        "model_calls": 0
+      },
+      "stop": {
+        "status": "PASS_OWNED_LEASE_STOPPED",
+        "utc": "2026-11-13T12:44:38.099659+00:00",
+        "lease_id": "guard-probe-cpu-v1",
+        "allocated_wall_seconds": 14.795432567596436,
+        "retained_gpu_seconds": 60,
+        "container_cpu_seconds_observed": null,
+        "final_container_state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-13T12:44:23.411472403Z",
+          "FinishedAt": "2026-11-13T12:44:35.813217874Z"
+        },
+        "gpu_processes_after_stop": []
+      }
+    },
+    {
+      "ready": {
+        "status": "PASS_GPU_LEASE_STARTED_NO_INFERENCE",
+        "lease_id": "guard-probe-wall-v1",
+        "gpu_uuid": "GPU-277ccc57-c3e5-0731-cd49-f4f8695f7089",
+        "model_digest": "ab914ef406c9a78e2a8893eaa3b0ef78049f6c4e2703626433028e838d3a168b",
+        "cpu_seconds": 0.841511,
+        "running_model_metadata": {
+          "models": []
+        },
+        "utc": "2026-11-13T12:44:41.078270+00:00"
+      },
+      "probe": {
+        "status": "PASS_WATCHDOG_ACTUALLY_TERMINATED_CONTAINER",
+        "kind": "wall",
+        "elapsed_seconds": 25.556831121444702,
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-13T12:44:40.315190269Z",
+          "FinishedAt": "2026-11-13T12:45:05.719672103Z"
+        },
+        "observations": [
+          {
+            "wall_seconds": 2.0476622581481934,
+            "cpu_seconds": 0.922168
+          },
+          {
+            "wall_seconds": 3.1091392040252686,
+            "cpu_seconds": 0.962658
+          },
+          {
+            "wall_seconds": 4.163929462432861,
+            "cpu_seconds": 1.009552
+          },
+          {
+            "wall_seconds": 5.226991415023804,
+            "cpu_seconds": 1.054966
+          },
+          {
+            "wall_seconds": 6.290313720703125,
+            "cpu_seconds": 1.100959
+          },
+          {
+            "wall_seconds": 7.350350618362427,
+            "cpu_seconds": 1.158383
+          },
+          {
+            "wall_seconds": 8.424757242202759,
+            "cpu_seconds": 1.216534
+          },
+          {
+            "wall_seconds": 9.497665643692017,
+            "cpu_seconds": 1.273551
+          },
+          {
+            "wall_seconds": 10.569012641906738,
+            "cpu_seconds": 1.3343
+          },
+          {
+            "wall_seconds": 11.651023626327515,
+            "cpu_seconds": 1.393663
+          },
+          {
+            "wall_seconds": 12.7251718044281,
+            "cpu_seconds": 1.448212
+          },
+          {
+            "wall_seconds": 13.795522212982178,
+            "cpu_seconds": 1.509389
+          },
+          {
+            "wall_seconds": 14.870471954345703,
+            "cpu_seconds": 1.569393
+          },
+          {
+            "wall_seconds": 15.946199893951416,
+            "cpu_seconds": 1.629017
+          },
+          {
+            "wall_seconds": 17.022056102752686,
+            "cpu_seconds": 1.680922
+          },
+          {
+            "wall_seconds": 18.08674430847168,
+            "cpu_seconds": 1.740184
+          },
+          {
+            "wall_seconds": 19.161178588867188,
+            "cpu_seconds": 1.792103
+          },
+          {
+            "wall_seconds": 20.230274200439453,
+            "cpu_seconds": 1.831869
+          },
+          {
+            "wall_seconds": 21.28145480155945,
+            "cpu_seconds": 1.87332
+          },
+          {
+            "wall_seconds": 22.339226961135864,
+            "cpu_seconds": 1.92025
+          },
+          {
+            "wall_seconds": 23.402498960494995,
+            "cpu_seconds": 1.975114
+          },
+          {
+            "wall_seconds": 24.473426580429077,
+            "cpu_seconds": 2.029918
+          }
+        ],
+        "model_calls": 0
+      },
+      "stop": {
+        "status": "PASS_OWNED_LEASE_STOPPED",
+        "utc": "2026-11-13T12:45:07.682575+00:00",
+        "lease_id": "guard-probe-wall-v1",
+        "allocated_wall_seconds": 27.45377469062805,
+        "retained_gpu_seconds": 30,
+        "container_cpu_seconds_observed": null,
+        "final_container_state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-13T12:44:40.315190269Z",
+          "FinishedAt": "2026-11-13T12:45:05.719672103Z"
+        },
+        "gpu_processes_after_stop": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "status": "PASS_AUTHOR_ALL_PAGES_AND_FIGURE_REVIEW",
+  "utc": "2026-11-13T15:21:55.112917+00:00",
+  "reviewer_scope": "Implementer's visual self-review; not independent expert validation",
+  "documents": [
+    {
+      "path": "docs/manual/CuraLoop-Local-Molecular-Workflow-Guide-EN-v3.pdf",
+      "sha256": "50b4a8d8aef1a3f590dc581e2099997fad4b5a1709e9a050887ed0cf8cfe18cb",
+      "pages_inspected": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "text_extraction_nonempty": true
+    },
+    {
+      "path": "docs/07_publication/CuraLoop-Local-Workflow-Feasibility-EN-v2.pdf",
+      "sha256": "ffc301632e729f64668cbc487baaceb86d25d54601f49bf8fb18faee631fe967",
+      "pages_inspected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "text_extraction_nonempty": true
+    }
+  ],
+  "figure": {
+    "source": "native-admission-final-v1.json",
+    "observed": [
+      1,
+      6,
+      3
+    ],
+    "required": [
+      1,
+      6,
+      4
+    ],
+    "order": [
+      "development tasks",
+      "evaluation candidates",
+      "evaluation lineages"
+    ],
+    "native_mm": [
+      178,
+      100
+    ],
+    "formats": [
+      "svg",
+      "pdf",
+      "png"
+    ],
+    "full_color_and_grayscale_inspected": true,
+    "legend_and_annotation_collision_resolved": true,
+    "ordinary_text_pt": 8,
+    "no_fabricated_uncertainty": true,
+    "structural_checks": [
+      {
+        "extension": "svg",
+        "returncode": 0,
+        "sha256": "12b652e6b8d0e3ef9a4b67b27ba22e3dc6d09cf21fe47680249244aeb6c98095",
+        "report": {
+          "path": "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\docs\\evidence\\lr-dc2-local-20261113-v1\\figures-v2\\native-readiness.svg",
+          "format": "svg",
+          "passed": true,
+          "metadata": {
+            "size_bytes": 10115,
+            "width_attribute": "504.566929pt",
+            "height_attribute": "283.464567pt",
+            "width_mm": 177.99999995277776,
+            "height_mm": 100.00000002499999,
+            "viewBox": [
+              0.0,
+              0.0,
+              504.566929,
+              283.464567
+            ],
+            "user_unit_scale_pt": 0.9999999999999999,
+            "actual_aspect_ratio": 1.779999999082778,
+            "target_aspect_ratio": 1.78,
+            "aspect_ratio_relative_error": 5.152932525120946e-10,
+            "text_nodes": 19,
+            "embedded_image_nodes": 0,
+            "detected_font_sizes_pt": [
+              8.0,
+              8.5,
+              9.0,
+              11.0
+            ],
+            "font_families": []
+          },
+          "issues": [
+            {
+              "severity": "warning",
+              "code": "small_svg_math_component",
+              "message": "Detected 8.00 pt SVG text below the 8.00 pt body minimum; this may be a math superscript/subscript. Inspect it at final size."
+            }
+          ],
+          "limitations": [
+            "Programmatic preflight cannot verify scientific correctness or omitted evidence.",
+            "Programmatic preflight cannot reliably detect label collisions, hierarchy, or the five-second message.",
+            "Inspect a final-size rendered image after the most recent edit."
+          ]
+        }
+      },
+      {
+        "extension": "png",
+        "returncode": 0,
+        "sha256": "390bea9ddd1353dd86c8a531066957e0c6aa58d004c13e09ca0edab41d02fc89",
+        "report": {
+          "path": "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\docs\\evidence\\lr-dc2-local-20261113-v1\\figures-v2\\native-readiness.png",
+          "format": "png",
+          "passed": true,
+          "metadata": {
+            "size_bytes": 103352,
+            "width_px": 2102,
+            "height_px": 1181,
+            "mode": "RGBA",
+            "frames": 1,
+            "embedded_dpi": [
+              299.9994,
+              299.9994
+            ],
+            "actual_aspect_ratio": 1.7798475867908552,
+            "target_aspect_ratio": 1.78,
+            "aspect_ratio_relative_error": 8.562539839596095e-05,
+            "effective_dpi_at_target_width": 299.9483146067416
+          },
+          "issues": [
+            {
+              "severity": "warning",
+              "code": "suboptimal_effective_dpi",
+              "message": "Effective resolution is 300 dpi; 300 dpi is preferred for manuscript figures."
+            }
+          ],
+          "limitations": [
+            "Programmatic preflight cannot verify scientific correctness or omitted evidence.",
+            "Programmatic preflight cannot reliably detect label collisions, hierarchy, or the five-second message.",
+            "Inspect a final-size rendered image after the most recent edit."
+          ]
+        }
+      }
+    ]
+  },
+  "passes": [
+    "Scientific value/unit/denominator/NOT_RUN audit",
+    "Final rendered-page geometry and legibility"
+  ],
+  "corrections": [
+    "Preserve list/reference item breaks",
+    "Separate chart subtitle and legend",
+    "Separate annotation labels from data marks",
+    "Add real trace screenshot to sparse guide page"
+  ],
+  "limits": "Screenshot labels retain actual UI resolution; no real-user readability study or independent review"
+}

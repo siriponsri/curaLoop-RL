@@ -1,0 +1,53 @@
+{
+  "scope": "Descriptive author software acceptance; not population inference",
+  "author_cases_passed": 6,
+  "author_cases_attempted": 6,
+  "deterministic_conformance_passed": 3,
+  "deterministic_conformance_attempted": 3,
+  "actual_product_provider_attempts": 12,
+  "actual_product_generated_tokens": 332,
+  "actual_case_wall_seconds": [
+    74.781,
+    7.5,
+    7.547,
+    7.859,
+    8.047,
+    9.266
+  ],
+  "retained_model_lease_cpu_seconds": 2400,
+  "retained_model_lease_gpu_seconds": 1200,
+  "all_product_responses_gpu_resident": true,
+  "actual_prompt_tokens": 3325,
+  "model_stop": {
+    "status": "PASS_OWNED_LEASE_STOPPED",
+    "utc": "2026-11-13T14:42:02.596115+00:00",
+    "lease_id": "product-acceptance-v1",
+    "allocated_wall_seconds": 123.46064233779907,
+    "retained_gpu_seconds": 1200,
+    "container_cpu_seconds_observed": 89.451841,
+    "final_container_state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-13T14:39:59.229910293Z",
+      "FinishedAt": "2026-11-13T14:42:02.54524352Z"
+    },
+    "gpu_processes_after_stop": []
+  },
+  "external_comparison": "NOT_RUN",
+  "primary_effect": null,
+  "primary_effect_status": "NOT_ESTIMABLE",
+  "confidence_interval": "NOT_ESTIMABLE_NO_COMPARATIVE_SAMPLE",
+  "uncertainty_note": "Six author-selected related bilingual cases, one attempt each; no sampling interval or seed variance inferred",
+  "source_sha256": {
+    "product": "8f3e3b3b589fe419d5218999bfe094587643008a12f7b5ad0949a45cfdfbad1b",
+    "native": "a7ab97c3a66f96af5b5722e4c7506579dbaa124a4bb69b09ac4211e22f0922cd",
+    "freeze": "07de32a69624d4b8ab2d008358e4543ebdef905a9242d649702e49ed417ea064"
+  }
+}

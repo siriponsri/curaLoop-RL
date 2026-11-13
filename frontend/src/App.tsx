@@ -31,9 +31,11 @@ const Benchmarks = lazy(() => import("./pages/Benchmarks"));
 const Evidence = lazy(() => import("./pages/Evidence"));
 const Confirmation = lazy(() => import("./pages/Confirmation"));
 const AgentMission = lazy(() => import("./pages/AgentMission"));
+const LocalWorkflow = lazy(() => import("./pages/LocalWorkflow"));
 const GuidedPresentation = lazy(() => import("./pages/Presentation"));
 
 const pages = [
+  { path: "/workflow", en: "Molecular workflow", icon: FlaskConical },
   { path: "/", en: "Discovery overview", icon: LayoutDashboard },
   { path: "/lab", en: "Simulation lab", icon: FlaskConical },
   { path: "/benchmarks", en: "Benchmark arena", icon: BarChart3 },
@@ -107,7 +109,7 @@ function Workspace() {
         </nav>
         <div className="sidebar-bottom">
           <span className="status-dot" />
-          {t("Localhost · CPU only")}<small>{t("v")}{meta?.web_version ?? "0.3.0"}</small>
+          {t("Local research workspace")}<small>{t("v")}{meta?.web_version ?? "0.3.0"}</small>
         </div>
       </>
     );
@@ -180,10 +182,10 @@ function Workspace() {
               {t(notice)}
             </div>
           )}
-          {pathname === "/confirmation" || pathname === "/agent" ? (
+          {pathname === "/confirmation" || pathname === "/agent" || pathname === "/workflow" ? (
             <RouteBoundary key={pathname} fallback={<RouteError />}>
               <Suspense fallback={<div className="loading-panel" role="status">{t("Loading workspace…")}</div>}>
-                {pathname === "/agent" ? <AgentMission /> : <Confirmation />}
+                {pathname === "/workflow" ? <LocalWorkflow /> : pathname === "/agent" ? <AgentMission /> : <Confirmation />}
               </Suspense>
             </RouteBoundary>
           ) : loading ? (

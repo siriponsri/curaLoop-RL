@@ -1,5 +1,48 @@
 # Handoff: LR-DC2 resumed for proposal review
 
+## Current active goal, 13 November 2026: product fallback delivery
+
+The owner selected fresh budget B (96 CPU-hours + 24 allocated GPU-hours),
+cleared the old goal and explicitly opened the new local-agent goal. It is
+active. Deadline remains 20 November 2026 11:51:07 UTC / 18:51:07 Bangkok.
+Read [the execution checkpoint](docs/08_agent_rd/LOCAL_AGENT_EXECUTION_20261113.md)
+and [admission closure](docs/evidence/lr-dc2-local-20261113-v1/admission-checkpoint-v1.json).
+
+Use `.local/lr-dc2-local-20261113-v1` only. The superseded LR-DC2 ledger stays
+byte-identical at its historical pending-budget raw status; that account is
+inactive and its unused allowance cannot be borrowed. The old 2,430 CPU-second
+charge remains separate. Source pins and all protected outcomes remain intact.
+
+Native admission is finally NOT_PASSED: one development task, six candidates,
+three source groups against four required. External comparison is NOT_RUN and
+no numerical matrix was frozen. The earlier scalar/tuple adapter error was
+corrected on existing outputs, with both original reports preserved. The final
+source-supported compatibility batch is complete; do not run more environment,
+reference or benchmark attempts. Continue the approved software/feasibility
+fallback, not another research design.
+
+Actual hardware: read-only SSH inventory, full existing-model blob hash,
+CPU/wall termination probes and one real V100/Typhoon format canary PASS.
+It was seven output tokens, not a scientific agent task. All current started
+jobs have settled; no model/native container remains running from those jobs.
+The owned remote root exists and must be fully returned/reread before cleanup.
+Its shared model cache and reused images must remain untouched.
+
+New local package contains evidence binding, actual RDKit computation/export,
+durable job store and subprocess workflow engine. The combined tests passed
+29, including actual RDKit child execution, cancellation race, recovery,
+artifact/ZIP tampering and the native tuple contract. Integrated API, new EN/TH
+screen, registered real-model workflow acceptance, new guide/manuscript and
+final return/delivery are still pending. Do not call these tested yet.
+
+Next: implement the additive local-workflow API/provider and screen; finish
+appropriate backend/browser acceptance with actual model calls and no mocks
+as experimental results; package the English guide and honest feasibility/
+software report. No routine phase approval is needed. Keep all failures and
+report that the primary comparison/benefit is untested. Parent sole writer.
+The working checkpoint was based on main 46a1c6f; read Git for actual current
+commit/push state. The new scope implementation is not yet a final release.
+
 ## Current owner checkpoint, 13 November 2026
 
 Status: **RESUMED_SCOPE_ADOPTED_BUDGET_PENDING**. The owner requested resume

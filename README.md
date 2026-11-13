@@ -1,11 +1,13 @@
 <h1 align="center">Pharmaceutical evidence you can trace.</h1>
 
 <p align="center">
-  A local workbench for retrospective screening and inspectable evidence missions.<br>
-  Compare methods. Check sources. Follow real model decisions. Preserve the evidence.
+  A local molecular workflow and retrospective pharmaceutical evidence workbench.<br>
+  Import compounds. Compute with RDKit. Inspect real model decisions and collect the evidence.
 </p>
 
 <p align="center">
+  <a href="docs/manual/CuraLoop-Local-Molecular-Workflow-Guide-EN-v3.pdf"><strong>Local molecular workflow guide (PDF)</strong></a> &nbsp;·&nbsp;
+  <a href="docs/07_publication/CuraLoop-Local-Workflow-Feasibility-EN-v2.pdf"><strong>Local workflow feasibility report (PDF)</strong></a> &nbsp;·&nbsp;
   <a href="docs/manual/CuraLoop-RL-Dashboard-Guide-EN-v3.pdf"><strong>English user manual (PDF)</strong></a> &nbsp;·&nbsp;
   <a href="docs/manual/CuraLoop-RL-Confirmation-Evidence-Guide-EN-v4.pdf"><strong>Confirmation evidence guide (PDF)</strong></a> &nbsp;·&nbsp;
   <a href="docs/manual/CuraLoop-AgentRD-Guide-EN-v2.pdf"><strong>Agent RD guide (PDF)</strong></a> &nbsp;·&nbsp;
@@ -19,9 +21,30 @@
   <a href="docs/EVALUATION.md">Scientific evaluation</a>
 </p>
 
-<p align="center"><strong>Research POC</strong> &nbsp; / &nbsp; Windows first &nbsp; / &nbsp; Local workspace &nbsp; / &nbsp; Optional CPU model via SSH &nbsp; / &nbsp; MIT code</p>
+<p align="center"><strong>Research POC</strong> &nbsp; / &nbsp; Windows first &nbsp; / &nbsp; EN/TH workspace &nbsp; / &nbsp; Optional authorized local model &nbsp; / &nbsp; MIT code</p>
 
 ---
+
+**Latest delivery, 13 November 2026:** open **`/workflow`** for an actual
+CSV → RDKit → verified report/ZIP workflow in English or Thai. It includes a
+searchable descriptor table, real 2D structures, saved jobs, cancellation and
+explicit recovery. Component/API checks passed **58 tests**. The fixed local
+Typhoon model passed **6/6 author-selected EN/TH software cases** using **12 real
+responses**, without repeated cases or mock results. These checks establish
+bounded software behavior, not independent scientific validation.
+
+The intended external method comparison is **NOT_RUN**: native readiness reached
+one development reference and six evaluation candidates, but only **3/4 required
+repository lineages**. The comparative effect is **NOT_ESTIMABLE**, not zero.
+The delivered manuscript is an honest feasibility/software report; it does not
+claim agent superiority or journal readiness. [Actual results](docs/07_publication/LOCAL_WORKFLOW_ACTUAL_RESULTS_20261113.md)
+· [Evidence and reproduction](docs/evidence/lr-dc2-local-20261113-v1/README.md).
+
+![Actual saved local-model result in the molecular workflow](docs/evidence/lr-dc2-local-20261113-v1/model-product-screens-v1/actual-model-result-en.png)
+
+*Captured from the running application after reopening a genuine model job.
+The model session is correctly offline in this capture; reopening makes no new
+inference. Explicit-limit RDKit execution works without a model or SSH.*
 
 CuraLoop-RL connects retrospective screening with bounded pharmaceutical evidence
 missions. The new Agent RD workspace records actual model proposals, read-only
@@ -61,6 +84,7 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 | Workspace | What you can do |
 | --- | --- |
+| **Molecular workflow** | Import a bounded CSV, run actual RDKit descriptors and numeric filtering, inspect structures and current evidence, then collect a verified report/ZIP. Optional model execution requires an active operator session; no paid or deterministic fallback is hidden. |
 | **Discovery Overview** | Read actual compound, budget, delivered-assay and hit counts; inspect public chemistry and discovery curves. |
 | **Digital Twin Simulation Lab** | Use the explicitly labeled Retrospective Simulator; inspect selection, queue, delivery and model-data stages. |
 | **Benchmark Arena** | Compare Random, Greedy, active-learning and RL implementations; distinguish single-seed efficiency from recorded ten-seed variation and fallback. |
@@ -74,12 +98,14 @@ revisions, while portable single-run JSON supports validated recovery elsewhere.
 
 ## Research and R&D pilot programme
 
-**LR-DC2 owner pause, 11 November 2026:** the official ScienceAgentBench verified
-archive is fully downloaded and hash-reread, retained privately without
-extraction or gold access. Contribution/cohort/GPU admission remains incomplete;
-no model/GPU work has begun. The seven-day clock starts only on the next owner
-resume, with all earlier bookings retained. [Pause/resume handoff](docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md)
-· [Intake evidence](docs/evidence/lr-dc2-20261111-v1/README.md).
+**Local-workflow release, 13 November 2026:** the owner resumed and adopted a
+fresh resource release. Native external admission did not pass its unchanged
+diversity rule; the approved real-workflow/software-report fallback was used.
+Old ledgers, negative results and protected hidden outcomes remain preserved.
+[Execution record](docs/08_agent_rd/LOCAL_AGENT_EXECUTION_20261113.md)
+· [Current evidence](docs/evidence/lr-dc2-local-20261113-v1/README.md).
+The [11 November pause handoff](docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md)
+is retained historical context, not the current state.
 
 **Completed computational work, 11 November 2026:** the
 [AgentRD owner report](docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md) delivers the

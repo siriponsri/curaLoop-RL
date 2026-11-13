@@ -29,6 +29,7 @@ from curaloop_rd.confirmation_study import StudyUnavailable, comparison_brief
 from curaloop_rd.confirmation_study import view as confirmation_view
 
 from .agent_rd_routes import install_agent_routes
+from .local_workflow_routes_v1 import install_local_workflow_routes
 from .storage import (
     RECOVERY_HELP,
     SCHEMA_VERSION,
@@ -301,6 +302,7 @@ def create_app(storage_path: str | Path | None = None) -> FastAPI:
     app.state.recovery_issues = []
     mission_base = Path(storage_path or os.environ.get("CURALOOP_STORAGE_PATH") or ROOT / ".local/curaloop.sqlite3")
     install_agent_routes(app, mission_base.parent / (mission_base.stem + "-agent-rd"))
+    install_local_workflow_routes(app, mission_base.parent / (mission_base.stem + "-local-workflow"))
     try:
         app.state.storage = SnapshotStore(
             storage_path
@@ -409,6 +411,7 @@ def create_app(storage_path: str | Path | None = None) -> FastAPI:
             return JSONResponse({"detail": "Localhost host only."}, status_code=403)
         origin = request.headers.get("origin")
         if origin and origin not in (
+            str(request.base_url).rstrip("/"),
             "http://localhost:5173",
             "http://127.0.0.1:5173",
             "http://127.0.0.1:8000",

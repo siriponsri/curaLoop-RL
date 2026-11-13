@@ -1,0 +1,39 @@
+{
+  "status": "ONE_BOUNDED_DEPENDENCY_REPAIR_ATTEMPT",
+  "groups": [
+    {
+      "arguments": [
+        "--no-deps",
+        "--only-binary=:all:",
+        "mastml",
+        "papyrus-scripts",
+        "biopsykit"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.470247983932495
+    },
+    {
+      "arguments": [
+        "--only-binary=:all:",
+        "--constraint=/control/constraints.txt",
+        "shap==0.46.0",
+        "pystow",
+        "more-itertools",
+        "pingouin",
+        "neurokit2",
+        "mne"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 41.67392134666443
+    },
+    {
+      "arguments": [
+        "--no-deps",
+        "mordred==1.2.0"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 3.822547435760498
+    }
+  ],
+  "observed_cpu_seconds": 42.977866
+}

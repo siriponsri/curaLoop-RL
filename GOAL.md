@@ -1,11 +1,16 @@
 # Goal: a defensible method and a useful R&D plugin
 
-**Latest owner checkpoint: LR-DC2 is PAUSED after verified dataset download.**
-Read the [dataset/resume handoff](docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md).
-The seven-day clock begins only on the next explicit owner resume, with the
-same64 CPU-hour/24 GPU-hour caps and all pre-pause bookings retained. No model
-or GPU work has started. The archive is quarantined; research admission remains
-incomplete. Earlier AgentRD completion below is a separate historical result.
+**Latest checkpoint, 13 November 2026: active local-workflow delivery.**
+The owner resumed, adopted the new proposal and released fresh 96 CPU-hours /
+24 allocated GPU-hours. Native external admission stopped at three qualified
+evaluation lineages against four required, so its agent comparison is NOT_RUN
+and the effect is NOT_ESTIMABLE. The approved fallback delivers the same actual
+CSV/RDKit/report EN/TH workflow. Six frozen author model cases passed with twelve
+genuine responses; component/API regression passed 58 tests. Documentation,
+owned return/cleanup and final main delivery are being completed. Read the
+[current execution record](docs/08_agent_rd/LOCAL_AGENT_EXECUTION_20261113.md).
+The [old pause handoff](docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md)
+and earlier AgentRD work remain separate preserved history.
 
 **Current, 11 November 2026: AgentRD computational and localhost work complete.**
 The continuous solo scope produced the actual EN/TH workbench, all 408 frozen

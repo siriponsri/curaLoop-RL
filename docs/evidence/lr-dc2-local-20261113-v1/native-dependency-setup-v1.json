@@ -1,0 +1,54 @@
+{
+  "status": "PASS_SETUP_ATTEMPTS_RETAINED",
+  "groups": [
+    {
+      "packages": [
+        "numpy==1.26.4",
+        "pandas==2.2.3",
+        "scipy==1.13.1",
+        "scikit-learn==1.5.2",
+        "rdkit==2024.9.6",
+        "openpyxl==3.1.5"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 23.729746103286743
+    },
+    {
+      "packages": [
+        "mastml"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 41.32251834869385
+    },
+    {
+      "packages": [
+        "matminer"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 50.46098852157593
+    },
+    {
+      "packages": [
+        "papyrus-scripts"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 9.450432300567627
+    },
+    {
+      "packages": [
+        "prolif",
+        "MDAnalysis"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 30.04497766494751
+    },
+    {
+      "packages": [
+        "biopsykit"
+      ],
+      "exit_code": 1,
+      "wall_seconds": 16.88190531730652
+    }
+  ],
+  "environment_bytes": 806436932
+}

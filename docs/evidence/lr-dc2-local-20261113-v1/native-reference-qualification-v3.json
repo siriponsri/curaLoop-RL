@@ -1,0 +1,137 @@
+{
+  "status": "DATA_NOT_READY_USE_APPROVED_BOUNDED_FALLBACK",
+  "development_ids": [],
+  "locked_candidate_ids": [],
+  "locked_repository_lineage_groups": [],
+  "results": [
+    {
+      "instance_id": 2,
+      "native_success": false,
+      "reference_exit_code": 1,
+      "reference_wall_seconds": 0.11395668983459473,
+      "reference_error_type": "ReferenceProgramFailure",
+      "missing_module": "pathos",
+      "observed_cpu_seconds": 0.585403,
+      "role": "development",
+      "lineage_group": "uw-cmg/MAST-ML"
+    },
+    {
+      "instance_id": 3,
+      "native_success": false,
+      "reference_exit_code": 0,
+      "reference_wall_seconds": 83.27307534217834,
+      "native_result_type": "tuple",
+      "native_return_not_admitted": true,
+      "observed_cpu_seconds": 84.082913,
+      "role": "development",
+      "lineage_group": "hackingmaterials/matminer_examples"
+    },
+    {
+      "instance_id": 5,
+      "native_success": false,
+      "reference_exit_code": 0,
+      "reference_wall_seconds": 1.3171417713165283,
+      "native_result_type": "tuple",
+      "native_return_not_admitted": true,
+      "observed_cpu_seconds": 2.677092,
+      "role": "locked_candidate",
+      "lineage_group": "psa-lab/predicting-activity-by-machine-learning"
+    },
+    {
+      "instance_id": 16,
+      "native_success": false,
+      "reference_exit_code": 0,
+      "reference_wall_seconds": 11.383127927780151,
+      "native_result_type": "tuple",
+      "native_return_not_admitted": true,
+      "observed_cpu_seconds": 11.83946,
+      "role": "locked_candidate",
+      "lineage_group": "felixjwong/antibioticsai"
+    },
+    {
+      "instance_id": 18,
+      "native_success": false,
+      "reference_exit_code": 0,
+      "reference_wall_seconds": 170.58349561691284,
+      "native_result_type": "tuple",
+      "native_return_not_admitted": true,
+      "observed_cpu_seconds": 171.630551,
+      "role": "locked_candidate",
+      "lineage_group": "anikaliu/CAMDA-DILI"
+    },
+    {
+      "instance_id": 19,
+      "native_success": false,
+      "reference_exit_code": 0,
+      "reference_wall_seconds": 49.18505859375,
+      "native_result_type": "tuple",
+      "native_return_not_admitted": true,
+      "observed_cpu_seconds": 50.355262,
+      "role": "locked_candidate",
+      "lineage_group": "anikaliu/CAMDA-DILI"
+    },
+    {
+      "instance_id": 22,
+      "native_success": false,
+      "reference_exit_code": 1,
+      "reference_wall_seconds": 0.565091609954834,
+      "reference_error_type": "ReferenceProgramFailure",
+      "observed_cpu_seconds": 0.981993,
+      "role": "locked_candidate",
+      "lineage_group": "OlivierBeq/Papyrus-scripts"
+    },
+    {
+      "instance_id": 26,
+      "native_success": false,
+      "reference_exit_code": 1,
+      "reference_wall_seconds": 1.3663980960845947,
+      "reference_error_type": "ReferenceProgramFailure",
+      "observed_cpu_seconds": 1.755853,
+      "role": "locked_candidate",
+      "lineage_group": "chemosim-lab/ProLIF"
+    },
+    {
+      "instance_id": 40,
+      "native_success": false,
+      "reference_exit_code": 0,
+      "reference_wall_seconds": 364.1308286190033,
+      "native_result_type": "tuple",
+      "native_return_not_admitted": true,
+      "observed_cpu_seconds": 362.041302,
+      "role": "locked_candidate",
+      "lineage_group": "anikaliu/CAMDA-DILI"
+    },
+    {
+      "instance_id": 41,
+      "native_success": false,
+      "reference_exit_code": 0,
+      "reference_wall_seconds": 11.643908977508545,
+      "native_result_type": "tuple",
+      "native_return_not_admitted": true,
+      "observed_cpu_seconds": 13.039146,
+      "role": "locked_candidate",
+      "lineage_group": "anikaliu/CAMDA-DILI"
+    },
+    {
+      "instance_id": 85,
+      "native_success": false,
+      "reference_exit_code": 1,
+      "reference_wall_seconds": 0.7656798362731934,
+      "reference_error_type": "ReferenceProgramFailure",
+      "missing_module": "nilspodlib",
+      "observed_cpu_seconds": 1.174911,
+      "role": "locked_candidate",
+      "lineage_group": "mad-lab-fau/BioPsyKit"
+    }
+  ],
+  "minimum_rules_unchanged": {
+    "locked_tasks": 6,
+    "repository_lineage_groups": 4,
+    "qualified_development_task": 1
+  },
+  "candidate_model_evaluation": "NOT_RUN",
+  "matrix_frozen": false,
+  "reference_outcome_driven_retry": false,
+  "repair": "First v1 reference never started; nested mountpoint fixed, one dependency-only repair; all original bytes and charges retained",
+  "wrapper": "Unmodified native eval() criterion in isolated containers; no paid rubric/image/CodeBERT grading; not full upstream harness reproduction"
+}

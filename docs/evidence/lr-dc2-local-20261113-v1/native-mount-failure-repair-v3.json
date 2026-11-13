@@ -1,0 +1,20 @@
+{
+  "status": "PASS_BYTE_EXACT_VERSIONED_TRANSPORT_AND_PRIOR_OWNED_ABSENCE",
+  "original_state": {
+    "Status": "created",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 128,
+    "Error": "failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error mounting \"/home/chaw/curaloop-tasks/lr-dc2-local-20261113-v1/native-v1/assets/gold-results\" to rootfs at \"/work/benchmark/eval_programs/gold_results\": create mountpoint for /work/benchmark/eval_programs/gold_results mount: make mountpoint \"/work/benchmark/eval_programs/gold_results\": mkdirat /data/docker/rootfs/overlayfs/a170b53befa300daff192808c7af44dbf4f894ecfe3f8b0459c552e14b1ff3c6/work/benchmark/eval_programs/gold_results: read-only file system",
+    "StartedAt": "0001-01-01T00:00:00Z",
+    "FinishedAt": "0001-01-01T00:00:00Z"
+  },
+  "reference_process_started": false,
+  "original_worker_preserved": true,
+  "prior_exact_removal_had_already_occurred": true,
+  "new_worker_sha256": "d3dd36ceedd1df9b2f9c0950e074ddd96b62a2660e2a2bbd5f687b9b4b821dcc"
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS_FREE_GPU_WORKER_INSTALLED_NO_INFERENCE",
+  "source_sha256": "64825df55c975826e201a0eee606e93ddd59209b00d6a660b6bf4731d41c939d",
+  "gpu_uuid": "GPU-044a8b11-4729-458b-a07b-297e45439419",
+  "cpu_cap_seconds": 10,
+  "memory_cap_bytes": 268435456,
+  "other_gpu_processes_retained": true,
+  "prior_selected_gpu": "GPU-277ccc57-c3e5-0731-cd49-f4f8695f7089",
+  "reason": "V100 occupied by an unrelated Python process; free RTX 2080 Ti used within existing one-GPU authorization. Same checkpoint, model settings, prompts, cases and scoring. No external comparative experiment exists.",
+  "original_worker_sha256": "41e3b327d7a41ce0daf819231d57b826d3e5d2cfb0072ec6179e096fc7e4938a",
+  "product_worker_sha256": "64825df55c975826e201a0eee606e93ddd59209b00d6a660b6bf4731d41c939d",
+  "model_change": false,
+  "cpu_quota": 2,
+  "host_memory_cap_gib": 20,
+  "gpu_quota": 1,
+  "automatic_case_repeats": false,
+  "model_may_partially_offload_to_cpu": true
+}

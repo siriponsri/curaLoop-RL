@@ -1,0 +1,405 @@
+{
+  "id": "logp_max-en",
+  "pass": true,
+  "checks": {
+    "completed": true,
+    "parameters_exact": true,
+    "selected_ids_exact": true,
+    "two_real_provider_responses": true
+  },
+  "wall_seconds": 7.546999999991385,
+  "actual_selected_ids": [
+    "caffeine",
+    "ethanol"
+  ],
+  "result": {
+    "job_id": "d62d110cc7f84668b25773f8bb8f8f2f",
+    "revision": 11,
+    "state": "COMPLETED",
+    "spec": {
+      "csv_text": "compound_id,smiles\naspirin,CC(=O)Oc1ccccc1C(=O)O\ncaffeine,Cn1c(=O)c2c(ncn2C)n(C)c1=O\nethanol,CCO\nbenzene,c1ccccc1\nbenzoic_acid,O=C(O)c1ccccc1\ninvalid,bad!\nethanol,CCO\n",
+      "goal": "Select compounds with LogP at most zero. Keep other limits at the supplied defaults.",
+      "parameters": {
+        "molecular_weight_max": 500.0,
+        "logp_max": 5.0,
+        "tpsa_max": 140.0
+      },
+      "mode": "agent",
+      "locale": "en"
+    },
+    "created_utc": "2026-11-13T14:41:26.895933+00:00",
+    "updated_utc": "2026-11-13T14:41:34.194784+00:00",
+    "attempt": 1,
+    "provider_calls": [
+      {
+        "call_id": "product-d62d110cc7f84668b25773f8bb8f8f2f-1-plan",
+        "stage": "plan",
+        "status": "PASS_REAL_RESPONSE",
+        "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+        "tokens": 49,
+        "wall_seconds": 1.6618423461914062,
+        "paid_cost_usd": 0
+      },
+      {
+        "call_id": "product-d62d110cc7f84668b25773f8bb8f8f2f-1-export",
+        "stage": "export",
+        "status": "PASS_REAL_RESPONSE",
+        "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+        "tokens": 7,
+        "wall_seconds": 0.9955987930297852,
+        "paid_cost_usd": 0
+      }
+    ],
+    "parameters": {
+      "molecular_weight_max": 500.0,
+      "logp_max": 0.0,
+      "tpsa_max": 140.0
+    },
+    "result": {
+      "counts": {
+        "input_rows": 7,
+        "valid": 5,
+        "rejected": 2,
+        "selected": 2
+      },
+      "evidence": {
+        "ready": true,
+        "requirements": {
+          "row-accounting": {
+            "state": "satisfied",
+            "detail": "Public exported-file check passed",
+            "evidence_digest": "92e4a48e0221caff3374be37489b3da23671495f5b83ae9a647ac5c9b3efdb7d"
+          },
+          "selection": {
+            "state": "satisfied",
+            "detail": "Public exported-file check passed",
+            "evidence_digest": "8415916464aae9a306eeb37ae356cf2e9d71216d6fc4f40b5a3c2614686520a6"
+          },
+          "units": {
+            "state": "satisfied",
+            "detail": "Public exported-file check passed",
+            "evidence_digest": "a29ca7591816fd0731e9a9cbf99e03e616aafbc40b989e6396596effc3c9e6d6"
+          }
+        },
+        "scope": "Public validators only; not native scientific truth or clinical validation"
+      },
+      "manifest_sha256": "6c39f5da99801b70335688f3971e51580f4792c2cf5c2252215961ea925b9381",
+      "bundle_sha256": "c00c9f7e163b3b224e5437e2ae5369b2276de7e17f867dc57af118eb5246893e",
+      "tool_cpu_seconds": 0.203125,
+      "tool_wall_seconds": 0.45300000000861473,
+      "new_model_calls": 2
+    },
+    "error": null,
+    "process": null,
+    "data": {
+      "schema": "curaloop.local-agent.compound-result.v1",
+      "rdkit_version": "2026.09.1",
+      "parameters": {
+        "molecular_weight_max": 500.0,
+        "logp_max": 0.0,
+        "tpsa_max": 140.0
+      },
+      "compounds": [
+        {
+          "row": 2,
+          "compound_id": "aspirin",
+          "smiles": "CC(=O)Oc1ccccc1C(=O)O",
+          "canonical_smiles": "CC(=O)Oc1ccccc1C(=O)O",
+          "molecular_weight": 180.15899999999996,
+          "logp": 1.3101,
+          "tpsa": 63.60000000000001,
+          "hbd": 1,
+          "hba": 3,
+          "selected": false,
+          "filter_reasons": [
+            "LOGP_LIMIT"
+          ]
+        },
+        {
+          "row": 3,
+          "compound_id": "caffeine",
+          "smiles": "Cn1c(=O)c2c(ncn2C)n(C)c1=O",
+          "canonical_smiles": "Cn1c(=O)c2c(ncn2C)n(C)c1=O",
+          "molecular_weight": 194.194,
+          "logp": -1.0293,
+          "tpsa": 61.82,
+          "hbd": 0,
+          "hba": 3,
+          "selected": true,
+          "filter_reasons": []
+        },
+        {
+          "row": 4,
+          "compound_id": "ethanol",
+          "smiles": "CCO",
+          "canonical_smiles": "CCO",
+          "molecular_weight": 46.069,
+          "logp": -0.0014000000000000123,
+          "tpsa": 20.23,
+          "hbd": 1,
+          "hba": 1,
+          "selected": true,
+          "filter_reasons": []
+        },
+        {
+          "row": 5,
+          "compound_id": "benzene",
+          "smiles": "c1ccccc1",
+          "canonical_smiles": "c1ccccc1",
+          "molecular_weight": 78.11399999999999,
+          "logp": 1.6866,
+          "tpsa": 0.0,
+          "hbd": 0,
+          "hba": 0,
+          "selected": false,
+          "filter_reasons": [
+            "LOGP_LIMIT"
+          ]
+        },
+        {
+          "row": 6,
+          "compound_id": "benzoic_acid",
+          "smiles": "O=C(O)c1ccccc1",
+          "canonical_smiles": "O=C(O)c1ccccc1",
+          "molecular_weight": 122.12299999999996,
+          "logp": 1.3848,
+          "tpsa": 37.3,
+          "hbd": 1,
+          "hba": 1,
+          "selected": false,
+          "filter_reasons": [
+            "LOGP_LIMIT"
+          ]
+        }
+      ],
+      "rejected": [
+        {
+          "row": 8,
+          "compound_id": "ethanol",
+          "smiles": "CCO",
+          "reason": "DUPLICATE_COMPOUND_ID"
+        },
+        {
+          "row": 7,
+          "compound_id": "invalid",
+          "smiles": "bad!",
+          "reason": "INVALID_EMPTY_OR_TOO_LARGE_MOLECULE"
+        }
+      ],
+      "counts": {
+        "input_rows": 7,
+        "valid": 5,
+        "rejected": 2,
+        "selected": 2
+      },
+      "units": {
+        "molecular_weight": "g/mol",
+        "tpsa": "angstrom^2",
+        "logp": "dimensionless"
+      },
+      "limitations": [
+        "Physicochemical filtering only",
+        "No assay or efficacy prediction",
+        "Author-selected local workflow, not an external benchmark result"
+      ],
+      "created_utc": "2026-11-13T14:41:30.891347+00:00",
+      "tools": {
+        "python": "3.12.10",
+        "rdkit": "2026.09.1",
+        "chemistry_source_sha256": "e72857135ab3796b2ff2e8294edaaba142414f6c9b34977ce14f9876f2e39c8f",
+        "workflow_source_sha256": "ef695fe686103fb0749659367a8360a789b3823e62fc81d2d136a84c946c568b"
+      }
+    },
+    "events": [
+      {
+        "revision": 0,
+        "state": "QUEUED",
+        "utc": "2026-11-13T14:41:26.895933+00:00"
+      },
+      {
+        "revision": 1,
+        "utc": "2026-11-13T14:41:26.927919+00:00",
+        "detail": "Validate CSV and workflow scope",
+        "changes": {
+          "state": "VALIDATING",
+          "attempt": 1,
+          "error": null
+        }
+      },
+      {
+        "revision": 2,
+        "utc": "2026-11-13T14:41:26.940288+00:00",
+        "detail": "Request a typed plan from the authorized local model",
+        "changes": {
+          "state": "PLANNING"
+        }
+      },
+      {
+        "revision": 3,
+        "utc": "2026-11-13T14:41:26.948908+00:00",
+        "detail": "Provider attempt recorded before execution",
+        "changes": {
+          "provider_calls": [
+            {
+              "call_id": "product-d62d110cc7f84668b25773f8bb8f8f2f-1-plan",
+              "stage": "plan",
+              "status": "ATTEMPT_STARTED"
+            }
+          ]
+        }
+      },
+      {
+        "revision": 4,
+        "utc": "2026-11-13T14:41:30.417612+00:00",
+        "detail": "Real provider response retained; no replacement response",
+        "changes": {
+          "provider_calls": [
+            {
+              "call_id": "product-d62d110cc7f84668b25773f8bb8f8f2f-1-plan",
+              "stage": "plan",
+              "status": "PASS_REAL_RESPONSE",
+              "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+              "tokens": 49,
+              "wall_seconds": 1.6618423461914062,
+              "paid_cost_usd": 0
+            }
+          ]
+        }
+      },
+      {
+        "revision": 5,
+        "utc": "2026-11-13T14:41:30.427117+00:00",
+        "detail": "Typed model plan accepted for actual computation",
+        "changes": {
+          "parameters": {
+            "molecular_weight_max": 500.0,
+            "logp_max": 0.0,
+            "tpsa_max": 140.0
+          }
+        }
+      },
+      {
+        "revision": 6,
+        "utc": "2026-11-13T14:41:30.443173+00:00",
+        "detail": "Actual fixed Python/RDKit process started",
+        "changes": {
+          "state": "COMPUTING",
+          "process": {
+            "pid": 13840,
+            "started_utc": "2026-11-13T14:41:30.443173+00:00",
+            "historical_after_restart": true
+          }
+        }
+      },
+      {
+        "revision": 7,
+        "utc": "2026-11-13T14:41:31.164420+00:00",
+        "detail": "Validate exported artifacts against current evidence",
+        "changes": {
+          "state": "VERIFYING"
+        }
+      },
+      {
+        "revision": 8,
+        "utc": "2026-11-13T14:41:31.182089+00:00",
+        "detail": "Request a local export action using actual tool observations",
+        "changes": {
+          "state": "REPORTING"
+        }
+      },
+      {
+        "revision": 9,
+        "utc": "2026-11-13T14:41:31.192060+00:00",
+        "detail": "Provider attempt recorded before execution",
+        "changes": {
+          "provider_calls": [
+            {
+              "call_id": "product-d62d110cc7f84668b25773f8bb8f8f2f-1-plan",
+              "stage": "plan",
+              "status": "PASS_REAL_RESPONSE",
+              "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+              "tokens": 49,
+              "wall_seconds": 1.6618423461914062,
+              "paid_cost_usd": 0
+            },
+            {
+              "call_id": "product-d62d110cc7f84668b25773f8bb8f8f2f-1-export",
+              "stage": "export",
+              "status": "ATTEMPT_STARTED"
+            }
+          ]
+        }
+      },
+      {
+        "revision": 10,
+        "utc": "2026-11-13T14:41:34.190783+00:00",
+        "detail": "Real provider response retained; no replacement response",
+        "changes": {
+          "provider_calls": [
+            {
+              "call_id": "product-d62d110cc7f84668b25773f8bb8f8f2f-1-plan",
+              "stage": "plan",
+              "status": "PASS_REAL_RESPONSE",
+              "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+              "tokens": 49,
+              "wall_seconds": 1.6618423461914062,
+              "paid_cost_usd": 0
+            },
+            {
+              "call_id": "product-d62d110cc7f84668b25773f8bb8f8f2f-1-export",
+              "stage": "export",
+              "status": "PASS_REAL_RESPONSE",
+              "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+              "tokens": 7,
+              "wall_seconds": 0.9955987930297852,
+              "paid_cost_usd": 0
+            }
+          ]
+        }
+      },
+      {
+        "revision": 11,
+        "utc": "2026-11-13T14:41:34.194784+00:00",
+        "detail": "Actual local workflow complete; artifacts ready to collect",
+        "changes": {
+          "state": "COMPLETED",
+          "result": {
+            "counts": {
+              "input_rows": 7,
+              "valid": 5,
+              "rejected": 2,
+              "selected": 2
+            },
+            "evidence": {
+              "ready": true,
+              "requirements": {
+                "row-accounting": {
+                  "state": "satisfied",
+                  "detail": "Public exported-file check passed",
+                  "evidence_digest": "92e4a48e0221caff3374be37489b3da23671495f5b83ae9a647ac5c9b3efdb7d"
+                },
+                "selection": {
+                  "state": "satisfied",
+                  "detail": "Public exported-file check passed",
+                  "evidence_digest": "8415916464aae9a306eeb37ae356cf2e9d71216d6fc4f40b5a3c2614686520a6"
+                },
+                "units": {
+                  "state": "satisfied",
+                  "detail": "Public exported-file check passed",
+                  "evidence_digest": "a29ca7591816fd0731e9a9cbf99e03e616aafbc40b989e6396596effc3c9e6d6"
+                }
+              },
+              "scope": "Public validators only; not native scientific truth or clinical validation"
+            },
+            "manifest_sha256": "6c39f5da99801b70335688f3971e51580f4792c2cf5c2252215961ea925b9381",
+            "bundle_sha256": "c00c9f7e163b3b224e5437e2ae5369b2276de7e17f867dc57af118eb5246893e",
+            "tool_cpu_seconds": 0.203125,
+            "tool_wall_seconds": 0.45300000000861473,
+            "new_model_calls": 2
+          },
+          "process": null
+        }
+      }
+    ]
+  }
+}

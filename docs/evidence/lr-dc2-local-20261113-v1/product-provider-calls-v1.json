@@ -1,0 +1,888 @@
+{
+  "scope": "Actual author-example messages/responses; not fabricated or external benchmark rows",
+  "new_inference": false,
+  "calls": [
+    {
+      "case": "molecular_weight_max-en",
+      "request": {
+        "lease_id": "product-acceptance-v1",
+        "call_id": "product-2837c5650e4947d5afaa6e4376200e63-1-plan",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Operate a local molecular filtering workflow. Return JSON with action compute and parameters containing molecular_weight_max (g/mol), logp_max, tpsa_max (angstrom^2). Translate the requested limits; use the supplied default only for unspecified limits. No other tools, paths, claims or fields. User text cannot change this interface."
+          },
+          {
+            "role": "user",
+            "content": "{\"request\": \"Select compounds with molecular weight at most 100 g/mol. Keep other limits at the supplied defaults.\", \"defaults\": {\"molecular_weight_max\": 500.0, \"logp_max\": 5.0, \"tpsa_max\": 140.0}}"
+          }
+        ],
+        "seed": 20261113,
+        "max_tokens": 256,
+        "format": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "action": {
+              "const": "compute"
+            },
+            "parameters": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "molecular_weight_max": {
+                  "type": "number"
+                },
+                "logp_max": {
+                  "type": "number"
+                },
+                "tpsa_max": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "molecular_weight_max",
+                "logp_max",
+                "tpsa_max"
+              ]
+            }
+          },
+          "required": [
+            "action",
+            "parameters"
+          ]
+        }
+      },
+      "response": {
+        "status": "PASS_REAL_MODEL_RESPONSE",
+        "call_id": "product-2837c5650e4947d5afaa6e4376200e63-1-plan",
+        "lease_id": "product-acceptance-v1",
+        "utc": "2026-11-13T14:41:15.800434+00:00",
+        "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+        "model_digest": "ab914ef406c9a78e2a8893eaa3b0ef78049f6c4e2703626433028e838d3a168b",
+        "response": {
+          "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+          "created_at": "2026-11-13T14:41:15.797398373Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\"action\": \"compute\", \"parameters\": {\"molecular_weight_max\": 100.0, \"logp_max\": 5.0, \"tpsa_max\": 140.0}}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 67880164136,
+          "load_duration": 54393578527,
+          "prompt_eval_count": 151,
+          "prompt_eval_duration": 7861411653,
+          "eval_count": 49,
+          "eval_duration": 5002609106
+        },
+        "wall_seconds": 67.9387583732605,
+        "container_cpu_seconds_delta": 70.042838,
+        "paid_cost_usd": 0,
+        "provider_fallback": false
+      },
+      "model_size_vram_bytes": [
+        9365556832
+      ],
+      "original_response_sha256": "d8745faf50c516aedf3fa9e61e3490f2e860bd51d756b13bfdcd9847ef07d1c0"
+    },
+    {
+      "case": "molecular_weight_max-en",
+      "request": {
+        "lease_id": "product-acceptance-v1",
+        "call_id": "product-2837c5650e4947d5afaa6e4376200e63-1-export",
+        "messages": [
+          {
+            "role": "system",
+            "content": "The fixed local RDKit tool completed. Return exactly JSON with action export and no other fields. This is a local physicochemical report, not an assay, efficacy, clinical or economic conclusion."
+          },
+          {
+            "role": "user",
+            "content": "{\"actual_counts\": {\"input_rows\": 7, \"valid\": 5, \"rejected\": 2, \"selected\": 2}, \"parameters\": {\"molecular_weight_max\": 100.0, \"logp_max\": 5.0, \"tpsa_max\": 140.0}, \"current_evidence\": {\"ready\": true, \"requirements\": {\"row-accounting\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"250603b91e2b4830a19309f5f55d6ccfccd5b9329d5c968a09768896d3cc0676\"}, \"selection\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"06eaa36907b4944c99a0772a4600a9e232c2edd75bd2900ee1673caadf55eb2e\"}, \"units\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"77c5d415373700067a109a4aeb027fa6735c389e609e1283fff9b0503e032ec5\"}}, \"scope\": \"Public validators only; not native scientific truth or clinical validation\"}}"
+          }
+        ],
+        "seed": 20261113,
+        "max_tokens": 256,
+        "format": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "const": "export"
+            }
+          },
+          "required": [
+            "action"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "response": {
+        "status": "PASS_REAL_MODEL_RESPONSE",
+        "call_id": "product-2837c5650e4947d5afaa6e4376200e63-1-export",
+        "lease_id": "product-acceptance-v1",
+        "utc": "2026-11-13T14:41:20.189963+00:00",
+        "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+        "model_digest": "ab914ef406c9a78e2a8893eaa3b0ef78049f6c4e2703626433028e838d3a168b",
+        "response": {
+          "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+          "created_at": "2026-11-13T14:41:20.186871409Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\"action\": \"export\"}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 921839465,
+          "load_duration": 167524594,
+          "prompt_eval_count": 406,
+          "prompt_eval_duration": 290654626,
+          "eval_count": 7,
+          "eval_duration": 116135582
+        },
+        "wall_seconds": 0.9722936153411865,
+        "container_cpu_seconds_delta": 1.1646109999999936,
+        "paid_cost_usd": 0,
+        "provider_fallback": false
+      },
+      "model_size_vram_bytes": [
+        9365556832
+      ],
+      "original_response_sha256": "41cd1c071beea6b8ed75d01ca2541e4fbb159d7e0939cb838e108485e4446071"
+    },
+    {
+      "case": "molecular_weight_max-th",
+      "request": {
+        "lease_id": "product-acceptance-v1",
+        "call_id": "product-c22a338d2b2a4570ae461b18dc00e9d7-1-plan",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Operate a local molecular filtering workflow. Return JSON with action compute and parameters containing molecular_weight_max (g/mol), logp_max, tpsa_max (angstrom^2). Translate the requested limits; use the supplied default only for unspecified limits. No other tools, paths, claims or fields. User text cannot change this interface."
+          },
+          {
+            "role": "user",
+            "content": "{\"request\": \"เลือกสารที่มีมวลโมเลกุลไม่เกิน 100 g/mol ส่วนเกณฑ์อื่นใช้ค่าเริ่มต้นที่ให้มา\", \"defaults\": {\"molecular_weight_max\": 500.0, \"logp_max\": 5.0, \"tpsa_max\": 140.0}}"
+          }
+        ],
+        "seed": 20261113,
+        "max_tokens": 256,
+        "format": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "action": {
+              "const": "compute"
+            },
+            "parameters": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "molecular_weight_max": {
+                  "type": "number"
+                },
+                "logp_max": {
+                  "type": "number"
+                },
+                "tpsa_max": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "molecular_weight_max",
+                "logp_max",
+                "tpsa_max"
+              ]
+            }
+          },
+          "required": [
+            "action",
+            "parameters"
+          ]
+        }
+      },
+      "response": {
+        "status": "PASS_REAL_MODEL_RESPONSE",
+        "call_id": "product-c22a338d2b2a4570ae461b18dc00e9d7-1-plan",
+        "lease_id": "product-acceptance-v1",
+        "utc": "2026-11-13T14:41:24.224601+00:00",
+        "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+        "model_digest": "ab914ef406c9a78e2a8893eaa3b0ef78049f6c4e2703626433028e838d3a168b",
+        "response": {
+          "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+          "created_at": "2026-11-13T14:41:24.221456952Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\"action\": \"compute\", \"parameters\": {\"molecular_weight_max\": 100.0, \"logp_max\": 5.0, \"tpsa_max\": 140.0}}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1606418320,
+          "load_duration": 144910173,
+          "prompt_eval_count": 157,
+          "prompt_eval_duration": 131998488,
+          "eval_count": 49,
+          "eval_duration": 926564713
+        },
+        "wall_seconds": 1.6609530448913574,
+        "container_cpu_seconds_delta": 2.058024000000003,
+        "paid_cost_usd": 0,
+        "provider_fallback": false
+      },
+      "model_size_vram_bytes": [
+        9365556832
+      ],
+      "original_response_sha256": "333dc13675f7d2804ba93f4bed398e157b06637a7c94bcf1645458d27c253731"
+    },
+    {
+      "case": "molecular_weight_max-th",
+      "request": {
+        "lease_id": "product-acceptance-v1",
+        "call_id": "product-c22a338d2b2a4570ae461b18dc00e9d7-1-export",
+        "messages": [
+          {
+            "role": "system",
+            "content": "The fixed local RDKit tool completed. Return exactly JSON with action export and no other fields. This is a local physicochemical report, not an assay, efficacy, clinical or economic conclusion."
+          },
+          {
+            "role": "user",
+            "content": "{\"actual_counts\": {\"input_rows\": 7, \"valid\": 5, \"rejected\": 2, \"selected\": 2}, \"parameters\": {\"molecular_weight_max\": 100.0, \"logp_max\": 5.0, \"tpsa_max\": 140.0}, \"current_evidence\": {\"ready\": true, \"requirements\": {\"row-accounting\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"e1e107b85966600bb5c0f75394663152d3c38ccaf82039c0c08d89d96ea9caaa\"}, \"selection\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"7664ca6fcbbf3fb933db60bdcb0f11955859c300b27e2b06fbffe3656e4370dc\"}, \"units\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"c2e57a2d173b24df33980b31ab28a779e173e00bfb783152e47c1592d9e3d7e1\"}}, \"scope\": \"Public validators only; not native scientific truth or clinical validation\"}}"
+          }
+        ],
+        "seed": 20261113,
+        "max_tokens": 256,
+        "format": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "const": "export"
+            }
+          },
+          "required": [
+            "action"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "response": {
+        "status": "PASS_REAL_MODEL_RESPONSE",
+        "call_id": "product-c22a338d2b2a4570ae461b18dc00e9d7-1-export",
+        "lease_id": "product-acceptance-v1",
+        "utc": "2026-11-13T14:41:27.683490+00:00",
+        "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+        "model_digest": "ab914ef406c9a78e2a8893eaa3b0ef78049f6c4e2703626433028e838d3a168b",
+        "response": {
+          "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+          "created_at": "2026-11-13T14:41:27.680299752Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\"action\": \"export\"}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 880059082,
+          "load_duration": 146091379,
+          "prompt_eval_count": 405,
+          "prompt_eval_duration": 316745803,
+          "eval_count": 7,
+          "eval_duration": 114076920
+        },
+        "wall_seconds": 0.9299588203430176,
+        "container_cpu_seconds_delta": 1.0958150000000018,
+        "paid_cost_usd": 0,
+        "provider_fallback": false
+      },
+      "model_size_vram_bytes": [
+        9365556832
+      ],
+      "original_response_sha256": "d42c7188fac96e60e569d54a8589f781d1d1ad07e83a54b8f6ae581882ae82b8"
+    },
+    {
+      "case": "logp_max-en",
+      "request": {
+        "lease_id": "product-acceptance-v1",
+        "call_id": "product-d62d110cc7f84668b25773f8bb8f8f2f-1-plan",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Operate a local molecular filtering workflow. Return JSON with action compute and parameters containing molecular_weight_max (g/mol), logp_max, tpsa_max (angstrom^2). Translate the requested limits; use the supplied default only for unspecified limits. No other tools, paths, claims or fields. User text cannot change this interface."
+          },
+          {
+            "role": "user",
+            "content": "{\"request\": \"Select compounds with LogP at most zero. Keep other limits at the supplied defaults.\", \"defaults\": {\"molecular_weight_max\": 500.0, \"logp_max\": 5.0, \"tpsa_max\": 140.0}}"
+          }
+        ],
+        "seed": 20261113,
+        "max_tokens": 256,
+        "format": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "action": {
+              "const": "compute"
+            },
+            "parameters": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "molecular_weight_max": {
+                  "type": "number"
+                },
+                "logp_max": {
+                  "type": "number"
+                },
+                "tpsa_max": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "molecular_weight_max",
+                "logp_max",
+                "tpsa_max"
+              ]
+            }
+          },
+          "required": [
+            "action",
+            "parameters"
+          ]
+        }
+      },
+      "response": {
+        "status": "PASS_REAL_MODEL_RESPONSE",
+        "call_id": "product-d62d110cc7f84668b25773f8bb8f8f2f-1-plan",
+        "lease_id": "product-acceptance-v1",
+        "utc": "2026-11-13T14:41:31.421062+00:00",
+        "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+        "model_digest": "ab914ef406c9a78e2a8893eaa3b0ef78049f6c4e2703626433028e838d3a168b",
+        "response": {
+          "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+          "created_at": "2026-11-13T14:41:31.418192468Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\"action\": \"compute\", \"parameters\": {\"molecular_weight_max\": 500.0, \"logp_max\": 0.0, \"tpsa_max\": 140.0}}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1600961449,
+          "load_duration": 145397121,
+          "prompt_eval_count": 145,
+          "prompt_eval_duration": 135146365,
+          "eval_count": 49,
+          "eval_duration": 943364174
+        },
+        "wall_seconds": 1.6618423461914062,
+        "container_cpu_seconds_delta": 2.037897000000001,
+        "paid_cost_usd": 0,
+        "provider_fallback": false
+      },
+      "model_size_vram_bytes": [
+        9365556832
+      ],
+      "original_response_sha256": "15ef010ea8fc088f6bc13f492ae62175944d085eb192b3e3a5efd00f7b72ab80"
+    },
+    {
+      "case": "logp_max-en",
+      "request": {
+        "lease_id": "product-acceptance-v1",
+        "call_id": "product-d62d110cc7f84668b25773f8bb8f8f2f-1-export",
+        "messages": [
+          {
+            "role": "system",
+            "content": "The fixed local RDKit tool completed. Return exactly JSON with action export and no other fields. This is a local physicochemical report, not an assay, efficacy, clinical or economic conclusion."
+          },
+          {
+            "role": "user",
+            "content": "{\"actual_counts\": {\"input_rows\": 7, \"valid\": 5, \"rejected\": 2, \"selected\": 2}, \"parameters\": {\"molecular_weight_max\": 500.0, \"logp_max\": 0.0, \"tpsa_max\": 140.0}, \"current_evidence\": {\"ready\": true, \"requirements\": {\"row-accounting\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"92e4a48e0221caff3374be37489b3da23671495f5b83ae9a647ac5c9b3efdb7d\"}, \"selection\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"8415916464aae9a306eeb37ae356cf2e9d71216d6fc4f40b5a3c2614686520a6\"}, \"units\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"a29ca7591816fd0731e9a9cbf99e03e616aafbc40b989e6396596effc3c9e6d6\"}}, \"scope\": \"Public validators only; not native scientific truth or clinical validation\"}}"
+          }
+        ],
+        "seed": 20261113,
+        "max_tokens": 256,
+        "format": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "const": "export"
+            }
+          },
+          "required": [
+            "action"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "response": {
+        "status": "PASS_REAL_MODEL_RESPONSE",
+        "call_id": "product-d62d110cc7f84668b25773f8bb8f8f2f-1-export",
+        "lease_id": "product-acceptance-v1",
+        "utc": "2026-11-13T14:41:35.174226+00:00",
+        "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+        "model_digest": "ab914ef406c9a78e2a8893eaa3b0ef78049f6c4e2703626433028e838d3a168b",
+        "response": {
+          "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+          "created_at": "2026-11-13T14:41:35.171576648Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\"action\": \"export\"}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 937229901,
+          "load_duration": 156320443,
+          "prompt_eval_count": 404,
+          "prompt_eval_duration": 313792334,
+          "eval_count": 7,
+          "eval_duration": 114365754
+        },
+        "wall_seconds": 0.9955987930297852,
+        "container_cpu_seconds_delta": 1.166556,
+        "paid_cost_usd": 0,
+        "provider_fallback": false
+      },
+      "model_size_vram_bytes": [
+        9365556832
+      ],
+      "original_response_sha256": "82b2dbd2f2aa66cd16e98ee79dcf47b9f43844daa6361f66c920c902becc922c"
+    },
+    {
+      "case": "logp_max-th",
+      "request": {
+        "lease_id": "product-acceptance-v1",
+        "call_id": "product-cd1ef4c2a63d4e53b451a6ec6b58eac8-1-plan",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Operate a local molecular filtering workflow. Return JSON with action compute and parameters containing molecular_weight_max (g/mol), logp_max, tpsa_max (angstrom^2). Translate the requested limits; use the supplied default only for unspecified limits. No other tools, paths, claims or fields. User text cannot change this interface."
+          },
+          {
+            "role": "user",
+            "content": "{\"request\": \"เลือกสารที่มี LogP ไม่เกินศูนย์ ส่วนเกณฑ์อื่นใช้ค่าเริ่มต้นที่ให้มา\", \"defaults\": {\"molecular_weight_max\": 500.0, \"logp_max\": 5.0, \"tpsa_max\": 140.0}}"
+          }
+        ],
+        "seed": 20261113,
+        "max_tokens": 256,
+        "format": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "action": {
+              "const": "compute"
+            },
+            "parameters": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "molecular_weight_max": {
+                  "type": "number"
+                },
+                "logp_max": {
+                  "type": "number"
+                },
+                "tpsa_max": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "molecular_weight_max",
+                "logp_max",
+                "tpsa_max"
+              ]
+            }
+          },
+          "required": [
+            "action",
+            "parameters"
+          ]
+        }
+      },
+      "response": {
+        "status": "PASS_REAL_MODEL_RESPONSE",
+        "call_id": "product-cd1ef4c2a63d4e53b451a6ec6b58eac8-1-plan",
+        "lease_id": "product-acceptance-v1",
+        "utc": "2026-11-13T14:41:38.796268+00:00",
+        "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+        "model_digest": "ab914ef406c9a78e2a8893eaa3b0ef78049f6c4e2703626433028e838d3a168b",
+        "response": {
+          "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+          "created_at": "2026-11-13T14:41:38.793018889Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\"action\": \"compute\", \"parameters\": {\"molecular_weight_max\": 500.0, \"logp_max\": 0.0, \"tpsa_max\": 140.0}}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1612715489,
+          "load_duration": 167256969,
+          "prompt_eval_count": 147,
+          "prompt_eval_duration": 131523510,
+          "eval_count": 49,
+          "eval_duration": 925859563
+        },
+        "wall_seconds": 1.6733808517456055,
+        "container_cpu_seconds_delta": 2.012563,
+        "paid_cost_usd": 0,
+        "provider_fallback": false
+      },
+      "model_size_vram_bytes": [
+        9365556832
+      ],
+      "original_response_sha256": "87782740a725ff7197c29f2521fe368c1cdb319cd0604d54ab500b5d8ae0aa75"
+    },
+    {
+      "case": "logp_max-th",
+      "request": {
+        "lease_id": "product-acceptance-v1",
+        "call_id": "product-cd1ef4c2a63d4e53b451a6ec6b58eac8-1-export",
+        "messages": [
+          {
+            "role": "system",
+            "content": "The fixed local RDKit tool completed. Return exactly JSON with action export and no other fields. This is a local physicochemical report, not an assay, efficacy, clinical or economic conclusion."
+          },
+          {
+            "role": "user",
+            "content": "{\"actual_counts\": {\"input_rows\": 7, \"valid\": 5, \"rejected\": 2, \"selected\": 2}, \"parameters\": {\"molecular_weight_max\": 500.0, \"logp_max\": 0.0, \"tpsa_max\": 140.0}, \"current_evidence\": {\"ready\": true, \"requirements\": {\"row-accounting\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"e9596e77bca5a8d5ef371d7edf070e7203288dc71930411c147bce6a3c4fc774\"}, \"selection\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"3e15bd0f7e658c645055098aba5853bdcd4d81695a7089cfa7e2914891670f51\"}, \"units\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"ebfd508a4965e3e30c2c49ea76dc75263556b089069832464a75ce1240bb2c17\"}}, \"scope\": \"Public validators only; not native scientific truth or clinical validation\"}}"
+          }
+        ],
+        "seed": 20261113,
+        "max_tokens": 256,
+        "format": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "const": "export"
+            }
+          },
+          "required": [
+            "action"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "response": {
+        "status": "PASS_REAL_MODEL_RESPONSE",
+        "call_id": "product-cd1ef4c2a63d4e53b451a6ec6b58eac8-1-export",
+        "lease_id": "product-acceptance-v1",
+        "utc": "2026-11-13T14:41:43.082999+00:00",
+        "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+        "model_digest": "ab914ef406c9a78e2a8893eaa3b0ef78049f6c4e2703626433028e838d3a168b",
+        "response": {
+          "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+          "created_at": "2026-11-13T14:41:43.080303557Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\"action\": \"export\"}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 891366397,
+          "load_duration": 146122208,
+          "prompt_eval_count": 406,
+          "prompt_eval_duration": 295920846,
+          "eval_count": 7,
+          "eval_duration": 114547117
+        },
+        "wall_seconds": 0.9405794143676758,
+        "container_cpu_seconds_delta": 1.1034250000000014,
+        "paid_cost_usd": 0,
+        "provider_fallback": false
+      },
+      "model_size_vram_bytes": [
+        9365556832
+      ],
+      "original_response_sha256": "fed5f755d3002d08c36125d9e6f7356bc13475ff5bae1cc0d9fcf0eefe91e0bb"
+    },
+    {
+      "case": "tpsa_max-en",
+      "request": {
+        "lease_id": "product-acceptance-v1",
+        "call_id": "product-fe267293f94140f384dc8f92b3001375-1-plan",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Operate a local molecular filtering workflow. Return JSON with action compute and parameters containing molecular_weight_max (g/mol), logp_max, tpsa_max (angstrom^2). Translate the requested limits; use the supplied default only for unspecified limits. No other tools, paths, claims or fields. User text cannot change this interface."
+          },
+          {
+            "role": "user",
+            "content": "{\"request\": \"Select compounds with TPSA at most zero square angstroms. Keep other limits at the supplied defaults.\", \"defaults\": {\"molecular_weight_max\": 500.0, \"logp_max\": 5.0, \"tpsa_max\": 140.0}}"
+          }
+        ],
+        "seed": 20261113,
+        "max_tokens": 256,
+        "format": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "action": {
+              "const": "compute"
+            },
+            "parameters": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "molecular_weight_max": {
+                  "type": "number"
+                },
+                "logp_max": {
+                  "type": "number"
+                },
+                "tpsa_max": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "molecular_weight_max",
+                "logp_max",
+                "tpsa_max"
+              ]
+            }
+          },
+          "required": [
+            "action",
+            "parameters"
+          ]
+        }
+      },
+      "response": {
+        "status": "PASS_REAL_MODEL_RESPONSE",
+        "call_id": "product-fe267293f94140f384dc8f92b3001375-1-plan",
+        "lease_id": "product-acceptance-v1",
+        "utc": "2026-11-13T14:41:47.119840+00:00",
+        "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+        "model_digest": "ab914ef406c9a78e2a8893eaa3b0ef78049f6c4e2703626433028e838d3a168b",
+        "response": {
+          "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+          "created_at": "2026-11-13T14:41:47.115543113Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\"action\": \"compute\", \"parameters\": {\"molecular_weight_max\": 500.0, \"logp_max\": 5.0, \"tpsa_max\": 0.0}}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1596837562,
+          "load_duration": 149421135,
+          "prompt_eval_count": 149,
+          "prompt_eval_duration": 131118810,
+          "eval_count": 47,
+          "eval_duration": 896556180
+        },
+        "wall_seconds": 1.6480107307434082,
+        "container_cpu_seconds_delta": 1.978037999999998,
+        "paid_cost_usd": 0,
+        "provider_fallback": false
+      },
+      "model_size_vram_bytes": [
+        9365556832
+      ],
+      "original_response_sha256": "6f3a291890c8fb2ffd9e1b146696d2667ee2e9e6cb2c0f2a8e2467088fdfa268"
+    },
+    {
+      "case": "tpsa_max-en",
+      "request": {
+        "lease_id": "product-acceptance-v1",
+        "call_id": "product-fe267293f94140f384dc8f92b3001375-1-export",
+        "messages": [
+          {
+            "role": "system",
+            "content": "The fixed local RDKit tool completed. Return exactly JSON with action export and no other fields. This is a local physicochemical report, not an assay, efficacy, clinical or economic conclusion."
+          },
+          {
+            "role": "user",
+            "content": "{\"actual_counts\": {\"input_rows\": 7, \"valid\": 5, \"rejected\": 2, \"selected\": 1}, \"parameters\": {\"molecular_weight_max\": 500.0, \"logp_max\": 5.0, \"tpsa_max\": 0.0}, \"current_evidence\": {\"ready\": true, \"requirements\": {\"row-accounting\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"217c9c186c80b8d2e5cd069132bffa86d346ef60420bfa6d2846f38dee193c08\"}, \"selection\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"da00ee43b2e3c29cf5b233edb65c19bf668f6fa4d1dec851448612c3bd42b039\"}, \"units\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"708870738c9db500d5da0038d2cae495389d0c393cccd397c8c1548a0bf0adff\"}}, \"scope\": \"Public validators only; not native scientific truth or clinical validation\"}}"
+          }
+        ],
+        "seed": 20261113,
+        "max_tokens": 256,
+        "format": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "const": "export"
+            }
+          },
+          "required": [
+            "action"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "response": {
+        "status": "PASS_REAL_MODEL_RESPONSE",
+        "call_id": "product-fe267293f94140f384dc8f92b3001375-1-export",
+        "lease_id": "product-acceptance-v1",
+        "utc": "2026-11-13T14:41:51.173258+00:00",
+        "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+        "model_digest": "ab914ef406c9a78e2a8893eaa3b0ef78049f6c4e2703626433028e838d3a168b",
+        "response": {
+          "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+          "created_at": "2026-11-13T14:41:51.170232926Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\"action\": \"export\"}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 843573529,
+          "load_duration": 143479045,
+          "prompt_eval_count": 399,
+          "prompt_eval_duration": 309742093,
+          "eval_count": 7,
+          "eval_duration": 115863157
+        },
+        "wall_seconds": 0.894136905670166,
+        "container_cpu_seconds_delta": 1.063537999999994,
+        "paid_cost_usd": 0,
+        "provider_fallback": false
+      },
+      "model_size_vram_bytes": [
+        9365556832
+      ],
+      "original_response_sha256": "edd361a2b297097b1bca8cbac7d38574868f2014c5a89a0a9dac4b88391526b4"
+    },
+    {
+      "case": "tpsa_max-th",
+      "request": {
+        "lease_id": "product-acceptance-v1",
+        "call_id": "product-4bed37cfc2b24d509b0f226d739a8b39-1-plan",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Operate a local molecular filtering workflow. Return JSON with action compute and parameters containing molecular_weight_max (g/mol), logp_max, tpsa_max (angstrom^2). Translate the requested limits; use the supplied default only for unspecified limits. No other tools, paths, claims or fields. User text cannot change this interface."
+          },
+          {
+            "role": "user",
+            "content": "{\"request\": \"เลือกสารที่มี TPSA ไม่เกินศูนย์ตารางอังสตรอม ส่วนเกณฑ์อื่นใช้ค่าเริ่มต้นที่ให้มา\", \"defaults\": {\"molecular_weight_max\": 500.0, \"logp_max\": 5.0, \"tpsa_max\": 140.0}}"
+          }
+        ],
+        "seed": 20261113,
+        "max_tokens": 256,
+        "format": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "action": {
+              "const": "compute"
+            },
+            "parameters": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "molecular_weight_max": {
+                  "type": "number"
+                },
+                "logp_max": {
+                  "type": "number"
+                },
+                "tpsa_max": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "molecular_weight_max",
+                "logp_max",
+                "tpsa_max"
+              ]
+            }
+          },
+          "required": [
+            "action",
+            "parameters"
+          ]
+        }
+      },
+      "response": {
+        "status": "PASS_REAL_MODEL_RESPONSE",
+        "call_id": "product-4bed37cfc2b24d509b0f226d739a8b39-1-plan",
+        "lease_id": "product-acceptance-v1",
+        "utc": "2026-11-13T14:41:55.356057+00:00",
+        "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+        "model_digest": "ab914ef406c9a78e2a8893eaa3b0ef78049f6c4e2703626433028e838d3a168b",
+        "response": {
+          "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+          "created_at": "2026-11-13T14:41:55.352982077Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\"action\": \"compute\", \"parameters\": {\"molecular_weight_max\": 500.0, \"logp_max\": 5.0, \"tpsa_max\": 0.0}}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1610471947,
+          "load_duration": 147250883,
+          "prompt_eval_count": 153,
+          "prompt_eval_duration": 132066169,
+          "eval_count": 47,
+          "eval_duration": 900516772
+        },
+        "wall_seconds": 1.6623470783233643,
+        "container_cpu_seconds_delta": 2.0543600000000026,
+        "paid_cost_usd": 0,
+        "provider_fallback": false
+      },
+      "model_size_vram_bytes": [
+        9365556832
+      ],
+      "original_response_sha256": "70049d16c6b282872c94c6467a3934a7b0c14eb77bd81dd081b2d3375b507ca4"
+    },
+    {
+      "case": "tpsa_max-th",
+      "request": {
+        "lease_id": "product-acceptance-v1",
+        "call_id": "product-4bed37cfc2b24d509b0f226d739a8b39-1-export",
+        "messages": [
+          {
+            "role": "system",
+            "content": "The fixed local RDKit tool completed. Return exactly JSON with action export and no other fields. This is a local physicochemical report, not an assay, efficacy, clinical or economic conclusion."
+          },
+          {
+            "role": "user",
+            "content": "{\"actual_counts\": {\"input_rows\": 7, \"valid\": 5, \"rejected\": 2, \"selected\": 1}, \"parameters\": {\"molecular_weight_max\": 500.0, \"logp_max\": 5.0, \"tpsa_max\": 0.0}, \"current_evidence\": {\"ready\": true, \"requirements\": {\"row-accounting\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"a505850383dd0cd81b70e100d2029194f0540fea5a599e29166396f5694096cd\"}, \"selection\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"d20d613bd504bf1a6d7e7e018b83669ea3d803acfc4b3f24b3dc65d53c4235fd\"}, \"units\": {\"state\": \"satisfied\", \"detail\": \"Public exported-file check passed\", \"evidence_digest\": \"833a5f1b7bf637204fad0e0a4afb3f568aaf51b601c9b682294d79fadd52d0e2\"}}, \"scope\": \"Public validators only; not native scientific truth or clinical validation\"}}"
+          }
+        ],
+        "seed": 20261113,
+        "max_tokens": 256,
+        "format": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "const": "export"
+            }
+          },
+          "required": [
+            "action"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "response": {
+        "status": "PASS_REAL_MODEL_RESPONSE",
+        "call_id": "product-4bed37cfc2b24d509b0f226d739a8b39-1-export",
+        "lease_id": "product-acceptance-v1",
+        "utc": "2026-11-13T14:42:00.397596+00:00",
+        "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+        "model_digest": "ab914ef406c9a78e2a8893eaa3b0ef78049f6c4e2703626433028e838d3a168b",
+        "response": {
+          "model": "hf.co/scb10x/typhoon2.1-gemma3-12b-gguf:Q4_K_M",
+          "created_at": "2026-11-13T14:42:00.394211836Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\"action\": \"export\"}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 909553411,
+          "load_duration": 146424873,
+          "prompt_eval_count": 403,
+          "prompt_eval_duration": 291028551,
+          "eval_count": 7,
+          "eval_duration": 115627659
+        },
+        "wall_seconds": 0.9608809947967529,
+        "container_cpu_seconds_delta": 1.1080450000000042,
+        "paid_cost_usd": 0,
+        "provider_fallback": false
+      },
+      "model_size_vram_bytes": [
+        9365556832
+      ],
+      "original_response_sha256": "7d1edbabd84c751225bc08bc752edf010ebb80877b3d40711c09959c36e06980"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "schema": "curaloop.local-workflow.author-acceptance.v1",
+  "scope": "Six author-selected bilingual software cases; NOT an external benchmark, efficacy test or independent validation",
+  "csv_text": "compound_id,smiles\naspirin,CC(=O)Oc1ccccc1C(=O)O\ncaffeine,Cn1c(=O)c2c(ncn2C)n(C)c1=O\nethanol,CCO\nbenzene,c1ccccc1\nbenzoic_acid,O=C(O)c1ccccc1\ninvalid,bad!\nethanol,CCO\n",
+  "defaults": {
+    "molecular_weight_max": 500,
+    "logp_max": 5,
+    "tpsa_max": 140
+  },
+  "expected_counts": {
+    "input_rows": 7,
+    "valid": 5,
+    "rejected": 2
+  },
+  "cases": [
+    {
+      "id": "molecular_weight_max-en",
+      "goal": "Select compounds with molecular weight at most 100 g/mol. Keep other limits at the supplied defaults.",
+      "locale": "en",
+      "expected_parameters": {
+        "molecular_weight_max": 100,
+        "logp_max": 5,
+        "tpsa_max": 140
+      },
+      "expected_selected_ids": [
+        "ethanol",
+        "benzene"
+      ]
+    },
+    {
+      "id": "molecular_weight_max-th",
+      "goal": "เลือกสารที่มีมวลโมเลกุลไม่เกิน 100 g/mol ส่วนเกณฑ์อื่นใช้ค่าเริ่มต้นที่ให้มา",
+      "locale": "th",
+      "expected_parameters": {
+        "molecular_weight_max": 100,
+        "logp_max": 5,
+        "tpsa_max": 140
+      },
+      "expected_selected_ids": [
+        "ethanol",
+        "benzene"
+      ]
+    },
+    {
+      "id": "logp_max-en",
+      "goal": "Select compounds with LogP at most zero. Keep other limits at the supplied defaults.",
+      "locale": "en",
+      "expected_parameters": {
+        "molecular_weight_max": 500,
+        "logp_max": 0,
+        "tpsa_max": 140
+      },
+      "expected_selected_ids": [
+        "caffeine",
+        "ethanol"
+      ]
+    },
+    {
+      "id": "logp_max-th",
+      "goal": "เลือกสารที่มี LogP ไม่เกินศูนย์ ส่วนเกณฑ์อื่นใช้ค่าเริ่มต้นที่ให้มา",
+      "locale": "th",
+      "expected_parameters": {
+        "molecular_weight_max": 500,
+        "logp_max": 0,
+        "tpsa_max": 140
+      },
+      "expected_selected_ids": [
+        "caffeine",
+        "ethanol"
+      ]
+    },
+    {
+      "id": "tpsa_max-en",
+      "goal": "Select compounds with TPSA at most zero square angstroms. Keep other limits at the supplied defaults.",
+      "locale": "en",
+      "expected_parameters": {
+        "molecular_weight_max": 500,
+        "logp_max": 5,
+        "tpsa_max": 0
+      },
+      "expected_selected_ids": [
+        "benzene"
+      ]
+    },
+    {
+      "id": "tpsa_max-th",
+      "goal": "เลือกสารที่มี TPSA ไม่เกินศูนย์ตารางอังสตรอม ส่วนเกณฑ์อื่นใช้ค่าเริ่มต้นที่ให้มา",
+      "locale": "th",
+      "expected_parameters": {
+        "molecular_weight_max": 500,
+        "logp_max": 5,
+        "tpsa_max": 0
+      },
+      "expected_selected_ids": [
+        "benzene"
+      ]
+    }
+  ],
+  "scoring": "One attempt per case. Exact typed parameters, COMPLETED, exact selected ID set, current artifact checks and nonempty genuine GPU provider receipts. Preserve failed cases; no outcome-driven repair/rerun.",
+  "deterministic_checks": "One per unique parameter set; actual RDKit conformance, not research controls",
+  "model_call_cap": 12,
+  "model": "Typhoon 2.1 Gemma3 12B Q4_K_M",
+  "source_sha256": {
+    "src/curaloop_rd/local_agent_v1/chemistry.py": "e72857135ab3796b2ff2e8294edaaba142414f6c9b34977ce14f9876f2e39c8f",
+    "src/curaloop_rd/local_agent_v1/engine.py": "97313b7dbc6f2a65ec7074f3b7efc59d5d9a28c42f64377398a47c6bdfcec660",
+    "src/curaloop_rd/local_agent_v1/evidence.py": "6125b78290e242f93653c3d16adbebfcc04661eddebb11fbb728ca936b2d0327",
+    "src/curaloop_rd/local_agent_v1/provider.py": "25118a56d031cb691e7c961928e083da25132b8a47dee2a4a66d586d5b360b97",
+    "src/curaloop_rd/local_agent_v1/store.py": "c11862e6d04d368369cf13b456a44e4d5b7e2b6e0628775a18e4361ae937ff74",
+    "src/curaloop_rd/local_agent_v1/workflow.py": "ef695fe686103fb0749659367a8360a789b3823e62fc81d2d136a84c946c568b",
+    "src/curaloop_rd/local_agent_v1/__init__.py": "4e7d548723902ce3e6b299d9b2cdb88904b9fd24775c2ceb1e6a65e770d042c4",
+    "api/local_workflow_routes_v1.py": "3709c875e7d5bae1b127ba13c2817728859974b58bdaf463fa2c03ca59c93f60"
+  },
+  "external_comparison": "NOT_RUN",
+  "primary_effect": "NOT_ESTIMABLE"
+}

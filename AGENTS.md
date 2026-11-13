@@ -1,5 +1,58 @@
 # Agent instructions: CuraLoop-RL
 
+## Native admission closed; approved product fallback, 13 November 2026
+
+Current state: ACTIVE_PRODUCT_FALLBACK. Read
+docs/08_agent_rd/LOCAL_AGENT_EXECUTION_20261113.md and
+docs/evidence/lr-dc2-local-20261113-v1/admission-checkpoint-v1.json. Final native
+qualification admits one development task and six evaluation candidates from
+three repository-lineage groups, below the unchanged minimum of four groups.
+The scalar/tuple adapter mistake was corrected against upstream; wrong earlier
+flags are not scientific failures. A final source-supported compatibility
+batch is complete. No further benchmark/environment/reference retries or
+external agent comparison in this goal. Primary effect remains NOT_ESTIMABLE.
+
+Continue the already approved fallback: the same actual local molecular
+workflow, EN/TH HTTP/UI integration, real-model author software acceptance,
+English screenshot guide and feasibility/software manuscript with figures,
+limitations and publication-readiness assessment. Initial component checks
+passed eleven tests; subsequent combined native-interface/local-process checks
+passed 29. These are author checks, not independent validation or agent efficacy.
+Keep the fresh 96 CPU-hour/24 GPU-hour account, deadline, all prior charges and
+protected sources. Product GPU leases/calls use the development bucket and
+product-prefixed identities only. Parent sole writer. Complete owned return,
+reread and exact cleanup, then commit/push main. Older admission/pending/pause
+sections below are historical and do not reopen research work.
+
+## Local-agent scope and fresh resource release, 13 November 2026
+
+Current state: ACTIVE_ADMISSION in .local/lr-dc2-local-20261113-v1. The owner
+adopted the local scientific workflow scope and selected fresh budget B:
+96 CPU-hours plus 24 allocated GPU-hours, maximum four combined CPU cores and
+one GPU worker. Read research/manifests/lr_dc2_local_release_20261113_v1.json
+and docs/08_agent_rd/LOCAL_AGENT_PROTOCOL_DESIGN_20261113.md. The effective
+deadline remains 20 November 2026 11:51:07 UTC / 18:51:07 Bangkok. No clock reset.
+
+Execute one real CSV/RDKit/report workflow and one requirement-to-current-
+artifact evidence mechanism; primarily compare against an equally informed
+checklist. One primary already-authorized model; freeze the numerical matrix
+after bounded feasibility, before locked generation. Feasibility cap is four
+CPU-hours, one GPU-hour and 96 development provider calls. Continue through
+implementation, evaluation, analysis, localhost EN/TH acceptance and manuscript
+without routine phase approvals. A positive effect is not a completion gate.
+If external native evaluation is infeasible, finish only the same real local
+workflow and an honest negative/inconclusive feasibility/software report; no
+substitute benchmark, model search, second mechanism or outcome-driven repeats.
+
+Keep the superseded LR-DC2 ledger byte-identical at its recorded raw status;
+its unused allowance is inactive and unavailable. Its 2,430 retained CPU seconds
+remain separate, making the cumulative ceiling 96.675 CPU-hours / 24 GPU-hours.
+All older ledgers/scientific pins/artifacts, final16/private CF1/hidden outcomes
+and shared services remain protected. No paid API/rental, public deployment,
+external writes or paper submission. Parent sole writer; no subagents. Return
+and hash-reread owned remote files before exact cleanup, then commit/push main.
+The review, pending-budget and pause sections below are retained history.
+
 ## Latest owner resume and proposal review, 13 November 2026
 
 Current state: RESUMED_SCOPE_ADOPTED_BUDGET_PENDING. The owner explicitly

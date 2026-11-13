@@ -1,11 +1,15 @@
 # Start here
 
-**Latest checkpoint: LR-DC2 is paused for the owner after dataset download.**
-The [detailed handoff](docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md)
-records the verified ZIP, unrun research gates and exact resume procedure.
-The seven-day clock starts at the next owner resume; existing CPU/GPU caps and
-pre-pause bookings remain. No GPU or model has been started for LR-DC2.
-The completed AgentRD work described below remains available independently.
+**Latest checkpoint, 13 November 2026: local molecular workflow.**
+Open `/workflow` on the localhost application for actual CSV/RDKit calculations,
+2D structures, saved jobs and verified report/ZIP collection in EN/TH. Six frozen
+author model cases passed using twelve actual responses; these are software
+checks, not independent scientific validation. Native benchmark readiness did
+not meet its unchanged diversity minimum, so the comparative agent study is
+NOT_RUN. Read the [execution record](docs/08_agent_rd/LOCAL_AGENT_EXECUTION_20261113.md)
+and [actual results](docs/07_publication/LOCAL_WORKFLOW_ACTUAL_RESULTS_20261113.md).
+The [earlier pause](docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md)
+is preserved historical context. Older AgentRD results remain available below.
 
 **Current, 11 November 2026: AgentRD computational and localhost delivery.**
 Start with the [final owner report](docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md),

@@ -1,0 +1,290 @@
+{
+  "status": "PASS_ACTUAL_SERVED_WORKFLOW_EN_TH",
+  "scope": "Author engineering acceptance, actual deterministic RDKit subprocess, zero model calls",
+  "page_errors": [],
+  "external_requests": [],
+  "views": [
+    {
+      "locale": "th",
+      "width": 390,
+      "page_overflow": false
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "page_overflow": false
+    }
+  ],
+  "overflow_elements": [],
+  "result": {
+    "job_id": "3eb3ff13e30243378371de61803bf0ea",
+    "revision": 4,
+    "state": "COMPLETED",
+    "spec": {
+      "csv_text": "compound_id,smiles\naspirin,CC(=O)Oc1ccccc1C(=O)O\ncaffeine,Cn1c(=O)c2c(ncn2C)n(C)c1=O\nethanol,CCO\nbenzene,c1ccccc1\nbenzoic_acid,O=C(O)c1ccccc1\ninvalid,bad!\nethanol,CCO\n",
+      "goal": "Select compounds with molecular weight at most 100 g/mol. Keep other limits at the supplied defaults.",
+      "parameters": {
+        "molecular_weight_max": 100.0,
+        "logp_max": 5.0,
+        "tpsa_max": 140.0
+      },
+      "mode": "deterministic",
+      "locale": "en"
+    },
+    "created_utc": "2026-11-13T14:37:44.947016+00:00",
+    "updated_utc": "2026-11-13T14:37:46.053447+00:00",
+    "attempt": 1,
+    "provider_calls": [],
+    "parameters": {
+      "molecular_weight_max": 100.0,
+      "logp_max": 5.0,
+      "tpsa_max": 140.0
+    },
+    "result": {
+      "counts": {
+        "input_rows": 7,
+        "valid": 5,
+        "rejected": 2,
+        "selected": 2
+      },
+      "evidence": {
+        "ready": true,
+        "requirements": {
+          "row-accounting": {
+            "state": "satisfied",
+            "detail": "Public exported-file check passed",
+            "evidence_digest": "b6a7b3c0e8f2b0f9ed7b988df03abeae62ab5477d1dccc892706ff9a11c7bce2"
+          },
+          "selection": {
+            "state": "satisfied",
+            "detail": "Public exported-file check passed",
+            "evidence_digest": "47728836e236df58bf540c73bc6fca66deeec285f12a06f3d7b0c67af5066ffc"
+          },
+          "units": {
+            "state": "satisfied",
+            "detail": "Public exported-file check passed",
+            "evidence_digest": "3648a25bdae2414735911b6affe800aefb373b2535b17b1e04491bac508bc6a9"
+          }
+        },
+        "scope": "Public validators only; not native scientific truth or clinical validation"
+      },
+      "manifest_sha256": "2469c7cdc40996de1dcb693c035cd60966d506e60cdafb750725852073e6aabf",
+      "bundle_sha256": "b6b98892b8a7b075dba1cd6171809ea78d3533fb37e76f9d0905c91c32971bdb",
+      "tool_cpu_seconds": 0.1875,
+      "tool_wall_seconds": 0.7039999999979045,
+      "new_model_calls": 0
+    },
+    "error": null,
+    "process": null,
+    "data": {
+      "schema": "curaloop.local-agent.compound-result.v1",
+      "rdkit_version": "2026.09.1",
+      "parameters": {
+        "molecular_weight_max": 100.0,
+        "logp_max": 5.0,
+        "tpsa_max": 140.0
+      },
+      "compounds": [
+        {
+          "row": 2,
+          "compound_id": "aspirin",
+          "smiles": "CC(=O)Oc1ccccc1C(=O)O",
+          "canonical_smiles": "CC(=O)Oc1ccccc1C(=O)O",
+          "molecular_weight": 180.15899999999996,
+          "logp": 1.3101,
+          "tpsa": 63.60000000000001,
+          "hbd": 1,
+          "hba": 3,
+          "selected": false,
+          "filter_reasons": [
+            "MOLECULAR_WEIGHT_LIMIT"
+          ]
+        },
+        {
+          "row": 3,
+          "compound_id": "caffeine",
+          "smiles": "Cn1c(=O)c2c(ncn2C)n(C)c1=O",
+          "canonical_smiles": "Cn1c(=O)c2c(ncn2C)n(C)c1=O",
+          "molecular_weight": 194.194,
+          "logp": -1.0293,
+          "tpsa": 61.82,
+          "hbd": 0,
+          "hba": 3,
+          "selected": false,
+          "filter_reasons": [
+            "MOLECULAR_WEIGHT_LIMIT"
+          ]
+        },
+        {
+          "row": 4,
+          "compound_id": "ethanol",
+          "smiles": "CCO",
+          "canonical_smiles": "CCO",
+          "molecular_weight": 46.069,
+          "logp": -0.0014000000000000123,
+          "tpsa": 20.23,
+          "hbd": 1,
+          "hba": 1,
+          "selected": true,
+          "filter_reasons": []
+        },
+        {
+          "row": 5,
+          "compound_id": "benzene",
+          "smiles": "c1ccccc1",
+          "canonical_smiles": "c1ccccc1",
+          "molecular_weight": 78.11399999999999,
+          "logp": 1.6866,
+          "tpsa": 0.0,
+          "hbd": 0,
+          "hba": 0,
+          "selected": true,
+          "filter_reasons": []
+        },
+        {
+          "row": 6,
+          "compound_id": "benzoic_acid",
+          "smiles": "O=C(O)c1ccccc1",
+          "canonical_smiles": "O=C(O)c1ccccc1",
+          "molecular_weight": 122.12299999999996,
+          "logp": 1.3848,
+          "tpsa": 37.3,
+          "hbd": 1,
+          "hba": 1,
+          "selected": false,
+          "filter_reasons": [
+            "MOLECULAR_WEIGHT_LIMIT"
+          ]
+        }
+      ],
+      "rejected": [
+        {
+          "row": 8,
+          "compound_id": "ethanol",
+          "smiles": "CCO",
+          "reason": "DUPLICATE_COMPOUND_ID"
+        },
+        {
+          "row": 7,
+          "compound_id": "invalid",
+          "smiles": "bad!",
+          "reason": "INVALID_EMPTY_OR_TOO_LARGE_MOLECULE"
+        }
+      ],
+      "counts": {
+        "input_rows": 7,
+        "valid": 5,
+        "rejected": 2,
+        "selected": 2
+      },
+      "units": {
+        "molecular_weight": "g/mol",
+        "tpsa": "angstrom^2",
+        "logp": "dimensionless"
+      },
+      "limitations": [
+        "Physicochemical filtering only",
+        "No assay or efficacy prediction",
+        "Author-selected local workflow, not an external benchmark result"
+      ],
+      "created_utc": "2026-11-13T14:37:45.694911+00:00",
+      "tools": {
+        "python": "3.12.10",
+        "rdkit": "2026.09.1",
+        "chemistry_source_sha256": "e72857135ab3796b2ff2e8294edaaba142414f6c9b34977ce14f9876f2e39c8f",
+        "workflow_source_sha256": "ef695fe686103fb0749659367a8360a789b3823e62fc81d2d136a84c946c568b"
+      }
+    },
+    "events": [
+      {
+        "revision": 0,
+        "state": "QUEUED",
+        "utc": "2026-11-13T14:37:44.947016+00:00"
+      },
+      {
+        "revision": 1,
+        "utc": "2026-11-13T14:37:44.982595+00:00",
+        "detail": "Validate CSV and workflow scope",
+        "changes": {
+          "state": "VALIDATING",
+          "attempt": 1,
+          "error": null
+        }
+      },
+      {
+        "revision": 2,
+        "utc": "2026-11-13T14:37:45.001953+00:00",
+        "detail": "Actual fixed Python/RDKit process started",
+        "changes": {
+          "state": "COMPUTING",
+          "process": {
+            "pid": 5660,
+            "started_utc": "2026-11-13T14:37:45.000952+00:00",
+            "historical_after_restart": true
+          }
+        }
+      },
+      {
+        "revision": 3,
+        "utc": "2026-11-13T14:37:46.026212+00:00",
+        "detail": "Validate exported artifacts against current evidence",
+        "changes": {
+          "state": "VERIFYING"
+        }
+      },
+      {
+        "revision": 4,
+        "utc": "2026-11-13T14:37:46.053447+00:00",
+        "detail": "Actual local workflow complete; artifacts ready to collect",
+        "changes": {
+          "state": "COMPLETED",
+          "result": {
+            "counts": {
+              "input_rows": 7,
+              "valid": 5,
+              "rejected": 2,
+              "selected": 2
+            },
+            "evidence": {
+              "ready": true,
+              "requirements": {
+                "row-accounting": {
+                  "state": "satisfied",
+                  "detail": "Public exported-file check passed",
+                  "evidence_digest": "b6a7b3c0e8f2b0f9ed7b988df03abeae62ab5477d1dccc892706ff9a11c7bce2"
+                },
+                "selection": {
+                  "state": "satisfied",
+                  "detail": "Public exported-file check passed",
+                  "evidence_digest": "47728836e236df58bf540c73bc6fca66deeec285f12a06f3d7b0c67af5066ffc"
+                },
+                "units": {
+                  "state": "satisfied",
+                  "detail": "Public exported-file check passed",
+                  "evidence_digest": "3648a25bdae2414735911b6affe800aefb373b2535b17b1e04491bac508bc6a9"
+                }
+              },
+              "scope": "Public validators only; not native scientific truth or clinical validation"
+            },
+            "manifest_sha256": "2469c7cdc40996de1dcb693c035cd60966d506e60cdafb750725852073e6aabf",
+            "bundle_sha256": "b6b98892b8a7b075dba1cd6171809ea78d3533fb37e76f9d0905c91c32971bdb",
+            "tool_cpu_seconds": 0.1875,
+            "tool_wall_seconds": 0.7039999999979045,
+            "new_model_calls": 0
+          },
+          "process": null
+        }
+      }
+    ]
+  },
+  "download_sha256": "b6b98892b8a7b075dba1cd6171809ea78d3533fb37e76f9d0905c91c32971bdb",
+  "saved_reopen_without_rerun": true,
+  "rendered_structure": true,
+  "screenshots": [
+    "docs/evidence/lr-dc2-local-20261113-v1/product-screens-v5/01-empty-en.png",
+    "docs/evidence/lr-dc2-local-20261113-v1/product-screens-v5/02-result-en.png",
+    "docs/evidence/lr-dc2-local-20261113-v1/product-screens-v5/03-result-th.png",
+    "docs/evidence/lr-dc2-local-20261113-v1/product-screens-v5/04-mobile-en.png",
+    "docs/evidence/lr-dc2-local-20261113-v1/product-screens-v5/04-mobile-th.png"
+  ]
+}

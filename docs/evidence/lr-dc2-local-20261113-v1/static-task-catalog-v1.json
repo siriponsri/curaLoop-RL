@@ -1,0 +1,482 @@
+{
+  "status": "PASS_STATIC_METADATA_NOT_NATIVE_EXECUTION",
+  "annotation_sha256": "c6f937863a220bd1762a00c20a0f79cc8dfca900b819bdb552150310731ae147",
+  "tasks_inspected": 47,
+  "reference_programs_or_gold_outputs_read": false,
+  "candidate_model_calls": 0,
+  "evaluator_bodies_exposed_to_model": false,
+  "public_task_preview_column_read": false,
+  "exclusion_counts": {
+    "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED": 25,
+    "REPORTED_BBBC002_REFERENCE_EXPOSURE": 1
+  },
+  "preliminary_candidate_ids": [
+    1,
+    2,
+    3,
+    5,
+    12,
+    13,
+    15,
+    16,
+    18,
+    19,
+    22,
+    26,
+    40,
+    41,
+    51,
+    78,
+    85,
+    95,
+    97,
+    101,
+    102
+  ],
+  "candidate_cohort_admitted": false,
+  "syntax_summary": [
+    {
+      "instance_id": 1,
+      "imports": [
+        "pandas",
+        "sklearn"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 2,
+      "imports": [
+        "pandas"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 3,
+      "imports": [
+        "pandas",
+        "sklearn"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 5,
+      "imports": [
+        "pandas",
+        "sklearn"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 6,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 7,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 8,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 9,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 11,
+      "imports": [
+        "pandas",
+        "sklearn"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "REPORTED_BBBC002_REFERENCE_EXPOSURE"
+      ]
+    },
+    {
+      "instance_id": 12,
+      "imports": [],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 13,
+      "imports": [
+        "numpy",
+        "pandas",
+        "sklearn"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 15,
+      "imports": [
+        "pandas",
+        "sklearn"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 16,
+      "imports": [],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 17,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 18,
+      "imports": [
+        "numpy",
+        "pandas",
+        "sklearn"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 19,
+      "imports": [
+        "numpy",
+        "pandas",
+        "sklearn"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 20,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 22,
+      "imports": [
+        "pandas"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 26,
+      "imports": [
+        "pandas",
+        "sklearn"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 27,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 28,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 30,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 31,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 38,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 39,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 40,
+      "imports": [
+        "numpy",
+        "pandas",
+        "sklearn"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 41,
+      "imports": [
+        "numpy",
+        "pandas",
+        "sklearn"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 51,
+      "imports": [
+        "pandas",
+        "sklearn"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 52,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 69,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 70,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 75,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 78,
+      "imports": [
+        "pandas",
+        "sklearn"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 79,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 80,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 81,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 82,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 85,
+      "imports": [
+        "json",
+        "math"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 94,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 95,
+      "imports": [
+        "numpy"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 96,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 97,
+      "imports": [
+        "numpy"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 98,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 99,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 100,
+      "imports": [
+        "gpt4_visual_judge"
+      ],
+      "cli_arguments": [],
+      "excluded": [
+        "VISUAL_OUTPUT_NATIVE_SCORING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "instance_id": 101,
+      "imports": [
+        "pandas"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    },
+    {
+      "instance_id": 102,
+      "imports": [
+        "pandas"
+      ],
+      "cli_arguments": [],
+      "excluded": []
+    }
+  ]
+}

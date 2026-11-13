@@ -1,0 +1,196 @@
+{
+  "status": "PASS_SEPARATE_ASSET_TREES_NOT_NATIVE_QUALIFICATION",
+  "development_ids": [
+    2,
+    3
+  ],
+  "locked_candidate_ids": [
+    5,
+    16,
+    18,
+    19,
+    22,
+    26,
+    40,
+    41,
+    85
+  ],
+  "minimum_locked_tasks_for_pilot": 6,
+  "minimum_locked_repository_lineage_groups": 4,
+  "group_rule": "Conservative source repository lineage; not certified independent publications",
+  "role_rule_frozen_before_reference_body_processing": true,
+  "neural_training_tasks_excluded_from_this_cpu_bounded_pool": true,
+  "protected_old_outcomes_opened": false,
+  "native_success": "NOT_RUN",
+  "candidate_gold_access": false,
+  "gold_body_displayed_to_model_or_author_context": false,
+  "gold_processed_only_for_isolated_reference_syntax_and_later_qualification": true,
+  "files": 1313,
+  "expanded_private_bytes": 523421826,
+  "private_manifest_sha256": "b2fbf486f7bf97338285787dfed7d424e14e8ae30e81a99824de5739acc816f9",
+  "reference_import_inventory": [
+    {
+      "instance_id": 2,
+      "role": "development",
+      "lineage_group": "uw-cmg/MAST-ML",
+      "source_path": "examples/MASTML_Tutorial_3_FeatureEngineering.ipynb",
+      "dataset_prefix": "benchmark/datasets/mat_diffusion/",
+      "reference_imports": [
+        "copy",
+        "mastml",
+        "pandas"
+      ],
+      "reference_sha256": "2d0721db75e5f9790a5a06acff60d93865f9e43610ed80d8dd1ab3f4219df892",
+      "evaluator_sha256": "315170153181d325fb290dc3a60335afa42a4402066db72e9a03ba582f636427"
+    },
+    {
+      "instance_id": 3,
+      "role": "development",
+      "lineage_group": "hackingmaterials/matminer_examples",
+      "source_path": "matminer_examples/machine_learning-nb/bulk_modulus.ipynb",
+      "dataset_prefix": "benchmark/datasets/crystalline_compound/",
+      "reference_imports": [
+        "matminer",
+        "pandas",
+        "sklearn"
+      ],
+      "reference_sha256": "8bd88c55c9661b886189a1d490361765c42d26d198b7cc76850861fbd26f147e",
+      "evaluator_sha256": "f2cdaa7ae91a7849f11d2ad1f365bf8b29f8d8b3cd8ad787f16c12bfde627ea5"
+    },
+    {
+      "instance_id": 5,
+      "role": "locked_candidate",
+      "lineage_group": "psa-lab/predicting-activity-by-machine-learning",
+      "source_path": "code/dkpes_fgroup_analysis.ipynb",
+      "dataset_prefix": "benchmark/datasets/dkpes/",
+      "reference_imports": [
+        "numpy",
+        "pandas",
+        "sklearn"
+      ],
+      "reference_sha256": "3d3da4f0c981fe69f1204e2dedcae8062d29f9ab918c8d954c1e31657a5dd955",
+      "evaluator_sha256": "fa1c38bd7803ee083897ce185add7269194131c1c868cf591af93b0874319326"
+    },
+    {
+      "instance_id": 16,
+      "role": "locked_candidate",
+      "lineage_group": "felixjwong/antibioticsai",
+      "source_path": "notebooks/Filtering hits and computing rationale scaffolds.ipynb",
+      "dataset_prefix": "benchmark/datasets/compound_filter/",
+      "reference_imports": [
+        "csv",
+        "os",
+        "rdkit"
+      ],
+      "reference_sha256": "cf40e214e9419caec35aed7e95c4d212944b5f798dc15bd246bb885de3b36e2a",
+      "evaluator_sha256": "216935482b08427dc5c713f4c4b0a83f46eb637846c7f847cfab44cf270bf873"
+    },
+    {
+      "instance_id": 18,
+      "role": "locked_candidate",
+      "lineage_group": "anikaliu/CAMDA-DILI",
+      "source_path": "Machine_Learning/code/models_ECFP.py",
+      "dataset_prefix": "benchmark/datasets/dili/",
+      "reference_imports": [
+        "numpy",
+        "os",
+        "pandas",
+        "pickle",
+        "rdkit",
+        "sklearn",
+        "zipfile"
+      ],
+      "reference_sha256": "7489c03590f8434cb07f03a18c377eeffd4a214c33a9c3e88b4f6ccbab8eda06",
+      "evaluator_sha256": "dde640c8f94430eaa7b2ba2cb3b3d1be4bc4726ac98f73d69c1ef3ffaeebd03e"
+    },
+    {
+      "instance_id": 19,
+      "role": "locked_candidate",
+      "lineage_group": "anikaliu/CAMDA-DILI",
+      "source_path": "Machine_Learning/code/models_ECFP.py",
+      "dataset_prefix": "benchmark/datasets/dili/",
+      "reference_imports": [
+        "numpy",
+        "os",
+        "pandas",
+        "pickle",
+        "rdkit",
+        "sklearn",
+        "zipfile"
+      ],
+      "reference_sha256": "27e4cb506a6153bc86cea1bd8afb811d318572825c9366c42a6517c037eb85ad",
+      "evaluator_sha256": "4873740e3d1af0c34bd335c03322c90e97a5d13aee7b705e3d320dccde09548b"
+    },
+    {
+      "instance_id": 22,
+      "role": "locked_candidate",
+      "lineage_group": "OlivierBeq/Papyrus-scripts",
+      "source_path": "notebook_examples/simple_examples.ipynb",
+      "dataset_prefix": "benchmark/datasets/papyrus/",
+      "reference_imports": [
+        "pandas",
+        "papyrus_scripts"
+      ],
+      "reference_sha256": "0578cecc867cb146ddf67fd97dc1f760acc387e4bcdba5e399b7f536536694bb",
+      "evaluator_sha256": "b774ae08365e3a9d39289d850b55a950c8227e2453c43c1d02066fe19fb22105"
+    },
+    {
+      "instance_id": 26,
+      "role": "locked_candidate",
+      "lineage_group": "chemosim-lab/ProLIF",
+      "source_path": "docs/notebooks/md-ligand-protein.ipynb",
+      "dataset_prefix": "benchmark/datasets/ligand_protein/",
+      "reference_imports": [
+        "MDAnalysis",
+        "pandas",
+        "prolif"
+      ],
+      "reference_sha256": "365c9949c0038c9cff4a7669fe07a75a3a2d9c79cd1b7f4d8f78a696bea0c821",
+      "evaluator_sha256": "b241d0dd2d82e362d8c552d413a33ae592c9cc69534ddbd0cc02f633267c2024"
+    },
+    {
+      "instance_id": 40,
+      "role": "locked_candidate",
+      "lineage_group": "anikaliu/CAMDA-DILI",
+      "source_path": "Machine_Learning/code/models_MD.py",
+      "dataset_prefix": "benchmark/datasets/dili_MD/",
+      "reference_imports": [
+        "numpy",
+        "pandas",
+        "rdkit",
+        "sklearn"
+      ],
+      "reference_sha256": "c10c98721d6762b738cf44ac807de4a816cfff0c634d1edee0f13cacc8af5d57",
+      "evaluator_sha256": "0265388407cbaefb27a95412b496e95ebfc409c9f8f69b13389dc7f8fdfb691d"
+    },
+    {
+      "instance_id": 41,
+      "role": "locked_candidate",
+      "lineage_group": "anikaliu/CAMDA-DILI",
+      "source_path": "Machine_Learning/code/models_MD.py",
+      "dataset_prefix": "benchmark/datasets/dili_MD/",
+      "reference_imports": [
+        "numpy",
+        "pandas",
+        "rdkit",
+        "sklearn"
+      ],
+      "reference_sha256": "9c9554efea0dc4b8d4b16d3a1ea46cbe8371e4da7f88edbd2173d0aa2a73a5f7",
+      "evaluator_sha256": "c8ebb374add7f25fb6020d73586742cc777a492879bfeafe036c06ea460b1155"
+    },
+    {
+      "instance_id": 85,
+      "role": "locked_candidate",
+      "lineage_group": "mad-lab-fau/BioPsyKit",
+      "source_path": "examples/Saliva_Example.ipynb",
+      "dataset_prefix": "benchmark/datasets/saliva_data/",
+      "reference_imports": [
+        "biopsykit",
+        "json",
+        "pickle"
+      ],
+      "reference_sha256": "072ce52de6ccf586babc90e5e848274a7683054670fe4d606fb36f5cd6fde880",
+      "evaluator_sha256": "31920bb30c6926d2598c00ae8a1bd6d80158ed2afe3ed96ca8bb982f8858ceef"
+    }
+  ]
+}
