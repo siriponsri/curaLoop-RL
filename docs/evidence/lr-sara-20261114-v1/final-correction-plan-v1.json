@@ -1,0 +1,432 @@
+{
+  "status": "FROZEN_BEFORE_SINGLE_CORRECTION_BATCH",
+  "correction_batch_number": 1,
+  "source_environment_commit": "c26e151ed601ba109dc4d35e057ff8e73fec469d",
+  "worker_sha256": "5395e8ad1adb995230be7c13b697b6144649f0056454920a15899a2b7afe0283",
+  "diagnostic_receipt_sha256": "b7065231d44078d16ceaac80de57c57a3c27aa325e076b29fd91dfdd46fe4984",
+  "role_freeze_sha256": "1c45c572b152cc4d22aa9a6d34a206394b7cc5003851dfb4f84a9a86fecb46fd",
+  "changes": [
+    {
+      "cause": "Papyrus pystow writes /root/.data",
+      "fix": "Explicit owned writable HOME/PYSTOW/XDG/MPL caches; read-only root retained"
+    },
+    {
+      "cause": "ProLIF RDKit Draw missing libXrender.so.1",
+      "fix": "Download/extract Debian libxrender1 and its declared dependency closure into owned library overlay; no host install"
+    },
+    {
+      "cause": "Prior ENOSPC with 4 GiB temporary mount",
+      "fix": "Owned disk-backed TMPDIR and root-owned private pip cache with measured free space and bounded writable workspace"
+    },
+    {
+      "cause": "Docker CLI failed before any guard start under 1 GiB address ceiling",
+      "fix": "8 GiB host address ceiling, within 32 GiB aggregate; cause provisional; actual guard probes now passed"
+    }
+  ],
+  "system_packages": [
+    "libxrender1",
+    "libgomp1"
+  ],
+  "system_package_basis": "Upstream libxrender1 and GCC runtime closure; no base libc overlay or compiler/version search",
+  "constraints": "numpy==1.26.4\npandas==1.5.3\nscipy==1.13.1\nscikit-learn==1.5.2\nmatplotlib==3.7.5\nrdkit==2023.9.5\nopenpyxl==3.1.5\ntorch<=2.3.0\ntensorflow<=2.17.0\ntf_keras<=2.17.0\npymatgen<=2024.5.1\n",
+  "groups": [
+    {
+      "name": "base",
+      "reuse": "base",
+      "packages": [],
+      "cases": [
+        {
+          "instance_id": 5,
+          "imports": [
+            "numpy",
+            "pandas",
+            "sklearn"
+          ]
+        },
+        {
+          "instance_id": 16,
+          "imports": [
+            "csv",
+            "os",
+            "rdkit"
+          ]
+        },
+        {
+          "instance_id": 18,
+          "imports": [
+            "numpy",
+            "os",
+            "pandas",
+            "pickle",
+            "rdkit",
+            "sklearn",
+            "zipfile"
+          ]
+        },
+        {
+          "instance_id": 19,
+          "imports": [
+            "numpy",
+            "os",
+            "pandas",
+            "pickle",
+            "rdkit",
+            "sklearn",
+            "zipfile"
+          ]
+        },
+        {
+          "instance_id": 40,
+          "imports": [
+            "numpy",
+            "pandas",
+            "rdkit",
+            "sklearn"
+          ]
+        },
+        {
+          "instance_id": 41,
+          "imports": [
+            "numpy",
+            "pandas",
+            "rdkit",
+            "sklearn"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "papyrus",
+      "reuse": "lineage-07",
+      "repository_lineage": "olivierbeq/papyrus-scripts",
+      "packages": [],
+      "cases": [
+        {
+          "instance_id": 22,
+          "imports": [
+            "pandas",
+            "papyrus_scripts"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "prolif",
+      "reuse": "lineage-08",
+      "repository_lineage": "chemosim-lab/prolif",
+      "packages": [],
+      "cases": [
+        {
+          "instance_id": 26,
+          "imports": [
+            "MDAnalysis",
+            "pandas",
+            "prolif",
+            "sklearn"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "profile-12",
+      "repository_lineage": "kexinhuang12345/deeppurpose",
+      "packages": [
+        "DeepPurpose",
+        "torch<=2.3.0"
+      ],
+      "cases": [
+        {
+          "instance_id": 12,
+          "imports": [
+            "DeepPurpose",
+            "json",
+            "numpy",
+            "os",
+            "pandas",
+            "pathlib",
+            "shutil"
+          ]
+        },
+        {
+          "instance_id": 13,
+          "imports": [
+            "DeepPurpose",
+            "numpy",
+            "pandas",
+            "sklearn",
+            "warnings"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "profile-15",
+      "repository_lineage": "swansonk14/admet_ai",
+      "packages": [
+        "chemprop==1.6.1",
+        "torch<=2.3.0"
+      ],
+      "cases": [
+        {
+          "instance_id": 15,
+          "imports": [
+            "chemprop",
+            "os",
+            "pandas",
+            "shutil",
+            "sklearn",
+            "subprocess"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "profile-21",
+      "repository_lineage": "geopandas/geopandas",
+      "packages": [
+        "geopandas"
+      ],
+      "cases": [
+        {
+          "instance_id": 21,
+          "imports": [
+            "geopandas",
+            "pandas"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "profile-29",
+      "repository_lineage": "neuropsychology/neurokit",
+      "packages": [
+        "neurokit2"
+      ],
+      "cases": [
+        {
+          "instance_id": 29,
+          "imports": [
+            "neurokit2",
+            "pandas"
+          ]
+        },
+        {
+          "instance_id": 34,
+          "imports": [
+            "neurokit2",
+            "pandas"
+          ]
+        },
+        {
+          "instance_id": 35,
+          "imports": [
+            "matplotlib",
+            "neurokit2",
+            "numpy",
+            "pandas"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "profile-37",
+      "repository_lineage": "mad-lab-fau/biopsykit",
+      "packages": [
+        "biopsykit",
+        "mne"
+      ],
+      "cases": [
+        {
+          "instance_id": 37,
+          "imports": [
+            "biopsykit",
+            "json",
+            "math",
+            "os"
+          ]
+        },
+        {
+          "instance_id": 44,
+          "imports": [
+            "biopsykit",
+            "json",
+            "math",
+            "pickle"
+          ]
+        },
+        {
+          "instance_id": 45,
+          "imports": [
+            "biopsykit",
+            "csv",
+            "pickle"
+          ]
+        },
+        {
+          "instance_id": 85,
+          "imports": [
+            "biopsykit",
+            "json",
+            "math",
+            "pickle"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "profile-53",
+      "repository_lineage": "rasterio/rasterio",
+      "packages": [
+        "rasterio"
+      ],
+      "cases": [
+        {
+          "instance_id": 53,
+          "imports": [
+            "numpy",
+            "rasterio"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "profile-71",
+      "repository_lineage": "zitonglu1996/eeg2eeg",
+      "packages": [
+        "torch<=2.3.0",
+        "tqdm"
+      ],
+      "cases": [
+        {
+          "instance_id": 71,
+          "imports": [
+            "numpy",
+            "os",
+            "random",
+            "scipy",
+            "torch",
+            "tqdm",
+            "warnings"
+          ]
+        },
+        {
+          "instance_id": 72,
+          "imports": [
+            "numpy",
+            "os",
+            "random",
+            "scipy",
+            "torch",
+            "tqdm",
+            "warnings"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "profile-87",
+      "repository_lineage": "scitools/iris",
+      "packages": [
+        "scitools-iris"
+      ],
+      "cases": [
+        {
+          "instance_id": 87,
+          "imports": [
+            "cftime",
+            "csv",
+            "iris",
+            "numpy"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "profile-101",
+      "repository_lineage": "ppdebreuck/modnet",
+      "packages": [
+        "modnet",
+        "tensorflow<=2.17.0",
+        "tf_keras<=2.17.0",
+        "pymatgen<=2024.5.1"
+      ],
+      "cases": [
+        {
+          "instance_id": 101,
+          "imports": [
+            "modnet",
+            "os",
+            "pandas"
+          ]
+        },
+        {
+          "instance_id": 102,
+          "imports": [
+            "modnet",
+            "os",
+            "pandas"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ccobra",
+      "repository_lineage": "shared-nvc-cogsci-inputs",
+      "packages": [
+        "ccobra"
+      ],
+      "cases": [
+        {
+          "instance_id": 58,
+          "imports": [
+            "ccobra",
+            "numpy",
+            "os",
+            "pandas"
+          ]
+        },
+        {
+          "instance_id": 60,
+          "imports": [
+            "ccobra",
+            "numpy",
+            "os",
+            "pandas"
+          ]
+        },
+        {
+          "instance_id": 67,
+          "imports": [
+            "ccobra",
+            "numpy",
+            "pandas"
+          ]
+        },
+        {
+          "instance_id": 90,
+          "imports": [
+            "ccobra",
+            "numpy",
+            "pandas",
+            "sys",
+            "time"
+          ]
+        },
+        {
+          "instance_id": 92,
+          "imports": [
+            "json",
+            "numpy"
+          ]
+        }
+      ]
+    }
+  ],
+  "max_install_attempts_per_operation": 1,
+  "further_batches": false,
+  "downloads": "Ordinary signed apt/PyPI distributions only, <=20 GiB container receive; no scientific inputs/actor weights",
+  "writable_workspace_cap_bytes": 68719476736,
+  "other_owned_artifact_reserve_bytes": 17179869184,
+  "native_references_executed": 0,
+  "agent_calls": 0
+}

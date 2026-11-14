@@ -1,0 +1,113 @@
+{
+  "status": "FIRST_DIAGNOSTIC_EXECUTION_COMPLETED",
+  "prior_guard_never_started": true,
+  "launcher_change": "Host virtual-address ceiling 1 GiB to 8 GiB, within approved 32 GiB aggregate; original Docker settings unchanged; cause of CLI exit 2 not proven",
+  "guard_probes": {
+    "wall": {
+      "aggregate_cpu_seconds": 2.967184,
+      "exit_code": -9,
+      "stop_reason": "WALL_DEADLINE",
+      "network_receive_bytes": 0,
+      "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+      "initial_affinity_core": 71
+    },
+    "cpu": {
+      "container_name": "curaloop-sara-probe-cpu",
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 124,
+        "Error": "",
+        "StartedAt": "2026-11-14T05:30:39.571063081Z",
+        "FinishedAt": "2026-11-14T05:30:43.886482116Z"
+      },
+      "resources": {
+        "aggregate_cpu_seconds": 4.238042,
+        "exit_code": -9,
+        "stop_reason": "CPU_CAP",
+        "network_receive_bytes": 0,
+        "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+        "initial_affinity_core": 71
+      }
+    }
+  },
+  "container": {
+    "container_name": "curaloop-sara-diagnosis-v1",
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-14T05:30:44.156940578Z",
+      "FinishedAt": "2026-11-14T05:30:48.240057814Z"
+    },
+    "resources": {
+      "aggregate_cpu_seconds": 3.929307,
+      "exit_code": 0,
+      "stop_reason": null,
+      "network_receive_bytes": 0,
+      "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+      "initial_affinity_core": 71
+    }
+  },
+  "diagnosis": {
+    "mounts": {
+      "/": {
+        "free_bytes": 1145463910400,
+        "total_bytes": 1696924786688,
+        "free_inodes": 101110739
+      },
+      "/tmp": {
+        "free_bytes": 4294967296,
+        "total_bytes": 4294967296,
+        "free_inodes": 16483893
+      },
+      "/control": {
+        "free_bytes": 97610629120,
+        "total_bytes": 315926315008,
+        "free_inodes": 18140031
+      },
+      "/retained-env": {
+        "free_bytes": 97610629120,
+        "total_bytes": 315926315008,
+        "free_inodes": 18140031
+      }
+    },
+    "home": "/root",
+    "pwd": "/",
+    "network": "none; differs from original setup bridge, avoids scientific-input downloads",
+    "cases": [
+      {
+        "instance_id": 22,
+        "module": "papyrus_scripts",
+        "result": {
+          "status": "FAIL_IMPORT",
+          "error_type": "OSError",
+          "error_message": "[Errno 30] Read-only file system: '/root/.data'",
+          "traceback": "Traceback (most recent call last):\n  File \"<string>\", line 3, in <module>\n  File \"/usr/local/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/retained-env/lineage-07/papyrus_scripts/__init__.py\", line 5, in <module>\n    from .download import download_papyrus, remove_papyrus\n  File \"/retained-env/lineage-07/papyrus_scripts/download.py\", line 11, in <module>\n    import pystow\n  File \"/retained-env/lineage-07/pystow/__init__.py\", line 113, in <module>\n    ensure_readme()\n  File \"/retained-env/lineage-07/pystow/utils/__init__.py\", line 776, in ensure_readme\n    readme_path = get_home(ensure_exists=True).joinpath(\"README.md\")\n  File \"/retained-env/lineage-07/pystow/utils/env.py\", line 116, in get_home\n    return getenv_path(PYSTOW_HOME_ENVVAR, default, ensure_exists=ensure_exists)\n  File \"/retained-env/lineage-07/pystow/utils/env.py\", line 82, in getenv_path\n    mkdir(rv, ensure_exists=ensure_exists)\n  File \"/retained-env/lineage-07/pystow/utils/env.py\", line 38, in mkdir\n    path.mkdir(exist_ok=True, parents=True)\n  File \"/usr/local/lib/python3.10/pathlib.py\", line 1175, in mkdir\n    self._accessor.mkdir(self, mode)\nOSError: [Errno 30] Read-only file system: '/root/.data'\n"
+        }
+      },
+      {
+        "instance_id": 26,
+        "module": "prolif",
+        "result": {
+          "status": "FAIL_IMPORT",
+          "error_type": "ImportError",
+          "error_message": "libXrender.so.1: cannot open shared object file: No such file or directory",
+          "traceback": "Traceback (most recent call last):\n  File \"<string>\", line 3, in <module>\n  File \"/usr/local/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"<frozen importlib._bootstrap>\", line 1050, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1027, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1006, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 688, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 883, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/retained-env/lineage-08/prolif/__init__.py\", line 11, in <module>\n    from prolif.plotting.residues import display_residues\n  File \"/retained-env/lineage-08/prolif/plotting/residues.py\", line 14, in <module>\n    from rdkit.Chem import Draw\n  File \"/retained-env/base/rdkit/Chem/Draw/__init__.py\", line 21, in <module>\n    from rdkit.Chem.Draw import rdMolDraw2D\nImportError: libXrender.so.1: cannot open shared object file: No such file or directory\n"
+        }
+      }
+    ]
+  },
+  "remote_host_process_cpu_seconds": 0.074144
+}

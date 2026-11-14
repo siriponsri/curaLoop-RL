@@ -1,0 +1,49 @@
+{
+  "status": "FAIL_FINAL_CORRECTION_INSTALLATION",
+  "install": {
+    "container_name": "curaloop-sara-final-correction-setup-v1",
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 1,
+      "Error": "",
+      "StartedAt": "2026-11-14T05:41:40.107725572Z",
+      "FinishedAt": "2026-11-14T05:41:43.723310692Z"
+    },
+    "resources": {
+      "aggregate_cpu_seconds": 3.199611,
+      "exit_code": 1,
+      "stop_reason": null,
+      "network_receive_bytes": 11763456,
+      "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+      "initial_affinity_core": 71
+    }
+  },
+  "summary": {
+    "status": "FAIL_SINGLE_INSTALLATION_BATCH",
+    "operations": [
+      {
+        "operation": "apt-update",
+        "exit_code": 0
+      },
+      {
+        "operation": "apt-download-system-libraries",
+        "exit_code": 0
+      },
+      {
+        "operation": "extract-libgomp1",
+        "exit_code": 2
+      }
+    ],
+    "error_type": "RuntimeError",
+    "error_message": "extract-libgomp1 failed; no retry permitted",
+    "traceback": "Traceback (most recent call last):\n  File \"/control/program.py\", line 27, in <module>\n    command('extract-'+name,['dpkg-deb','-x',str(path),'/syslibs'],60)\n  File \"/control/program.py\", line 13, in command\n    if p.returncode:raise RuntimeError(name+' failed; no retry permitted')\nRuntimeError: extract-libgomp1 failed; no retry permitted\n"
+  },
+  "further_correction_batches": false,
+  "remote_host_process_cpu_seconds": 0.8461019999999999
+}

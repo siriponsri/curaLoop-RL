@@ -1,0 +1,106 @@
+{
+  "status": "PASS_OFFLINE_SYNTAX_AND_IDENTITIES",
+  "current_sources": {
+    "tools/sara_bootstrap_v1.py": "9488797dcb4879515a219ad6d0d605e954e6bd51245553d1b8637101c93e26c6",
+    "tools/sara_cleanup_v1.py": "df813388f9a17a9a1581ce602bb9b583059c868b9c48ab2e20298b432f5244ef",
+    "tools/sara_closeout_v1.py": "2f90866f832ae790320b93c18aebb8b9cd6b689d62c90cff557a282bed11557f",
+    "tools/sara_control_v1.py": "ed07f5c9fcccb9cb3dbfa7ba14dbaa58a7cf88bf4cbd45dacd8d58883467fda8",
+    "tools/sara_correction_worker_v1.py": "5395e8ad1adb995230be7c13b697b6144649f0056454920a15899a2b7afe0283",
+    "tools/sara_diagnose_v1.py": "53d5be06e975ff7b21534894f91a4bf59ec2dd5e75c2a80bae15f65b2f3de83b",
+    "tools/sara_diagnose_worker_v1.py": "0c0962481ab80fb6952f9eeab40c1e6863702e8542e382dcd822a2aab0e4f2eb",
+    "tools/sara_diagnostic_first_start_v1.py": "51055d0ffc11043c4bb23ddca277de32490acb0bfb3f493dbd643326ae7984bb",
+    "tools/sara_docker_runtime_v1.py": "b58e2dc6a91f9a8519cb3e97230d6fb5a9085acbcf30794664e72bebc7c13067",
+    "tools/sara_inspect_diagnostic_v1.py": "d0c8de5da5d7fd9a6a50b5f7db24900bddb7394882c170f2523950d6b0d392e8",
+    "tools/sara_job_v1.py": "3dae79b68ed933c9a764204f4951604a0a04eaeb106452aff32ff7791d4b2dd4",
+    "tools/sara_prepare_native_assets_v1.py": "b93599f32effd7b2fab7ab4726613917b2af0852f1b1d92cd561e24f3c926adf",
+    "tools/sara_progress_v1.py": "e14d0e978687e98e4ab937ee0542e82f295543e79357f939a8d1c73067896b10",
+    "tools/sara_recover_return_v1.py": "2af5fdf0002f4e8ab5fc8d087b4b8cc0eaa8280a3baeb2de40d4fd2428462f2b",
+    "tools/sara_return_v1.py": "da1a39ea9bef3bceed53c23ee10223fab5e395ec874b81eb41f95182ee0d23c2",
+    "tools/sara_return_worker_v1.py": "aac04576bda522e0d0face2f6c8c5bdc7a4300428d53147a6c926523ceb3a24c",
+    "tools/sara_start_correction_v1.py": "0a0ddc9d1e342d63a9957c5cd3d3182c8a08ca7d44d1c9c19615b6e391b5882a",
+    "tools/sara_stop_v1.py": "896bc170bec9b060c8db793be8ad8fc60dd4f7d43d0a19fadee4cc619eedea5d",
+    "tools/sara_transport_v1.py": "b5befbb833d4c87d803ad08dca6acc2633fe54905ab0746feeb37931938d7025",
+    "tools/sara_verify_delivery_v1.py": "bcb27318dc57add7c06a3c8d33434d25b6b7923d89d0d5be4ff6b851b5f801b8"
+  },
+  "embedded_python_compiled": [
+    "sara_bootstrap_v1.py:REMOTE",
+    "sara_cleanup_v1.py:VERIFY",
+    "sara_cleanup_v1.py:DELETE",
+    "sara_cleanup_v1.py:REMOTE",
+    "sara_cleanup_v1.py:ABSENCE",
+    "sara_correction_worker_v1.py:SETUP",
+    "sara_correction_worker_v1.py:IMPORTS",
+    "sara_diagnose_worker_v1.py:PROGRAM",
+    "sara_diagnostic_first_start_v1.py:REMOTE",
+    "sara_docker_runtime_v1.py:SUPERVISOR",
+    "sara_inspect_diagnostic_v1.py:REMOTE",
+    "sara_progress_v1.py:REMOTE",
+    "sara_recover_return_v1.py:REMOTE",
+    "sara_return_worker_v1.py:PROGRAM",
+    "sara_stop_v1.py:REMOTE"
+  ],
+  "executed_job_snapshots": [
+    {
+      "job": "bootstrap-first-dispatch-v1",
+      "path": "docs/evidence/lr-sara-20261114-v1/executed-source/bootstrap-first-dispatch-v1/executed-source.py.txt",
+      "sha256": "9488797dcb4879515a219ad6d0d605e954e6bd51245553d1b8637101c93e26c6",
+      "resource_receipt_sha256": "67b3d8ec4477baede03b0cca7b6f23dc1292eb0d00dd954e5eef0fbafb60f922"
+    },
+    {
+      "job": "bootstrap-upload-v1",
+      "path": "docs/evidence/lr-sara-20261114-v1/executed-source/bootstrap-upload-v1/executed-source.py.txt",
+      "sha256": "9488797dcb4879515a219ad6d0d605e954e6bd51245553d1b8637101c93e26c6",
+      "resource_receipt_sha256": "7dad19036ed56a0acc6fab5e90ef416f1d19a5fc7eb5b3e60c44e5a7561f83a5"
+    },
+    {
+      "job": "diagnostic-capture-v1",
+      "path": "docs/evidence/lr-sara-20261114-v1/executed-source/diagnostic-capture-v1/executed-source.py.txt",
+      "sha256": "53d5be06e975ff7b21534894f91a4bf59ec2dd5e75c2a80bae15f65b2f3de83b",
+      "resource_receipt_sha256": "70453388aebf75d8a31cc37ada03af47d789c83f3b4fb6fdc92223ceddfb26aa"
+    },
+    {
+      "job": "exact-owned-cleanup-v1",
+      "path": "docs/evidence/lr-sara-20261114-v1/executed-source/exact-owned-cleanup-v1/executed-source.py.txt",
+      "sha256": "df813388f9a17a9a1581ce602bb9b583059c868b9c48ab2e20298b432f5244ef",
+      "resource_receipt_sha256": "7331879c073184ac88d999da193fb7e50942affedc57012eda8501c3e79f14e3"
+    },
+    {
+      "job": "fetch-full-owned-return-v1",
+      "path": "docs/evidence/lr-sara-20261114-v1/executed-source/fetch-full-owned-return-v1/executed-source.py.txt",
+      "sha256": "da1a39ea9bef3bceed53c23ee10223fab5e395ec874b81eb41f95182ee0d23c2",
+      "resource_receipt_sha256": "66774d291c6b54a1227bcf844c6af28aab00427f888b8bf3da7e43e378bbca6a"
+    },
+    {
+      "job": "final-correction-and-intake-v1",
+      "path": "docs/evidence/lr-sara-20261114-v1/executed-source/final-correction-and-intake-v1/executed-source.py.txt",
+      "sha256": "0a0ddc9d1e342d63a9957c5cd3d3182c8a08ca7d44d1c9c19615b6e391b5882a",
+      "resource_receipt_sha256": "d0db2fffd5536b789f687cd13e96ac5b818fe3f86360ff3e3c58097de155c565"
+    },
+    {
+      "job": "first-diagnostic-execution-v1",
+      "path": "docs/evidence/lr-sara-20261114-v1/executed-source/first-diagnostic-execution-v1/executed-source.py.txt",
+      "sha256": "51055d0ffc11043c4bb23ddca277de32490acb0bfb3f493dbd643326ae7984bb",
+      "resource_receipt_sha256": "53fdeb4a9719107a44ab3117b63f5d2e6c8c7cf891edbabff7a9707b5cebc694"
+    },
+    {
+      "job": "full-owned-export-v1",
+      "path": "docs/evidence/lr-sara-20261114-v1/executed-source/full-owned-export-v1/executed-source.py.txt",
+      "sha256": "a73cb720c7e2cd60e0ed76f48258eb1a0d8cd96a14148750a48b5ecbc188c51f",
+      "resource_receipt_sha256": "46fe21bf3bb3a7b46fcde084a3e0c14146626a03cd8f77fdff94a2f2afa91a43"
+    },
+    {
+      "job": "native-asset-preparation-v1",
+      "path": "docs/evidence/lr-sara-20261114-v1/executed-source/native-asset-preparation-v1/executed-source.py.txt",
+      "sha256": "b93599f32effd7b2fab7ab4726613917b2af0852f1b1d92cd561e24f3c926adf",
+      "resource_receipt_sha256": "4492b7c32bc65e894c0a92efa0239cb675ba47477d5c3e764163b131b9a459b1"
+    },
+    {
+      "job": "recover-evidence-export-v1",
+      "path": "docs/evidence/lr-sara-20261114-v1/executed-source/recover-evidence-export-v1/executed-source.py.txt",
+      "sha256": "2af5fdf0002f4e8ab5fc8d087b4b8cc0eaa8280a3baeb2de40d4fd2428462f2b",
+      "resource_receipt_sha256": "44e71fbbd30c001f15c54765c450b57db2c6e3b98123fdde4046c4ea4fb2ff93"
+    }
+  ],
+  "historical_failed_source_retained": true,
+  "syntax_is_not_runtime_validation": true
+}

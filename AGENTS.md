@@ -1,3 +1,52 @@
+# Current closeout: LR-SARA route A stopped, 14 November 2026
+
+LR-SARA is CLOSED_NO_GO_FINAL_CORRECTION_OPERATION_FAILED with zero active jobs.
+Read docs/08_agent_rd/LR_SARA_FINAL_OWNER_REPORT_20261114.md and
+docs/evidence/lr-sara-20261114-v1/delivery-audit-v1.json. The sole actual
+diagnostic imports identified read-only /root/.data for Papyrus22 and missing
+libXrender.so.1 for ProLIF26. Real wall/CPU guard probes passed. The one final
+correction batch failed at dpkg-deb extraction because tar could not preserve
+bind-mount root metadata under the chosen ownership/capability isolation.
+This is our preparer failure, not benchmark or agent efficacy evidence.
+
+Post-fix imports, native references/scorers, agents, full comparison and
+manuscript are NOT_RUN. Primary effect NOT_ESTIMABLE; no ESE/JSS readiness.
+No further correction, qualification, model/data search or automatic CORE-Bench
+migration is authorized. Owner receives results before any manuscript decision.
+
+All 164 preservation pins pass. All 78,825 owned regular files, two symlinks
+and 7,975 directories were returned and locally verified, remotely reread,
+then the exact task/export roots and eight stopped owned containers removed.
+Fresh SSH absence passed. Retained reservations total 39,000 CPU seconds
+(10.833333333 hours), including failures/unmetered administration, not measured
+whole-host consumption. Allocated GPU work and model calls are zero. Old
+ledgers/results, final16/private CF1 rows/hidden outcomes remain unchanged.
+Unused allowance is closed. Main commit/push delivery is authorized; the actual
+pushed SHA is verified in the delivery message/private Git receipt. Lower
+release and closeout sections are preserved history and do not reopen accounts.
+
+# Current owner release: LR-SARA route A, 14 November 2026
+
+Read research/manifests/lr_sara_release_20261114_v1.json and
+.local/lr-sara-20261114-v1/ledger.json. Owner approved fresh 80 CPU-hours and
+26 allocated GPU-hours, at most four combined CPU equivalents/one GPU, local
+and dr-train. T0 14 November 12:12:38 Bangkok; overall deadline 21 November
+12:12:38 Bangkok. Technical decision has its own 12 CPU-hour/two GPU-hour cap
+and deadline 16 November 00:12:38 Bangkok. Do not reset either clock.
+
+Use the approved A contract in HARNESS_REPAIR_VS_CORE_BENCH_DECISION_20261114.md.
+One diagnostic capture per affected lineage, one final correction batch, one
+reference attempt per selected task. Keep prior roles and 24-task/12-connected-
+cluster/three-domain gates. Full matched action-by-verification study may proceed
+only after technical, scientific-check, fairness and cost gates pass. Stop failed
+science without another recipe/model/dataset search; no automatic CORE migration.
+Return results for owner consideration before manuscript. Preserve all 164 pins,
+old ledgers/results, final16/private CF1 rows/old hidden outcomes. No paid API,
+cloud rental, new actor/scientific-input download, public deployment, team write
+or submission. Parent sole writer; no subagents. Verify every owned remote file
+returned before exact cleanup. Commit/push main is authorized at closeout.
+Earlier release/closeout sections below are preserved history.
+
 # Current closeout: SAR30 qualification stopped, 14 November 2026
 
 LR-SAR30-Q is CLOSED_NO_GO_FIXED_ENVIRONMENT_QUALIFICATION with zero active jobs.

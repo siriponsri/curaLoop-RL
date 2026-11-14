@@ -1,0 +1,49 @@
+{
+  "status": "NO_GO_FINAL_CORRECTION_OPERATION_FAILED",
+  "evidence": {
+    "summary": {
+      "status": "FAIL_SINGLE_INSTALLATION_BATCH",
+      "operations": [
+        {
+          "operation": "apt-update",
+          "exit_code": 0
+        },
+        {
+          "operation": "apt-download-system-libraries",
+          "exit_code": 0
+        },
+        {
+          "operation": "extract-libgomp1",
+          "exit_code": 2
+        }
+      ],
+      "error_type": "RuntimeError",
+      "error_message": "extract-libgomp1 failed; no retry permitted",
+      "traceback": "Traceback (most recent call last):\n  File \"/control/program.py\", line 27, in <module>\n    command('extract-'+name,['dpkg-deb','-x',str(path),'/syslibs'],60)\n  File \"/control/program.py\", line 13, in command\n    if p.returncode:raise RuntimeError(name+' failed; no retry permitted')\nRuntimeError: extract-libgomp1 failed; no retry permitted\n"
+    },
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 1,
+      "Error": "",
+      "StartedAt": "2026-11-14T05:41:40.107725572Z",
+      "FinishedAt": "2026-11-14T05:41:43.723310692Z"
+    },
+    "failed_operation_log": "tar: .: Cannot utime: Operation not permitted\ntar: .: Cannot change ownership to uid 0, gid 0: Operation not permitted\ntar: .: Cannot change mode to rwxr-xr-x: Operation not permitted\ntar: Exiting with failure status due to previous errors\ndpkg-deb: error: tar subprocess returned error exit status 2\n",
+    "native_case_root_exists": false,
+    "import_regression_exists": false
+  },
+  "correction_batches": 1,
+  "further_corrections": false,
+  "native_reference_attempts": 0,
+  "native_scorer_calls": 0,
+  "agent_calls": 0,
+  "gpu_allocated_seconds": 0,
+  "core_bench_migration": false,
+  "failure_scope": "Our preparer failed before offline import regression or native admission; benchmark scientific validity and agent effects remain unmeasured"
+}
