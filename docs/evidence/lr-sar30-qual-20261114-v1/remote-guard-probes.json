@@ -1,0 +1,29 @@
+{
+  "status": "PASS_ACTUAL_WALL_AND_CPU_TERMINATION",
+  "probes": [
+    {
+      "kind": "wall",
+      "resources": {
+        "aggregate_cpu_seconds": 2.758355,
+        "exit_code": -9,
+        "stop_reason": "WALL_DEADLINE",
+        "network_receive_bytes": 516,
+        "initial_affinity_core": 71,
+        "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]"
+      },
+      "actual_container_exit": 124
+    },
+    {
+      "kind": "cpu",
+      "resources": {
+        "aggregate_cpu_seconds": 3.196118,
+        "exit_code": -9,
+        "stop_reason": "CPU_CAP",
+        "network_receive_bytes": 516,
+        "initial_affinity_core": 71,
+        "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]"
+      },
+      "actual_container_exit": 124
+    }
+  ]
+}

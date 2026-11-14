@@ -1,3 +1,44 @@
+# Current closeout: SAR30 qualification stopped, 14 November 2026
+
+LR-SAR30-Q is CLOSED_NO_GO_FIXED_ENVIRONMENT_QUALIFICATION with zero active jobs.
+Read docs/08_agent_rd/LR_SAR30_QUALIFICATION_OWNER_REPORT_20261114.md and
+docs/evidence/lr-sar30-qual-20261114-v1/delivery-audit-v1.json. All 30 rows
+remain: four new development tasks, 26 locked candidates. Seven locked tasks
+passed root imports only; three locked preparation/import failures left an
+optimistic upper bound of 23 tasks and 10 connected source clusters, below
+24/12. No new reference/scorer/agent call or GPU allocation occurred. This
+shows failure of the selected preparer, not intrinsic benchmark invalidity.
+ENOSPC occurred during two lineage installs; the 4 GiB temporary mount is
+a likely bottleneck, not a confirmed per-mount diagnosis. Other import causes
+remain unresolved because exception messages were not captured. No retry ran.
+
+All 109 preservation pins pass. All 50,120 owned files were returned and
+locally rehashed, remotely reread, then exact owned root/exports/four containers
+removed with fresh absence verification. Retained CPU reservations: 25,800
+seconds (7.166666667 h); measured components are not aggregate host usage.
+Old final16/private CF1 rows/hidden outcomes and all closed accounts remain
+protected. No new manuscript or comparison is authorized. The higher-impact
+action-by-verification/CORE-Bench direction and LR-SAV1 envelope are proposals
+only. Await owner results review before any new scientific phase. Main delivery
+is authorized; its actual Git receipt follows commit/push verification.
+Earlier release and closeout sections below are preserved history.
+
+# Current owner release: LR-SAR30-Q qualification only, 14 November 2026
+
+Read research/manifests/lr_sar30_qualification_release_20261114_v1.json and
+.local/lr-sar30-qual-20261114-v1/ledger.json. Owner approved a fresh 16 CPU-hours
+and 2 allocated GPU-hours, 48 hours from 2026-11-14T03:23:02Z to
+2026-11-16T03:23:02Z (16 November 10:23:02 Bangkok), at most four combined
+CPU equivalents and one GPU. Local/dr-train allowed; parent sole writer.
+Qualification of the retained thirty candidates only. Metadata hash roles and
+public-check criteria are frozen before new native outcomes. Stop/report an
+impossible or failed gate; one reference attempt per task, no scientific reruns.
+No actor inference/download, full comparison or manuscript in this tranche.
+Return qualification results and an evidence-grounded higher-impact direction
+for owner consideration before a new scientific phase. Preserve all 109 pins,
+old ledgers/results, final16, private CF1 rows and hidden outcomes. Main delivery
+is authorized. Earlier release and closeout sections below are history.
+
 # Agent instructions: CuraLoop-RL
 
 ## Latest closeout: LR-SAR1 stopped at G0, 14 November 2026

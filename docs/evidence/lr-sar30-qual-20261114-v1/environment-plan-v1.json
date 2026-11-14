@@ -1,0 +1,542 @@
+{
+  "status": "FROZEN_BEFORE_ENVIRONMENT_AND_REFERENCE_OUTCOMES",
+  "role_freeze_sha256": "1c45c572b152cc4d22aa9a6d34a206394b7cc5003851dfb4f84a9a86fecb46fd",
+  "source_commit": "c26e151ed601ba109dc4d35e057ff8e73fec469d",
+  "source_recipe": "run_eval.py public bounds and task-repository dependencies, isolated lineage overlays; Python 3.10 base",
+  "chemprop_compatibility_basis": "ADMET-AI source v1 API uses chemprop 1.x; 1.6.1 selected before any new reference outcome",
+  "constraints": "numpy==1.26.4\npandas==1.5.3\nscipy==1.13.1\nscikit-learn==1.5.2\nmatplotlib==3.7.5\nrdkit==2023.9.5\nopenpyxl==3.1.5\ntorch<=2.3.0\ntensorflow<=2.17.0\ntf_keras<=2.17.0\npymatgen<=2024.5.1\n",
+  "groups": [
+    {
+      "name": "base",
+      "ids": [],
+      "cases": [],
+      "packages": [
+        "numpy==1.26.4",
+        "pandas==1.5.3",
+        "scipy==1.13.1",
+        "scikit-learn==1.5.2",
+        "matplotlib==3.7.5",
+        "rdkit==2023.9.5",
+        "openpyxl==3.1.5"
+      ]
+    },
+    {
+      "name": "lineage-01",
+      "repository_lineage": "psa-lab/predicting-activity-by-machine-learning",
+      "ids": [
+        5
+      ],
+      "cases": [
+        {
+          "instance_id": 5,
+          "imports": [
+            "numpy",
+            "pandas",
+            "sklearn"
+          ]
+        }
+      ],
+      "packages": [
+        "numpy==1.26.4"
+      ]
+    },
+    {
+      "name": "lineage-02",
+      "repository_lineage": "kexinhuang12345/deeppurpose",
+      "ids": [
+        12,
+        13
+      ],
+      "cases": [
+        {
+          "instance_id": 12,
+          "imports": [
+            "DeepPurpose",
+            "json",
+            "numpy",
+            "os",
+            "pandas",
+            "pathlib",
+            "shutil"
+          ]
+        },
+        {
+          "instance_id": 13,
+          "imports": [
+            "DeepPurpose",
+            "numpy",
+            "pandas",
+            "sklearn",
+            "warnings"
+          ]
+        }
+      ],
+      "packages": [
+        "DeepPurpose",
+        "torch<=2.3.0"
+      ]
+    },
+    {
+      "name": "lineage-03",
+      "repository_lineage": "swansonk14/admet_ai",
+      "ids": [
+        15
+      ],
+      "cases": [
+        {
+          "instance_id": 15,
+          "imports": [
+            "chemprop",
+            "os",
+            "pandas",
+            "shutil",
+            "sklearn",
+            "subprocess"
+          ]
+        }
+      ],
+      "packages": [
+        "chemprop==1.6.1",
+        "torch<=2.3.0"
+      ]
+    },
+    {
+      "name": "lineage-04",
+      "repository_lineage": "felixjwong/antibioticsai",
+      "ids": [
+        16
+      ],
+      "cases": [
+        {
+          "instance_id": 16,
+          "imports": [
+            "csv",
+            "os",
+            "rdkit"
+          ]
+        }
+      ],
+      "packages": [
+        "numpy==1.26.4"
+      ]
+    },
+    {
+      "name": "lineage-05",
+      "repository_lineage": "anikaliu/camda-dili",
+      "ids": [
+        18,
+        19,
+        40,
+        41
+      ],
+      "cases": [
+        {
+          "instance_id": 18,
+          "imports": [
+            "numpy",
+            "os",
+            "pandas",
+            "pickle",
+            "rdkit",
+            "sklearn",
+            "zipfile"
+          ]
+        },
+        {
+          "instance_id": 19,
+          "imports": [
+            "numpy",
+            "os",
+            "pandas",
+            "pickle",
+            "rdkit",
+            "sklearn",
+            "zipfile"
+          ]
+        },
+        {
+          "instance_id": 40,
+          "imports": [
+            "numpy",
+            "pandas",
+            "rdkit",
+            "sklearn"
+          ]
+        },
+        {
+          "instance_id": 41,
+          "imports": [
+            "numpy",
+            "pandas",
+            "rdkit",
+            "sklearn"
+          ]
+        }
+      ],
+      "packages": [
+        "numpy==1.26.4"
+      ]
+    },
+    {
+      "name": "lineage-06",
+      "repository_lineage": "geopandas/geopandas",
+      "ids": [
+        21
+      ],
+      "cases": [
+        {
+          "instance_id": 21,
+          "imports": [
+            "geopandas",
+            "pandas"
+          ]
+        }
+      ],
+      "packages": [
+        "geopandas"
+      ]
+    },
+    {
+      "name": "lineage-07",
+      "repository_lineage": "olivierbeq/papyrus-scripts",
+      "ids": [
+        22
+      ],
+      "cases": [
+        {
+          "instance_id": 22,
+          "imports": [
+            "pandas",
+            "papyrus_scripts"
+          ]
+        }
+      ],
+      "packages": [
+        "papyrus-scripts"
+      ]
+    },
+    {
+      "name": "lineage-08",
+      "repository_lineage": "chemosim-lab/prolif",
+      "ids": [
+        26
+      ],
+      "cases": [
+        {
+          "instance_id": 26,
+          "imports": [
+            "MDAnalysis",
+            "pandas",
+            "prolif",
+            "sklearn"
+          ]
+        }
+      ],
+      "packages": [
+        "prolif",
+        "MDAnalysis"
+      ]
+    },
+    {
+      "name": "lineage-09",
+      "repository_lineage": "neuropsychology/neurokit",
+      "ids": [
+        29,
+        34,
+        35
+      ],
+      "cases": [
+        {
+          "instance_id": 29,
+          "imports": [
+            "neurokit2",
+            "pandas"
+          ]
+        },
+        {
+          "instance_id": 34,
+          "imports": [
+            "neurokit2",
+            "pandas"
+          ]
+        },
+        {
+          "instance_id": 35,
+          "imports": [
+            "matplotlib",
+            "neurokit2",
+            "numpy",
+            "pandas"
+          ]
+        }
+      ],
+      "packages": [
+        "neurokit2"
+      ]
+    },
+    {
+      "name": "lineage-10",
+      "repository_lineage": "mad-lab-fau/biopsykit",
+      "ids": [
+        37,
+        44,
+        45,
+        85
+      ],
+      "cases": [
+        {
+          "instance_id": 37,
+          "imports": [
+            "biopsykit",
+            "json",
+            "math",
+            "os"
+          ]
+        },
+        {
+          "instance_id": 44,
+          "imports": [
+            "biopsykit",
+            "json",
+            "math",
+            "pickle"
+          ]
+        },
+        {
+          "instance_id": 45,
+          "imports": [
+            "biopsykit",
+            "csv",
+            "pickle"
+          ]
+        },
+        {
+          "instance_id": 85,
+          "imports": [
+            "biopsykit",
+            "json",
+            "math",
+            "pickle"
+          ]
+        }
+      ],
+      "packages": [
+        "biopsykit",
+        "mne"
+      ]
+    },
+    {
+      "name": "lineage-11",
+      "repository_lineage": "rasterio/rasterio",
+      "ids": [
+        53
+      ],
+      "cases": [
+        {
+          "instance_id": 53,
+          "imports": [
+            "numpy",
+            "rasterio"
+          ]
+        }
+      ],
+      "packages": [
+        "rasterio"
+      ]
+    },
+    {
+      "name": "lineage-12",
+      "repository_lineage": "nriesterer/syllogistic-nvc",
+      "ids": [
+        58,
+        60
+      ],
+      "cases": [
+        {
+          "instance_id": 58,
+          "imports": [
+            "ccobra",
+            "numpy",
+            "os",
+            "pandas"
+          ]
+        },
+        {
+          "instance_id": 60,
+          "imports": [
+            "ccobra",
+            "numpy",
+            "os",
+            "pandas"
+          ]
+        }
+      ],
+      "packages": [
+        "ccobra"
+      ]
+    },
+    {
+      "name": "lineage-13",
+      "repository_lineage": "brand-d/cogsci-jnmf",
+      "ids": [
+        67,
+        90,
+        92
+      ],
+      "cases": [
+        {
+          "instance_id": 67,
+          "imports": [
+            "ccobra",
+            "numpy",
+            "pandas"
+          ]
+        },
+        {
+          "instance_id": 90,
+          "imports": [
+            "ccobra",
+            "numpy",
+            "pandas",
+            "sys",
+            "time"
+          ]
+        },
+        {
+          "instance_id": 92,
+          "imports": [
+            "json",
+            "numpy"
+          ]
+        }
+      ],
+      "packages": [
+        "ccobra"
+      ]
+    },
+    {
+      "name": "lineage-14",
+      "repository_lineage": "zitonglu1996/eeg2eeg",
+      "ids": [
+        71,
+        72
+      ],
+      "cases": [
+        {
+          "instance_id": 71,
+          "imports": [
+            "numpy",
+            "os",
+            "random",
+            "scipy",
+            "torch",
+            "tqdm",
+            "warnings"
+          ]
+        },
+        {
+          "instance_id": 72,
+          "imports": [
+            "numpy",
+            "os",
+            "random",
+            "scipy",
+            "torch",
+            "tqdm",
+            "warnings"
+          ]
+        }
+      ],
+      "packages": [
+        "torch<=2.3.0",
+        "tqdm"
+      ]
+    },
+    {
+      "name": "lineage-15",
+      "repository_lineage": "scitools/iris",
+      "ids": [
+        87
+      ],
+      "cases": [
+        {
+          "instance_id": 87,
+          "imports": [
+            "cftime",
+            "csv",
+            "iris",
+            "numpy"
+          ]
+        }
+      ],
+      "packages": [
+        "scitools-iris"
+      ]
+    },
+    {
+      "name": "lineage-16",
+      "repository_lineage": "ppdebreuck/modnet",
+      "ids": [
+        101,
+        102
+      ],
+      "cases": [
+        {
+          "instance_id": 101,
+          "imports": [
+            "modnet",
+            "os",
+            "pandas"
+          ]
+        },
+        {
+          "instance_id": 102,
+          "imports": [
+            "modnet",
+            "os",
+            "pandas"
+          ]
+        }
+      ],
+      "packages": [
+        "modnet",
+        "tensorflow<=2.17.0",
+        "tf_keras<=2.17.0",
+        "pymatgen<=2024.5.1"
+      ]
+    }
+  ],
+  "locked_ids": [
+    5,
+    15,
+    16,
+    18,
+    19,
+    21,
+    22,
+    26,
+    29,
+    34,
+    35,
+    37,
+    40,
+    41,
+    44,
+    45,
+    53,
+    58,
+    60,
+    67,
+    85,
+    87,
+    90,
+    92,
+    101,
+    102
+  ],
+  "installation_attempts_per_group_max": 1,
+  "reference_execution_authorized_in_this_worker": false,
+  "shared_cache_modified": false,
+  "scientific_model_downloads": false,
+  "early_stop_upper_bound": 24
+}

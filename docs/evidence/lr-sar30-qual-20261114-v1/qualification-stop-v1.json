@@ -1,0 +1,65 @@
+{
+  "status": "FAIL_ENVIRONMENT_UPPER_BOUND",
+  "invalid_locked_ids": [
+    15,
+    22,
+    26
+  ],
+  "optimistic_locked_upper_bound": 23,
+  "required": 24,
+  "stopped_container": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-11-14T03:32:57.080482722Z",
+    "FinishedAt": "2026-11-14T03:43:24.748129676Z"
+  },
+  "guard_probes": {
+    "status": "PASS_ACTUAL_WALL_AND_CPU_TERMINATION",
+    "probes": [
+      {
+        "kind": "wall",
+        "resources": {
+          "aggregate_cpu_seconds": 2.758355,
+          "exit_code": -9,
+          "stop_reason": "WALL_DEADLINE",
+          "network_receive_bytes": 516,
+          "initial_affinity_core": 71,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]"
+        },
+        "actual_container_exit": 124
+      },
+      {
+        "kind": "cpu",
+        "resources": {
+          "aggregate_cpu_seconds": 3.196118,
+          "exit_code": -9,
+          "stop_reason": "CPU_CAP",
+          "network_receive_bytes": 516,
+          "initial_affinity_core": 71,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]"
+        },
+        "actual_container_exit": 124
+      }
+    ]
+  },
+  "resources": {
+    "aggregate_cpu_seconds": 265.23374,
+    "exit_code": 0,
+    "stop_reason": null,
+    "network_receive_bytes": 7617673202,
+    "initial_affinity_core": 71,
+    "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]"
+  },
+  "native_reference_execution": "NOT_RUN",
+  "agent_execution": "NOT_RUN",
+  "gpu_allocated_seconds": 0,
+  "benchmark_scientific_correctness": "NOT_ESTABLISHED",
+  "result_scope": "Failure of the fixed local qualification recipe, not proof these benchmark tasks are intrinsically invalid"
+}

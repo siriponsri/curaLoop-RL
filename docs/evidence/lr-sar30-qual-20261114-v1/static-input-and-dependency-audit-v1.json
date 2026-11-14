@@ -1,0 +1,891 @@
+{
+  "status": "AST_AND_MEMBER_AUDIT_NOT_NATIVE_QUALIFICATION",
+  "role_freeze_sha256": "1c45c572b152cc4d22aa9a6d34a206394b7cc5003851dfb4f84a9a86fecb46fd",
+  "all_thirty_retained": true,
+  "reference_source_displayed": false,
+  "reference_programs_executed": false,
+  "expected_values_displayed": false,
+  "rows": [
+    {
+      "instance_id": 5,
+      "repository_lineage": "psa-lab/predicting-activity-by-machine-learning",
+      "domain": "Bioinformatics",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/dkpes/",
+      "input_members": 2,
+      "input_declared_bytes": 8474,
+      "reference_sha256": "3d3da4f0c981fe69f1204e2dedcae8062d29f9ab918c8d954c1e31657a5dd955",
+      "evaluator_sha256": "fa1c38bd7803ee083897ce185add7269194131c1c868cf591af93b0874319326",
+      "reference_imports": [
+        "numpy",
+        "pandas",
+        "sklearn"
+      ],
+      "evaluator_imports": [
+        "pandas",
+        "sklearn"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 12,
+      "repository_lineage": "kexinhuang12345/deeppurpose",
+      "domain": "Bioinformatics",
+      "role": "development",
+      "dataset_prefix": "benchmark/datasets/dti/",
+      "input_members": 7,
+      "input_declared_bytes": 567464,
+      "reference_sha256": "a5e573bf9410fb112fce4b8fcbca5aa490940f6b5ad69ab49ba630a7d2328127",
+      "evaluator_sha256": "f2b0b4095ba7c8347ec69a41ed287a67e7b00bed9d551590c34ed4034f913227",
+      "reference_imports": [
+        "DeepPurpose",
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "shutil"
+      ],
+      "evaluator_imports": [],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 13,
+      "repository_lineage": "kexinhuang12345/deeppurpose",
+      "domain": "Bioinformatics",
+      "role": "development",
+      "dataset_prefix": "benchmark/datasets/hiv/",
+      "input_members": 4,
+      "input_declared_bytes": 2112254,
+      "reference_sha256": "0fd597c82e5b74bff6ff30e96f4ab6782775a2b38891a0d7b8468d7ee356dcd7",
+      "evaluator_sha256": "4859e31405a76dd8c824dd15a79a4020b513eaa4655cb0969947f7813577f7a1",
+      "reference_imports": [
+        "DeepPurpose",
+        "numpy",
+        "pandas",
+        "warnings"
+      ],
+      "evaluator_imports": [
+        "numpy",
+        "pandas",
+        "sklearn"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 15,
+      "repository_lineage": "swansonk14/admet_ai",
+      "domain": "Bioinformatics",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/ames/",
+      "input_members": 6,
+      "input_declared_bytes": 1985051,
+      "reference_sha256": "e9c3b931cd3937667083a24a57089485cc7d9658e24b4026798d04267bdde46f",
+      "evaluator_sha256": "21457f39d8f5cbf371ec234588560c7da24aab19854d79f2c11b6266d5bb64b5",
+      "reference_imports": [
+        "chemprop",
+        "os",
+        "shutil",
+        "subprocess"
+      ],
+      "evaluator_imports": [
+        "pandas",
+        "sklearn"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 16,
+      "repository_lineage": "felixjwong/antibioticsai",
+      "domain": "Computational Chemistry",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/compound_filter/",
+      "input_members": 2,
+      "input_declared_bytes": 3453625,
+      "reference_sha256": "cf40e214e9419caec35aed7e95c4d212944b5f798dc15bd246bb885de3b36e2a",
+      "evaluator_sha256": "216935482b08427dc5c713f4c4b0a83f46eb637846c7f847cfab44cf270bf873",
+      "reference_imports": [
+        "csv",
+        "os",
+        "rdkit"
+      ],
+      "evaluator_imports": [],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 18,
+      "repository_lineage": "anikaliu/camda-dili",
+      "domain": "Bioinformatics",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/dili/",
+      "input_members": 2,
+      "input_declared_bytes": 83132,
+      "reference_sha256": "7489c03590f8434cb07f03a18c377eeffd4a214c33a9c3e88b4f6ccbab8eda06",
+      "evaluator_sha256": "dde640c8f94430eaa7b2ba2cb3b3d1be4bc4726ac98f73d69c1ef3ffaeebd03e",
+      "reference_imports": [
+        "numpy",
+        "os",
+        "pandas",
+        "pickle",
+        "rdkit",
+        "sklearn",
+        "zipfile"
+      ],
+      "evaluator_imports": [
+        "numpy",
+        "pandas",
+        "sklearn"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 19,
+      "repository_lineage": "anikaliu/camda-dili",
+      "domain": "Bioinformatics",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/dili/",
+      "input_members": 2,
+      "input_declared_bytes": 83132,
+      "reference_sha256": "27e4cb506a6153bc86cea1bd8afb811d318572825c9366c42a6517c037eb85ad",
+      "evaluator_sha256": "4873740e3d1af0c34bd335c03322c90e97a5d13aee7b705e3d320dccde09548b",
+      "reference_imports": [
+        "numpy",
+        "os",
+        "pandas",
+        "pickle",
+        "rdkit",
+        "sklearn",
+        "zipfile"
+      ],
+      "evaluator_imports": [
+        "numpy",
+        "pandas",
+        "sklearn"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 21,
+      "repository_lineage": "geopandas/geopandas",
+      "domain": "Geographical Information Science",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/deforestation/",
+      "input_members": 2,
+      "input_declared_bytes": 35992937,
+      "reference_sha256": "5db1f74e06c524f0efa64a95508bb2a921517e80057b5bd93c8ba7df21312141",
+      "evaluator_sha256": "c1b2ca7c15c1f2b4ba3520e9d89e35a5656a1c98e63cfac58f63221b46f49819",
+      "reference_imports": [
+        "geopandas",
+        "pandas"
+      ],
+      "evaluator_imports": [
+        "pandas"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 22,
+      "repository_lineage": "olivierbeq/papyrus-scripts",
+      "domain": "Computational Chemistry",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/papyrus/",
+      "input_members": 2,
+      "input_declared_bytes": 21148303,
+      "reference_sha256": "0578cecc867cb146ddf67fd97dc1f760acc387e4bcdba5e399b7f536536694bb",
+      "evaluator_sha256": "b774ae08365e3a9d39289d850b55a950c8227e2453c43c1d02066fe19fb22105",
+      "reference_imports": [
+        "pandas",
+        "papyrus_scripts"
+      ],
+      "evaluator_imports": [
+        "pandas"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 26,
+      "repository_lineage": "chemosim-lab/prolif",
+      "domain": "Computational Chemistry",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/ligand_protein/",
+      "input_members": 4,
+      "input_declared_bytes": 5350689,
+      "reference_sha256": "365c9949c0038c9cff4a7669fe07a75a3a2d9c79cd1b7f4d8f78a696bea0c821",
+      "evaluator_sha256": "b241d0dd2d82e362d8c552d413a33ae592c9cc69534ddbd0cc02f633267c2024",
+      "reference_imports": [
+        "MDAnalysis",
+        "pandas",
+        "prolif"
+      ],
+      "evaluator_imports": [
+        "pandas",
+        "sklearn"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 29,
+      "repository_lineage": "neuropsychology/neurokit",
+      "domain": "Psychology and Cognitive science",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/biosignals/",
+      "input_members": 4,
+      "input_declared_bytes": 3444033,
+      "reference_sha256": "3d33daaaab1c3d2cd96d7c0f2903174168782b60acea61cc2b56942e37db53cf",
+      "evaluator_sha256": "40f4302283db3bd3da25e55c832c82c76394d4a9dd4b129126a66e4a323a4bec",
+      "reference_imports": [
+        "neurokit2",
+        "pandas"
+      ],
+      "evaluator_imports": [
+        "pandas"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 34,
+      "repository_lineage": "neuropsychology/neurokit",
+      "domain": "Psychology and Cognitive science",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/biosignals/",
+      "input_members": 4,
+      "input_declared_bytes": 3444033,
+      "reference_sha256": "e601d553efb72ecfbe2859503c0211d4c36ae715cb12b3d2eaa57744c4cb0170",
+      "evaluator_sha256": "29f51299148d83077e9648a121897d980f7084e1b402b9a377d9873eae5aec87",
+      "reference_imports": [
+        "neurokit2",
+        "pandas"
+      ],
+      "evaluator_imports": [
+        "pandas"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 35,
+      "repository_lineage": "neuropsychology/neurokit",
+      "domain": "Psychology and Cognitive science",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/biosignals/",
+      "input_members": 4,
+      "input_declared_bytes": 3444033,
+      "reference_sha256": "65d06f29576b229e2188f69e963bea59047549dd0826b4e56828595672724c84",
+      "evaluator_sha256": "fdd1865eb53ba1ea9aa8717ca239690466d05293e09e2dfe1dc0d7cd56f1f410",
+      "reference_imports": [
+        "matplotlib",
+        "neurokit2",
+        "numpy",
+        "pandas"
+      ],
+      "evaluator_imports": [
+        "pandas"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 37,
+      "repository_lineage": "mad-lab-fau/biopsykit",
+      "domain": "Psychology and Cognitive science",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/mist_hr/",
+      "input_members": 1,
+      "input_declared_bytes": 172697,
+      "reference_sha256": "d125fb882553f17c07e150163e6c5dcefc8122ba69a57b60fc06f1683a3dd206",
+      "evaluator_sha256": "ce2cf840c683c7b5439d1d92c8e4399ff6000a84f126e1fa7aa5b68a9356e965",
+      "reference_imports": [
+        "biopsykit",
+        "json",
+        "os"
+      ],
+      "evaluator_imports": [
+        "json",
+        "math"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 40,
+      "repository_lineage": "anikaliu/camda-dili",
+      "domain": "Bioinformatics",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/dili_MD/",
+      "input_members": 3,
+      "input_declared_bytes": 15357798,
+      "reference_sha256": "c10c98721d6762b738cf44ac807de4a816cfff0c634d1edee0f13cacc8af5d57",
+      "evaluator_sha256": "0265388407cbaefb27a95412b496e95ebfc409c9f8f69b13389dc7f8fdfb691d",
+      "reference_imports": [
+        "numpy",
+        "pandas",
+        "rdkit",
+        "sklearn"
+      ],
+      "evaluator_imports": [
+        "numpy",
+        "pandas",
+        "sklearn"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 41,
+      "repository_lineage": "anikaliu/camda-dili",
+      "domain": "Bioinformatics",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/dili_MD/",
+      "input_members": 3,
+      "input_declared_bytes": 15357798,
+      "reference_sha256": "9c9554efea0dc4b8d4b16d3a1ea46cbe8371e4da7f88edbd2173d0aa2a73a5f7",
+      "evaluator_sha256": "c8ebb374add7f25fb6020d73586742cc777a492879bfeafe036c06ea460b1155",
+      "reference_imports": [
+        "numpy",
+        "pandas",
+        "rdkit",
+        "sklearn"
+      ],
+      "evaluator_imports": [
+        "numpy",
+        "pandas",
+        "sklearn"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 44,
+      "repository_lineage": "mad-lab-fau/biopsykit",
+      "domain": "Psychology and Cognitive science",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/sleep_imu_data/",
+      "input_members": 1,
+      "input_declared_bytes": 226707727,
+      "reference_sha256": "15011b1c1ba108668499f122ef6daa44efee01b3d666f02712dd2a93f4769569",
+      "evaluator_sha256": "7637f47cfebdf615d713a0c592e5401ee5cbac908bec52acdbf8891896897947",
+      "reference_imports": [
+        "biopsykit",
+        "json",
+        "pickle"
+      ],
+      "evaluator_imports": [
+        "json",
+        "math"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 45,
+      "repository_lineage": "mad-lab-fau/biopsykit",
+      "domain": "Psychology and Cognitive science",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/biopsykit_questionnaire_data/",
+      "input_members": 1,
+      "input_declared_bytes": 8451,
+      "reference_sha256": "7230f64b3e4218da89b4c2c9ca0e4f74bf6a578c193c9b62f0d79d2d1a3b70f0",
+      "evaluator_sha256": "489aec82424459ef743a0a10d9d76379774e5af4c93de76a3bdf373b30842928",
+      "reference_imports": [
+        "biopsykit",
+        "pickle"
+      ],
+      "evaluator_imports": [
+        "csv"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 53,
+      "repository_lineage": "rasterio/rasterio",
+      "domain": "Geographical Information Science",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/MountainLionNew/",
+      "input_members": 24,
+      "input_declared_bytes": 316771841,
+      "reference_sha256": "4cdf06801505ebc7fc451b799639f2c98f9ab5efef15bc0686e89651e89a97da",
+      "evaluator_sha256": "580a2ffea5a49a040471bb01709ccbd151a31f4028ca49642fb5f9d1201c41c7",
+      "reference_imports": [
+        "numpy",
+        "rasterio"
+      ],
+      "evaluator_imports": [
+        "numpy",
+        "rasterio"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": false,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 58,
+      "repository_lineage": "nriesterer/syllogistic-nvc",
+      "domain": "Psychology and Cognitive science",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/nvc/",
+      "input_members": 40,
+      "input_declared_bytes": 2746895,
+      "reference_sha256": "98c32a073b4801812df295f7afb10c4d459e8c00f2ba93a7dfa889fb911a9ef4",
+      "evaluator_sha256": "1c0adb7a9a7908c9a226909f698681c7288ff03a485896ab7ac0c6c5a84db868",
+      "reference_imports": [
+        "benchmark",
+        "ccobra",
+        "numpy",
+        "os",
+        "pandas"
+      ],
+      "evaluator_imports": [
+        "numpy",
+        "pandas"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 60,
+      "repository_lineage": "nriesterer/syllogistic-nvc",
+      "domain": "Psychology and Cognitive science",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/nvc/",
+      "input_members": 40,
+      "input_declared_bytes": 2746895,
+      "reference_sha256": "045f1ca12fda36de0a3b206c9e7cd059374e6c03cbeadeac0bddf9b49204ae8e",
+      "evaluator_sha256": "5192b404c91e656564ab3ccab9876e580c21733d0a28c0b7ad404dff04950658",
+      "reference_imports": [
+        "benchmark",
+        "ccobra",
+        "numpy",
+        "os",
+        "pandas"
+      ],
+      "evaluator_imports": [
+        "pandas"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 67,
+      "repository_lineage": "brand-d/cogsci-jnmf",
+      "domain": "Psychology and Cognitive science",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/CogSci_pattern_high_sim_data/",
+      "input_members": 9,
+      "input_declared_bytes": 24763,
+      "reference_sha256": "0a87d0d6601273a925daadb2a576f5dbf28bb089b44d926366066641e799a9e1",
+      "evaluator_sha256": "865a01fb9d0461d06bbd00a88180b33abb98bed98a9955213547f8fe83145a12",
+      "reference_imports": [
+        "ccobra",
+        "numpy",
+        "pandas"
+      ],
+      "evaluator_imports": [
+        "pandas"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": false,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 71,
+      "repository_lineage": "zitonglu1996/eeg2eeg",
+      "domain": "Psychology and Cognitive science",
+      "role": "development",
+      "dataset_prefix": "benchmark/datasets/thingseeg2/",
+      "input_members": 3,
+      "input_declared_bytes": 905216384,
+      "reference_sha256": "c8ec4f42e32635b68b108d82e6494cb42f0709ae0197be7068a86c2121899686",
+      "evaluator_sha256": "61dea5bd13a91f851c7ddb8eb987cff7887b57587861d686553f415c8c5228d4",
+      "reference_imports": [
+        "numpy",
+        "os",
+        "random",
+        "torch",
+        "tqdm",
+        "warnings"
+      ],
+      "evaluator_imports": [
+        "numpy",
+        "scipy",
+        "torch"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 72,
+      "repository_lineage": "zitonglu1996/eeg2eeg",
+      "domain": "Psychology and Cognitive science",
+      "role": "development",
+      "dataset_prefix": "benchmark/datasets/thingseeg2/",
+      "input_members": 3,
+      "input_declared_bytes": 905216384,
+      "reference_sha256": "b39c8f2e3401993edcf2d8079726e9637b9e46f3541bc296cfc2e62edfe71420",
+      "evaluator_sha256": "712380969320bb695191abdfad6c37fa28972f64164840e373cc6819a1d9a919",
+      "reference_imports": [
+        "numpy",
+        "os",
+        "random",
+        "torch",
+        "tqdm",
+        "warnings"
+      ],
+      "evaluator_imports": [
+        "numpy",
+        "scipy",
+        "torch"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 85,
+      "repository_lineage": "mad-lab-fau/biopsykit",
+      "domain": "Bioinformatics",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/saliva_data/",
+      "input_members": 1,
+      "input_declared_bytes": 2913,
+      "reference_sha256": "072ce52de6ccf586babc90e5e848274a7683054670fe4d606fb36f5cd6fde880",
+      "evaluator_sha256": "31920bb30c6926d2598c00ae8a1bd6d80158ed2afe3ed96ca8bb982f8858ceef",
+      "reference_imports": [
+        "biopsykit",
+        "json",
+        "pickle"
+      ],
+      "evaluator_imports": [
+        "json",
+        "math"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 87,
+      "repository_lineage": "scitools/iris",
+      "domain": "Geographical Information Science",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/polynomial_fit/",
+      "input_members": 1,
+      "input_declared_bytes": 1824028,
+      "reference_sha256": "a0dd607ab4fe7509d43e25d220aced5ba1f50d795f0ad01de22a2fc946759870",
+      "evaluator_sha256": "538d5247853e8da4ce98897e4ff566d1a52bc49e323adea770a4c6345bc1a6a5",
+      "reference_imports": [
+        "cftime",
+        "csv",
+        "iris",
+        "numpy"
+      ],
+      "evaluator_imports": [
+        "csv"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 90,
+      "repository_lineage": "brand-d/cogsci-jnmf",
+      "domain": "Psychology and Cognitive science",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/jnmf_data/",
+      "input_members": 2,
+      "input_declared_bytes": 488704,
+      "reference_sha256": "e1abdcc49cfda6c46c7dd7b886935d405a54c3f68c697bd1f5f3d4fa46ab0389",
+      "evaluator_sha256": "d7790063a10f6ea1639bdac70a36c338e1ca28c1b5043be23fecff4337c97317",
+      "reference_imports": [
+        "ccobra",
+        "numpy",
+        "pandas",
+        "sys",
+        "time"
+      ],
+      "evaluator_imports": [
+        "numpy"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 92,
+      "repository_lineage": "brand-d/cogsci-jnmf",
+      "domain": "Psychology and Cognitive science",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/jnmf_visualization/",
+      "input_members": 4,
+      "input_declared_bytes": 20640,
+      "reference_sha256": "54dd60e3028012a3bfab4af82d79ba2c2dce6cefe86f099abd44ca6ccb11b0ac",
+      "evaluator_sha256": "d93e5a5cf474343f67c32fe38304a757f02d8ab23bb76b86a17f60d71f4765ba",
+      "reference_imports": [
+        "json",
+        "numpy"
+      ],
+      "evaluator_imports": [
+        "json",
+        "numpy"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 101,
+      "repository_lineage": "ppdebreuck/modnet",
+      "domain": "Computational Chemistry",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/experimental_band_gap/",
+      "input_members": 2,
+      "input_declared_bytes": 12005646,
+      "reference_sha256": "13da04603c1756128e012c1dff49b72be7b0c9aeda42fed2cc533d81e1f4b971",
+      "evaluator_sha256": "d3b44aa30389046988a9a463482d1a9665981e1e93a555fdf2777c089f67a9a4",
+      "reference_imports": [
+        "modnet",
+        "os"
+      ],
+      "evaluator_imports": [
+        "pandas"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    },
+    {
+      "instance_id": 102,
+      "repository_lineage": "ppdebreuck/modnet",
+      "domain": "Computational Chemistry",
+      "role": "locked_candidate",
+      "dataset_prefix": "benchmark/datasets/ref_index/",
+      "input_members": 2,
+      "input_declared_bytes": 145826980,
+      "reference_sha256": "81e9d3857256ea995edf77038bb84c25fcb4b7be689b57bcd23ea8b966ee282a",
+      "evaluator_sha256": "43d8c4276c6235a51a57ddacff2dbebb7a67fc47f107835a356a979bcf8a6c8c",
+      "reference_imports": [
+        "modnet",
+        "os",
+        "pandas"
+      ],
+      "evaluator_imports": [
+        "pandas"
+      ],
+      "reference_network_call_flags": [],
+      "reference_literal_missing_archive_paths": [],
+      "reference_url_literal_count": 0,
+      "public_scientific_check_candidate": true,
+      "rights_status": "PENDING_SOURCE_SPECIFIC_REVIEW",
+      "transitive_helper_review": "PENDING",
+      "native_reference_execution": "NOT_RUN",
+      "native_scoring": "NOT_RUN",
+      "reason": "STATIC_REVIEW_IN_PROGRESS"
+    }
+  ]
+}
