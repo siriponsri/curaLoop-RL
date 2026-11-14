@@ -1,0 +1,16 @@
+{
+  "status": "RETAINED_BOOTSTRAP_AND_RESULT_COLLECTION_ERRORS",
+  "actual_matrix_executions": 1,
+  "patch_and_matrix_changed": false,
+  "before_first_start": {
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "[rtk] /!\\ No hook installed \u2014 run `rtk init -g` for automatic token savings\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"<string>\", line 38, in <module>\n  File \"<string>\", line 21, in main\n  File \"/home/chaw/curaloop-tasks/lr-sara-lr1-20261114-v1/code/saralr1_runtime_v1.py\", line 37, in run\n    control=TASK/'leases'/identity;control.mkdir(exist_ok=False);control.chmod(0o777)\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/pathlib.py\", line 1313, in mkdir\n    os.mkdir(self, mode)\nFileNotFoundError: [Errno 2] No such file or directory: '/home/chaw/curaloop-tasks/lr-sara-lr1-20261114-v1/leases/wall-probe-v1'\n"
+  },
+  "after_completed_matrix": {
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "[rtk] /!\\ No hook installed \u2014 run `rtk init -g` for automatic token savings\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"<string>\", line 20, in <module>\n  File \"unchanged-engineering-worker-tail\", line 17, in <module>\nNameError: name 'shutil' is not defined. Did you forget to import 'shutil'?\n"
+  },
+  "interpretation": "Lease parent was missing before any container existed. First actual execution completed; wrapper then lacked shutil for disk-report serialization. Existing artifacts were read without replay."
+}

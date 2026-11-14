@@ -1,0 +1,119 @@
+{
+  "status": "STATIC_POST_FAILURE_INSPECTION_ONLY",
+  "shared_library_entries": [
+    {
+      "path": "overlay/payload/usr/lib/x86_64-linux-gnu/libX11.so.6",
+      "symlink": true,
+      "target": "libX11.so.6.4.0",
+      "resolved_within_overlay": true,
+      "target_exists": true,
+      "sha256": "b03e563b316b8b53c7988f0ee91d6656cc425538e00947a8b14482d179e80099"
+    },
+    {
+      "path": "overlay/payload/usr/lib/x86_64-linux-gnu/libX11.so.6.4.0",
+      "symlink": false,
+      "target": null,
+      "resolved_within_overlay": true,
+      "target_exists": true,
+      "sha256": "b03e563b316b8b53c7988f0ee91d6656cc425538e00947a8b14482d179e80099"
+    },
+    {
+      "path": "overlay/payload/usr/lib/x86_64-linux-gnu/libXau.so.6",
+      "symlink": true,
+      "target": "libXau.so.6.0.0",
+      "resolved_within_overlay": true,
+      "target_exists": true,
+      "sha256": "4275ec5b14bec21770c44447b3a52977e211c7ba08745008f3a1783878e091bb"
+    },
+    {
+      "path": "overlay/payload/usr/lib/x86_64-linux-gnu/libXau.so.6.0.0",
+      "symlink": false,
+      "target": null,
+      "resolved_within_overlay": true,
+      "target_exists": true,
+      "sha256": "4275ec5b14bec21770c44447b3a52977e211c7ba08745008f3a1783878e091bb"
+    },
+    {
+      "path": "overlay/payload/usr/lib/x86_64-linux-gnu/libXdmcp.so.6",
+      "symlink": true,
+      "target": "libXdmcp.so.6.0.0",
+      "resolved_within_overlay": true,
+      "target_exists": true,
+      "sha256": "761409b24c818719f8c8a2a64a61c8ac6a3067f3d8882485dca64a98d7500040"
+    },
+    {
+      "path": "overlay/payload/usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0",
+      "symlink": false,
+      "target": null,
+      "resolved_within_overlay": true,
+      "target_exists": true,
+      "sha256": "761409b24c818719f8c8a2a64a61c8ac6a3067f3d8882485dca64a98d7500040"
+    },
+    {
+      "path": "overlay/payload/usr/lib/x86_64-linux-gnu/libXrender.so.1",
+      "symlink": true,
+      "target": "libXrender.so.1.3.0",
+      "resolved_within_overlay": true,
+      "target_exists": true,
+      "sha256": "39fed75f787ac251cba86e30ccd979e3df1f84dd73c63a75eeb86a18fd413e64"
+    },
+    {
+      "path": "overlay/payload/usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0",
+      "symlink": false,
+      "target": null,
+      "resolved_within_overlay": true,
+      "target_exists": true,
+      "sha256": "39fed75f787ac251cba86e30ccd979e3df1f84dd73c63a75eeb86a18fd413e64"
+    },
+    {
+      "path": "overlay/payload/usr/lib/x86_64-linux-gnu/libgomp.so.1",
+      "symlink": true,
+      "target": "libgomp.so.1.0.0",
+      "resolved_within_overlay": true,
+      "target_exists": true,
+      "sha256": "6456b504ac347bd50c419667440b691f6966ad8aff5309d2f06c977fe2f9debe"
+    },
+    {
+      "path": "overlay/payload/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0",
+      "symlink": false,
+      "target": null,
+      "resolved_within_overlay": true,
+      "target_exists": true,
+      "sha256": "6456b504ac347bd50c419667440b691f6966ad8aff5309d2f06c977fe2f9debe"
+    },
+    {
+      "path": "overlay/payload/usr/lib/x86_64-linux-gnu/libxcb.so.1",
+      "symlink": true,
+      "target": "libxcb.so.1.1.0",
+      "resolved_within_overlay": true,
+      "target_exists": true,
+      "sha256": "a1cde2cec9b7b8b38e4cca450c55c63651efb80a2458d76964b56b763043f533"
+    },
+    {
+      "path": "overlay/payload/usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0",
+      "symlink": false,
+      "target": null,
+      "resolved_within_overlay": true,
+      "target_exists": true,
+      "sha256": "a1cde2cec9b7b8b38e4cca450c55c63651efb80a2458d76964b56b763043f533"
+    }
+  ],
+  "env": [
+    "LD_LIBRARY_PATH=/overlay/payload/usr/lib/x86_64-linux-gnu:/overlay/payload/lib/x86_64-linux-gnu"
+  ],
+  "actual_library_reload_or_import": false,
+  "container_state": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 1,
+    "Error": "",
+    "StartedAt": "2026-11-14T09:32:59.292789773Z",
+    "FinishedAt": "2026-11-14T09:33:00.085139944Z"
+  },
+  "root_cause": "Dynamic loader search failure observed; no new load was attempted to distinguish causes"
+}

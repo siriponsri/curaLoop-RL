@@ -1,3 +1,44 @@
+# Current closeout: LR-SARA-LR1, 14 November 2026
+
+LR-SARA-LR1 is CLOSED_NO_GO_ENGINEERING_ACCEPTANCE with zero active jobs.
+Read docs/08_agent_rd/LR_SARA_LR1_FINAL_OWNER_REPORT_20261114.md and
+docs/evidence/lr-sara-lr1-20261114-v1/delivery-audit-v1.json. The one frozen
+matrix failed loading libXrender because libX11.so.6 was not found by the loader.
+Static inspection found that library and its target in the overlay; exact loader
+cause is unresolved. No matrix retry, new recipe or broader patch ran. Bootstrap
+and serialization errors are retained, with proof of only one actual matrix run.
+Environment continuation/native/scorer/agent/comparison/manuscript are NOT_RUN.
+Effect NOT_ESTIMABLE; ESE/JSS NOT_READY. No automatic CORE migration or new work.
+
+All 230 old pins pass; protected outcomes remain closed.
+Full 259-file/8-symlink return and
+local/remote rereads passed, followed by exact owned roots/6
+container cleanup and fresh absence. Retained bookings 9180 CPU seconds,
+zero allocated GPU; whole-host actual CPU NOT_ESTABLISHED. Accounts remain closed.
+Owner receives results before any new scientific/manuscript decision. Scoped
+main push is authorized; exact pushed SHA follows in the delivery/local receipt.
+Lower releases/closeouts are preserved history, not reusable authority.
+
+# Current owner release: LR-SARA-LR1, 14 November 2026
+
+Owner approved the expanded patch-to-results goal. Read
+research/manifests/lr_sara_lr1_release_20261114_v1.json and
+.local/lr-sara-lr1-20261114-v1/ledger.json. Fresh 80 CPU-hours/26 allocated
+GPU-hours; maximum four combined CPU equivalents/one GPU. Start 2026-11-14T16:21:37+07:00;
+deadline 2026-11-21T16:21:37+07:00. Separate engineering/preparation/native
+deadlines and caps in the release are binding. Do not reset prior accounts.
+
+One frozen two-defect patch, one acceptance matrix, one unfinished environment
+continuation and first native reference/task. Keep the 30 fixed roles and
+24 locked/12 connected source groups/three-domain gates. Advance passed gates
+to fixed development, prospective freeze and one matched comparison. Stop
+failed mandatory gates; no repeat qualification, recipe/model/dataset search,
+threshold change or automatic CORE migration. Preserve all release pins and
+old final16/private CF1/hidden outcomes. Parent sole writer; no subagents.
+No manuscript before owner results review; no paid API/rental, deployment or
+external team write. Fully return/hash-reread owned evidence before exact cleanup.
+Commit/push scoped main is authorized. Lower sections are preserved history.
+
 # Current closeout: LR-SARA route A stopped, 14 November 2026
 
 LR-SARA is CLOSED_NO_GO_FINAL_CORRECTION_OPERATION_FAILED with zero active jobs.

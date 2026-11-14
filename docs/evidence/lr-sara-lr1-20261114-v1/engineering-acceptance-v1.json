@@ -1,0 +1,90 @@
+{
+  "status": "NO_GO_ENGINEERING_ACCEPTANCE",
+  "receipt": {
+    "container_name": "curaloop-saralr1-engineering-acceptance-v1",
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 1,
+      "Error": "",
+      "StartedAt": "2026-11-14T09:32:59.292789773Z",
+      "FinishedAt": "2026-11-14T09:33:00.085139944Z"
+    },
+    "resources": {
+      "aggregate_cpu_seconds": 0.55089,
+      "exit_code": 1,
+      "stop_reason": null,
+      "network_receive_bytes": 0,
+      "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+      "initial_affinity_core": 71
+    }
+  },
+  "result": null,
+  "log": "Traceback (most recent call last):\n  File \"/control/program.py\", line 20, in <module>\n    ctypes.CDLL(str(payload/'usr/lib/x86_64-linux-gnu'/library))\n  File \"/usr/local/lib/python3.10/ctypes/__init__.py\", line 374, in __init__\n    self._handle = _dlopen(self._name, mode)\nOSError: libX11.so.6: cannot open shared object file: No such file or directory\n",
+  "first_start_proof": {
+    "status": "PROVEN_ZERO_CONTAINERS_ZERO_MATRIX_STARTS",
+    "owned_containers": [],
+    "lease_directory_existed": false,
+    "patch_program_and_runtime_unchanged": true,
+    "bookkeeping_action": "Create previously omitted task-owned leases parent; no patch or recipe modification"
+  },
+  "guard_probes": {
+    "wall": {
+      "container_name": "curaloop-saralr1-wall-probe-v1",
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 124,
+        "Error": "",
+        "StartedAt": "2026-11-14T09:32:52.403017087Z",
+        "FinishedAt": "2026-11-14T09:32:54.454203017Z"
+      },
+      "resources": {
+        "aggregate_cpu_seconds": 0.234573,
+        "exit_code": -9,
+        "stop_reason": "WALL_DEADLINE",
+        "network_receive_bytes": 0,
+        "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+        "initial_affinity_core": 71
+      }
+    },
+    "cpu": {
+      "container_name": "curaloop-saralr1-cpu-probe-v1",
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 124,
+        "Error": "",
+        "StartedAt": "2026-11-14T09:32:54.740532584Z",
+        "FinishedAt": "2026-11-14T09:32:59.037947472Z"
+      },
+      "resources": {
+        "aggregate_cpu_seconds": 4.211327,
+        "exit_code": -9,
+        "stop_reason": "CPU_CAP",
+        "network_receive_bytes": 0,
+        "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+        "initial_affinity_core": 71
+      }
+    }
+  },
+  "native_references": 0,
+  "provider_calls": 0,
+  "gpu_allocated_seconds": 0,
+  "collection_only": true
+}

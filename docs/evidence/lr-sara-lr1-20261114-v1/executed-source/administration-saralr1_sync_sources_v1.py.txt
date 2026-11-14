@@ -1,0 +1,11 @@
+"""Copy only new LR1 task source into the approved repository; preserve old source."""
+import hashlib,json,shutil
+from pathlib import Path
+ROOT=Path(r'C:\Users\User\Desktop\myProject\curaloop-rl');HERE=Path(__file__).resolve().parent
+l=json.loads((ROOT/'.local/lr-sara-lr1-20261114-v1/ledger.json').read_text());assert l['status'].startswith('ACTIVE')
+names=[]
+for p in (HERE/'saralr1-staging').glob('saralr1_*.py'):
+ q=ROOT/'tools'/p.name
+ if q.exists():assert q.read_bytes()==p.read_bytes(),('Do not overwrite executed/frozen task source',q)
+ else:shutil.copyfile(p,q);names.append(p.name)
+print(json.dumps(dict(status='PASS_NEW_NAMESPACE_SOURCE_ONLY',new_files=names)))

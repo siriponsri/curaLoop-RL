@@ -1,0 +1,58 @@
+{
+  "status": "PASS_FROZEN_CANDIDATE_AND_OFFLINE_SOURCE_IDENTITIES",
+  "current_sources": {
+    "tools/saralr1_acceptance_program_v1.py": "a823b2db5d0e4ce9402c2646bed1ea62b278477bdf6ba2637b7b4312372a0586",
+    "tools/saralr1_collect_engineering_v1.py": "f523a44e53ee2f7f939e8bf5dadfe05867c692fc6278d034ff7f5272921d385e",
+    "tools/saralr1_control_v1.py": "8ae980bd3650234b737d6ea19dbca4e92a8e6335e84dc706ed1e6240b7281d7d",
+    "tools/saralr1_engineering_worker_v1.py": "bee6715dc5434171ace2a8b74f4c077466d8386aaea50ec75edf76d4ed3319f1",
+    "tools/saralr1_finalize_v1.py": "db97cf69e6961b0e8758f3dde466fe8ee0dffec3dd4866a9b75a03fb101beb31",
+    "tools/saralr1_first_matrix_start_v1.py": "a4cb42d3d3ddaea2e58c3d41267bd8d6b6cd0cfde4756dfdf9aaa4edd9233a72",
+    "tools/saralr1_job_v1.py": "5a1cb4a025d86a920ef95904dcc149d01f13904c637e54673897a0325c50533f",
+    "tools/saralr1_overlay_v1.py": "1503dee1590e52aea3970371c8f599011dd4a5022e4fd60d758dddd87b562535",
+    "tools/saralr1_prepare_engineering_v1.py": "c79d220316552372d7684564d0b9c7589f7af167b25c8ef4fc432ce6e8a46fda",
+    "tools/saralr1_return_close_v1.py": "246d25403b711d60418283ab59f708e9c8f470f3f16b35afdee35a3ba73e8939",
+    "tools/saralr1_run_engineering_v1.py": "622430a97ce57c3276adaf68ce67f6ee3a75b83691edce2d0a1349bf43896a5b",
+    "tools/saralr1_runtime_v1.py": "b01a9724ebcd332381f647e62aca52b0d6844c9ce589730e4e517a2dfb89e6da",
+    "tools/saralr1_transport_v1.py": "47195b8a5c4f5292ccc76638f1ad1ce125b8464b9013c72f86a5160f8066ce2b",
+    "tools/saralr1_verify_delivery_v1.py": "874c94b8b478fa461e9528fbb9338bbd8ecb9f4d0d8787fe311c72ae15418363"
+  },
+  "executed_jobs": [
+    {
+      "job": "collect-completed-engineering-v1",
+      "path": "docs/evidence/lr-sara-lr1-20261114-v1/executed-source/collect-completed-engineering-v1/executed-source.py.txt",
+      "sha256": "f523a44e53ee2f7f939e8bf5dadfe05867c692fc6278d034ff7f5272921d385e",
+      "resource_receipt_sha256": "adbb717a2fa739d95d6e105a74d39f6ee20a97cb6f64deb6a5c335ca62ccc3b8"
+    },
+    {
+      "job": "engineering-acceptance-v1",
+      "path": "docs/evidence/lr-sara-lr1-20261114-v1/executed-source/engineering-acceptance-v1/executed-source.py.txt",
+      "sha256": "622430a97ce57c3276adaf68ce67f6ee3a75b83691edce2d0a1349bf43896a5b",
+      "resource_receipt_sha256": "ef7eab3187e2a334a200f94c9496f307522c6681e8137a8b7f7a686d75aa66ed"
+    },
+    {
+      "job": "first-matrix-start-v1",
+      "path": "docs/evidence/lr-sara-lr1-20261114-v1/executed-source/first-matrix-start-v1/executed-source.py.txt",
+      "sha256": "a4cb42d3d3ddaea2e58c3d41267bd8d6b6cd0cfde4756dfdf9aaa4edd9233a72",
+      "resource_receipt_sha256": "56c3d9c805923d31e591555a5dd5054e2c5659b90cbf05389a3c07b4585d84a6"
+    },
+    {
+      "job": "full-return-and-cleanup-v1",
+      "path": "docs/evidence/lr-sara-lr1-20261114-v1/executed-source/full-return-and-cleanup-v1/executed-source.py.txt",
+      "sha256": "246d25403b711d60418283ab59f708e9c8f470f3f16b35afdee35a3ba73e8939",
+      "resource_receipt_sha256": "0b27bf4af9cbee904cdde6868f9ddc290fdd7f0ef80da7857a78f1bdef10d9fb"
+    },
+    {
+      "job": "prepare-engineering-inputs-v1",
+      "path": "docs/evidence/lr-sara-lr1-20261114-v1/executed-source/prepare-engineering-inputs-v1/executed-source.py.txt",
+      "sha256": "c79d220316552372d7684564d0b9c7589f7af167b25c8ef4fc432ce6e8a46fda",
+      "resource_receipt_sha256": "2fdd8fc35bdbbcd0799ff9615f1a20bf09600c62a8e0c7f5c135d639df84c8c9"
+    }
+  ],
+  "embedded_syntax_checked": [
+    "saralr1_collect_engineering_v1.py:REMOTE",
+    "saralr1_first_matrix_start_v1.py:REMOTE",
+    "saralr1_return_close_v1.py:EXPORT",
+    "saralr1_runtime_v1.py:SUPERVISOR"
+  ],
+  "offline_checks_are_not_runtime_acceptance": true
+}
