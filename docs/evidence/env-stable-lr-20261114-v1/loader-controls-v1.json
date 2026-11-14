@@ -1,0 +1,193 @@
+{
+  "status": "MATCHED_LOADER_CONTROLS_COMPLETED",
+  "controls": {
+    "A": {
+      "receipt": {
+        "container_name": "curaloop-envstable-loader-a-v1",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T14:39:49.428684502Z",
+          "FinishedAt": "2026-11-14T14:39:50.227822244Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 0.589624,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "python": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+        "glibc": "2.41",
+        "at_secure": 0,
+        "ld_library_path": "/work/payload/usr/lib/x86_64-linux-gnu",
+        "loads": [
+          {
+            "library": "libgomp.so.1",
+            "pass_": true
+          },
+          {
+            "library": "libXrender.so.1",
+            "pass_": false,
+            "error_type": "OSError",
+            "error": "libX11.so.6: cannot open shared object file: No such file or directory",
+            "traceback": "Traceback (most recent call last):\n  File \"/control/program.py\", line 18, in <module>\n    try:ctypes.CDLL('/work/payload/usr/lib/x86_64-linux-gnu/'+name);out['loads'].append(dict(library=name,pass_=True))\n  File \"/usr/local/lib/python3.10/ctypes/__init__.py\", line 374, in __init__\n    self._handle = _dlopen(self._name, mode)\nOSError: libX11.so.6: cannot open shared object file: No such file or directory\n"
+          }
+        ],
+        "success": false
+      }
+    },
+    "B": {
+      "receipt": {
+        "container_name": "curaloop-envstable-loader-b-v1",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T14:39:51.582275411Z",
+          "FinishedAt": "2026-11-14T14:39:52.177913736Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 0.374322,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "python": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+        "glibc": "2.41",
+        "at_secure": 0,
+        "ld_library_path": "/work/payload/usr/lib/x86_64-linux-gnu",
+        "loads": [
+          {
+            "library": "libgomp.so.1",
+            "pass_": true
+          },
+          {
+            "library": "libXrender.so.1",
+            "pass_": true
+          }
+        ],
+        "success": true
+      }
+    },
+    "C": {
+      "receipt": {
+        "container_name": "curaloop-envstable-loader-c-v1",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T14:39:52.450727684Z",
+          "FinishedAt": "2026-11-14T14:39:53.245373303Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 0.602936,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "python": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+        "glibc": "2.41",
+        "at_secure": 0,
+        "ld_library_path": "/work/payload/usr/lib/x86_64-linux-gnu",
+        "loads": [
+          {
+            "library": "libgomp.so.1",
+            "pass_": true
+          },
+          {
+            "library": "libXrender.so.1",
+            "pass_": true
+          }
+        ],
+        "success": true
+      }
+    }
+  },
+  "guard_probes": {
+    "wall": {
+      "container_name": "curaloop-envstable-guard-wall-v1",
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 124,
+        "Error": "",
+        "StartedAt": "2026-11-14T14:39:42.750372689Z",
+        "FinishedAt": "2026-11-14T14:39:44.775294412Z"
+      },
+      "resources": {
+        "aggregate_cpu_seconds": 0.22939,
+        "exit_code": -9,
+        "stop_reason": "WALL_DEADLINE",
+        "network_receive_bytes": 0,
+        "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+        "initial_affinity_core": 71
+      }
+    },
+    "cpu": {
+      "container_name": "curaloop-envstable-guard-cpu-v1",
+      "state": {
+        "Status": "exited",
+        "Running": false,
+        "Paused": false,
+        "Restarting": false,
+        "OOMKilled": false,
+        "Dead": false,
+        "Pid": 0,
+        "ExitCode": 124,
+        "Error": "",
+        "StartedAt": "2026-11-14T14:39:45.065844456Z",
+        "FinishedAt": "2026-11-14T14:39:49.159458332Z"
+      },
+      "resources": {
+        "aggregate_cpu_seconds": 4.003468,
+        "exit_code": -9,
+        "stop_reason": "CPU_CAP",
+        "network_receive_bytes": 0,
+        "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+        "initial_affinity_core": 71
+      }
+    }
+  },
+  "mechanism_supported": true,
+  "base_image": "sha256:6ff506466f8b1e981719b468cc0023b8ef000b983cdec0eafe119d01f379e31d",
+  "host_process_cpu_seconds": 0.132857,
+  "native_references": 0,
+  "actor_calls": 0,
+  "gpu_allocated_seconds": 0
+}

@@ -1,0 +1,237 @@
+{
+  "status": "PASS_WITH_RETAINED_BOOKINGS",
+  "by_stage": {
+    "diagnosis": {
+      "booked_cpu_seconds": 2100,
+      "allocated_gpu_seconds": 0,
+      "caps": {
+        "cpu": 7200,
+        "gpu_allocated": 0
+      }
+    },
+    "build": {
+      "booked_cpu_seconds": 28500,
+      "allocated_gpu_seconds": 0,
+      "caps": {
+        "cpu": 28800,
+        "gpu_allocated": 0
+      }
+    },
+    "validation": {
+      "booked_cpu_seconds": 13200,
+      "allocated_gpu_seconds": 0,
+      "caps": {
+        "cpu": 14400,
+        "gpu_allocated": 7200
+      }
+    },
+    "analysis_return": {
+      "booked_cpu_seconds": 6900,
+      "allocated_gpu_seconds": 0,
+      "caps": {
+        "cpu": 7200,
+        "gpu_allocated": 0
+      }
+    }
+  },
+  "total_booked_cpu_seconds": 50700,
+  "total_booked_cpu_hours": 14.083333333333334,
+  "total_allocated_gpu_seconds": 0,
+  "whole_host_actual_cpu": "NOT_ESTABLISHED",
+  "bookings_are_actual_usage": false,
+  "components": [
+    {
+      "id": "initial-control-and-preparation-v1",
+      "stage": "diagnosis",
+      "cpu_seconds": 900,
+      "gpu_allocated_seconds": 0,
+      "status": "RETAINED_UNMETERED_ADMINISTRATION"
+    },
+    {
+      "id": "loader-controls-v1",
+      "stage": "diagnosis",
+      "cpu_seconds": 300,
+      "gpu_allocated_seconds": 0,
+      "status": "PASS",
+      "measured_cpu_seconds": 1.15625
+    },
+    {
+      "id": "remote-loader-controls-v1",
+      "stage": "diagnosis",
+      "cpu_seconds": 900,
+      "gpu_allocated_seconds": 0,
+      "status": "PASS_CONTROLS_CAPTURED",
+      "measured_host_process_cpu_seconds": 0.132857
+    },
+    {
+      "id": "profile-build-cycle1",
+      "stage": "build",
+      "cpu_seconds": 900,
+      "gpu_allocated_seconds": 0,
+      "status": "PASS",
+      "measured_cpu_seconds": 13.890625
+    },
+    {
+      "id": "remote-profile-build-cycle1",
+      "stage": "build",
+      "cpu_seconds": 18000,
+      "gpu_allocated_seconds": 0,
+      "status": "PROFILE_BUILD_CYCLE_1_COMPLETED",
+      "measured_host_process_cpu_seconds": 32.946943
+    },
+    {
+      "id": "engineering-cycle2",
+      "stage": "build",
+      "cpu_seconds": 300,
+      "gpu_allocated_seconds": 0,
+      "status": "PASS",
+      "measured_cpu_seconds": 1.15625
+    },
+    {
+      "id": "remote-engineering-cycle2",
+      "stage": "build",
+      "cpu_seconds": 4500,
+      "gpu_allocated_seconds": 0,
+      "status": "ENGINEERING_CYCLE_2_COMPLETED",
+      "measured_host_process_cpu_seconds": 0.139557
+    },
+    {
+      "id": "profile-workloads-v1",
+      "stage": "build",
+      "cpu_seconds": 300,
+      "gpu_allocated_seconds": 0,
+      "status": "PASS",
+      "measured_cpu_seconds": 1.15625
+    },
+    {
+      "id": "remote-substantive-workloads-v1",
+      "stage": "build",
+      "cpu_seconds": 1500,
+      "gpu_allocated_seconds": 0,
+      "status": "PROFILE_WORKLOADS_COMPLETED",
+      "measured_host_process_cpu_seconds": 0.126084
+    },
+    {
+      "id": "engineering-cycle3-v1",
+      "stage": "build",
+      "cpu_seconds": 300,
+      "gpu_allocated_seconds": 0,
+      "status": "FAIL",
+      "measured_cpu_seconds": 0.046875
+    },
+    {
+      "id": "remote-engineering-cycle3",
+      "stage": "build",
+      "cpu_seconds": 2400,
+      "gpu_allocated_seconds": 0,
+      "status": "ENGINEERING_CYCLE_3_COMPLETED",
+      "measured_host_process_cpu_seconds": 0.13039499999999998
+    },
+    {
+      "id": "engineering-cycle3-recovery-v1",
+      "stage": "build",
+      "cpu_seconds": 300,
+      "gpu_allocated_seconds": 0,
+      "status": "PASS",
+      "measured_cpu_seconds": 1.09375
+    },
+    {
+      "id": "offline-lock-cold-v1",
+      "stage": "validation",
+      "cpu_seconds": 300,
+      "gpu_allocated_seconds": 0,
+      "status": "PASS",
+      "measured_cpu_seconds": 1.359375
+    },
+    {
+      "id": "remote-offline-lock-cold-v1",
+      "stage": "validation",
+      "cpu_seconds": 2100,
+      "gpu_allocated_seconds": 0,
+      "status": "OFFLINE_RECONSTRUCTION_AND_COLD_STARTS_COMPLETED",
+      "measured_host_process_cpu_seconds": 0.21663899999999997
+    },
+    {
+      "id": "prepare-canaries-v1",
+      "stage": "validation",
+      "cpu_seconds": 300,
+      "gpu_allocated_seconds": 0,
+      "status": "PASS",
+      "measured_cpu_seconds": 11.390625
+    },
+    {
+      "id": "native-canaries-v1",
+      "stage": "validation",
+      "cpu_seconds": 600,
+      "gpu_allocated_seconds": 0,
+      "status": "PASS",
+      "measured_cpu_seconds": 10.109375
+    },
+    {
+      "id": "remote-native-canaries-v1",
+      "stage": "validation",
+      "cpu_seconds": 9900,
+      "gpu_allocated_seconds": 0,
+      "status": "FOUR_NATIVE_DEVELOPMENT_ATTEMPTS_COMPLETED",
+      "measured_host_process_cpu_seconds": 5.883242999999999
+    },
+    {
+      "id": "delivery-administration-v1",
+      "stage": "analysis_return",
+      "cpu_seconds": 600,
+      "gpu_allocated_seconds": 0,
+      "status": "RETAINED_UNMETERED_ADMINISTRATION"
+    },
+    {
+      "id": "full-export-v1",
+      "stage": "analysis_return",
+      "cpu_seconds": 300,
+      "gpu_allocated_seconds": 0,
+      "status": "PASS",
+      "measured_cpu_seconds": 1.71875
+    },
+    {
+      "id": "remote-full-export-v1",
+      "stage": "analysis_return",
+      "cpu_seconds": 2400,
+      "gpu_allocated_seconds": 0,
+      "status": "PASS_EXPORTED",
+      "measured_export_container_cpu_seconds": 469.321532,
+      "measured_remote_host_process_cpu_seconds": 0.11950999999999999
+    },
+    {
+      "id": "fetch-verify-full-v1",
+      "stage": "analysis_return",
+      "cpu_seconds": 1200,
+      "gpu_allocated_seconds": 0,
+      "status": "PASS",
+      "measured_cpu_seconds": 201.5
+    },
+    {
+      "id": "reread-exact-cleanup-v1",
+      "stage": "analysis_return",
+      "cpu_seconds": 300,
+      "gpu_allocated_seconds": 0,
+      "status": "PASS",
+      "measured_cpu_seconds": 2.03125
+    },
+    {
+      "id": "remote-exact-cleanup-v1",
+      "stage": "analysis_return",
+      "cpu_seconds": 1800,
+      "gpu_allocated_seconds": 0,
+      "status": "PASS_EXACT_OWNED_CLEANUP",
+      "measured_verification_container_cpu_seconds": 156.301737,
+      "measured_remote_host_process_cpu_seconds": 8.234268
+    },
+    {
+      "id": "closeout-documents-v1",
+      "stage": "analysis_return",
+      "cpu_seconds": 300,
+      "gpu_allocated_seconds": 0,
+      "status": "PASS",
+      "measured_cpu_seconds": 0.328125
+    }
+  ],
+  "ledger_sha256": "485fe7cd0d82df827dd8cc8b7596ed0ad50bdf2a2ee28ed98fb3c5f6ce7ed2d4"
+}

@@ -1,0 +1,831 @@
+{
+  "status": "PASS_EXACT_OWNED_CLEANUP",
+  "verification": {
+    "status": "PASS_REMOTE_FULL_REREAD_BEFORE_CLEANUP",
+    "files": 459502,
+    "directories": 54588,
+    "root_owned_directories_prepared": 49620,
+    "content_and_metadata_match": true,
+    "cpu_seconds": 156.301737
+  },
+  "deleted": {
+    "status": "PASS_OWNED_CONTENTS_REMOVED",
+    "top_level_entries": 46
+  },
+  "owner_directories_prepared": 4968,
+  "removed_containers": [
+    {
+      "id": "b625bbd6d60f",
+      "name": "/curaloop-envstable-cleanup-delete-v1"
+    },
+    {
+      "id": "df8f2a8da669",
+      "name": "/curaloop-envstable-cleanup-verify-v1"
+    },
+    {
+      "id": "8f878144a35f",
+      "name": "/curaloop-envstable-owned-export-v1"
+    },
+    {
+      "id": "902ae207ed9a",
+      "name": "/curaloop-envstable-grade-dev72-v1"
+    },
+    {
+      "id": "dba40bbdca8a",
+      "name": "/curaloop-envstable-native-dev72-v1"
+    },
+    {
+      "id": "e0efae69960e",
+      "name": "/curaloop-envstable-grade-dev71-v1"
+    },
+    {
+      "id": "dbafff432e0c",
+      "name": "/curaloop-envstable-native-dev71-v1"
+    },
+    {
+      "id": "06e385079e94",
+      "name": "/curaloop-envstable-grade-dev13-v1"
+    },
+    {
+      "id": "0b9124389997",
+      "name": "/curaloop-envstable-native-dev13-v1"
+    },
+    {
+      "id": "e2fabb73fd86",
+      "name": "/curaloop-envstable-native-dev12-v1"
+    },
+    {
+      "id": "6971be026df4",
+      "name": "/curaloop-envstable-cold2-ccobra"
+    },
+    {
+      "id": "bc8755c8a819",
+      "name": "/curaloop-envstable-cold2-profile-101"
+    },
+    {
+      "id": "83fb4e0d13a0",
+      "name": "/curaloop-envstable-cold2-profile-87"
+    },
+    {
+      "id": "1aa3f4d7f968",
+      "name": "/curaloop-envstable-cold2-profile-71"
+    },
+    {
+      "id": "9d487c89518c",
+      "name": "/curaloop-envstable-cold2-profile-53"
+    },
+    {
+      "id": "5721c343e1b7",
+      "name": "/curaloop-envstable-cold2-profile-37"
+    },
+    {
+      "id": "e2b039b77221",
+      "name": "/curaloop-envstable-cold2-profile-29"
+    },
+    {
+      "id": "8db56ba17e0f",
+      "name": "/curaloop-envstable-cold2-profile-21"
+    },
+    {
+      "id": "26026134e830",
+      "name": "/curaloop-envstable-cold2-profile-15"
+    },
+    {
+      "id": "71b87661b367",
+      "name": "/curaloop-envstable-cold2-profile-12"
+    },
+    {
+      "id": "5376642b7856",
+      "name": "/curaloop-envstable-cold2-prolif"
+    },
+    {
+      "id": "d9bc17b6c929",
+      "name": "/curaloop-envstable-cold2-papyrus"
+    },
+    {
+      "id": "c3702aa67448",
+      "name": "/curaloop-envstable-cold2-base"
+    },
+    {
+      "id": "a00a12e70750",
+      "name": "/curaloop-envstable-cold1-ccobra"
+    },
+    {
+      "id": "4fc21b225213",
+      "name": "/curaloop-envstable-cold1-profile-101"
+    },
+    {
+      "id": "ff1d261b8a6d",
+      "name": "/curaloop-envstable-cold1-profile-87"
+    },
+    {
+      "id": "22f2d3a2e840",
+      "name": "/curaloop-envstable-cold1-profile-71"
+    },
+    {
+      "id": "051770fc2dde",
+      "name": "/curaloop-envstable-cold1-profile-53"
+    },
+    {
+      "id": "f0d6acab51d2",
+      "name": "/curaloop-envstable-cold1-profile-37"
+    },
+    {
+      "id": "c5bc5c8622fe",
+      "name": "/curaloop-envstable-cold1-profile-29"
+    },
+    {
+      "id": "75f0bc133740",
+      "name": "/curaloop-envstable-cold1-profile-21"
+    },
+    {
+      "id": "944b92e9c526",
+      "name": "/curaloop-envstable-cold1-profile-15"
+    },
+    {
+      "id": "b9d165cbde6f",
+      "name": "/curaloop-envstable-cold1-profile-12"
+    },
+    {
+      "id": "2d1734ae144c",
+      "name": "/curaloop-envstable-cold1-prolif"
+    },
+    {
+      "id": "e632d15f23d6",
+      "name": "/curaloop-envstable-cold1-papyrus"
+    },
+    {
+      "id": "5010ed64b587",
+      "name": "/curaloop-envstable-cold1-base"
+    },
+    {
+      "id": "94bfcc70975f",
+      "name": "/curaloop-envstable-offline-reconstruct-v1"
+    },
+    {
+      "id": "3d1a6e82afe7",
+      "name": "/curaloop-envstable-workload-ccobra-v2"
+    },
+    {
+      "id": "cdb20261666b",
+      "name": "/curaloop-envstable-workload-profile-101-v2"
+    },
+    {
+      "id": "210459f0125b",
+      "name": "/curaloop-envstable-workload-profile-87-v2"
+    },
+    {
+      "id": "95a263574690",
+      "name": "/curaloop-envstable-workload-profile-71-v2"
+    },
+    {
+      "id": "4858c317b629",
+      "name": "/curaloop-envstable-workload-profile-53-v2"
+    },
+    {
+      "id": "e41af8cd96ad",
+      "name": "/curaloop-envstable-workload-profile-37-v2"
+    },
+    {
+      "id": "d507a5418f12",
+      "name": "/curaloop-envstable-workload-profile-29-v2"
+    },
+    {
+      "id": "aed7a018246c",
+      "name": "/curaloop-envstable-workload-profile-21-v2"
+    },
+    {
+      "id": "67b8276e4724",
+      "name": "/curaloop-envstable-workload-profile-15-v2"
+    },
+    {
+      "id": "f82c6e269933",
+      "name": "/curaloop-envstable-workload-profile-12-v2"
+    },
+    {
+      "id": "6c8a603747a5",
+      "name": "/curaloop-envstable-workload-prolif-v2"
+    },
+    {
+      "id": "b27210b28d51",
+      "name": "/curaloop-envstable-workload-papyrus-v2"
+    },
+    {
+      "id": "11fb4744c3e2",
+      "name": "/curaloop-envstable-workload-base-v2"
+    },
+    {
+      "id": "4c8a77100dca",
+      "name": "/curaloop-envstable-addon-builder-v3"
+    },
+    {
+      "id": "8242b2376850",
+      "name": "/curaloop-envstable-workload-ccobra-v1"
+    },
+    {
+      "id": "bac0aa4188eb",
+      "name": "/curaloop-envstable-workload-profile-101-v1"
+    },
+    {
+      "id": "0b0da2bbc44c",
+      "name": "/curaloop-envstable-workload-profile-87-v1"
+    },
+    {
+      "id": "99bd716ce663",
+      "name": "/curaloop-envstable-workload-profile-71-v1"
+    },
+    {
+      "id": "6de635370b8b",
+      "name": "/curaloop-envstable-workload-profile-53-v1"
+    },
+    {
+      "id": "30cfd3e6a335",
+      "name": "/curaloop-envstable-workload-profile-37-v1"
+    },
+    {
+      "id": "c83825184110",
+      "name": "/curaloop-envstable-workload-profile-29-v1"
+    },
+    {
+      "id": "15ce4e424381",
+      "name": "/curaloop-envstable-workload-profile-21-v1"
+    },
+    {
+      "id": "7183da45e6c1",
+      "name": "/curaloop-envstable-workload-profile-15-v1"
+    },
+    {
+      "id": "8beb8899e8d8",
+      "name": "/curaloop-envstable-workload-profile-12-v1"
+    },
+    {
+      "id": "76f5818f0dce",
+      "name": "/curaloop-envstable-workload-prolif-v1"
+    },
+    {
+      "id": "f04b403ecbe4",
+      "name": "/curaloop-envstable-workload-papyrus-v1"
+    },
+    {
+      "id": "ba29d5c117fc",
+      "name": "/curaloop-envstable-workload-base-v1"
+    },
+    {
+      "id": "df29aa03fc19",
+      "name": "/curaloop-envstable-imports-ccobra-v2"
+    },
+    {
+      "id": "e3c16a33d50e",
+      "name": "/curaloop-envstable-imports-profile-101-v2"
+    },
+    {
+      "id": "904461b8e62c",
+      "name": "/curaloop-envstable-imports-profile-87-v2"
+    },
+    {
+      "id": "b2568a82b26a",
+      "name": "/curaloop-envstable-imports-profile-71-v2"
+    },
+    {
+      "id": "a144c73401da",
+      "name": "/curaloop-envstable-imports-profile-53-v2"
+    },
+    {
+      "id": "68e334b06b9a",
+      "name": "/curaloop-envstable-imports-profile-37-v2"
+    },
+    {
+      "id": "ec9a41b38f74",
+      "name": "/curaloop-envstable-imports-profile-29-v2"
+    },
+    {
+      "id": "009c35c81177",
+      "name": "/curaloop-envstable-imports-profile-21-v2"
+    },
+    {
+      "id": "2d3ddcf15aeb",
+      "name": "/curaloop-envstable-imports-profile-15-v2"
+    },
+    {
+      "id": "acdab34925e9",
+      "name": "/curaloop-envstable-imports-profile-12-v2"
+    },
+    {
+      "id": "e0a4119dc040",
+      "name": "/curaloop-envstable-imports-prolif-v2"
+    },
+    {
+      "id": "2c89478ea000",
+      "name": "/curaloop-envstable-imports-papyrus-v2"
+    },
+    {
+      "id": "0f147da0a7b7",
+      "name": "/curaloop-envstable-imports-base-v2"
+    },
+    {
+      "id": "7a7c23a35576",
+      "name": "/curaloop-envstable-library-builder-v2"
+    },
+    {
+      "id": "8a7af26ce4b5",
+      "name": "/curaloop-envstable-elf-audit-v2"
+    },
+    {
+      "id": "eb99d355c100",
+      "name": "/curaloop-envstable-imports-ccobra-v1"
+    },
+    {
+      "id": "aaafea8d37fc",
+      "name": "/curaloop-envstable-install-ccobra-v1"
+    },
+    {
+      "id": "b3391941b35c",
+      "name": "/curaloop-envstable-imports-profile-101-v1"
+    },
+    {
+      "id": "5d93ad722dee",
+      "name": "/curaloop-envstable-install-profile-101-v1"
+    },
+    {
+      "id": "237706f891f6",
+      "name": "/curaloop-envstable-imports-profile-87-v1"
+    },
+    {
+      "id": "65191a711594",
+      "name": "/curaloop-envstable-install-profile-87-v1"
+    },
+    {
+      "id": "97eaa00f0e2c",
+      "name": "/curaloop-envstable-imports-profile-71-v1"
+    },
+    {
+      "id": "a0d9bf651bff",
+      "name": "/curaloop-envstable-install-profile-71-v1"
+    },
+    {
+      "id": "1b4822560c03",
+      "name": "/curaloop-envstable-imports-profile-53-v1"
+    },
+    {
+      "id": "ab60605cb8ae",
+      "name": "/curaloop-envstable-install-profile-53-v1"
+    },
+    {
+      "id": "447e332bdb10",
+      "name": "/curaloop-envstable-imports-profile-37-v1"
+    },
+    {
+      "id": "eb81524da26f",
+      "name": "/curaloop-envstable-install-profile-37-v1"
+    },
+    {
+      "id": "0219c8b548fa",
+      "name": "/curaloop-envstable-imports-profile-29-v1"
+    },
+    {
+      "id": "0a8ef61c94b6",
+      "name": "/curaloop-envstable-install-profile-29-v1"
+    },
+    {
+      "id": "aa9a1e43de92",
+      "name": "/curaloop-envstable-imports-profile-21-v1"
+    },
+    {
+      "id": "440cccd7b0c1",
+      "name": "/curaloop-envstable-imports-profile-15-v1"
+    },
+    {
+      "id": "f78bfa79658e",
+      "name": "/curaloop-envstable-install-profile-15-v1"
+    },
+    {
+      "id": "a668408f5963",
+      "name": "/curaloop-envstable-imports-profile-12-v1"
+    },
+    {
+      "id": "c327de9d580c",
+      "name": "/curaloop-envstable-install-profile-12-v1"
+    },
+    {
+      "id": "08e6f8125d8b",
+      "name": "/curaloop-envstable-imports-prolif-v1"
+    },
+    {
+      "id": "ff69f291b709",
+      "name": "/curaloop-envstable-imports-papyrus-v1"
+    },
+    {
+      "id": "a69c5b05bec0",
+      "name": "/curaloop-envstable-imports-base-v1"
+    },
+    {
+      "id": "b14fa766e6c6",
+      "name": "/curaloop-envstable-loader-c-v1"
+    },
+    {
+      "id": "8e59e6010c99",
+      "name": "/curaloop-envstable-loader-b-v1"
+    },
+    {
+      "id": "d6984a7848e0",
+      "name": "/curaloop-envstable-prepare-b-v1"
+    },
+    {
+      "id": "c88e7326c433",
+      "name": "/curaloop-envstable-loader-a-v1"
+    },
+    {
+      "id": "eeaa1dc1a62f",
+      "name": "/curaloop-envstable-guard-cpu-v1"
+    },
+    {
+      "id": "0a44efed1ed2",
+      "name": "/curaloop-envstable-guard-wall-v1"
+    }
+  ],
+  "helper_receipts": [
+    {
+      "name": "curaloop-envstable-cleanup-verify-v1",
+      "id": "df8f2a8da6698fed81d019d507919fe73b9a9d100f437e0cff509fbfc2a91644",
+      "exit_code": "0",
+      "stdout": "{\"status\": \"PASS_REMOTE_FULL_REREAD_BEFORE_CLEANUP\", \"files\": 459502, \"directories\": 54588, \"root_owned_directories_prepared\": 49620, \"content_and_metadata_match\": true, \"cpu_seconds\": 156.301737}\n",
+      "stderr": "",
+      "program_sha256": "67235f5d5ac506d53d7bd4617e9a85ebadf24e24f0441b1b66d1ddb0b1b10cf8",
+      "host_config": {
+        "Binds": null,
+        "ContainerIDFile": "",
+        "LogConfig": {
+          "Type": "json-file",
+          "Config": {}
+        },
+        "NetworkMode": "none",
+        "PortBindings": {},
+        "RestartPolicy": {
+          "Name": "no",
+          "MaximumRetryCount": 0
+        },
+        "AutoRemove": false,
+        "VolumeDriver": "",
+        "VolumesFrom": null,
+        "ConsoleSize": [
+          0,
+          0
+        ],
+        "CapAdd": null,
+        "CapDrop": [
+          "ALL"
+        ],
+        "CgroupnsMode": "private",
+        "Dns": null,
+        "DnsOptions": [],
+        "DnsSearch": [],
+        "ExtraHosts": null,
+        "GroupAdd": null,
+        "IpcMode": "private",
+        "Cgroup": "",
+        "Links": null,
+        "OomScoreAdj": 0,
+        "PidMode": "",
+        "Privileged": false,
+        "PublishAllPorts": false,
+        "ReadonlyRootfs": true,
+        "SecurityOpt": [
+          "no-new-privileges"
+        ],
+        "UTSMode": "",
+        "UsernsMode": "",
+        "ShmSize": 67108864,
+        "Runtime": "runc",
+        "Isolation": "",
+        "CpuShares": 0,
+        "Memory": 2147483648,
+        "NanoCpus": 1000000000,
+        "CgroupParent": "",
+        "BlkioWeight": 0,
+        "BlkioWeightDevice": [],
+        "BlkioDeviceReadBps": [],
+        "BlkioDeviceWriteBps": [],
+        "BlkioDeviceReadIOps": [],
+        "BlkioDeviceWriteIOps": [],
+        "CpuPeriod": 0,
+        "CpuQuota": 0,
+        "CpuRealtimePeriod": 0,
+        "CpuRealtimeRuntime": 0,
+        "CpusetCpus": "",
+        "CpusetMems": "",
+        "Devices": [],
+        "DeviceCgroupRules": null,
+        "DeviceRequests": null,
+        "MemoryReservation": 0,
+        "MemorySwap": 2147483648,
+        "MemorySwappiness": null,
+        "OomKillDisable": false,
+        "PidsLimit": 32,
+        "Ulimits": null,
+        "CpuCount": 0,
+        "CpuPercent": 0,
+        "IOMaximumIOps": 0,
+        "IOMaximumBandwidth": 0,
+        "Mounts": [
+          {
+            "Type": "bind",
+            "Source": "/home/chaw/curaloop-tasks/env-stable-lr-20261114-v1",
+            "Target": "/owned"
+          },
+          {
+            "Type": "bind",
+            "Source": "/home/chaw/curaloop-tasks/env-stable-lr-20261114-v1-export",
+            "Target": "/exports"
+          }
+        ],
+        "MaskedPaths": [
+          "/proc/acpi",
+          "/proc/asound",
+          "/proc/interrupts",
+          "/proc/kcore",
+          "/proc/keys",
+          "/proc/latency_stats",
+          "/proc/sched_debug",
+          "/proc/scsi",
+          "/proc/timer_list",
+          "/proc/timer_stats",
+          "/sys/devices/virtual/powercap",
+          "/sys/firmware",
+          "/sys/devices/system/cpu/cpu0/thermal_throttle",
+          "/sys/devices/system/cpu/cpu1/thermal_throttle",
+          "/sys/devices/system/cpu/cpu2/thermal_throttle",
+          "/sys/devices/system/cpu/cpu3/thermal_throttle",
+          "/sys/devices/system/cpu/cpu4/thermal_throttle",
+          "/sys/devices/system/cpu/cpu5/thermal_throttle",
+          "/sys/devices/system/cpu/cpu6/thermal_throttle",
+          "/sys/devices/system/cpu/cpu7/thermal_throttle",
+          "/sys/devices/system/cpu/cpu8/thermal_throttle",
+          "/sys/devices/system/cpu/cpu9/thermal_throttle",
+          "/sys/devices/system/cpu/cpu10/thermal_throttle",
+          "/sys/devices/system/cpu/cpu11/thermal_throttle",
+          "/sys/devices/system/cpu/cpu12/thermal_throttle",
+          "/sys/devices/system/cpu/cpu13/thermal_throttle",
+          "/sys/devices/system/cpu/cpu14/thermal_throttle",
+          "/sys/devices/system/cpu/cpu15/thermal_throttle",
+          "/sys/devices/system/cpu/cpu16/thermal_throttle",
+          "/sys/devices/system/cpu/cpu17/thermal_throttle",
+          "/sys/devices/system/cpu/cpu18/thermal_throttle",
+          "/sys/devices/system/cpu/cpu19/thermal_throttle",
+          "/sys/devices/system/cpu/cpu20/thermal_throttle",
+          "/sys/devices/system/cpu/cpu21/thermal_throttle",
+          "/sys/devices/system/cpu/cpu22/thermal_throttle",
+          "/sys/devices/system/cpu/cpu23/thermal_throttle",
+          "/sys/devices/system/cpu/cpu24/thermal_throttle",
+          "/sys/devices/system/cpu/cpu25/thermal_throttle",
+          "/sys/devices/system/cpu/cpu26/thermal_throttle",
+          "/sys/devices/system/cpu/cpu27/thermal_throttle",
+          "/sys/devices/system/cpu/cpu28/thermal_throttle",
+          "/sys/devices/system/cpu/cpu29/thermal_throttle",
+          "/sys/devices/system/cpu/cpu30/thermal_throttle",
+          "/sys/devices/system/cpu/cpu31/thermal_throttle",
+          "/sys/devices/system/cpu/cpu32/thermal_throttle",
+          "/sys/devices/system/cpu/cpu33/thermal_throttle",
+          "/sys/devices/system/cpu/cpu34/thermal_throttle",
+          "/sys/devices/system/cpu/cpu35/thermal_throttle",
+          "/sys/devices/system/cpu/cpu36/thermal_throttle",
+          "/sys/devices/system/cpu/cpu37/thermal_throttle",
+          "/sys/devices/system/cpu/cpu38/thermal_throttle",
+          "/sys/devices/system/cpu/cpu39/thermal_throttle",
+          "/sys/devices/system/cpu/cpu40/thermal_throttle",
+          "/sys/devices/system/cpu/cpu41/thermal_throttle",
+          "/sys/devices/system/cpu/cpu42/thermal_throttle",
+          "/sys/devices/system/cpu/cpu43/thermal_throttle",
+          "/sys/devices/system/cpu/cpu44/thermal_throttle",
+          "/sys/devices/system/cpu/cpu45/thermal_throttle",
+          "/sys/devices/system/cpu/cpu46/thermal_throttle",
+          "/sys/devices/system/cpu/cpu47/thermal_throttle",
+          "/sys/devices/system/cpu/cpu48/thermal_throttle",
+          "/sys/devices/system/cpu/cpu49/thermal_throttle",
+          "/sys/devices/system/cpu/cpu50/thermal_throttle",
+          "/sys/devices/system/cpu/cpu51/thermal_throttle",
+          "/sys/devices/system/cpu/cpu52/thermal_throttle",
+          "/sys/devices/system/cpu/cpu53/thermal_throttle",
+          "/sys/devices/system/cpu/cpu54/thermal_throttle",
+          "/sys/devices/system/cpu/cpu55/thermal_throttle",
+          "/sys/devices/system/cpu/cpu56/thermal_throttle",
+          "/sys/devices/system/cpu/cpu57/thermal_throttle",
+          "/sys/devices/system/cpu/cpu58/thermal_throttle",
+          "/sys/devices/system/cpu/cpu59/thermal_throttle",
+          "/sys/devices/system/cpu/cpu60/thermal_throttle",
+          "/sys/devices/system/cpu/cpu61/thermal_throttle",
+          "/sys/devices/system/cpu/cpu62/thermal_throttle",
+          "/sys/devices/system/cpu/cpu63/thermal_throttle",
+          "/sys/devices/system/cpu/cpu64/thermal_throttle",
+          "/sys/devices/system/cpu/cpu65/thermal_throttle",
+          "/sys/devices/system/cpu/cpu66/thermal_throttle",
+          "/sys/devices/system/cpu/cpu67/thermal_throttle",
+          "/sys/devices/system/cpu/cpu68/thermal_throttle",
+          "/sys/devices/system/cpu/cpu69/thermal_throttle",
+          "/sys/devices/system/cpu/cpu70/thermal_throttle",
+          "/sys/devices/system/cpu/cpu71/thermal_throttle"
+        ],
+        "ReadonlyPaths": [
+          "/proc/bus",
+          "/proc/fs",
+          "/proc/irq",
+          "/proc/sys",
+          "/proc/sysrq-trigger"
+        ]
+      }
+    },
+    {
+      "name": "curaloop-envstable-cleanup-delete-v1",
+      "id": "b625bbd6d60f37bf66346480fbc27b16fdb66e2e0708c4612f88f43c3c0c300a",
+      "exit_code": "0",
+      "stdout": "{\"status\": \"PASS_OWNED_CONTENTS_REMOVED\", \"top_level_entries\": 46}\n",
+      "stderr": "",
+      "program_sha256": "0ab51a42c8af55b3ccafd5ddf6ff2d0bd7fb6415907a79f367f8c38b1e263cb7",
+      "host_config": {
+        "Binds": null,
+        "ContainerIDFile": "",
+        "LogConfig": {
+          "Type": "json-file",
+          "Config": {}
+        },
+        "NetworkMode": "none",
+        "PortBindings": {},
+        "RestartPolicy": {
+          "Name": "no",
+          "MaximumRetryCount": 0
+        },
+        "AutoRemove": false,
+        "VolumeDriver": "",
+        "VolumesFrom": null,
+        "ConsoleSize": [
+          0,
+          0
+        ],
+        "CapAdd": null,
+        "CapDrop": [
+          "ALL"
+        ],
+        "CgroupnsMode": "private",
+        "Dns": null,
+        "DnsOptions": [],
+        "DnsSearch": [],
+        "ExtraHosts": null,
+        "GroupAdd": null,
+        "IpcMode": "private",
+        "Cgroup": "",
+        "Links": null,
+        "OomScoreAdj": 0,
+        "PidMode": "",
+        "Privileged": false,
+        "PublishAllPorts": false,
+        "ReadonlyRootfs": true,
+        "SecurityOpt": [
+          "no-new-privileges"
+        ],
+        "UTSMode": "",
+        "UsernsMode": "",
+        "ShmSize": 67108864,
+        "Runtime": "runc",
+        "Isolation": "",
+        "CpuShares": 0,
+        "Memory": 2147483648,
+        "NanoCpus": 1000000000,
+        "CgroupParent": "",
+        "BlkioWeight": 0,
+        "BlkioWeightDevice": [],
+        "BlkioDeviceReadBps": [],
+        "BlkioDeviceWriteBps": [],
+        "BlkioDeviceReadIOps": [],
+        "BlkioDeviceWriteIOps": [],
+        "CpuPeriod": 0,
+        "CpuQuota": 0,
+        "CpuRealtimePeriod": 0,
+        "CpuRealtimeRuntime": 0,
+        "CpusetCpus": "",
+        "CpusetMems": "",
+        "Devices": [],
+        "DeviceCgroupRules": null,
+        "DeviceRequests": null,
+        "MemoryReservation": 0,
+        "MemorySwap": 2147483648,
+        "MemorySwappiness": null,
+        "OomKillDisable": false,
+        "PidsLimit": 32,
+        "Ulimits": null,
+        "CpuCount": 0,
+        "CpuPercent": 0,
+        "IOMaximumIOps": 0,
+        "IOMaximumBandwidth": 0,
+        "Mounts": [
+          {
+            "Type": "bind",
+            "Source": "/home/chaw/curaloop-tasks/env-stable-lr-20261114-v1",
+            "Target": "/owned"
+          },
+          {
+            "Type": "bind",
+            "Source": "/home/chaw/curaloop-tasks/env-stable-lr-20261114-v1-export",
+            "Target": "/exports"
+          }
+        ],
+        "MaskedPaths": [
+          "/proc/acpi",
+          "/proc/asound",
+          "/proc/interrupts",
+          "/proc/kcore",
+          "/proc/keys",
+          "/proc/latency_stats",
+          "/proc/sched_debug",
+          "/proc/scsi",
+          "/proc/timer_list",
+          "/proc/timer_stats",
+          "/sys/devices/virtual/powercap",
+          "/sys/firmware",
+          "/sys/devices/system/cpu/cpu0/thermal_throttle",
+          "/sys/devices/system/cpu/cpu1/thermal_throttle",
+          "/sys/devices/system/cpu/cpu2/thermal_throttle",
+          "/sys/devices/system/cpu/cpu3/thermal_throttle",
+          "/sys/devices/system/cpu/cpu4/thermal_throttle",
+          "/sys/devices/system/cpu/cpu5/thermal_throttle",
+          "/sys/devices/system/cpu/cpu6/thermal_throttle",
+          "/sys/devices/system/cpu/cpu7/thermal_throttle",
+          "/sys/devices/system/cpu/cpu8/thermal_throttle",
+          "/sys/devices/system/cpu/cpu9/thermal_throttle",
+          "/sys/devices/system/cpu/cpu10/thermal_throttle",
+          "/sys/devices/system/cpu/cpu11/thermal_throttle",
+          "/sys/devices/system/cpu/cpu12/thermal_throttle",
+          "/sys/devices/system/cpu/cpu13/thermal_throttle",
+          "/sys/devices/system/cpu/cpu14/thermal_throttle",
+          "/sys/devices/system/cpu/cpu15/thermal_throttle",
+          "/sys/devices/system/cpu/cpu16/thermal_throttle",
+          "/sys/devices/system/cpu/cpu17/thermal_throttle",
+          "/sys/devices/system/cpu/cpu18/thermal_throttle",
+          "/sys/devices/system/cpu/cpu19/thermal_throttle",
+          "/sys/devices/system/cpu/cpu20/thermal_throttle",
+          "/sys/devices/system/cpu/cpu21/thermal_throttle",
+          "/sys/devices/system/cpu/cpu22/thermal_throttle",
+          "/sys/devices/system/cpu/cpu23/thermal_throttle",
+          "/sys/devices/system/cpu/cpu24/thermal_throttle",
+          "/sys/devices/system/cpu/cpu25/thermal_throttle",
+          "/sys/devices/system/cpu/cpu26/thermal_throttle",
+          "/sys/devices/system/cpu/cpu27/thermal_throttle",
+          "/sys/devices/system/cpu/cpu28/thermal_throttle",
+          "/sys/devices/system/cpu/cpu29/thermal_throttle",
+          "/sys/devices/system/cpu/cpu30/thermal_throttle",
+          "/sys/devices/system/cpu/cpu31/thermal_throttle",
+          "/sys/devices/system/cpu/cpu32/thermal_throttle",
+          "/sys/devices/system/cpu/cpu33/thermal_throttle",
+          "/sys/devices/system/cpu/cpu34/thermal_throttle",
+          "/sys/devices/system/cpu/cpu35/thermal_throttle",
+          "/sys/devices/system/cpu/cpu36/thermal_throttle",
+          "/sys/devices/system/cpu/cpu37/thermal_throttle",
+          "/sys/devices/system/cpu/cpu38/thermal_throttle",
+          "/sys/devices/system/cpu/cpu39/thermal_throttle",
+          "/sys/devices/system/cpu/cpu40/thermal_throttle",
+          "/sys/devices/system/cpu/cpu41/thermal_throttle",
+          "/sys/devices/system/cpu/cpu42/thermal_throttle",
+          "/sys/devices/system/cpu/cpu43/thermal_throttle",
+          "/sys/devices/system/cpu/cpu44/thermal_throttle",
+          "/sys/devices/system/cpu/cpu45/thermal_throttle",
+          "/sys/devices/system/cpu/cpu46/thermal_throttle",
+          "/sys/devices/system/cpu/cpu47/thermal_throttle",
+          "/sys/devices/system/cpu/cpu48/thermal_throttle",
+          "/sys/devices/system/cpu/cpu49/thermal_throttle",
+          "/sys/devices/system/cpu/cpu50/thermal_throttle",
+          "/sys/devices/system/cpu/cpu51/thermal_throttle",
+          "/sys/devices/system/cpu/cpu52/thermal_throttle",
+          "/sys/devices/system/cpu/cpu53/thermal_throttle",
+          "/sys/devices/system/cpu/cpu54/thermal_throttle",
+          "/sys/devices/system/cpu/cpu55/thermal_throttle",
+          "/sys/devices/system/cpu/cpu56/thermal_throttle",
+          "/sys/devices/system/cpu/cpu57/thermal_throttle",
+          "/sys/devices/system/cpu/cpu58/thermal_throttle",
+          "/sys/devices/system/cpu/cpu59/thermal_throttle",
+          "/sys/devices/system/cpu/cpu60/thermal_throttle",
+          "/sys/devices/system/cpu/cpu61/thermal_throttle",
+          "/sys/devices/system/cpu/cpu62/thermal_throttle",
+          "/sys/devices/system/cpu/cpu63/thermal_throttle",
+          "/sys/devices/system/cpu/cpu64/thermal_throttle",
+          "/sys/devices/system/cpu/cpu65/thermal_throttle",
+          "/sys/devices/system/cpu/cpu66/thermal_throttle",
+          "/sys/devices/system/cpu/cpu67/thermal_throttle",
+          "/sys/devices/system/cpu/cpu68/thermal_throttle",
+          "/sys/devices/system/cpu/cpu69/thermal_throttle",
+          "/sys/devices/system/cpu/cpu70/thermal_throttle",
+          "/sys/devices/system/cpu/cpu71/thermal_throttle"
+        ],
+        "ReadonlyPaths": [
+          "/proc/bus",
+          "/proc/fs",
+          "/proc/irq",
+          "/proc/sys",
+          "/proc/sysrq-trigger"
+        ]
+      }
+    }
+  ],
+  "source_root_absent": true,
+  "export_root_absent": true,
+  "owned_containers_remaining": [],
+  "shared_images_models_services_modified": false,
+  "remote_host_process_cpu_seconds": 8.234268
+}

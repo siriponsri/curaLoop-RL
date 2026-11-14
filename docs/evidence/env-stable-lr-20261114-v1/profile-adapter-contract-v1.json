@@ -1,0 +1,439 @@
+{
+  "schema": "curaloop.environment-adapter.v1",
+  "base_image": "sha256:6ff506466f8b1e981719b468cc0023b8ef000b983cdec0eafe119d01f379e31d",
+  "python": "3.10.22",
+  "content_lock_sha256": "5ace608c826864c25d842e940decbfc687481d4e0977565a4f4ea5bccd64f951",
+  "artifact_system_libraries": "systemlibs-v2",
+  "library_environment": "LD_LIBRARY_PATH=/syslibs/usr/lib/x86_64-linux-gnu",
+  "library_mount": "/syslibs",
+  "profile_mount": "/env",
+  "cache_environment": [
+    "HOME=/home/worker",
+    "PYSTOW_HOME=/home/worker/.data",
+    "XDG_CACHE_HOME=/home/worker/.cache",
+    "MPLCONFIGDIR=/home/worker/.cache/matplotlib"
+  ],
+  "all_cache_directories_prepared_before_exec": true,
+  "thread_environment": [
+    "OMP_NUM_THREADS=1",
+    "OPENBLAS_NUM_THREADS=1",
+    "MKL_NUM_THREADS=1",
+    "NUMEXPR_NUM_THREADS=1",
+    "LOKY_MAX_CPU_COUNT=1"
+  ],
+  "other_environment": [
+    "MPLBACKEND=Agg",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "TF_USE_LEGACY_KERAS=1"
+  ],
+  "profiles": {
+    "base": {
+      "pythonpath": "/env/base",
+      "readonly_artifact_directories": [
+        "env/base"
+      ],
+      "workload": "tools/envstable_workloads_v2.py base"
+    },
+    "papyrus": {
+      "pythonpath": "/env/papyrus:/env/base",
+      "readonly_artifact_directories": [
+        "env/papyrus",
+        "env/base"
+      ],
+      "workload": "tools/envstable_workloads_v2.py papyrus"
+    },
+    "prolif": {
+      "pythonpath": "/env/prolif:/env/base",
+      "readonly_artifact_directories": [
+        "env/prolif",
+        "env/base"
+      ],
+      "workload": "tools/envstable_workloads_v2.py prolif"
+    },
+    "profile-12": {
+      "pythonpath": "/env/addons-profile12:/env/profile-12:/env/base",
+      "readonly_artifact_directories": [
+        "env/profile-12",
+        "env/addons-profile12",
+        "env/base"
+      ],
+      "workload": "tools/envstable_workloads_v2.py profile-12"
+    },
+    "profile-15": {
+      "pythonpath": "/env/profile-15:/env/base",
+      "readonly_artifact_directories": [
+        "env/profile-15",
+        "env/base"
+      ],
+      "workload": "tools/envstable_workloads_v2.py profile-15"
+    },
+    "profile-21": {
+      "pythonpath": "/env/profile-21:/env/base",
+      "readonly_artifact_directories": [
+        "env/profile-21",
+        "env/base"
+      ],
+      "workload": "tools/envstable_workloads_v2.py profile-21"
+    },
+    "profile-29": {
+      "pythonpath": "/env/profile-29:/env/base",
+      "readonly_artifact_directories": [
+        "env/profile-29",
+        "env/base"
+      ],
+      "workload": "tools/envstable_workloads_v2.py profile-29"
+    },
+    "profile-37": {
+      "pythonpath": "/env/profile-37:/env/base",
+      "readonly_artifact_directories": [
+        "env/profile-37",
+        "env/base"
+      ],
+      "workload": "tools/envstable_workloads_v2.py profile-37"
+    },
+    "profile-53": {
+      "pythonpath": "/env/profile-53:/env/base",
+      "readonly_artifact_directories": [
+        "env/profile-53",
+        "env/base"
+      ],
+      "workload": "tools/envstable_workloads_v2.py profile-53"
+    },
+    "profile-71": {
+      "pythonpath": "/env/profile-71:/env/base",
+      "readonly_artifact_directories": [
+        "env/profile-71",
+        "env/base"
+      ],
+      "workload": "tools/envstable_workloads_v2.py profile-71"
+    },
+    "profile-87": {
+      "pythonpath": "/env/profile-87:/env/base",
+      "readonly_artifact_directories": [
+        "env/profile-87",
+        "env/base"
+      ],
+      "workload": "tools/envstable_workloads_v2.py profile-87"
+    },
+    "profile-101": {
+      "pythonpath": "/env/profile-101:/env/base",
+      "readonly_artifact_directories": [
+        "env/profile-101",
+        "env/base"
+      ],
+      "workload": "tools/envstable_workloads_v2.py profile-101"
+    },
+    "ccobra": {
+      "pythonpath": "/env/ccobra:/env/base",
+      "readonly_artifact_directories": [
+        "env/ccobra",
+        "env/base"
+      ],
+      "workload": "tools/envstable_workloads_v2.py ccobra"
+    }
+  },
+  "tasks": {
+    "5": {
+      "profile": "base",
+      "required_imports": [
+        "numpy",
+        "pandas",
+        "sklearn"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "16": {
+      "profile": "base",
+      "required_imports": [
+        "csv",
+        "os",
+        "rdkit"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "18": {
+      "profile": "base",
+      "required_imports": [
+        "numpy",
+        "os",
+        "pandas",
+        "pickle",
+        "rdkit",
+        "sklearn",
+        "zipfile"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "19": {
+      "profile": "base",
+      "required_imports": [
+        "numpy",
+        "os",
+        "pandas",
+        "pickle",
+        "rdkit",
+        "sklearn",
+        "zipfile"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "40": {
+      "profile": "base",
+      "required_imports": [
+        "numpy",
+        "pandas",
+        "rdkit",
+        "sklearn"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "41": {
+      "profile": "base",
+      "required_imports": [
+        "numpy",
+        "pandas",
+        "rdkit",
+        "sklearn"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "22": {
+      "profile": "papyrus",
+      "required_imports": [
+        "pandas",
+        "papyrus_scripts"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "26": {
+      "profile": "prolif",
+      "required_imports": [
+        "MDAnalysis",
+        "pandas",
+        "prolif",
+        "sklearn"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "12": {
+      "profile": "profile-12",
+      "required_imports": [
+        "DeepPurpose",
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "shutil"
+      ],
+      "native_status": "See native-development-canaries-v1.json"
+    },
+    "13": {
+      "profile": "profile-12",
+      "required_imports": [
+        "DeepPurpose",
+        "numpy",
+        "pandas",
+        "sklearn",
+        "warnings"
+      ],
+      "native_status": "See native-development-canaries-v1.json"
+    },
+    "15": {
+      "profile": "profile-15",
+      "required_imports": [
+        "chemprop",
+        "os",
+        "pandas",
+        "shutil",
+        "sklearn",
+        "subprocess"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "21": {
+      "profile": "profile-21",
+      "required_imports": [
+        "geopandas",
+        "pandas"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "29": {
+      "profile": "profile-29",
+      "required_imports": [
+        "neurokit2",
+        "pandas"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "34": {
+      "profile": "profile-29",
+      "required_imports": [
+        "neurokit2",
+        "pandas"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "35": {
+      "profile": "profile-29",
+      "required_imports": [
+        "matplotlib",
+        "neurokit2",
+        "numpy",
+        "pandas"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "37": {
+      "profile": "profile-37",
+      "required_imports": [
+        "biopsykit",
+        "json",
+        "math",
+        "os"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "44": {
+      "profile": "profile-37",
+      "required_imports": [
+        "biopsykit",
+        "json",
+        "math",
+        "pickle"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "45": {
+      "profile": "profile-37",
+      "required_imports": [
+        "biopsykit",
+        "csv",
+        "pickle"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "85": {
+      "profile": "profile-37",
+      "required_imports": [
+        "biopsykit",
+        "json",
+        "math",
+        "pickle"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "53": {
+      "profile": "profile-53",
+      "required_imports": [
+        "numpy",
+        "rasterio"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "71": {
+      "profile": "profile-71",
+      "required_imports": [
+        "numpy",
+        "os",
+        "random",
+        "scipy",
+        "torch",
+        "tqdm",
+        "warnings"
+      ],
+      "native_status": "See native-development-canaries-v1.json"
+    },
+    "72": {
+      "profile": "profile-71",
+      "required_imports": [
+        "numpy",
+        "os",
+        "random",
+        "scipy",
+        "torch",
+        "tqdm",
+        "warnings"
+      ],
+      "native_status": "See native-development-canaries-v1.json"
+    },
+    "87": {
+      "profile": "profile-87",
+      "required_imports": [
+        "cftime",
+        "csv",
+        "iris",
+        "numpy"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "101": {
+      "profile": "profile-101",
+      "required_imports": [
+        "modnet",
+        "os",
+        "pandas"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "102": {
+      "profile": "profile-101",
+      "required_imports": [
+        "modnet",
+        "os",
+        "pandas"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "58": {
+      "profile": "ccobra",
+      "required_imports": [
+        "ccobra",
+        "numpy",
+        "os",
+        "pandas"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "60": {
+      "profile": "ccobra",
+      "required_imports": [
+        "ccobra",
+        "numpy",
+        "os",
+        "pandas"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "67": {
+      "profile": "ccobra",
+      "required_imports": [
+        "ccobra",
+        "numpy",
+        "pandas"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "90": {
+      "profile": "ccobra",
+      "required_imports": [
+        "ccobra",
+        "numpy",
+        "pandas",
+        "sys",
+        "time"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    },
+    "92": {
+      "profile": "ccobra",
+      "required_imports": [
+        "json",
+        "numpy"
+      ],
+      "native_status": "NOT_RUN_LOCKED"
+    }
+  },
+  "interpretation": "Metadata adapter for the installed artifact; not a new scientific release or complete native qualification"
+}

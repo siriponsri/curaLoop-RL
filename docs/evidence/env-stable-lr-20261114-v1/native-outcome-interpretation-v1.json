@@ -1,0 +1,63 @@
+{
+  "cases": [
+    {
+      "case_id": 12,
+      "reference_exit": 124,
+      "stop_reason": "CPU_CAP",
+      "aggregate_cpu_seconds": 2097.239413,
+      "score": null,
+      "grader": null
+    },
+    {
+      "case_id": 13,
+      "reference_exit": 0,
+      "stop_reason": null,
+      "aggregate_cpu_seconds": 76.506089,
+      "score": 1,
+      "grader": {
+        "status": "PASS_GRADER_EXECUTION",
+        "score": 1,
+        "detail": "{'data_correctness': True, 'func_correctness': True}",
+        "raw_result": [
+          1,
+          "{'data_correctness': True, 'func_correctness': True}"
+        ]
+      }
+    },
+    {
+      "case_id": 71,
+      "reference_exit": 0,
+      "stop_reason": null,
+      "aggregate_cpu_seconds": 168.891559,
+      "score": 1,
+      "grader": {
+        "status": "PASS_GRADER_EXECUTION",
+        "score": 1,
+        "detail": "0.606264194250314",
+        "raw_result": [
+          1,
+          "0.606264194250314"
+        ]
+      }
+    },
+    {
+      "case_id": 72,
+      "reference_exit": 0,
+      "stop_reason": null,
+      "aggregate_cpu_seconds": 514.258958,
+      "score": 0,
+      "grader": {
+        "status": "PASS_GRADER_EXECUTION",
+        "score": 0,
+        "detail": "0.08197791232298561",
+        "raw_result": [
+          0,
+          "0.08197791232298561"
+        ]
+      }
+    }
+  ],
+  "scope": "One unchanged development reference per task; no agent efficacy",
+  "resource_caps_are_our_engineering_allocation": true,
+  "capacity_failure_does_not_establish_dependency_or_algorithm_failure": true
+}

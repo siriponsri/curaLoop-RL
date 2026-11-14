@@ -1,3 +1,41 @@
+# Current closeout: ENV-STABLE-LR
+
+The authorized engineering work order completed as RUNTIME_ARTIFACT_PASS_NATIVE_ACCEPTANCE_FAILED. Read
+docs/08_agent_rd/ENV_STABLE_LR_FINAL_OWNER_REPORT_20261114.md and
+docs/evidence/env-stable-lr-20261114-v1/delivery-audit-v1.json.
+Thirteen workloads, offline content reconstruction and 26 cold checks passed.
+Four unchanged development canaries ran once each; retain all native outcomes.
+No locked reference/actor comparison/manuscript ran; ESE/JSS readiness is not
+established. Full return/local+remote reread/exact cleanup/fresh absence passed.
+Preserve all old pins, ledgers, final16/private CF1/hidden outcomes. No automatic
+new science/qualification/migration. Scoped main push authorized at closeout.
+Lower release records remain history and do not reopen accounts.
+
+# Active owner release: ENV-STABLE-LR
+
+The owner approved engineering stabilization: fresh 16 CPU-hours/two allocated
+GPU-hours/72 hours, maximum four CPU equivalents/one GPU. Read
+research/manifests/env_stable_release_20261114_v1.json and
+.local/env-stable-lr-20261114-v1/ledger.json. Start 2026-11-14T21:35:05+07:00;
+deadline 2026-11-17T21:35:05+07:00. Do not reset clocks or old accounts.
+Repair in-scope engineering errors within at most three recorded cycles;
+do not stop at the first recoverable packaging/import/report error. Separate
+builder/fresh runtime, prove loader controls, lock/reconstruct all fixed-30
+profiles, two clean starts and unchanged development canaries 12/13/71/72 once.
+No locked reference/actor, manuscript, new model/data/base, host permission or
+paid service. Parent sole writer; no subagents. Preserve all pins/protected
+outcomes, append project memory, fully return/reread owned remote artifacts
+before exact cleanup, then commit/push scoped main. Lower sections are history.
+
+# Project engineering memory
+
+Read docs/00_project/ENGINEERING_MEMORY.md before harness, environment or
+maintenance work. It records confirmed errors, hypotheses, owner-approved repair
+boundaries and intentional dataset-copy deletion with restore paths.
+Budget approval does not make a proposed environment or experiment complete.
+Current long-goal proposal: docs/08_agent_rd/ENVIRONMENT_STABILIZATION_LONG_GOAL_20261114.md.
+Lower release/closeout records remain preserved history.
+
 # Current closeout: LR-SARA-LR1, 14 November 2026
 
 LR-SARA-LR1 is CLOSED_NO_GO_ENGINEERING_ACCEPTANCE with zero active jobs.

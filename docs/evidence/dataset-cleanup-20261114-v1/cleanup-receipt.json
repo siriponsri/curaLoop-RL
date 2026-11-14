@@ -1,0 +1,30 @@
+{
+  "closed_ledger_unchanged": true,
+  "removed_apparent_bytes": 2774958031,
+  "status": "PASS_AUTHORIZED_DUPLICATE_CLEANUP",
+  "removed_apparent_GiB": 2.584381057880819,
+  "unique_datasets_deleted": false,
+  "restore_map": [
+    {
+      "sha256": "48b0272a88b17dbd29777c217e1b4fb2b019b92e11cc2add847409db9541b890",
+      "keep": "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\research\\raw_data\\external-benchmarks\\scicode-2024\\evaluator-private\\test_data.h5",
+      "restore": "Copy canonical file to this exact historical assets path, then verify SHA-256.",
+      "bytes": 1049345865,
+      "removed": "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.local\\lr-sc1-20261113-v1\\remote-return-v1\\files\\assets\\test_data.h5"
+    },
+    {
+      "sha256": "3c94a1f848f0c49507e95f58f8698096b9eadc7b4da4160a44d27b999dfa7a23",
+      "member_manifest": "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.local\\lr-sara-20261114-v1\\native-assets-v1\\private-member-manifest.json",
+      "removed": "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.local\\lr-sara-20261114-v1\\native-assets-v1\\tree",
+      "bytes": 1725612166,
+      "restore": "Recreate only manifest-selected archive members at the historical tree path, checking every file SHA-256.",
+      "keep": "C:\\Users\\User\\Desktop\\myProject\\curaloop-rl\\.local\\lr-sara-20261114-v1\\native-assets-v1\\native-assets.tar.gz"
+    }
+  ],
+  "dataset_labels_parsed": false,
+  "all_targets_absent": true,
+  "deleted_files": 216,
+  "utc": "2026-11-14T14:29:32.4592984+00:00",
+  "preservation_pins_passed": 230,
+  "canonical_files_rehashed_and_retained": true
+}

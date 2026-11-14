@@ -1,0 +1,80 @@
+$ErrorActionPreference = 'Stop'
+$repoRoot = 'C:\Users\User\Desktop\myProject\curaloop-rl'
+$auditRoot = 'C:\Users\User\Documents\ChatGPT\Drug Discovery\dataset-cleanup-20261114-v1'
+if (Test-Path -LiteralPath $auditRoot) { throw 'Existing cleanup receipt: inspect before any replay.' }
+$expectedRoot = [System.IO.Path]::GetFullPath($repoRoot)
+$resolvedRoot = (Resolve-Path -LiteralPath $repoRoot).ProviderPath
+if (-not [string]::Equals($resolvedRoot,$expectedRoot,[StringComparison]::OrdinalIgnoreCase)) { throw 'Unexpected repository root.' }
+$candidateFile = Join-Path $repoRoot '.local\lr-sc1-20261113-v1\remote-return-v1\files\assets\test_data.h5'
+$candidateTree = Join-Path $repoRoot '.local\lr-sara-20261114-v1\native-assets-v1\tree'
+$canonicalFile = Join-Path $repoRoot 'research\raw_data\external-benchmarks\scicode-2024\evaluator-private\test_data.h5'
+$canonicalArchive = Join-Path $repoRoot '.local\lr-sara-20261114-v1\native-assets-v1\native-assets.tar.gz'
+$memberManifest = Join-Path $repoRoot '.local\lr-sara-20261114-v1\native-assets-v1\private-member-manifest.json'
+$expectedFileHash = '48b0272a88b17dbd29777c217e1b4fb2b019b92e11cc2add847409db9541b890'
+$expectedArchiveHash = '3c94a1f848f0c49507e95f58f8698096b9eadc7b4da4160a44d27b999dfa7a23'
+
+function Assert-OwnedPath([string]$path) {
+    $absolute = [System.IO.Path]::GetFullPath($path)
+    $resolved = (Resolve-Path -LiteralPath $path).ProviderPath
+    if (-not $absolute.StartsWith($expectedRoot + '\',[StringComparison]::OrdinalIgnoreCase)) { throw 'Path outside intended repository.' }
+    if (-not [string]::Equals($absolute,$resolved,[StringComparison]::OrdinalIgnoreCase)) { throw 'Unexpected resolved path.' }
+    $cursor = Get-Item -LiteralPath $path -Force
+    while ($null -ne $cursor) {
+        if (($cursor.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0) { throw 'Reparse point denied.' }
+        if ([string]::Equals($cursor.FullName,$expectedRoot,[StringComparison]::OrdinalIgnoreCase)) { break }
+        $cursor = if ($cursor -is [System.IO.DirectoryInfo]) { $cursor.Parent } else { $cursor.Directory }
+    }
+    if ($null -eq $cursor) { throw 'Repository ancestor not found.' }
+}
+foreach ($path in @($candidateFile,$candidateTree,$canonicalFile,$canonicalArchive,$memberManifest)) { Assert-OwnedPath $path }
+if ((Get-Item -LiteralPath $candidateFile).Length -ne 1049345865) { throw 'Unexpected SciCode candidate size.' }
+if ((Get-FileHash -LiteralPath $candidateFile -Algorithm SHA256).Hash.ToLowerInvariant() -ne $expectedFileHash) { throw 'Candidate hash changed.' }
+if ((Get-FileHash -LiteralPath $canonicalFile -Algorithm SHA256).Hash.ToLowerInvariant() -ne $expectedFileHash) { throw 'Canonical SciCode hash mismatch.' }
+if ((Get-FileHash -LiteralPath $canonicalArchive -Algorithm SHA256).Hash.ToLowerInvariant() -ne $expectedArchiveHash) { throw 'Canonical native archive mismatch.' }
+$manifest = Get-Content -LiteralPath $memberManifest -Raw | ConvertFrom-Json
+$allTreeEntries = @(Get-ChildItem -LiteralPath $candidateTree -Recurse -Force)
+foreach ($entry in $allTreeEntries) {
+    if (($entry.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0) { throw 'Reparse point in expanded tree.' }
+    Assert-OwnedPath $entry.FullName
+}
+$treeFiles = @($allTreeEntries | Where-Object { -not $_.PSIsContainer })
+if ($treeFiles.Count -ne 215 -or @($manifest.PSObject.Properties).Count -ne 215) { throw 'Unexpected tree member set.' }
+$treeBytes = [int64]0
+foreach ($entry in $treeFiles) {
+    $relative = $entry.FullName.Substring($candidateTree.Length + 1).Replace('\','/')
+    $record = $manifest.PSObject.Properties[$relative]
+    if ($null -eq $record -or $entry.Length -ne $record.Value.bytes) { throw 'Tree size/member mismatch.' }
+    if ((Get-FileHash -LiteralPath $entry.FullName -Algorithm SHA256).Hash.ToLowerInvariant() -ne $record.Value.sha256) { throw 'Tree content changed.' }
+    $treeBytes += $entry.Length
+}
+if ($treeBytes -ne 1725612166) { throw 'Unexpected expanded byte total.' }
+$release = Get-Content -LiteralPath (Join-Path $repoRoot 'research\manifests\lr_sara_lr1_release_20261114_v1.json') -Raw | ConvertFrom-Json
+foreach ($pin in $release.preservation_pins.PSObject.Properties) {
+    $pinPath = [System.IO.Path]::GetFullPath((Join-Path $repoRoot $pin.Name))
+    if ($pinPath.StartsWith($candidateTree + '\',[StringComparison]::OrdinalIgnoreCase) -or [string]::Equals($pinPath,$candidateFile,[StringComparison]::OrdinalIgnoreCase)) { throw 'Target is preservation-pinned.' }
+    if ((Get-FileHash -LiteralPath $pinPath -Algorithm SHA256).Hash.ToLowerInvariant() -ne $pin.Value) { throw ('Preservation mismatch: ' + $pin.Name) }
+}
+$closedLedger = Join-Path $repoRoot '.local\lr-sara-lr1-20261114-v1\ledger.json'
+$ledger = Get-Content -LiteralPath $closedLedger -Raw | ConvertFrom-Json
+if ($ledger.status -ne 'CLOSED_NO_GO_ENGINEERING_ACCEPTANCE' -or $ledger.active_jobs.Count -ne 0) { throw 'Current account is not inactive.' }
+$ledgerHash = (Get-FileHash -LiteralPath $closedLedger -Algorithm SHA256).Hash.ToLowerInvariant()
+$restore = @(
+    @{removed=$candidateFile;keep=$canonicalFile;sha256=$expectedFileHash;bytes=1049345865;restore='Copy canonical file to this exact historical assets path, then verify SHA-256.'},
+    @{removed=$candidateTree;keep=$canonicalArchive;sha256=$expectedArchiveHash;bytes=$treeBytes;member_manifest=$memberManifest;restore='Recreate only manifest-selected archive members at the historical tree path, checking every file SHA-256.'}
+)
+New-Item -ItemType Directory -Path $auditRoot | Out-Null
+@{status='PRE_DELETE_VERIFIED';utc=[DateTimeOffset]::UtcNow.ToString('o');authorized_targets=$restore;preservation_pins=@($release.preservation_pins.PSObject.Properties).Count;closed_ledger_sha256=$ledgerHash;no_dataset_values_parsed=$true} | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $auditRoot 'pre-delete-verification.json') -Encoding utf8
+
+# Exact absolute targets have been checked above. Native PowerShell handles all deletion.
+Remove-Item -LiteralPath $candidateFile -Force
+Remove-Item -LiteralPath $candidateTree -Recurse -Force
+if ((Test-Path -LiteralPath $candidateFile) -or (Test-Path -LiteralPath $candidateTree)) { throw 'Fresh absence check failed.' }
+if ((Get-FileHash -LiteralPath $canonicalFile -Algorithm SHA256).Hash.ToLowerInvariant() -ne $expectedFileHash) { throw 'Canonical data changed after deletion.' }
+if ((Get-FileHash -LiteralPath $canonicalArchive -Algorithm SHA256).Hash.ToLowerInvariant() -ne $expectedArchiveHash) { throw 'Canonical archive changed after deletion.' }
+if ((Get-FileHash -LiteralPath $closedLedger -Algorithm SHA256).Hash.ToLowerInvariant() -ne $ledgerHash) { throw 'Closed ledger changed.' }
+foreach ($pin in $release.preservation_pins.PSObject.Properties) {
+    if ((Get-FileHash -LiteralPath (Join-Path $repoRoot $pin.Name) -Algorithm SHA256).Hash.ToLowerInvariant() -ne $pin.Value) { throw 'Post-delete preservation mismatch.' }
+}
+$receipt = @{status='PASS_AUTHORIZED_DUPLICATE_CLEANUP';utc=[DateTimeOffset]::UtcNow.ToString('o');deleted_files=216;removed_apparent_bytes=2774958031;removed_apparent_GiB=(2774958031 / 1GB);all_targets_absent=$true;canonical_files_rehashed_and_retained=$true;preservation_pins_passed=230;closed_ledger_unchanged=$true;dataset_labels_parsed=$false;restore_map=$restore;unique_datasets_deleted=$false}
+$receipt | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath (Join-Path $auditRoot 'cleanup-receipt.json') -Encoding utf8
+$receipt | ConvertTo-Json -Depth 4

@@ -1,0 +1,224 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "tools/envstable_adapter_contract_v1.py",
+      "sha256": "90565b1df97feb5411075f593bf128511e84818f1347c76c7e8e02afac9663c7",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_build_worker_v1.py",
+      "sha256": "89a2c8b76e22f30d8fae68a1805f4a8723beb81f372fcb6cc2e8c9cebeb570fa",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_canary_worker_v1.py",
+      "sha256": "e185cb0e75deac7d93bfd353a1bb4b31bd58366ec45df5434904c12d5d97cdf1",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_cleanup_programs_v1.py",
+      "sha256": "bc8d079e362e6a77458b2a0baaf7443c668432e86f4bca9afea2b9dc928e7048",
+      "syntax": "PASS",
+      "embedded_programs": [
+        "VERIFY",
+        "DELETE",
+        "REMOTE",
+        "ABSENCE"
+      ]
+    },
+    {
+      "path": "tools/envstable_closeout_v1.py",
+      "sha256": "6f38eb43dd1b71842f9b39ecefc0b03d6b2c0de287b22e88bfb88699a76b4a61",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_continue_cycle3_v1.py",
+      "sha256": "14f7fd81a1ee4db7017d5315f149303bb7857481b001b1d70f96f99819fbfaa8",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_control_v1.py",
+      "sha256": "28d4a02a5fb0a9ac0a1f7d5dae53e69237e606624c914acc5cc0863aa710f5f4",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_delivery_v1.py",
+      "sha256": "1a4bf0a1d4287747e65ff14504bf0c1c9fb1a7497432d52ded42b0eac1411314",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_delivery_v2.py",
+      "sha256": "6ec4434357daffb3bed5f96fa760e7a71a79134b48907f6d9d565578408b3db9",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_diagnosis_worker_v1.py",
+      "sha256": "9d672c061f03e2bb3b6d29875d53545c64721154f8df4fd9b8f61b51a0282e2c",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_finalize_delivery_v1.py",
+      "sha256": "1e42d2d9791ede9b939e26a9d8a9c584dc798df93a6efa7b63deac6674a6defe",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_finalize_delivery_v2.py",
+      "sha256": "3d6422c0b6f6dc7bdf66264807eca4ee00e1eed95fbb58c2f6c92d4e19b8b5ea",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_job_v1.py",
+      "sha256": "13bc8839c552b369e930233b96ed0402da17d31ead0283ab253d3e158c2a9032",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_lock_worker_v1.py",
+      "sha256": "c07e6cc72b0d1104cf1d43d0b01333166f16237334125f3c5a073c9db136ea93",
+      "syntax": "PASS",
+      "embedded_programs": [
+        "LOCK"
+      ]
+    },
+    {
+      "path": "tools/envstable_overlay_v1.py",
+      "sha256": "1503dee1590e52aea3970371c8f599011dd4a5022e4fd60d758dddd87b562535",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_prepare_canaries_v1.py",
+      "sha256": "f4c503e0e92cd9ab079c671f358f232085481fadb6142d415cf9f393fbfb8b30",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_progress_v1.py",
+      "sha256": "9261eda17d1a686a8476a7d0be23e6fb1cc225a2152ba66a6d42b5b7f865f5e8",
+      "syntax": "PASS",
+      "embedded_programs": [
+        "REMOTE"
+      ]
+    },
+    {
+      "path": "tools/envstable_repair_worker_v2.py",
+      "sha256": "83c432711c950848e8831aec12c3d4a7e84d723387e8596675849235f5581970",
+      "syntax": "PASS",
+      "embedded_programs": [
+        "AUDIT",
+        "LIBRARIES"
+      ]
+    },
+    {
+      "path": "tools/envstable_repair_worker_v3.py",
+      "sha256": "9ef3320992cfb9e091ee5fd4dc50b663554f6fa426f0a6d80c273c6633f4abe0",
+      "syntax": "PASS",
+      "embedded_programs": [
+        "INSTALL"
+      ]
+    },
+    {
+      "path": "tools/envstable_return_worker_v1.py",
+      "sha256": "eaf1602e5404011ce17623faa82e127b60ea955683cfb72e3c5de5a177bd5051",
+      "syntax": "PASS",
+      "embedded_programs": [
+        "PROGRAM"
+      ]
+    },
+    {
+      "path": "tools/envstable_return_worker_v2.py",
+      "sha256": "103f850170ad6cd3d5099d937846b0aa746fd8f27f1688d1e5fbd6af91f957d4",
+      "syntax": "PASS",
+      "embedded_programs": [
+        "PROGRAM"
+      ]
+    },
+    {
+      "path": "tools/envstable_run_build_v1.py",
+      "sha256": "d41066307fd17db18cc2d27a920eaf16ee806cd44365a67dd08a32394af016fe",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_run_canaries_v1.py",
+      "sha256": "c3cc52024d342508f0e6bd3e9e7540ac5d91095655ac0414248aea42e560d704",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_run_cycle3_v1.py",
+      "sha256": "092cfcbcd29b2e33b042e24f5c890906dc78df24c0bdd1f20cd8716066577772",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_run_diagnosis_v1.py",
+      "sha256": "ded25d96d71d7164575f01ae3db1be836b4502db67c2c579300f6c960bcef7b2",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_run_lock_v1.py",
+      "sha256": "11375a504158280aa7d8ec29db5424894b54aee3f399993ba2e1a5688e9acd60",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_run_repair_v2.py",
+      "sha256": "530461ab8087ec14239a17fa38cf7db8403e8d1472cae0b60dc9fc31d12d0f21",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_run_smokes_v1.py",
+      "sha256": "fe0d7caad92faf1bae341f82d2bb0ecbfd4a871df96b7605bbf5277714f50b6a",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_runtime_v1.py",
+      "sha256": "c96bd74cf07cfea3a614dd4d23ed47c5baf75ae5f820064184932f73c83ddb64",
+      "syntax": "PASS",
+      "embedded_programs": [
+        "SUPERVISOR"
+      ]
+    },
+    {
+      "path": "tools/envstable_smoke_worker_v1.py",
+      "sha256": "ddf238836180a90b46bbe295559ee77d9ba802427a570ba9a7c2523f667e03c6",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_transport_v1.py",
+      "sha256": "b9f60b6595a3bca6fa2046b4a8d6f529aa8fac6fb31b926e624304819e7f5b05",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_workloads_v1.py",
+      "sha256": "9158c41d52097ff84bd6a9af5c101397f5cf5cd8b1171cee3a3895c684d2c336",
+      "syntax": "PASS",
+      "embedded_programs": []
+    },
+    {
+      "path": "tools/envstable_workloads_v2.py",
+      "sha256": "7e0ee3a7b207ea42a71199c25b9d31b257254e70e5be398f92c03224ba9e632a",
+      "syntax": "PASS",
+      "embedded_programs": []
+    }
+  ],
+  "scope": "Syntax and embedded-source integrity, not a runtime-suite claim"
+}

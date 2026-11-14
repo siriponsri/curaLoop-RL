@@ -1,0 +1,248 @@
+{
+  "status": "FOUR_NATIVE_DEVELOPMENT_ATTEMPTS_COMPLETED",
+  "cases": [
+    {
+      "case_id": 12,
+      "status": "FAIL_REFERENCE_RUNTIME",
+      "reference_attempt": 1,
+      "reference_sha256": "a5e573bf9410fb112fce4b8fcbca5aa490940f6b5ad69ab49ba630a7d2328127",
+      "evaluator_sha256": "f2b0b4095ba7c8347ec69a41ed287a67e7b00bed9d551590c34ed4034f913227",
+      "reference": {
+        "container_name": "curaloop-envstable-native-dev12-v1",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 124,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:23:02.058839996Z",
+          "FinishedAt": "2026-11-14T15:58:00.531435523Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 2097.239413,
+          "exit_code": -9,
+          "stop_reason": "CPU_CAP",
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "output_exists": false,
+      "grader": null,
+      "score": null
+    },
+    {
+      "case_id": 13,
+      "status": "PASS_NATIVE_CANARY",
+      "reference_attempt": 1,
+      "reference_sha256": "0fd597c82e5b74bff6ff30e96f4ab6782775a2b38891a0d7b8468d7ee356dcd7",
+      "evaluator_sha256": "4859e31405a76dd8c824dd15a79a4020b513eaa4655cb0969947f7813577f7a1",
+      "reference": {
+        "container_name": "curaloop-envstable-native-dev13-v1",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:58:00.798930354Z",
+          "FinishedAt": "2026-11-14T15:59:17.545917962Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 76.506089,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "output_exists": true,
+      "grader": {
+        "receipt": {
+          "container_name": "curaloop-envstable-grade-dev13-v1",
+          "state": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-11-14T15:59:17.812458992Z",
+            "FinishedAt": "2026-11-14T15:59:20.883634513Z"
+          },
+          "resources": {
+            "aggregate_cpu_seconds": 2.821116,
+            "exit_code": 0,
+            "stop_reason": null,
+            "network_receive_bytes": 0,
+            "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+            "initial_affinity_core": 71
+          }
+        },
+        "result": {
+          "status": "PASS_GRADER_EXECUTION",
+          "score": 1,
+          "detail": "{'data_correctness': True, 'func_correctness': True}",
+          "raw_result": [
+            1,
+            "{'data_correctness': True, 'func_correctness': True}"
+          ]
+        }
+      },
+      "score": 1
+    },
+    {
+      "case_id": 71,
+      "status": "PASS_NATIVE_CANARY",
+      "reference_attempt": 1,
+      "reference_sha256": "c8ec4f42e32635b68b108d82e6494cb42f0709ae0197be7068a86c2121899686",
+      "evaluator_sha256": "61dea5bd13a91f851c7ddb8eb987cff7887b57587861d686553f415c8c5228d4",
+      "reference": {
+        "container_name": "curaloop-envstable-native-dev71-v1",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:59:21.146366452Z",
+          "FinishedAt": "2026-11-14T16:02:10.780849529Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 168.891559,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "output_exists": true,
+      "grader": {
+        "receipt": {
+          "container_name": "curaloop-envstable-grade-dev71-v1",
+          "state": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-11-14T16:02:11.056521663Z",
+            "FinishedAt": "2026-11-14T16:02:16.625729759Z"
+          },
+          "resources": {
+            "aggregate_cpu_seconds": 5.227754,
+            "exit_code": 0,
+            "stop_reason": null,
+            "network_receive_bytes": 0,
+            "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+            "initial_affinity_core": 71
+          }
+        },
+        "result": {
+          "status": "PASS_GRADER_EXECUTION",
+          "score": 1,
+          "detail": "0.606264194250314",
+          "raw_result": [
+            1,
+            "0.606264194250314"
+          ]
+        }
+      },
+      "score": 1
+    },
+    {
+      "case_id": 72,
+      "status": "FAIL_NATIVE_PREDICATE_OR_GRADER",
+      "reference_attempt": 1,
+      "reference_sha256": "b39c8f2e3401993edcf2d8079726e9637b9e46f3541bc296cfc2e62edfe71420",
+      "evaluator_sha256": "712380969320bb695191abdfad6c37fa28972f64164840e373cc6819a1d9a919",
+      "reference": {
+        "container_name": "curaloop-envstable-native-dev72-v1",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T16:02:16.926119389Z",
+          "FinishedAt": "2026-11-14T16:10:51.796331708Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 514.258958,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "output_exists": true,
+      "grader": {
+        "receipt": {
+          "container_name": "curaloop-envstable-grade-dev72-v1",
+          "state": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-11-14T16:10:52.087936992Z",
+            "FinishedAt": "2026-11-14T16:10:57.448008352Z"
+          },
+          "resources": {
+            "aggregate_cpu_seconds": 5.172395,
+            "exit_code": 0,
+            "stop_reason": null,
+            "network_receive_bytes": 0,
+            "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+            "initial_affinity_core": 71
+          }
+        },
+        "result": {
+          "status": "PASS_GRADER_EXECUTION",
+          "score": 0,
+          "detail": "0.08197791232298561",
+          "raw_result": [
+            0,
+            "0.08197791232298561"
+          ]
+        }
+      },
+      "score": 0
+    }
+  ],
+  "all_pass": false,
+  "host_process_cpu_seconds": 5.883242999999999,
+  "actor_calls": 0,
+  "locked_references": 0,
+  "allocated_gpu_seconds": 0
+}

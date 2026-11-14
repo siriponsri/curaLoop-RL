@@ -1,0 +1,14 @@
+{
+  "status": "RETAINED_PRE_DELETE_ERRORS",
+  "deletion_had_started": false,
+  "errors": [
+    {
+      "kind": "Ancestor type check",
+      "cause": "Parent DirectoryInfo lacks provider PSIsContainer; corrected to explicit .NET type before mutation"
+    },
+    {
+      "kind": "Legacy shell cmdlet availability",
+      "cause": "Get-FileHash unavailable in legacy powershell.exe; same validated script ran using bundled PowerShell 7"
+    }
+  ]
+}

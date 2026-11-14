@@ -1,0 +1,925 @@
+{
+  "status": "OFFLINE_RECONSTRUCTION_AND_COLD_STARTS_COMPLETED",
+  "reconstruction": {
+    "status": "PASS_OFFLINE_CONTENT_RECONSTRUCTION",
+    "files": 228737,
+    "regular_bytes": 22980099567,
+    "every_regular_file_rehashed": true,
+    "network": false,
+    "installer_executed": false,
+    "lock_sha256": "5ace608c826864c25d842e940decbfc687481d4e0977565a4f4ea5bccd64f951",
+    "versions_sha256": "89f8c892f85b11c3ef0b966f04b72e21007971f842e1528004210c8aed74c029"
+  },
+  "reconstruction_receipt": {
+    "container_name": "curaloop-envstable-offline-reconstruct-v1",
+    "state": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 0,
+      "Error": "",
+      "StartedAt": "2026-11-14T15:15:37.184356182Z",
+      "FinishedAt": "2026-11-14T15:18:33.949857672Z"
+    },
+    "resources": {
+      "aggregate_cpu_seconds": 175.340773,
+      "exit_code": 0,
+      "stop_reason": null,
+      "network_receive_bytes": 0,
+      "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+      "initial_affinity_core": 71
+    }
+  },
+  "cold_starts": [
+    {
+      "cold": 1,
+      "profile": "base",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold1-base",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:18:34.241818988Z",
+          "FinishedAt": "2026-11-14T15:18:37.779970593Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 3.193779,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "base",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "CSV roundtrip, RF fit/predict, RDKit SVG, linear solve"
+      }
+    },
+    {
+      "cold": 1,
+      "profile": "papyrus",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold1-papyrus",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:18:38.079955053Z",
+          "FinishedAt": "2026-11-14T15:18:42.931426391Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 4.23914,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "papyrus",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "Papyrus quality filtering"
+      }
+    },
+    {
+      "cold": 1,
+      "profile": "prolif",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold1-prolif",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:18:43.200269904Z",
+          "FinishedAt": "2026-11-14T15:18:46.769315909Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 3.248857,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "prolif",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "RDKit conformers and ProLIF interaction generation"
+      }
+    },
+    {
+      "cold": 1,
+      "profile": "profile-12",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold1-profile-12",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:18:47.051963673Z",
+          "FinishedAt": "2026-11-14T15:18:56.349442372Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 8.95674,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-12",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "DeepPurpose native model modules and Morgan encoding"
+      }
+    },
+    {
+      "cold": 1,
+      "profile": "profile-15",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold1-profile-15",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:18:56.730745248Z",
+          "FinishedAt": "2026-11-14T15:19:04.551600517Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 6.958014,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-15",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "Chemprop molecular batch graph construction"
+      }
+    },
+    {
+      "cold": 1,
+      "profile": "profile-21",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold1-profile-21",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:19:04.821242377Z",
+          "FinishedAt": "2026-11-14T15:19:06.910754603Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 1.900356,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-21",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "GeoPandas CRS transformation"
+      }
+    },
+    {
+      "cold": 1,
+      "profile": "profile-29",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold1-profile-29",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:19:07.19532025Z",
+          "FinishedAt": "2026-11-14T15:19:12.750723904Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 4.96105,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-29",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "NeuroKit ECG simulation/cleaning"
+      }
+    },
+    {
+      "cold": 1,
+      "profile": "profile-37",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold1-profile-37",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:19:13.011702939Z",
+          "FinishedAt": "2026-11-14T15:19:19.340433232Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 5.700914,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-37",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "BioPsyKit array normalization"
+      }
+    },
+    {
+      "cold": 1,
+      "profile": "profile-53",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold1-profile-53",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:19:19.604075945Z",
+          "FinishedAt": "2026-11-14T15:19:20.867209737Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 0.922117,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-53",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "Rasterio in-memory GeoTIFF write/read"
+      }
+    },
+    {
+      "cold": 1,
+      "profile": "profile-71",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold1-profile-71",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:19:21.139947665Z",
+          "FinishedAt": "2026-11-14T15:19:25.248509149Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 3.61825,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-71",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "PyTorch CPU forward/backward"
+      }
+    },
+    {
+      "cold": 1,
+      "profile": "profile-87",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold1-profile-87",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:19:25.510325112Z",
+          "FinishedAt": "2026-11-14T15:19:28.550682346Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 2.60974,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-87",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "Iris dimension-aware mean"
+      }
+    },
+    {
+      "cold": 1,
+      "profile": "profile-101",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold1-profile-101",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:19:28.819574665Z",
+          "FinishedAt": "2026-11-14T15:19:43.645949647Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 13.81817,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-101",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "MODNet material container and TensorFlow CPU matrix operation"
+      }
+    },
+    {
+      "cold": 1,
+      "profile": "ccobra",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold1-ccobra",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:19:43.890351478Z",
+          "FinishedAt": "2026-11-14T15:19:45.696701903Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 1.675511,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "ccobra",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "CCobra syllogistic task encoding"
+      }
+    },
+    {
+      "cold": 2,
+      "profile": "base",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold2-base",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:19:45.954273007Z",
+          "FinishedAt": "2026-11-14T15:19:49.51349658Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 3.21826,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "base",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "CSV roundtrip, RF fit/predict, RDKit SVG, linear solve"
+      }
+    },
+    {
+      "cold": 2,
+      "profile": "papyrus",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold2-papyrus",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:19:49.776272108Z",
+          "FinishedAt": "2026-11-14T15:19:54.077831827Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 4.087824,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "papyrus",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "Papyrus quality filtering"
+      }
+    },
+    {
+      "cold": 2,
+      "profile": "prolif",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold2-prolif",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:19:54.348497196Z",
+          "FinishedAt": "2026-11-14T15:19:57.66016908Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 3.155119,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "prolif",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "RDKit conformers and ProLIF interaction generation"
+      }
+    },
+    {
+      "cold": 2,
+      "profile": "profile-12",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold2-profile-12",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:19:57.91390113Z",
+          "FinishedAt": "2026-11-14T15:20:06.973776981Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 8.913645,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-12",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "DeepPurpose native model modules and Morgan encoding"
+      }
+    },
+    {
+      "cold": 2,
+      "profile": "profile-15",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold2-profile-15",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:20:07.246844461Z",
+          "FinishedAt": "2026-11-14T15:20:13.807849103Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 6.390013,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-15",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "Chemprop molecular batch graph construction"
+      }
+    },
+    {
+      "cold": 2,
+      "profile": "profile-21",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold2-profile-21",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:20:14.081754681Z",
+          "FinishedAt": "2026-11-14T15:20:16.189191699Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 1.945317,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-21",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "GeoPandas CRS transformation"
+      }
+    },
+    {
+      "cold": 2,
+      "profile": "profile-29",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold2-profile-29",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:20:16.452568204Z",
+          "FinishedAt": "2026-11-14T15:20:21.524093067Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 4.791092,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-29",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "NeuroKit ECG simulation/cleaning"
+      }
+    },
+    {
+      "cold": 2,
+      "profile": "profile-37",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold2-profile-37",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:20:21.793273616Z",
+          "FinishedAt": "2026-11-14T15:20:27.381340527Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 5.455305,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-37",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "BioPsyKit array normalization"
+      }
+    },
+    {
+      "cold": 2,
+      "profile": "profile-53",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold2-profile-53",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:20:27.655202563Z",
+          "FinishedAt": "2026-11-14T15:20:28.677554006Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 0.865419,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-53",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "Rasterio in-memory GeoTIFF write/read"
+      }
+    },
+    {
+      "cold": 2,
+      "profile": "profile-71",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold2-profile-71",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:20:28.942443261Z",
+          "FinishedAt": "2026-11-14T15:20:32.513803863Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 3.324632,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-71",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "PyTorch CPU forward/backward"
+      }
+    },
+    {
+      "cold": 2,
+      "profile": "profile-87",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold2-profile-87",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:20:32.780028335Z",
+          "FinishedAt": "2026-11-14T15:20:35.552853501Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 2.513059,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-87",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "Iris dimension-aware mean"
+      }
+    },
+    {
+      "cold": 2,
+      "profile": "profile-101",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold2-profile-101",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:20:35.803924649Z",
+          "FinishedAt": "2026-11-14T15:20:49.383289608Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 13.230538,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "profile-101",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "MODNet material container and TensorFlow CPU matrix operation"
+      }
+    },
+    {
+      "cold": 2,
+      "profile": "ccobra",
+      "receipt": {
+        "container_name": "curaloop-envstable-cold2-ccobra",
+        "state": {
+          "Status": "exited",
+          "Running": false,
+          "Paused": false,
+          "Restarting": false,
+          "OOMKilled": false,
+          "Dead": false,
+          "Pid": 0,
+          "ExitCode": 0,
+          "Error": "",
+          "StartedAt": "2026-11-14T15:20:49.627392378Z",
+          "FinishedAt": "2026-11-14T15:20:51.41577133Z"
+        },
+        "resources": {
+          "aggregate_cpu_seconds": 1.610608,
+          "exit_code": 0,
+          "stop_reason": null,
+          "network_receive_bytes": 0,
+          "python_version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+          "initial_affinity_core": 71
+        }
+      },
+      "result": {
+        "profile": "ccobra",
+        "fixture_scope": "Engineering fixture only; not benchmark or agent efficacy",
+        "status": "PASS_WORKLOAD",
+        "operation": "CCobra syllogistic task encoding"
+      }
+    }
+  ],
+  "all_pass": true,
+  "host_process_cpu_seconds": 0.21663899999999997
+}

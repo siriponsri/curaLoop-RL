@@ -1,0 +1,42 @@
+{
+  "schema": "curaloop.environment-canary-protocol.v1",
+  "case_ids": [
+    12,
+    13,
+    71,
+    72
+  ],
+  "scope": "Engineering native-development validation only; not agent comparison",
+  "reference_attempts_per_task": 1,
+  "reference_cpu_seconds": 2100,
+  "reference_wall_seconds": 2400,
+  "grader_cpu_seconds": 90,
+  "grader_wall_seconds": 150,
+  "device": "CPU only; unchanged source device selection with no visible GPU",
+  "network": false,
+  "source_edits": false,
+  "scorer_edits": false,
+  "precreated_output_directory": "pred_results",
+  "fresh_cache_each_task": true,
+  "grader_gold_hidden_from_reference": true,
+  "scoring": "Unchanged eval(); require tuple of length 2 with first item exactly int 0 or 1; never bool(tuple)",
+  "decision": "ENVIRONMENT_READY requires all imports/workloads, offline reconstruction, two cold starts and four unchanged native+grader PASS; any failure is reported without scientific rerun",
+  "asset_bundle_sha256": "d462c32a9e03108baf500abe267f62c40ed33061a3fe7203e49eb7ce12dfa948",
+  "asset_bundle_bytes": 913612800,
+  "source_hashes": {
+    "benchmark/eval_programs/davis_dti_eval.py": "f2b0b4095ba7c8347ec69a41ed287a67e7b00bed9d551590c34ed4034f913227",
+    "benchmark/eval_programs/drug_property_eval.py": "4859e31405a76dd8c824dd15a79a4020b513eaa4655cb0969947f7813577f7a1",
+    "benchmark/eval_programs/eval_eeg2eeg.py": "712380969320bb695191abdfad6c37fa28972f64164840e373cc6819a1d9a919",
+    "benchmark/eval_programs/eval_eeg2eeg_linear.py": "61dea5bd13a91f851c7ddb8eb987cff7887b57587861d686553f415c8c5228d4",
+    "benchmark/gold_programs/davis_dti.py": "a5e573bf9410fb112fce4b8fcbca5aa490940f6b5ad69ab49ba630a7d2328127",
+    "benchmark/gold_programs/drug_property_model.py": "0fd597c82e5b74bff6ff30e96f4ab6782775a2b38891a0d7b8468d7ee356dcd7",
+    "benchmark/gold_programs/train_thingseeg2.py": "b39c8f2e3401993edcf2d8079726e9637b9e46f3541bc296cfc2e62edfe71420",
+    "benchmark/gold_programs/train_thingseeg2_linear.py": "c8ec4f42e32635b68b108d82e6494cb42f0709ae0197be7068a86c2121899686"
+  },
+  "case_profiles": {
+    "12": "profile-12",
+    "13": "profile-12",
+    "71": "profile-71",
+    "72": "profile-71"
+  }
+}
