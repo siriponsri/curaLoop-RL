@@ -1,0 +1,172 @@
+# LR-SAR1: final G0 result and owner checkpoint
+
+Date: 14 November 2026, Asia/Bangkok.
+
+Research outcome: **NO_GO_STATIC_API_FREE_COVERAGE**.
+Scientific work stopped at G0. No new manuscript was written.
+
+## 1. Result first
+
+The approved combination of **60 locked tasks**, unchanged native scoring,
+the retained ScienceAgentBench release and **no paid external judge** cannot
+be reached under the G0 census. Of 102 tasks, 64 official evaluator entrypoints
+directly call the external visual `score_figure` helper. Only 38 lack this
+dependency before any historical exposure exclusions. Thus even ignoring
+exposure, 38 is below 60. After existing development/reference-exposure lineage
+exclusions, only 30 preliminary candidates remain.
+
+These are **static eligibility counts**, not 30 native-successful tasks or
+30 independent publications. No reference program, native evaluator or agent
+was executed. The primary P-minus-T effect is **NOT_ESTIMABLE**, not zero.
+This is a failure of the approved admission conditions, not evidence that
+agents failed or that ScienceAgentBench is defective.
+
+## 2. Exactly what ran
+
+1. A fresh release/account opened with the approved 160 CPU-hour/80 allocated
+   GPU-hour ceiling and four-CPU/one-GPU limit. Old accounts were not reopened.
+2. The original verified annotation and the complete 1,769,478,786-byte archive
+   were reread and matched their historical SHA-256 identities.
+3. All 102 evaluator scripts were parsed without importing/executing them.
+   Only dependency/call metadata was emitted. No gold/reference program or
+   expected output values were read or exposed to candidates.
+4. The 64 flagged scripts were independently checked for a direct
+   `score_figure` call in their `eval` entrypoint. Four constructed classifier
+   checks passed, including an unused judge function that must not be counted
+   as reachable. This was verification of the same census, not a scientific rerun.
+5. The official visual-judge helper was read at source commit
+   `c26e151ed601ba109dc4d35e057ff8e73fec469d`. Its scoring function calls
+   `client.chat.completions.create`. It was neither imported nor executed;
+   no API key, image or model request was sent.
+
+The [gate record](../evidence/lr-sar1-20261114-v1/gate0-v1.json),
+[102-row census](../evidence/lr-sar1-20261114-v1/static-census-v1.csv) and
+[official helper receipt](../evidence/lr-sar1-20261114-v1/external-judge-source-verification-v1.json)
+retain the exact evidence.
+
+## 3. Counts and denominator
+
+| Measure | Count | Meaning |
+| --- | ---: | --- |
+| Retained verified tasks inspected | 102 | Complete structural/evaluator-syntax census |
+| External visual judge in eval entrypoint | 64 | Excluded by the approved no-paid-judge constraint |
+| No such judge before exposure exclusions | 38 | Optimistic static ceiling; not full API-freedom/native qualification |
+| Preliminary candidates after existing exposure roles | 30 | Before rights, dependencies, new development selection and shared-data checks |
+| Candidate repository lineages | 16 | Conservative repository proxy; not certified independent publications |
+| Candidate domains | 4 | Does not repair the task-count shortfall |
+| Required locked tasks | 60 | Approved planning coverage floor; not a universal publication rule |
+| Native reference executions | 0 | NOT_RUN |
+| New model/agent calls | 0 | NOT_RUN |
+| Allocated GPU seconds | 0 | No GPU lease |
+
+The 38 tasks without this judge comprise 11 computational chemistry,
+11 bioinformatics, three geospatial and 13 psychology/cognitive-science tasks.
+These counts precede exposure exclusions. No new native success, rights
+certification, source-independence certificate or agent-performance result is
+inferred from them.
+
+Exclusion reasons overlap: nine rows belong to author-reference-exposed
+repository lineages, two to development lineages and 64 to external-judge paths.
+Do not add these to invent a unique excluded-task count.
+
+## 4. Why the study ended before model download
+
+The G0 contract requires stopping before expensive work if the cohort cannot
+possibly reach the approved floor. The visual judge is part of native scoring;
+substituting a local model, removing a required score, using extra paid calls,
+adding a benchmark or reducing the floor would change the approved study.
+None was done.
+
+The earlier review explicitly warned about paid judging; this census now
+quantifies the restriction. The 60-task target was a proposed coverage rule,
+not a dataset-readiness fact or a theorem that fewer tasks cannot be publishable.
+This result does not justify another automatic admission/model/environment loop.
+
+## 5. Work not run
+
+| Planned component | Status | Reason |
+| --- | --- | --- |
+| G1 native/environment qualification | NOT_RUN | G0 task coverage impossible |
+| Qwen checkpoint download | NOT_RUN | Not justified after failed G0 |
+| dr-train compute/SSH/remote root | NOT_RUN | Local G0 was sufficient; no remote cleanup obligation created |
+| Development model calls and checker implementation | NOT_RUN | G0 failed |
+| Frozen L/G/T/P model comparison | NOT_RUN | No qualifying locked cohort |
+| Primary effect/cluster interval | NOT_ESTIMABLE | No comparative agent outcome |
+| New product evidence-view feature | NOT_RUN | No new study result to integrate; existing product preserved |
+| New manuscript/abstract/cover letter | NOT_WRITTEN | Owner explicitly requires results first |
+| Submission/outreach/public deployment | NOT_RUN | Outside authority |
+
+## 6. Resource and preservation interpretation
+
+The release clock began **14 November 2026 at 09:34:25 Bangkok**; its unchanged
+ten-day deadline was **24 November 2026 at 09:34:25 Bangkok**. The study stopped
+early rather than consuming the ceiling. Latest settled charges and measured
+job subtotals are in the [delivery audit](../evidence/lr-sar1-20261114-v1/delivery-audit-v1.json).
+Reservations include unmetered administrative/delivery allowances and failed
+attempts if any; they are not whole-host measured CPU.
+
+All 104 inherited/source pins are checked at release and closeout.
+Original final16, private CF1 rows, hidden outcomes and old ledgers/results
+remain intact. No remote root, container or model was created, so remote return
+and cleanup are NOT_APPLICABLE, not an invented successful SSH cleanup check.
+No paid API or new model download occurred.
+
+## 7. Publication assessment and Thai alternatives
+
+The owner selected **Empirical Software Engineering (primary)** and **Journal
+of Systems and Software (backup)**. Those choices are retained. This G0 result
+does not provide the planned comparative evidence for either venue. A complete
+admission report is not a completed empirical-agent paper.
+
+The [Thai journal review](THAI_JOURNAL_OPTIONS_20261114.md) identifies two
+Thai-published English-language options:
+
+- **Science & Technology Asia:** the official site states no submission or
+  publication fee and includes computer engineering/IT. Possible broader
+  application/computational route, subject to substantive evidence and current
+  author/AI-policy review; no acceptance promise.
+- **ECTI-CIT:** free publication and strong computer/AI/software subject fit,
+  but its 21 September 2026 policy permits generative AI only for language
+  editing and prohibits substantive AI-written scientific content or result
+  interpretation. That is a material conflict to assess for this AI-assisted
+  workflow. It must not be dismissed by relabeling assistance as copy editing.
+
+No current indexing/quartile is independently certified here, and no Thai venue
+is proposed as a way to bypass the missing experiment. No manuscript or editor
+communication was produced.
+
+## 8. Owner decision, with no automatic new work
+
+Three distinct decisions are now visible:
+
+1. Close this bounded study as the documented G0 NO_GO and retain the working
+   product and completed historical negative studies.
+2. If a future smaller API-free ScienceAgentBench study is desired, define a
+   **new** cohort/estimand/precision scope and justify it prospectively. The
+   present 30 preliminary candidates have not passed native qualification and
+   will shrink under additional checks/development roles. No smaller study is
+   initiated or promised publishable here.
+3. Consider whether the existing AgentRD negative study is worth further
+   owner-led publication assessment. Its one-model/authored-task limitations
+   remain; a venue change does not remove them.
+
+The recommendation is to inspect this result before any new goal. No dataset
+switch, criterion relaxation, paid-judge proposal or manuscript starts by default.
+
+## 9. Reproducibility and audit limits
+
+Public receipts contain the annotation/archive/source hashes, task-level
+exclusion table, static syntax metadata, classifier checks and resource receipts.
+Full raw benchmark/source targets remain private under existing restrictions.
+The helper's model endpoint was inspected as source text only.
+
+Offline report consistency can be checked with:
+
+```powershell
+rtk proxy python tools/sar1_report_v1.py --verify-only
+```
+
+That command does not execute a native evaluator or regenerate a model response.
+It is an author consistency check, not independent expert validation.
+The account/delivery audit and Git closeout record establish the final delivery
+state; this report does not claim a result from a planned but unexecuted stage.

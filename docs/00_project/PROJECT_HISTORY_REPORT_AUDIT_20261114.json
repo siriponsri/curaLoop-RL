@@ -1,0 +1,4660 @@
+{
+  "status": "PASS_DOCUMENTATION_HANDOVER_AUDIT",
+  "prepared_date": "2026-11-14",
+  "timezone": "Asia/Bangkok",
+  "source_checkpoint": "f42d8aa8edeb2ef40b73a2cdc040dcebda07ed6b",
+  "scope": "Documentation, selected aggregate transcription and link checks only",
+  "not_run": [
+    "New scientific experiments",
+    "Model inference",
+    "SSH/remote inspection",
+    "Benchmark download",
+    "Full application acceptance",
+    "Full historical pin rehash",
+    "Journal-policy refresh",
+    "Git commit/push"
+  ],
+  "baseline_inventory": {
+    "total": 384,
+    "markdown": 363,
+    "pdf": 21,
+    "selection": "Tracked root, docs/** and research/product_handoffs/** Markdown/PDF at source checkpoint"
+  },
+  "source_receipts": [
+    {
+      "ref": "S01",
+      "path": "docs/RELEASE_VERIFICATION.md",
+      "bytes": 10896,
+      "sha256_checkout_bytes": "d22dd56b25bbded23adc37285490b433f0ea47cffc4f497450a61a774e763fab",
+      "git_blob_at_source_checkpoint": "4e4cc9dc09c7b9c3f8634c62d5286a5f29c2afa9",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S02",
+      "path": "docs/00_project/CURRENT_STATE_AUDIT.md",
+      "bytes": 9020,
+      "sha256_checkout_bytes": "53d6b88d8db4724e48c9006c76cd549a9eaec1b1f82851eead68873f3732d556",
+      "git_blob_at_source_checkpoint": "2581be98f65758607abe635a0b1bffca86d07060",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S03",
+      "path": "docs/evidence/hiv-benchmark/summary.json",
+      "bytes": 31931,
+      "sha256_checkout_bytes": "567fa6305b3a0971020d781673dab733fc9b438b8ad0f1d2f94c4cd85815a50f",
+      "git_blob_at_source_checkpoint": "399f4638535d7ce949f134eca4548b476534764c",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S04",
+      "path": "docs/06_execution/FOUNDATION_CHECKPOINT.md",
+      "bytes": 4905,
+      "sha256_checkout_bytes": "9df21d77ace130544ac62e95ca121d9cbcb5ce9340da011d825c513dbad3aa4b",
+      "git_blob_at_source_checkpoint": "f1aaf2fd53c5f8c1dffc78a8ddce3ce75372afad",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S05",
+      "path": "docs/03_research/NCATS_DEVELOPMENT_RESULTS_V1.md",
+      "bytes": 13022,
+      "sha256_checkout_bytes": "87fb7b04f07ac9ad655eae9c43be213a94ebea42b7b4e0229d1536d3f12926ae",
+      "git_blob_at_source_checkpoint": "a0bb261c7993159913f7bed008719839f77cde89",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S06",
+      "path": "docs/03_research/NCATS_GAUSSIAN_RESULTS_V1.md",
+      "bytes": 8433,
+      "sha256_checkout_bytes": "a17bf3524097198f8ba66954a1f57fea1e660237bcacf990c3ea1a6e70db4f16",
+      "git_blob_at_source_checkpoint": "a6bb67a1ebb9b247c74c77e093ba6f65b468bd28",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S07",
+      "path": "docs/03_research/NCATS_REPRODUCTION_V1.md",
+      "bytes": 3535,
+      "sha256_checkout_bytes": "837d72cd47aa598529470ec315e9f753cbadda787b7266352a508a8d34bfe978",
+      "git_blob_at_source_checkpoint": "0d0d120058d55af0e14c180a1745de1942c752ff",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S08",
+      "path": "docs/03_research/GOAL_02_RESULTS_V1.md",
+      "bytes": 10104,
+      "sha256_checkout_bytes": "00ce3d99512ba80ffbaa19209959a4ab6f3e8995082297c857893d90d382b7ce",
+      "git_blob_at_source_checkpoint": "b73cb9634cc02554f0216e908887a0882f585d75",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S09",
+      "path": "docs/03_research/FSMOL_DATASET_CARD_V2.md",
+      "bytes": 6834,
+      "sha256_checkout_bytes": "a7a272b813f5a85a0b80f255e58d9e1d78134d99fb08ad2969231386a5b637d5",
+      "git_blob_at_source_checkpoint": "432a5372ebc997f2e3e60cf905c3ef289b9d6a66",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S10",
+      "path": "docs/06_execution/GOAL3_READINESS_REVISION_A_20261105.md",
+      "bytes": 2963,
+      "sha256_checkout_bytes": "3cdb27a35071f5222f189f03cc732012d17d755cee151e5b9a6a0749f656c864",
+      "git_blob_at_source_checkpoint": "85b83b32f03f121d96f6411e3888bb7943f2a192",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S11",
+      "path": "docs/03_research/GOAL4_RESULTS_V1.md",
+      "bytes": 8835,
+      "sha256_checkout_bytes": "322f48f3ce7923b3d222323b218c2353ac4da9ee31b44bf0d8bac2a38f198e38",
+      "git_blob_at_source_checkpoint": "c6af3674279b001c69873c1aa39bdd40d7b87fbc",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S12",
+      "path": "docs/03_research/GOAL4R1_RESULTS_V1.md",
+      "bytes": 9860,
+      "sha256_checkout_bytes": "a74f9551c1d633ece0873a4b468dc1a8e2fbed88fa52662c16212a011aab0c12",
+      "git_blob_at_source_checkpoint": "f1c568a377093ea0c9084361b27894041bef783d",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S13",
+      "path": "docs/03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md",
+      "bytes": 10351,
+      "sha256_checkout_bytes": "164801612c24f1c2b552c7aa6f534be67f66dcdedb5da16504b69545cb0aa2dc",
+      "git_blob_at_source_checkpoint": "9a203492555cfe8f560732558ae4ee6960c98fe7",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S14",
+      "path": "docs/06_execution/GOAL4R2A2_CLOSEOUT_20261106.md",
+      "bytes": 7206,
+      "sha256_checkout_bytes": "972c9ded86ce18e3d7bbce7922a69f58e68d17eafcbb5a7686ed7329c66b9e6c",
+      "git_blob_at_source_checkpoint": "190f8dab514e1305d391097eebcbecf58551f5f5",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S15",
+      "path": "docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md",
+      "bytes": 8119,
+      "sha256_checkout_bytes": "dcf0ee33c98cfa53a7048db63467498561d599906551cec2c98f08fdc2c2d138",
+      "git_blob_at_source_checkpoint": "054b9f6e4fc9b8a133c8f108ab41a4eb4c0b669a",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S16",
+      "path": "docs/06_execution/LRBC_CORE_CLOSEOUT_20261106.md",
+      "bytes": 2255,
+      "sha256_checkout_bytes": "03d3a5f9913e586639253bc488f32a30923bfcc4baa898691cbbff71a863a862",
+      "git_blob_at_source_checkpoint": "6b32cee085d85a8e6412fa40e447d28b014749bb",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S17",
+      "path": "docs/06_execution/FRONTEND_CHECKPOINT_20261106.md",
+      "bytes": 8676,
+      "sha256_checkout_bytes": "5718756d690985d471bd79fb4410f5c13b87dfefe7a827311ee060ef055ae48a",
+      "git_blob_at_source_checkpoint": "dbcb6159822110b300523400ed40dbf89ca0f461",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S18",
+      "path": "docs/03_research/METHOD_FIRST_DESIGN_20261108.md",
+      "bytes": 10651,
+      "sha256_checkout_bytes": "7785bee220857835310ac8577b250a245f53c4e8c115c5ba6c9cb8134506d3e3",
+      "git_blob_at_source_checkpoint": "716122321b5121d3eb043416ae417897ad7b3449",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S19",
+      "path": "docs/03_research/R0_CHEMBL_READINESS_RESULTS_20261107.md",
+      "bytes": 11003,
+      "sha256_checkout_bytes": "208212fe53aa3f911f3e4da10f178124843dac50882956f7bb1eee8a35e641d7",
+      "git_blob_at_source_checkpoint": "8c124b6b088ea7542c267763517c2bcc5d2e7ec4",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S20",
+      "path": "docs/03_research/R0R_OWNER_SUBSET_RESULTS_20261107.md",
+      "bytes": 10772,
+      "sha256_checkout_bytes": "ead66a7debfa5918f7cf67e4e467359b7f1b4236c1b3a5e4fd5ac8c37774925d",
+      "git_blob_at_source_checkpoint": "003160d08512c11b16589727ddde7d2a0a0bd50d",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S21",
+      "path": "docs/03_research/R0A1_FEASIBILITY_RESULTS_20261107.md",
+      "bytes": 11575,
+      "sha256_checkout_bytes": "3c6cf6d9c1293213e52b702e2a91316204675f34a85fd678a69fe17c3607488d",
+      "git_blob_at_source_checkpoint": "6401b061885810f3b23f28e107fc62630de0b684",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S22",
+      "path": "docs/03_research/R0DQ_QUALIFICATION_RESULTS_20261107.md",
+      "bytes": 13540,
+      "sha256_checkout_bytes": "6e1a39b3a66221740e697d42e326a2314f451dce795fe3c69b8865c98d36cfd1",
+      "git_blob_at_source_checkpoint": "77bd7c8a0a0c07503fa9b1b2753abd46e4490358",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S23",
+      "path": "docs/03_research/R0DQR_TAXONOMY_TASK_FEASIBILITY_20261107.md",
+      "bytes": 10458,
+      "sha256_checkout_bytes": "07a2522e429e80af225926944d4b7ef51df3d098fc1d4b7861e4ea3d71451781",
+      "git_blob_at_source_checkpoint": "22b375c0ba5c0366b42ec10f433e030f67dedb7a",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S24",
+      "path": "docs/06_execution/R0_DESIGN_REVIEW_DECISIONS_20261107.md",
+      "bytes": 6737,
+      "sha256_checkout_bytes": "3633102128e75a8c924b049ce2689cb8a2fd7932cff8178112ef55dc3ed10ca8",
+      "git_blob_at_source_checkpoint": "e8a097789fb08a249ae72144f69bc08e33110cfd",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S25",
+      "path": "docs/03_research/LR_M12_M1_RESULTS_20261108.md",
+      "bytes": 9921,
+      "sha256_checkout_bytes": "6207eb5afad81b67d4be1eb26f6943970396041beb06b457e2f9f00033b6df74",
+      "git_blob_at_source_checkpoint": "2f67117f5a46c27e1840185cbff3d34be0023e79",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S26",
+      "path": "docs/05_product/FOUR_SCREEN_DASHBOARD_CHECKPOINT_20261108.md",
+      "bytes": 6471,
+      "sha256_checkout_bytes": "dff3f691bd7d888bfbbf58aa81efebd7184a1e3d92ab6160ada1f78bb910a1ec",
+      "git_blob_at_source_checkpoint": "e7ce5bd9384e5caf56d54c524ee5f4075c6154be",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S27",
+      "path": "docs/03_research/M2_COSTED_RESULTS_20261108.md",
+      "bytes": 18614,
+      "sha256_checkout_bytes": "54507ee8cc07fd05ab36ab750c5c9f6745ff1df0908d0d5246042ec7028d5f95",
+      "git_blob_at_source_checkpoint": "43cc58d83b7473ad86337501620c87344ef71eab",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S28",
+      "path": "docs/03_research/M2_D0_OPERATION_AUDIT_20261109.md",
+      "bytes": 7086,
+      "sha256_checkout_bytes": "96f49f8a15fc851694378ca37ddff8cfbb9048628903ef35a5e1e7c92b514260",
+      "git_blob_at_source_checkpoint": "82bfc50962ff126cd7706d1ffff2b0f946269b75",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S28A",
+      "path": "docs/03_research/D1_OPERATION_HEADROOM_RESULTS_20261109.md",
+      "bytes": 6190,
+      "sha256_checkout_bytes": "a53232080c2e68f1247c97444e23b77313a9462c3cc30eb0b7485323ebf3a42b",
+      "git_blob_at_source_checkpoint": "26179dea6ed8acb266ace88a2fda3328f3a16185",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S28B",
+      "path": "docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md",
+      "bytes": 10261,
+      "sha256_checkout_bytes": "91d89de3bccb2c3ba031b2797cb49d2829b29612dd95ec7a34ba59d286431e41",
+      "git_blob_at_source_checkpoint": "003b4d68d4d9be27b675a5dc58d6a725659b637e",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S29",
+      "path": "docs/06_execution/LR_CF2P_OWNER_CHECKPOINT_20261110.md",
+      "bytes": 5517,
+      "sha256_checkout_bytes": "f376d2af6a2dfc9b9ee5a643b8fac76ce622fa63c3190223678ef3689a0eb4b6",
+      "git_blob_at_source_checkpoint": "b0cdf0afaab9d34687e42ee3866fae9dd19ee427",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S30",
+      "path": "docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md",
+      "bytes": 14167,
+      "sha256_checkout_bytes": "39078a9b6b83388e359ae625fb60a931843a97feb32b09c043ec1de29ef8a18e",
+      "git_blob_at_source_checkpoint": "321f39bfef70904e04595ffa3946516036ca86b0",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S31",
+      "path": "docs/08_agent_rd/LOCAL_WORKFLOW_FINAL_OWNER_REPORT_20261113.md",
+      "bytes": 8067,
+      "sha256_checkout_bytes": "1239becf1c7e21af9c02905c899719f4f4ac90317da3436d515debbc21982fde",
+      "git_blob_at_source_checkpoint": "d6f7c68a91b05a9718346ead6c9841fad26a884c",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S32",
+      "path": "docs/03_research/LR_CF1_RESULTS_20261109.md",
+      "bytes": 10344,
+      "sha256_checkout_bytes": "56fb6b5c598826e73c9e2b2a2dd77c07d793ba7b0760414ef7621c8abbf15cff",
+      "git_blob_at_source_checkpoint": "120062059daa77efa3b09c81a26d22688a2a135c",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S33",
+      "path": "docs/07_publication/CURALOOP_AGENTRD_COMPUTATIONAL_REPORT_EN_V2.md",
+      "bytes": 33496,
+      "sha256_checkout_bytes": "1f31d670bf2d22bd619bf80e69db2ec22f5e6b6bba10c47fccd9a520ef1af173",
+      "git_blob_at_source_checkpoint": "2bcc018f66df18015f2f70ed06243b26ae7e0f01",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S34",
+      "path": "docs/08_agent_rd/LR_SC1_OWNER_REPORT_20261113.md",
+      "bytes": 6883,
+      "sha256_checkout_bytes": "e8ed78cf5cc0a7c0d8c1334f973d146e933a89eb3bc14cd34cb6b0143aa2ea28",
+      "git_blob_at_source_checkpoint": "dcb669edf5eb535cdaf7346977780a0ba8921e84",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S35",
+      "path": "docs/evidence/lr-sc1-20261113-v1/delivery-audit-v1.json",
+      "bytes": 2343,
+      "sha256_checkout_bytes": "443f5c23e5e098a59095dce4577eb993c08c80c18cde9847699761bb90b4e4a2",
+      "git_blob_at_source_checkpoint": "5ead1b9e2279e6ff12a7e8f4c4bc4a822e1334ab",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S36",
+      "path": "docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md",
+      "bytes": 6248,
+      "sha256_checkout_bytes": "b1721d9b14e1b38e4b7f80eadffe884d05c17995f5daa56c789c13f0559cb0a6",
+      "git_blob_at_source_checkpoint": "93ada6926825e12d4bfee1ae1fc35a24a33da753",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S37",
+      "path": "docs/03_research/LOCAL_DATA_INVENTORY_20261107.md",
+      "bytes": 21540,
+      "sha256_checkout_bytes": "c71be1cc47a4badaf555833442d929057b6f69b220bc6d970b55f36d05920810",
+      "git_blob_at_source_checkpoint": "0600e2c3d15f06265b1774f685fddf161c58a5d4",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S38",
+      "path": "docs/02_literature/LITERATURE_DOWNLOAD_STATUS_20261108.md",
+      "bytes": 3314,
+      "sha256_checkout_bytes": "ebaee5fd3a722f328beba16cee98fa46931c5514fc2bdd4fc5f1c404ddd7b183",
+      "git_blob_at_source_checkpoint": "ddb08bc5455f4f2d5aa0ba9ced311305d7840b53",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S39",
+      "path": "docs/01_paper/JOURNAL_TARGETS_20261104.md",
+      "bytes": 7371,
+      "sha256_checkout_bytes": "55324b2768040bec3219f1c815c122efae35b384b064c9d22b11286065cab2ff",
+      "git_blob_at_source_checkpoint": "56809339d0007d7074dfa6a6b2a0ab919c57cf3b",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S40",
+      "path": "docs/08_agent_rd/PUBLICATION_SCOPE_AND_MODEL_NOTES_20261110.md",
+      "bytes": 4970,
+      "sha256_checkout_bytes": "2eef480ff27f9ef4c010f69f229c5ea20fc2ddac0699ca5c1842265ede323775",
+      "git_blob_at_source_checkpoint": "1bfd147785fd58059300712b37025d911f07906d",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S41",
+      "path": "docs/evidence/lr-cf2p-20261110-v1/budget-closeout-v1.json",
+      "bytes": 20000,
+      "sha256_checkout_bytes": "e62594fd0af78df4147d1ac6a861f504885fc42d68e0a7c6907fd2f865b66132",
+      "git_blob_at_source_checkpoint": "6d139d743f257d4558953d2ee48ef50e7f8a315a",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S42",
+      "path": "docs/evidence/agent-rd-20261110-v1/account-closure-v1.json",
+      "bytes": 713,
+      "sha256_checkout_bytes": "ef6b905e00efdf6c133fc86a7da0bc4810d70e4dc8404d113865aae164f3f661",
+      "git_blob_at_source_checkpoint": "fda8c1746805412a7709cd6bea7660358abf7ac4",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S43",
+      "path": "docs/evidence/agent-rd-20261110-v1/settled-account-identity-v1.json",
+      "bytes": 423,
+      "sha256_checkout_bytes": "7e4e7454d91570e4f7453f321f33b95d54b368e9ee13c61472ba584e6b3cb9a3",
+      "git_blob_at_source_checkpoint": "5d320994424f97b2555cbde543151807f4c018b5",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S44",
+      "path": "docs/evidence/lr-dc2-local-20261113-v1/delivery-audit-v1.json",
+      "bytes": 2525,
+      "sha256_checkout_bytes": "e560f9635cb67f3c21961bcad7eb9e88c8d517dfd6b6048d7ab8f11dfaa2c6c0",
+      "git_blob_at_source_checkpoint": "2d6cee6fa13652dc28d090431de5010778ff0335",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S45",
+      "path": "docs/06_execution/PROJECT_PHASE_STATUS_20261110.md",
+      "bytes": 13044,
+      "sha256_checkout_bytes": "3d893ed34f2a55b484b449343edd47a6dd55e28ed8ee7757726c18bb85e8a710",
+      "git_blob_at_source_checkpoint": "e35ff50ba4ff00ce625cd3bf71d86cbbd1d880f1",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    },
+    {
+      "ref": "S46",
+      "path": "docs/00_project/CLAIM_LEDGER.md",
+      "bytes": 28148,
+      "sha256_checkout_bytes": "e78dffb5ed23bf897f7dc0db2caa52999bd07641cde2a1893894b7a86a076d2b",
+      "git_blob_at_source_checkpoint": "11ef0004db685d455ac725a9a05cf997d67221d2",
+      "review_scope": "Relevant sections inspected; not scientific reexecution"
+    }
+  ],
+  "selected_numeric_sources": [
+    {
+      "path": "docs\\evidence\\m2-costed-20261108-v2\\main-summary-v1.csv",
+      "sha256": "cb5a6713d0b345c8b85ca6d856c815ae7169dbad30d720f68a655c78f7738e11"
+    },
+    {
+      "path": "docs\\evidence\\agent-rd-20261110-v1\\analysis-v1\\systems.csv",
+      "sha256": "d85e5a0c43019566bed1c916c9058e899380edd2a17cc7b157eb9393a560a495"
+    },
+    {
+      "path": "docs\\evidence\\agent-rd-20261110-v1\\analysis-v1\\analysis.json",
+      "sha256": "7eec6097a01a40f60ca04e6031f3c67abdc861ddbb88b94680c89c07d400ab84"
+    },
+    {
+      "path": "docs\\evidence\\lr-sc1-20261113-v1\\delivery-audit-v1.json",
+      "sha256": "443f5c23e5e098a59095dce4577eb993c08c80c18cde9847699761bb90b4e4a2"
+    }
+  ],
+  "checks": [
+    {
+      "name": "source_head",
+      "status": "PASS",
+      "detail": "f42d8aa8edeb2ef40b73a2cdc040dcebda07ed6b"
+    },
+    {
+      "name": "source_branch",
+      "status": "PASS",
+      "detail": "main"
+    },
+    {
+      "name": "existing_tracked_files_unchanged",
+      "status": "PASS",
+      "detail": "Git content comparison; not a fresh whole-private-return or frozen-pin hash audit"
+    },
+    {
+      "name": "principal_reference_count",
+      "status": "PASS",
+      "detail": 48
+    },
+    {
+      "name": "baseline_document_inventory",
+      "status": "PASS",
+      "detail": {
+        "total": 384,
+        ".md": 363,
+        ".pdf": 21
+      }
+    },
+    {
+      "name": "principal_source_exists:S01",
+      "status": "PASS",
+      "detail": "docs/RELEASE_VERIFICATION.md"
+    },
+    {
+      "name": "principal_source_exists:S02",
+      "status": "PASS",
+      "detail": "docs/00_project/CURRENT_STATE_AUDIT.md"
+    },
+    {
+      "name": "principal_source_exists:S03",
+      "status": "PASS",
+      "detail": "docs/evidence/hiv-benchmark/summary.json"
+    },
+    {
+      "name": "principal_source_exists:S04",
+      "status": "PASS",
+      "detail": "docs/06_execution/FOUNDATION_CHECKPOINT.md"
+    },
+    {
+      "name": "principal_source_exists:S05",
+      "status": "PASS",
+      "detail": "docs/03_research/NCATS_DEVELOPMENT_RESULTS_V1.md"
+    },
+    {
+      "name": "principal_source_exists:S06",
+      "status": "PASS",
+      "detail": "docs/03_research/NCATS_GAUSSIAN_RESULTS_V1.md"
+    },
+    {
+      "name": "principal_source_exists:S07",
+      "status": "PASS",
+      "detail": "docs/03_research/NCATS_REPRODUCTION_V1.md"
+    },
+    {
+      "name": "principal_source_exists:S08",
+      "status": "PASS",
+      "detail": "docs/03_research/GOAL_02_RESULTS_V1.md"
+    },
+    {
+      "name": "principal_source_exists:S09",
+      "status": "PASS",
+      "detail": "docs/03_research/FSMOL_DATASET_CARD_V2.md"
+    },
+    {
+      "name": "principal_source_exists:S10",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL3_READINESS_REVISION_A_20261105.md"
+    },
+    {
+      "name": "principal_source_exists:S11",
+      "status": "PASS",
+      "detail": "docs/03_research/GOAL4_RESULTS_V1.md"
+    },
+    {
+      "name": "principal_source_exists:S12",
+      "status": "PASS",
+      "detail": "docs/03_research/GOAL4R1_RESULTS_V1.md"
+    },
+    {
+      "name": "principal_source_exists:S13",
+      "status": "PASS",
+      "detail": "docs/03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md"
+    },
+    {
+      "name": "principal_source_exists:S14",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL4R2A2_CLOSEOUT_20261106.md"
+    },
+    {
+      "name": "principal_source_exists:S15",
+      "status": "PASS",
+      "detail": "docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md"
+    },
+    {
+      "name": "principal_source_exists:S16",
+      "status": "PASS",
+      "detail": "docs/06_execution/LRBC_CORE_CLOSEOUT_20261106.md"
+    },
+    {
+      "name": "principal_source_exists:S17",
+      "status": "PASS",
+      "detail": "docs/06_execution/FRONTEND_CHECKPOINT_20261106.md"
+    },
+    {
+      "name": "principal_source_exists:S18",
+      "status": "PASS",
+      "detail": "docs/03_research/METHOD_FIRST_DESIGN_20261108.md"
+    },
+    {
+      "name": "principal_source_exists:S19",
+      "status": "PASS",
+      "detail": "docs/03_research/R0_CHEMBL_READINESS_RESULTS_20261107.md"
+    },
+    {
+      "name": "principal_source_exists:S20",
+      "status": "PASS",
+      "detail": "docs/03_research/R0R_OWNER_SUBSET_RESULTS_20261107.md"
+    },
+    {
+      "name": "principal_source_exists:S21",
+      "status": "PASS",
+      "detail": "docs/03_research/R0A1_FEASIBILITY_RESULTS_20261107.md"
+    },
+    {
+      "name": "principal_source_exists:S22",
+      "status": "PASS",
+      "detail": "docs/03_research/R0DQ_QUALIFICATION_RESULTS_20261107.md"
+    },
+    {
+      "name": "principal_source_exists:S23",
+      "status": "PASS",
+      "detail": "docs/03_research/R0DQR_TAXONOMY_TASK_FEASIBILITY_20261107.md"
+    },
+    {
+      "name": "principal_source_exists:S24",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0_DESIGN_REVIEW_DECISIONS_20261107.md"
+    },
+    {
+      "name": "principal_source_exists:S25",
+      "status": "PASS",
+      "detail": "docs/03_research/LR_M12_M1_RESULTS_20261108.md"
+    },
+    {
+      "name": "principal_source_exists:S26",
+      "status": "PASS",
+      "detail": "docs/05_product/FOUR_SCREEN_DASHBOARD_CHECKPOINT_20261108.md"
+    },
+    {
+      "name": "principal_source_exists:S27",
+      "status": "PASS",
+      "detail": "docs/03_research/M2_COSTED_RESULTS_20261108.md"
+    },
+    {
+      "name": "principal_source_exists:S28",
+      "status": "PASS",
+      "detail": "docs/03_research/M2_D0_OPERATION_AUDIT_20261109.md"
+    },
+    {
+      "name": "principal_source_exists:S28A",
+      "status": "PASS",
+      "detail": "docs/03_research/D1_OPERATION_HEADROOM_RESULTS_20261109.md"
+    },
+    {
+      "name": "principal_source_exists:S28B",
+      "status": "PASS",
+      "detail": "docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md"
+    },
+    {
+      "name": "principal_source_exists:S29",
+      "status": "PASS",
+      "detail": "docs/06_execution/LR_CF2P_OWNER_CHECKPOINT_20261110.md"
+    },
+    {
+      "name": "principal_source_exists:S30",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md"
+    },
+    {
+      "name": "principal_source_exists:S31",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/LOCAL_WORKFLOW_FINAL_OWNER_REPORT_20261113.md"
+    },
+    {
+      "name": "principal_source_exists:S32",
+      "status": "PASS",
+      "detail": "docs/03_research/LR_CF1_RESULTS_20261109.md"
+    },
+    {
+      "name": "principal_source_exists:S33",
+      "status": "PASS",
+      "detail": "docs/07_publication/CURALOOP_AGENTRD_COMPUTATIONAL_REPORT_EN_V2.md"
+    },
+    {
+      "name": "principal_source_exists:S34",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/LR_SC1_OWNER_REPORT_20261113.md"
+    },
+    {
+      "name": "principal_source_exists:S35",
+      "status": "PASS",
+      "detail": "docs/evidence/lr-sc1-20261113-v1/delivery-audit-v1.json"
+    },
+    {
+      "name": "principal_source_exists:S36",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md"
+    },
+    {
+      "name": "principal_source_exists:S37",
+      "status": "PASS",
+      "detail": "docs/03_research/LOCAL_DATA_INVENTORY_20261107.md"
+    },
+    {
+      "name": "principal_source_exists:S38",
+      "status": "PASS",
+      "detail": "docs/02_literature/LITERATURE_DOWNLOAD_STATUS_20261108.md"
+    },
+    {
+      "name": "principal_source_exists:S39",
+      "status": "PASS",
+      "detail": "docs/01_paper/JOURNAL_TARGETS_20261104.md"
+    },
+    {
+      "name": "principal_source_exists:S40",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/PUBLICATION_SCOPE_AND_MODEL_NOTES_20261110.md"
+    },
+    {
+      "name": "principal_source_exists:S41",
+      "status": "PASS",
+      "detail": "docs/evidence/lr-cf2p-20261110-v1/budget-closeout-v1.json"
+    },
+    {
+      "name": "principal_source_exists:S42",
+      "status": "PASS",
+      "detail": "docs/evidence/agent-rd-20261110-v1/account-closure-v1.json"
+    },
+    {
+      "name": "principal_source_exists:S43",
+      "status": "PASS",
+      "detail": "docs/evidence/agent-rd-20261110-v1/settled-account-identity-v1.json"
+    },
+    {
+      "name": "principal_source_exists:S44",
+      "status": "PASS",
+      "detail": "docs/evidence/lr-dc2-local-20261113-v1/delivery-audit-v1.json"
+    },
+    {
+      "name": "principal_source_exists:S45",
+      "status": "PASS",
+      "detail": "docs/06_execution/PROJECT_PHASE_STATUS_20261110.md"
+    },
+    {
+      "name": "principal_source_exists:S46",
+      "status": "PASS",
+      "detail": "docs/00_project/CLAIM_LEDGER.md"
+    },
+    {
+      "name": "catalog_file_exists:ACADEMIC_BUSINESS_MASTERPLAN.md",
+      "status": "PASS",
+      "detail": "ACADEMIC_BUSINESS_MASTERPLAN.md"
+    },
+    {
+      "name": "catalog_file_exists:AGENTS.md",
+      "status": "PASS",
+      "detail": "AGENTS.md"
+    },
+    {
+      "name": "catalog_file_exists:CHANGELOG.md",
+      "status": "PASS",
+      "detail": "CHANGELOG.md"
+    },
+    {
+      "name": "catalog_file_exists:CONTRIBUTING.md",
+      "status": "PASS",
+      "detail": "CONTRIBUTING.md"
+    },
+    {
+      "name": "catalog_file_exists:DESIGN.md",
+      "status": "PASS",
+      "detail": "DESIGN.md"
+    },
+    {
+      "name": "catalog_file_exists:GOAL.md",
+      "status": "PASS",
+      "detail": "GOAL.md"
+    },
+    {
+      "name": "catalog_file_exists:HANDOFF.md",
+      "status": "PASS",
+      "detail": "HANDOFF.md"
+    },
+    {
+      "name": "catalog_file_exists:HANDOFF_TO_CODEX.md",
+      "status": "PASS",
+      "detail": "HANDOFF_TO_CODEX.md"
+    },
+    {
+      "name": "catalog_file_exists:PLAN.md",
+      "status": "PASS",
+      "detail": "PLAN.md"
+    },
+    {
+      "name": "catalog_file_exists:PRODUCT.md",
+      "status": "PASS",
+      "detail": "PRODUCT.md"
+    },
+    {
+      "name": "catalog_file_exists:README.md",
+      "status": "PASS",
+      "detail": "README.md"
+    },
+    {
+      "name": "catalog_file_exists:SECURITY.md",
+      "status": "PASS",
+      "detail": "SECURITY.md"
+    },
+    {
+      "name": "catalog_file_exists:START_HERE.md",
+      "status": "PASS",
+      "detail": "START_HERE.md"
+    },
+    {
+      "name": "catalog_file_exists:START_WINDOWS.md",
+      "status": "PASS",
+      "detail": "START_WINDOWS.md"
+    },
+    {
+      "name": "catalog_file_exists:THIRD_PARTY_NOTICES.md",
+      "status": "PASS",
+      "detail": "THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/ACCEPTANCE_TEST_MATRIX.md",
+      "status": "PASS",
+      "detail": "docs/ACCEPTANCE_TEST_MATRIX.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/ARCHITECTURE.md",
+      "status": "PASS",
+      "detail": "docs/ARCHITECTURE.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/AUDIT_REPORT.md",
+      "status": "PASS",
+      "detail": "docs/AUDIT_REPORT.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/BRAND.md",
+      "status": "PASS",
+      "detail": "docs/BRAND.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/CONTINUATION.md",
+      "status": "PASS",
+      "detail": "docs/CONTINUATION.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/EVALUATION.md",
+      "status": "PASS",
+      "detail": "docs/EVALUATION.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/PERSISTENCE.md",
+      "status": "PASS",
+      "detail": "docs/PERSISTENCE.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/README.md",
+      "status": "PASS",
+      "detail": "docs/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/README_MANUAL_VERIFICATION.md",
+      "status": "PASS",
+      "detail": "docs/README_MANUAL_VERIFICATION.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/RELEASE_VERIFICATION.md",
+      "status": "PASS",
+      "detail": "docs/RELEASE_VERIFICATION.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/RESEARCH_BENCHMARKS.md",
+      "status": "PASS",
+      "detail": "docs/RESEARCH_BENCHMARKS.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/REVIEWED_V2_INTAKE.md",
+      "status": "PASS",
+      "detail": "docs/REVIEWED_V2_INTAKE.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/WEB_DESIGN_BRIEF.md",
+      "status": "PASS",
+      "detail": "docs/WEB_DESIGN_BRIEF.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/WEB_REBUILD_AUDIT.md",
+      "status": "PASS",
+      "detail": "docs/WEB_REBUILD_AUDIT.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/00_project/CLAIM_LEDGER.md",
+      "status": "PASS",
+      "detail": "docs/00_project/CLAIM_LEDGER.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/00_project/CURRENT_STATE_AUDIT.md",
+      "status": "PASS",
+      "detail": "docs/00_project/CURRENT_STATE_AUDIT.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/00_project/DECISIONS.md",
+      "status": "PASS",
+      "detail": "docs/00_project/DECISIONS.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/00_project/PROJECT_CHARTER.md",
+      "status": "PASS",
+      "detail": "docs/00_project/PROJECT_CHARTER.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/00_title_abstract_keywords.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/00_title_abstract_keywords.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/01_introduction.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/01_introduction.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/02_related_work.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/02_related_work.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/03_materials_and_methods.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/03_materials_and_methods.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/04_proposed_study.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/04_proposed_study.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/05_results.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/05_results.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/06_discussion.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/06_discussion.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/07_limitations.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/07_limitations.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/08_conclusion.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/08_conclusion.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/09_declarations.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/09_declarations.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/FIGURES_TABLES_AND_SUPPLEMENTS.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/FIGURES_TABLES_AND_SUPPLEMENTS.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/JOURNAL_TARGETS_20261104.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/JOURNAL_TARGETS_20261104.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/M2_EVIDENCE_POSITION_20261109.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/M2_EVIDENCE_POSITION_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/MANUSCRIPT.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/MANUSCRIPT.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/PUBLICATION_STRATEGY.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/PUBLICATION_STRATEGY.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/README.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/SUBMISSION_READINESS_20261104.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/SUBMISSION_READINESS_20261104.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/submission/COVER_LETTER_DRAFT.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/submission/COVER_LETTER_DRAFT.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/submission/DATA_CODE_AVAILABILITY_DRAFT.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/submission/DATA_CODE_AVAILABILITY_DRAFT.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/submission/DECLARATIONS_CHECKLIST.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/submission/DECLARATIONS_CHECKLIST.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/01_paper/submission/README.md",
+      "status": "PASS",
+      "detail": "docs/01_paper/submission/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/CF2_CLOSEST_WORK_20261110.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/CF2_CLOSEST_WORK_20261110.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/CONFIRMATION_DIRECTION_SOURCE_REVIEW_20261109.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/CONFIRMATION_DIRECTION_SOURCE_REVIEW_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/CRITICAL_REVIEW.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/CRITICAL_REVIEW.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/DEEP_RESEARCH_PROMPT_20261107.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/DEEP_RESEARCH_PROMPT_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/EVIDENCE_NOTES.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/EVIDENCE_NOTES.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/FULL_TEXT_REVIEW_ADDENDUM.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/FULL_TEXT_REVIEW_ADDENDUM.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/GOAL_01_CLOSEST_WORK_20261104.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/GOAL_01_CLOSEST_WORK_20261104.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/LITERATURE_DOWNLOAD_STATUS_20261108.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/LITERATURE_DOWNLOAD_STATUS_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/METRIC_AND_INITIALIZATION_CONCORDANCE.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/METRIC_AND_INITIALIZATION_CONCORDANCE.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/NOVELTY_AND_COMPARATORS.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/NOVELTY_AND_COMPARATORS.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/POSITIONING_REVIEW_20261108.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/POSITIONING_REVIEW_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/R0_CLOSEST_WORK_20261107.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/R0_CLOSEST_WORK_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/REDESIGN_DEEP_REVIEW_20261105.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/REDESIGN_DEEP_REVIEW_20261105.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/REFERENCES.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/REFERENCES.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/REVIEW_METHOD.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/REVIEW_METHOD.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/02_literature/VERSION_DISCREPANCIES.md",
+      "status": "PASS",
+      "detail": "docs/02_literature/VERSION_DISCREPANCIES.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/BASELINE_SPECIFICATION.md",
+      "status": "PASS",
+      "detail": "docs/03_research/BASELINE_SPECIFICATION.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/CANDIDATE_ASSAY_AUDIT_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/CANDIDATE_ASSAY_AUDIT_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/CF2_CONDITIONAL_EVALUATION_DESIGN_20261110.md",
+      "status": "PASS",
+      "detail": "docs/03_research/CF2_CONDITIONAL_EVALUATION_DESIGN_20261110.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/CF2_DESIGN_DECISION_20261110.md",
+      "status": "PASS",
+      "detail": "docs/03_research/CF2_DESIGN_DECISION_20261110.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/CHEMBL_TASKFIRST_DATASET_BENCHMARK_PLAN_20261107.md",
+      "status": "PASS",
+      "detail": "docs/03_research/CHEMBL_TASKFIRST_DATASET_BENCHMARK_PLAN_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/COMPUTE_AND_STOPPING.md",
+      "status": "PASS",
+      "detail": "docs/03_research/COMPUTE_AND_STOPPING.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/CONFIRMATION_PORTFOLIO_CONTRIBUTION_PROPOSAL_20261109.md",
+      "status": "PASS",
+      "detail": "docs/03_research/CONFIRMATION_PORTFOLIO_CONTRIBUTION_PROPOSAL_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/CONTRIBUTION_AND_VALIDATION_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/CONTRIBUTION_AND_VALIDATION_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/D1_OPERATION_HEADROOM_RESULTS_20261109.md",
+      "status": "PASS",
+      "detail": "docs/03_research/D1_OPERATION_HEADROOM_RESULTS_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/DATA_AND_SPLITS.md",
+      "status": "PASS",
+      "detail": "docs/03_research/DATA_AND_SPLITS.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/DATA_RIGHTS_FOLLOWUP_20261104.md",
+      "status": "PASS",
+      "detail": "docs/03_research/DATA_RIGHTS_FOLLOWUP_20261104.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/DEEP_RESEARCH_ADOPTION_20261108.md",
+      "status": "PASS",
+      "detail": "docs/03_research/DEEP_RESEARCH_ADOPTION_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/DESIGN_SENSITIVITY_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/DESIGN_SENSITIVITY_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/EXPERIMENT_MATRIX.md",
+      "status": "PASS",
+      "detail": "docs/03_research/EXPERIMENT_MATRIX.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/FINAL_DESIGN_PREPARATION_PROTOCOL_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/FINAL_DESIGN_PREPARATION_PROTOCOL_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/FSMOL_COHORT_CONTRACT_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/FSMOL_COHORT_CONTRACT_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/FSMOL_DATASET_CARD_V2.md",
+      "status": "PASS",
+      "detail": "docs/03_research/FSMOL_DATASET_CARD_V2.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/GOAL4R1_RESULTS_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/GOAL4R1_RESULTS_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/GOAL4R2A2_READINESS_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/GOAL4R2A2_READINESS_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/GOAL4_PROTOCOL_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/GOAL4_PROTOCOL_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/GOAL4_RESULTS_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/GOAL4_RESULTS_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/GOAL_02_DATASET_ACQUISITION_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/GOAL_02_DATASET_ACQUISITION_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/GOAL_02_REAL_DATA_PROTOCOL_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/GOAL_02_REAL_DATA_PROTOCOL_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/GOAL_02_RESULTS_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/GOAL_02_RESULTS_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/INTEGER_REFERENCE.md",
+      "status": "PASS",
+      "detail": "docs/03_research/INTEGER_REFERENCE.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/LEAKAGE_AND_SIMULATOR_VALIDATION.md",
+      "status": "PASS",
+      "detail": "docs/03_research/LEAKAGE_AND_SIMULATOR_VALIDATION.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/LOCAL_DATA_INVENTORY_20261107.md",
+      "status": "PASS",
+      "detail": "docs/03_research/LOCAL_DATA_INVENTORY_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/LR_CF1_ANALYSIS_FREEZE_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/LR_CF1_ANALYSIS_FREEZE_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/LR_CF1_CONTROLS_AND_ADMISSION_PROTOCOL_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/LR_CF1_CONTROLS_AND_ADMISSION_PROTOCOL_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/LR_CF1_METHODS_CHECKPOINT_20261109.md",
+      "status": "PASS",
+      "detail": "docs/03_research/LR_CF1_METHODS_CHECKPOINT_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/LR_CF1_NEXT_METHOD_DISPOSITION_20261109.md",
+      "status": "PASS",
+      "detail": "docs/03_research/LR_CF1_NEXT_METHOD_DISPOSITION_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/LR_CF1_RESULTS_20261109.md",
+      "status": "PASS",
+      "detail": "docs/03_research/LR_CF1_RESULTS_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/LR_CF1_SOURCE_USE_AND_BASELINE_CONCORDANCE_20261109.md",
+      "status": "PASS",
+      "detail": "docs/03_research/LR_CF1_SOURCE_USE_AND_BASELINE_CONCORDANCE_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/LR_D23_ALGORITHM_AND_FREEZE_20261109.md",
+      "status": "PASS",
+      "detail": "docs/03_research/LR_D23_ALGORITHM_AND_FREEZE_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md",
+      "status": "PASS",
+      "detail": "docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/LR_M12_M1_RESULTS_20261108.md",
+      "status": "PASS",
+      "detail": "docs/03_research/LR_M12_M1_RESULTS_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/M2_CONTRIBUTION_PROPOSAL_20261108.md",
+      "status": "PASS",
+      "detail": "docs/03_research/M2_CONTRIBUTION_PROPOSAL_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/M2_COSTED_RESULTS_20261108.md",
+      "status": "PASS",
+      "detail": "docs/03_research/M2_COSTED_RESULTS_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/M2_CPU_PROFILE_RESULTS_20261108.md",
+      "status": "PASS",
+      "detail": "docs/03_research/M2_CPU_PROFILE_RESULTS_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/M2_D0_OPERATION_AUDIT_20261109.md",
+      "status": "PASS",
+      "detail": "docs/03_research/M2_D0_OPERATION_AUDIT_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/M2_PREFLIGHT_RESULTS_20261108.md",
+      "status": "PASS",
+      "detail": "docs/03_research/M2_PREFLIGHT_RESULTS_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/METHODS_AND_SCHEDULER.md",
+      "status": "PASS",
+      "detail": "docs/03_research/METHODS_AND_SCHEDULER.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/METHOD_FIRST_DESIGN_20261108.md",
+      "status": "PASS",
+      "detail": "docs/03_research/METHOD_FIRST_DESIGN_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/METHOD_REDESIGN_PLAN_A_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/METHOD_REDESIGN_PLAN_A_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/NCATS_DEVELOPMENT_PROTOCOL_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/NCATS_DEVELOPMENT_PROTOCOL_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/NCATS_DEVELOPMENT_RESULTS_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/NCATS_DEVELOPMENT_RESULTS_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/NCATS_GAUSSIAN_PROTOCOL_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/NCATS_GAUSSIAN_PROTOCOL_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/NCATS_GAUSSIAN_RESULTS_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/NCATS_GAUSSIAN_RESULTS_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/NCATS_REPRODUCTION_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/NCATS_REPRODUCTION_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/PLAN_A_DATA_SOURCE_NOTICES_V1.md",
+      "status": "PASS",
+      "detail": "docs/03_research/PLAN_A_DATA_SOURCE_NOTICES_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/PROTOCOL.md",
+      "status": "PASS",
+      "detail": "docs/03_research/PROTOCOL.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/R0A1_FEASIBILITY_RESULTS_20261107.md",
+      "status": "PASS",
+      "detail": "docs/03_research/R0A1_FEASIBILITY_RESULTS_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/R0DQR_TAXONOMY_TASK_FEASIBILITY_20261107.md",
+      "status": "PASS",
+      "detail": "docs/03_research/R0DQR_TAXONOMY_TASK_FEASIBILITY_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/R0DQ_DATA_CONTRACT_20261107.md",
+      "status": "PASS",
+      "detail": "docs/03_research/R0DQ_DATA_CONTRACT_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/R0DQ_QUALIFICATION_RESULTS_20261107.md",
+      "status": "PASS",
+      "detail": "docs/03_research/R0DQ_QUALIFICATION_RESULTS_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/R0R_INTERIM_RESULTS_20261107.md",
+      "status": "PASS",
+      "detail": "docs/03_research/R0R_INTERIM_RESULTS_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/R0R_OWNER_METHODS_REQUEST_20261107.md",
+      "status": "PASS",
+      "detail": "docs/03_research/R0R_OWNER_METHODS_REQUEST_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/R0R_OWNER_SUBSET_RESULTS_20261107.md",
+      "status": "PASS",
+      "detail": "docs/03_research/R0R_OWNER_SUBSET_RESULTS_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/R0R_REFERENCE_REVIEW_20261107.md",
+      "status": "PASS",
+      "detail": "docs/03_research/R0R_REFERENCE_REVIEW_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/R0R_REFERENCE_REVIEW_V2_20261107.md",
+      "status": "PASS",
+      "detail": "docs/03_research/R0R_REFERENCE_REVIEW_V2_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/R0_CHEMBL_DATA_READINESS_PLAN_20261107.md",
+      "status": "PASS",
+      "detail": "docs/03_research/R0_CHEMBL_DATA_READINESS_PLAN_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/R0_CHEMBL_READINESS_RESULTS_20261107.md",
+      "status": "PASS",
+      "detail": "docs/03_research/R0_CHEMBL_READINESS_RESULTS_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/R0_CONTRIBUTION_DATA_PROPOSAL_20261107.md",
+      "status": "PASS",
+      "detail": "docs/03_research/R0_CONTRIBUTION_DATA_PROPOSAL_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/R0_DESIGN_REVIEW_PROTOCOL_20261107.md",
+      "status": "PASS",
+      "detail": "docs/03_research/R0_DESIGN_REVIEW_PROTOCOL_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/R0_METHOD_FORMALIZATION_20261107.md",
+      "status": "PASS",
+      "detail": "docs/03_research/R0_METHOD_FORMALIZATION_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/REPRODUCIBILITY.md",
+      "status": "PASS",
+      "detail": "docs/03_research/REPRODUCIBILITY.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/03_research/STATISTICAL_ANALYSIS.md",
+      "status": "PASS",
+      "detail": "docs/03_research/STATISTICAL_ANALYSIS.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md",
+      "status": "PASS",
+      "detail": "docs/04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/04_business/COMPETITIVE_POSITION.md",
+      "status": "PASS",
+      "detail": "docs/04_business/COMPETITIVE_POSITION.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/04_business/CUSTOMER_DISCOVERY.md",
+      "status": "PASS",
+      "detail": "docs/04_business/CUSTOMER_DISCOVERY.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/04_business/DATA_SECURITY_AND_COMMERCIAL_READINESS.md",
+      "status": "PASS",
+      "detail": "docs/04_business/DATA_SECURITY_AND_COMMERCIAL_READINESS.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/04_business/GO_TO_MARKET.md",
+      "status": "PASS",
+      "detail": "docs/04_business/GO_TO_MARKET.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/04_business/PILOT_OFFER.md",
+      "status": "PASS",
+      "detail": "docs/04_business/PILOT_OFFER.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/04_business/PILOT_SOW_DRAFT.md",
+      "status": "PASS",
+      "detail": "docs/04_business/PILOT_SOW_DRAFT.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/04_business/PRICING_AND_UNIT_ECONOMICS.md",
+      "status": "PASS",
+      "detail": "docs/04_business/PRICING_AND_UNIT_ECONOMICS.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/04_business/PUBLIC_DEMO_AND_EVIDENCE_SHEET.md",
+      "status": "PASS",
+      "detail": "docs/04_business/PUBLIC_DEMO_AND_EVIDENCE_SHEET.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/04_business/STRATEGY.md",
+      "status": "PASS",
+      "detail": "docs/04_business/STRATEGY.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/ARCHITECTURE.md",
+      "status": "PASS",
+      "detail": "docs/05_product/ARCHITECTURE.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/CF1_INTEGRATION_GUIDE_20261110.md",
+      "status": "PASS",
+      "detail": "docs/05_product/CF1_INTEGRATION_GUIDE_20261110.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/FOUR_SCREEN_DASHBOARD_BRIEF_20261108.md",
+      "status": "PASS",
+      "detail": "docs/05_product/FOUR_SCREEN_DASHBOARD_BRIEF_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/FOUR_SCREEN_DASHBOARD_CHECKPOINT_20261108.md",
+      "status": "PASS",
+      "detail": "docs/05_product/FOUR_SCREEN_DASHBOARD_CHECKPOINT_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/LR_CF1_OFFLINE_HANDOFF_CONTRACT_20261109.md",
+      "status": "PASS",
+      "detail": "docs/05_product/LR_CF1_OFFLINE_HANDOFF_CONTRACT_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/LR_D23_OFFLINE_HANDOFF_CONTRACT_20261109.md",
+      "status": "PASS",
+      "detail": "docs/05_product/LR_D23_OFFLINE_HANDOFF_CONTRACT_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/METADATA_PORTFOLIO_GUIDE_V1.md",
+      "status": "PASS",
+      "detail": "docs/05_product/METADATA_PORTFOLIO_GUIDE_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/MOLECULAR_STUDIO_APPROVED_DESIGN_20261106.md",
+      "status": "PASS",
+      "detail": "docs/05_product/MOLECULAR_STUDIO_APPROVED_DESIGN_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/MOLECULAR_STUDIO_GUIDE_V2.md",
+      "status": "PASS",
+      "detail": "docs/05_product/MOLECULAR_STUDIO_GUIDE_V2.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/OFFLINE_RD_WORKFLOW_V1.md",
+      "status": "PASS",
+      "detail": "docs/05_product/OFFLINE_RD_WORKFLOW_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/OPERATOR_GUIDE.md",
+      "status": "PASS",
+      "detail": "docs/05_product/OPERATOR_GUIDE.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/PRODUCT_REQUIREMENTS.md",
+      "status": "PASS",
+      "detail": "docs/05_product/PRODUCT_REQUIREMENTS.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/UI_COMPETITIVE_REVIEW_20261106.md",
+      "status": "PASS",
+      "detail": "docs/05_product/UI_COMPETITIVE_REVIEW_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/UI_MODERN_BILINGUAL_BRIEF_20261106.md",
+      "status": "PASS",
+      "detail": "docs/05_product/UI_MODERN_BILINGUAL_BRIEF_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/VERIFICATION.md",
+      "status": "PASS",
+      "detail": "docs/05_product/VERIFICATION.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/metadata-portfolio-demo/report.md",
+      "status": "PASS",
+      "detail": "docs/05_product/metadata-portfolio-demo/report.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/05_product/metadata-workspace-v2/report.md",
+      "status": "PASS",
+      "detail": "docs/05_product/metadata-workspace-v2/report.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/APPLY_AND_PUBLISH.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/APPLY_AND_PUBLISH.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/BACKLOG.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/BACKLOG.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/B_POTENTIAL_DECISION_LRBC_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/B_POTENTIAL_DECISION_LRBC_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/CHEMBL_TASKFIRST_DQ_PROPOSAL_20261107.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/CHEMBL_TASKFIRST_DQ_PROPOSAL_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/CONDITIONAL_LONG_RUN_M3_P1_J1_20261109.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/CONDITIONAL_LONG_RUN_M3_P1_J1_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/D1_EXECUTION_NOTES_20261109.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/D1_EXECUTION_NOTES_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/D1_OWNER_CHECKPOINT_20261109.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/D1_OWNER_CHECKPOINT_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/FOUNDATION_CHECKPOINT.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/FOUNDATION_CHECKPOINT.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/FRONTEND_CHECKPOINT_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/FRONTEND_CHECKPOINT_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/GOAL3_COHORT_REVISION_OPTIONS_20261105.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL3_COHORT_REVISION_OPTIONS_20261105.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/GOAL3_READINESS_REVISION_A_20261105.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL3_READINESS_REVISION_A_20261105.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/GOAL3_REVISION_A_AUTHORIZATION_20261105.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL3_REVISION_A_AUTHORIZATION_20261105.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/GOAL4R1_CLOSEOUT_20261105.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL4R1_CLOSEOUT_20261105.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/GOAL4R1_EXECUTION_CONTRACT_20261105.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL4R1_EXECUTION_CONTRACT_20261105.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/GOAL4R2A2_CLOSEOUT_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL4R2A2_CLOSEOUT_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/GOAL4R2A2_EXECUTION_CONTRACT_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL4R2A2_EXECUTION_CONTRACT_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/GOAL4R2A3_INTAKE_CONTRACT_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL4R2A3_INTAKE_CONTRACT_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/GOAL4R2A_CLOSEOUT_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL4R2A_CLOSEOUT_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/GOAL4R2A_EXECUTION_CONTRACT_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL4R2A_EXECUTION_CONTRACT_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/GOAL4R2A_EXPANSION_PROPOSAL_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL4R2A_EXPANSION_PROPOSAL_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/GOAL4_REMOTE_EXECUTION_20261105.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL4_REMOTE_EXECUTION_20261105.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/GOAL_03_PROPOSAL_20261105.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL_03_PROPOSAL_20261105.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/GOAL_TRACKER.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/GOAL_TRACKER.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LONG_RUN_CF2_DESIGN_P_CF1_PROPOSAL_20261110.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LONG_RUN_CF2_DESIGN_P_CF1_PROPOSAL_20261110.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LONG_RUN_CONFIRMATION_FEASIBILITY_PROPOSAL_20261109.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LONG_RUN_CONFIRMATION_FEASIBILITY_PROPOSAL_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LONG_RUN_D2_D3_PROPOSAL_20261109.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LONG_RUN_D2_D3_PROPOSAL_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LRBC_CORE_CLOSEOUT_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LRBC_CORE_CLOSEOUT_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LRBC_C_EXECUTION_CONTRACT_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LRBC_C_EXECUTION_CONTRACT_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LRBC_C_RELEASE_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LRBC_C_RELEASE_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LRBC_EXECUTION_CONTRACT_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LRBC_EXECUTION_CONTRACT_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LRBC_R1_QUALIFICATION_CONTRACT_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LRBC_R1_QUALIFICATION_CONTRACT_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LR_CF1_BLOCKED_HANDOFF_20261109.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LR_CF1_BLOCKED_HANDOFF_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LR_CF1_CALIBRATION_EXECUTION_20261109.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LR_CF1_CALIBRATION_EXECUTION_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LR_CF1_EXECUTION_STATUS_20261109.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LR_CF1_EXECUTION_STATUS_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LR_CF1_OWNER_CHECKPOINT_20261109.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LR_CF1_OWNER_CHECKPOINT_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LR_CF1_SOURCE_CONCORDANCE_DECISION_20261109.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LR_CF1_SOURCE_CONCORDANCE_DECISION_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LR_CF2P_EXECUTION_STATUS_20261110.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LR_CF2P_EXECUTION_STATUS_20261110.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LR_CF2P_OWNER_CHECKPOINT_20261110.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LR_CF2P_OWNER_CHECKPOINT_20261110.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LR_D23_OWNER_CHECKPOINT_20261109.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LR_D23_OWNER_CHECKPOINT_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LR_D23_REPRODUCTION_GUIDE_20261109.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LR_D23_REPRODUCTION_GUIDE_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LR_M12_EXECUTION_CONTRACT_20261108.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LR_M12_EXECUTION_CONTRACT_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LR_M12_OWNER_CHECKPOINT_20261108.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LR_M12_OWNER_CHECKPOINT_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/LR_M12_PROPOSAL_20261108.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/LR_M12_PROPOSAL_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/M2_COSTED_EXECUTION_NOTES_20261108.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/M2_COSTED_EXECUTION_NOTES_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/M2_DIAGNOSTIC_PLAN_20261109.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/M2_DIAGNOSTIC_PLAN_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/M2_INTERIM_OWNER_REPORT_20261109.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/M2_INTERIM_OWNER_REPORT_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/M2_OWNER_CHECKPOINT_20261108.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/M2_OWNER_CHECKPOINT_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/M2_RESOURCE_OWNER_CHECKPOINT_20261108.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/M2_RESOURCE_OWNER_CHECKPOINT_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/M2_TELEMETRY_REPAIR_20261109.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/M2_TELEMETRY_REPAIR_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/MAIN_DELIVERY_CONTRACT_20261104.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/MAIN_DELIVERY_CONTRACT_20261104.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/MAIN_DELIVERY_D0_D1_LR_D23_20261109.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/MAIN_DELIVERY_D0_D1_LR_D23_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/METHOD_FIRST_CHECKPOINT_20261108.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/METHOD_FIRST_CHECKPOINT_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/PARALLEL_LONG_RUN_PROPOSAL_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/PARALLEL_LONG_RUN_PROPOSAL_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/PLAN_A_CHECKPOINT_20261105.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/PLAN_A_CHECKPOINT_20261105.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/PLAN_A_CLOSEOUT_20261105.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/PLAN_A_CLOSEOUT_20261105.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/PLAN_A_EXECUTION_CONTRACT_20261105.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/PLAN_A_EXECUTION_CONTRACT_20261105.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/PLAN_B_EXECUTION_CONTRACT_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/PLAN_B_EXECUTION_CONTRACT_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/POST_4R1_DIRECTION_PROPOSAL_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/POST_4R1_DIRECTION_PROPOSAL_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/PRE_A3_CPU_TIME_OPTIONS_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/PRE_A3_CPU_TIME_OPTIONS_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/PROJECT_PHASE_STATUS_20261110.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/PROJECT_PHASE_STATUS_20261110.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/R0A1_EXECUTION_CONTRACT_20261107.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0A1_EXECUTION_CONTRACT_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/R0A1_NEXT_DECISION_20261107.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0A1_NEXT_DECISION_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/R0DQR_EXECUTION_CONTRACT_20261107.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0DQR_EXECUTION_CONTRACT_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/R0DQR_OWNER_DECISION_20261107.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0DQR_OWNER_DECISION_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/R0DQ_EXECUTION_CONTRACT_20261107.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0DQ_EXECUTION_CONTRACT_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/R0DQ_OWNER_DECISION_20261107.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0DQ_OWNER_DECISION_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/R0R_EXECUTION_CONTRACT_20261107.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0R_EXECUTION_CONTRACT_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/R0R_OWNER_DECISION_OPTIONS_20261107.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0R_OWNER_DECISION_OPTIONS_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/R0_CHEMBL_EXECUTION_CONTRACT_20261107.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0_CHEMBL_EXECUTION_CONTRACT_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/R0_DESIGN_REVIEW_CONTRACT_20261107.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0_DESIGN_REVIEW_CONTRACT_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/R0_DESIGN_REVIEW_DECISIONS_20261107.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0_DESIGN_REVIEW_DECISIONS_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/R0_METADATA_SAMPLING_FREEZE_20261107.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0_METADATA_SAMPLING_FREEZE_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/R0_PROPOSAL_CHECKPOINT_20261107.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0_PROPOSAL_CHECKPOINT_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/R0_QP_PILOT_SCOPE_20261108.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0_QP_PILOT_SCOPE_20261108.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/R0_READINESS_PLAN_CHECKPOINT_20261107.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0_READINESS_PLAN_CHECKPOINT_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/R0_SUPPORT_CENSUS_PROPOSAL_20261107.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/R0_SUPPORT_CENSUS_PROPOSAL_20261107.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/RESEARCH_ROADMAP_AND_LONG_RUN_20261105.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/RESEARCH_ROADMAP_AND_LONG_RUN_20261105.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/UI_AGGREGATE_CPU_AUTHORIZATION_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/UI_AGGREGATE_CPU_AUTHORIZATION_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/06_execution/UI_REDESIGN_EXECUTION_20261106.md",
+      "status": "PASS",
+      "detail": "docs/06_execution/UI_REDESIGN_EXECUTION_20261106.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_audit/LANGUAGE_AND_MANUSCRIPT_AUDIT.md",
+      "status": "PASS",
+      "detail": "docs/07_audit/LANGUAGE_AND_MANUSCRIPT_AUDIT.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_audit/LOCAL_INTEGRATION.md",
+      "status": "PASS",
+      "detail": "docs/07_audit/LOCAL_INTEGRATION.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_audit/MIGRATION.md",
+      "status": "PASS",
+      "detail": "docs/07_audit/MIGRATION.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_audit/PACKAGE_AUDIT.md",
+      "status": "PASS",
+      "detail": "docs/07_audit/PACKAGE_AUDIT.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_audit/REVIEW_CHANGELOG.md",
+      "status": "PASS",
+      "detail": "docs/07_audit/REVIEW_CHANGELOG.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_publication/AGENTRD_METHODS_AND_INTERPRETATION_V1.md",
+      "status": "PASS",
+      "detail": "docs/07_publication/AGENTRD_METHODS_AND_INTERPRETATION_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_publication/CURALOOP_AGENTRD_COMPUTATIONAL_REPORT_EN_V1.md",
+      "status": "PASS",
+      "detail": "docs/07_publication/CURALOOP_AGENTRD_COMPUTATIONAL_REPORT_EN_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_publication/CURALOOP_AGENTRD_COMPUTATIONAL_REPORT_EN_V2.md",
+      "status": "PASS",
+      "detail": "docs/07_publication/CURALOOP_AGENTRD_COMPUTATIONAL_REPORT_EN_V2.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_publication/CuraLoop-AgentRD-Computational-Report-EN-v1.pdf",
+      "status": "PASS",
+      "detail": "docs/07_publication/CuraLoop-AgentRD-Computational-Report-EN-v1.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_publication/CuraLoop-AgentRD-Computational-Report-EN-v2.pdf",
+      "status": "PASS",
+      "detail": "docs/07_publication/CuraLoop-AgentRD-Computational-Report-EN-v2.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_publication/CuraLoop-Local-Workflow-Feasibility-EN-v1.pdf",
+      "status": "PASS",
+      "detail": "docs/07_publication/CuraLoop-Local-Workflow-Feasibility-EN-v1.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_publication/CuraLoop-Local-Workflow-Feasibility-EN-v2.pdf",
+      "status": "PASS",
+      "detail": "docs/07_publication/CuraLoop-Local-Workflow-Feasibility-EN-v2.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_publication/LOCAL_WORKFLOW_ACTUAL_RESULTS_20261113.md",
+      "status": "PASS",
+      "detail": "docs/07_publication/LOCAL_WORKFLOW_ACTUAL_RESULTS_20261113.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_publication/LOCAL_WORKFLOW_FEASIBILITY_20261113.md",
+      "status": "PASS",
+      "detail": "docs/07_publication/LOCAL_WORKFLOW_FEASIBILITY_20261113.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_publication/LR_CF1_METHODS_RESULTS_INSERT_20261109.md",
+      "status": "PASS",
+      "detail": "docs/07_publication/LR_CF1_METHODS_RESULTS_INSERT_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_publication/LR_D23_METHODS_RESULTS_INSERT_20261109.md",
+      "status": "PASS",
+      "detail": "docs/07_publication/LR_D23_METHODS_RESULTS_INSERT_20261109.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_publication/LR_SC1_SCICODE_ADMISSION_MANUSCRIPT_EN_20261113.md",
+      "status": "PASS",
+      "detail": "docs/07_publication/LR_SC1_SCICODE_ADMISSION_MANUSCRIPT_EN_20261113.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/07_publication/LR_SC1_SCICODE_ADMISSION_MANUSCRIPT_EN_20261113.pdf",
+      "status": "PASS",
+      "detail": "docs/07_publication/LR_SC1_SCICODE_ADMISSION_MANUSCRIPT_EN_20261113.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/A0_CLOSEST_WORK_20261110.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/A0_CLOSEST_WORK_20261110.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/A0_SOURCE_AND_REUSE_20261110.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/A0_SOURCE_AND_REUSE_20261110.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/ACTIVE_EXECUTION_20261110.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/ACTIVE_EXECUTION_20261110.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/COMPUTATIONAL_PROTOCOL_V1.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/COMPUTATIONAL_PROTOCOL_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/DELIVERY_ACCEPTANCE_MATRIX_V1.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/DELIVERY_ACCEPTANCE_MATRIX_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/LOCAL_AGENT_EXECUTION_20261113.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/LOCAL_AGENT_EXECUTION_20261113.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/LOCAL_AGENT_PROPOSAL_REVIEW_20261113.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/LOCAL_AGENT_PROPOSAL_REVIEW_20261113.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/LOCAL_AGENT_PROTOCOL_DESIGN_20261113.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/LOCAL_AGENT_PROTOCOL_DESIGN_20261113.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/LOCAL_WORKFLOW_FINAL_OWNER_REPORT_20261113.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/LOCAL_WORKFLOW_FINAL_OWNER_REPORT_20261113.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/LOCAL_WORKFLOW_GUIDE_EN_20261113.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/LOCAL_WORKFLOW_GUIDE_EN_20261113.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/LR_DC2_EXECUTION_20261111.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/LR_DC2_EXECUTION_20261111.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/LR_SC1_GATE0_REVIEW_20261113.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/LR_SC1_GATE0_REVIEW_20261113.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/LR_SC1_OWNER_REPORT_20261113.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/LR_SC1_OWNER_REPORT_20261113.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/NEXT_GOAL_DECISION_CONTRACT_PROPOSAL_20261111.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/NEXT_GOAL_DECISION_CONTRACT_PROPOSAL_20261111.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/NEXT_GOAL_SCIENTIFIC_VALIDATION_PROPOSAL_20261113.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/NEXT_GOAL_SCIENTIFIC_VALIDATION_PROPOSAL_20261113.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/PUBLICATION_SCOPE_AND_MODEL_NOTES_20261110.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/PUBLICATION_SCOPE_AND_MODEL_NOTES_20261110.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/REPRODUCIBILITY_V1.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/REPRODUCIBILITY_V1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/08_agent_rd/RESOURCE_AND_MODEL_DECISION_20261110.md",
+      "status": "PASS",
+      "detail": "docs/08_agent_rd/RESOURCE_AND_MODEL_DECISION_20261110.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/HANDOFF_TO_CODEX_v0.1.md",
+      "status": "PASS",
+      "detail": "docs/archive/HANDOFF_TO_CODEX_v0.1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/HANDOFF_WEB_V0.2.md",
+      "status": "PASS",
+      "detail": "docs/archive/HANDOFF_WEB_V0.2.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/README_v0.1.md",
+      "status": "PASS",
+      "detail": "docs/archive/README_v0.1.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/AGENTS.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/AGENTS.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/CHANGELOG.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/CHANGELOG.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/DESIGN.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/DESIGN.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/GOAL.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/GOAL.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/HANDOFF_TO_CODEX.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/HANDOFF_TO_CODEX.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/PLAN.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/PLAN.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/PRODUCT.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/PRODUCT.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/README.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/SNAPSHOT_README.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/SNAPSHOT_README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/START_WINDOWS.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/START_WINDOWS.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/THIRD_PARTY_NOTICES.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/docs/ACCEPTANCE_TEST_MATRIX.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/docs/ACCEPTANCE_TEST_MATRIX.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/docs/ARCHITECTURE.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/docs/ARCHITECTURE.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/docs/AUDIT_REPORT.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/docs/AUDIT_REPORT.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/docs/BRAND.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/docs/BRAND.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/docs/CONTINUATION.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/docs/CONTINUATION.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/docs/EVALUATION.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/docs/EVALUATION.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/docs/PERSISTENCE.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/docs/PERSISTENCE.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/docs/README_MANUAL_VERIFICATION.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/docs/README_MANUAL_VERIFICATION.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/docs/RELEASE_VERIFICATION.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/docs/RELEASE_VERIFICATION.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/docs/RESEARCH_BENCHMARKS.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/docs/RESEARCH_BENCHMARKS.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/docs/WEB_DESIGN_BRIEF.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/docs/WEB_DESIGN_BRIEF.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/docs/WEB_REBUILD_AUDIT.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/docs/WEB_REBUILD_AUDIT.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/papers/PDFS_NOT_INCLUDED.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/papers/PDFS_NOT_INCLUDED.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/papers/PRIORITIZED_READING_WITH_VERIFICATION.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/papers/PRIORITIZED_READING_WITH_VERIFICATION.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/archive/pre_academic_20261104/papers/READING_ORDER.md",
+      "status": "PASS",
+      "detail": "docs/archive/pre_academic_20261104/papers/READING_ORDER.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/design/diagram-style.md",
+      "status": "PASS",
+      "detail": "docs/design/diagram-style.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/agent-rd-20261110-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/agent-rd-20261110-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/chembl-taskfirst-dq-20261107-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/chembl-taskfirst-dq-20261107-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/chembl-taskfirst-dqr-20261107-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/chembl-taskfirst-dqr-20261107-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/chembl-taskfirst-plan-20261107-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/chembl-taskfirst-plan-20261107-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/d1-operation-headroom-20261109-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/d1-operation-headroom-20261109-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/deep-research-adoption-20261108-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/deep-research-adoption-20261108-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/four-screen-dashboard-20261108-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/four-screen-dashboard-20261108-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/fs-mol-receipt-20261105-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/fs-mol-receipt-20261105-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/goal-02-real-data-20261104-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/goal-02-real-data-20261104-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/goal4-20261105-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/goal4-20261105-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/goal4r1-20261105-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/goal4r1-20261105-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/goal4r2a-20261106-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/goal4r2a-20261106-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/goal4r2a-20261106-v1/demo-report.md",
+      "status": "PASS",
+      "detail": "docs/evidence/goal4r2a-20261106-v1/demo-report.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/goal4r2a2-20261106-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/goal4r2a2-20261106-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/goal4r2a3-20261106-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/goal4r2a3-20261106-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/local-data-inventory-20261107-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/local-data-inventory-20261107-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/lr-cf1-20261109-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/lr-cf1-20261109-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/lr-cf1-20261109-v1/figures/groups-budget-curves-v2.pdf",
+      "status": "PASS",
+      "detail": "docs/evidence/lr-cf1-20261109-v1/figures/groups-budget-curves-v2.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/lr-cf1-20261109-v1/figures/hits-budget-curves-v2.pdf",
+      "status": "PASS",
+      "detail": "docs/evidence/lr-cf1-20261109-v1/figures/hits-budget-curves-v2.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/lr-cf2p-20261110-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/lr-cf2p-20261110-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/lr-d23-20261109-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/lr-d23-20261109-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/lr-dc2-20261111-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/lr-dc2-20261111-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/lr-dc2-local-20261113-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/lr-dc2-local-20261113-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/lr-dc2-local-20261113-v1/figures-v1/native-readiness.pdf",
+      "status": "PASS",
+      "detail": "docs/evidence/lr-dc2-local-20261113-v1/figures-v1/native-readiness.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/lr-dc2-local-20261113-v1/figures-v2/native-readiness.pdf",
+      "status": "PASS",
+      "detail": "docs/evidence/lr-dc2-local-20261113-v1/figures-v2/native-readiness.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/lr-m12-20261108-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/lr-m12-20261108-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/lr-sc1-20261113-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/lr-sc1-20261113-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/lrbc-20261106-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/lrbc-20261106-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/lrbc-c-20261106-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/lrbc-c-20261106-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/m2-costed-20261108-v2/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/m2-costed-20261108-v2/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/m2-costed-20261108-v2/primary-discovery-v1.pdf",
+      "status": "PASS",
+      "detail": "docs/evidence/m2-costed-20261108-v2/primary-discovery-v1.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/m2-costed-20261108-v2/rf-cheap-discovery-curves-1-v1.pdf",
+      "status": "PASS",
+      "detail": "docs/evidence/m2-costed-20261108-v2/rf-cheap-discovery-curves-1-v1.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/m2-costed-20261108-v2/rf-cheap-discovery-curves-2-v1.pdf",
+      "status": "PASS",
+      "detail": "docs/evidence/m2-costed-20261108-v2/rf-cheap-discovery-curves-2-v1.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/m2-cpu-profile-20261108-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/m2-cpu-profile-20261108-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/m2-diagnostics-20261109-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/m2-diagnostics-20261109-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/m2-plan-20261108-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/m2-plan-20261108-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/m2-selective-compute-20261108-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/m2-selective-compute-20261108-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/method-first-20261108-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/method-first-20261108-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/parallel-longrun-proposal-20261106-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/parallel-longrun-proposal-20261106-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/plan-a-20261105-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/plan-a-20261105-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/r0-chembl-20261107-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/r0-chembl-20261107-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/r0-design-review-20261107-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/r0-design-review-20261107-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/r0a1-chembl-20261107-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/r0a1-chembl-20261107-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/r0r-chembl-20261107-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/r0r-chembl-20261107-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/readme-manual-v1/browser-round1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/readme-manual-v1/browser-round1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/redesign-review-20261105-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/redesign-review-20261105-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/ui-modern-bilingual-20261106-v1/INDEPENDENT_REVIEWS.md",
+      "status": "PASS",
+      "detail": "docs/evidence/ui-modern-bilingual-20261106-v1/INDEPENDENT_REVIEWS.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/ui-modern-bilingual-20261106-v1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/ui-modern-bilingual-20261106-v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/web-v2/browser-round1/README.md",
+      "status": "PASS",
+      "detail": "docs/evidence/web-v2/browser-round1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/web-v2/finish-review.md",
+      "status": "PASS",
+      "detail": "docs/evidence/web-v2/finish-review.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/evidence/web-v2/licenses/shadcn-ui_ui_LICENSE.md",
+      "status": "PASS",
+      "detail": "docs/evidence/web-v2/licenses/shadcn-ui_ui_LICENSE.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/manual/CuraLoop-AgentRD-Guide-EN-v1.pdf",
+      "status": "PASS",
+      "detail": "docs/manual/CuraLoop-AgentRD-Guide-EN-v1.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/manual/CuraLoop-AgentRD-Guide-EN-v2.pdf",
+      "status": "PASS",
+      "detail": "docs/manual/CuraLoop-AgentRD-Guide-EN-v2.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/manual/CuraLoop-Local-Molecular-Workflow-Guide-EN-v1.pdf",
+      "status": "PASS",
+      "detail": "docs/manual/CuraLoop-Local-Molecular-Workflow-Guide-EN-v1.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/manual/CuraLoop-Local-Molecular-Workflow-Guide-EN-v2.pdf",
+      "status": "PASS",
+      "detail": "docs/manual/CuraLoop-Local-Molecular-Workflow-Guide-EN-v2.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/manual/CuraLoop-Local-Molecular-Workflow-Guide-EN-v3.pdf",
+      "status": "PASS",
+      "detail": "docs/manual/CuraLoop-Local-Molecular-Workflow-Guide-EN-v3.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/manual/CuraLoop-RL-Confirmation-Evidence-Guide-EN-v4.pdf",
+      "status": "PASS",
+      "detail": "docs/manual/CuraLoop-RL-Confirmation-Evidence-Guide-EN-v4.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/manual/CuraLoop-RL-Dashboard-Guide-EN-v3.pdf",
+      "status": "PASS",
+      "detail": "docs/manual/CuraLoop-RL-Dashboard-Guide-EN-v3.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/manual/CuraLoop-RL-Molecular-Studio-Manual-EN-v2.pdf",
+      "status": "PASS",
+      "detail": "docs/manual/CuraLoop-RL-Molecular-Studio-Manual-EN-v2.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/manual/CuraLoop-RL-User-Manual-EN.pdf",
+      "status": "PASS",
+      "detail": "docs/manual/CuraLoop-RL-User-Manual-EN.pdf"
+    },
+    {
+      "name": "catalog_file_exists:docs/media/molecular-studio/DESIGN.md",
+      "status": "PASS",
+      "detail": "docs/media/molecular-studio/DESIGN.md"
+    },
+    {
+      "name": "catalog_file_exists:docs/requirements/LOCALHOST_UI_REBUILD_MASTER_PROMPT.md",
+      "status": "PASS",
+      "detail": "docs/requirements/LOCALHOST_UI_REBUILD_MASTER_PROMPT.md"
+    },
+    {
+      "name": "catalog_file_exists:research/product_handoffs/lr_cf1_v1/README.md",
+      "status": "PASS",
+      "detail": "research/product_handoffs/lr_cf1_v1/README.md"
+    },
+    {
+      "name": "catalog_file_exists:research/product_handoffs/lr_d23_v1/README.md",
+      "status": "PASS",
+      "detail": "research/product_handoffs/lr_d23_v1/README.md"
+    },
+    {
+      "name": "M2:rf:cheap:R",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "16.262",
+        "source_hits": "16.2625",
+        "displayed_scientific_cpu_s": "0.101",
+        "source_scientific_cpu_s": "0.10145143608750003"
+      }
+    },
+    {
+      "name": "M2:rf:cheap:G1",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "19.500",
+        "source_hits": "19.5",
+        "displayed_scientific_cpu_s": "2.713",
+        "source_scientific_cpu_s": "2.7128527181875"
+      }
+    },
+    {
+      "name": "M2:rf:cheap:Gk",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "19.513",
+        "source_hits": "19.512500000000003",
+        "displayed_scientific_cpu_s": "1.381",
+        "source_scientific_cpu_s": "1.3807390201375"
+      }
+    },
+    {
+      "name": "M2:rf:cheap:U",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "16.238",
+        "source_hits": "16.2375",
+        "displayed_scientific_cpu_s": "2.702",
+        "source_scientific_cpu_s": "2.7018984104625"
+      }
+    },
+    {
+      "name": "M2:rf:cheap:P",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "18.000",
+        "source_hits": "18.0",
+        "displayed_scientific_cpu_s": "3.053",
+        "source_scientific_cpu_s": "3.053469911075"
+      }
+    },
+    {
+      "name": "M2:rf:cheap:T",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "19.700",
+        "source_hits": "19.7",
+        "displayed_scientific_cpu_s": "3.482",
+        "source_scientific_cpu_s": "3.482180737925"
+      }
+    },
+    {
+      "name": "M2:rf:cheap:E",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "18.112",
+        "source_hits": "18.112499999999997",
+        "displayed_scientific_cpu_s": "3.529",
+        "source_scientific_cpu_s": "3.5289345676875"
+      }
+    },
+    {
+      "name": "M2:rf:cheap:L",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "19.275",
+        "source_hits": "19.275",
+        "displayed_scientific_cpu_s": "3.170",
+        "source_scientific_cpu_s": "3.1701413744125"
+      }
+    },
+    {
+      "name": "M2:rf:high:R",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "16.262",
+        "source_hits": "16.2625",
+        "displayed_scientific_cpu_s": "0.100",
+        "source_scientific_cpu_s": "0.10008393251249999"
+      }
+    },
+    {
+      "name": "M2:rf:high:G1",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "19.500",
+        "source_hits": "19.5",
+        "displayed_scientific_cpu_s": "2.702",
+        "source_scientific_cpu_s": "2.701866837425"
+      }
+    },
+    {
+      "name": "M2:rf:high:Gk",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "19.513",
+        "source_hits": "19.512500000000003",
+        "displayed_scientific_cpu_s": "1.381",
+        "source_scientific_cpu_s": "1.380505406875"
+      }
+    },
+    {
+      "name": "M2:rf:high:U",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "16.238",
+        "source_hits": "16.2375",
+        "displayed_scientific_cpu_s": "2.711",
+        "source_scientific_cpu_s": "2.7111603087000002"
+      }
+    },
+    {
+      "name": "M2:rf:high:P",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "19.675",
+        "source_hits": "19.675",
+        "displayed_scientific_cpu_s": "43.481",
+        "source_scientific_cpu_s": "43.481186731437504"
+      }
+    },
+    {
+      "name": "M2:rf:high:T",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "19.188",
+        "source_hits": "19.1875",
+        "displayed_scientific_cpu_s": "31.527",
+        "source_scientific_cpu_s": "31.526544425799997"
+      }
+    },
+    {
+      "name": "M2:rf:high:E",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "19.288",
+        "source_hits": "19.2875",
+        "displayed_scientific_cpu_s": "14.246",
+        "source_scientific_cpu_s": "14.2458554868375"
+      }
+    },
+    {
+      "name": "M2:rf:high:L",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "19.725",
+        "source_hits": "19.725",
+        "displayed_scientific_cpu_s": "14.081",
+        "source_scientific_cpu_s": "14.081031778162501"
+      }
+    },
+    {
+      "name": "M2:neighbor:cheap:R",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "16.262",
+        "source_hits": "16.2625",
+        "displayed_scientific_cpu_s": "0.010",
+        "source_scientific_cpu_s": "0.009749837700000019"
+      }
+    },
+    {
+      "name": "M2:neighbor:cheap:G1",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "20.425",
+        "source_hits": "20.424999999999997",
+        "displayed_scientific_cpu_s": "0.017",
+        "source_scientific_cpu_s": "0.017236839987499995"
+      }
+    },
+    {
+      "name": "M2:neighbor:cheap:Gk",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "19.975",
+        "source_hits": "19.975",
+        "displayed_scientific_cpu_s": "0.014",
+        "source_scientific_cpu_s": "0.014475027762499999"
+      }
+    },
+    {
+      "name": "M2:neighbor:cheap:U",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "16.150",
+        "source_hits": "16.15",
+        "displayed_scientific_cpu_s": "0.017",
+        "source_scientific_cpu_s": "0.017160557787499996"
+      }
+    },
+    {
+      "name": "M2:neighbor:cheap:P",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "18.125",
+        "source_hits": "18.125",
+        "displayed_scientific_cpu_s": "0.012",
+        "source_scientific_cpu_s": "0.012129853762500021"
+      }
+    },
+    {
+      "name": "M2:neighbor:cheap:T",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "19.975",
+        "source_hits": "19.975",
+        "displayed_scientific_cpu_s": "0.017",
+        "source_scientific_cpu_s": "0.017071572512500036"
+      }
+    },
+    {
+      "name": "M2:neighbor:cheap:E",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "20.137",
+        "source_hits": "20.1375",
+        "displayed_scientific_cpu_s": "0.018",
+        "source_scientific_cpu_s": "0.01764935164999994"
+      }
+    },
+    {
+      "name": "M2:neighbor:cheap:L",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "19.712",
+        "source_hits": "19.7125",
+        "displayed_scientific_cpu_s": "0.024",
+        "source_scientific_cpu_s": "0.0244903084625"
+      }
+    },
+    {
+      "name": "M2:neighbor:high:R",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "16.262",
+        "source_hits": "16.2625",
+        "displayed_scientific_cpu_s": "0.010",
+        "source_scientific_cpu_s": "0.009651587300000004"
+      }
+    },
+    {
+      "name": "M2:neighbor:high:G1",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "20.425",
+        "source_hits": "20.424999999999997",
+        "displayed_scientific_cpu_s": "0.017",
+        "source_scientific_cpu_s": "0.017406733124999955"
+      }
+    },
+    {
+      "name": "M2:neighbor:high:Gk",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "19.975",
+        "source_hits": "19.975",
+        "displayed_scientific_cpu_s": "0.014",
+        "source_scientific_cpu_s": "0.014405894900000021"
+      }
+    },
+    {
+      "name": "M2:neighbor:high:U",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "16.150",
+        "source_hits": "16.15",
+        "displayed_scientific_cpu_s": "0.017",
+        "source_scientific_cpu_s": "0.017207228962500015"
+      }
+    },
+    {
+      "name": "M2:neighbor:high:P",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "20.750",
+        "source_hits": "20.75",
+        "displayed_scientific_cpu_s": "1.995",
+        "source_scientific_cpu_s": "1.995358592625"
+      }
+    },
+    {
+      "name": "M2:neighbor:high:T",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "20.625",
+        "source_hits": "20.625",
+        "displayed_scientific_cpu_s": "1.395",
+        "source_scientific_cpu_s": "1.3948574850625"
+      }
+    },
+    {
+      "name": "M2:neighbor:high:E",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "20.475",
+        "source_hits": "20.475",
+        "displayed_scientific_cpu_s": "0.635",
+        "source_scientific_cpu_s": "0.6351888137749999"
+      }
+    },
+    {
+      "name": "M2:neighbor:high:L",
+      "status": "PASS",
+      "detail": {
+        "displayed_hits": "20.488",
+        "source_hits": "20.4875",
+        "displayed_scientific_cpu_s": "1.760",
+        "source_scientific_cpu_s": "1.7596763434375"
+      }
+    },
+    {
+      "name": "AgentRD:B0",
+      "status": "PASS",
+      "detail": {
+        "successes": 96,
+        "calls": 0
+      }
+    },
+    {
+      "name": "AgentRD:B1",
+      "status": "PASS",
+      "detail": {
+        "successes": 60,
+        "calls": 118
+      }
+    },
+    {
+      "name": "AgentRD:B2",
+      "status": "PASS",
+      "detail": {
+        "successes": 67,
+        "calls": 144
+      }
+    },
+    {
+      "name": "AgentRD:P",
+      "status": "PASS",
+      "detail": {
+        "successes": 67,
+        "calls": 144
+      }
+    },
+    {
+      "name": "AgentRD:A-NOREPAIR",
+      "status": "PASS",
+      "detail": {
+        "successes": 24,
+        "calls": 30
+      }
+    },
+    {
+      "name": "AgentRD:total_provider_calls",
+      "status": "PASS",
+      "detail": 436
+    },
+    {
+      "name": "AgentRD:total_tokens",
+      "status": "PASS",
+      "detail": 371939
+    },
+    {
+      "name": "AgentRD:408_units",
+      "status": "PASS",
+      "detail": 408
+    },
+    {
+      "name": "AgentRD:primary_effect",
+      "status": "PASS",
+      "detail": 0.0
+    },
+    {
+      "name": "AgentRD:no_independent_expert_validation",
+      "status": "PASS",
+      "detail": false
+    },
+    {
+      "name": "SciCode:outcome",
+      "status": "PASS",
+      "detail": "NO_GO_NATIVE_EVALUATOR_READINESS"
+    },
+    {
+      "name": "SciCode:no_agent_calls",
+      "status": "PASS",
+      "detail": 0
+    },
+    {
+      "name": "SciCode:native_result",
+      "status": "PASS",
+      "detail": "28/29 subproblems; 5/6 main problems"
+    },
+    {
+      "name": "SciCode:effect_not_estimable",
+      "status": "PASS",
+      "detail": "NOT_ESTIMABLE"
+    },
+    {
+      "name": "links:PROJECT_HISTORY_RESULTS_AND_HANDOVER_20261114.md",
+      "status": "PASS",
+      "detail": {
+        "local_targets": 65,
+        "missing": []
+      }
+    },
+    {
+      "name": "table_shapes:PROJECT_HISTORY_RESULTS_AND_HANDOVER_20261114.md",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "links:PROJECT_REPORT_INDEX_20261114.md",
+      "status": "PASS",
+      "detail": {
+        "local_targets": 388,
+        "missing": []
+      }
+    },
+    {
+      "name": "table_shapes:PROJECT_REPORT_INDEX_20261114.md",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "export_readback:CuraLoop-RL_Full_Project_Report_20261114.md",
+      "status": "PASS",
+      "detail": "Exact transformed text readback; absolute local links replace relative links"
+    },
+    {
+      "name": "export_nonlink_text_identity:CuraLoop-RL_Full_Project_Report_20261114.md",
+      "status": "PASS",
+      "detail": "Only Markdown link destinations changed"
+    },
+    {
+      "name": "export_links:CuraLoop-RL_Full_Project_Report_20261114.md",
+      "status": "PASS",
+      "detail": {
+        "targets": 65,
+        "missing": []
+      }
+    },
+    {
+      "name": "internal_anchors:CuraLoop-RL_Full_Project_Report_20261114.md",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "export_readback:CuraLoop-RL_Report_Index_20261114.md",
+      "status": "PASS",
+      "detail": "Exact transformed text readback; absolute local links replace relative links"
+    },
+    {
+      "name": "export_nonlink_text_identity:CuraLoop-RL_Report_Index_20261114.md",
+      "status": "PASS",
+      "detail": "Only Markdown link destinations changed"
+    },
+    {
+      "name": "export_links:CuraLoop-RL_Report_Index_20261114.md",
+      "status": "PASS",
+      "detail": {
+        "targets": 388,
+        "missing": []
+      }
+    },
+    {
+      "name": "internal_anchors:CuraLoop-RL_Report_Index_20261114.md",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "name": "existing_tracked_files_still_unchanged",
+      "status": "PASS",
+      "detail": "Only new documentation is intended; no experiments, SSH, downloads or model calls in this audit"
+    }
+  ],
+  "delivery": [
+    {
+      "canonical": "docs/00_project/PROJECT_HISTORY_RESULTS_AND_HANDOVER_20261114.md",
+      "canonical_sha256": "76e573798980b110d374b53cec28bba4c0ab35ffbdfb0fb72043bce63131da45",
+      "export": "C:\\Users\\User\\Documents\\ChatGPT\\Drug Discovery\\CuraLoop-RL_Full_Project_Report_20261114.md",
+      "export_sha256": "ddb70fd7e5125479c5e0a3e3fb4564c9add9b2ae42aad986df3a6e15a72816a3",
+      "export_transformation": "Relative Markdown link destinations replaced by absolute local paths; content otherwise identical"
+    },
+    {
+      "canonical": "docs/00_project/PROJECT_REPORT_INDEX_20261114.md",
+      "canonical_sha256": "2d45194d9c000acf9b4e8122723227c5b4bd590ee8fb40885dd6c79b7c9d0f3e",
+      "export": "C:\\Users\\User\\Documents\\ChatGPT\\Drug Discovery\\CuraLoop-RL_Report_Index_20261114.md",
+      "export_sha256": "5b3651f601340cd4ead8e6bf4ab140785e864921f62dd59e9e063bf6145c81be",
+      "export_transformation": "Relative Markdown link destinations replaced by absolute local paths; content otherwise identical"
+    }
+  ],
+  "inventory": [
+    {
+      "path": "ACADEMIC_BUSINESS_MASTERPLAN.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "AGENTS.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "DESIGN.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "GOAL.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "HANDOFF.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "HANDOFF_TO_CODEX.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "PLAN.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "PRODUCT.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "SECURITY.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "START_HERE.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "START_WINDOWS.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/ACCEPTANCE_TEST_MATRIX.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/AUDIT_REPORT.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/BRAND.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/CONTINUATION.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/EVALUATION.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/PERSISTENCE.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/README_MANUAL_VERIFICATION.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/RELEASE_VERIFICATION.md",
+      "review_scope": "PRINCIPAL SOURCE (S01)"
+    },
+    {
+      "path": "docs/RESEARCH_BENCHMARKS.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/REVIEWED_V2_INTAKE.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/WEB_DESIGN_BRIEF.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/WEB_REBUILD_AUDIT.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/00_project/CLAIM_LEDGER.md",
+      "review_scope": "PRINCIPAL SOURCE (S46)"
+    },
+    {
+      "path": "docs/00_project/CURRENT_STATE_AUDIT.md",
+      "review_scope": "PRINCIPAL SOURCE (S02)"
+    },
+    {
+      "path": "docs/00_project/DECISIONS.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/00_project/PROJECT_CHARTER.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/00_title_abstract_keywords.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/01_introduction.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/02_related_work.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/03_materials_and_methods.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/04_proposed_study.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/05_results.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/06_discussion.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/07_limitations.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/08_conclusion.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/09_declarations.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/FIGURES_TABLES_AND_SUPPLEMENTS.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/JOURNAL_TARGETS_20261104.md",
+      "review_scope": "PRINCIPAL SOURCE (S39)"
+    },
+    {
+      "path": "docs/01_paper/M2_EVIDENCE_POSITION_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/MANUSCRIPT.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/PUBLICATION_STRATEGY.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/SUBMISSION_READINESS_20261104.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/submission/COVER_LETTER_DRAFT.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/submission/DATA_CODE_AVAILABILITY_DRAFT.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/submission/DECLARATIONS_CHECKLIST.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/01_paper/submission/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/02_literature/CF2_CLOSEST_WORK_20261110.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/02_literature/CONFIRMATION_DIRECTION_SOURCE_REVIEW_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/02_literature/CRITICAL_REVIEW.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/02_literature/DEEP_RESEARCH_PROMPT_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/02_literature/EVIDENCE_NOTES.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/02_literature/FULL_TEXT_REVIEW_ADDENDUM.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/02_literature/GOAL_01_CLOSEST_WORK_20261104.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/02_literature/LITERATURE_DOWNLOAD_STATUS_20261108.md",
+      "review_scope": "PRINCIPAL SOURCE (S38)"
+    },
+    {
+      "path": "docs/02_literature/METHOD_FIRST_CLOSEST_WORK_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/02_literature/METRIC_AND_INITIALIZATION_CONCORDANCE.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/02_literature/NOVELTY_AND_COMPARATORS.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/02_literature/POSITIONING_REVIEW_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/02_literature/R0_CLOSEST_WORK_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/02_literature/REDESIGN_DEEP_REVIEW_20261105.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/02_literature/REFERENCES.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/02_literature/REVIEW_METHOD.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/02_literature/VERSION_DISCREPANCIES.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/BASELINE_SPECIFICATION.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/CANDIDATE_ASSAY_AUDIT_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/CF2_CONDITIONAL_EVALUATION_DESIGN_20261110.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/CF2_DESIGN_DECISION_20261110.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/CHEMBL_TASKFIRST_DATASET_BENCHMARK_PLAN_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/COMPUTE_AND_STOPPING.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/CONFIRMATION_PORTFOLIO_CONTRIBUTION_PROPOSAL_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/CONTRIBUTION_AND_VALIDATION_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/D1_OPERATION_HEADROOM_RESULTS_20261109.md",
+      "review_scope": "PRINCIPAL SOURCE (S28A)"
+    },
+    {
+      "path": "docs/03_research/DATA_AND_SPLITS.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/DATA_RIGHTS_FOLLOWUP_20261104.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/DEEP_RESEARCH_ADOPTION_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/DESIGN_SENSITIVITY_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/EXPERIMENT_MATRIX.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/FINAL_DESIGN_PREPARATION_PROTOCOL_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/FSMOL_COHORT_CONTRACT_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/FSMOL_DATASET_CARD_V2.md",
+      "review_scope": "PRINCIPAL SOURCE (S09)"
+    },
+    {
+      "path": "docs/03_research/GOAL4R1_RESULTS_V1.md",
+      "review_scope": "PRINCIPAL SOURCE (S12)"
+    },
+    {
+      "path": "docs/03_research/GOAL4R2A2_BENCHMARK_COMPATIBILITY_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/GOAL4R2A2_READINESS_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/GOAL4R2A3_QUALIFICATION_V1.md",
+      "review_scope": "PRINCIPAL SOURCE (S15)"
+    },
+    {
+      "path": "docs/03_research/GOAL4R2A_FEASIBILITY_AND_NEXT_STUDY_V1.md",
+      "review_scope": "PRINCIPAL SOURCE (S13)"
+    },
+    {
+      "path": "docs/03_research/GOAL4R_METHOD_PREDICTOR_PROPOSAL_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/GOAL4_PROTOCOL_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/GOAL4_RESULTS_V1.md",
+      "review_scope": "PRINCIPAL SOURCE (S11)"
+    },
+    {
+      "path": "docs/03_research/GOAL_02_DATASET_ACQUISITION_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/GOAL_02_REAL_DATA_PROTOCOL_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/GOAL_02_RESULTS_V1.md",
+      "review_scope": "PRINCIPAL SOURCE (S08)"
+    },
+    {
+      "path": "docs/03_research/INTEGER_REFERENCE.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/LEAKAGE_AND_SIMULATOR_VALIDATION.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/LOCAL_DATA_INVENTORY_20261107.md",
+      "review_scope": "PRINCIPAL SOURCE (S37)"
+    },
+    {
+      "path": "docs/03_research/LR_CF1_ANALYSIS_FREEZE_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/LR_CF1_CONTROLS_AND_ADMISSION_PROTOCOL_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/LR_CF1_METHODS_CHECKPOINT_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/LR_CF1_NEXT_METHOD_DISPOSITION_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/LR_CF1_RESULTS_20261109.md",
+      "review_scope": "PRINCIPAL SOURCE (S32)"
+    },
+    {
+      "path": "docs/03_research/LR_CF1_SOURCE_USE_AND_BASELINE_CONCORDANCE_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/LR_D23_ALGORITHM_AND_FREEZE_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/LR_D23_DEVELOPMENT_RESULTS_20261109.md",
+      "review_scope": "PRINCIPAL SOURCE (S28B)"
+    },
+    {
+      "path": "docs/03_research/LR_M12_M1_RESULTS_20261108.md",
+      "review_scope": "PRINCIPAL SOURCE (S25)"
+    },
+    {
+      "path": "docs/03_research/M2_CONTRIBUTION_PROPOSAL_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/M2_COSTED_RESULTS_20261108.md",
+      "review_scope": "PRINCIPAL SOURCE (S27)"
+    },
+    {
+      "path": "docs/03_research/M2_CPU_PROFILE_RESULTS_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/M2_D0_OPERATION_AUDIT_20261109.md",
+      "review_scope": "PRINCIPAL SOURCE (S28)"
+    },
+    {
+      "path": "docs/03_research/M2_PREFLIGHT_RESULTS_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/METHODS_AND_SCHEDULER.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/METHOD_FIRST_DESIGN_20261108.md",
+      "review_scope": "PRINCIPAL SOURCE (S18)"
+    },
+    {
+      "path": "docs/03_research/METHOD_REDESIGN_PLAN_A_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/NCATS_DEVELOPMENT_PROTOCOL_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/NCATS_DEVELOPMENT_RESULTS_V1.md",
+      "review_scope": "PRINCIPAL SOURCE (S05)"
+    },
+    {
+      "path": "docs/03_research/NCATS_GAUSSIAN_PROTOCOL_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/NCATS_GAUSSIAN_RESULTS_V1.md",
+      "review_scope": "PRINCIPAL SOURCE (S06)"
+    },
+    {
+      "path": "docs/03_research/NCATS_REPRODUCTION_V1.md",
+      "review_scope": "PRINCIPAL SOURCE (S07)"
+    },
+    {
+      "path": "docs/03_research/PLAN_A_DATA_SOURCE_NOTICES_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/PROTOCOL.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/R0A1_FEASIBILITY_RESULTS_20261107.md",
+      "review_scope": "PRINCIPAL SOURCE (S21)"
+    },
+    {
+      "path": "docs/03_research/R0DQR_TAXONOMY_TASK_FEASIBILITY_20261107.md",
+      "review_scope": "PRINCIPAL SOURCE (S23)"
+    },
+    {
+      "path": "docs/03_research/R0DQ_DATA_CONTRACT_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/R0DQ_QUALIFICATION_RESULTS_20261107.md",
+      "review_scope": "PRINCIPAL SOURCE (S22)"
+    },
+    {
+      "path": "docs/03_research/R0R_INTERIM_RESULTS_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/R0R_OWNER_METHODS_REQUEST_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/R0R_OWNER_SUBSET_RESULTS_20261107.md",
+      "review_scope": "PRINCIPAL SOURCE (S20)"
+    },
+    {
+      "path": "docs/03_research/R0R_REFERENCE_REVIEW_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/R0R_REFERENCE_REVIEW_V2_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/R0_CHEMBL_DATA_READINESS_PLAN_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/R0_CHEMBL_READINESS_RESULTS_20261107.md",
+      "review_scope": "PRINCIPAL SOURCE (S19)"
+    },
+    {
+      "path": "docs/03_research/R0_CONTRIBUTION_DATA_PROPOSAL_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/R0_DESIGN_REVIEW_PROTOCOL_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/R0_METHOD_FORMALIZATION_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/REPRODUCIBILITY.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/03_research/STATISTICAL_ANALYSIS.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/04_business/AGENTIC_RD_PLUGIN_PROPOSAL_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/04_business/COMPETITIVE_POSITION.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/04_business/CUSTOMER_DISCOVERY.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/04_business/DATA_SECURITY_AND_COMMERCIAL_READINESS.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/04_business/GO_TO_MARKET.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/04_business/PILOT_OFFER.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/04_business/PILOT_SOW_DRAFT.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/04_business/PRICING_AND_UNIT_ECONOMICS.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/04_business/PUBLIC_DEMO_AND_EVIDENCE_SHEET.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/04_business/STRATEGY.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/05_product/ARCHITECTURE.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/05_product/CF1_INTEGRATION_GUIDE_20261110.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/05_product/FOUR_SCREEN_DASHBOARD_BRIEF_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/05_product/FOUR_SCREEN_DASHBOARD_CHECKPOINT_20261108.md",
+      "review_scope": "PRINCIPAL SOURCE (S26)"
+    },
+    {
+      "path": "docs/05_product/LR_CF1_OFFLINE_HANDOFF_CONTRACT_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/05_product/LR_D23_OFFLINE_HANDOFF_CONTRACT_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/05_product/METADATA_PORTFOLIO_GUIDE_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/05_product/MOLECULAR_STUDIO_APPROVED_DESIGN_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/05_product/MOLECULAR_STUDIO_GUIDE_V2.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/05_product/OFFLINE_RD_WORKFLOW_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/05_product/OPERATOR_GUIDE.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/05_product/PRODUCT_REQUIREMENTS.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/05_product/UI_COMPETITIVE_REVIEW_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/05_product/UI_MODERN_BILINGUAL_BRIEF_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/05_product/VERIFICATION.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/05_product/metadata-portfolio-demo/report.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/05_product/metadata-workspace-v2/report.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/APPLY_AND_PUBLISH.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/BACKLOG.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/B_POTENTIAL_DECISION_LRBC_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/CHEMBL_TASKFIRST_DQ_PROPOSAL_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/CONDITIONAL_LONG_RUN_M3_P1_J1_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/D1_EXECUTION_NOTES_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/D1_OWNER_CHECKPOINT_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/FOUNDATION_CHECKPOINT.md",
+      "review_scope": "PRINCIPAL SOURCE (S04)"
+    },
+    {
+      "path": "docs/06_execution/FRONTEND_CHECKPOINT_20261106.md",
+      "review_scope": "PRINCIPAL SOURCE (S17)"
+    },
+    {
+      "path": "docs/06_execution/GOAL3_COHORT_REVISION_OPTIONS_20261105.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/GOAL3_READINESS_REVISION_A_20261105.md",
+      "review_scope": "PRINCIPAL SOURCE (S10)"
+    },
+    {
+      "path": "docs/06_execution/GOAL3_REVISION_A_AUTHORIZATION_20261105.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/GOAL4R1_CLOSEOUT_20261105.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/GOAL4R1_EXECUTION_CONTRACT_20261105.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/GOAL4R2A2_CLOSEOUT_20261106.md",
+      "review_scope": "PRINCIPAL SOURCE (S14)"
+    },
+    {
+      "path": "docs/06_execution/GOAL4R2A2_EXECUTION_CONTRACT_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/GOAL4R2A3_CLOSEOUT_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/GOAL4R2A3_INTAKE_CONTRACT_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/GOAL4R2A_CLOSEOUT_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/GOAL4R2A_EXECUTION_CONTRACT_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/GOAL4R2A_EXPANSION_PROPOSAL_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/GOAL4_REMOTE_EXECUTION_20261105.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/GOAL_03_PROPOSAL_20261105.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/GOAL_TRACKER.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LONG_RUN_CF2_DESIGN_P_CF1_PROPOSAL_20261110.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LONG_RUN_CONFIRMATION_FEASIBILITY_PROPOSAL_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LONG_RUN_D2_D3_PROPOSAL_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LRBC_CORE_CLOSEOUT_20261106.md",
+      "review_scope": "PRINCIPAL SOURCE (S16)"
+    },
+    {
+      "path": "docs/06_execution/LRBC_C_EXECUTION_CONTRACT_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LRBC_C_RELEASE_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LRBC_EXECUTION_CONTRACT_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LRBC_R1_QUALIFICATION_CONTRACT_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LR_CF1_BLOCKED_HANDOFF_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LR_CF1_CALIBRATION_EXECUTION_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LR_CF1_EXECUTION_STATUS_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LR_CF1_OWNER_CHECKPOINT_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LR_CF1_SOURCE_CONCORDANCE_DECISION_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LR_CF2P_EXECUTION_STATUS_20261110.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LR_CF2P_OWNER_CHECKPOINT_20261110.md",
+      "review_scope": "PRINCIPAL SOURCE (S29)"
+    },
+    {
+      "path": "docs/06_execution/LR_D23_OWNER_CHECKPOINT_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LR_D23_REPRODUCTION_GUIDE_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LR_M12_EXECUTION_CONTRACT_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LR_M12_OWNER_CHECKPOINT_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/LR_M12_PROPOSAL_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/M2_COSTED_CONTINUATION_PROPOSAL_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/M2_COSTED_EXECUTION_NOTES_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/M2_DIAGNOSTIC_PLAN_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/M2_EXPERIMENT_PLAN_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/M2_INTERIM_OWNER_REPORT_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/M2_OWNER_CHECKPOINT_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/M2_RESOURCE_OWNER_CHECKPOINT_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/M2_TELEMETRY_REPAIR_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/MAIN_DELIVERY_CONTRACT_20261104.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/MAIN_DELIVERY_D0_D1_LR_D23_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/METHOD_FIRST_CHECKPOINT_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/PARALLEL_LONG_RUN_PROPOSAL_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/PLAN_A_CHECKPOINT_20261105.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/PLAN_A_CLOSEOUT_20261105.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/PLAN_A_EXECUTION_CONTRACT_20261105.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/PLAN_B_EXECUTION_CONTRACT_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/PLAN_B_WITH_CONDITIONAL_C_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/POST_4R1_DIRECTION_PROPOSAL_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/PRE_A3_CPU_TIME_OPTIONS_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/PROJECT_PHASE_STATUS_20261110.md",
+      "review_scope": "PRINCIPAL SOURCE (S45)"
+    },
+    {
+      "path": "docs/06_execution/R0A1_EXECUTION_CONTRACT_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/R0A1_NEXT_DECISION_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/R0DQR_EXECUTION_CONTRACT_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/R0DQR_OWNER_DECISION_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/R0DQ_EXECUTION_CONTRACT_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/R0DQ_OWNER_DECISION_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/R0R_EXECUTION_CONTRACT_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/R0R_OWNER_DECISION_OPTIONS_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/R0_CHEMBL_EXECUTION_CONTRACT_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/R0_DESIGN_REVIEW_CONTRACT_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/R0_DESIGN_REVIEW_DECISIONS_20261107.md",
+      "review_scope": "PRINCIPAL SOURCE (S24)"
+    },
+    {
+      "path": "docs/06_execution/R0_METADATA_SAMPLING_FREEZE_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/R0_PROPOSAL_CHECKPOINT_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/R0_QP_PILOT_SCOPE_20261108.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/R0_READINESS_PLAN_CHECKPOINT_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/R0_SUPPORT_CENSUS_PROPOSAL_20261107.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/RESEARCH_ROADMAP_AND_LONG_RUN_20261105.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/UI_AGGREGATE_CPU_AUTHORIZATION_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/06_execution/UI_REDESIGN_EXECUTION_20261106.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_audit/LANGUAGE_AND_MANUSCRIPT_AUDIT.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_audit/LOCAL_INTEGRATION.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_audit/MIGRATION.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_audit/PACKAGE_AUDIT.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_audit/REVIEW_CHANGELOG.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_publication/AGENTRD_METHODS_AND_INTERPRETATION_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_publication/CURALOOP_AGENTRD_COMPUTATIONAL_REPORT_EN_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_publication/CURALOOP_AGENTRD_COMPUTATIONAL_REPORT_EN_V2.md",
+      "review_scope": "PRINCIPAL SOURCE (S33)"
+    },
+    {
+      "path": "docs/07_publication/CuraLoop-AgentRD-Computational-Report-EN-v1.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_publication/CuraLoop-AgentRD-Computational-Report-EN-v2.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_publication/CuraLoop-Local-Workflow-Feasibility-EN-v1.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_publication/CuraLoop-Local-Workflow-Feasibility-EN-v2.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_publication/LOCAL_WORKFLOW_ACTUAL_RESULTS_20261113.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_publication/LOCAL_WORKFLOW_FEASIBILITY_20261113.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_publication/LR_CF1_METHODS_RESULTS_INSERT_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_publication/LR_D23_METHODS_RESULTS_INSERT_20261109.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_publication/LR_SC1_SCICODE_ADMISSION_MANUSCRIPT_EN_20261113.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/07_publication/LR_SC1_SCICODE_ADMISSION_MANUSCRIPT_EN_20261113.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/08_agent_rd/A0_CLOSEST_WORK_20261110.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/08_agent_rd/A0_SOURCE_AND_REUSE_20261110.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/08_agent_rd/ACTIVE_EXECUTION_20261110.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/08_agent_rd/COMPUTATIONAL_PROTOCOL_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/08_agent_rd/DELIVERY_ACCEPTANCE_MATRIX_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/08_agent_rd/FINAL_OWNER_REPORT_20261111.md",
+      "review_scope": "PRINCIPAL SOURCE (S30)"
+    },
+    {
+      "path": "docs/08_agent_rd/LOCAL_AGENT_EXECUTION_20261113.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/08_agent_rd/LOCAL_AGENT_PROPOSAL_REVIEW_20261113.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/08_agent_rd/LOCAL_AGENT_PROTOCOL_DESIGN_20261113.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/08_agent_rd/LOCAL_WORKFLOW_FINAL_OWNER_REPORT_20261113.md",
+      "review_scope": "PRINCIPAL SOURCE (S31)"
+    },
+    {
+      "path": "docs/08_agent_rd/LOCAL_WORKFLOW_GUIDE_EN_20261113.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/08_agent_rd/LR_DC2_DATASET_PAUSE_HANDOFF_20261111.md",
+      "review_scope": "PRINCIPAL SOURCE (S36)"
+    },
+    {
+      "path": "docs/08_agent_rd/LR_DC2_EXECUTION_20261111.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/08_agent_rd/LR_SC1_GATE0_REVIEW_20261113.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/08_agent_rd/LR_SC1_OWNER_REPORT_20261113.md",
+      "review_scope": "PRINCIPAL SOURCE (S34)"
+    },
+    {
+      "path": "docs/08_agent_rd/NEXT_GOAL_DECISION_CONTRACT_PROPOSAL_20261111.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/08_agent_rd/NEXT_GOAL_SCIENTIFIC_VALIDATION_PROPOSAL_20261113.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/08_agent_rd/PUBLICATION_SCOPE_AND_MODEL_NOTES_20261110.md",
+      "review_scope": "PRINCIPAL SOURCE (S40)"
+    },
+    {
+      "path": "docs/08_agent_rd/REPRODUCIBILITY_V1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/08_agent_rd/RESOURCE_AND_MODEL_DECISION_20261110.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/HANDOFF_TO_CODEX_v0.1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/HANDOFF_WEB_V0.2.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/README_v0.1.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/AGENTS.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/CHANGELOG.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/DESIGN.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/GOAL.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/HANDOFF_TO_CODEX.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/PLAN.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/PRODUCT.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/SNAPSHOT_README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/START_WINDOWS.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/THIRD_PARTY_NOTICES.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/docs/ACCEPTANCE_TEST_MATRIX.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/docs/ARCHITECTURE.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/docs/AUDIT_REPORT.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/docs/BRAND.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/docs/CONTINUATION.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/docs/EVALUATION.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/docs/PERSISTENCE.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/docs/README_MANUAL_VERIFICATION.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/docs/RELEASE_VERIFICATION.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/docs/RESEARCH_BENCHMARKS.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/docs/WEB_DESIGN_BRIEF.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/docs/WEB_REBUILD_AUDIT.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/papers/PDFS_NOT_INCLUDED.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/papers/PRIORITIZED_READING_WITH_VERIFICATION.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/archive/pre_academic_20261104/papers/READING_ORDER.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/design/diagram-style.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/agent-rd-20261110-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/chembl-taskfirst-dq-20261107-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/chembl-taskfirst-dqr-20261107-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/chembl-taskfirst-plan-20261107-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/d1-operation-headroom-20261109-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/deep-research-adoption-20261108-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/four-screen-dashboard-20261108-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/fs-mol-receipt-20261105-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/goal-02-real-data-20261104-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/goal4-20261105-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/goal4r1-20261105-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/goal4r2a-20261106-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/goal4r2a-20261106-v1/demo-report.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/goal4r2a2-20261106-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/goal4r2a3-20261106-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/local-data-inventory-20261107-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/lr-cf1-20261109-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/lr-cf1-20261109-v1/figures/groups-budget-curves-v2.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/lr-cf1-20261109-v1/figures/hits-budget-curves-v2.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/lr-cf2p-20261110-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/lr-d23-20261109-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/lr-dc2-20261111-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/lr-dc2-local-20261113-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/lr-dc2-local-20261113-v1/figures-v1/native-readiness.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/lr-dc2-local-20261113-v1/figures-v2/native-readiness.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/lr-m12-20261108-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/lr-sc1-20261113-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/lrbc-20261106-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/lrbc-c-20261106-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/m2-costed-20261108-v2/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/m2-costed-20261108-v2/primary-discovery-v1.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/m2-costed-20261108-v2/rf-cheap-discovery-curves-1-v1.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/m2-costed-20261108-v2/rf-cheap-discovery-curves-2-v1.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/m2-cpu-profile-20261108-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/m2-diagnostics-20261109-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/m2-plan-20261108-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/m2-selective-compute-20261108-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/method-first-20261108-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/parallel-longrun-proposal-20261106-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/plan-a-20261105-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/r0-chembl-20261107-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/r0-design-review-20261107-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/r0a1-chembl-20261107-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/r0r-chembl-20261107-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/readme-manual-v1/browser-round1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/redesign-review-20261105-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/ui-modern-bilingual-20261106-v1/INDEPENDENT_REVIEWS.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/ui-modern-bilingual-20261106-v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/web-v2/browser-round1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/web-v2/finish-review.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/evidence/web-v2/licenses/shadcn-ui_ui_LICENSE.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/manual/CuraLoop-AgentRD-Guide-EN-v1.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/manual/CuraLoop-AgentRD-Guide-EN-v2.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/manual/CuraLoop-Local-Molecular-Workflow-Guide-EN-v1.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/manual/CuraLoop-Local-Molecular-Workflow-Guide-EN-v2.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/manual/CuraLoop-Local-Molecular-Workflow-Guide-EN-v3.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/manual/CuraLoop-RL-Confirmation-Evidence-Guide-EN-v4.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/manual/CuraLoop-RL-Dashboard-Guide-EN-v3.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/manual/CuraLoop-RL-Molecular-Studio-Manual-EN-v2.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/manual/CuraLoop-RL-User-Manual-EN.pdf",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/media/molecular-studio/DESIGN.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "docs/requirements/LOCALHOST_UI_REBUILD_MASTER_PROMPT.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "research/product_handoffs/lr_cf1_v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    },
+    {
+      "path": "research/product_handoffs/lr_d23_v1/README.md",
+      "review_scope": "INVENTORY ONLY"
+    }
+  ],
+  "limitations": [
+    "Source-section review is not a fresh experiment or independent expert validation.",
+    "Inventory-only entries were not content-audited in full.",
+    "No closed compute account reopened; no protected or hidden outcome accessed.",
+    "Git unchanged comparison is not an exhaustive private binary-byte preservation audit."
+  ]
+}

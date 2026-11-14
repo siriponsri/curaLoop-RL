@@ -1,0 +1,92 @@
+{
+  "status": "PASS_CLOSED_ADMISSION_STOP_OWNER_REPORT_READY",
+  "research_outcome": "NO_GO_STATIC_API_FREE_COVERAGE",
+  "closed_utc": "2026-11-14T02:49:20.846265+00:00",
+  "release_start_utc": "2026-11-14T02:34:25+00:00",
+  "unchanged_deadline_utc": "2026-11-24T02:34:25+00:00",
+  "source_base_commit": "f42d8aa8edeb2ef40b73a2cdc040dcebda07ed6b",
+  "active_booked_jobs": 0,
+  "model_calls": 0,
+  "native_evaluator_executions": 0,
+  "paid_api_calls": 0,
+  "model_downloads": 0,
+  "allocated_gpu_seconds": 0,
+  "conservative_retained_cpu_seconds": 8100,
+  "conservative_retained_cpu_hours": 2.25,
+  "measured_local_guarded_job_cpu_seconds": 3.375,
+  "complete_measured_aggregate_cpu": null,
+  "cpu_scope": "Retained reservations include unmetered control/delivery; measured guarded subtotal excludes those allowances",
+  "resource_jobs": [
+    {
+      "id": "bootstrap-admin-v1",
+      "stage": "admission",
+      "cpu_seconds": 3600,
+      "status": "RETAINED_UNMETERED_CONTROL_ALLOWANCE"
+    },
+    {
+      "id": "g0-static-census-v1",
+      "stage": "admission",
+      "cpu_seconds": 900,
+      "status": "PASS",
+      "measured_cpu_seconds": 2.125
+    },
+    {
+      "id": "g0-source-verification-v1",
+      "stage": "admission",
+      "cpu_seconds": 300,
+      "status": "PASS",
+      "measured_cpu_seconds": 0.90625
+    },
+    {
+      "id": "owner-report-v1",
+      "stage": "owner_report_delivery",
+      "cpu_seconds": 900,
+      "status": "PASS",
+      "measured_cpu_seconds": 0.140625
+    },
+    {
+      "id": "closeout-preflight-v1",
+      "stage": "owner_report_delivery",
+      "cpu_seconds": 900,
+      "status": "PASS",
+      "measured_cpu_seconds": 0.203125
+    },
+    {
+      "id": "closeout-launch-failure-v1",
+      "stage": "owner_report_delivery",
+      "cpu_seconds": 300,
+      "status": "RETAINED_UNMETERED_FAILED_LAUNCH_ALLOWANCE"
+    },
+    {
+      "id": "final-delivery-admin-v1",
+      "stage": "owner_report_delivery",
+      "cpu_seconds": 1200,
+      "status": "RETAINED_UNMETERED_FINAL_DELIVERY_ALLOWANCE"
+    }
+  ],
+  "ledger_sha256": "623f8a9f010d240a072016df87249608ddee0df79eff7a5774cd6c442fe7749a",
+  "preservation_pins": 104,
+  "preservation_status": "PASS",
+  "remote_root_created": false,
+  "ssh_started": false,
+  "remote_return_cleanup": "NOT_APPLICABLE_NO_REMOTE_WORK",
+  "primary_effect_status": "NOT_ESTIMABLE",
+  "comparative_agent_matrix": "NOT_RUN",
+  "new_manuscript": "NOT_WRITTEN_OWNER_DEFERRED",
+  "submission": "NOT_RUN",
+  "primary_journal": "Empirical Software Engineering",
+  "backup_journal": "Journal of Systems and Software",
+  "thai_options": [
+    "Science & Technology Asia",
+    "ECTI-CIT (AI-policy compatibility concern)"
+  ],
+  "report_sha256": "05a09c920d5c8de4a4e4c9e80ee6e393889505d9b95551f14e7071ed814a293a",
+  "owner_export_sha256": "ffefdeb45dbb664fd5237f2a24d8c0b64147edd354e0ca46dfec93c59c84cba9",
+  "final16_private_cf1_old_hidden_outcomes": "CLOSED_UNCHANGED",
+  "gate_counts": {
+    "total": 102,
+    "external_judge": 64,
+    "no_judge": 38,
+    "preliminary_candidates": 30
+  }
+}

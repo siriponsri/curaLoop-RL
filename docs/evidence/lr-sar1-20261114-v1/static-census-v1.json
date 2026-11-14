@@ -1,0 +1,3625 @@
+{
+  "status": "STATIC_CENSUS_COMPLETE_NATIVE_QUALIFICATION_NOT_RUN",
+  "tasks_inspected": 102,
+  "archive_sha256": "46e715d3b2196d459d2dff52aa487f506a95ec44b44262e82208d086ea879610",
+  "annotation_sha256": "c6f937863a220bd1762a00c20a0f79cc8dfca900b819bdb552150310731ae147",
+  "reference_bodies_or_expected_values_read": false,
+  "evaluator_bodies_shown_to_author_or_model": false,
+  "official_evaluator_executed": false,
+  "model_calls": 0,
+  "gpu_allocated_seconds": 0,
+  "exclusion_counts": {
+    "AUTHOR_REFERENCE_EXPOSED_REPOSITORY_LINEAGE": 9,
+    "DEVELOPMENT_REPOSITORY_LINEAGE": 2,
+    "REACHABLE_EXTERNAL_MODEL_JUDGE": 64
+  },
+  "unknown_counts": {},
+  "conservative_potential_upper_bound": {
+    "tasks": 30,
+    "repository_lineages": 16,
+    "domains": 4
+  },
+  "syntax_only_candidates": 30,
+  "coverage_potentially_impossible_from_static_census": true,
+  "upper_bound_scope": "No rights/environment/new-development/shared-data verification yet; optimistic count includes UNKNOWN rows; not admission",
+  "catalog": [
+    {
+      "instance_id": 1,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "deepchem/deepchem",
+      "eval_script_name": "clintox_nn_eval.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "cd7c27a79008249ca7ee3d55923447175311e961f515260c2b41d50d0363f3e4",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas",
+          "sklearn"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "int",
+          "list",
+          "pandas.read_csv",
+          "sklearn.metrics.roc_auc_score",
+          "str"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": "AUTHOR_VISIBLE_REFERENCE_IN_PAPER",
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "AUTHOR_REFERENCE_EXPOSED_REPOSITORY_LINEAGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 2,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "uw-cmg/mast-ml",
+      "eval_script_name": "eval_mat_feature_select.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "315170153181d325fb290dc3a60335afa42a4402066db72e9a03ba582f636427",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "all",
+          "int",
+          "list",
+          "pandas.read_csv",
+          "pandas.read_csv('./benchmark/eval_programs/gold_results/mat_diffusion_features_gold.csv').round",
+          "pandas.read_csv('./pred_results/mat_diffusion_features.csv').round"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": "EXISTING_DEVELOPMENT_ROLE",
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "DEVELOPMENT_REPOSITORY_LINEAGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 3,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "hackingmaterials/matminer_examples",
+      "eval_script_name": "eval_bulk_modulus.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "f2cdaa7ae91a7849f11d2ad1f365bf8b29f8d8b3cd8ad787f16c12bfde627ea5",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas",
+          "sklearn"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "int",
+          "list",
+          "pandas.read_csv",
+          "print",
+          "sklearn.metrics.root_mean_squared_error",
+          "str"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": "EXISTING_DEVELOPMENT_ROLE",
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "DEVELOPMENT_REPOSITORY_LINEAGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 4,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "geopandas/geopandas",
+      "eval_script_name": "eval_elk_analysis.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "99dcccb8b045a06e44e71590e5752102009e6c8d97ed5c70eecaa5f572bfe451",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 5,
+      "domain": "Bioinformatics",
+      "repository_lineage": "psa-lab/predicting-activity-by-machine-learning",
+      "eval_script_name": "eval_dkpes_model_development_1.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "fa1c38bd7803ee083897ce185add7269194131c1c868cf591af93b0874319326",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas",
+          "sklearn"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "int",
+          "list",
+          "pandas.read_csv",
+          "sklearn.metrics.roc_auc_score",
+          "str"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 6,
+      "domain": "Bioinformatics",
+      "repository_lineage": "psa-lab/predicting-activity-by-machine-learning",
+      "eval_script_name": "eval_dkpes_visualization_1.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "195fb5e4b1175b2b8244064b840ba047d5f937fcb03a5c5ac3dbccd8b868f325",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 7,
+      "domain": "Bioinformatics",
+      "repository_lineage": "psa-lab/predicting-activity-by-machine-learning",
+      "eval_script_name": "eval_dkpes_visualization_2.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "74f649530551d0f6c72e8e9573f6c1afa87ba7054abbcc21f6d0936822b4836f",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 8,
+      "domain": "Bioinformatics",
+      "repository_lineage": "psa-lab/predicting-activity-by-machine-learning",
+      "eval_script_name": "eval_dkpes_visualization_3.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "8daf648462f4e4cd14ee57c5807921cce759db8efcb20eed7effee06c0003709",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 9,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "deepchem/deepchem",
+      "eval_script_name": "FACTORS_correlations_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "efdd3dd594415e08df5048fd4fdd0f2a2d900ae4590895df65fa8abab5d2d4ab",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "AUTHOR_REFERENCE_EXPOSED_REPOSITORY_LINEAGE",
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 10,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "geopandas/geopandas",
+      "eval_script_name": "eval_toronto_fire.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "7309821367858fda96e4fe27cf76b8413ce54c638356db3c36e3dbe6af9fd234",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 11,
+      "domain": "Bioinformatics",
+      "repository_lineage": "deepchem/deepchem",
+      "eval_script_name": "BBBC002_cell_count_eval.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "9f2b3635f4f580e5af614409dcf19e0488a499163c00905e06dbdb86abbb6e27",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas",
+          "sklearn"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "int",
+          "pandas.read_csv",
+          "pandas.read_csv('benchmark/eval_programs/gold_results/cell-count_gold.csv')['count'].to_numpy",
+          "sklearn.metrics.mean_absolute_error"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": "REPORTED_BBBC002_REFERENCE_EXPOSURE",
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "AUTHOR_REFERENCE_EXPOSED_REPOSITORY_LINEAGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 12,
+      "domain": "Bioinformatics",
+      "repository_lineage": "kexinhuang12345/deeppurpose",
+      "eval_script_name": "davis_dti_eval.py",
+      "output_suffix": ".txt",
+      "evaluator_sha256": "f2b0b4095ba7c8347ec69a41ed287a67e7b00bed9d551590c34ed4034f913227",
+      "evaluator_syntax": {
+        "imports": [],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "''.join",
+          "all",
+          "int",
+          "open",
+          "range",
+          "str"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 13,
+      "domain": "Bioinformatics",
+      "repository_lineage": "kexinhuang12345/deeppurpose",
+      "eval_script_name": "drug_property_eval.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "4859e31405a76dd8c824dd15a79a4020b513eaa4655cb0969947f7813577f7a1",
+      "evaluator_syntax": {
+        "imports": [
+          "numpy",
+          "pandas",
+          "sklearn"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "int",
+          "list",
+          "pandas.read_csv",
+          "sklearn.metrics.f1_score",
+          "str"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 14,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "geopandas/geopandas",
+      "eval_script_name": "eval_flooding_gpd.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "958ae1ad18db5be2c2854239807410a5a840e9ce1f062f4dabfb0ec5cfb4c2bc",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 15,
+      "domain": "Bioinformatics",
+      "repository_lineage": "swansonk14/admet_ai",
+      "eval_script_name": "admet_ai_eval.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "21457f39d8f5cbf371ec234588560c7da24aab19854d79f2c11b6266d5bb64b5",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas",
+          "sklearn"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "int",
+          "list",
+          "pandas.read_csv",
+          "sklearn.metrics.roc_auc_score",
+          "str"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 16,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "felixjwong/antibioticsai",
+      "eval_script_name": "antibioticsai_filter_eval.py",
+      "output_suffix": ".txt",
+      "evaluator_sha256": "216935482b08427dc5c713f4c4b0a83f46eb637846c7f847cfab44cf270bf873",
+      "evaluator_syntax": {
+        "imports": [],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "int",
+          "len",
+          "line.strip",
+          "load_results",
+          "open",
+          "pred_results.intersection",
+          "results.append",
+          "set"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 17,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "martin-sicho/papyrus-scaffold-visualizer",
+      "eval_script_name": "drugex_vis_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "04500c99b13baedfdb43f99b5a89e91c888855080458382dbcacc5f13d5974c4",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 18,
+      "domain": "Bioinformatics",
+      "repository_lineage": "anikaliu/camda-dili",
+      "eval_script_name": "eval_DILI_RF.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "dde640c8f94430eaa7b2ba2cb3b3d1be4bc4726ac98f73d69c1ef3ffaeebd03e",
+      "evaluator_syntax": {
+        "imports": [
+          "numpy",
+          "pandas",
+          "sklearn"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "'pred_results/{}_{}.csv'.format",
+          "(predicted_df.standardised_smiles == gold_df.standardised_smiles).all",
+          "f1_list.append",
+          "gold_df['label'].tolist",
+          "int",
+          "numpy.mean",
+          "pandas.read_csv",
+          "predicted_df['label'].tolist",
+          "sklearn.metrics.f1_score",
+          "str"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 19,
+      "domain": "Bioinformatics",
+      "repository_lineage": "anikaliu/camda-dili",
+      "eval_script_name": "eval_DILI_SVM.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "4873740e3d1af0c34bd335c03322c90e97a5d13aee7b705e3d320dccde09548b",
+      "evaluator_syntax": {
+        "imports": [
+          "numpy",
+          "pandas",
+          "sklearn"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "'pred_results/{}_{}.csv'.format",
+          "(predicted_df.standardised_smiles == gold_df.standardised_smiles).all",
+          "f1_list.append",
+          "gold_df['label'].tolist",
+          "int",
+          "numpy.mean",
+          "pandas.read_csv",
+          "predicted_df['label'].tolist",
+          "sklearn.metrics.f1_score",
+          "str"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 20,
+      "domain": "Bioinformatics",
+      "repository_lineage": "swansonk14/admet_ai",
+      "eval_script_name": "eval_tdc_visualization.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "709ee084696b3b7f1a09b85d79f40bc0eb947451708e76ebf47ad41f26fdbb2c",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 21,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "geopandas/geopandas",
+      "eval_script_name": "eval_deforestation.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "c1b2ca7c15c1f2b4ba3520e9d89e35a5656a1c98e63cfac58f63221b46f49819",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "abs",
+          "int",
+          "pandas.read_csv"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 22,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "olivierbeq/papyrus-scripts",
+      "eval_script_name": "eval_papyrus.py",
+      "output_suffix": ".pkl",
+      "evaluator_sha256": "b774ae08365e3a9d39289d850b55a950c8227e2453c43c1d02066fe19fb22105",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gold_results.iterrows",
+          "int",
+          "len",
+          "list",
+          "pandas.read_pickle",
+          "pandas.read_pickle('./pred_results/papyrus_filtered.pkl').sort_values",
+          "pandas.read_pickle('./pred_results/papyrus_filtered.pkl').sort_values(by=['Activity_ID']).reset_index",
+          "pandas.read_pickle('./pred_results/papyrus_filtered.pkl').sort_values(by=['Activity_ID']).reset_index().drop",
+          "pandas.read_pickle('./pred_results/papyrus_filtered.pkl').sort_values(by=['Activity_ID']).reset_index().drop(['index'], axis=1).round",
+          "pandas.read_pickle('./pred_results/papyrus_filtered.pkl').sort_values(by=['Activity_ID']).reset_index().drop(['index'], axis=1).round(3).astype",
+          "pandas.read_pickle('benchmark/eval_programs/gold_results/papyrus_filtered_gold.pkl').sort_values",
+          "pandas.read_pickle('benchmark/eval_programs/gold_results/papyrus_filtered_gold.pkl').sort_values(by=['Activity_ID']).reset_index",
+          "pandas.read_pickle('benchmark/eval_programs/gold_results/papyrus_filtered_gold.pkl').sort_values(by=['Activity_ID']).reset_index().drop",
+          "pandas.read_pickle('benchmark/eval_programs/gold_results/papyrus_filtered_gold.pkl').sort_values(by=['Activity_ID']).reset_index().drop(['index'], axis=1).round",
+          "pandas.read_pickle('benchmark/eval_programs/gold_results/papyrus_filtered_gold.pkl').sort_values(by=['Activity_ID']).reset_index().drop(['index'], axis=1).round(3).astype",
+          "print",
+          "zip"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 23,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "geopandas/geopandas",
+      "eval_script_name": "eval_deforestation_predict.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "f4409c1a994de1ab4482b29b42946310cdbcf9aecbb31b7d94a516bc56795a19",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 24,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "mad-lab-fau/biopsykit",
+      "eval_script_name": "eval_biopsykit_ecg_processing_vis1.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "df2adb19f7a7cdef4ce9a01410914492b1a7bd1a04c9900b6281862cc4f67eea",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 25,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "mad-lab-fau/biopsykit",
+      "eval_script_name": "eval_biopsykit_ecg_processing_vis2.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "2634313313607c949e624a3f30aed87cf66f32e1cae231b6b6148058ff76c861",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 26,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "chemosim-lab/prolif",
+      "eval_script_name": "eval_fingerprint.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "b241d0dd2d82e362d8c552d413a33ae592c9cc69534ddbd0cc02f633267c2024",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas",
+          "sklearn"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "int",
+          "list",
+          "pandas.read_csv",
+          "sklearn.metrics.accuracy_score",
+          "str"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 27,
+      "domain": "Bioinformatics",
+      "repository_lineage": "anikaliu/camda-dili",
+      "eval_script_name": "eval_plots_similarity.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "a0975540fd6f1d15d34b51b12a18b5d267c12a03d08e65c64aa99f86863855c6",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 28,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "materialsproject/pymatgen",
+      "eval_script_name": "eval_pymatgen_charge_density_difference.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "c13d83aa40f3af555632cab5ae67ba9c306af549fbd38bf6dda99473dfdb10ba",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 29,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "neuropsychology/neurokit",
+      "eval_script_name": "eval_bio_eventrelated_analyze.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "40f4302283db3bd3da25e55c832c82c76394d4a9dd4b129126a66e4a323a4bec",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "abs",
+          "gold.iterrows",
+          "int",
+          "len",
+          "pandas.read_csv",
+          "round",
+          "sum"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 30,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "materialsproject/pymatgen",
+      "eval_script_name": "eval_pymatgen_plot_phonon_band_structure.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "d9866ed62876ab9ccd49f3351adcfc5818d22e5b6f230f24e1e15ce5823d77f6",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 31,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "materialsproject/pymatgen",
+      "eval_script_name": "eval_pymatgen_plot_phonon_dos.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "03ce7d270abf226e3608000c297c5c8cd83753492b7b83a13352831c955ccad7",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 32,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "rasterio/rasterio",
+      "eval_script_name": "coral_sponge_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "2eaf79537b3ae99948260bdbc0934f6f02bf5e6d44974c0ebc34611e08eecdf4",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 33,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "geopandas/geopandas",
+      "eval_script_name": "transit_access_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "b16679160b6fc5cbfb704ca4651f631cdc40d90a084599313b73c466d6993433",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 34,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "neuropsychology/neurokit",
+      "eval_script_name": "eval_HRV_analyze.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "29f51299148d83077e9648a121897d980f7084e1b402b9a377d9873eae5aec87",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "(pred[series_name] - series).sum",
+          "abs",
+          "gold.items",
+          "int",
+          "pandas.read_csv",
+          "pandas.read_csv('./benchmark/eval_programs/gold_results/hrv_analysis_gold.csv').round",
+          "pandas.read_csv('./pred_results/hrv_analysis_pred.csv').round"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 35,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "neuropsychology/neurokit",
+      "eval_script_name": "eval_RRV_analyze.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "fdd1865eb53ba1ea9aa8717ca239690466d05293e09e2dfe1dc0d7cd56f1f410",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "(pred[series_name] - series).sum",
+          "abs",
+          "gold.items",
+          "int",
+          "pandas.read_csv",
+          "pandas.read_csv('./benchmark/eval_programs/gold_results/rrv_analysis_gold.csv').round",
+          "pandas.read_csv('./pred_results/rrv_analysis_pred.csv').round"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 36,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "mad-lab-fau/biopsykit",
+      "eval_script_name": "eval_biopsykit_eeg_processing_vis1.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "6d9ec6a715660b3a1113a78ff2ffd414bf28c79d415de28cf873d40c29ed1dba",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 37,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "mad-lab-fau/biopsykit",
+      "eval_script_name": "eval_biopsykit_cft.py",
+      "output_suffix": ".json",
+      "evaluator_sha256": "ce2cf840c683c7b5439d1d92c8e4399ff6000a84f126e1fa7aa5b68a9356e965",
+      "evaluator_syntax": {
+        "imports": [
+          "json",
+          "math"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "int",
+          "json.load",
+          "math.isclose",
+          "open"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 38,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "chemosim-lab/prolif",
+      "eval_script_name": "fingerprint_similarity_vis_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "a6ef9939b9e02f56d2c16cd702906d709a135e579d57739e6a27c5760e4aeb26",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 39,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "chemosim-lab/prolif",
+      "eval_script_name": "protein_protein_fingerprint_similarity_vis_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "022238a3f7db15fa90d5c37ff0b01858bb773facc27639449e82ad1d097f025a",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 40,
+      "domain": "Bioinformatics",
+      "repository_lineage": "anikaliu/camda-dili",
+      "eval_script_name": "eval_MD_RF.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "0265388407cbaefb27a95412b496e95ebfc409c9f8f69b13389dc7f8fdfb691d",
+      "evaluator_syntax": {
+        "imports": [
+          "numpy",
+          "pandas",
+          "sklearn"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "'pred_results/MD_{}_{}.csv'.format",
+          "f1_list.append",
+          "gold_df['label'].tolist",
+          "int",
+          "numpy.mean",
+          "pandas.read_csv",
+          "predicted_df['label'].tolist",
+          "sklearn.metrics.f1_score"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 41,
+      "domain": "Bioinformatics",
+      "repository_lineage": "anikaliu/camda-dili",
+      "eval_script_name": "eval_MD_KNN.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "c8ebb374add7f25fb6020d73586742cc777a492879bfeafe036c06ea460b1155",
+      "evaluator_syntax": {
+        "imports": [
+          "numpy",
+          "pandas",
+          "sklearn"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "'pred_results/MD_{}_{}.csv'.format",
+          "f1_list.append",
+          "gold_df['label'].tolist",
+          "int",
+          "numpy.mean",
+          "pandas.read_csv",
+          "predicted_df['label'].tolist",
+          "sklearn.metrics.f1_score"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 42,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "neuropsychology/neurokit",
+      "eval_script_name": "eval_EDR_analyze.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "dcb093985839f0163d5ac1b09839205304534ad88085417761d8614d7973e11a",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 43,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "neuropsychology/neurokit",
+      "eval_script_name": "eval_EOG_analyze.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "d5abc3deaa41c7c71b0bdbb0e5379a42bbb1fa15fc58c76da04ebab6288932a7",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 44,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "mad-lab-fau/biopsykit",
+      "eval_script_name": "biopsykit_imu_eval.py",
+      "output_suffix": ".json",
+      "evaluator_sha256": "7637f47cfebdf615d713a0c592e5401ee5cbac908bec52acdbf8891896897947",
+      "evaluator_syntax": {
+        "imports": [
+          "json",
+          "math"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gold.keys",
+          "int",
+          "isinstance",
+          "json.load",
+          "math.isclose",
+          "open"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 45,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "mad-lab-fau/biopsykit",
+      "eval_script_name": "biopsykit_questionnaire_eval.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "489aec82424459ef743a0a10d9d76379774e5af4c93de76a3bdf373b30842928",
+      "evaluator_syntax": {
+        "imports": [
+          "csv"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "csv.reader",
+          "gold_data.items",
+          "int",
+          "len",
+          "list",
+          "load_predictions",
+          "open"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 46,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "rasterio/rasterio",
+      "eval_script_name": "mountainLion1_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "24d326f0c2b60ab274268828a3aa707dadd4f987a65e784f653e71204b39a513",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 47,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "geopandas/geopandas",
+      "eval_script_name": "mountainLion2_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "6a42f4590641b2d1de10eb39b339601d1e5c310ce5387e4caa1a03faf1e6e328",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 48,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "ajdawson/eofs",
+      "eval_script_name": "eval_sst_visualization.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "4dae8f13455fbcf299f70c396f3c66b2b7cb249bdeb57834bbaf08d5f3371d33",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 49,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "ajdawson/eofs",
+      "eval_script_name": "EOF_standard_hgt_plot_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "fdc95a1cafe16fca8d864383706cbaf450e69295569f3aafce21aae910d20f73",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 50,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "ajdawson/eofs",
+      "eval_script_name": "EOF_xarray_sst_plot_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "21f5b6752648cc1c2ad997be7b1b6faf7cdcf0760fe583c138f9455eb44f359a",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 51,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "deepchem/deepchem",
+      "eval_script_name": "eval_brain_blood_qsar.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "41088af81f933fb99cd357b61b194726334da98d6b65c41b40e36a6c68fc0314",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas",
+          "sklearn"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "int",
+          "pandas.read_csv",
+          "sklearn.metrics.balanced_accuracy_score"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "AUTHOR_REFERENCE_EXPOSED_REPOSITORY_LINEAGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 52,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "deepchem/deepchem",
+      "eval_script_name": "eval_aquatic_toxicity_qsar_vis.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "386386d73c9f023b4adfcbcde8d8dc0734d3435b18e08d223411e255260aef7d",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "AUTHOR_REFERENCE_EXPOSED_REPOSITORY_LINEAGE",
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 53,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "rasterio/rasterio",
+      "eval_script_name": "mountainLion3_eval.py",
+      "output_suffix": ".tif",
+      "evaluator_sha256": "580a2ffea5a49a040471bb01709ccbd151a31f4028ca49642fb5f9d1201c41c7",
+      "evaluator_syntax": {
+        "imports": [
+          "numpy",
+          "rasterio"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "int",
+          "numpy.sum",
+          "rasterio.open",
+          "src.read"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 54,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "rasterio/rasterio",
+      "eval_script_name": "mountainLionCorridor_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "ec9627c344f91cf5ac7cdd0de9d196decf18fcae52ba742c183e246ab0695ef7",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 55,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "scitools/iris",
+      "eval_script_name": "eval_plot_ocean_profiles.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "f32f79d212b906cba384ee866338aad1a7c86ae9daedb232555cb127583fc0e7",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 56,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "scitools/iris",
+      "eval_script_name": "eval_plot_temperature_statistic.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "dd93d1d47905669382b9e3a1cbda84ed446e23e8ee8081406000be5a3bd1877d",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 57,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "nriesterer/syllogistic-nvc",
+      "eval_script_name": "eval_syllogistic_nvc_plot_ind.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "cefb0fdc7d6bddd3488e1a6d58f24828312f11f4441f265d2135d01e9692954f",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 58,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "nriesterer/syllogistic-nvc",
+      "eval_script_name": "eval_syllogistic_nvc_gen_ind.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "1c0adb7a9a7908c9a226909f698681c7288ff03a485896ab7ac0c6c5a84db868",
+      "evaluator_syntax": {
+        "imports": [
+          "numpy",
+          "pandas"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gold_df.sort_values",
+          "gold_df.sort_values(by=['Model', 'Rule']).reset_index",
+          "len",
+          "pandas.read_csv",
+          "pred_df.sort_values",
+          "pred_df.sort_values(by=['Model', 'Rule']).reset_index",
+          "pred_sorted.equals"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 59,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "nriesterer/syllogistic-nvc",
+      "eval_script_name": "eval_syllogistic_nvc_heatmap.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "2b7f94ad0386e19b960ef7011cd703b1dcee80725924ed2e39e13f9e0aa7e547",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 60,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "nriesterer/syllogistic-nvc",
+      "eval_script_name": "eval_syllogistic_nvc_accuracies.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "5192b404c91e656564ab3ccab9876e580c21733d0a28c0b7ad404dff04950658",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gold_df.columns.tolist",
+          "gold_df.sort_values",
+          "gold_df.sort_values(by=gold_df.columns.tolist()).reset_index",
+          "pandas.read_csv",
+          "pandas.testing.assert_frame_equal",
+          "pred_df.columns.tolist",
+          "pred_df.sort_values",
+          "pred_df.sort_values(by=pred_df.columns.tolist()).reset_index"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 61,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "nriesterer/syllogistic-nvc",
+      "eval_script_name": "eval_syllogistic_nvc_stackbar_plain_prediction.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "be6ab44a46b07ed49a20a8331ea63064c1bb166f7afcda4505f9224e7fb919a6",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 62,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "nriesterer/syllogistic-nvc",
+      "eval_script_name": "eval_syllogistic_nvc_stackbar_prediction.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "ebf05a733633fad562993b3b675198ddeaabb7d9371587151478cf9b901fc084",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 63,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "neuropsychology/neurokit",
+      "eval_script_name": "eval_bio_interval_analyze.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "f03e745b5a4a36b957404236dc342c03619311235d28b6b8ad0318b7fdd1557f",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 64,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "oggm/tutorials",
+      "eval_script_name": "eval_oggm_plotting_flowline_mb_elevation.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "6a32c64c5dd2839d39936b3f5138a1e8a5fb429afecabae23adb3af2824433ab",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 65,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "oggm/tutorials",
+      "eval_script_name": "eval_oggm_plotting_surface_mass.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "4f67953cfc9c1386a77660275be12740502799f3211130bd9d8841e69b7b5f97",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 66,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "brand-d/cogsci-jnmf",
+      "eval_script_name": "CogSci_pattern_high_sim_plot_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "5943c22ffa95455e9be8e6a3e8e3ba7c3a3133cb13464d5aa3ad723661239c1b",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 67,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "brand-d/cogsci-jnmf",
+      "eval_script_name": "CogSci_pattern_high_sim_eval.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "865a01fb9d0461d06bbd00a88180b33abb98bed98a9955213547f8fe83145a12",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "int",
+          "len",
+          "list",
+          "listify_data",
+          "pandas.read_csv",
+          "pandas.read_csv(path).round",
+          "sum",
+          "zip"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 68,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "brand-d/cogsci-jnmf",
+      "eval_script_name": "CogSci_pattern_high_com_low_plot_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "abac6aeaf9378e81e33dc64582ea67a308e438fb075e4fa6b06869c6c7a1735a",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 69,
+      "domain": "Bioinformatics",
+      "repository_lineage": "scverse/scvi-tutorials",
+      "eval_script_name": "eval_single_cell_analysis_pca.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "508f0c7bd377ba4fa6748450105f07f88674a59173e90e46d46c27b6f1d24710",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 70,
+      "domain": "Bioinformatics",
+      "repository_lineage": "scverse/scvi-tutorials",
+      "eval_script_name": "eval_single_cell_analysis_de.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "c4b9fd34f763a6ebd1c6a110080a86cedf664949746fed85b1a774620eb176ec",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 71,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "zitonglu1996/eeg2eeg",
+      "eval_script_name": "eval_eeg2eeg_linear.py",
+      "output_suffix": ".npy",
+      "evaluator_sha256": "61dea5bd13a91f851c7ddb8eb987cff7887b57587861d686553f415c8c5228d4",
+      "evaluator_syntax": {
+        "imports": [
+          "numpy",
+          "scipy",
+          "torch"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "arr1.flatten",
+          "arr2.flatten",
+          "int",
+          "numpy.average",
+          "numpy.load",
+          "numpy.reshape",
+          "numpy.std",
+          "numpy.transpose",
+          "scipy.stats.spearmanr",
+          "str",
+          "str(subid2 + 1).zfill",
+          "testsub2data.detach",
+          "testsub2data.detach().cpu",
+          "testsub2data.detach().cpu().numpy",
+          "torch.from_numpy",
+          "torch.from_numpy(testsub2data).float"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 72,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "zitonglu1996/eeg2eeg",
+      "eval_script_name": "eval_eeg2eeg.py",
+      "output_suffix": ".npy",
+      "evaluator_sha256": "712380969320bb695191abdfad6c37fa28972f64164840e373cc6819a1d9a919",
+      "evaluator_syntax": {
+        "imports": [
+          "numpy",
+          "scipy",
+          "torch"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "arr1.flatten",
+          "arr2.flatten",
+          "int",
+          "numpy.average",
+          "numpy.load",
+          "numpy.reshape",
+          "numpy.std",
+          "numpy.transpose",
+          "scipy.stats.spearmanr",
+          "str",
+          "str(subid2 + 1).zfill",
+          "testsub2data.detach",
+          "testsub2data.detach().cpu",
+          "testsub2data.detach().cpu().numpy",
+          "torch.from_numpy",
+          "torch.from_numpy(testsub2data).float"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 73,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "zitonglu1996/eeg2eeg",
+      "eval_script_name": "eval_eeg2eeg_vis.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "b3697675ac154c835d167891e1a3947610aeb5c8761df611d0eb000fe3e5db07",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 74,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "oggm/oggm",
+      "eval_script_name": "eval_oggm_plotting_glacier_area_and_thickness_change.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "92adc82e535d52866fd15302f606aae7f9afdb8da66d5f879bc2f1daa6042f33",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 75,
+      "domain": "Bioinformatics",
+      "repository_lineage": "scverse/scvi-tutorials",
+      "eval_script_name": "eval_topic_modeling_LDA.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "fe4f73196e4d33c3b49b6be9ccf76a49b7b11e63041196c2f3d2fcb9f1d67631",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 76,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "solve-geosolutions/transform_2022",
+      "eval_script_name": "mineralProspectivityEval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "b0d6353b2e6925c989e775d36bc2f8ceb3b29b09c17c2b22ebd00455c1495f9a",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 77,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "solve-geosolutions/transform_2022",
+      "eval_script_name": "WaterQuality_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "8f667f4acecdd02d532011346c8139735f88607aa84b4db795c3c2410be1052d",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 78,
+      "domain": "Bioinformatics",
+      "repository_lineage": "deepchem/deepchem",
+      "eval_script_name": "eval_protein_stability.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "015deb5c4af05aa8f33cf2a09911ae14aab7d2f9c3b9c73c91706d9964a797d5",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas",
+          "sklearn"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "int",
+          "pandas.read_csv",
+          "sklearn.metrics.mean_absolute_error"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "AUTHOR_REFERENCE_EXPOSED_REPOSITORY_LINEAGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 79,
+      "domain": "Bioinformatics",
+      "repository_lineage": "scverse/scanpy-tutorials",
+      "eval_script_name": "eval_violin.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "14f935e7419f451ca25a7b264ade91cc523aff273d0c221b3776b06148736a50",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 80,
+      "domain": "Bioinformatics",
+      "repository_lineage": "scverse/scanpy-tutorials",
+      "eval_script_name": "eval_gene_scatter.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "307096d339b3441fcce81fef6c9f506d9330398cecfd081889ea0893f238253b",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 81,
+      "domain": "Bioinformatics",
+      "repository_lineage": "scverse/scanpy-tutorials",
+      "eval_script_name": "eval_umap.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "227225e954b4a489dfb019d252ed10ff7f449e1758f8ca412d8e09a01dedba9c",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 82,
+      "domain": "Bioinformatics",
+      "repository_lineage": "scverse/scanpy-tutorials",
+      "eval_script_name": "eval_dendrogram.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "0788c731dd18d773f3f28879f1e910580b59843bebee3d914723d6617aaec22f",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 83,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "geostat-framework/pykrige",
+      "eval_script_name": "UrbanHeat_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "9c3172aff2bc5d5d3f4b1f5c8b9fc55c958fc2fd964df949c7c2cd038879155d",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 84,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "rasterio/rasterio",
+      "eval_script_name": "BurnScar_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "2585e7ae3be21bdc7a3e76d8e93e0d1b7f4d9d75115fb8f00767b2e2d298f0ab",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 85,
+      "domain": "Bioinformatics",
+      "repository_lineage": "mad-lab-fau/biopsykit",
+      "eval_script_name": "biopsykit_saliva_eval.py",
+      "output_suffix": ".json",
+      "evaluator_sha256": "31920bb30c6926d2598c00ae8a1bd6d80158ed2afe3ed96ca8bb982f8858ceef",
+      "evaluator_syntax": {
+        "imports": [
+          "json",
+          "math"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gold.keys",
+          "gold_values.keys",
+          "isinstance",
+          "json.load",
+          "math.isclose",
+          "open",
+          "pred.keys",
+          "set"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 86,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "scitools/iris",
+      "eval_script_name": "eval_plot_TEC.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "5aab5721d05979a9ef9bb321d941045583f5a45739b0033ea69abb88131e9f4b",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 87,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "scitools/iris",
+      "eval_script_name": "eval_polynomial_fit.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "538d5247853e8da4ce98897e4ff566d1a52bc49e323adea770a4c6345bc1a6a5",
+      "evaluator_syntax": {
+        "imports": [
+          "csv"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "csv.reader",
+          "next",
+          "open",
+          "read_csv_and_sort",
+          "sorted"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 88,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "residentmario/geoplot",
+      "eval_script_name": "eval_plot_collisions_map.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "80902a5c4c620cfb7a82831bf4eed74771341b8517af3c7d1327b0e9b77321c9",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 89,
+      "domain": "Geographical Information Science",
+      "repository_lineage": "residentmario/geoplot",
+      "eval_script_name": "eval_plot_trees_count.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "64b6460e459bbe1766ea50ae6794f2160121a0bb64b0ca0e0e90b93d7f8cc8cd",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 90,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "brand-d/cogsci-jnmf",
+      "eval_script_name": "eval_jnmf.py",
+      "output_suffix": ".npy",
+      "evaluator_sha256": "d7790063a10f6ea1639bdac70a36c338e1ca28c1b5043be23fecff4337c97317",
+      "evaluator_syntax": {
+        "imports": [
+          "numpy"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "'benchmark/datasets/jnmf_data/X1_{}.npy'.format",
+          "'benchmark/datasets/jnmf_data/X2_{}.npy'.format",
+          "'pred_results/fit_result_{}_H_high.npy'.format",
+          "'pred_results/fit_result_{}_H_low.npy'.format",
+          "'pred_results/fit_result_{}_W_high.npy'.format",
+          "'pred_results/fit_result_{}_W_low.npy'.format",
+          "(H1 > -1e-05).all",
+          "(H2 > -1e-05).all",
+          "(W1 > -1e-05).all",
+          "(W2 > -1e-05).all",
+          "W.dot",
+          "int",
+          "numpy.linalg.norm",
+          "numpy.load",
+          "reconstruction_error"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 91,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "brand-d/cogsci-jnmf",
+      "eval_script_name": "eval_jnmf_plot_patterns.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "d6e975140ff55a9120f448c95b05114f2b72a0fdcf8f5bf67ca967fea9441901",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 92,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "brand-d/cogsci-jnmf",
+      "eval_script_name": "eval_h_importances.py",
+      "output_suffix": ".json",
+      "evaluator_sha256": "d93e5a5cf474343f67c32fe38304a757f02d8ab23bb76b86a17f60d71f4765ba",
+      "evaluator_syntax": {
+        "imports": [
+          "json",
+          "numpy"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "abs",
+          "json.load",
+          "open"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 93,
+      "domain": "Psychology and Cognitive science",
+      "repository_lineage": "brand-d/cogsci-jnmf",
+      "eval_script_name": "eval_h_distribution.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "206c392cfdcefbab58ddda54bb0f735bb69a9101511e46f194ff12ec63388e7e",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 94,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "deepchem/deepchem",
+      "eval_script_name": "eval_polyverse_visualize_molecules.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "0c3465f789c8c05215d11160f3eaa1b97496c6c741b12924ffef9592f461db45",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "AUTHOR_REFERENCE_EXPOSED_REPOSITORY_LINEAGE",
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 95,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "deepchem/deepchem",
+      "eval_script_name": "eval_synthetic_feasibility_modeling.py",
+      "output_suffix": ".npy",
+      "evaluator_sha256": "35e0c5ef3a92fa58b9d6ee6100652f2ea4f1057bbfaab725af5dd175cbaab34f",
+      "evaluator_syntax": {
+        "imports": [
+          "numpy"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "int",
+          "numpy.load",
+          "numpy.square",
+          "numpy.square(np.subtract(pred_scscores, gold_scscores)).mean",
+          "numpy.subtract"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "AUTHOR_REFERENCE_EXPOSED_REPOSITORY_LINEAGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 96,
+      "domain": "Bioinformatics",
+      "repository_lineage": "scverse/scanpy-tutorials",
+      "eval_script_name": "scanpy_scatter_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "f28ce716dc502c2dabb417e63933a62a6c6de9696f64eeaa466a8e336a0da91d",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 97,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "deepchem/deepchem",
+      "eval_script_name": "eval_formation_energy_prediction.py",
+      "output_suffix": ".txt",
+      "evaluator_sha256": "aee98aa394bf52b805ae26b3b72cf2829a92f2a219048d7caf0121d84ed78776",
+      "evaluator_syntax": {
+        "imports": [
+          "numpy"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "int",
+          "numpy.loadtxt",
+          "numpy.square",
+          "numpy.square(np.subtract(pred_scscores, gold_scscores)).mean",
+          "numpy.subtract"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "AUTHOR_REFERENCE_EXPOSED_REPOSITORY_LINEAGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 98,
+      "domain": "Bioinformatics",
+      "repository_lineage": "scverse/scirpy",
+      "eval_script_name": "scirpy_3k_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "78b0c0ad430cb8bed39d9df4328309546c39a7f6f2a7142b51882ea1bfb98e7c",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 99,
+      "domain": "Bioinformatics",
+      "repository_lineage": "scverse/scanpy-tutorials",
+      "eval_script_name": "scanpy_spatial_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "e92d80c4dd75876a6edf0ba2f31e189a46e0dc1d8afec22fe632e8b4ccba2678",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 100,
+      "domain": "Bioinformatics",
+      "repository_lineage": "scverse/scanpy-tutorials",
+      "eval_script_name": "scanpy_spatial_2_eval.py",
+      "output_suffix": ".png",
+      "evaluator_sha256": "498c1dd7156baeb848f7c404320a252792fd5b8c4a5a68a2f561791802793376",
+      "evaluator_syntax": {
+        "imports": [
+          "gpt4_visual_judge"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure",
+          "int"
+        ],
+        "reachable_external_judge_calls": [
+          "gpt4_visual_judge.encode_image",
+          "gpt4_visual_judge.score_figure"
+        ],
+        "external_import_review_flags": [
+          "gpt4_visual_judge"
+        ],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [
+        "REACHABLE_EXTERNAL_MODEL_JUDGE"
+      ],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 101,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "ppdebreuck/modnet",
+      "eval_script_name": "eval_experimental_band_gap_prediction.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "d3b44aa30389046988a9a463482d1a9665981e1e93a555fdf2777c089f67a9a4",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "(pred['gap_expt_eV'] - gold['gap_expt_eV']).abs",
+          "(pred['gap_expt_eV'] - gold['gap_expt_eV']).abs().mean",
+          "int",
+          "pandas.read_csv"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    },
+    {
+      "instance_id": 102,
+      "domain": "Computational Chemistry",
+      "repository_lineage": "ppdebreuck/modnet",
+      "eval_script_name": "eval_refractive_index_prediction.py",
+      "output_suffix": ".csv",
+      "evaluator_sha256": "43d8c4276c6235a51a57ddacff2dbebb7a67fc47f107835a356a979bcf8a6c8c",
+      "evaluator_syntax": {
+        "imports": [
+          "pandas"
+        ],
+        "eval_entrypoint_present": true,
+        "reachable_call_names": [
+          "(pred['refractive_index'] - gold['refractive_index']).abs",
+          "(pred['refractive_index'] - gold['refractive_index']).abs().mean",
+          "int",
+          "pandas.read_csv"
+        ],
+        "reachable_external_judge_calls": [],
+        "external_import_review_flags": [],
+        "dynamic_review_flags": []
+      },
+      "exposure_note": null,
+      "rights_status": "SOURCE_SPECIFIC_REVIEW_PENDING",
+      "native_environment": "NOT_QUALIFIED",
+      "exclusion_reasons": [],
+      "unknown_reasons": [],
+      "native_reference_execution": "NOT_RUN",
+      "candidate_model_execution": "NOT_RUN"
+    }
+  ]
+}

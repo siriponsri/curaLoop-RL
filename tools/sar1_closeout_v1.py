@@ -1,0 +1,115 @@
+"""Finalize the failed-G0 account, retaining charges and prior byte identities."""
+from __future__ import annotations
+import argparse
+import csv
+import io
+import json
+import subprocess
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from tools.sar1_control_v1 import ACCOUNT, PUBLIC, RELEASE, ROOT, digest, save_ledger, write_new
+from tools.sar1_report_v1 import REPORT, EXPORT, render
+
+
+def validate():
+    release = json.loads(RELEASE.read_text(encoding='utf-8'))
+    ledger = json.loads((ACCOUNT / 'ledger.json').read_text(encoding='utf-8'))
+    gate = json.loads((PUBLIC / 'gate0-v1.json').read_text(encoding='utf-8'))
+    census = json.loads((PUBLIC / 'static-census-v1.json').read_text(encoding='utf-8'))
+    assert ledger['status'] == 'ACTIVE_CLOSEOUT_FAILED_G0'
+    assert gate['status'] == 'NO_GO_STATIC_API_FREE_COVERAGE'
+    assert REPORT.read_text(encoding='utf-8') == render()
+    assert EXPORT.exists()
+    csv_rows = list(csv.DictReader(io.StringIO((PUBLIC / 'static-census-v1.csv').read_text(encoding='utf-8'))))
+    assert len(csv_rows) == len(census['catalog']) == 102
+    assert {r['instance_id'] for r in census['catalog']} == set(range(1, 103))
+    judge = [r for r in census['catalog'] if 'REACHABLE_EXTERNAL_MODEL_JUDGE' in r['exclusion_reasons']]
+    candidate = [r for r in census['catalog'] if not r['exclusion_reasons']]
+    assert len(judge) == 64 and 102 - len(judge) == 38 and len(candidate) == 30
+    assert len(gate['external_judge_calls_in_entrypoint']) == 64
+    assert len(gate['classifier_checks']) == 4
+    for row, csv_row in zip(census['catalog'], csv_rows):
+        assert row['instance_id'] == int(csv_row['instance_id'])
+        assert ';'.join(row['exclusion_reasons']) == csv_row['exclusion_reasons']
+    failures = [name for name, expected in release['preservation_pins'].items()
+                if not (ROOT / name).is_file() or digest(ROOT / name) != expected]
+    assert not failures, failures
+    used = sum(r['cpu_seconds'] for r in ledger['reservations'])
+    gpu = sum(r['gpu_allocated_seconds'] for r in ledger['reservations'])
+    assert used <= release['cpu_cap_seconds'] and gpu == 0
+    for stage, caps in release['stage_caps_seconds'].items():
+        assert sum(r['cpu_seconds'] for r in ledger['reservations'] if r['stage'] == stage) <= caps['cpu']
+    changed_manuscripts = subprocess.check_output(
+        ['git', 'status', '--porcelain', '--', 'docs/07_publication', 'docs/01_paper'], cwd=ROOT, text=True)
+    assert not changed_manuscripts.strip(), 'Unexpected manuscript edits'
+    return release, ledger, gate
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--settle', action='store_true')
+    args = parser.parse_args()
+    release, ledger, gate = validate()
+    if not args.settle:
+        assert len(ledger['active_jobs']) == 1
+        write_new(PUBLIC / 'closeout-preflight-v1.json', {
+            'status': 'PASS', 'prior_pins': len(release['preservation_pins']),
+            'census_csv_rows': 102, 'no_manuscript_changes': True,
+            'remote_work': 'NOT_STARTED_NOT_APPLICABLE',
+            'new_agent_or_native_runs': 0, 'model_downloads': 0,
+            'source_counts_verified': {'judge': 64, 'no_judge': 38, 'preliminary': 30},
+        })
+        print(json.dumps({'status': 'PASS_CLOSEOUT_PREFLIGHT', 'prior_pins': len(release['preservation_pins'])}))
+        return
+    assert not ledger['active_jobs'], 'Local job not finished; do not fabricate settlement'
+    assert not any(r['id'] == 'final-delivery-admin-v1' for r in ledger['reservations'])
+    ledger['reservations'].append({
+        'id': 'final-delivery-admin-v1', 'stage': 'owner_report_delivery',
+        'cpu_seconds': 1200, 'gpu_allocated_seconds': 0,
+        'status': 'RETAINED_UNMETERED_FINAL_DELIVERY_ALLOWANCE',
+        'scope': 'Final metadata settlement, local owner delivery, scope/byte review and Git commit/push; no further science or paid inference',
+    })
+    used = sum(r['cpu_seconds'] for r in ledger['reservations'])
+    assert used <= release['cpu_cap_seconds']
+    assert sum(r['cpu_seconds'] for r in ledger['reservations'] if r['stage'] == 'owner_report_delivery') <= release['stage_caps_seconds']['owner_report_delivery']['cpu']
+    now = datetime.now(timezone.utc).isoformat()
+    ledger.update(status='CLOSED_NO_GO_STATIC_API_FREE_COVERAGE', closed_utc=now,
+                  research_outcome=gate['status'], primary_effect_status='NOT_ESTIMABLE',
+                  model_calls=0, native_evaluator_executions=0,
+                  manuscript_written=False, further_scientific_work_authorized=False)
+    save_ledger(ledger)
+    measured = sum(r.get('measured_cpu_seconds', 0) for r in ledger['reservations'])
+    audit = {
+        'status': 'PASS_CLOSED_ADMISSION_STOP_OWNER_REPORT_READY',
+        'research_outcome': gate['status'], 'closed_utc': now,
+        'release_start_utc': release['start_utc'], 'unchanged_deadline_utc': release['deadline_utc'],
+        'source_base_commit': release['base_commit'],
+        'active_booked_jobs': 0, 'model_calls': 0, 'native_evaluator_executions': 0,
+        'paid_api_calls': 0, 'model_downloads': 0, 'allocated_gpu_seconds': 0,
+        'conservative_retained_cpu_seconds': used, 'conservative_retained_cpu_hours': used / 3600,
+        'measured_local_guarded_job_cpu_seconds': measured,
+        'complete_measured_aggregate_cpu': None,
+        'cpu_scope': 'Retained reservations include unmetered control/delivery; measured guarded subtotal excludes those allowances',
+        'resource_jobs': [{k: r[k] for k in ('id', 'stage', 'cpu_seconds', 'status', 'measured_cpu_seconds') if k in r}
+                          for r in ledger['reservations']],
+        'ledger_sha256': digest(ACCOUNT / 'ledger.json'),
+        'preservation_pins': len(release['preservation_pins']), 'preservation_status': 'PASS',
+        'remote_root_created': False, 'ssh_started': False,
+        'remote_return_cleanup': 'NOT_APPLICABLE_NO_REMOTE_WORK',
+        'primary_effect_status': 'NOT_ESTIMABLE', 'comparative_agent_matrix': 'NOT_RUN',
+        'new_manuscript': 'NOT_WRITTEN_OWNER_DEFERRED', 'submission': 'NOT_RUN',
+        'primary_journal': 'Empirical Software Engineering', 'backup_journal': 'Journal of Systems and Software',
+        'thai_options': ['Science & Technology Asia', 'ECTI-CIT (AI-policy compatibility concern)'],
+        'report_sha256': digest(REPORT), 'owner_export_sha256': digest(EXPORT),
+        'final16_private_cf1_old_hidden_outcomes': 'CLOSED_UNCHANGED',
+        'gate_counts': {'total': 102, 'external_judge': 64, 'no_judge': 38, 'preliminary_candidates': 30},
+    }
+    write_new(PUBLIC / 'delivery-audit-v1.json', audit)
+    write_new(PUBLIC / 'ledger-closed-v1.json', ledger)
+    print(json.dumps(audit, indent=2))
+
+
+if __name__ == '__main__':
+    main()

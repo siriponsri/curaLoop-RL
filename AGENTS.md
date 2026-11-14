@@ -1,5 +1,58 @@
 # Agent instructions: CuraLoop-RL
 
+## Latest closeout: LR-SAR1 stopped at G0, 14 November 2026
+
+LR-SAR1 is CLOSED_NO_GO_STATIC_API_FREE_COVERAGE with zero active jobs.
+Read docs/08_agent_rd/LR_SAR1_FINAL_OWNER_REPORT_20261114.md and
+docs/evidence/lr-sar1-20261114-v1/delivery-audit-v1.json. The census covered
+all 102 verified tasks: 64 native eval entrypoints directly call the external
+visual judge; only 38 lack it before exposure exclusions, below the approved
+60-task floor. After existing exposure roles: 30 preliminary candidates from
+16 repository lineages/four domains, not native-qualified tasks.
+
+Science stopped without native reference/evaluator execution, model download,
+agent inference, GPU allocation or SSH. P-minus-T effect NOT_ESTIMABLE.
+No remote root/container was created; remote return/cleanup is NOT_APPLICABLE.
+All 104 prior/source pins passed. Retained reservations: 8,100 CPU seconds
+(2.25 hours), including unmetered control/delivery and a failed admin launcher;
+guarded local-job measured subtotal 3.375 CPU seconds, not aggregate host use.
+The admin import failure was fixed only for report/settlement entrypoints;
+executed-source snapshots and the failure remain, with no scientific rerun.
+
+ESE primary/JSS backup remain selected. Thai options and ECTI-CIT's restrictive
+AI policy are documented. Owner must receive results before any new manuscript;
+none was written. Do not reuse unused allowance, reduce the coverage floor,
+replace the judge/model/benchmark, restart retired work or open protected data.
+New scientific scope requires owner decision. Main delivery is authorized;
+its actual receipt is written only after commit/push verification. Lower active
+and release sections are historical and do not reopen the closed account.
+
+## Active owner release: LR-SAR1, 14 November 2026
+
+The owner explicitly started LR-SAR1 under
+docs/08_agent_rd/SCIENTIFIC_AGENT_RELIABILITY_STUDY_PROPOSAL_20261114.md.
+Read research/manifests/lr_sar1_release_20261114_v1.json and the new account
+.local/lr-sar1-20261114-v1/ledger.json. Fresh ceiling: 160 CPU-hours plus
+80 allocated GPU-hours; four combined CPU equivalents and one GPU; dr-train
+allowed. T0 2026-11-14T02:34:25Z; deadline 2026-11-24T02:34:25Z
+(24 November 09:34:25 Bangkok). Do not reset this clock or reuse old accounts.
+
+Begin G0 census of the retained verified ScienceAgentBench release, including
+rights, source/exposure, free native scoring and environment support. Advance
+only through passed gates and a frozen protocol. Stop scientific work at a
+failed gate; no repeated experiment, substitute dataset/model or relaxed quota.
+Coverage floor remains 60 locked tasks/15 source clusters/three domains.
+Complete truthful results/failure/NOT_RUN and resource/preservation reporting.
+
+ESE is the selected primary venue; JSS backup. Also review suitable Thai journals.
+Latest owner amendment: return actual results for owner consideration BEFORE
+writing a manuscript. No new manuscript/abstract/cover letter or submission.
+No paid API/rental, public deployment, external team writes or outreach. Keep
+final16, private CF1 rows, old hidden outcomes, frozen code/results/ledgers and
+all 104 release preservation pins intact. Parent sole writer; no subagents.
+Return/hash-reread exact owned remote files before exact cleanup. Authorized
+main commit/push at closeout. Lower release/closeout sections are history.
+
 ## Latest closeout: LR-SC1 stopped at failed admission, 13 November 2026
 
 LR-SC1 is CLOSED_NO_GO_NATIVE_EVALUATOR_READINESS, with zero active booked

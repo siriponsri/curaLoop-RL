@@ -1,0 +1,384 @@
+{
+  "status": "NO_GO_STATIC_API_FREE_COVERAGE",
+  "stage": "G0",
+  "reason": "64/102 official eval entrypoints directly invoke the external visual score_figure helper; only 38 lack that dependency even before exposure exclusions, below 60 locked tasks",
+  "tasks_inspected": 102,
+  "external_judge_tasks": 64,
+  "no_external_judge_tasks_before_exposure_exclusions": 38,
+  "potential_candidates_after_existing_exposure_roles": 30,
+  "potential_repository_lineages": 16,
+  "potential_domains": 4,
+  "required_locked_tasks": 60,
+  "required_source_clusters": 15,
+  "required_domains": 3,
+  "candidate_native_qualification": "NOT_RUN",
+  "rights_certification": "NOT_COMPLETED",
+  "native_success_claim": false,
+  "checker_or_agent_effect": "NOT_ESTIMABLE",
+  "reference_or_gold_values_read": false,
+  "model_calls": 0,
+  "gpu_allocated_seconds": 0,
+  "scientific_retry": false,
+  "verification_scope": "Same retained census/evaluator AST plus public helper source and constructed classifier tests; no scientific program executed",
+  "census_sha256": "b596cb1bf7ffdb9c903ac8caaf734341cc491fe7dd15b28d86862be81c0ef8d0",
+  "classifier_checks": [
+    {
+      "name": "direct_judge",
+      "status": "PASS"
+    },
+    {
+      "name": "local_helper_judge",
+      "status": "PASS"
+    },
+    {
+      "name": "unused_judge_function",
+      "status": "PASS"
+    },
+    {
+      "name": "deterministic",
+      "status": "PASS"
+    }
+  ],
+  "external_judge_calls_in_entrypoint": [
+    {
+      "instance_id": 4,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "99dcccb8b045a06e44e71590e5752102009e6c8d97ed5c70eecaa5f572bfe451"
+    },
+    {
+      "instance_id": 6,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "195fb5e4b1175b2b8244064b840ba047d5f937fcb03a5c5ac3dbccd8b868f325"
+    },
+    {
+      "instance_id": 7,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "74f649530551d0f6c72e8e9573f6c1afa87ba7054abbcc21f6d0936822b4836f"
+    },
+    {
+      "instance_id": 8,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "8daf648462f4e4cd14ee57c5807921cce759db8efcb20eed7effee06c0003709"
+    },
+    {
+      "instance_id": 9,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "efdd3dd594415e08df5048fd4fdd0f2a2d900ae4590895df65fa8abab5d2d4ab"
+    },
+    {
+      "instance_id": 10,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "7309821367858fda96e4fe27cf76b8413ce54c638356db3c36e3dbe6af9fd234"
+    },
+    {
+      "instance_id": 14,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "958ae1ad18db5be2c2854239807410a5a840e9ce1f062f4dabfb0ec5cfb4c2bc"
+    },
+    {
+      "instance_id": 17,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "04500c99b13baedfdb43f99b5a89e91c888855080458382dbcacc5f13d5974c4"
+    },
+    {
+      "instance_id": 20,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "709ee084696b3b7f1a09b85d79f40bc0eb947451708e76ebf47ad41f26fdbb2c"
+    },
+    {
+      "instance_id": 23,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "f4409c1a994de1ab4482b29b42946310cdbcf9aecbb31b7d94a516bc56795a19"
+    },
+    {
+      "instance_id": 24,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "df2adb19f7a7cdef4ce9a01410914492b1a7bd1a04c9900b6281862cc4f67eea"
+    },
+    {
+      "instance_id": 25,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "2634313313607c949e624a3f30aed87cf66f32e1cae231b6b6148058ff76c861"
+    },
+    {
+      "instance_id": 27,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "a0975540fd6f1d15d34b51b12a18b5d267c12a03d08e65c64aa99f86863855c6"
+    },
+    {
+      "instance_id": 28,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "c13d83aa40f3af555632cab5ae67ba9c306af549fbd38bf6dda99473dfdb10ba"
+    },
+    {
+      "instance_id": 30,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "d9866ed62876ab9ccd49f3351adcfc5818d22e5b6f230f24e1e15ce5823d77f6"
+    },
+    {
+      "instance_id": 31,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "03ce7d270abf226e3608000c297c5c8cd83753492b7b83a13352831c955ccad7"
+    },
+    {
+      "instance_id": 32,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "2eaf79537b3ae99948260bdbc0934f6f02bf5e6d44974c0ebc34611e08eecdf4"
+    },
+    {
+      "instance_id": 33,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "b16679160b6fc5cbfb704ca4651f631cdc40d90a084599313b73c466d6993433"
+    },
+    {
+      "instance_id": 36,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "6d9ec6a715660b3a1113a78ff2ffd414bf28c79d415de28cf873d40c29ed1dba"
+    },
+    {
+      "instance_id": 38,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "a6ef9939b9e02f56d2c16cd702906d709a135e579d57739e6a27c5760e4aeb26"
+    },
+    {
+      "instance_id": 39,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "022238a3f7db15fa90d5c37ff0b01858bb773facc27639449e82ad1d097f025a"
+    },
+    {
+      "instance_id": 42,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "dcb093985839f0163d5ac1b09839205304534ad88085417761d8614d7973e11a"
+    },
+    {
+      "instance_id": 43,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "d5abc3deaa41c7c71b0bdbb0e5379a42bbb1fa15fc58c76da04ebab6288932a7"
+    },
+    {
+      "instance_id": 46,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "24d326f0c2b60ab274268828a3aa707dadd4f987a65e784f653e71204b39a513"
+    },
+    {
+      "instance_id": 47,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "6a42f4590641b2d1de10eb39b339601d1e5c310ce5387e4caa1a03faf1e6e328"
+    },
+    {
+      "instance_id": 48,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "4dae8f13455fbcf299f70c396f3c66b2b7cb249bdeb57834bbaf08d5f3371d33"
+    },
+    {
+      "instance_id": 49,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "fdc95a1cafe16fca8d864383706cbaf450e69295569f3aafce21aae910d20f73"
+    },
+    {
+      "instance_id": 50,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "21f5b6752648cc1c2ad997be7b1b6faf7cdcf0760fe583c138f9455eb44f359a"
+    },
+    {
+      "instance_id": 52,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "386386d73c9f023b4adfcbcde8d8dc0734d3435b18e08d223411e255260aef7d"
+    },
+    {
+      "instance_id": 54,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "ec9627c344f91cf5ac7cdd0de9d196decf18fcae52ba742c183e246ab0695ef7"
+    },
+    {
+      "instance_id": 55,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "f32f79d212b906cba384ee866338aad1a7c86ae9daedb232555cb127583fc0e7"
+    },
+    {
+      "instance_id": 56,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "dd93d1d47905669382b9e3a1cbda84ed446e23e8ee8081406000be5a3bd1877d"
+    },
+    {
+      "instance_id": 57,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "cefb0fdc7d6bddd3488e1a6d58f24828312f11f4441f265d2135d01e9692954f"
+    },
+    {
+      "instance_id": 59,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "2b7f94ad0386e19b960ef7011cd703b1dcee80725924ed2e39e13f9e0aa7e547"
+    },
+    {
+      "instance_id": 61,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "be6ab44a46b07ed49a20a8331ea63064c1bb166f7afcda4505f9224e7fb919a6"
+    },
+    {
+      "instance_id": 62,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "ebf05a733633fad562993b3b675198ddeaabb7d9371587151478cf9b901fc084"
+    },
+    {
+      "instance_id": 63,
+      "direct_score_figure_calls": 2,
+      "evaluator_sha256": "f03e745b5a4a36b957404236dc342c03619311235d28b6b8ad0318b7fdd1557f"
+    },
+    {
+      "instance_id": 64,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "6a32c64c5dd2839d39936b3f5138a1e8a5fb429afecabae23adb3af2824433ab"
+    },
+    {
+      "instance_id": 65,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "4f67953cfc9c1386a77660275be12740502799f3211130bd9d8841e69b7b5f97"
+    },
+    {
+      "instance_id": 66,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "5943c22ffa95455e9be8e6a3e8e3ba7c3a3133cb13464d5aa3ad723661239c1b"
+    },
+    {
+      "instance_id": 68,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "abac6aeaf9378e81e33dc64582ea67a308e438fb075e4fa6b06869c6c7a1735a"
+    },
+    {
+      "instance_id": 69,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "508f0c7bd377ba4fa6748450105f07f88674a59173e90e46d46c27b6f1d24710"
+    },
+    {
+      "instance_id": 70,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "c4b9fd34f763a6ebd1c6a110080a86cedf664949746fed85b1a774620eb176ec"
+    },
+    {
+      "instance_id": 73,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "b3697675ac154c835d167891e1a3947610aeb5c8761df611d0eb000fe3e5db07"
+    },
+    {
+      "instance_id": 74,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "92adc82e535d52866fd15302f606aae7f9afdb8da66d5f879bc2f1daa6042f33"
+    },
+    {
+      "instance_id": 75,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "fe4f73196e4d33c3b49b6be9ccf76a49b7b11e63041196c2f3d2fcb9f1d67631"
+    },
+    {
+      "instance_id": 76,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "b0d6353b2e6925c989e775d36bc2f8ceb3b29b09c17c2b22ebd00455c1495f9a"
+    },
+    {
+      "instance_id": 77,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "8f667f4acecdd02d532011346c8139735f88607aa84b4db795c3c2410be1052d"
+    },
+    {
+      "instance_id": 79,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "14f935e7419f451ca25a7b264ade91cc523aff273d0c221b3776b06148736a50"
+    },
+    {
+      "instance_id": 80,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "307096d339b3441fcce81fef6c9f506d9330398cecfd081889ea0893f238253b"
+    },
+    {
+      "instance_id": 81,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "227225e954b4a489dfb019d252ed10ff7f449e1758f8ca412d8e09a01dedba9c"
+    },
+    {
+      "instance_id": 82,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "0788c731dd18d773f3f28879f1e910580b59843bebee3d914723d6617aaec22f"
+    },
+    {
+      "instance_id": 83,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "9c3172aff2bc5d5d3f4b1f5c8b9fc55c958fc2fd964df949c7c2cd038879155d"
+    },
+    {
+      "instance_id": 84,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "2585e7ae3be21bdc7a3e76d8e93e0d1b7f4d9d75115fb8f00767b2e2d298f0ab"
+    },
+    {
+      "instance_id": 86,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "5aab5721d05979a9ef9bb321d941045583f5a45739b0033ea69abb88131e9f4b"
+    },
+    {
+      "instance_id": 88,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "80902a5c4c620cfb7a82831bf4eed74771341b8517af3c7d1327b0e9b77321c9"
+    },
+    {
+      "instance_id": 89,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "64b6460e459bbe1766ea50ae6794f2160121a0bb64b0ca0e0e90b93d7f8cc8cd"
+    },
+    {
+      "instance_id": 91,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "d6e975140ff55a9120f448c95b05114f2b72a0fdcf8f5bf67ca967fea9441901"
+    },
+    {
+      "instance_id": 93,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "206c392cfdcefbab58ddda54bb0f735bb69a9101511e46f194ff12ec63388e7e"
+    },
+    {
+      "instance_id": 94,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "0c3465f789c8c05215d11160f3eaa1b97496c6c741b12924ffef9592f461db45"
+    },
+    {
+      "instance_id": 96,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "f28ce716dc502c2dabb417e63933a62a6c6de9696f64eeaa466a8e336a0da91d"
+    },
+    {
+      "instance_id": 98,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "78b0c0ad430cb8bed39d9df4328309546c39a7f6f2a7142b51882ea1bfb98e7c"
+    },
+    {
+      "instance_id": 99,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "e92d80c4dd75876a6edf0ba2f31e189a46e0dc1d8afec22fe632e8b4ccba2678"
+    },
+    {
+      "instance_id": 100,
+      "direct_score_figure_calls": 1,
+      "evaluator_sha256": "498c1dd7156baeb848f7c404320a252792fd5b8c4a5a68a2f561791802793376"
+    }
+  ],
+  "domain_counts_no_judge_before_exclusions": {
+    "Computational Chemistry": 11,
+    "Bioinformatics": 11,
+    "Geographical Information Science": 3,
+    "Psychology and Cognitive science": 13
+  },
+  "source_verification": {
+    "url": "https://raw.githubusercontent.com/OSU-NLP-Group/ScienceAgentBench/c26e151ed601ba109dc4d35e057ff8e73fec469d/gpt4_visual_judge.py",
+    "bytes": 3669,
+    "sha256": "e9a95f36638485c6e478c7412b14e8d9b94e0f0055a8db57ff71be6092a3d61a",
+    "official_commit": "c26e151ed601ba109dc4d35e057ff8e73fec469d",
+    "external_client_calls": [
+      "client.chat.completions.create"
+    ],
+    "helper_imported_or_executed": false,
+    "paid_model_requests": 0
+  },
+  "scope_limit": "Static eligibility under the approved no-paid-judge policy; does not establish native success, full transitive API freedom, or benchmark defects",
+  "next_work": "Stop science; owner report, Thai journal review, preservation/resource audit and authorized main delivery only",
+  "new_manuscript_authorized": false
+}
